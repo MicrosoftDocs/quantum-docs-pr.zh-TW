@@ -10,8 +10,8 @@ ms.openlocfilehash: 4be86c5045ece62ae3af40090a2cd344d965e65f
 ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035172"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057396"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>參與 Quantum Development Kit #
 
