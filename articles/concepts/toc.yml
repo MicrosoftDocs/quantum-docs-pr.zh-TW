@@ -1,0 +1,20 @@
+- name: 什麼是量子運算？
+  href: index.md
+- name: 向量和矩陣
+  href: vectors-and-matrices.md
+- name: 進階矩陣概念
+  href: advanced-matrices.md
+- name: 量子位元
+  href: the-qubit.md
+- name: 多個量子位元
+  href: multiple-qubits.md
+- name: Dirac 標記
+  href: dirac-notation.md
+- name: Pauli 量值
+  href: pauli-measurements.md
+- name: 量子線路
+  href: circuits.md
+- name: 量子 Oracle
+  href: oracles.md
+- name: 軟體堆疊
+  href: software-stack.md
