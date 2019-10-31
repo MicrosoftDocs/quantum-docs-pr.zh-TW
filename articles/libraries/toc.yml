@@ -1,0 +1,9 @@
+- name: 標準程式庫
+  topicHref: standard/index.md
+  href: standard/toc.yml
+- name: 量子化學程式庫
+  topicHref: chemistry/index.md
+  href: chemistry/toc.yml
+- name: 量子數值程式庫
+  topicHref: numerics/index.md
+  href: numerics/toc.yml
