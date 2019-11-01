@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.htermstogensys
+name: HTermsToGenSys
+type: function
+namespace: Microsoft.Quantum.Chemistry
+summary: 將 `HTerm[]` 資料格式的 Hamiltonian 轉換為 GeneratorSystem。
+syntax: 'function HTermsToGenSys (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[])'
+  types:
+  - name: data
+    summary: 以 `HTerm[]` 格式輸入資料。
+    isArray: true
+    uid: microsoft.quantum.chemistry.hterm
+  - name: termType
+    summary: 新增至 GeneratorIndex 的其他資訊。
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
+  types:
+  - summary: GeneratorSystem，代表輸入 `data`所表示的 Hamiltonian。
+    uid: microsoft.quantum.simulation.generatorsystem
+ms.openlocfilehash: 00ecf3fe97526621d596b4dff17e5fd937a21d7b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228880"

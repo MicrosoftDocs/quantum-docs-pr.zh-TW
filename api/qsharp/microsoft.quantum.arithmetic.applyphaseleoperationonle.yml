@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
+name: ApplyPhaseLEOperationOnLE
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 套用接受 <xref:microsoft.quantum.arithmetic.littleendian> 暫存器的作業，做為 <xref:microsoft.quantum.arithmetic.phaselittleendian>類型之目標暫存器的輸入。
+remarks: 註冊會轉換成 `PhaseLittleEndian`，方法是使用 <xref:microsoft.quantum.canon.qftle>，然後在 `op`的應用程式之後回到其原始標記法。
+syntax: 'operation ApplyPhaseLEOperationOnLE (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: （op：（PhaseLittleEndian = > Unit），target： LittleEndian）。（）
+  types:
+  - name: op
+    summary: 要套用的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.phaselittleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: 目標
+    summary: 套用作業的註冊。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: 單位
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- microsoft.quantum.canon.applyphaseleoperationonlea
+- microsoft.quantum.canon.applyphaseleoperationonlea
+- microsoft.quantum.canon.applyphaseleoperationonleca
+ms.openlocfilehash: f610069706c06a3454c15b2f5170cce4b478530d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057011"

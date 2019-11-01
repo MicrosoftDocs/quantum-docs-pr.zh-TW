@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.curriedop
+name: CurriedOp
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  在兩個輸入上傳回作業的擴充版本。
+
+
+  也就是說，假設有兩個輸入的作業，則此函式會套用 Curry 的 isomorphism $f （x，y） \equiv f （x）（y） $ 來傳回一個輸入的作業，而這項作業會傳回一個輸入的作業。
+remarks: >-
+  以下是相同的：
+
+
+  ```qsharp
+
+  op(x, y);
+
+
+  let curried = CurriedOp(op);
+
+  let partial = curried(x);
+
+  partial(y);
+
+  ```
+syntax: "function CurriedOp (op : (('T, 'U) => Unit)) : ('T -> ('U => Unit))"
+input:
+  content: （op：（（t，' U） = > 單位））
+  types:
+  - name: op
+    summary: 其輸入為成對的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: （不 > （' U = > 單位））
+  types:
+  - summary: 接受配對之第一個元素的作業，並傳回可接受做為其輸入的作業，以作為其在原始作業輸入的第二個元素。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 成對定義之函式的第一個元件類型。
+- uid: "'U"
+  summary: 成對定義之函式的第二個元件類型。
+ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067895"

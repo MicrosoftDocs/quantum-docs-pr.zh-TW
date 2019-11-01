@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.sequencei
+name: SequenceI
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 取得指定間隔中的整數陣列。
+examples: >-
+  ```qsharp
+
+  let arr1 = SequenceI(0, 3); // [0, 1, 2, 3]
+
+  let arr2 = SequenceI(23, 29); // [23, 24, 25, 26, 27, 28, 29]
+
+  let arr3 = SequenceI(-5, -2); // [-5, -4, -3, -2]
+
+
+  let numbers = SequenceI(0, _); // function to create sequence from 0 to `to`
+
+  let naturals = SequenceI(1, _); // function to create sequence from 1 to `to`
+
+  ```
+syntax: 'function SequenceI (from : Int, to : Int) : Int[]'
+input:
+  content: '(from : Int, to : Int)'
+  types:
+  - name: from
+    summary: 間隔的內含開始索引。
+    isPrimitive: true
+    uid: Int
+  - name: to
+    summary: 不小於 `from`間隔的內含結束索引。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int[]
+  types:
+  - summary: 陣列，包含 `from`、`from + 1`、...、`to`的數位序列。
+    isArray: true
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 7ff3ee1eaabb17fbc4e3736d993a8cc5ac1ccaf1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214226"

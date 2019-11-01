@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.evolutionset
+name: EvolutionSet
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  代表一組可以立即實及用來執行模擬演算法的閘道。
+
+
+  集合中的專案是由 <xref:microsoft.quantum.simulation.generatorindex>編制索引，而每個集合都是由 `GeneratorIndex` 至 <xref:microsoft.quantum.simulation.evolutionunitary>的函式所描述，這是以實數代表時間來參數化的作業
+syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
+ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211081"

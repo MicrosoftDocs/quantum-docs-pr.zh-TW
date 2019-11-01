@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.compareusingripplecarry
+name: CompareUsingRippleCarry
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  這個宏會測試兩個 `x` 和 `y` 儲存在相等大小的 qubit 暫存器中是否滿足 `x > y`的整數。 如果為 true，則會將1進行 xor 到輸出 qubit。 否則，0會進行 xor 為輸出 qubit。
+
+
+  換句話說，這個單一 $U $ 滿足： $ $ \begin{align} U\ket {x} \ ket {y} \ ket {z} = \ket{x}\ket{y}\ket{z\oplus （x > y）}。
+
+  \end{align} $ $。
+syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
+references: '- 新的量子 ripple-包含加法線路 Steven Cuccaro、Thomas g. Draper、Samuel A Kutin、David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
+input:
+  content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
+  types:
+  - name: x
+    summary: 要比較的第一個數位，以 `LittleEndian` 格式儲存在 qubit 暫存器中。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: y
+    summary: 要比較的第二個數字，以 `LittleEndian` 格式儲存在 qubit 暫存器中。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: output
+    summary: Qubit 會將比較的結果儲存 $x > y $。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: fa3db99da28f96e1cb42dd03e465440e015722fa
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221094"

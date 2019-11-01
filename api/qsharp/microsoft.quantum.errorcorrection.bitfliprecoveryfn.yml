@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.bitfliprecoveryfn
+name: BitFlipRecoveryFn
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: 針對⟦3，1，1個⟧位翻轉程式碼，所指定的 Pauli 作業的復原的函式（依資料表查閱）。
+syntax: 'function BitFlipRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
+  types:
+  - summary: '`Result[]` 的 `RecoveryFn` 類型的函式，並會傳回更正偵測到之錯誤的 `Pauli[]` 作業。'
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+seeAlso:
+- microsoft.quantum.canon.recoveryfn
+ms.openlocfilehash: 6b9446f55e47cc96fe0af194b956c51282ae0f1b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233589"

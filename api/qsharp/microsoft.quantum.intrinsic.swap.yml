@@ -1,0 +1,52 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.swap
+name: SWAP
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  將交換閘道套用至一對 qubits。
+
+
+  \begin{align} \operatorname{SWAP} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
+
+
+  其中，資料列和資料行的排序方式就像在「配量概念指南」中。
+remarks: >-
+  相當於：
+
+
+  ```qsharp
+
+  CNOT(qubit1, qubit2);
+
+  CNOT(qubit2, qubit1);
+
+  CNOT(qubit1, qubit2);
+
+  ```
+syntax: 'operation SWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit'
+input:
+  content: '(qubit1 : Qubit, qubit2 : Qubit)'
+  types:
+  - name: qubit1
+    summary: 要交換的第一個 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: qubit2
+    summary: 要交換的第二個 qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 32a379b784d0be0084b00a80edf8607ccf760f9e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216351"

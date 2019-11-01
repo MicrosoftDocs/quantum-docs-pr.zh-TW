@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.htermstogenidx
+name: HTermsToGenIdx
+type: function
+namespace: Microsoft.Quantum.Chemistry
+summary: 將 `HTerm[]` 資料格式的索引轉換成 GeneratorIndex 的 Hamiltonian 詞彙。
+syntax: 'function HTermsToGenIdx (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[], idx : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
+input:
+  content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[], idx : Int)'
+  types:
+  - name: data
+    summary: 以 `HTerm[]` 格式輸入資料。
+    isArray: true
+    uid: microsoft.quantum.chemistry.hterm
+  - name: termType
+    summary: 新增至 GeneratorIndex 的其他資訊。
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: idx
+    summary: Hamiltonian 詞彙的索引
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorIndex
+  types:
+  - summary: 代表 `data[idx]`所表示之 Hamiltonian 詞彙的 GeneratorIndex，以及 `termType`新增的其他資訊。
+    uid: microsoft.quantum.simulation.generatorindex
+ms.openlocfilehash: e64ae1fb0b87506114c527aed5412b75f000db3a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228897"

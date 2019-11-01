@@ -1,0 +1,88 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
+name: AssertQubitIsInStateWithinTolerance
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  判斷提示 qubit 處於預期狀態。
+
+
+  `expected` 代表複雜的向量，$ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $。
+
+  元組的第一個元素代表每個 $a $，$b $ 是複數的實數部分，而第二個是虛數部分。
+
+  最後一個引數會定義判斷提示所使用的容錯。
+remarks: >-
+  下列 Mathematica 程式碼可以用來驗證 mi、mx、my、mz 的運算式：
+
+
+  ```mathematica
+
+  {Id, X, Y, Z} = Table[PauliMatrix[k], {k, 0, 3}];
+
+  st = {{ reA + I imA }, { reB + I imB} };
+
+  M = st . ConjugateTranspose[st];
+
+  mx = Tr[M.X] // ComplexExpand;
+
+  my = Tr[M.Y] // ComplexExpand;
+
+  mz = Tr[M.Z] // ComplexExpand;
+
+  mi = Tr[M.Id] // ComplexExpand;
+
+  2 m == Id mi + X mx + Z mz + Y my // ComplexExpand // Simplify
+
+  ```
+
+
+  容錯是由 $ \langle\psi | \psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ 和 real 向量（Y ₂）所定義的3維實數向量（x ₂、x ₃、x ₄）之間的 {\infty} $ 距離所\_的 $L。，y ₃，y ₄）由ρ = y ₁ I + y ₂ X + y ₃ Y + y ₄ Z 所定義，其中ρ是與暫存器狀態對應的密度矩陣。
+
+  這在假設 Tr （ρ）和 Tr （| ψ⟩⟨ψ |）兩者都是1（例如 x ₁ = 1/2、y ₁ = 1/2）時才成立。
+
+  如果不是這種情況，函式會判斷（x ₂ x ₁、x ₃ x ₁、x ₄ x ₁、x ₄ + x ₁）和（y ₂-y ₁、y ₃-y ₁、y ₄-y ₁、y ₄ + y ₁）之間的 l ∞距離小於容錯參數。
+examples: >-
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+      // Both qubits are initialized as |0〉: a=(1 + 0*i), b=(0 + 0*i)
+      AssertQubitIsInStateWithinTolerance((Complex(1., 0.), Complex(0., 0.)), qubits[0], 1e-5);
+      AssertQubitIsInStateWithinTolerance((Complex(1., 0.), Complex(0., 0.)), qubits[1], 1e-5);
+      Y(qubits[1]);
+      // Y |0〉 = i |1〉: a=(0 + 0*i), b=(0 + 1*i)
+      AssertQubitIsInStateWithinTolerance((Complex(0., 0.), Complex(0., 1.)), qubits[1], 1e-5);
+  }
+
+  ```
+syntax: 'operation AssertQubitIsInStateWithinTolerance (expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    summary: 需要分別為 $ \ket{0}$ 和 $ \ket{1}$ 的複雜 amplitudes。
+    types:
+    - uid: microsoft.quantum.math.complex
+    - uid: microsoft.quantum.math.complex
+  - name: register
+    summary: 要判斷提示其狀態的 Qubit。 請注意，此 qubit 假設為可與其他已配置的 qubits 分離，而不是光子。
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    summary: >-
+      允許實際的 amplitudes 偏離預期的加總公差。
+
+      如需詳細資訊，請參閱下面的備註。
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 8b43bac19173c5ae5a11ff6879a03209c32e7c76
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227112"

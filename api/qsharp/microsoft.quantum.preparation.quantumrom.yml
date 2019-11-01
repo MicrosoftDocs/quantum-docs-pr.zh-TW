@@ -1,0 +1,99 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.quantumrom
+name: QuantumROM
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  使用量子 ROM 技術來表示指定的密度矩陣。
+
+
+  提供 $N $ 係數 $ \Alpha_j $ 的清單時，這會傳回一個使用量子 ROM 技術來準備近似值 $ \tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ bra {j} $ （密度矩陣 $ 淨化 = \rho = 0} ^ {N-1} \sum_{j 的 \frac{|）的單一 $U $。Alpha_j |}{\sum_k | \Alpha_k |}\ket{j}\bra{j} $。 在此近似值中，錯誤 $ \epsilon $ 就是 $ | p_j-\frac{| Alpha_j |}{\sum_k | \Alpha_k |} |\le \epsilon/N $ 和 $\|\tilde\rho-\rho\| \le \epsilon $。 換句話說，$ $ \begin{align} U\ket{0}^ {\lceil\log_2 N\rceil} \ ket{0}^ {m} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{garbage}_j}。
+
+  \end{align} $ $
+examples: >-
+  下列程式碼片段會準備 $ 3 $-qubit state $ \rho = \sum_{j = 0} ^{4}\frac{| Alpha_j |} 的淨化{\sum_k | \Alpha_k |}\ket{j}\bra{j} $，其中 $ \vec\Alpha = （1.0，2.0，3.0，4.0，5.0） $，錯誤為 `1e-3`;
+
+
+  ```qsharp
+
+  let coefficients = [1.0,2.0,3.0,4.0,5.0];
+
+  let targetError = 1e-3;
+
+  let ((nTotalQubits, (nIndexQubits, nGarbageQubits)), oneNorm, op) = QuantumROM(targetError, coefficients);
+
+  using (indexRegister = Qubit[nIndexQubits]) {
+      using (garbageRegister = Qubit[nGarbageQubits]) {
+          op(LittleEndian(indexRegister), garbageRegister);
+      }
+  }
+
+  ```
+syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
+references: '- 以線性 T 複雜度 Ryan Babbush、Craig Gidney、Dominic W Berry、Nathan Wiebe、Jarrod McClean、Zitec Paler、奧斯丁 Fowler、Hartmut Neven https://arxiv.org/abs/1805.03662 的量子線路中的電子 Spectra 編碼'
+input:
+  content: '(targetError : Double, coefficients : Double[])'
+  types:
+  - name: targetError
+    summary: 目標錯誤 $ \epsilon $。
+    isPrimitive: true
+    uid: Double
+  - name: coefficients
+    summary: >-
+      指定基礎狀態機率的 $N $ 係數陣列。
+
+      負數 $-\Alpha_j $ 將被視為正 $ | \Alpha_j | $。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>第一個參數
+
+
+      元組 `(x,(y,z))`，其中 `x = y + z` 是配置的總 qubits 數，`y` 是 `LittleEndian` 暫存器的 qubits 數目，而 `z` 是垃圾 qubits 的數目。
+
+
+      ## <a name="second-parameter"></a>第二個參數
+
+
+      係數陣列的一種標準 $ \sum_j | \Alpha_j | $。
+
+
+      ## <a name="third-parameter"></a>第三個參數
+
+
+      單一 $U $。
+    types:
+    - types:
+      - isPrimitive: true
+        uid: Int
+      - types:
+        - isPrimitive: true
+          uid: Int
+        - isPrimitive: true
+          uid: Int
+    - isPrimitive: true
+      uid: Double
+    - isOperation: true
+      input:
+        types:
+        - uid: microsoft.quantum.arithmetic.littleendian
+        - isArray: true
+          isPrimitive: true
+          uid: Qubit
+      output:
+        types:
+        - isPrimitive: true
+          uid: Unit
+      functors:
+      - Adjoint
+      - Controlled
+ms.openlocfilehash: 33d21289b0b1ad64577677d5fa5ca622346224cc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226415"

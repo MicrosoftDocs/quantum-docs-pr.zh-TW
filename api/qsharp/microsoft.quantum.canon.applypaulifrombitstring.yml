@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applypaulifrombitstring
+name: ApplyPauliFromBitString
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 如果布林陣列的對應位符合指定的輸入，則在陣列中的每個 qubit 上套用 Pauli 運算子。
+remarks: 布林陣列和量子暫存器的長度必須相等。
+syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : Unit'
+input:
+  content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
+  types:
+  - name: pauli
+    summary: 要套用至 `qubits[idx]` 的 Pauli 運算子，其中 `bitsApply == bits[idx]`
+    isPrimitive: true
+    uid: Pauli
+  - name: bitApply
+    summary: 如果 bit 是此值，則套用 Pauli
+    isPrimitive: true
+    uid: Bool
+  - name: bits
+    summary: 布林值暫存器，指定應在 `qubits` 中運算的對應 qubit
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: qubits
+    summary: 要選擇性套用指定 Pauli 運算子的量子暫存器
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: a39d19c11a0ce48b2901097ac497c2ad9c707bba
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220669"

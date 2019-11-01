@@ -1,0 +1,117 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.errorcorrection
+name: ErrorCorrection
+summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含用於量子錯誤更正的函式、作業和使用者定義類型。"
+functions:
+- uid: microsoft.quantum.errorcorrection.bitflipcode
+  summary: 傳回代表⟦3，1，1⟧位翻轉程式碼編碼器的 QECC 值，以及具有就地的症狀測量的解碼器。
+- uid: microsoft.quantum.errorcorrection.bitfliprecoveryfn
+  summary: 針對⟦3，1，1個⟧位翻轉程式碼，所指定的 Pauli 作業的復原的函式（依資料表查閱）。
+- uid: microsoft.quantum.errorcorrection.fivequbitcode
+  summary: 傳回 QECC 值，代表⟦5、1、3⟧程式碼編碼器和具有就地症狀測量的解碼器。
+- uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
+  summary: 傳回函式，將錯誤的症狀測量對應至⟦5，1，3⟧量子代碼的適當錯誤更正 Pauli 運算子（依資料表查閱）。
+- uid: microsoft.quantum.errorcorrection.steanecode
+  summary: 傳回代表⟦7，1，3⟧ Steane 程式碼編碼器的 CSS 值，以及具有就地症狀測量的解碼器。
+- uid: microsoft.quantum.errorcorrection.steanecoderecoveryfns
+  summary: ⟦7，1，3⟧ Steane 量子代碼之「穩定」群組的 X 和 Z 部分結合的解碼器。
+- uid: microsoft.quantum.errorcorrection.steanecoderecoveryx
+  summary: ⟦7，1，3⟧ Steane 量子代碼之「穩定」群組 X 部分的解碼器。
+- uid: microsoft.quantum.errorcorrection.steanecoderecoveryz
+  summary: ⟦7，1，3⟧ Steane 量子代碼之「穩定」群組的 Z 部分的解碼器。
+- uid: microsoft.quantum.errorcorrection.tablelookuprecovery
+  summary: 針對指定之 qubits 暫存器上的 Pauli 作業，此函式會傳回類型的物件，`RecoveryFn` 其中包含執行與指定的 Pauli 作業陣列相關的資料表查閱解碼所需的所有資訊。
+operations:
+- uid: microsoft.quantum.errorcorrection.bitflipdecoder
+  summary: >-
+    > [!WARNING]
+
+    > 已淘汰，請使用 @"microsoft.quantum.errorcorrection.encodeintobitflipcode"。
+- uid: microsoft.quantum.errorcorrection.bitflipencoder
+  summary: >-
+    > [!WARNING]
+
+    > 已淘汰，請使用 @"microsoft.quantum.errorcorrection.encodeintobitflipcode"。
+- uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
+  summary: 從 [3，1，3]/⟦3，1，1⟧位翻轉程式碼進行解碼。
+- uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
+  summary: 將⟦5，1，3⟧量子代碼解碼。
+- uid: microsoft.quantum.errorcorrection.decodefromsteanecode
+  summary: 反向編碼作業，會將未編碼的量子暫存器對應到⟦7，1，3⟧ Steane 量子代碼底下的編碼量子暫存器。
+- uid: microsoft.quantum.errorcorrection.encodeintobitflipcode
+  summary: 編碼為 [3，1，3]/⟦3，1，1⟧位翻轉程式碼。
+- uid: microsoft.quantum.errorcorrection.encodeintofivequbitcode
+  summary: 編碼為⟦5，1，3⟧量子代碼。
+- uid: microsoft.quantum.errorcorrection.encodeintosteanecode
+  summary: 編碼作業，會將未編碼的量子暫存器對應到⟦7，1，3⟧ Steane 量子代碼底下的編碼量子暫存器。
+- uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
+  summary: >-
+    > [!WARNING]
+
+    > 已淘汰，請使用 @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"。
+- uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
+  summary: >-
+    > [!WARNING]
+
+    > 已淘汰，請使用 @"microsoft.quantum.errorcorrection.encodeintofivequbitcode"。
+- uid: microsoft.quantum.errorcorrection.injectpi4yrotation
+  summary: >-
+    執行與 `Y`的π/4 旋轉。
+
+
+    旋轉是藉由使用魔術狀態來執行;也就是 state $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}的複本。
+
+    \end{align} $ $
+- uid: microsoft.quantum.errorcorrection.knilldistill
+  summary: >-
+    執行 Knill 魔術 state 公司演算法。
+
+
+    假設有15份神奇狀態 $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}，$ $ 會產生一個高品質的複本。
+- uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
+  summary: 測量一組指定的穩定器群組產生器。
+- uid: microsoft.quantum.errorcorrection.recover
+  summary: 根據 `QECC` 類型所描述的量子代碼，執行單一錯誤更正。
+- uid: microsoft.quantum.errorcorrection.recovercss
+  summary: 根據 `CSS` 類型所描述的量子代碼，執行單一錯誤更正。
+- uid: microsoft.quantum.errorcorrection.steanecodedecoder
+  summary: >-
+    > [!WARNING]
+
+    > 已淘汰，請使用 @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"。
+- uid: microsoft.quantum.errorcorrection.steanecodeencoder
+  summary: >-
+    > [!WARNING]
+
+    > 已淘汰，請使用 @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"。
+newtypes:
+- uid: microsoft.quantum.errorcorrection.css
+  summary: 代表 Calderbank –快速鍵– Steane （CSS）程式碼，如其編碼器、解碼器，以及分別用於 `X` 和 `Z` 錯誤的症狀測量程式所定義。
+- uid: microsoft.quantum.errorcorrection.decodeop
+  summary: >-
+    代表將編碼的暫存器解碼成實體暫存器的作業，以及用來記錄症狀的臨時 qubits。
+
+
+    DecodeOp 的引數與從 EncodeOp 傳回的相同，反之亦然。
+- uid: microsoft.quantum.errorcorrection.encodeop
+  summary: >-
+    代表使用提供的臨時 qubits，將實體暫存器編碼為邏輯暫存器的作業。
+
+
+    第一個引數會被視為將會編碼的實體暫存器，而第二個引數則會被視為將使用的臨時暫存器。
+- uid: microsoft.quantum.errorcorrection.logicalregister
+  summary: 輸入可編碼邏輯 qubits 的實體 qubits `Qubit[]` 的註冊。
+- uid: microsoft.quantum.errorcorrection.qecc
+  summary: 代表錯誤更正的程式碼，如其編碼器、解碼器和症狀測量程式所定義。
+- uid: microsoft.quantum.errorcorrection.recoveryfn
+  summary: 適用于函式的類型，會將錯誤的症狀對應至一系列可更正偵測到之錯誤的 `Pauli[]` 作業。
+- uid: microsoft.quantum.errorcorrection.syndrome
+  summary: 測量結果的類型，`Result[]` 指定量子代碼的錯誤症狀。
+- uid: microsoft.quantum.errorcorrection.syndromemeasop
+  summary: 表示用來測量錯誤更正程式碼區塊之症狀的作業。
+ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056790"

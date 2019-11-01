@@ -1,0 +1,65 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.convert
+name: Microsoft.Quantum.Convert
+summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含在各種 Q # 資料類型之間轉換的函式。"
+functions:
+- uid: microsoft.quantum.convert.bigintasboolarray
+  summary: >-
+    將指定的大整數轉換成布林值陣列。
+
+    陣列的0元素是大整數的最小有效位。
+- uid: microsoft.quantum.convert.boolarrayasbigint
+  summary: >-
+    將指定的布林陣列轉換為相等的大整數。
+
+    陣列的0元素是大整數的最小有效位。
+- uid: microsoft.quantum.convert.boolarrayasint
+  summary: 以位元組由小到大的格式，從位的字串產生正整數。
+- uid: microsoft.quantum.convert.boolarrayaspauli
+  summary: 假設有位字串，會傳回以單一 qubit Pauli 運算子陣列表示的多 qubit Pauli 運算子。
+- uid: microsoft.quantum.convert.boolarrayasresultarray
+  summary: 將 `Bool[]` 類型轉換成 `Result[]` 類型，其中 `true` 會對應到 `One`，而 `false` 會對應至 `Zero`。
+- uid: microsoft.quantum.convert.boolasresult
+  summary: 將 `Bool` 類型轉換成 `Result` 類型，其中 `true` 會對應到 `One`，而 `false` 會對應至 `Zero`。
+- uid: microsoft.quantum.convert.boolasstring
+  summary: 將指定的布林值轉換為相等的字串表示。
+- uid: microsoft.quantum.convert.doubleasstring
+  summary: 將指定的雙精確度浮點數轉換為相等的字串表示。
+- uid: microsoft.quantum.convert.doubleasstringwithformat
+  summary: 使用指定的格式，將指定的雙精確度浮點數轉換為相等的字串表示。
+- uid: microsoft.quantum.convert.functionasoperation
+  summary: 將函數轉換成作業。
+- uid: microsoft.quantum.convert.intasbigint
+  summary: 將指定的整數轉換為相等的大整數。
+- uid: microsoft.quantum.convert.intasboolarray
+  summary: 使用傳回之陣列的位元組由小到大表示，產生正整數的二進位標記法。
+- uid: microsoft.quantum.convert.intasdouble
+  summary: 將指定的整數轉換為相等的雙精確度浮點數。
+- uid: microsoft.quantum.convert.intasstring
+  summary: 將指定的整數數位轉換為相等的字串表示。
+- uid: microsoft.quantum.convert.intasstringwithformat
+  summary: 使用指定的格式，將指定的整數數位轉換為相等的字串表示。
+- uid: microsoft.quantum.convert.maybebigintasint
+  summary: >-
+    盡可能將指定的大整數轉換為相等的整數。
+
+    函式會傳回一對產生的整數，以及只有在可能轉換時才為 true 的布林值旗標。
+- uid: microsoft.quantum.convert.pauliarrayasint
+  summary: 將以單一 qubit Pauli 運算子陣列表示的多 qubit Pauli 運算子編碼成整數。
+- uid: microsoft.quantum.convert.rangeasintarray
+  summary: 建立 `arr` 由 start. 列舉的整數陣列。步驟：。成品.
+- uid: microsoft.quantum.convert.resultarrayasboolarray
+  summary: 將 `Result[]` 類型轉換成 `Bool[]` 類型，其中 `One` 會對應到 `true`，而 `Zero` 會對應至 `false`。
+- uid: microsoft.quantum.convert.resultarrayasint
+  summary: 以位元組由小到大的格式，從結果的字串產生正整數。
+- uid: microsoft.quantum.convert.resultasbool
+  summary: 將 `Result` 類型轉換成 `Bool` 類型，其中 `One` 會對應到 `true`，而 `Zero` 會對應至 `false`。
+operations:
+- uid: microsoft.quantum.convert.call
+  summary: 呼叫具有指定輸入的函式。
+ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210962"

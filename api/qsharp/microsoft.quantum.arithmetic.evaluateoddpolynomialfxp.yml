@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
+name: EvaluateOddPolynomialFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 以固定點標記法評估奇多項式。
+syntax: 'operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: coefficients
+    summary: 奇多項式的係數（如 double 陣列），亦即，奇多項式的陣列 $ [a_0，a_1，...，a_k] $，表示 $P （x） = a_0 x + a_1 x ^ 3 + \cdots + a_k x ^ {2k + 1} $。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: fpx
+    summary: 要評估多項式的輸入固定點數位。
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: 輸出固定點數位，將會保存 P （x）。 一開始必須處於 state $ \ket{0}$。
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 3ae6ab137b2c257a98b0ec777c19212d8732f619
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219105"

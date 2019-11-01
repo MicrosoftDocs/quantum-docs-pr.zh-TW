@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
+name: AmpAmpPhasesFixedPoint
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: 計算固定點振幅放大的部分反映階段。
+syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+references: >-
+  我們使用「具有最佳查詢數目的固定點振幅放大」中的階段
+
+
+  - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305)另請參閱「複合量子閘道的方法」
+
+  - `RotationPhases` 格式的階段[LowYoderChuang2016](https://arxiv.org/abs/1603.03996) 。
+input:
+  content: '(nQueries : Int, successMin : Double)'
+  types:
+  - name: nQueries
+    summary: Oracle 狀態準備的查詢數目。 必須是奇數整數。
+    isPrimitive: true
+    uid: Int
+  - name: successMin
+    summary: 目標最小成功機率。
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: 可以在固定點振幅放大配量演算法執行中使用的階段陣列。
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+ms.openlocfilehash: 0dc2c9b18998bac65cd746b5c4065a09a990ef13
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215688"

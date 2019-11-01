@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.discretephaseestimationiteration
+name: DiscretePhaseEstimationIteration
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: 使用單一 oracle 的整數乘冪，執行反復（傳統方式控制）階段估計演算法的單一反復專案。
+syntax: 'operation DiscretePhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
+input:
+  content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
+  types:
+  - name: oracle
+    summary: 作業會在整數和暫存器上運作，因此 $U ^ m $ 會套用至指定的暫存器，其中 $U $ 是要預估其階段的單一，而 $m $ 是指定給 oracle 的整數乘冪
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: power
+    summary: 套用指定的單一 oracle 的次數。
+    isPrimitive: true
+    uid: Int
+  - name: theta
+    summary: 在目標狀態作用之前，用來反轉控制項 qubit 上之階段的角度。
+    isPrimitive: true
+    uid: Double
+  - name: targetState
+    summary: 註冊指定的單一 oracle 所採取的狀態。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: controlQubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 9acf864fe93303489308078eb5039189808549f1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229220"

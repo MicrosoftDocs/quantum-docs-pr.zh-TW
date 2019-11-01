@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ccontrolleda
+name: CControlledA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  假設有作業作業，會傳回新作業，此作業會在傳統控制項位為 true 時套用 op。 如果 `false`，就不會發生任何事。
+
+  修飾詞 `A` 表示作業 adjointable。
+syntax: "function CControlledA (op : ('T => Unit is Adj)) : ((Bool, 'T) => Unit is Adj)"
+input:
+  content: （op：（t = > 單位是形容詞））
+  types:
+  - name: op
+    summary: 要有條件地套用的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: （（Bool，t） = > 單位是形容詞）
+  types:
+  - summary: 如果傳統控制項位為 true，則為 op 的新作業。
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Bool
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+typeParameters:
+- uid: "'T"
+  summary: 要有條件地套用之作業的輸入類型。
+seeAlso:
+- microsoft.quantum.canon.ccontrolled
+ms.openlocfilehash: e02446273f93b51a228679d3eb75bf16a2526e8a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068099"

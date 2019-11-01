@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.maj
+name: MAJ
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  這會將就地多數作業套用至 3 qubits。
+
+
+  如果我們將目標 qubit 的狀態表示為 $ \ket{z} $，而輸入 qubits 的輸入狀態為 $ \ket{x} $ 和 $ \ket{y} $，則此作業會執行下列轉換： $ \ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} （x、y、z）} $。
+syntax: 'operation MAJ (input0 : Qubit, input1 : Qubit, target : Qubit) : Unit'
+input:
+  content: '(input0 : Qubit, input1 : Qubit, target : Qubit)'
+  types:
+  - name: input0
+    summary: 第一個輸入 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: input1
+    summary: 第二個輸入 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: 將套用多數函數的 qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 253b6f6ee152f2aa5326a06fab120433b75a5f0b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218799"

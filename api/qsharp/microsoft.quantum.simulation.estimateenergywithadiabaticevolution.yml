@@ -1,0 +1,81 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
+name: EstimateEnergyWithAdiabaticEvolution
+type: operation
+namespace: Microsoft.Quantum.Simulation
+summary: 藉由在自動設定的輸入狀態下套用 `statePrepUnitary`，然後使用 `adiabaticUnitary`adiabatic 狀態準備，最後階段估計，與使用 `phaseEstAlgorithm`的結果狀態 `qpeUnitary`有關，來執行狀態準備。
+syntax: 'operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
+input:
+  content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
+  types:
+  - name: nQubits
+    summary: 用於模擬的 qubits 數目。
+    isPrimitive: true
+    uid: Int
+  - name: statePrepUnitary
+    summary: Oracle，代表初始 dynamical 產生器的狀態準備。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: adiabaticUnitary
+    summary: Oracle，代表要用來執行掃描到演算法最終狀態的 adiabatic 進化演算法。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: qpeUnitary
+    summary: 代表單一運算子 $U $ 的 oracle，代表 dynamical 產生器下的 time $ \delta t $ 進化，其狀態為 $ \ket{\phi} $，而地面狀態為 $E = \phi\\，\delta t $。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: phaseEstAlgorithm
+    summary: >-
+      針對指定的單一作業執行階段估計的作業。
+
+      如需詳細資訊，請參閱[反復階段估計](/quantum/libraries/characterization#iterative-phase-estimation)。
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.oracles.discreteoracle
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Double
+output:
+  content: Double
+  types:
+  - summary: 以 $U $ 表示之產生器的基礎狀態能源 $ \phi $ 的估計 $ \hat{\phi} $。
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: a5c97bb34307c5216720f82c5cf91ca21cf90739
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223287"

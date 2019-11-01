@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.signi
+name: SignI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 傳回整數，表示數位的正負號。
+remarks: 如[需](https://docs.microsoft.com/dotnet/api/system.math.sign)詳細資訊，請參閱 system.string。
+syntax: 'function SignI (a : Int) : Int'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: bc4f780ee5151a3bb2569108bd3569a73f8a3895
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223695"
