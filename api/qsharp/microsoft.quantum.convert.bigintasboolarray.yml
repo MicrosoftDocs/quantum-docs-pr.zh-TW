@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.bigintasboolarray
+name: BigIntAsBoolArray
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: >-
+  將指定的大整數轉換成布林值陣列。
+
+  陣列的0元素是大整數的最小有效位。
+remarks: 如需詳細資訊，請參閱[ C# BigInteger](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_)函式。
+syntax: 'function BigIntAsBoolArray (a : BigInt) : Bool[]'
+input:
+  content: '(a : BigInt)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: Bool[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 7c35af1d65419d7b6d7e7866ef1b82f70f846fdd
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227486"

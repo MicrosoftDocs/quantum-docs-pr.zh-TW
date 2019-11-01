@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+name: AssertAllZeroWithinTolerance
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: 判斷指定的 qubits 全都在 $ \ket{0}$ 狀態中，直到指定的容錯為止。
+syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
+input:
+  content: （qubits： Qubit []，容錯：雙精度浮點數）
+  types:
+  - name: qubits
+    summary: 判斷提示為 $ \ket{0}$ state 的 Qubits。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: 性
+    summary: 狀態應為 $ \ket{0}$ state 的精確度
+    isPrimitive: true
+    uid: Double
+output:
+  content: 單位
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- assertqubitwithintolerance
+ms.openlocfilehash: 0e3b560d08077bb353147d98a921a2c2ca3ae202
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066535"

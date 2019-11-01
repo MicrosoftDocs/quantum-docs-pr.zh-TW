@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.fold
+name: Fold
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 透過傳回 `f(f(f(initialState, array[0]), array[1]), ...)`的陣列 `array`，逐一查看函數 `f`。
+examples: >-
+  ```qsharp
+
+  function Plus(a : Double, b : Double) {
+      return a + b;
+  }
+
+  function Sum(xs : Double[]) {
+      return Fold(Plus, 0.0, xs);
+  }
+
+  ```
+syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
+input:
+  content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
+  types:
+  - name: folder
+    summary: 要在陣列上折迭的函式。
+    isFunction: true
+    input:
+      types:
+      - uid: "'State"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'State"
+        isLocal: true
+  - name: state
+    summary: 資料夾的初始狀態。
+    uid: "'State"
+    isLocal: true
+  - name: array
+    summary: 要折迭的值陣列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'State"
+  types:
+  - summary: 在反復查看 `array`的所有專案之後，資料夾傳回的最後狀態。
+    uid: "'State"
+    isLocal: true
+typeParameters:
+- uid: "'State"
+  summary: '`folder` 函式所處理的狀態類型，亦即，會接受做為其第一個引數，並傳回。'
+- uid: "'T"
+  summary: '`array` 元素的類型。'
+ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214345"

@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.not
+name: Not
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: 傳回值的 Boolean 否定。
+remarks: >-
+  以下是相同的：
+
+
+  ```Q#
+
+  let x = not value;
+
+  let x = Not(value);
+
+  ```
+syntax: 'function Not (value : Bool) : Bool'
+input:
+  content: '(value : Bool)'
+  types:
+  - name: value
+    summary: 要否定的值。
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: 只有在 `false``value` 時，才 `true`。
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 85df2e3787e96ab18c351dc5a210e5b8a2803b09
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235408"

@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeacha
+name: ApplyToEachA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  將單一 qubit 作業套用至暫存器中的每個元素。
+
+  修飾詞 `A` 表示單一 qubit 作業是 adjointable。
+examples: >-
+  準備三 qubit $ \ket{+} $ 狀態：
+
+
+  ```qsharp
+
+  using (register = Qubit[3]) {
+      ApplyToEach(H, register);
+  }
+
+  ```
+syntax: "operation ApplyToEachA (singleElementOperation : ('T => Unit is Adj), register : 'T[]) : Unit"
+input:
+  content: "(singleElementOperation : ('T => Unit is Adj), register : 'T[])"
+  types:
+  - name: singleElementOperation
+    summary: 要套用至每個 qubit 的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: register
+    summary: 要套用指定作業的 qubits 陣列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 作業作用所在的目標。
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applytoeach
+ms.openlocfilehash: d440958aac7e8cd36351d4ace7e744b02c28d7bf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210298"

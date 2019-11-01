@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.notequalcp
+name: NotEqualCP
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: 只有在兩個輸入不相等時，才會傳回 true。
+syntax: 'function NotEqualCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Bool'
+input:
+  content: '(a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)'
+  types:
+  - name: a
+    summary: 要比較的第一個值。
+    uid: microsoft.quantum.math.complexpolar
+  - name: b
+    summary: 要比較的第二個值。
+    uid: microsoft.quantum.math.complexpolar
+output:
+  content: Bool
+  types:
+  - summary: 只有在 `a` 不等於 `b`時，才 `true`。
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 6f1ad17bd977e39ed6c0f6648e6049424893f657
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235306"

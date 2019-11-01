@@ -1,0 +1,73 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.logical
+name: Microsoft 量子邏輯
+summary: " # <a name=\"summary\"></a>總結\n 包含用來處理邏輯運算式和布林邏輯的函式。"
+functions:
+- uid: microsoft.quantum.logical.and
+  summary: 傳回兩個值的布林結合。
+- uid: microsoft.quantum.logical.conditioned
+  summary: 根據布林條件的值傳回兩個值的其中一個。
+- uid: microsoft.quantum.logical.equalb
+  summary: 只有在兩個輸入相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.equalc
+  summary: 只有在兩個輸入相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.equalcp
+  summary: 只有在兩個輸入相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.equald
+  summary: 只有在兩個輸入相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.equali
+  summary: 只有在兩個輸入相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.equall
+  summary: 只有在兩個輸入相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.equalr
+  summary: 只有在兩個輸入相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.greaterthand
+  summary: 只有在數位大於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.greaterthani
+  summary: 只有在數位大於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.greaterthanl
+  summary: 只有在數位大於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.greaterthanorequald
+  summary: 只有在數位大於或等於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.greaterthanorequali
+  summary: 只有在數位大於或等於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.greaterthanorequall
+  summary: 只有在數位大於或等於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.lessthand
+  summary: 只有當某個數位小於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.lessthani
+  summary: 只有當某個數位小於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.lessthanl
+  summary: 只有當某個數位小於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.lessthanorequald
+  summary: 只有在數位小於或等於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.lessthanorequali
+  summary: 只有在數位小於或等於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.lessthanorequall
+  summary: 只有在數位小於或等於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.not
+  summary: 傳回值的 Boolean 否定。
+- uid: microsoft.quantum.logical.notequalb
+  summary: 只有在兩個輸入不相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.notequalc
+  summary: 只有在兩個輸入不相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.notequalcp
+  summary: 只有在兩個輸入不相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.notequald
+  summary: 只有在兩個輸入不相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.notequali
+  summary: 只有在兩個輸入不相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.notequall
+  summary: 只有在兩個輸入不相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.notequalr
+  summary: 只有在兩個輸入不相等時，才會傳回 true。
+- uid: microsoft.quantum.logical.or
+  summary: 傳回兩個值的布林分離。
+- uid: microsoft.quantum.logical.xor
+  summary: 傳回兩個值的布林互斥分離。
+ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056283"

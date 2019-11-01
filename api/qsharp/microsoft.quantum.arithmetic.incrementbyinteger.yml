@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementbyinteger
+name: IncrementByInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  使用階段旋轉，將不帶正負號的量子暫存器遞增為傳統整數。
+
+
+  假設 `target` 將不帶正負號的整數編碼 $x $ （以位元組為小的編碼），而且該 `increment` 等於 $a $。
+
+  然後，此作業會執行單一 $ \ket{x} \mapsto \ket{x + a} $，其中的加法會執行模數 $ 2 ^ n $，其中 $n = \texttt{Length （target！）}$.
+syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: increment
+    summary: 用來遞增 `target` 的整數。
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: 配量暫存器會使用位元組由小到大編碼來編碼不帶正負號的整數。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementbyintegerphasele
+ms.openlocfilehash: 3eafc268377e36301d511b77feb4db352a075d5d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215008"

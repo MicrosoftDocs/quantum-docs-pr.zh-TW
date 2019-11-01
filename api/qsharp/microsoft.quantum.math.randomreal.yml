@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomreal
+name: RandomReal
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: 傳回間隔中大於或等於零且小於一的隨機實數。
+remarks: 此函式會呼叫 <xref:microsoft.quantum.intrinsic.random>，因此其隨機性取決於 `Random`的執行。
+syntax: 'operation RandomReal (bitsRandom : Int) : Double'
+input:
+  content: '(bitsRandom : Int)'
+  types:
+  - name: bitsRandom
+    summary: >-
+      應該用來取樣亂數字的精確度位數。
+
+          # Output
+
+      $K $ [0，2 ^ {\texttt{bitsRandom}}） $ 取樣的整數的實數 $x = k/2 ^ {\texttt{bitsRandom}} $，機率為 $ \Pr （k） = 1/2 ^ {\texttt{bitsRandom}} $。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: c0780e0b8771c74a04145d5dce70d47dfefafa0e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219955"

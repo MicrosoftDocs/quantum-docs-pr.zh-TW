@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangeend
+name: 到 rangeend
+type: function
+namespace: Microsoft.Quantum.Core
+summary: 傳回指定範圍的已定義結束值，這不一定是序列中的最後一個元素。
+remarks: >-
+  範圍運算式的第一個元素是 `start`、第二個元素是 `start+step`、第三個元素 `start+step+step`等等，直到傳遞 `end` 為止。
+
+
+  請注意，定義的範圍結束值可能與範圍所指定之序列中的最後一個元素不同。例如，在範圍 0. 中。 2.。 5最後一個元素是4，但結束值為5。
+syntax: 'function RangeEnd (range : Range) : Int'
+input:
+  content: （範圍：範圍）
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: Int
+  types:
+  - summary: 給定範圍的已定義結束值。
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066637"

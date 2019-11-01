@@ -1,0 +1,67 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applywithinputtransformationca
+name: ApplyWithInputTransformationCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 假設有一項作業接受部分輸入、傳回與該作業相容的輸出，以及該函式的輸入，則會使用函式來套用作業，以將輸入轉換成作業所預期的格式。
+examples: >-
+  下列呼叫會使用 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian"，將針對 @"Microsoft.Quantum.Arithmetic.BigEndian" 輸入所設計的作業套用至類型 @"Microsoft.Quantum.Arithmetic.LittleEndian"的輸入：
+
+
+  ```qsharp
+
+  ApplyWithInputTransformation(LittleEndianAsBigEndian, ApplyXorInPlaceBE, LittleEndian(qubits));
+
+  ```
+syntax: "operation ApplyWithInputTransformationCA (fn : ('U -> 'T), op : ('T => Unit is Adj + Ctl), input : 'U) : Unit"
+input:
+  content: "(fn : ('U -> 'T), op : ('T => Unit is Adj + Ctl), input : 'U)"
+  types:
+  - name: fn
+    summary: 函式，可將指定的輸入轉換成作業所預期的格式。
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'T"
+        isLocal: true
+  - name: op
+    summary: 要套用的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: input
+    summary: 函數的輸入。
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- applywithinputtransformation
+- applywithinputtransformationa
+- applywithinputtransformationc
+- transformedoperation
+ms.openlocfilehash: 56033b5a81f87f7d4718f87cfef0fea020297547
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212594"

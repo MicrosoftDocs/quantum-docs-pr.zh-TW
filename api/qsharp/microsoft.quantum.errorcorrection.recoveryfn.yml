@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.recoveryfn
+name: RecoveryFn
+type: newtype
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: 適用于函式的類型，會將錯誤的症狀對應至一系列可更正偵測到之錯誤的 `Pauli[]` 作業。
+syntax: newtype RecoveryFn = (Microsoft.Quantum.ErrorCorrection.Syndrome -> Pauli[]);
+ms.openlocfilehash: 86d0c6444a3e822525f605f2c15978323b9e1caf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220312"

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r
+name: R
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  針對指定的 Pauli 軸套用旋轉。
+
+
+  \begin{align} R_ {\mu} （\theta） \mathrel{： =} e ^ {-i \theta \sigma_{\mu}/2}，\end{align}，其中 $ \mu \in \{I，X，Y，Z\}$。
+remarks: 使用 `pauli = PauliI`呼叫時，此作業會套用*全域階段*。 與 `Controlled` 仿函數搭配使用時，這個階段可能會很重要。
+syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(pauli : Pauli, theta : Double, qubit : Qubit)'
+  types:
+  - name: pauli
+    summary: 要 exponentiated 以形成旋轉的 Pauli 運算子（$ \mu $）。
+    isPrimitive: true
+    uid: Pauli
+  - name: theta
+    summary: 要旋轉 qubit 的角度。
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: 應套用閘道的 Qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: cb7cf0c4c2a758b1abaa80d6fe3c265fc9feabb2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234014"

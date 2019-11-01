@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delay
+name: Delay
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  套用具有延遲的指定作業。
+
+
+  給定作業和該作業的輸入時，會在提供額外的輸入之後套用作業。
+
+  特別是，expression `Delay(op, arg, _)` 是一項作業，會在呼叫時將 `op` 套用至 `arg`。
+
+  Expression `Delay(op,arg,_)` 允許延遲 `op`的應用程式。
+syntax: "operation Delay (op : ('T => 'U), arg : 'T, aux : Unit) : 'U"
+input:
+  content: "(op : ('T => 'U), arg : 'T, aux : Unit)"
+  types:
+  - name: op
+    summary: 要套用的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: arg
+    summary: 要對其套用作業的輸入。
+    uid: "'T"
+    isLocal: true
+  - name: aux
+    summary: 使用部分應用程式來延遲應用程式運作的引數。
+    isPrimitive: true
+    uid: Unit
+output:
+  content: "'U"
+  types:
+  - uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 要延遲之作業的輸入類型。
+- uid: "'U"
+  summary: 要延遲之作業的傳回型別。
+seeAlso:
+- microsoft.quantum.canon.delayc
+- microsoft.quantum.canon.delaya
+- microsoft.quantum.canon.delayca
+- microsoft.quantum.canon.delayed
+ms.openlocfilehash: 1759670182cff1153859c62e9c95d1be1f998674
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226109"

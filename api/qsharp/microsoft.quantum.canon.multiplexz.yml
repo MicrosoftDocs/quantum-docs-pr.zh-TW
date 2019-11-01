@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexz
+name: MultiplexZ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  適用于 qubits 陣列的 Pauli Z 旋轉。
+
+
+  這會套用乘法控制的單一作業 $U $ 來執行依角度 $ \theta_j $ $Z $ 的旋轉，而此作業是由 $n $-qubit number state $ \ket{j} $ 所控制。
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $。
+remarks: 如果指定了少於 $ 2 ^ n $，`coefficients` 將會以 $ \theta_j = $0.0 元素填補。
+syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+references: '- Vivek Shende、Stephen Bullock、Igor L. Markov https://arxiv.org/abs/quant-ph/0406176 的量子邏輯電路合成'
+input:
+  content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: 最多 $ 2 ^ n $ 係數 $ \theta_j $ 的陣列。 $J $ th 的係數會以位元組由小到大的格式來編制編碼的數位 state $ \ket{j} $。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: control
+    summary: $n $ qubit 控制項暫存器，其會將數位狀態 $ \ket{j} $ 編碼為位元組由小到大的格式。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: $E ^ {i P \theta_j} $ 旋轉的單一 qubit 註冊。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 7098b849ea730b46b4cc3039520ef2b040d43d34
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222692"

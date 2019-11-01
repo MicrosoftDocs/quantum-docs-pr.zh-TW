@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.uncurriedopa
+name: UncurriedOpA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  假設有一個會傳回作業的函式，則會傳回同時接受這兩個輸入做為元組的新操作。
+
+  修飾詞 `A` 表示作業 adjointable。
+syntax: "function UncurriedOpA (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 'U) => Unit is Adj)"
+input:
+  content: "(curriedOp : ('T -> ('U => Unit is Adj)))"
+  types:
+  - name: curriedOp
+    summary: 傳回作業的函式。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+        functors:
+        - Adjoint
+output:
+  content: (('T, 'U) => Unit is Adj)
+  types:
+  - summary: 新的作業 `op`，讓 `op(t, u)` 相當於 `(curriedOp(t))(u)`。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+typeParameters:
+- uid: "'T"
+  summary: 擴充函數之第一個引數的類型。
+- uid: "'U"
+  summary: 擴充函數之第二個引數的類型。
+seeAlso:
+- microsoft.quantum.canon.uncurryop
+ms.openlocfilehash: 305f90bd71f2dc6e790e470df649e5a2a5afb9ad
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216980"

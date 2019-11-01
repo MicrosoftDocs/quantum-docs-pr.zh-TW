@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.squarefxp
+name: SquareFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 將固定點數位的平方。
+syntax: 'operation SquareFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(fp : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: fp
+    summary: 固定點數位。
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: 結果固定點數位，一開始必須是 state $ \ket{0}$。
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 7f43b6ec6a001f9c0c26d0c61f7df0e73431cede
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218442"

@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplybymodularinteger
+name: MultiplyByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  在 qubit 暫存器上以整數常數執行模組化乘法。
+
+
+  讓我們以 N 和 constMultiplier 來表示模數，然後此作業會在計算基礎上，執行下列對應所定義的單一元件： | y ⟩↦ | a ⋅ y （mod N）⟩，適用于0和 N-1 之間的所有 y
+remarks: >-
+  - 如需線路圖表和說明，請參閱第[8 頁 arXiv 的圖7： quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
+
+  - 這項作業對應至 ArXiv 中的 U ₐ [： quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
+syntax: 'operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: constMultiplier
+    summary: 乘數相乘的常數。 必須為模數的共同質數。
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: 乘法運算會執行模數 `modulus`
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    summary: >-
+      要乘以常數的數位。
+
+      這是 qubits 的陣列，代表以位元組為小的位順序的整數。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 4a99aff903b22ad4edcd96f2a980bd65c740025f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218748"

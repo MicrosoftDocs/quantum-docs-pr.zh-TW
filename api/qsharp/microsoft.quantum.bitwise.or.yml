@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.or
+name: Or
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: >-
+  傳回兩個整數的位 OR。
+
+  這會執行與內建 `|||` 運算子相同的計算。
+remarks: 請參閱[ C# |運算子](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/or-operator)以取得詳細資料。
+examples: >-
+  ```qsharp
+
+  let a = 248;      //                 11111000₂
+
+  let b = 63;       //                 00111111₂
+
+  let x = Or(a, b); // x : Int = 255 = 11111111₂.
+
+  ```
+syntax: 'function Or (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Int
+  - name: b
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 494af7ad852a6e88a3a3a521030e21f4f866bee1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217762"

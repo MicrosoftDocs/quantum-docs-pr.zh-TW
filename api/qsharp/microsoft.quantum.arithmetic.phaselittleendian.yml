@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.phaselittleendian
+name: PhaseLittleEndian
+type: newtype
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  以 QFT 為單位的位元組不帶正負號的整數。
+
+
+  例如，如果 $ \ket{x} $ 是以計算為基礎的 $x 整數的位元組由小到大編碼，則 $ \operatorname{QFTLE} \ket{x} $ 就是 QFT 中 $x $ 的編碼方式。
+remarks: 我們會將 `PhaseLittleEndian` 縮寫為檔中的 `PhaseLE`。
+syntax: newtype PhaseLittleEndian = Qubit[];
+seeAlso:
+- qft
+- qftle
+ms.openlocfilehash: 8efb8b58ff7ee5c0530abfb81792366f6990997e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218714"

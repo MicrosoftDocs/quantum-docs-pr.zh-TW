@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.noop
+name: NoOp
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  在引數上執行身分識別作業（無 op）。
+
+
+  這項作業會接受任何類型的值，而且不會對它執行任何動作。
+
+  當預期會有作業類型的輸入時，這會很有用，但不應採取任何動作。
+
+  例如，如果特定錯誤更正的症狀指出未發生任何錯誤，`NoOp<Qubit[]>` 可能是正確的復原程式。
+
+  同樣地，如果作業預期狀態準備程式是輸入，`NoOp<Qubit[]>` 可以用來準備狀態 $ \ket{0 \cdots 0} $。
+remarks: 在幾乎所有情況下，都必須明確指定 `NoOp` 的類型參數。 例如，`NoOp<Qubit>` 等同于 <xref:microsoft.quantum.intrinsic.i>。
+syntax: "operation NoOp (input : 'T) : Unit"
+input:
+  content: "(input : 'T)"
+  types:
+  - name: input
+    summary: 要忽略的值。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.intrinsic.i
+ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222675"

@@ -1,0 +1,75 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelseba
+name: ApplyIfElseBA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  根據傳統位的值，套用兩個 adjointable 作業的其中一個。
+
+
+  假設有位 `bit`，當 `bit` `true`時，會使用 `trueInput` 來套用作業 `trueOp` 做為輸入，並在 `falseOp(falseInput)` `bit` 時套用 `false`。
+syntax: "operation ApplyIfElseBA (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit"
+input:
+  content: "(bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U))"
+  types:
+  - name: bit
+    isPrimitive: true
+    uid: Bool
+  - name: trueOp
+    summary: '`true``bit` 時要套用的 adjointable 作業。'
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: trueInput
+    summary: '`true``bit` 時，要提供給 `trueOp` 的輸入。'
+    uid: "'T"
+    isLocal: true
+  - name: falseOp
+    summary: '`false``bit` 時要套用的 adjointable 作業。'
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: falseInput
+    summary: '`false``bit` 時，要提供給 `falseOp` 的輸入。'
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 作業的輸入類型 `trueOp` 要有條件地套用。
+- uid: "'U"
+  summary: 作業的輸入類型 `falseOp` 要有條件地套用。
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: bcc8b1e13b653c5bb778a923b16b2f6928dedb86
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213920"

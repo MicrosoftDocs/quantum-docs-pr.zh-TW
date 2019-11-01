@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexoperations
+name: MultiplexOperations
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  套用由數位狀態陣列控制的作業陣列。
+
+
+  也就是說，會套用 $U $ 的乘法控制單一作業，而此作業會在由 $n $-qubit number state $ \ket{j} $ 控制時套用單一 $V _j $。
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
+remarks: 如果指定了少於 $ 2 ^ n $，`coefficients` 將會以 identity 元素填補。 此執行會使用 $n-$1 ancilla qubits。
+syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
+references: '- 以配量的第一個量子模擬加速 Andrew M. Childs、Dmitri Maslov、Yunseong 名、Neil J. Ross、中國人民幣 Su https://arxiv.org/abs/1711.10980'
+input:
+  content: "(unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
+  types:
+  - name: unitaries
+    summary: 最多 $ 2 ^ n $ 個單一作業的陣列。 $J $ th 作業是依以位元組為 \ket{j} $ 的數位編碼，以不限時數的格式進行編制索引。
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: index
+    summary: $n $ qubit 控制項暫存器，其會將數位狀態 $ \ket{j} $ 編碼為位元組由小到大的格式。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: $V _j $ 的一般 qubit 暫存器會作用於。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: bd248ece9d76729a33db3dfead177fa68909f438
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223491"

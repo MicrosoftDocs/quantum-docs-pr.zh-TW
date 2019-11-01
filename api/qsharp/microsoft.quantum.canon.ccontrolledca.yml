@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ccontrolledca
+name: CControlledCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  假設有作業作業，會傳回新作業，此作業會在傳統控制項位為 true 時套用 op。 如果 `false`，就不會發生任何事。
+
+  修飾詞 `CA` 表示作業可控制和 adjointable。
+syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
+input:
+  content: （op：（t = > 單位是 Ctl + 形容詞））
+  types:
+  - name: op
+    summary: 要有條件地套用的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: （（Bool，t） = > Unit 是 Ctl + 形容詞）
+  types:
+  - summary: 如果傳統控制項位為 true，則為 op 的新作業。
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Bool
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: 要有條件地套用之作業的輸入類型。
+seeAlso:
+- microsoft.quantum.canon.ccontrolled
+ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068065"

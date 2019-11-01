@@ -1,0 +1,66 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyif
+name: ApplyIf
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  套用對傳統位進行條件運算的作業。
+
+
+  給定作業 `op` 和位值 `bit`，如果 `bit` 為 `true`，則會將 `op` 套用至 `target`。 如果 `false`，`target`就不會發生任何事。
+examples: >-
+  以下會將 qubits 的暫存器準備成以指定為 `Bool` 值陣列之傳統位字串所代表的計算基礎狀態：
+
+
+  ```Q#
+
+  let bitstring = [true, false, true];
+
+  using (register = Qubit(3)) {
+      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      // register should now be in the state |101⟩.
+      ...
+  }
+
+  ```
+syntax: "operation ApplyIf (op : ('T => Unit), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: 要有條件地套用的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: bit
+    summary: 控制是否套用 op 的布林值。
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: 要對其套用作業的輸入。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 要有條件地套用之作業的輸入類型。
+seeAlso:
+- microsoft.quantum.canon.applyifc
+- microsoft.quantum.canon.applyifa
+- microsoft.quantum.canon.applyifca
+ms.openlocfilehash: 8493200e8c87fc423bee6754f50f0f5c6b7cdd5c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217643"

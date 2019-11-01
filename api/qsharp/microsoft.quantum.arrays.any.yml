@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.any
+name: Any
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 針對陣列的元素定義陣列和述詞，會檢查陣列中至少有一個元素是否滿足述詞。
+remarks: "函數是針對泛型型別定義的，也就是說，每當有陣列 `'T[]`，而函式 `predicate: 'T -> Bool` 我們可以產生 `Bool` 值，指出某個元素是否符合 `predicate`。"
+syntax: "function Any (predicate : ('T -> Bool), array : 'T[]) : Bool"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: predicate
+    summary: "`'T` 的函式，用來檢查元素的 `Bool`。"
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: 透過 `'T`的元素陣列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: 套用至所有元素之述詞或函式的 `Bool` 值。
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: '`array` 元素的類型。'
+ms.openlocfilehash: 11e76d2b0b26d2dfcfed36d126e6ebb6ce76cef8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218374"

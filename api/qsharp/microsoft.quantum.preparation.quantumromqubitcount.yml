@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.quantumromqubitcount
+name: QuantumROMQubitCount
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: 傳回 qubits 的總次數，必須配置給 `QuantumROM`所傳回的作業。
+syntax: 'function QuantumROMQubitCount (targetError : Double, nCoeffs : Int) : (Int, (Int, Int))'
+input:
+  content: '(targetError : Double, nCoeffs : Int)'
+  types:
+  - name: targetError
+    summary: 目標錯誤 $ \epsilon $。
+    isPrimitive: true
+    uid: Double
+  - name: nCoeffs
+    summary: '`QuantumROM`中指定的係數數目。'
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Int, (Int, Int))
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>第一個參數
+
+
+      元組 `(x,(y,z))`，其中 `x = y + z` 是配置的總 qubits 數，`y` 是 `LittleEndian` 暫存器的 qubits 數目，而 `z` 是垃圾 qubits 的數目。
+    types:
+    - isPrimitive: true
+      uid: Int
+    - types:
+      - isPrimitive: true
+        uid: Int
+      - isPrimitive: true
+        uid: Int
+ms.openlocfilehash: fdc1d18f088cd5d07558a6fac28b92af6c9884d3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226381"

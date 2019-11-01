@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifzeroca
+name: ApplyIfZeroCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  將以傳統結果值為零的單一運算套用。
+
+
+  給定作業 `op` 並 `result`結果值時，如果 `result` 為 `Zero`，則會將 `op` 套用至 `target`。 如果 `One`，`target`就不會發生任何事。
+
+  尾碼 `CA` 表示要套用的作業是單一的（可控制且 adjointable）。
+syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
+  types:
+  - name: result
+    summary: 控制是否要套用 op 的測量結果。
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: 要有條件地套用的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: target
+    summary: 要對其套用作業的輸入。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 要有條件地套用之作業的輸入類型。
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifzeroc
+- microsoft.quantum.canon.applyifzeroa
+- microsoft.quantum.canon.applyifzeroca
+ms.openlocfilehash: 9ec05f688c3895b2d68fc3f4717401e127fbe641
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213597"
