@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.recovercss
+name: RecoverCSS
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: 根據 `CSS` 類型所描述的量子代碼，執行單一錯誤更正。
+syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
+input:
+  content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
+  types:
+  - name: code
+    summary: 以 `CSS` 類型封裝的配量 CSS 錯誤更正程式碼描述了量子資料的編碼和解碼，以及如何測量錯誤 syndromes。
+    uid: microsoft.quantum.errorcorrection.css
+  - name: fnX
+    summary: '`RecoveryFn`，會將每個 $X $ 錯誤的症狀對應至更正偵測到之錯誤的 `Pauli[]` 作業。'
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+  - name: fnZ
+    summary: '`RecoveryFn`，會將每個 $Z $ 錯誤的症狀對應至更正偵測到之錯誤的 `Pauli[]` 作業。'
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+  - name: logicalRegister
+    summary: 定義了穩定程式碼的 qubits 陣列。
+    uid: microsoft.quantum.errorcorrection.logicalregister
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- microsoft.quantum.canon.css
+- microsoft.quantum.canon.recoveryfn
+- microsoft.quantum.canon.logicalregister
+ms.openlocfilehash: 4e07e66816c347aa9a7e1f06ebe88f65b2d040ce
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220261"

@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cx
+name: CX
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  將受控制的 X （CX）閘道套用至一對 qubits。
+
+
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align}，資料列和資料行的組織方式如 [量子概念指南] 所示。
+remarks: >-
+  相當於：
+
+
+  ```qsharp
+
+  Controlled X([control], target);
+
+  ```
+
+
+  和：
+
+
+  ```qsharp
+
+  CNOT(control, target);
+
+  ```
+syntax: 'operation CX (control : Qubit, target : Qubit) : Unit'
+input:
+  content: （控制項： Qubit，target： Qubit）
+  types:
+  - name: control
+    summary: CX 閘道的控制 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: 目標
+    summary: CX 閘道的目標 qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: 單位
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067861"

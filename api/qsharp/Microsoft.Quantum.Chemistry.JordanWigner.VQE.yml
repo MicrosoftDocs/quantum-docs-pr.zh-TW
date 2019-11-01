@@ -1,0 +1,19 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.chemistry.jordanwigner.vqe
+name: JordanWigner. VQE。
+functions:
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
+  summary: 展開 Wigner 係數的精簡標記法，以取得這些和 Pauli 字詞之間的一對一對應。
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
+  summary: 計算計算 Wigner 詞彙預期所需的所有測量運算子。
+operations:
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
+  summary: 藉由將個別 Wigner 條款的能源加總，來預估分子的能源。
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+  summary: 計算與指定的約旦 Wigner Hamiltonian 詞彙相關聯的能源
+ms.openlocfilehash: 5c56599c1926f2a11631c74cc03545c43a724eeb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057240"

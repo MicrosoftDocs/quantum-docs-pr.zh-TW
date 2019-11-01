@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.generatorsystem
+name: generatorSystem
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  表示 `GeneratorIndex`es 的集合。
+
+
+  我們會使用單一索引整數逐一查看此集合，並假設集合大小為已知。
+remarks: 您可以使用 <xref:microsoft.quantum.arrays.lookupfunction> 函數，輕鬆地定義 `GeneratorSystem` 的實例。
+syntax: newtype GeneratorSystem = (Int, (Int -> Microsoft.Quantum.Simulation.GeneratorIndex));
+seeAlso:
+- microsoft.quantum.canon.lookupfunction
+ms.openlocfilehash: 61312eb42da1e9bb67b5d2a79350c39e23aa0dac
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067011"

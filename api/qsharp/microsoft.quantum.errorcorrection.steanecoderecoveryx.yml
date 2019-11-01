@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.steanecoderecoveryx
+name: SteaneCodeRecoveryX
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: ⟦7，1，3⟧ Steane 量子代碼之「穩定」群組 X 部分的解碼器。
+remarks: 選擇的解碼器會使用⟦7，1，3⟧ Steane 程式碼的 CSS code 屬性，亦即，它會分別修正 X 錯誤和 Z 錯誤。 程式碼的屬性是，X 的位置分別是要套用的 Z 更正，是 X 的3位編碼，分別是當被視為整數時的 Z 症狀。
+syntax: 'function SteaneCodeRecoveryX (syndrome : Microsoft.Quantum.ErrorCorrection.Syndrome) : Pauli[]'
+references: '- D. Gottesman，"穩定的代碼和量子錯誤修正" 博士. 論文，Caltech，1997;https://arxiv.org/abs/quant-ph/9705052'
+input:
+  content: '(syndrome : Microsoft.Quantum.ErrorCorrection.Syndrome)'
+  types:
+  - name: syndrome
+    summary: 從測量穩定的 X 部分取得的症狀陣列。
+    uid: microsoft.quantum.errorcorrection.syndrome
+output:
+  content: Pauli[]
+  types:
+  - summary: Pauli 作業的陣列，當套用至編碼的配量系統時，會更正對應于 `syndrome`的錯誤。
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+seeAlso:
+- steanecoderecoveryx
+- steanecoderecoveryfns
+ms.openlocfilehash: 7805284f29bfcbb6d4ba56f616f492b2f2126f7b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232280"

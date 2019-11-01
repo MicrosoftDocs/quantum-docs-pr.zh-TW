@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.rotationphases
+name: RotationPhases
+type: newtype
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: 以幅度放大的單一 qubit 旋轉順序的階段。
+remarks: >-
+  第一個參數是反映的階段陣列，以單一 qubit 旋轉的產品表示。
+
+  [ G.H. 低、I. L。 Chuang，https://arxiv.org/abs/1707.05391]。
+syntax: newtype RotationPhases = Double[];
+ms.openlocfilehash: 1ad6a80a10cc3880122303a7bbd708087976f906
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215450"

@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.bitflipcode
+name: BitFlipCode
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: 傳回代表⟦3，1，1⟧位翻轉程式碼編碼器的 QECC 值，以及具有就地的症狀測量的解碼器。
+syntax: 'function BitFlipCode () : Microsoft.Quantum.ErrorCorrection.QECC'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.ErrorCorrection.QECC
+  types:
+  - summary: 藉由指定 `QECC` 類型，傳回配量錯誤更正程式碼的執行。
+    uid: microsoft.quantum.errorcorrection.qecc
+ms.openlocfilehash: bd9fdd54cf79610fa83ed99f4c94c89b7218c2c6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230410"

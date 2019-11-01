@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementbymodularinteger
+name: IncrementByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  以整數常數執行 qubit 暫存器的模組化增量。
+
+
+  讓我們以 y `target` 來表示 `increment`，`modulus` 由 N 和 integer 編碼，然後作業會執行下列轉換： \begin{align} \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N} \end{align} 整數是以位元組由小到大的格式編碼。
+remarks: 假設 target 的值小於 N。請注意，<xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> 會執行相同的作業，但會以 `PhaseLittleEndian` 為基礎。
+syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: increment
+    summary: 要加入至 y 的整數遞增 a。
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: Mods y + a 的整數 N。
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: '`increment` 的 `LittleEndian` 格式中的整數 y 會加入至。'
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementphasebymodularinteger
+ms.openlocfilehash: 9b61ed007a08d176d1754a7c1cd6cd2d9edce7d2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219054"

@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
+name: AssertQubitWithinTolerance
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: 判斷 qubit `q` 在預期的 Pauli Z 運算子 eigenstate 中，直到指定的容錯為止。
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> 允許判斷提示任意 qubit 狀態，而不只是 $Z $ eigenstates。
+syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : Result, q : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    summary: 預期 qubit 的狀態： `Zero` 或 `One`。
+    isPrimitive: true
+    uid: Result
+  - name: q
+    summary: 其狀態為已判斷提示的 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    summary: 測量 qubit 傳回預期結果的機率的承受度。
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- assertqubitisinstatewithintolerance
+ms.openlocfilehash: ccb44aed5612c369ff7c4e687e72fc65fba4180e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227078"

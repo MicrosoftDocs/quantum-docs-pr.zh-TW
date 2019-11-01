@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.measurewithscratch
+name: MeasureWithScratch
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: 使用明確的臨時 qubit 來測量指定的 Pauli 運算子，以執行測量。
+syntax: 'operation MeasureWithScratch (pauli : Pauli[], target : Qubit[]) : Result'
+input:
+  content: '(pauli : Pauli[], target : Qubit[])'
+  types:
+  - name: pauli
+    summary: 指定為單一 qubit Pauli 運算子陣列的多 qubit Pauli 運算子。
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: target
+    summary: 要測量的 Qubit register。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: 測量 `target` 暫存器上所指定 Pauli 運算子的結果。
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 4b302c21dac11fbf33138555371ded2c7f43a409
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231345"

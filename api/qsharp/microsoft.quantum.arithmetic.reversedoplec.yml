@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.reversedoplec
+name: ReversedOpLEC
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: 假設有一個接受以位元組由小到大的輸入的作業，則會傳回接受以大至小的輸入的新作業。
+syntax: 'function ReversedOpLEC (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl)) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl)'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl))'
+  types:
+  - name: op
+    summary: 要反轉其輸入的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+output:
+  content: (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl)
+  types:
+  - summary: 接受其輸入做為位元組由小到大暫存器的新作業。
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+seeAlso:
+- applyreversedoplec
+- reversedople
+- reversedoplea
+- reversedopleca
+ms.openlocfilehash: 069cafc77bd3574fab4787c5f12813c0be2b20b2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218493"

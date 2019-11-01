@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.robustphaseestimation
+name: RobustPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: 針對給定的 oracle `U` 和 eigenstate 執行健全的非反復式配量階段估計演算法，並在海森堡限制的變異數調整的情況下，提供階段的單一實際值估計。
+remarks: 在大量查詢的限制中，Cramer-Rao $ \phi $ 的估計標準差的下限為 $ \sigma \ge 2 \pi/\text{# of 查詢} $。
+syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
+references: '- 通用單一 Qubit 閘道的健全校正-透過健全的階段估計 Shelby Kimmel、Guang 停止 Hao Low、Theodore 所一 J. Yoder https://arxiv.org/abs/1502.02677'
+input:
+  content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
+  types:
+  - name: bitsPrecision
+    summary: 這會使用一些查詢調整，例如 $ \sigma \le 10.7 \pi/\text{# of 查詢} $，以標準差 $ \sigma \le 2 \ pi/2 ^ \text{bitsPrecision} $ 來提供 $ \phi $ 的預估。
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: 針對指定的整數 $m $ 執行 $U ^ m $ 的運算。
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: targetState
+    summary: $U $ 作用的量子暫存器。 如果它儲存 $U $ 的 eigenstate $ \ket{\phi} $，則 $U \ket{\phi} = e ^ {i\phi} \ket{\phi} $ for $ \phi\in （-\pi，\pi] $ 未知的階段。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229050"

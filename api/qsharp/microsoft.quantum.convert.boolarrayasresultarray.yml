@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.boolarrayasresultarray
+name: BoolArrayAsResultArray
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: 將 `Bool[]` 類型轉換成 `Result[]` 類型，其中 `true` 會對應到 `One`，而 `false` 會對應至 `Zero`。
+syntax: 'function BoolArrayAsResultArray (input : Bool[]) : Result[]'
+input:
+  content: （input： Bool []）
+  types:
+  - name: input
+    summary: 要轉換 `Bool[]`。
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+output:
+  content: 結果 []
+  types:
+  - summary: 表示 `input`的 `Result[]`。
+    isArray: true
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: c81ac2d1bcfdc8e08769bc448f83fa215e058a9a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066875"

@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparesinglequbitidentity
+name: PrepareSingleQubitIdentity
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  準備最常混合狀態中的 qubit。
+
+
+  它會藉由套用 depolarizing channel $ $ \begin{align} \Omega （\rho） \mathrel{： =} \frac{1}{4} \sum_{\mu \in \{0，1，2，3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\，準備 $ \boldone/$2 狀態中的指定 qubit。dagger}、\end{align} $ $，其中 $ \sigma\_i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是密度運算子，代表混合的狀態。
+remarks: >-
+  混合狀態 $ \boldone/$2 描述將此作業套用至狀態的結果會隱含地描述此作業中隨機播放所預期的值。
+
+  因此，對於任何單一應用程式，這項作業會將純狀態對應到純狀態，但它會如預期的方式運作。
+
+  特別是，這項作業可以在進程 tomography 中用來測量通道的*非 unital*元件。
+syntax: 'operation PrepareSingleQubitIdentity (qubit : Qubit) : Unit'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: Qubit，其狀態會以上述方式 depolarized。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 944178e3a8473b2206de037031bd8def546425b8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226517"

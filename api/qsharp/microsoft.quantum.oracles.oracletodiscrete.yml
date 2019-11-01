@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.oracletodiscrete
+name: OracleToDiscrete
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: 假設有一個代表「黑箱」 oracle 的作業，會傳回代表「黑箱」 oracle 重複多次的「獨立時間」 oracle。
+examples: '`OracleToDiscrete(U)(3, target)` 相當於 `U(target)` 重複三次。'
+syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
+input:
+  content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
+  types:
+  - name: blackBoxOracle
+    summary: 要 exponentiated 的作業。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: Microsoft.Quantum.Oracles.DiscreteOracle
+  types:
+  - summary: 部分套用於「黑箱」 oracle 的作業，代表離散化 oracle
+    uid: microsoft.quantum.oracles.discreteoracle
+ms.openlocfilehash: e82c2f3a9d606b1e5316c45aaceeff702d067258
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230886"

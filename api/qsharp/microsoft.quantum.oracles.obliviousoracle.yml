@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.obliviousoracle
+name: ObliviousOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  表示 oracle for 遺忘式調幅放大。
+
+
+  Oracle $O $ 的輸入如下：
+
+
+  - $O $ 的 ancilla 暫存器 $a $ 作用於。
+
+  - 已選取要套用所需之單一 $U $ 的系統暫存器 $s $，請在註冊 $a $ 的 post 上，于 $ \ket{t}\_$。
+remarks: >-
+  此 oracle 由 $ $ O\ket {s} 定義\_a\ket {\ psi}\_s = \lambda\ket{t}\_U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ 作用於 ancilla state $ \ket{s}\_a $ to在任何系統狀態 $ \ket{\psi}\_s $ 上執行單一 $U $，並以 $ \ket{t} 標記的基數\_$ 來進行 \lambda $。
+
+  第一個參數是 $ \ket{s}\_$ 的 qubit 暫存器。 第二個參數是 $ \ket{\psi}\_s $ 的 qubit 暫存器。
+syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231056"

@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delayeda
+name: DelayedA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 傳回使用指定的引數來套用給定運算的作業。
+syntax: "function DelayedA (op : ('T => Unit is Adj), arg : 'T) : (Unit => Unit is Adj)"
+input:
+  content: "(op : ('T => Unit is Adj), arg : 'T)"
+  types:
+  - name: op
+    summary: 套用傳回值的結果所套用的作業
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: arg
+    summary: 套用作業 `op` 的輸入。
+    uid: "'T"
+    isLocal: true
+output:
+  content: (Unit => Unit is Adj)
+  types:
+  - summary: 使用輸入 `arg` 套用 `op` 的新作業
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+typeParameters:
+- uid: "'T"
+  summary: 要延遲之作業的輸入類型。
+seeAlso:
+- microsoft.quantum.canon.delayed
+- microsoft.quantum.canon.delay
+ms.openlocfilehash: b1ac535cf5d46e1dbde7c9e9fb33a0f9cc33c24d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219479"

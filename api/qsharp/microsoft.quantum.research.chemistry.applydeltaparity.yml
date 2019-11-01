@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.applydeltaparity
+name: ApplyDeltaParity
+type: operation
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: 計算前一個 PQRS 之間的同位檢查差異 .。。詞彙和下一個 PQRS .。。長期. 此差異會在輔助 qubit 上計算。
+remarks: 這會假設 P 的索引 < Q < R < S < .。。適用于 prevPQ 和 nextPQ。
+syntax: 'operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit'
+input:
+  content: '(prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[])'
+  types:
+  - name: prevFermionicTerm
+    summary: 至上一個 PQRS 的索引清單 .。。條款.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: nextFermionicTerm
+    summary: 下一個 PQRS 的索引清單 .。。條款.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: aux
+    summary: 輔助 qubit，其中會儲存同位檢查計算結果。
+    isPrimitive: true
+    uid: Qubit
+  - name: qubits
+    summary: Qubit 由所有 PQRS 動作條款.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 35ca6ae9ff6ac6db0d0a61cff9c89c7abf862f66
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228047"

@@ -1,0 +1,76 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelserc
+name: ApplyIfElseRC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  會根據傳統結果的值，套用兩個可控作業的其中一個。
+
+
+  假設結果 `result`，當 `result` 等於 `Zero`時，會套用作業 `zeroOp` 搭配 `zeroInput` 作為其輸入，並在 `oneOp(oneInput)` 時套用 `result == One`。
+syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
+input:
+  content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
+  types:
+  - name: result
+    summary: 用來判斷是否套用 `zeroOp` 或 `oneOp` 的測量結果。
+    isPrimitive: true
+    uid: Result
+  - name: zeroOp
+    summary: '`result == Zero`時要套用的可控制作業。'
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: zeroInput
+    summary: '`result == Zero`時要提供給 `zeroOp` 的輸入。'
+    uid: "'T"
+    isLocal: true
+  - name: oneOp
+    summary: '`result == One`時要套用的可控制作業。'
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: oneInput
+    summary: '`result == One`時要提供給 `oneOp` 的輸入。'
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 作業的輸入類型 `zeroOp` 要有條件地套用。
+- uid: "'U"
+  summary: 作業的輸入類型 `oneOp` 要有條件地套用。
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220924"

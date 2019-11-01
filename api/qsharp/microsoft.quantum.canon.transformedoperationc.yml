@@ -1,0 +1,70 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.transformedoperationc
+name: TransformedOperationC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 在指定函式和作業的情況下，會傳回新的作業，而該作業的輸入會由指定的函數轉換。
+examples: >-
+  下列呼叫會使用 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" 將針對 @"Microsoft.Quantum.Arithmetic.BigEndian" 輸入而設計的作業，轉換為接受類型 @"Microsoft.Quantum.Arithmetic.LittleEndian"之輸入的作業：
+
+
+  ```qsharp
+
+  let leOp = TransformedOperation(LittleEndianAsBigEndian, ApplyXorInPlaceBE);
+
+  ```
+syntax: "function TransformedOperationC (fn : ('U -> 'T), op : ('T => Unit is Ctl)) : ('U => Unit is Ctl)"
+input:
+  content: "(fn : ('U -> 'T), op : ('T => Unit is Ctl))"
+  types:
+  - name: fn
+    summary: 函式，可將指定的輸入轉換成作業所預期的格式。
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'T"
+        isLocal: true
+  - name: op
+    summary: 要轉換的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+output:
+  content: ('U => Unit is Ctl)
+  types:
+  - summary: 新的作業 tbat 會呼叫其輸入 `fn`，然後將產生的輸出傳遞給 `op`。
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+seeAlso:
+- transformedoperation
+- transformedoperationa
+- transformedoperationca
+- applywithinputtransformation
+- compose
+ms.openlocfilehash: 315c9aa76018490a58fcf9bbf93d4ef0e8410616
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217048"
