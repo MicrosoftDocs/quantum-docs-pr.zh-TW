@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.equali
+name: EqualI
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: 只有在兩個輸入相等時，才會傳回 true。
+remarks: >-
+  以下是相同的：
+
+
+  ```Q#
+
+  let cond = a == b;
+
+  let cond = EqualI(a, b);
+
+  ```
+syntax: 'function EqualI (a : Int, b : Int) : Bool'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: 要比較的第一個值。
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: 要比較的第二個值。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - summary: 只有在 `a` 等於 `b`時，才 `true`。
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 34e1207e0bf4da6168d1f21b41573b3414063dc6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233130"

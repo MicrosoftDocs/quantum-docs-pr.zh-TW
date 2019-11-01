@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowc
+name: OperationPowC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  將作業提升為乘冪。
+
+  修飾詞 `C` 表示作業是可控制的。
+
+
+  也就是，假設有一個代表閘道 $U $ 的作業，會針對 power $m $ 傳回新作業 $U ^ m $。
+syntax: "function OperationPowC (oracle : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
+input:
+  content: "(oracle : ('T => Unit is Ctl), power : Int)"
+  types:
+  - name: oracle
+    summary: $U $ 的作業，代表要重複的閘道。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: power
+    summary: 要重複 $U $ 的次數。
+    isPrimitive: true
+    uid: Int
+output:
+  content: ('T => Unit is Ctl)
+  types:
+  - summary: 代表 $U ^ m $ 的新作業，其中 $m = \texttt{power} $。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: 要提供技術支援之作業的型別。
+seeAlso:
+- microsoft.quantum.canon.operationpow
+ms.openlocfilehash: 5bc317597ef660bf92291b690fdb2d255eaaa616
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230801"

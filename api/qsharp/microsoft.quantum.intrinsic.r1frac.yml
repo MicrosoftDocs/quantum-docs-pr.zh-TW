@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r1frac
+name: R1Frac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  依據指定為 dyadic 分數的角度，套用關於 $ \ket{1}$ 狀態的旋轉。
+
+
+  \begin{align} R_1 （n，k） \mathrel{： =} \operatorname{diag} （1，e ^ {i \pi k/2 ^ n}）。
+
+  \end{align}
+
+
+  > [!WARNING]
+
+  > 這項作業會使用 @"microsoft.quantum.intrinsic.r"中的**相反**正負號慣例，而且不包含 @"microsoft.quantum.intrinsic.r1"所包含 $ 1/2 $ 的因素。
+remarks: >-
+  相當於：
+
+
+  ```qsharp
+
+  RFrac(PauliZ, -numerator, denominator + 1, qubit);
+
+  RFrac(PauliI, numerator, denominator + 1, qubit);
+
+  ```
+syntax: 'operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: numerator
+    summary: Dyadic 分數中的分子，表示 qubit 要旋轉的角度。
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: 2的乘冪，指定要旋轉 qubit 的角度分母。
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    summary: 應套用閘道的 Qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: c91aa9424abd038fa3a5a22fd23ac92cce171414
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233980"

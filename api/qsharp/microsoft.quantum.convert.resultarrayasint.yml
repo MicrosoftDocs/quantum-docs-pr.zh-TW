@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.resultarrayasint
+name: ResultArrayAsInt
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: 以位元組由小到大的格式，從結果的字串產生正整數。
+syntax: 'function ResultArrayAsInt (results : Result[]) : Int'
+input:
+  content: '(results : Result[])'
+  types:
+  - name: results
+    summary: 導致數位的二進位標記法。
+    isArray: true
+    isPrimitive: true
+    uid: Result
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 341f7c9dd8e7010c9ad8abd71f0f8f3abcf53e14
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230716"

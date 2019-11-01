@@ -1,0 +1,67 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applymulticontrolledc
+name: ApplyMultiControlledC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  套用單個受控制作業的乘以控制版本。
+
+  修飾詞 `C` 表示單一 qubit 作業是可控制的。
+remarks: >-
+  此作業只會使用 clean ancilla qubits。
+
+
+  如需說明和路線圖表，請參閱圖4.10，Nielsen 中的第4.3 節 & Chuang
+syntax: 'operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
+references: '- [*Michael A. Nielsen、Isaac Chuang*、量子計算和量子資訊](http://doi.org/10.1017/CBO9780511976667)'
+input:
+  content: '(singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: singlyControlledOp
+    summary: >-
+      在單一 qubit 上控制的作業。
+
+      作業的引數中的第一個 qubit 會假設為一個控制項，而其餘的則假設為目標 qubits。
+
+      `ApplyMultiControlled` 一律會使用長度至少為1的引數來呼叫 `singlyControlledOp`。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: ccnot
+    summary: 用於結構的受控制控制-NOT 閘道。
+    uid: microsoft.quantum.canon.ccnotop
+  - name: controls
+    summary: >-
+      `singlyControlledOp` 的 qubits 是在上進行控制。
+
+      `controls` 的長度必須至少為1。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    summary: '`singlyControlledOp` 作用的目標 qubits。'
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applymulticontrolledca
+ms.openlocfilehash: 0c6f30505081f3b5f449a72a10bac89815c3bf14
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217337"

@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.realmod
+name: RealMod
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 計算兩個實數之間的模數。
+remarks: >-
+  此函式會藉由包裝關於單位圓形的直線來計算實際模數，然後在對應至輸入的單位圓上尋找角度。
+
+  然後，`minValue` 輸入會有效地指定要切割單位圓形的位置。
+examples: >-
+  ```qsharp
+      // Returns 3 π / 2.
+      let y = RealMod(5.5 * PI(), 2.0 * PI(), 0.0);
+      // Returns -1.2, since +3.6 and -1.2 are 4.8 apart on the real line,
+      // which is a multiple of 2.4.
+      let z = RealMod(3.6, 2.4, -1.2);
+  ```
+syntax: 'function RealMod (value : Double, modulo : Double, minValue : Double) : Double'
+input:
+  content: '(value : Double, modulo : Double, minValue : Double)'
+  types:
+  - name: value
+    summary: 實際的數位 $x $ 來取的模數。
+    isPrimitive: true
+    uid: Double
+  - name: modulo
+    summary: 要採用的 $x $ 模數的實際數位。
+    isPrimitive: true
+    uid: Double
+  - name: minValue
+    summary: 這個函數所傳回的最小值。
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9430ce172fec2bf10d64aa111d5a788c574a9566
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232365"

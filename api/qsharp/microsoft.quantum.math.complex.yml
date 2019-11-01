@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.complex
+name: Complex
+type: newtype
+namespace: Microsoft.Quantum.Math
+summary: >-
+  以實數和虛陣列件表示複數。
+
+  元組的第一個元素是 real 元件，第二個是虛陣列件。
+syntax: newtype Complex = (Double, Double);
+ms.openlocfilehash: c8e60a824b10d21d793898bdeb3bc6c4dfa843cb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230104"

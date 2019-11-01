@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.prepareidentity
+name: PrepareIdentity
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  在指定暫存器的情況下，以最常混合狀態準備該註冊。
+
+
+  註冊是以 $ \boldone/2 ^ N $ 狀態來準備，方法是將完整的 depolarizing 通道套用至每個 qubit，其中 $N $ 是暫存器的長度。
+syntax: 'operation PrepareIdentity (register : Qubit[]) : Unit'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: 以上述方式 depolarized 其狀態的註冊。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- microsoft.quantum.canon.preparesinglequbitidentity
+ms.openlocfilehash: 3242bb0249f26e78ac33f0d16eb7b7c9dcd86ee8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226602"

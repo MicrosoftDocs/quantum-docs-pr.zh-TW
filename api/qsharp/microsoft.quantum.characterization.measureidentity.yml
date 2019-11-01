@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.measureidentity
+name: MeasureIdentity
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: 測量 qubits 註冊上的身分識別運算子。
+remarks: >-
+  因為 $ \boldone $ 只有 eigenvalue $1 $，而且沒有負 eigenvalue，所以此作業一律會傳回 `Zero`，對應至 eigenvalue $ + 1 = （-1） ^ 0 $，而且不會折迭 `register`的狀態。
+
+
+  這項作業本身並不實用，但在進程 tomography 的內容中很有用，因為它提供了有關配量處理的追蹤保留資訊。
+
+  特別是，具有損失真測量的目的電腦應該以 $ \boldone $ 的實際測量來取代此作業。
+syntax: 'operation MeasureIdentity (register : Qubit[]) : Result'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: 要測量的暫存器。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: '`Zero`的結果值。'
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229118"

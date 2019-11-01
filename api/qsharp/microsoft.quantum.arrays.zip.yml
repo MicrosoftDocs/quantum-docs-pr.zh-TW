@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zip
+name: Zip
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 假設有兩個數組，會傳回新的成對陣列，讓每一組都包含每個原始陣列中的元素。
+examples: >-
+  ```qsharp
+
+  let left = [1, 3, 71];
+
+  let right = [false, true];
+
+  let pairs = Zip(left, right); // [(1, false), (3, true)]
+
+  ```
+syntax: "function Zip (left : 'T[], right : 'U[]) : ('T, 'U)[]"
+input:
+  content: "(left : 'T[], right : 'U[])"
+  types:
+  - name: left
+    summary: 陣列，其中包含每個元組之第一個元素的值。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: right
+    summary: 陣列，其中包含每個元組之第二個元素的值。
+    isArray: true
+    uid: "'U"
+    isLocal: true
+output:
+  content: ('T, 'U)[]
+  types:
+  - summary: 陣列，其中包含對每個 `idx``(left[idx], right[idx])` 的表單。 如果這兩個數組的長度不相等，輸出就會是較短的輸入。
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'U"
+      isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 左邊陣列元素的類型。
+- uid: "'U"
+  summary: 右側陣列元素的類型。
+seeAlso:
+- zip3
+- zip4
+ms.openlocfilehash: 9af79a617722ead8102ea4631d96934bf253beda
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217813"

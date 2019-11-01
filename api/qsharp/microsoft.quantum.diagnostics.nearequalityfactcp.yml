@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.nearequalityfactcp
+name: NearEqualityFactCP
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 判斷傳統複數的值上限為 1e-10 的小容錯。
+syntax: 'function NearEqualityFactCP (actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar) : Unit'
+input:
+  content: '(actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar)'
+  types:
+  - name: actual
+    summary: 要檢查的數位。
+    uid: microsoft.quantum.math.complexpolar
+  - name: expected
+    summary: 預期的值。
+    uid: microsoft.quantum.math.complexpolar
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 70df5b87bb44a8e92429bdb518178a98d7704619
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230512"

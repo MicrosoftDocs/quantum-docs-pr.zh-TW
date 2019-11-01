@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.bitsizel
+name: BitSizeL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  若為非負整數 `a`，會傳回表示 `a`所需的位數。
+
+
+  也就是說，會傳回最小的 $n $，使 $a < 2 ^ n $。
+syntax: 'function BitSizeL (a : BigInt) : Int'
+input:
+  content: '(a : BigInt)'
+  types:
+  - name: a
+    summary: 要計算其位大小的整數。
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: Int
+  types:
+  - summary: '`a`的位大小。'
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 09d5cfb994584bc2f411ea70dc57acf0338b93c3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230155"

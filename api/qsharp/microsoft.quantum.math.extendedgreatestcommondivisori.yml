@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.extendedgreatestcommondivisori
+name: ExtendedGreatestCommonDivisorI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 計算元組 $ （u，v） $，讓 $u \cdot a + v \cdot b = \operatorname{GCD} （a，b） $，其中 $ \operatorname{GCD} $ 是 $a $ 最大公 $a $ 和 $b $ 的除數。 GCD 一律為正數。
+syntax: 'function ExtendedGreatestCommonDivisorI (a : Int, b : Int) : (Int, Int)'
+references: '- 此實作為根據 https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: 計算最大的一般除數的第一個數位
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: 計算最大的一般除數的第二個數字
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Int, Int)
+  types:
+  - summary: 元組 $ （u，v） $ 與屬性 $u \cdot a + v \cdot b = \operatorname{GCD} （a，b） $。
+    types:
+    - isPrimitive: true
+      uid: Int
+    - isPrimitive: true
+      uid: Int
+ms.openlocfilehash: 7bcafd5d62bb6daf9a17e12c06d0d01214a724b2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233028"

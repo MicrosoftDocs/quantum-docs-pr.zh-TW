@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.prepareentangledstate
+name: PrepareEntangledState
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  成對的 entangles 兩個 qubit 暫存器。
+
+
+  也就是說，假設有兩個暫存器，請在個別暫存器的每一對 \left 之間準備最常光子 state $ \frac{1}{\sqrt{2}} \ket （\ket{00} + \right{11} qubits） $，假設每個暫存器都是在 $ \ket{0\ 中啟動cdots 0} $ 狀態。
+syntax: 'operation PrepareEntangledState (left : Qubit[], right : Qubit[]) : Unit'
+input:
+  content: '(left : Qubit[], right : Qubit[])'
+  types:
+  - name: left
+    summary: $ \Ket{0\cdots 0} $ 狀態中的 qubit 陣列
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: right
+    summary: $ \Ket{0\cdots 0} $ 狀態中的 qubit 陣列
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 8bbd7a3a87a55a930fda18669f75dc9a98aee981
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226619"
