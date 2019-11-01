@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.intasboolarray
+name: IntAsBoolArray
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: 使用傳回之陣列的位元組由小到大表示，產生正整數的二進位標記法。
+remarks: 輸入 `number` 最多隻能有 $ 2 ^ {\texttt{bits}}-$1。
+syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
+input:
+  content: '(number : Int, bits : Int)'
+  types:
+  - name: number
+    summary: 要轉換成布林值陣列的正整數。
+    isPrimitive: true
+    uid: Int
+  - name: bits
+    summary: '`number`的二進位表示中的位數。'
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool[]
+  types:
+  - summary: 表示 `number`的布林值陣列。
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 5f9dcb138c24390f5abfec3e0b9b12263b6119d6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220363"

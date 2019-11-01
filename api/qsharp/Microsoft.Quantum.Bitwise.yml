@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.bitwise
+name: Microsoft.Quantum.Bitwise
+functions:
+- uid: microsoft.quantum.bitwise.and
+  summary: >-
+    傳回兩個整數的位 AND。
+
+    這會執行與內建 `&&&` 運算子相同的計算。
+- uid: microsoft.quantum.bitwise.leftshiftedi
+  summary: 將數位的位表示向左移位指定的位數。
+- uid: microsoft.quantum.bitwise.leftshiftedl
+  summary: 將數位的位表示向左移位指定的位數。
+- uid: microsoft.quantum.bitwise.not
+  summary: >-
+    傳回整數的位 NOT。
+
+    這會執行與內建 `~~~` 運算子相同的計算。
+- uid: microsoft.quantum.bitwise.or
+  summary: >-
+    傳回兩個整數的位 OR。
+
+    這會執行與內建 `|||` 運算子相同的計算。
+- uid: microsoft.quantum.bitwise.parity
+  summary: 傳回整數的位同位，如果其二進位標記法包含奇數，則為1，否則為0。
+- uid: microsoft.quantum.bitwise.rightshiftedi
+  summary: 將數位的位表示右移指定的位數。
+- uid: microsoft.quantum.bitwise.rightshiftedl
+  summary: 將數位的位表示右移指定的位數。
+- uid: microsoft.quantum.bitwise.xbits
+  summary: 傳回一個整數，代表 Pauli 運算子陣列的 X 位。
+- uid: microsoft.quantum.bitwise.xor
+  summary: >-
+    傳回兩個整數的位互斥 OR （XOR）。
+
+    這會執行與內建 `^^^` 運算子相同的計算。
+- uid: microsoft.quantum.bitwise.zbits
+  summary: 傳回代表 Pauli 運算子陣列 Z 位的整數。
+summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含的函式可在傳統資料類型的位標記法上作用。"
+ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210945"

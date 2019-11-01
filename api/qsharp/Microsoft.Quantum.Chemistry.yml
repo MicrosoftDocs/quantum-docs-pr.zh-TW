@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.chemistry
+name: Microsoft.Quantum.Chemistry
+functions:
+- uid: microsoft.quantum.chemistry.htermstogenidx
+  summary: 將 `HTerm[]` 資料格式的索引轉換成 GeneratorIndex 的 Hamiltonian 詞彙。
+- uid: microsoft.quantum.chemistry.htermstogensys
+  summary: 將 `HTerm[]` 資料格式的 Hamiltonian 轉換為 GeneratorSystem。
+- uid: microsoft.quantum.chemistry.htermtogenidx
+  summary: 將 `HTerm` 資料格式的 Hamiltonian 詞彙轉換成 GeneratorIndex。
+- uid: microsoft.quantum.chemistry.isnotzero
+  summary: 檢查 `Double` 的數位是否不約為零。
+newtypes:
+- uid: microsoft.quantum.chemistry.hterm
+  summary: >-
+    從C#傳遞至 Q # 的資料格式，以代表 Hamiltonian 的詞彙。
+
+    所表示資料的意義取決於接收它的演算法。
+ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210911"

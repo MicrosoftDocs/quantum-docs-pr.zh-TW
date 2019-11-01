@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifonea
+name: ApplyIfOneA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  將以傳統結果值為條件的 adjointable 作業套用至其中一個。
+
+
+  給定作業 `op` 並 `result`結果值時，如果 `result` 為 `One`，則會將 `op` 套用至 `target`。 如果 `Zero`，`target`就不會發生任何事。
+
+  尾碼 `A` 表示要套用的作業是 adjointable。
+syntax: "operation ApplyIfOneA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
+  types:
+  - name: result
+    summary: 控制是否要套用 op 的測量結果。
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: 要有條件地套用的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: target
+    summary: 要對其套用作業的輸入。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 要有條件地套用之作業的輸入類型。
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifonec
+- microsoft.quantum.canon.applyifonea
+- microsoft.quantum.canon.applyifoneca
+ms.openlocfilehash: 5846b1178a8373f4b21faaa63ae9f6f86e514339
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217405"

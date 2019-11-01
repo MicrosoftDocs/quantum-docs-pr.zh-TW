@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
+name: AssertOperationsEqualReferenced
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  假設有兩個作業，則判斷提示其對所有輸入狀態的行為都相同。
+
+
+  這個判斷提示是透過使用 Choi – Jamiłkowski isomorphism，將判斷提示縮小為兩個光子暫存器的其中一個 qubit 狀態判斷提示。
+
+  因此，此作業只需要對每個要測試的作業進行單一呼叫，但需要配置的兩倍 qubits。
+
+  例如，這個判斷提示可以用來確保作業的優化版本與它的完整執行完全相同，或是在非配量輸入範圍上運作的作業會與已知的案例相關。
+remarks: >-
+  這種作業需要將預期行為模型化的作業 adjointable，如此一來，就可以單獨在目標暫存器上執行反向操作。
+
+  正式地說，其中一個可以指定轉置作業，這會放寬這項需求，但轉置作業不會針對任意配量作業進行實際 realizable，因此不會包含在此做為選項。
+syntax: 'operation AssertOperationsEqualReferenced (nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj)) : Unit'
+input:
+  content: （nQubits： Int，實際：（Qubit [] = > Unit），應為：（Qubit [] = > 單位是形容詞））
+  types:
+  - name: nQubits
+    summary: 要傳遞至每個作業的 qubits 數目。
+    isPrimitive: true
+    uid: Int
+  - name: 實際
+    summary: 要測試的作業。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: 預期
+    summary: 定義待測作業之預期行為的作業。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: 單位
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 0dfadb6be785c7ba4eaa517c725b79955e037a32
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066569"

@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangereverse
+name: RangeReverse
+type: function
+namespace: Microsoft.Quantum.Core
+summary: 傳回新的範圍，這是輸入範圍的反向。
+remarks: 請注意，範圍的反轉不只是 `end`。`-step`。`start`，因為範圍的實際最後一個元素可能與 `end`不同。
+syntax: 'function RangeReverse (r : Range) : Range'
+input:
+  content: （r： Range）
+  types:
+  - name: r
+    summary: 輸入範圍。
+    isPrimitive: true
+    uid: Range
+output:
+  content: 範圍
+  types:
+  - summary: 指定範圍反向的新範圍。
+    isPrimitive: true
+    uid: Range
+ms.openlocfilehash: 978a476556d01f48533540333b5951f83da3d6dc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066620"

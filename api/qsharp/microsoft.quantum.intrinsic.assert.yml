@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.assert
+name: Assert
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: 以給定的 Pauli 為基礎測量給定 qubits 的判斷提示，一律會有指定的結果。
+remarks: 請注意，此作業的 Adjoint 和受控制版本將不會檢查條件。
+syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
+  types:
+  - name: bases
+    summary: 用來判斷機率的測量效果，以多 qubit 的 Pauli 運算子表示。
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: 要在其上進行判斷提示的暫存器。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: 預期的 `Measure(bases, qubits)`結果。
+    isPrimitive: true
+    uid: Result
+  - name: msg
+    summary: 判斷提示失敗時要報告的訊息。
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- assertprob
+ms.openlocfilehash: 214ec7f96a5a486d0e6025e53cca1dbf4f121795
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235646"

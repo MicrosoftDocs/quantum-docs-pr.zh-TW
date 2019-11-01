@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.intstopaulis
+name: IntsToPaulis
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: 將整數陣列轉換成單一 qubit Pauli 運算子的陣列。
+syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
+input:
+  content: （int： Int []）
+  types:
+  - name: int
+    summary: 要轉換成 Pauli 運算子之範圍 `0..3` 的整數陣列。
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[]
+  types:
+  - summary: Pauli 運算子的陣列 `paulis` `Pauli[]` 與 `ints` 相同的長度，因此 `paulis[idxPauli]` 等於 `[PauliI, PauliX, PauliY, PauliZ]` 所指定 `ints[idxPauli]`的元素。
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066977"

@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.multiplygeneratorsystem
+name: MultiplyGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: 將 `GeneratorSystem`中所有詞彙的係數相乘。
+syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: （乘數： Double，generatorSystem： GeneratorSystem）
+  types:
+  - name: 乘數
+    summary: 係數上的乘數。
+    isPrimitive: true
+    uid: Double
+  - name: generatorSystem
+    summary: 要相乘的 `GeneratorSystem`。
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: GeneratorSystem。
+  types:
+  - summary: '`GeneratorSystem`，代表係數 `multiplier` 較大的系統。'
+    uid: microsoft.quantum.simulation.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065447"

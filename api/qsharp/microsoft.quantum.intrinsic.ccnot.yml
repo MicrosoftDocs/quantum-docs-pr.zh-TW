@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.ccnot
+name: CCNOT
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: 將雙重控制– NOT （CCNOT）閘道套用至三個 qubits。
+remarks: >-
+  相當於：
+
+
+  ```qsharp
+
+  Controlled X([control1, control2], target);
+
+  ```
+syntax: 'operation CCNOT (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+input:
+  content: （control1： Qubit，control2： Qubit，target： Qubit）
+  types:
+  - name: control1
+    summary: CCNOT 閘道的第一個控制 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: CCNOT 閘道的第二個控制項 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: 目標
+    summary: CCNOT 閘道的目標 qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: 單位
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: cf3731ba41dde045fb5b7509d7d33801f8e3cee6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067351"

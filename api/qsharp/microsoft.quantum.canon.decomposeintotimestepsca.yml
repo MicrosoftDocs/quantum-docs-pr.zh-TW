@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.decomposeintotimestepsca
+name: DecomposeIntoTimeStepsCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 針對指定的作業，傳回執行 Trotter – Plat'home co. 整合器的作業。
+syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
+references: >-
+  We use the implementation in
+
+
+  - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
+input:
+  content: （（nSteps： Int，op：（（Int，Double，t） = > 單位是形容詞 + Ctl），trotterOrder： Int）
+  types:
+  - name: nSteps
+    isPrimitive: true
+    uid: Int
+  - name: op
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - isPrimitive: true
+        uid: Double
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: trotterOrder
+    summary: >-
+      選取要使用的 Trotter-Plat'home co. 整合器順序。
+
+      目前支援訂單1和2。
+    isPrimitive: true
+    uid: Int
+output:
+  content: （（Double，t） = > Unit 是形容詞 + Ctl）
+  types:
+  - summary: 傳回實 Trotter – Plat'home co. 整合器的單一，其中第一個參數 `Double` 是整合步驟的大小，而第二個參數則是針對其採取動作的目標。
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Double
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: 每個時間步驟應作用的類型：通常是 `Qubit[]` 或 `Qubit`。
+ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067827"

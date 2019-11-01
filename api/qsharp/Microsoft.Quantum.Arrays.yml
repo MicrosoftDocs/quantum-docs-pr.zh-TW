@@ -1,0 +1,64 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arrays
+name: Microsoft 量子陣列
+summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含用來建立和運算元據陣列的函式。"
+functions:
+- uid: microsoft.quantum.arrays.all
+  summary: 針對陣列的元素定義陣列和述詞，並檢查陣列的所有元素是否符合述詞。
+- uid: microsoft.quantum.arrays.any
+  summary: 針對陣列的元素定義陣列和述詞，會檢查陣列中至少有一個元素是否滿足述詞。
+- uid: microsoft.quantum.arrays.constantarray
+  summary: 建立指定長度的陣列，其中所有元素都等於指定的值。
+- uid: microsoft.quantum.arrays.enumerated
+  summary: 指定陣列時，會傳回新的陣列，其中包含原始陣列的專案以及每個專案的索引。
+- uid: microsoft.quantum.arrays.exclude
+  summary: 傳回陣列，其中包含另一個陣列的專案，但在指定的索引清單中不包括元素。
+- uid: microsoft.quantum.arrays.filtered
+  summary: 針對陣列的元素所定義的陣列和述詞，會傳回包含符合述詞之元素的陣列。
+- uid: microsoft.quantum.arrays.fold
+  summary: 透過傳回 `f(f(f(initialState, array[0]), array[1]), ...)`的陣列 `array`，逐一查看函數 `f`。
+- uid: microsoft.quantum.arrays.head
+  summary: 傳回陣列的第一個元素。
+- uid: microsoft.quantum.arrays.indexof
+  summary: 傳回陣列中符合指定述詞之第一個元素的第一個索引。 如果沒有這類元素存在，則會傳回-1。
+- uid: microsoft.quantum.arrays.indexrange
+  summary: 指定陣列時，會傳回該陣列索引的範圍，適合用於 for 迴圈。
+- uid: microsoft.quantum.arrays.lookupfunction
+  summary: 指定陣列時，會傳回函式，此函式會傳回該陣列的元素。
+- uid: microsoft.quantum.arrays.mapped
+  summary: 針對陣列的元素所定義的陣列和函式，會傳回新的陣列，其中包含函式下原始陣列的影像。
+- uid: microsoft.quantum.arrays.mappedbyindex
+  summary: 針對陣列的索引元素所定義的陣列和函式，會傳回新的陣列，其中包含函式下原始陣列的影像。
+- uid: microsoft.quantum.arrays.most
+  summary: 建立等於輸入陣列的陣列，但不包括最後一個陣列元素。
+- uid: microsoft.quantum.arrays.padded
+  summary: 傳回以指定的值（最多為指定的長度）填補的陣列。
+- uid: microsoft.quantum.arrays.partitioned
+  summary: 將陣列分割成多個部分。
+- uid: microsoft.quantum.arrays.rest
+  summary: 建立等於輸入陣列的陣列，但不包括第一個陣列元素。
+- uid: microsoft.quantum.arrays.reversed
+  summary: 建立陣列，其中包含與輸入陣列相同的元素，但以相反的順序。
+- uid: microsoft.quantum.arrays.sequencei
+  summary: 取得指定間隔中的整數陣列。
+- uid: microsoft.quantum.arrays.sequencel
+  summary: 取得指定間隔中的整數陣列。
+- uid: microsoft.quantum.arrays.subarray
+  summary: 採用陣列和位置清單，並從符合指定位置的原始陣列元素產生新陣列。
+- uid: microsoft.quantum.arrays.tail
+  summary: 傳回陣列的最後一個元素。
+- uid: microsoft.quantum.arrays.zip
+  summary: 假設有兩個數組，會傳回新的成對陣列，讓每一組都包含每個原始陣列中的元素。
+- uid: microsoft.quantum.arrays.zip3
+  summary: 假設有三個數組，則會傳回3個元組的新陣列，讓每個3元組都包含每個原始陣列中的元素。
+- uid: microsoft.quantum.arrays.zip4
+  summary: 假設有四個數組，會傳回4個元組的新陣列，讓每個4元組都包含每個原始陣列中的元素。
+operations:
+- uid: microsoft.quantum.arrays.foreach
+  summary: 針對陣列的元素所定義的陣列和作業，會傳回新的陣列，其中包含作業下原始陣列的影像。
+ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057131"

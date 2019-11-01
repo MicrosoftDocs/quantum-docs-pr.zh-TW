@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.boolasresult
+name: BoolAsResult
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: 將 `Bool` 類型轉換成 `Result` 類型，其中 `true` 會對應到 `One`，而 `false` 會對應至 `Zero`。
+syntax: 'function BoolAsResult (input : Bool) : Result'
+input:
+  content: '(input : Bool)'
+  types:
+  - name: input
+    summary: 要轉換 `Bool`。
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Result
+  types:
+  - summary: 表示 `input`的 `Result`。
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 88019e17d91753f9aeafd273d2f38fef0f420be2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212288"

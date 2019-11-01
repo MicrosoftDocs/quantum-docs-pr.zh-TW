@@ -1,0 +1,72 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifc
+name: ApplyIfC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  套用以傳統位為條件的可控作業。
+
+
+  給定作業 `op` 和位值 `bit`，如果 `bit` 為 `true`，則會將 `op` 套用至 `target`。 如果 `false`，`target`就不會發生任何事。
+
+  尾碼 `C` 表示要套用的作業是可控制的。
+examples: >-
+  以下會將 qubits 的暫存器準備成以指定為 `Bool` 值陣列之傳統位字串所代表的計算基礎狀態：
+
+
+  ```Q#
+
+  let bitstring = [true, false, true];
+
+  using (register = Qubit(3)) {
+      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      // register should now be in the state |101⟩.
+      ...
+  }
+
+  ```
+syntax: "operation ApplyIfC (op : ('T => Unit is Ctl), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit is Ctl), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: 要有條件地套用的作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: bit
+    summary: 控制是否套用 op 的布林值。
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: 要對其套用作業的輸入。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 要有條件地套用之作業的輸入類型。
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifc
+- microsoft.quantum.canon.applyifa
+- microsoft.quantum.canon.applyifca
+ms.openlocfilehash: 166f61f877a282578a71419a74fea6361cc2cac3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217575"

@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.computereciprocali
+name: ComputeReciprocalI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 使用整數除法計算不帶正負號整數 x 的倒數 1/x。 以整數形式轉譯的結果將會 `floor(2^(2*n-1) / x)`。
+remarks: 針對輸入 x = 0，輸出將會是 all。
+syntax: 'operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: xs
+    summary: n 位不帶正負號的整數
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: 2n 位輸出，一開始必須是 $ \ket{0}$。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 91999bd0be10e1e77fb5d1daa88e34373eb83b9f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221043"

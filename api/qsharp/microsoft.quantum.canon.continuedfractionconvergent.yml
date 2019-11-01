@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.continuedfractionconvergent
+name: ContinuedFractionConvergent
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  > [!WARNING]
+
+  > 取代
+
+
+  請使用 @"microsoft.quantum.math.continuedfractionconvergenti"。
+syntax: 'function ContinuedFractionConvergent (fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int) : Microsoft.Quantum.Math.Fraction'
+input:
+  content: （小數值： denominatorBound： Int）
+  types:
+  - name: 分數
+    uid: microsoft.quantum.math.fraction
+  - name: denominatorBound
+    isPrimitive: true
+    uid: Int
+output:
+  content: -量子
+  types:
+  - uid: microsoft.quantum.math.fraction
+ms.openlocfilehash: b419dd1232944f1837c8899a9d0222cf5e7c9732
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067929"

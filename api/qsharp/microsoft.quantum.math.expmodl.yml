@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.expmodl
+name: ExpModL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  針對給定的模數，傳回指定之乘冪的整數。
+
+
+  讓我們以 $x $、乘 $p $ 和模數 $N $ 的方式來表示 expBase。
+
+  函數會傳回 $x ^ p \operatorname{mod} N $。
+
+
+  我們假設 $N $，$x $ 為正數，而電力為非負值。
+remarks: 花費的時間與 `power`中的位數成正比，而不是 `power` 本身。
+syntax: 'function ExpModL (expBase : BigInt, power : BigInt, modulus : BigInt) : BigInt'
+input:
+  content: '(expBase : BigInt, power : BigInt, modulus : BigInt)'
+  types:
+  - name: expBase
+    isPrimitive: true
+    uid: BigInt
+  - name: power
+    isPrimitive: true
+    uid: BigInt
+  - name: modulus
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: c314b3b34a1abf253dd9af205f766fad14abea49
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233045"

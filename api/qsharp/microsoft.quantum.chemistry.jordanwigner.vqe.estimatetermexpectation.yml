@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+name: EstimateTermExpectation
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  計算與指定的約旦 Wigner Hamiltonian 詞彙相關聯的能源
+
+
+  這項作業會評估與每個測量運算子相關聯的預期值，並使用取樣來將它乘以對應的係數。
+
+  結果會匯總成一個變數，其中包含約旦 Wigner 詞彙的能源。
+syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
+input:
+  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
+  types:
+  - name: inputStateUnitary
+    summary: 用於狀態準備的單一。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ops
+    summary: 約旦 Wigner 詞彙的測量運算子。
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: coeffs
+    summary: 約旦-Wigner 詞彙的係數。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: nQubits
+    summary: 模擬分子系統所需的 qubits 數目。
+    isPrimitive: true
+    uid: Int
+  - name: nSamples
+    summary: 要用於估計預期詞彙的樣本數。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: 與約旦 Wigner 詞彙相關聯的能源。
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9efa1c2aaa66d4b35e3266f785f837cb5e4dba27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228438"

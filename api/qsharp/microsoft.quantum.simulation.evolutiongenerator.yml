@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.evolutiongenerator
+name: evolutionGenerator
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  將 dynamical 產生器表示為一組 simulatable 閘道，並以該基礎的角度進行擴充。
+
+
+  詞彙數目的最後一個參數。
+syntax: newtype EvolutionGenerator = (Microsoft.Quantum.Simulation.EvolutionSet, Microsoft.Quantum.Simulation.GeneratorSystem);
+ms.openlocfilehash: fd749a401510bc32d4628d65b56c387d0b178ef6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067113"

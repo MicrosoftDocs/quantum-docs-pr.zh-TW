@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.signedlittleendian
+name: SignedLittleEndian
+type: newtype
+namespace: Microsoft.Quantum.Arithmetic
+summary: 以小序儲存的帶正負號整數類型（請參閱 LittleEndian）。
+syntax: newtype SignedLittleEndian = Microsoft.Quantum.Arithmetic.LittleEndian;
+ms.openlocfilehash: c10c13fa142d5c08911fcf6a98c13240da31e8a0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214498"

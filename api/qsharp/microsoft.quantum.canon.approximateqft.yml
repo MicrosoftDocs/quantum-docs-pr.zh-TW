@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.approximateqft
+name: ApproximateQFT
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 將大約的配量傅立葉轉換（AQFT）套用至量子暫存器。
+remarks: >-
+  AQFT 需要格式為2π/2k 和 Hadamard 閘道的 Z 旋轉閘道。
+
+
+  假設輸入和輸出是以位元組由大到小的編碼方式進行編碼。
+syntax: 'operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+references: >-
+  - [*Roetteler，Th Beth*，Appl.exe，Commun。電腦.19（3）：177-193 （2008）](http://doi.org/10.1007/s00200-008-0072-2)
+
+  - [*D. Coppersmith* arXiv： quant-ph/0201067v1](https://arxiv.org/abs/quant-ph/0201067)
+input:
+  content: '(a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: a
+    summary: >-
+      近似值參數，決定在哪一個層級中，QFT 電路中所控制的 Z 旋轉會被剪除。
+
+
+      近似值參數 a 決定 Z 旋轉的剪除層級，也就是∈ {0 ... n} 和所有 Z 旋轉2π/2k，其中 k > a 會從 QFT 電路中移除。 知道 k > = log ₂（n） + log ₂（1/ε） + 3 一個可以系結 | |QFT-AQFT | |< ε。
+    isPrimitive: true
+    uid: Int
+  - name: qs
+    summary: 套用近似配量傅立葉轉換之 n qubits 的量子暫存器。
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212526"

@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
+name: JordanWignerClusterOperatorGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: 將 `JWOptimizedHTerms` 所描述的 Hamiltonian，轉換為以這個檔案中定義的 `GeneratorIndex` 慣例表示的 `GeneratorSystem`。
+syntax: 'function JordanWignerClusterOperatorGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[])'
+  types:
+  - name: data
+    summary: '`JWOptimizedHTerms` 格式的 Hamiltonian 描述。'
+    isArray: true
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
+  types:
+  - summary: 以 `GeneratorSystem`表示的 Hamiltonian。
+    uid: microsoft.quantum.simulation.generatorsystem
+ms.openlocfilehash: d1521bfa75ed2383ca13dca1bfeae78c59ebf0b9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228761"

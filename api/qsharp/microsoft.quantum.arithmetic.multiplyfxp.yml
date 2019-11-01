@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplyfxp
+name: MultiplyFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 將量子暫存器中的兩個固定點數位相乘。
+remarks: 目前的執行需要三個固定點數位具有相同的點位置和相同的 qubits 數目。
+syntax: 'operation MultiplyFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: fp1
+    summary: 第一個固定點數位。
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: fp2
+    summary: 第二個固定點數位。
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: 結果固定點數位，一開始必須是 state $ \ket{0}$。
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 0623deedf7dca05832ec1edd7c5771d7bc10aa08
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214821"

@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.mapped
+name: Mapped
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 針對陣列的元素所定義的陣列和函式，會傳回新的陣列，其中包含函式下原始陣列的影像。
+remarks: "函式是針對泛型型別定義的，也就是當我們有陣列 `'T[]` 和函數時 `mapper: 'T -> 'U` 我們可以對應陣列的元素，並產生 `'U[]`類型的新陣列。"
+syntax: "function Mapped (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
+input:
+  content: "(mapper : ('T -> 'U), array : 'T[])"
+  types:
+  - name: mapper
+    summary: 從 `'T` 到用來對應專案之 `'U` 的函式。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: array
+    summary: 透過 `'T`的元素陣列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'U[]"
+  types:
+  - summary: "`mapper` 函式所對應之元素的陣列 `'U[]`。"
+    isArray: true
+    uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: '`array` 元素的類型。'
+- uid: "'U"
+  summary: '`mapper` 函數的結果類型。'
+ms.openlocfilehash: 3e9262d3d2b294ccfafac24b2b080b124c9e319c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218119"

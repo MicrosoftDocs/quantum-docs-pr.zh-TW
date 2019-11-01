@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.stateoracle
+name: StateOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  表示 oracle 以進行狀態準備。
+
+
+  Oracle $O $ 的輸入如下：
+
+
+  - 索引旗標 qubit $f $ 的整數。
+
+  - 系統註冊 $s $，將會儲存所需的量子狀態 $ \ket{\psi}\_s $。
+remarks: >-
+  此 oracle 由 $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，$ $ 作用於計算基礎狀態 $ \ket{0}\_{f} \ket{0}\_s $，以 $ \ket\_{1}f $ 標記的基礎，建立目標狀態 $ \ket{\psi} \_s $ with 波幅 $ \lambda $。
+
+  第一個參數是 $ \ket{0}的 qubit 暫存器的索引，\_f $。 第二個參數同時包含這兩個暫存器。
+syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067215"

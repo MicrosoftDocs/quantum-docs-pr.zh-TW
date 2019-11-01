@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.plusa
+name: PlusA
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 傳回兩個輸入的總和（串連）。
+syntax: "function PlusA (a : 'Element[], b : 'Element[]) : 'Element[]"
+input:
+  content: "(a : 'Element[], b : 'Element[])"
+  types:
+  - name: a
+    summary: 要加總的第一個輸入 $a $。
+    isArray: true
+    uid: "'Element"
+    isLocal: true
+  - name: b
+    summary: 要加總的第二個輸入 $b $。
+    isArray: true
+    uid: "'Element"
+    isLocal: true
+output:
+  content: "'Element[]"
+  types:
+  - summary: 總和 $a + b $。
+    isArray: true
+    uid: "'Element"
+    isLocal: true
+typeParameters:
+- uid: "'Element"
+  summary: 兩個輸入陣列中每個元素的類型。
+ms.openlocfilehash: d37faecdcbe7e1d96f27fcaddd211989a543f1d9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211455"

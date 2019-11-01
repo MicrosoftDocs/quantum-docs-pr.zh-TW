@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.compose
+name: Compose
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  產生兩個函數的組合。
+
+
+  也就是說，假設有兩個函數 $f $ 和 $g $，則會傳回代表 $f \circ g $ 的新函式。
+syntax: "function Compose (outer : ('U -> 'V), inner : ('T -> 'U)) : ('T -> 'V)"
+input:
+  content: "(outer : ('U -> 'V), inner : ('T -> 'U))"
+  types:
+  - name: outer
+    summary: 要套用的第二個函式。
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'V"
+        isLocal: true
+  - name: inner
+    summary: 要套用的第一個函數。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+output:
+  content: ('T -> 'V)
+  types:
+  - summary: 新的函式 $h $，適用于所有輸入 $x $、$f （g （x）） = h （x） $。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'V"
+        isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 要套用之第一個函式的輸入類型。
+- uid: "'U"
+  summary: 要套用之第一個函式的輸出類型，以及要套用之第二個函數的輸入類型。
+- uid: "'V"
+  summary: 要套用之第二個函式的輸出類型。
+ms.openlocfilehash: 69fbd6a4fafbc61a63e41257b7100303fd48d4d4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223066"

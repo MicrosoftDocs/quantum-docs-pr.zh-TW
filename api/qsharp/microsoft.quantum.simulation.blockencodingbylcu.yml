@@ -1,0 +1,72 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.blockencodingbylcu
+name: BlockEncodingByLCU
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  將感關注的操作員編碼成 `BlockEncoding`。
+
+
+  這會 `BlockEncoding` 單一 $U = P\cdot V\cdot P ^ \dagger $ 來編碼某些運算子 $H = \sum_{j} | \Alpha_j |U_j $ （有意義）是 unitaries 的線性組合。 一般來說，$P $ 是單一狀態準備，因此 $P \ket{0}\_a = \ sum_j\sqrt {\ Alpha_j/\|\vec\Alpha\|\_2} \ket{j}\_$，以及 $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_j $。
+remarks: 這個 `BlockEncoding` 的執行會提供 `BlockEncodingReflection`的屬性。
+syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
+input:
+  content: "(statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl))"
+  types:
+  - name: statePreparation
+    summary: 準備某些目標狀態的單一 $P $。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: selector
+    summary: 用來編碼 $H $ 之元件 unitaries 的單一 $V $。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'S"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: (('T, 'S) => Unit is Adj + Ctl)
+  types:
+  - summary: 在暫存器 `a` 和 `s` 上進行封鎖編碼 $H $，並滿足 $U ^ \dagger = U $ 的單一 $U $。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'S"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+seeAlso:
+- microsoft.quantum.canon.blockencoding
+- microsoft.quantum.canon.blockencodingreflection
+ms.openlocfilehash: b2a107a8497e6fdd24f5d6511d61541ce932ec6c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227860"

@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.squaresi
+name: SquareSI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: '`xs` 的方形帶正負號的整數，並將結果儲存在 `result`中，其一開始必須為零。'
+remarks: 此實作為依賴 IntegerSquare。
+syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
+  types:
+  - name: xs
+    summary: n 位整數到正方形（SignedLittleEndian）
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+  - name: result
+    summary: 在一開始，SignedLittleEndian 必須處於狀態 $ \ket{0}$。
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 71a3ffc190540ccfb51eb81febdce6a943dc99fb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218408"

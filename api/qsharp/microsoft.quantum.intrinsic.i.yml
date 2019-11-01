@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.i
+name: I
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: 在單一 qubit 上執行身分識別作業（無 op）。
+remarks: 這不是任何作業。 它是為了完整性而提供，因為有時候在演算法中呼叫身分識別，或將它當做參數傳遞會很有用。
+syntax: 'operation I (target : Qubit) : Unit'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: fd4e9566c6ed1998681385d46643b4f001c6fb6e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234167"

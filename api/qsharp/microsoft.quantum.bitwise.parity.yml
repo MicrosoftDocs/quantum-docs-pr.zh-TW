@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.parity
+name: Parity
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: 傳回整數的位同位，如果其二進位標記法包含奇數，則為1，否則為0。
+examples: >-
+  ```qsharp
+
+  let a = 248;
+
+  let x = Parity(a); // x : Int = 1.
+
+  ```
+syntax: 'function Parity (a : Int) : Int'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: b228070f3d03f6507497e2f98fbb9e09c18484ab
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213937"
