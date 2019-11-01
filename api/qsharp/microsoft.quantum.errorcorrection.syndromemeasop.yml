@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.syndromemeasop
+name: SyndromeMeasOp
+type: newtype
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: 表示用來測量錯誤更正程式碼區塊之症狀的作業。
+remarks: >-
+  簽章 `(LogicalRegister => Syndrome)` 代表在 `LogicalRegister` 中 qubits 的作業，以及一些輔助的 qubits，後面接著輔助 qubits 的測量，以解壓縮代表這些測量 `Result[]` 的 `Syndrome` 值。
+
+
+  ### <a name="examples"></a>範例
+
+  使用待用 \rangle，以非容錯的方式測量位翻轉程式 $S 代碼的 syndromes = \langle ZZI、IZZ qubits $：
+
+
+  ```qsharp
+      let syndMeasOp = SyndromeMeasOp(MeasureStabilizerGenerators([
+              [PauliZ, PauliZ, PauliI],
+              [PauliI, PauliZ, PauliZ]
+          ], _, MeasureWithScratch));
+  ```
+syntax: newtype SyndromeMeasOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => Microsoft.Quantum.ErrorCorrection.Syndrome);
+seeAlso:
+- logicalregister
+- syndrome
+ms.openlocfilehash: 75f0fee569475e887b97d9969c9e92285809f1cb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232229"

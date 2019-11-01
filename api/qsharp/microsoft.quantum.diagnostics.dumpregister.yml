@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpregister
+name: DumpRegister
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 傾印與指定 qubits 相關聯的目前目的機器狀態。
+remarks: >-
+  這個方法可讓您將與指定 qubits 的狀態相關聯的資訊，傾印到檔案或其他位置。
+
+  產生的實際資訊和 `location` 的語義是每部目的電腦特有的。 不過，將空的元組提供為位置（`()`）通常是指將輸出產生至主控台。
+
+
+  針對散發為「配量開發工具組」一部分的本機完整狀態模擬器，這個方法預期會有一個檔案路徑的字串，其中會將指定 qubits （也就是對應子系統的 wave 函式）的狀態寫入為一維 ar複數的光線，其中每個元素都代表測量對應狀態的機率 amplitudes。
+
+  如果指定的 qubits 是以其他 qubit 光子，而且無法分隔其狀態，則只會報告 qubits 為光子。
+syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
+input:
+  content: "(location : 'T, qubits : Qubit[])"
+  types:
+  - name: location
+    summary: 提供有關要在何處產生狀態傾印的資訊。
+    uid: "'T"
+    isLocal: true
+  - name: qubits
+    summary: 要報告的 qubits 清單。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - summary: 無。
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 6d553a95bfa619d142b681e2830fc0375c6bcae5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227027"

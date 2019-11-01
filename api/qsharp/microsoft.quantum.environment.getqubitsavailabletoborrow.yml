@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.environment.getqubitsavailabletoborrow
+name: GetQubitsAvailableToBorrow
+type: operation
+namespace: Microsoft.Quantum.Environment
+summary: >-
+  傳回目前可供借用的 qubits 數目。
+
+  這包括未使用的 qubits;也就是說，這包括 `GetQubitsAvailableToUse`傳回的 qubits。
+syntax: 'operation GetQubitsAvailableToBorrow () : Int'
+input:
+  content: ()
+  types: []
+output:
+  content: Int
+  types:
+  - summary: >-
+      可以在 `borrowing` 語句中配置的 qubits 數目。
+
+      如果使用的目的電腦未提供此資訊，則會傳回 `-1`。
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- getqubitsavailabletouse
+ms.openlocfilehash: c0caf866ad9a8773aa11ee7c6951ca3acc60cbaa
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230478"

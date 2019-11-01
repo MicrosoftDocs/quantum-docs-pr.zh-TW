@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.measurepaulis
+name: MeasurePaulis
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: 假設有多個 qubit 的 Pauli 運算子陣列，則會使用指定的測量小工具來測量每一個，然後傳回結果的陣列。
+syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result)) : Result[]'
+input:
+  content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result))'
+  types:
+  - name: paulis
+    summary: 要測量的多 qubit Pauli 運算子陣列。
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: target
+    summary: 註冊以測量指定的運算子。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: gadget
+    summary: 執行指定多 qubit 運算子測量的運算。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Pauli
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+output:
+  content: Result[]
+  types:
+  - summary: 從測量 `target`的每個 `paulis` 元素所取得的結果陣列。
+    isArray: true
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 97ad0beb222a6a6d11394499e0039c405a3be9e8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231396"

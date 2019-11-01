@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
+name: SingleQubitProcessTomographyMeasurement
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: 指定特定的通道，以 Pauli 為基礎執行單一 qubit 進程 tomography 測量。
+remarks: 這項作業所傳回之結果的散發，是兩個 qubit 狀態 tomography 的特殊案例。 Let $ \rho = J （\Lambda）/$2 是 $ \Lambda $ 的 Choi – Jamiłkowski 狀態。 然後，上述分佈等同于 $ $ \begin{align} \Pr （\texttt{Zero} | \rho;M） = \operatorname{Tr} （M \rho）、\end{align} $ $，其中 $M = 2 （\boldone + P） ^ \mathrm{T}/2 \cdot （\boldone + Q）/$2 是對應至 $P $ 和 $Q $ 的有效度量。
+syntax: 'operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit)) : Result'
+input:
+  content: '(preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit))'
+  types:
+  - name: preparation
+    summary: 要準備 qubit 的 Pauli 基礎元素 $P $。
+    isPrimitive: true
+    uid: Pauli
+  - name: measurement
+    summary: 要測量 qubit 的 Pauli 基礎元素 $Q $。
+    isPrimitive: true
+    uid: Pauli
+  - name: channel
+    summary: 單一 qubit 通道 $ \Lambda $，其行為正以進程 tomography 來預估。
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: Result
+  types:
+  - summary: >-
+      結果 `Zero`，機率為 $ $ \begin{align} \Pr （\texttt{Zero} | \Lambda;）P，Q） = \operatorname{Tr}\left （\frac{\boldone + Q}{2} \Lambda\left [\frac{\boldone + P}{2} \right] \right）。
+
+      \end{align} $ $
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 48da4cd4d16a3466591c0c93710eed6b27a68fab
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229016"

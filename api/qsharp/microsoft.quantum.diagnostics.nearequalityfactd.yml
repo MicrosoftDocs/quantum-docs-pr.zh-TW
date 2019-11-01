@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.nearequalityfactd
+name: NearEqualityFactD
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 判斷傳統浮點值的預期值，最高可達 1e-10 的小容錯。
+remarks: 這相當於具有 $10 ^{-10}$ 硬式編碼容錯的 <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>。
+syntax: 'function NearEqualityFactD (actual : Double, expected : Double) : Unit'
+input:
+  content: '(actual : Double, expected : Double)'
+  types:
+  - name: actual
+    summary: 要檢查的數位。
+    isPrimitive: true
+    uid: Double
+  - name: expected
+    summary: 預期的值。
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 9bbf1ced753b2fde5a3f8fb20417053a47866ada
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230495"

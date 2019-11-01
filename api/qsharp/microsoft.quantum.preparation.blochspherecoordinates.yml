@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.blochspherecoordinates
+name: BlochSphereCoordinates
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  計算單一 qubit 狀態的 Bloch 球體座標。
+
+
+  假設有兩個複數 $a 0，a1 $ 代表 qubit 狀態，會在 Bloch 球體上計算座標，讓 $a 0 \ket{0} + a1 \ket{1} = r e ^ {it} （e ^ {-i \phi/2}\cos{（\ theta/2）} \ket{0}+ e ^ {i \phi/2}\sin{（\ theta/2）} \ket{1}） $。
+syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
+input:
+  content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
+  types:
+  - name: a0
+    summary: State $ \ket{0}$ 的複雜係數。
+    uid: microsoft.quantum.math.complexpolar
+  - name: a1
+    summary: State $ \ket{1}$ 的複雜係數。
+    uid: microsoft.quantum.math.complexpolar
+output:
+  content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
+  types:
+  - summary: 包含 `(ComplexPolar(r, t), phi, theta)`的元組。
+    types:
+    - uid: microsoft.quantum.math.complexpolar
+    - isPrimitive: true
+      uid: Double
+    - isPrimitive: true
+      uid: Double
+ms.openlocfilehash: fc9dbef764c9d95de2183b9b093e00f20dfb0697
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228132"

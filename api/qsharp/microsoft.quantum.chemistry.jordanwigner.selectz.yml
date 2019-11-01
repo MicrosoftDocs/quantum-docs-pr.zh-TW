@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.selectz
+name: SelectZ
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: 將 Pauli $Z $ 閘道套用至索引狀態 $ \ket{p} $ 的 qubits $p $ 的單一 $U $。 也就是說，$ $ \begin{align} U\ket {p} \ ket {\ psi} = \ket{p}Z\_p\ket {\ psi} \end{align} $ $
+syntax: 'operation SelectZ (indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
+input:
+  content: '(indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
+  types:
+  - name: indexRegister
+    summary: 此暫存器的 state $ \ket{p} $ 會決定套用 $Z $ 的 qubit。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: targetRegister
+    summary: 對其套用 Pauli 運算子的 qubits 註冊。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: b0de216ff102b8c969b9e920127e567ed349e874
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225055"

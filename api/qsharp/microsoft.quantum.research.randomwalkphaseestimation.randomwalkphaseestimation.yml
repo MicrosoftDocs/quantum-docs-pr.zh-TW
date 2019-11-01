@@ -1,0 +1,81 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation
+name: RandomWalkPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Research.RandomWalkPhaseEstimation
+summary: 使用隨機的逐步解說來執行反復階段估計，以估計給定 oracle 和 eigenstate 的傳統測量結果的貝氏推斷。
+remarks: >-
+  ### <a name="iterative-phase-estimation-and-eigenstates"></a>反復階段估計和 Eigenstates
+
+
+  一般來說，輸入暫存器 `eigenstate` 不需要是 $U $ 的 eigenstate $ \ket{\phi} $，但可以是重迭 over eigenstates。 假設輸入狀態是由 \begin{align} \ket{\psi} & = \sum\_{j} \Alpha\_j \ket{\phi\_j}，\end{align}，其中 $\{\Alpha\_j\}$ 是複雜的係數，因此 $ \sum\_j | \Alpha\_j | ^ 2 = $1 和 where $U \ket{\phi\_j} = \phi\_j\ket {\ phi\_j} $。
+
+
+  然後，執行反復階段估計會匯總到單一 eigenstate，如[開發指南](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates)中所述。
+
+
+  ### <a name="experiment-design"></a>實驗設計
+
+
+  根據物件*猜測啟發學習法*、\begin{align} \Theta \sim \Pr （\phi）、\quad t \approx \frac{1}{\variance{\phi}}.，$t $ 和反轉角度 $ \theta $ 傳遞給 `oracle` 的度量時間。
+
+  \end{align} 這項啟發學習法的最佳方式，是在先前的一般情況下，減少反復階段估計中預期的「事後 posterior 變異數。
+
+
+  ### <a name="optimality"></a>最適化
+
+
+  此作業近似于階段 $ \phi $ 的最佳估計工具，如使用二次遺失所評估 $L （\phi、\hat{\phi}） \mathrel{： =} （\phi-\hat{\phi}） ^ 2 $。
+
+
+  如需反復階段估計之統計資料的詳細資訊，請參閱[貝氏階段估計](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation)。
+syntax: 'operation RandomWalkPhaseEstimation (initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : Microsoft.Quantum.Oracles.ContinuousOracle, targetState : Qubit[]) : Double'
+references: >-
+  - Ferrie *et al* 2011 [doi： 10/tfx-cli](https://doi.org/10.1007/s11128-012-0407-6)， [arXiv： 1110.3067](https://arxiv.org/abs/1110.3067)。
+
+  - Wiebe *et al* 2013 [doi： 10/tf3](https://doi.org/10.1103/PhysRevLett.112.190501)， [arXiv： 1309.0876](https://arxiv.org/abs/1309.0876)
+
+  - Wiebe 和 Granade 2018 *（正在準備）*。
+input:
+  content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : Microsoft.Quantum.Oracles.ContinuousOracle, targetState : Qubit[])'
+  types:
+  - name: initialMean
+    summary: 在 $ \phi $ 前面初始一般散發的平均值。
+    isPrimitive: true
+    uid: Double
+  - name: initialStdDev
+    summary: 在 $ \phi $ 之前初始一般散發的標準差。
+    isPrimitive: true
+    uid: Double
+  - name: nMeasurements
+    summary: 要接受到最終「事後 posterior 估計的測量數目。
+    isPrimitive: true
+    uid: Int
+  - name: maxMeasurements
+    summary: 在作業被視為失敗之前，可以取得的度量總數。
+    isPrimitive: true
+    uid: Int
+  - name: unwind
+    summary: 一致性檢查失敗時所要忽略的結果數目。
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: 代表單一 $U $ 的作業，因此 $U （t） \ket{\phi} = e ^ {i t \phi}\ket{\phi} $ for eigenstates $ \ket{\phi} $ （具有未知階段 $ \phi \in \mathbb{R} ^ + $）。
+    uid: microsoft.quantum.oracles.continuousoracle
+  - name: targetState
+    summary: $U $ 作用的暫存器。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - summary: 最終估計值 $ \hat{\phi} \mathrel{： =} \expect [\phi] $，其中的預期會超過「事後 posterior，並提供所有接受的資料。
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 795849b617a7d47ff5b304e8d2aa5f2f26eee308
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232042"

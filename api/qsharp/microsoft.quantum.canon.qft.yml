@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.qft
+name: QFT
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 在配量暫存器上執行配量傅立葉轉換，其中包含以大序表示的整數。
+remarks: 輸入和輸出會假設為以大到小的編碼方式。
+syntax: 'operation QFT (qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(qs : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: qs
+    summary: 套用配量傅立葉轉換的量子暫存器
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyquantumfouriertransformbe
+ms.openlocfilehash: 9791cc9812ee7709e17e0a32e0b98bd2ca85fbb8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222607"

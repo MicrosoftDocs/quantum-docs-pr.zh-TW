@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.mresetz
+name: MResetZ
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: 以 `Z` 為基礎來測量單一 qubit，並將它重設為標準的基礎狀態 | 0 〉之後的測量。
+syntax: 'operation MResetZ (target : Qubit) : Result'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    summary: 要測量的單一 qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: 以 Pauli $Z $ 為基礎測量 `target` 的結果。
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: a0a07ec90e36b06640ff66340b7a3d979251b0ff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231175"

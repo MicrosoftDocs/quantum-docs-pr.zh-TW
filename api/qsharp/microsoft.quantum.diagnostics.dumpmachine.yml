@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpmachine
+name: DumpMachine
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 傾印目前目的電腦的狀態。
+remarks: >-
+  這個方法可讓您將目的機器目前狀態的相關資訊，傾印到檔案或其他位置。
+
+  產生的實際資訊和 `location` 的語義是每部目的電腦特有的。 不過，將空的元組提供為位置（`()`），或只省略 `location` 參數，通常是指將輸出產生至主控台。
+
+
+  針對散發為「配量開發工具組」一部分的本機完整狀態模擬器，這個方法預期會有一個檔案路徑的字串，而檔案的路徑會以一維複數陣列的形式寫入 wave 函式，其中每個專案都代表測量對應狀態的機率 amplitudes。
+syntax: "function DumpMachine (location : 'T) : Unit"
+input:
+  content: "(location : 'T)"
+  types:
+  - name: location
+    summary: 提供有關要在何處產生機器傾印的資訊。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - summary: 無。
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227061"

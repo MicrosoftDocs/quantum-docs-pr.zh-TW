@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
+name: TargetStateReflectionOracle
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: >-
+  針對旗標 qubit 唯一標記的目標狀態，來建立相關的 `ReflectionOracle`。
+
+
+  目標狀態的單一 qubit 設定為1，而其他所有0： $ \ket{1}_f $。
+syntax: 'function TargetStateReflectionOracle (idxFlagQubit : Int) : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: '(idxFlagQubit : Int)'
+  types:
+  - name: idxFlagQubit
+    summary: 為 qubit $f $ of oracle 加上旗標的索引。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Oracles.ReflectionOracle
+  types:
+  - summary: 反映 $ \ket{1}_f $ 所標記之狀態的 `ReflectionOracle`。
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.reflectionoracle
+ms.openlocfilehash: c86011664da3f59bc978641b0aefcca5a50d3b1a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215433"

@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bounda
+name: BoundA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  假設有一系列作業在單一輸入上執行，就會產生一個依序執行每個指定運算的新操作。
+
+  修飾詞 `A` 表示陣列中的所有作業都是 adjointable。
+examples: >-
+  以下是相同的：
+
+
+  ```qsharp
+
+  let bound = BoundA([U, V]);
+
+  bound(x);
+
+  ```
+
+
+  與
+
+
+  ```qsharp
+
+  U(x); V(x);
+
+  ```
+syntax: "function BoundA (operations : ('T => Unit is Adj)[]) : ('T => Unit is Adj)"
+input:
+  content: "(operations : ('T => Unit is Adj)[])"
+  types:
+  - name: operations
+    summary: 要在指定的輸入上執行的一連串作業。
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: ('T => Unit is Adj)
+  types:
+  - summary: 依序在其輸入上執行每個指定作業的新作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+typeParameters:
+- uid: "'T"
+  summary: 陣列中的每個作業作用所在的目標。
+seeAlso:
+- microsoft.quantum.canon.bound
+ms.openlocfilehash: a4707b75fdedf6612343690f0b42368fe0979ead
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220618"
