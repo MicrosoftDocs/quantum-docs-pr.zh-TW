@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 090cf98612c6c549c733e54f9dcbf74442b30fbd
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442270"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462863"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>安裝 Microsoft Quantum Development Kit (QDK)
 
@@ -177,8 +177,6 @@ Visual Studio 提供進階的環境來開發 Q# 程式，提供像是程式碼�
 > * 如果您在一個 Visual Studio 解決方案內放入了多個專案，則解決方案中包含的所有專案必須位於與解決方案相同的資料夾中，或解決方案的其中一個子資料夾中。  
 
 ## <a name="develop-with-c-using-visual-studio-code"></a>使用 Visual Studio Code，透過 C# 開發
-
-Visual Studio Code (VS Code) 提供進階的環境跨多個電腦環境來開發 Q# 程式，包括 Windows、Linux 和 Mac，提供像是程式碼完成和語法反白顯示等實用功能，引導開發人員建置其應用程式。  Q# VS Code 擴充功能包含語法反白顯示，以及 Q# 程式碼片段。
 
 Visual Studio Code (VS Code) 提供進階的環境跨多個電腦環境來開發 Q# 程式，包括 Windows、Linux 和 Mac，提供像是程式碼完成和語法反白顯示等實用功能，引導開發人員建置其應用程式。  Q# VS Code 擴充功能包含語法反白顯示，以及 Q# 程式碼片段。
 

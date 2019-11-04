@@ -6,14 +6,14 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 32f18ea479a2c65eee2b0e16788dc9f0fabd5372
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185540"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442571"
 ---
-## <a name="obtaining-energy-level-estimates"></a>取得能源等級估計
+# <a name="obtaining-energy-level-estimates"></a>取得能階估計值
 估計能源等級的值是量子化學的其中一個主要應用程式。 在這裡，我們將概述如何執行這項作業，以瞭解分子 Hydrogen 的標準範例。 本節中所參考的範例 `MolecularHydrogen` 在化學範例存放庫中。 繪製輸出的更多視覺效果範例是 `MolecularHydrogenGUI` 示範。
 
 我們的第一個步驟是建立代表分子 Hydrogen 的 Hamiltonian。 雖然這可以透過 NWChem 工具來建立，但我們會在此範例中手動新增 Hamiltonian 詞彙以求簡潔。

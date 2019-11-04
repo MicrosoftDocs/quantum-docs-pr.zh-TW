@@ -6,14 +6,14 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: b28a27c4c1f1e64644fcfb074a731ff7b65cacb6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: f9311c1987ced4336c4e98bdb984fbee009e9acc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184078"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442465"
 ---
-## <a name="obtaining-resource-counts"></a>取得資源計數
+# <a name="obtaining-resource-counts"></a>取得資源計數
 
 在傳統電腦上模擬 $n $ qubits 的成本，會以 $n $ 來以指數方式調整。 這會大幅限制我們可以使用全狀態模擬器執行的量子化學模擬大小。 對於化學的大型實例，我們可能會取得有用的資訊。 在這裡，我們將探討如何使用[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器，以自動化的方式來取得模擬化學的資源成本（例如 T 閘道或 cnot-contains 閘道的數目）。 這類資訊會通知我們，當量子電腦可能夠大，足以執行這些量子化學演算法時。 如需參考，請參閱提供的 `GetGateCount` 範例。
 
@@ -83,7 +83,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-我們現在會設定追蹤模擬器來追蹤我們感興趣的資源。 在此情況下，我們會將 `usePrimitiveOperationsCounter` 旗標設定為 `true`，以計算基本的量子作業。 [技術詳細資料 `throwOnUnconstraintMeasurement`] 設定為 [`false`]，以避免在問 # 程式碼未正確判斷提示結果 probabiltiy （如果有）執行時的例外狀況。
+我們現在會設定追蹤模擬器來追蹤我們感興趣的資源。 在此情況下，我們會將 `usePrimitiveOperationsCounter` 旗標設定為 `true`，以計算基本的量子作業。 [技術詳細資料 `throwOnUnconstraintMeasurement`] 設定為 [`false`]，以避免在問 # 程式碼未正確判斷提示結果的機率（如果有任何情況）時，發生例外狀況。
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()

@@ -1,21 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit 授權 |Microsoft Docs
+title: Microsoft Quantum Development Kit 授權
 description: Microsoft Quantum Development Kit 授權
-services: service-name-with-dashes-AZURE-ONLY
-keywords: 請勿在未諮詢 SEO 之前新增或編輯關鍵字。
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-ms.openlocfilehash: e14720143144d4890358a1c6167541a0ea5a8362
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.author: cpalmer
+ms.date: 11/04/2019
+ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184928"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463376"
 ---
 # <a name="microsoft-software-license-terms"></a>Microsoft 軟體授權條款 
-# <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT 量子開發工具組（預覽）
+## <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT 量子開發工具組（預覽）
 
 
 * * *
@@ -61,13 +58,13 @@ ms.locfileid: "73184928"
     
     e. 共用、發佈、散發或出借軟體、提供軟體作為獨立託管解決方案供其他人使用，或將軟體或本合約傳送給任何協力廠商。
 
-1. **出口限制**。 貴用戶必須遵守適用於軟體之一切本國及國際出口法規，包括目的地限制、使用者限制和最終用途限制。 如需各項出口限制的詳細資訊，請瀏覽 http://aka.ms/exporting 。
+1. **出口限制**。 貴用戶必須遵守適用於軟體之一切本國及國際出口法規，包括目的地限制、使用者限制和最終用途限制。 如需各項出口限制的詳細資訊，請瀏覽 https://aka.ms/exporting 。
 
 1. **支援服務**。 Microsoft 依此合約並無義務就軟體提供任何支援服務。 任何支援皆為「連同其本身具有之一切瑕疵」依「現狀」提供，不具任何形式之擔保。
 
 1. **更新**。 軟體可能會定期檢查更新，並自動進行下載及安裝。 貴用戶僅得從 Microsoft 或經授權之來源取得更新。 Microsoft 可能要求　貴用戶更新系統以利提供更新。 貴用戶玆同意接收此等自動更新而無須另行通知。 更新未必包括或支援所有現有的軟體功能、服務或周邊裝置。
 
-1. 系結**仲裁和類別動作豁免。如果您居住在美國（或如果您的主要營業單位所在），則適用此章節**。  倘　貴用戶與 Microsoft 雙方互有爭議，　貴用戶與 Microsoft 茲同意於 60 日內嘗試透過非正式協商解決。 如果您和 Microsoft 無法使用，則貴使用者與 Microsoft 同意在**美國仲裁關聯**的聯邦仲裁法案（以下稱「FAA」）下系結個別的仲裁，而不是在「判斷」或「陪審團裁決」之前**的法院**。 屆時即改由中立仲裁人裁斷。 **不允許** **類別動作訴訟、全類別的 arbitrations、私用律師-一般動作**，以及任何其他人在代表產能中採取的其他作業;也不會在不同意所有合作物件的情況下合併個別的。 仲裁合約的全文包含完整條款，網址為 http://aka.ms/arb-agreement-1 。 貴用戶與 Microsoft 茲同意該等條款。
+1. 系結**仲裁和類別動作豁免。如果您居住在美國（或如果您的主要營業單位所在），則適用此章節**。  倘　貴用戶與 Microsoft 雙方互有爭議，　貴用戶與 Microsoft 茲同意於 60 日內嘗試透過非正式協商解決。 如果您和 Microsoft 無法使用，則貴使用者與 Microsoft 同意在**美國仲裁關聯**的聯邦仲裁法案（以下稱「FAA」）下系結個別的仲裁，而不是在「判斷」或「陪審團裁決」之前**的法院**。 屆時即改由中立仲裁人裁斷。 **不允許** **類別動作訴訟、全類別的 arbitrations、私用律師-一般動作**，以及任何其他人在代表產能中採取的其他作業;也不會在不同意所有合作物件的情況下合併個別的。 仲裁合約的全文包含完整條款，網址為 https://aka.ms/arb-agreement-1 。 貴用戶與 Microsoft 茲同意該等條款。
 
 1. **整份合約**。 此合約連同 Microsoft 得基於增補、更新或就第三方應用程式所提供之任何其他條款，構成本軟體合約之全部合意。
 

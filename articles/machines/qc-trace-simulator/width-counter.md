@@ -1,17 +1,17 @@
 ---
 title: 寬度計數器 |量子電腦追蹤模擬器 |Microsoft Docs
-description: 量子電腦追蹤模擬器的總覽
+description: 量子電腦追蹤模擬器概觀
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: e202c527e7e26751361e0c46355ffcefa9c95091
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ae0c0ec2e677be03dc8dc1497dc62ad9034295a4
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184911"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442416"
 ---
 # <a name="width-counter"></a>Width 計數器
 
@@ -29,7 +29,7 @@ operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
 }
 ```
 
-# <a name="using-width-counter-within-a-c-program"></a>在C#程式內使用 Width 計數器
+## <a name="using-width-counter-within-a-c-program"></a>在C#程式內使用 Width 計數器
 
 將受控制的 `X` 在總計5個 qubits 上，會配置2個輔助 qubits，而其輸入寬度會是5。 若要檢查是否為這種情況，我們可以使用下列C#程式：
 
