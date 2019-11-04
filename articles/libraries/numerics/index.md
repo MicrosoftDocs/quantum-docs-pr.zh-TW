@@ -6,14 +6,14 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: 0bffe0c2adeacce514fd9985c9206f6f9c3157be
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056439"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442450"
 ---
-# <a name="introduction"></a>簡介
+# <a name="introduction-to-the-quantum-numerics-library"></a>量子數值程式庫簡介
 
 許多量子演算法都依賴 [Oracle](xref:microsoft.quantum.concepts.oracles) 來進行輸入疊加上的數學函式求解。
 例如，Shor 演算法的主要元件會針對固定 $a$、因數 $N$ 的數字，以及 $x$ (所有 $2n$ 位元字串的均勻疊加中的 $2n$ 量子位元整數)，進行 $f(x) = a^x\operatorname{mod} N$ 求解。

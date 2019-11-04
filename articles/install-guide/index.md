@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 3ec53934436b47908fd4d794a98933010f6059a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 090cf98612c6c549c733e54f9dcbf74442b30fbd
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035290"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442270"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>安裝 Microsoft Quantum Development Kit (QDK)
 
@@ -26,11 +26,13 @@ ms.locfileid: "73035290"
 
 ## <a name="develop-with-python"></a>使用 Python 來開發
 
+適用於 Python 的 qsharp 套件可讓您輕鬆地從 Python 內模擬 Q# 作業和函式。 IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的擴充功能，提供編譯和模擬 Q# 作業的核心功能。
+
 1. 先決條件
 
     - [Python](https://www.python.org/downloads/) 3.6 或更新版本
     - [PIP](https://pip.pypa.io/en/stable/installing) Python 套件管理員
-    - [.NET Core SDK 2.1 或更新版本](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 或更新版本](https://www.microsoft.com/net/download)
 
 1. 安裝 `iqsharp` 套件
 
@@ -87,11 +89,16 @@ ms.locfileid: "73035290"
 
 ## <a name="develop-with-jupyter-notebooks"></a>使用 Jupyter 筆記本來開發
 
+Jupyter Notebook 是學術環境、科學實驗室和線上共同作業程式設計的最愛，提供就地程式碼執行，包括 Q# 程式碼，以及各項指示、附註和其他內容。  以下是開始建立您自己的 Q# 筆記本所需的準備工作。
+
+IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SDK 擴充功能，提供編譯和模擬 Q# 作業的核心功能。
+
+
 1. 先決條件
 
     - [Python](https://www.python.org/downloads/) 3.6 或更新版本
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 2.1 或更新版本](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 或更新版本](https://www.microsoft.com/net/download)
 
 1. 安裝 `iqsharp` 套件
 
@@ -120,11 +127,22 @@ ms.locfileid: "73035290"
 
     - 執行筆記本的此一資料格：
 
-        ![Jupyter 筆記本資料格](~/media/install-guide-jupyter.png)
+        ![Jupyter 筆記本資料格搭配 Q# 程式碼](~/media/install-guide-jupyter.png)
 
         您應該會在資料格的輸出中看到 `SayHello`。 在 Jupyter 筆記本中執行時，Q# 程式碼會進行編譯，筆記本則會輸出其找到的操作名稱。
 
+
+    - 在新的資料格中，使用 `%simulate` magic 在剛剛建立的作業量子電腦中模擬執行：
+
+        ![Jupyter 筆記本資料格搭配 %simulate magic](~/media/install-guide-jupyter-simulate.png)
+
+        You should see the message printed on the screen along with the result of the operation you invoked (in this case, empty).
+
+
 ## <a name="develop-with-c-on-windows-using-visual-studio"></a>透過 Visual Studio，在 Windows 上使用 C# 來開發
+
+Visual Studio 提供進階的環境來開發 Q# 程式，提供像是程式碼完成和語法反白顯示等實用功能，引導開發人員建置其應用程式。  Q# Visual Studio 擴充功能包含適用於 Q# 檔案的範本、專案以及語法反白顯示和 IntelliSense 支援。
+
 
 1. 先決條件
 
@@ -158,12 +176,16 @@ ms.locfileid: "73035290"
 > [!NOTE]
 > * 如果您在一個 Visual Studio 解決方案內放入了多個專案，則解決方案中包含的所有專案必須位於與解決方案相同的資料夾中，或解決方案的其中一個子資料夾中。  
 
-## <a name="develop-with-c-using-vs-code"></a>透過 VS Code，使用 C# 來開發
+## <a name="develop-with-c-using-visual-studio-code"></a>使用 Visual Studio Code，透過 C# 開發
+
+Visual Studio Code (VS Code) 提供進階的環境跨多個電腦環境來開發 Q# 程式，包括 Windows、Linux 和 Mac，提供像是程式碼完成和語法反白顯示等實用功能，引導開發人員建置其應用程式。  Q# VS Code 擴充功能包含語法反白顯示，以及 Q# 程式碼片段。
+
+Visual Studio Code (VS Code) 提供進階的環境跨多個電腦環境來開發 Q# 程式，包括 Windows、Linux 和 Mac，提供像是程式碼完成和語法反白顯示等實用功能，引導開發人員建置其應用程式。  Q# VS Code 擴充功能包含語法反白顯示，以及 Q# 程式碼片段。
 
 1. 先決條件
 
    - [VS 程式碼](https://code.visualstudio.com/download)
-   - [.NET Core SDK 2.1 或更新版本](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3.0 或更新版本](https://www.microsoft.com/net/download)
 
 1. 安裝 Quantum VS Code 擴充功能
 
@@ -195,9 +217,11 @@ ms.locfileid: "73035290"
 
 ## <a name="develop-with-c-using-the-dotnet-command-line-tool"></a>透過 `dotnet` 命令列工具，使用 C# 來開發
 
+當然，您也可以從命令列建置並執行 Q# 程式，只要安裝 .NET Core SDK 和 QDK 專案範本即可。 
+
 1. 先決條件
 
-    - [.NET Core SDK 2.1 或更新版本](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 或更新版本](https://www.microsoft.com/net/download)
 
 1. 安裝適用於 .NET 的 Quantum 專案範本
 

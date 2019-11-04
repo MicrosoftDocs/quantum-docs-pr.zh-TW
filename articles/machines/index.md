@@ -1,19 +1,19 @@
 ---
-title: 量子模擬器和傳統驅動程式 | Microsoft Docs
+title: 量子模擬器和主應用程式 | Microsoft Docs
 description: 說明如何使用傳統運算的 .NET 語言 (通常是 C# 或 Q#) 來驅動量子模擬器。
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 5ac79280669ae0acfe993a1c2ae1c069b0c01848
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035106"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442221"
 ---
-# <a name="classical-drivers-and-machines"></a>傳統驅動程式與機器
+# <a name="quantum-simulators-and-host-applications"></a>量子模擬器和主應用程式
 
 ## <a name="what-youll-learn"></a>您會學習到的知識
 
@@ -52,7 +52,7 @@ ms.locfileid: "73035106"
 * [追蹤型資源估算器](xref:microsoft.quantum.machines.qc-trace-simulator.intro)，`QCTraceSimulator` 類別，其可讓您針對演算法整個呼叫圖的資源耗用情形進行進階分析。
 * [Toffoli 模擬器](xref:microsoft.quantum.machines.toffoli-simulator)，`ToffoliSimulator` 類別。
 
-## <a name="writing-a-classical-driver-program"></a>編寫傳統驅動程式
+## <a name="writing-a-host-application"></a>撰寫主應用程式
 
 在[撰寫量子程式](xref:microsoft.quantum.write-program)中，我們針對遙傳演算法編寫了簡單的 C# 驅動程式。 C# 驅動程式有 4 個主要目的：
 
@@ -94,7 +94,7 @@ ms.locfileid: "73035106"
 * 陣列必須包裝在 `Microsoft.Quantum.Simulation.Core.QArray<T>` 物件中。
     `QArray` 類別所具有的建構函式可接受適當物件的任何已排序集合 (`IEnumerable<T>`)。
 * Q# 中的空白元組 `()` 在 C# 中會以 `QVoid.Instance` 表示。
-* 非空白元組則會表示為 .NET `ValueType` 執行個體。
+* 非空白元組則會表示為 .NET `ValueTuple` 執行個體。
 * Q# 的使用者定義型別會以其基底類型的形式來傳遞。
 * 若要將操作或函式傳遞給 `Run` 方法，您必須使用模擬器的 `Get<>` 方法，取得操作或函式類別的執行個體。
 

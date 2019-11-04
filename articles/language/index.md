@@ -6,16 +6,16 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: d8759b9f043d2e13f4b0c97d54bd824c7e87d6de
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035267"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442482"
 ---
 # <a name="the-q-programming-language"></a>Q# 程式設計語言
 
-# <a name="introduction"></a>簡介
+## <a name="introduction"></a>簡介
 
 量子運算的自然模型是將量子電腦視為副處理器，類似於 GPU、FPGA 和其他附屬處理器所使用的模型。
 主要控制邏輯會在傳統「主機」電腦上執行傳統程式碼。
@@ -36,7 +36,7 @@ Q# 中的最上層建構是使用者定義的類型、操作和函式。
 - [陳述式](xref:microsoft.quantum.language.statements)
 - [檔案結構](xref:microsoft.quantum.language.file-structure)
 
-# <a name="conventions"></a>慣例
+## <a name="conventions"></a>慣例
 
 我們努力在確保所有情況下都會一致地使用常見標點符號。
 我們希望這麼做能夠讓您更容易學習和閱讀 Q#，因為這些標點符號永遠會代表相同的東西，而且相同的概念永遠會以相同的方式來表示。

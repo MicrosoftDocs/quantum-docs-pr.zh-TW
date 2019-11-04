@@ -1,19 +1,19 @@
 ---
-title: 量子運算概念
-description: 什麼是量子運算？
+title: 量子運算的歷程和背景
+description: 瞭解量子計算的歷程、說明運作方式的背景知識，以及有關 Microsoft Quantum Development Kit 的資訊。
 author: QuantumWriter
-ms.author: nawiebe@microsoft.com
+ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 37f5181f2d9e4e11efa29811c24116ca7d64f81b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72978959"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442307"
 ---
-# <a name="what-is-quantum-computing"></a>什麼是量子運算？
+# <a name="quantum-computing-history-and-background"></a>量子運算的歷程和背景
 
 過去幾年有許多新的電腦技術問世，其中量子運算無疑是最需要開發人員這一方進行典範移轉的技術。  在 1980 年代，[Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) 和 [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin) 提出了量子電腦的概念。  量子運算背後的直覺源自常被視為物理學最難堪的其中一件事：雖然科技有長足的進步，卻連簡單系統的模型都無法建立。 我們可以看到，量子力學是在 1900 年到 1925 年之間發展出來的，而且一直是化學、凝聚體物理學和從電腦晶片到 LED 照明等技術所最終仰賴的基石。  雖然有這些成功案例，但即使是某些最簡單的系統，似乎都無法透過量子力學來人為建立模型。  這是因為即使模擬的是只有幾十個互相作用的粒子所形成的系統，所需的運算能力也比傳統電腦運作數千年才能提供的運算能力還要多！
 
