@@ -1,4 +1,4 @@
-- name: 傳統機器和驅動程式
+- name: 概觀
   href: index.md
 - name: 量子模擬器
   href: full-state-simulator.md

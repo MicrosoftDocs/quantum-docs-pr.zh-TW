@@ -1,0 +1,12 @@
+- name: 參考
+  items:
+    - name: 'Q# 程式庫'
+      href: qsharp/toc.yml
+    - name: .NET 程式庫
+      items:
+        - name: 追蹤模擬器
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
+        - name: 量子化學
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
+    - name: Python 程式庫
+      href: 'https://docs.microsoft.com/python/qsharp'
