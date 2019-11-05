@@ -3,15 +3,15 @@ title: 量子開發工具組 Toffoli 模擬器 |Microsoft Docs
 description: Microsoft 的量子開發工具組 Toffoli 模擬器總覽
 author: alan-geller
 ms.author: ageller@microsoft.com
-ms.date: 1/16/20179
+ms.date: 01/16/2019
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: 703a6cbc028dd9f26ce3e469e6f5def050043cb2
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 26940d1a8fe31f1035e2d23a68940cd999517c6b
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183534"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442361"
 ---
 # <a name="quantum-development-kit-toffoli-simulator"></a>量子開發工具組 Toffoli 模擬器
 
