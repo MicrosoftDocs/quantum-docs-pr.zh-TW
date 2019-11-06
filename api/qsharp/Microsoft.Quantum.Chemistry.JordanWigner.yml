@@ -24,7 +24,7 @@ functions:
   summary: 傳回 Trotter 步驟作業，以及執行它所需的參數。
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
-  summary: 在 $ （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} 上套用 Pauli 字串的單一 $U $ .。。Z_0 $ on qubits $ 0. p $ 條件索引 $z \in\{0，1\}$ 和 $p $。 也就是說，$ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} .。。Z_0\ket {\ psi} \end{align} $ $
+  summary: 在 $ （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} 上套用 Pauli 字串的單一 $U $ .。。Z_0 $ on qubits $ 0. p $ 的索引 $z \in\{0、1\}$ 和 $p $。 也就是說，$ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} .。。Z_0 \ket{\psi} \end{align} $ $
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
   summary: 藉由佔用微調 orbitals 來準備試用狀態的簡單狀態
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
@@ -52,9 +52,10 @@ newtypes:
   summary: 此函式會傳回指定整數 `n`之詞彙 `n` `OptimizedBETermIndex` 資料，以及第一個 `Int` 中的詞彙數目，以及 `Double`中所有詞彙係數的絕對值總和。
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
   summary: 優化的區塊編碼演算法中的詞彙資料。
-ms.openlocfilehash: d84c4f8bf74f902cdffc19dc7e489f80c63d7949
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210928"
+metadata:
+  ms.openlocfilehash: d84c4f8bf74f902cdffc19dc7e489f80c63d7949
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73210928"

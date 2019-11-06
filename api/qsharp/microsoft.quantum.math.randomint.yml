@@ -19,9 +19,10 @@ output:
   - summary: 從指定的間隔中，隨機地以一致的整數 $x $;也就是，使用 $ \Pr （x） = \frac{1}{\texttt{maxInt}} $。
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: 83db1cc0e58cfbf2e3da4af4c72f59ccde4fedf9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73220023"
+metadata:
+  ms.openlocfilehash: 83db1cc0e58cfbf2e3da4af4c72f59ccde4fedf9
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73220023"
