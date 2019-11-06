@@ -10,13 +10,13 @@ functions:
     將感關注的操作員編碼成 `BlockEncoding`。
 
 
-    這會 `BlockEncoding` 單一 $U = P\cdot V\cdot P ^ \dagger $ 來編碼某些運算子 $H = \sum_{j} | \Alpha_j |U_j $ （有意義）是 unitaries 的線性組合。 一般來說，$P $ 是單一狀態準備，因此 $P \ket{0}\_a = \ sum_j\sqrt {\ Alpha_j/\|\vec\Alpha\|\_2} \ket{j}\_$，以及 $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_j $。
+    這會 `BlockEncoding` 單一 $U = P\cdot V\cdot P ^ \dagger $ 來編碼某些運算子 $H = \ sum_ {j} | \ Alpha_j |Unitaries 是線性組合的重要 U_j $。 一般來說，$P $ 是單一狀態準備，因此 $P \ket{0}\_a = \ sum_j \sqrt{\ Alpha_j/\|\vec\Alpha\|\_2} \ket{j}\_$，以及 $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $。
 - uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
   summary: >-
     將感關注的操作員編碼成 `BlockEncodingReflection`。
 
 
-    這會 `BlockEncodingReflection` 單一 $U = P\cdot V\cdot P ^ \dagger $ 來編碼某些運算子 $H = \sum_{j} | \Alpha_j |U_j $ （有意義）是 unitaries 的線性組合。 一般來說，$P $ 是單一狀態準備，因此 $P \ket{0}\_a\sum_j\sqrt {\ Alpha_j/\|\vec\Alpha\|\_2} \ket{j}\_$，以及 $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_j $。
+    這會 `BlockEncodingReflection` 單一 $U = P\cdot V\cdot P ^ \dagger $ 來編碼某些運算子 $H = \ sum_ {j} | \ Alpha_j |Unitaries 是線性組合的重要 U_j $。 一般來說，$P $ 是單一狀態準備，因此 $P \ket{0}\_\ sum_j \sqrt{\ Alpha_j/\|\vec\Alpha\|\_2} \ket{j}\_$，$V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $。
 - uid: microsoft.quantum.simulation.blockencodingtoreflection
   summary: >-
     將 `BlockEncoding` 轉換為對等的 `BLockEncodingReflection`。
@@ -52,7 +52,7 @@ functions:
     為 Hamiltonian 建立單一區塊編碼。
 
 
-    Hamiltonian $H = \sum_{j}\Alpha_j P_j $ 的描述是由 Pauli 詞彙總和 $P _j $，每一個都有實際係數 $ \Alpha_j $。
+    Hamiltonian $H = \ sum_ {j} \ Alpha_j P_j $ 是由 Pauli 詞彙總和 $P _j $ 所描述，每個字詞都有實際係數 $ \ Alpha_j $。
 - uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
   summary: 將 `GeneratorIndex`所描述的 Pauli 詞彙的係數解壓縮。
 - uid: microsoft.quantum.simulation.paulievolutionfunction
@@ -91,7 +91,7 @@ newtypes:
     也就是說，`BlockEncoding` 是一個單一 $U $，其中對系統暫存器進行作用的任意運算子 $H $，`s` 會在對應到輔助狀態 $ \ket{0}_a $ 的左上角區塊中進行編碼。 那是
 
 
-    $ $ \begin{align} （\bra{0}_a \ otimes I_s） U （\ket{0}_a \ otimes I_s） = H \end{align} $ $。
+    $ $ \begin{align} （\bra{0}_a \otimes I_s） U （\ket{0}_a \otimes I_s） = H \end{align} $ $。
 - uid: microsoft.quantum.simulation.blockencodingreflection
   summary: 表示也是反映的 `BlockEncoding`。
 - uid: microsoft.quantum.simulation.evolutiongenerator
@@ -143,10 +143,10 @@ newtypes:
     表示由時鐘暫存器控制的 `BlockEncoding`。
 
 
-    也就是說，`TimeDependentBlockEncoding` 是由 clock 暫存器中的 state $ \ket{k}_d $ 所控制的單一 $U $ `d` 讓在系統暫存器上作用的任意運算子 $H _k $，`s` 是以對應至輔助狀態 $ \ket 的左上角區塊進行編碼{0}_a $。 那是
+    也就是說，`TimeDependentBlockEncoding` 是由 state $ \ket{k} _d $ in clock 暫存器所控制的單一 $U $ `d` 因此，在系統暫存器上作用的任意運算子 $H _k $，`s` 會在對應至輔助狀態 $ \ket 的左上角區塊中進行編碼{0}_a $。 那是
 
 
-    $ $ \begin{align} （\bra{0}\_a\otimes I_ {ds}） U （\ket{0}\_a\otimes I_ {ds}） = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k。
+    $ $ \begin{align} （\bra{0}\_a\otimes I_ {ds}） U （\ket{0}\_a\otimes I_ {ds}） = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k。
 
     \end{align} $ $。
 - uid: microsoft.quantum.simulation.timedependentgeneratorsystem
@@ -161,9 +161,10 @@ newtypes:
     針對某個時間間隔進行單一時間進化。
 - uid: microsoft.quantum.simulation.unitary
   summary: 代表單一運算子下的進化。
-ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73215875"
+metadata:
+  ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73215875"

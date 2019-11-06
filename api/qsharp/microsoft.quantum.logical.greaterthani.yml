@@ -33,9 +33,10 @@ output:
   - summary: 只有在 `a` 絕對大於 `b`時，才 `true`。
     isPrimitive: true
     uid: Bool
-ms.openlocfilehash: 9fc87e612d2234c47fc343cfa353d46dadbd556a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73225684"
+metadata:
+  ms.openlocfilehash: 9fc87e612d2234c47fc343cfa353d46dadbd556a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73225684"
