@@ -7,8 +7,8 @@ summary: >-
   為 Hamiltonian 建立單一區塊編碼。
 
 
-  Hamiltonian $H = \sum_{j}\Alpha_j P_j $ 的描述是由 Pauli 詞彙總和 $P _j $，每一個都有實際係數 $ \Alpha_j $。
-remarks: 這是藉由準備和 unpreparing state $ \ sum_ {j} \ sqrt {\ Alpha_j/\ Alpha} \ ket {j} $ 所取得，並會建立一個乘法控制的單一 <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> 和 <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>。
+  Hamiltonian $H = \ sum_ {j} \ Alpha_j P_j $ 是由 Pauli 詞彙總和 $P _j $ 所描述，每個字詞都有實際係數 $ \ Alpha_j $。
+remarks: 這是藉由準備和 unpreparing state $ \ sum_ {j} \sqrt{\ Alpha_j/\Alpha}\ket{j} $）來取得，並 <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> 和 <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>。
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>第一個參數
 
 
-      係數 $ \Alpha = \sum_{j} | \Alpha_j | $ 的一種標準。
+      係數 $ \Alpha = \ sum_ {j} | \ Alpha_j | $ 的一種標準。
 
 
       ## <a name="second-parameter"></a>第二個參數
@@ -34,9 +34,10 @@ output:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
-ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73216130"
+metadata:
+  ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73216130"

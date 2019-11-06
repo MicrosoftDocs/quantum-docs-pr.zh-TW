@@ -19,13 +19,14 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: 反映 $ \ket{1}_f $ 所標記之狀態的 `ReflectionOracle`。
+  - summary: 反映 $ \ket{1}_f $ 標記之狀態的 `ReflectionOracle`。
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
-ms.openlocfilehash: c86011664da3f59bc978641b0aefcca5a50d3b1a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73215433"
+metadata:
+  ms.openlocfilehash: c86011664da3f59bc978641b0aefcca5a50d3b1a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73215433"

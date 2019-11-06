@@ -7,7 +7,7 @@ summary: >-
   以 dyadic 分數所指定的引數，套用多 qubit Pauli 運算子的指數。
 
 
-  \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}，\end{align} 其中 $P _i $ 是 `paulis`的 $i $ th 元素，其中 $N = $`Length(paulis)`。
+  \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}，\end{align} 其中 $P _i $ 是 $i 的 `paulis`$ th 元素，其中 $N = $`Length(paulis)`。
 syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
@@ -38,9 +38,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: d02f48d695db3dd2d7012df5bbf22718ffe41b74
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73223763"
+metadata:
+  ms.openlocfilehash: d02f48d695db3dd2d7012df5bbf22718ffe41b74
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73223763"

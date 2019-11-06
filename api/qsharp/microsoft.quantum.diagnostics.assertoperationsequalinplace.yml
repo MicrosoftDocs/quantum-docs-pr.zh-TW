@@ -7,7 +7,7 @@ summary: >-
   假設有兩個作業，則判斷提示其對所有輸入狀態的行為都相同。
 
 
-  此判斷提示的執行方式是檢查所有表單狀態的作業動作 $V _0 \otimes ... \otimes V_ {n-1} $，其中 $V _k $ 是其中一個狀態 $ \ket{0}$、$ \ket{1}$、$ \ket{+} $ 和 $ \ket{i} $ （Eigenstate Y 運算子的 + 1 Pauli）。
+  此判斷提示的執行方式，是檢查所有表單狀態的作業動作 $V _0 \otimes ... \otimes V_ {n-1} $，其中 $V _k $ 是其中一個狀態 $ \ket{0}$，$ \ket{1}$，$ \ket{+} $ 和 $ \ket{i} $ （Eigenstate Y 運算子的 + 1 Pauli）。
 
 
   這個判斷提示會使用 $n $ qubits，而且需要比較多個呼叫作業。
@@ -53,9 +53,10 @@ output:
     uid: Unit
 seeAlso:
 - assertoperationsequalreferenced
-ms.openlocfilehash: a6c58f51bbc30f3917457d4137afb083533519fe
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73225752"
+metadata:
+  ms.openlocfilehash: a6c58f51bbc30f3917457d4137afb083533519fe
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73225752"

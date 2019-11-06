@@ -12,7 +12,7 @@ summary: >-
   請使用 @"Microsoft.Quantum.Canon.ApplyWithA"。
 syntax: "operation WithA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T) : Unit"
 input:
-  content: （outerOperation：（t = > 單位為形容詞），innerOperation：（t = > 單位為形容詞），目標： t）
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T)"
   types:
   - name: outerOperation
     isOperation: true
@@ -38,19 +38,20 @@ input:
         uid: Unit
     functors:
     - Adjoint
-  - name: 目標
+  - name: target
     uid: "'T"
     isLocal: true
 output:
-  content: 單位
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
 functors:
 - Adjoint
-ms.openlocfilehash: 7a5ce1211201d32091bf3e88aff030508a53f7d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067691"
+metadata:
+  ms.openlocfilehash: 7a5ce1211201d32091bf3e88aff030508a53f7d8
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067691"

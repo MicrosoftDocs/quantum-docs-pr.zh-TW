@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.amplitudeamplification
-name: AmplitudeAmplification
+name: Microsoft.Quantum.AmplitudeAmplification
 summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含執行波幅放大的函數和作業。\n\n # <a name=\"description\"></a>描述\n 以部分反射進行遺忘式的振幅，是在這裡實作為最常見的振幅放大形式。\n\n 這會透過作業 AmpAmpObliviousByReflectionPhases 來呼叫。\n\n 這有兩個暫存器： `ancillaRegister` 和 `systemRegister`。\n\n 這會針對 `ReflectionOracle` 類型的反射接受兩個 oracles，其只會在 `ancillaRegister` 暫存器上作用。\n\n 這會接受 oracle 特殊的來遺忘式類型 `ObliviousOracle` 的振幅放大，同時在兩個註冊上共同運作。\n\n `ancillaRegister` 的輸入狀態會假設為第一個反映運算子的唯一 $-$1 eigenstate，$I-2 \\ ket {s} \\ bra {s} $。\n\n 關於目標配量狀態的反映通常是透過假設存取從計算基礎 $ \\ket{0\\cdots 0} $ 準備該狀態的 oracle 來執行。\n\n 這些 oracles 的慣例需要兩個暫存器：單一 qubit `flagQubit` 註冊，並在 ancillaRegister 暫存器上註冊其他所有專案。\n\n `StateOracle` 類型的 oracle 會同時在這兩個暫存器上共同運作，以在 `flagQubit` 暫存器中以一些真實的振幅建立以 $ \\ket{1}$ 標記的目標狀態。\n\n 此旗標狀態的反映 `ReflectionOracle` 是由作業 `TargetStateReflectionOracle`所產生。\n\n `ancillaRegister` 的輸入狀態的反映 `ReflectionOracle` 是由反轉 StateOracle 所產生，然後再以 ReflectionStart （）反映 $ \\ket{0\\cdots 0} $。\n\n `DeterministicStateOracle` 類型的 oracle 會在 `qubitState` 暫存器上進行處理，以完全不使用旗標來建立目標狀態。\n\n `AmpAmpObliviousByOraclePhases` 是可接受 oracles `StateOracle` 和 `ObliviousOracle` 而非反射的遺忘式振幅放大版本。\n\n 請注意，振幅放大是遺忘式幅度放大的特殊案例，其中 `ObliviousOracle` 是身分識別運算子，而且沒有系統 qubits，亦即 `systemRegister` 是空的。\n\n 這會透過作業 `AmpAmByReflectionPhases` 呼叫，並 `AmpAmpByOraclePhases`。\n\n Grover 搜尋標準案例中的部分反射階段是由函數 AmpAmpPhasesStandard 提供。\n\n 例如，我們有下列相依性： AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases。"
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
@@ -35,9 +35,10 @@ newtypes:
   summary: 幅度放大中部分反射順序的階段。
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: 以幅度放大的單一 qubit 旋轉順序的階段。
-ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057039"
+metadata:
+  ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057039"

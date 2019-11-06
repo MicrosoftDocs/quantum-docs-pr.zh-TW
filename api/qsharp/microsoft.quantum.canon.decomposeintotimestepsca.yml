@@ -6,12 +6,12 @@ namespace: Microsoft.Quantum.Canon
 summary: 針對指定的作業，傳回執行 Trotter – Plat'home co. 整合器的作業。
 syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: >-
-  We use the implementation in
+  我們會使用中的實作為
 
 
-  - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
+  - [*D. Berry、G. Ahokas、Cleve、b. Sanders*](https://arxiv.org/abs/quant-ph/0508139)
 input:
-  content: （（nSteps： Int，op：（（Int，Double，t） = > 單位是形容詞 + Ctl），trotterOrder： Int）
+  content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int)"
   types:
   - name: nSteps
     isPrimitive: true
@@ -41,7 +41,7 @@ input:
     isPrimitive: true
     uid: Int
 output:
-  content: （（Double，t） = > Unit 是形容詞 + Ctl）
+  content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
   - summary: 傳回實 Trotter – Plat'home co. 整合器的單一，其中第一個參數 `Double` 是整合步驟的大小，而第二個參數則是針對其採取動作的目標。
     isOperation: true
@@ -61,9 +61,10 @@ output:
 typeParameters:
 - uid: "'T"
   summary: 每個時間步驟應作用的類型：通常是 `Qubit[]` 或 `Qubit`。
-ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067827"
+metadata:
+  ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067827"

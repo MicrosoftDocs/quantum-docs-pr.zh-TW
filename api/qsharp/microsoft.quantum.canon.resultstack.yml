@@ -8,9 +8,10 @@ summary: >-
 
   堆疊包含整數容量、堆疊指標和 `Result` 陣列。
 syntax: newtype ResultStack = (Int, Int, Result[]);
-ms.openlocfilehash: 4a0ba6c9e5e4489fd7a28d33df7d179268d46efe
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73222369"
+metadata:
+  ms.openlocfilehash: 4a0ba6c9e5e4489fd7a28d33df7d179268d46efe
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73222369"

@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 在 $ （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} 上套用 Pauli 字串的單一 $U $ .。。Z_0 $ on qubits $ 0. p $ 條件索引 $z \in\{0，1\}$ 和 $p $。 也就是說，$ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} .。。Z_0\ket {\ psi} \end{align} $ $
+summary: 在 $ （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} 上套用 Pauli 字串的單一 $U $ .。。Z_0 $ on qubits $ 0. p $ 的索引 $z \in\{0、1\}$ 和 $p $。 也就是說，$ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} .。。Z_0 \ket{\psi} \end{align} $ $
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
 references: '- 以線性 T 複雜度 Ryan Babbush、Craig Gidney、Dominic W Berry、Nathan Wiebe、Jarrod McClean、Zitec Paler、奧斯丁 Fowler、Hartmut Neven https://arxiv.org/abs/1805.03662 的量子線路中的電子 Spectra 編碼'
 input:
@@ -29,9 +29,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73228455"
+metadata:
+  ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73228455"

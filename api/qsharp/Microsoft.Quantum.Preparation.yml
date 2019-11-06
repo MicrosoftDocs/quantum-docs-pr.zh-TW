@@ -14,7 +14,7 @@ functions:
     使用量子 ROM 技術來表示指定的密度矩陣。
 
 
-    提供 $N $ 係數 $ \Alpha_j $ 的清單時，這會傳回一個使用量子 ROM 技術來準備近似值 $ \tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ bra {j} $ （密度矩陣 $ 淨化 = \rho = 0} ^ {N-1} \sum_{j 的 \frac{|）的單一 $U $。Alpha_j |}{\sum_k | \Alpha_k |}\ket{j}\bra{j} $。 在此近似值中，錯誤 $ \epsilon $ 就是 $ | p_j-\frac{| Alpha_j |}{\sum_k | \Alpha_k |} |\le \epsilon/N $ 和 $\|\tilde\rho-\rho\| \le \epsilon $。 換句話說，$ $ \begin{align} U\ket{0}^ {\lceil\log_2 N\rceil} \ ket{0}^ {m} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{garbage}_j}。
+    提供 $N $ 係數 $ \ Alpha_j $ 的清單時，這會傳回一個使用量子 ROM 技術來準備近似值 $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ of 密度矩陣 $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{的單一 $U $Alpha_j |}{\ sum_k | \ Alpha_k |}\ket{j}\bra{j} $。 在此近似值中，錯誤 $ \epsilon $ 就是 $ | p_j-\frac{| Alpha_j |}{\ sum_k | \ Alpha_k |} |\le \epsilon/N $ 和 $\|\tilde\rho-\rho\| \le \epsilon $。 換句話說，$ $ \begin{align} U\ket{0}^ {\lceil\ log_2 N\rceil} \ ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{garbage} _j}。
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.quantumromqubitcount
@@ -27,7 +27,7 @@ functions:
     傳回的作業 $U $ 準備具有複雜係數的任意量子狀態 $ \ket{\psi} $ $r _j e ^ {i t_j} $ （來自 $n $-qubit 計算基礎狀態 $ \ket{0...0} $）。
 
 
-    在新配置的暫存器上，$ $ \begin{align} U\ket {0 ... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}} 提供了 U 的動作。
+    在新配置的暫存器上執行 U 的動作是由 $ $ \begin{align} U\ket {0 ... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}。
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
@@ -35,10 +35,10 @@ functions:
     傳回準備指定之量子狀態的作業。
 
 
-    傳回的作業會 $U $ 準備具有正係數 $ \Alpha_j\ge $0 的任意量子狀態 $ \ket{\psi} $，從 $n $-qubit 計算基礎狀態 $ \ket{0...0} $。
+    傳回的作業 $U $ 準備具有正係數 $ \ 的任意量子狀態 $ \ket{\psi} $ Alpha_j \ge $0，從 $n $-qubit 計算基礎狀態 $ \ket{0...0} $。
 
 
-    在新配置的暫存器上執行 U 的動作是由 $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \Alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \Alpha_j | ^ 2}} 提供。
+    在新配置的暫存器上執行 U 的動作是由 $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ Alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ Alpha_j | ^ 2}}。
 
     \end{align} $ $
 operations:
@@ -50,7 +50,7 @@ operations:
     傳回的作業 $U $ 準備具有複雜係數的任意量子狀態 $ \ket{\psi} $ $r _j e ^ {i t_j} $ （來自 $n $-qubit 計算基礎狀態 $ \ket{0...0} $）。
 
 
-    $ $ \begin{align} U\ket {0 ... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}。
+    $ $ \begin{align} U\ket {0 ... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}。
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.preparechoistate
@@ -89,18 +89,19 @@ operations:
     準備最常混合狀態中的 qubit。
 
 
-    它會藉由套用 depolarizing channel $ $ \begin{align} \Omega （\rho） \mathrel{： =} \frac{1}{4} \sum_{\mu \in \{0，1，2，3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\，準備 $ \boldone/$2 狀態中的指定 qubit。dagger}、\end{align} $ $，其中 $ \sigma\_i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是密度運算子，代表混合的狀態。
+    它會藉由套用 depolarizing channel $ $ \begin{align} \Omega （\rho） \mathrel{： =} \frac{1}{4} \ sum_ {\mu \in \{0，1，2，3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\，準備 $ \boldone/$2 狀態中的指定 qubit。dagger}、\end{align} $ $，其中 $ \sigma\_i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是密度運算子，代表混合的狀態。
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
     建立編碼0到 `nIndices`之狀態的統一重迭。
 
 
-    也就是說，這個單一 $U $ 會在給定輸入 state $ \ket{0\cdots 0} $ 的情況下，建立所有數位狀態 $0 $ 到 $M-$1 的統一重迭。 換句話說，$ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}。
+    也就是說，這個單一 $U $ 會在給定輸入 state $ \ket{0\cdots 0} $ 的情況下，建立所有數位狀態 $0 $ 到 $M-$1 的統一重迭。 換句話說，$ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}。
 
     \end{align} $ $。
-ms.openlocfilehash: 2b9e3b89a29eb73b9b7417210628fce046c91209
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73216011"
+metadata:
+  ms.openlocfilehash: 2b9e3b89a29eb73b9b7417210628fce046c91209
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73216011"
