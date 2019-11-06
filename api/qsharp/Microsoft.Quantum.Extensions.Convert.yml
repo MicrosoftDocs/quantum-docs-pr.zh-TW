@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.convert
-name: Microsoft. 量子. 轉換
+name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>總結\n 這些是 System. Convert 中的一些函式，也就是與 Q # 類型系統相關的 .NET CLR 命名空間。\n\n # <a name=\"remarks\"></a>備註\n 如果 Bool、Int 和 Double 類型的函式有數個版本，則對應的函式會有後置詞 B、I 和 D。"
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
@@ -53,9 +53,10 @@ functions:
     > [!WARNING]
 
     > 已淘汰，請使用 @"microsoft.quantum.convert.intasstringwithformat"。
-ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056493"
+metadata:
+  ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056493"

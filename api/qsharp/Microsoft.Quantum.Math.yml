@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.math
-name: Microsoft 量子
+name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
   summary: 傳回 `Complex`類型複數的絕對值。
@@ -177,7 +177,7 @@ functions:
     傳回 `Double`s 向量的 `L(p)` 標準。
 
 
-    也就是說，如果陣列 $x $ 的類型 `Double[]`，這會傳回 $p $-標準 $\|x\|\_p = （\sum_{j} | x_j | ^ {p}） ^ {1/p} $。
+    也就是說，如果陣列 $x $ 類型 `Double[]`，這會傳回 $p $-標準 $\|x\|\_p = （\ sum_ {j} | x_j | ^ {p}） ^ {1/p} $。
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
     正規化 `L(p)` 標準中 `Double`s 的向量。
@@ -252,9 +252,10 @@ operations:
   summary: 傳回間隔中大於或等於零且小於一的隨機實數。
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: 以隨機的的單一 qubit Pauli 運算子，傳回一個一致的。
-ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056291"
+metadata:
+  ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056291"
