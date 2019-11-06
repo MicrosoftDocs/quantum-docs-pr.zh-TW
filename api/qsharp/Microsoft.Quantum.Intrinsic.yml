@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.intrinsic
-name: Microsoft 量子內建函式
+name: Microsoft.Quantum.Intrinsic
 functions:
 - uid: microsoft.quantum.intrinsic.message
   summary: 記錄訊息。
@@ -25,13 +25,13 @@ operations:
     套用多 qubit Pauli 運算子的指數。
 
 
-    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}，\end{align}，其中 $P _i $ 是 `paulis`的 $i $ th 元素，其中 $N = $`Length(paulis)`。
+    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}，\end{align}，其中 $P _i $ 是 $i 的 `paulis`$ th 元素，其中 $N = $`Length(paulis)`。
 - uid: microsoft.quantum.intrinsic.expfrac
   summary: >-
     以 dyadic 分數所指定的引數，套用多 qubit Pauli 運算子的指數。
 
 
-    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}，\end{align} 其中 $P _i $ 是 `paulis`的 $i $ th 元素，其中 $N = $`Length(paulis)`。
+    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}，\end{align} 其中 $P _i $ 是 $i 的 `paulis`$ th 元素，其中 $N = $`Length(paulis)`。
 - uid: microsoft.quantum.intrinsic.h
   summary: >-
     將 Hadamard 轉換套用至單一 qubit。
@@ -55,7 +55,7 @@ operations:
     在指定的 Pauli 基底中執行一或多個 qubits 的聯合測量。
 
 
-    輸出結果是由散發所提供： \begin{align} \Pr （\texttt{Zero} | \ket{\psi}） = \frac12 \braket{\psi \mid | \left （\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right） \mid | \psi}，\end{align}，其中 $P _i $ 是的 $i $ th 元素 `bases`，其中 $N = \texttt{Length} （\texttt{bases}） $。
+    輸出結果是由散發所提供： \begin{align} \Pr （\texttt{Zero} | \ket{\psi}） = \frac12 \braket{\psi \mid | \left （\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right） \mid | \psi}，\end{align}，其中 $P _i $ 是的 $i $ th 元素 `bases`和，其中 $N = \texttt{Length} （\texttt{bases}） $。
 
     也就是說，量測會傳回 `Result` $d $，讓觀察到的測量效果的 eigenvalue 是 $ （-1） ^ d $。
 - uid: microsoft.quantum.intrinsic.r
@@ -63,7 +63,7 @@ operations:
     針對指定的 Pauli 軸套用旋轉。
 
 
-    \begin{align} R_ {\mu} （\theta） \mathrel{： =} e ^ {-i \theta \sigma_{\mu}/2}，\end{align}，其中 $ \mu \in \{I，X，Y，Z\}$。
+    \begin{align} R_ {\mu} （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_ {\mu}/2}，\end{align}，其中 $ \mu \in \{I，X，Y，Z\}$。
 - uid: microsoft.quantum.intrinsic.r1
   summary: >-
     依據指定的角度，套用關於 $ \ket{1}$ 狀態的旋轉。
@@ -101,7 +101,7 @@ operations:
     以指定為 dyadic 分數的角度，對指定的 Pauli 軸套用旋轉。
 
 
-    \begin{align} R_ {\mu} （n，k） \mathrel{： =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}，\end{align}，其中 $ \mu \in \{I，X，Y，Z\}$。
+    \begin{align} R_ {\mu} （n，k） \mathrel{： =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}，\end{align}，其中 $ \mu \in \{I，X，Y，Z\}$。
 
 
     > [!WARNING]
@@ -112,7 +112,7 @@ operations:
     依據指定的角度，套用關於 $x $ 軸的旋轉。
 
 
-    \begin{align} R_x （\theta） \mathrel{： =} e ^ {-i \theta \sigma_x/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-i\sin \frac{\theta}{2}\\\\-i\sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}。
+    \begin{align} R_x （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_x/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-i\sin \frac{\theta}{2}\\\\-i\sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.ry
@@ -120,7 +120,7 @@ operations:
     依據指定的角度，套用關於 $y $ 軸的旋轉。
 
 
-    \begin{align} R_y （\theta） \mathrel{： =} e ^ {-i \theta \sigma_y/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-\sin \frac{\theta}{2}\\\\ \sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}。
+    \begin{align} R_y （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_y/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-\sin \frac{\theta}{2}\\\\ \sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.rz
@@ -128,7 +128,7 @@ operations:
     依據指定的角度，套用關於 $z $ 軸的旋轉。
 
 
-    \begin{align} R_z （\theta） \mathrel{： =} e ^ {-i \theta \sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \theta/2} \end{bmatrix}。
+    \begin{align} R_z （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \theta/2} \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.s
@@ -161,7 +161,7 @@ operations:
     套用 Pauli $X $ 閘道。
 
 
-    \begin{align} \sigma_x \mathrel{： =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}。
+    \begin{align} \ sigma_x \mathrel{： =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.y
@@ -169,7 +169,7 @@ operations:
     套用 Pauli $Y $ 閘道。
 
 
-    \begin{align} \sigma_y \mathrel{： =} \begin{bmatrix} 0 &-i \\\\ & 0 \end{bmatrix}。
+    \begin{align} \ sigma_y \mathrel{： =} \begin{bmatrix} 0 &-i \\\\ 我 & 0 \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.z
@@ -177,12 +177,13 @@ operations:
     套用 Pauli $Z $ 閘道。
 
 
-    \begin{align} \sigma_z \mathrel{： =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}。
+    \begin{align} \ sigma_z \mathrel{： =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}。
 
     \end{align}
-ms.openlocfilehash: a2f80ca98d86e5a1457efb6dad34c60d6ef75a2e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056353"
+metadata:
+  ms.openlocfilehash: a2f80ca98d86e5a1457efb6dad34c60d6ef75a2e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056353"
