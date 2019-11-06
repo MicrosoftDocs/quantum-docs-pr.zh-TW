@@ -12,7 +12,7 @@ summary: >-
   請使用 @"microsoft.quantum.convert.intasstring"。
 syntax: 'function ToStringI (a : Int) : String'
 input:
-  content: （a： Int）
+  content: '(a : Int)'
   types:
   - name: a
     isPrimitive: true
@@ -22,9 +22,10 @@ output:
   types:
   - isPrimitive: true
     uid: String
-ms.openlocfilehash: 386b72c082411ee6f51f9032e100c3a8ecc48836
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067385"
+metadata:
+  ms.openlocfilehash: 386b72c082411ee6f51f9032e100c3a8ecc48836
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067385"

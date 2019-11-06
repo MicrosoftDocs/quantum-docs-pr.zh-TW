@@ -17,14 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: 具有二進位表示 $ （p_{62}\,p_{61}\,\dots ..\,p_0） $ 的整數 $x $，其中 $p _i = $0，如果 `paulis[i]` 是 `PauliI` 或 `PauliX`，$p 為 `paulis[i]` 則為 `PauliY` _i = $1或 `PauliZ`。
+  - summary: 以 binary 表示 $ （p_{62}\,p_{61}\,\dots ..\,p_0） $ $x $ 的整數，其中 $p _i = $0，如果 `paulis[i]` 是 `PauliI` 或 `PauliX`，$p _i = $1 `paulis[i]`或 `PauliZ`。
     isPrimitive: true
     uid: Int
 seeAlso:
 - xbits
-ms.openlocfilehash: 21d3da075cb4b98e5604f72b8432536bb9d51753
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73217694"
+metadata:
+  ms.openlocfilehash: 21d3da075cb4b98e5604f72b8432536bb9d51753
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73217694"

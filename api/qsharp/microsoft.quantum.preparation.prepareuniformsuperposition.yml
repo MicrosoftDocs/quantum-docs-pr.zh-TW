@@ -7,11 +7,11 @@ summary: >-
   建立編碼0到 `nIndices`之狀態的統一重迭。
 
 
-  也就是說，這個單一 $U $ 會在給定輸入 state $ \ket{0\cdots 0} $ 的情況下，建立所有數位狀態 $0 $ 到 $M-$1 的統一重迭。 換句話說，$ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}。
+  也就是說，這個單一 $U $ 會在給定輸入 state $ \ket{0\cdots 0} $ 的情況下，建立所有數位狀態 $0 $ 到 $M-$1 的統一重迭。 換句話說，$ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}。
 
   \end{align} $ $。
 examples: >-
-  下列範例會準備州 $ \frac{1}{\sqrt{6}} \sum_{j = 0} ^{5}\ket{j} $ on $3 $ qubits。
+  下列範例會準備州 $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ on $3 $ qubits。
 
 
   ```Q#
@@ -45,9 +45,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: 4bb7c83382f8d48f132fbd91acfd2184a570aea4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73226483"
+metadata:
+  ms.openlocfilehash: 4bb7c83382f8d48f132fbd91acfd2184a570aea4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73226483"

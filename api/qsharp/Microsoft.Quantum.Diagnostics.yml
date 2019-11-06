@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
-name: Microsoft 量子診斷
+name: Microsoft.Quantum.Diagnostics
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: 判斷提示兩個布林值陣列是否相等。
@@ -40,7 +40,7 @@ operations:
     假設有兩個作業，則判斷提示其對所有輸入狀態的行為都相同。
 
 
-    此判斷提示的執行方式是檢查所有表單狀態的作業動作 $V _0 \otimes ... \otimes V_ {n-1} $，其中 $V _k $ 是其中一個狀態 $ \ket{0}$、$ \ket{1}$、$ \ket{+} $ 和 $ \ket{i} $ （Eigenstate Y 運算子的 + 1 Pauli）。
+    此判斷提示的執行方式，是檢查所有表單狀態的作業動作 $V _0 \otimes ... \otimes V_ {n-1} $，其中 $V _k $ 是其中一個狀態 $ \ket{0}$，$ \ket{1}$，$ \ket{+} $ 和 $ \ket{i} $ （Eigenstate Y 運算子的 + 1 Pauli）。
 
 
     這個判斷提示會使用 $n $ qubits，而且需要比較多個呼叫作業。
@@ -74,9 +74,10 @@ operations:
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: 判斷 qubit `q` 在預期的 Pauli Z 運算子 eigenstate 中，直到指定的容錯為止。
 summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含適用于診斷用途的函數和作業，包括 assert 作業和宣告函式。"
-ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056864"
+metadata:
+  ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056864"
