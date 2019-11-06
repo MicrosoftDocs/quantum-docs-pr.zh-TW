@@ -7,7 +7,7 @@ summary: 將整數 `xs` 乘以整數 `ys` 並將結果儲存在 `result`中，�
 remarks: >-
   會使用標準的 shift 和 add 方法來執行乘法。
 
-  藉由將 $x _i $ 複製到控制項 qubits 上的 ancilla qubit，然後控制 ancilla qubit 上的加法，來改善受控制的版本。
+  藉由將 $x _i $ 複製到控制 qubits 上的 ancilla qubit，然後控制 ancilla qubit 上的加法，來改善受控制的版本。
 syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -29,9 +29,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: 5af23390ef67bf339e816e4e8af1d3f52847aaa7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73218731"
+metadata:
+  ms.openlocfilehash: 5af23390ef67bf339e816e4e8af1d3f52847aaa7
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73218731"

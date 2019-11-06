@@ -7,7 +7,7 @@ summary: 若有外部和內部作業，則會傳回新的作業，以 conjugates
 remarks: 外部作業一律會假設為 adjointable，但不需要是可控制的，以便讓合併作業可以控制。
 syntax: "function ConjugatedByC (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl)) : ('T => Unit is Ctl)"
 input:
-  content: （outerOperation：（t = > 單位是形容詞），innerOperation：（t = > Unit 是 Ctl））
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl))"
   types:
   - name: outerOperation
     summary: 應該用來 $V $ 的運算 $U $。 請注意，外部作業 $U $ 需要 adjointable，但不需要是可控制的。
@@ -36,7 +36,7 @@ input:
     functors:
     - Controlled
 output:
-  content: （T = > 單位是 Ctl）
+  content: ('T => Unit is Ctl)
   types:
   - summary: 新的作業，其動作是由單一 $U ^ {\dagger} V U $ 表示。
     isOperation: true
@@ -58,9 +58,10 @@ seeAlso:
 - conjugatedbya
 - conjugatedbyca
 - applywith
-ms.openlocfilehash: 64b754d98164ea9d7ef5fcdc17141a5b1ef008d4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067963"
+metadata:
+  ms.openlocfilehash: 64b754d98164ea9d7ef5fcdc17141a5b1ef008d4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067963"

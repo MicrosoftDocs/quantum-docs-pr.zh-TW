@@ -41,9 +41,10 @@ output:
   - summary: 最小的索引 `idx`，讓 `predicate(arr[idx])` 為 true，如果沒有這類元素，則為-1。
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73218187"
+metadata:
+  ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73218187"

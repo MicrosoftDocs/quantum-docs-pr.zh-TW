@@ -6,9 +6,10 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: 註冊會以位元組由大到小的順序來編碼不帶正負號的整數。 具有索引 `0` 的 qubit 會將不帶正負號整數的最高位編碼。
 remarks: 我們會將 `BigEndian` 縮寫為檔中的 `BE`。
 syntax: newtype BigEndian = Qubit[];
-ms.openlocfilehash: a4d96ab9299d983583949de5ae8eebba64a189a4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73221349"
+metadata:
+  ms.openlocfilehash: a4d96ab9299d983583949de5ae8eebba64a189a4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73221349"

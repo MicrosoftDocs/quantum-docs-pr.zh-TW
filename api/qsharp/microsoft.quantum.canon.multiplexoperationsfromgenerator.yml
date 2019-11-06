@@ -4,7 +4,7 @@ name: MultiplexOperationsFromGenerator
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  套用在 qubit 數位 state $ \ket{j} $ 控制時，套用單一 $V _j $ 的乘法控制單一運算 $U $。
+  套用在 qubit 數位 state $ \ket{j} $ 所控制的單一 $V _j $ 時，套用一個已控制的單一運算 $U $。
 
 
   $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
@@ -42,7 +42,7 @@ input:
     summary: $n $ qubit 控制項暫存器，其會將數位狀態 $ \ket{j} $ 編碼為位元組由小到大的格式。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: $V _j $ 的一般 qubit 暫存器會作用於。
+    summary: $V _j $ 作用於的一般 qubit。
     uid: "'T"
     isLocal: true
 output:
@@ -53,9 +53,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: 54c0db61b5e18c7a598b6c8ec930f2851ba608f2
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73227775"
+metadata:
+  ms.openlocfilehash: 54c0db61b5e18c7a598b6c8ec930f2851ba608f2
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73227775"

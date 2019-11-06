@@ -1,13 +1,13 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.math.mind
-name: 高枕無憂
+name: MinD
 type: function
 namespace: Microsoft.Quantum.Math
 summary: 傳回兩個指定數位中較小的一個。
 remarks: 如[需](https://docs.microsoft.com/dotnet/api/system.math.min)詳細資訊，請參閱 system.string。
 syntax: 'function MinD (a : Double, b : Double) : Double'
 input:
-  content: （a： Double，b： Double）
+  content: '(a : Double, b : Double)'
   types:
   - name: a
     isPrimitive: true
@@ -16,13 +16,14 @@ input:
     isPrimitive: true
     uid: Double
 output:
-  content: DOUBLE
+  content: Double
   types:
   - isPrimitive: true
     uid: Double
-ms.openlocfilehash: 6a0e17a5be3d9f774b2bd79a8621cb991d563737
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066586"
+metadata:
+  ms.openlocfilehash: 6a0e17a5be3d9f774b2bd79a8621cb991d563737
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066586"
