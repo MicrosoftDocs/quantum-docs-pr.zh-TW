@@ -9,9 +9,10 @@ remarks: >-
 
   這兩個數組的長度必須相等。 請注意，在許多情況下，有關 [開始] 狀態和 [目標狀態] 最後一個階段的第一個階段會引進全域階段轉移，而且可能會設定為 $0 $。
 syntax: newtype ReflectionPhases = (Double[], Double[]);
-ms.openlocfilehash: ce9bab0540f70ac0115d5b7780437410e019a09b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73215552"
+metadata:
+  ms.openlocfilehash: ce9bab0540f70ac0115d5b7780437410e019a09b
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73215552"

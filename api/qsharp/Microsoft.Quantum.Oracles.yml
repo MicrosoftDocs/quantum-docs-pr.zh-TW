@@ -72,9 +72,10 @@ newtypes:
     - 索引旗標 qubit $f $ 的整數。
 
     - 系統註冊 $s $，將會儲存所需的量子狀態 $ \ket{\psi}\_s $。
-ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73216096"
+metadata:
+  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73216096"
