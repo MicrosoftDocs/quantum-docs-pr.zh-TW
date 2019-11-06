@@ -7,7 +7,7 @@ summary: >-
   判斷量子暫存器特定狀態的機率具有預期的值。
 
 
-  假設 $n $-qubit 配量狀態 $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \Alpha_j \ket{j} $，判斷提示 $ \Alpha_j $ \ket{j} | ^ 2 $ （由 $j $ 編制索引）的機率為預期值。
+  假設 $n $-qubit 量子 state $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ Alpha_j \ket{j} $，判斷提示 $ \ket{j} $j $ 的機率 $ | \ Alpha_j | ^ 2 $ 具有預期的值。
 examples: >-
   假設 `qubits` 暫存器會編碼 3 qubit 的量子 state $ \ket{\psi} = \ sqrt {1/8} \ ket{0}+ \ sqrt {7/8} \ ket{6}$ （以位元組為小的格式）。
 
@@ -26,7 +26,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: expected
-    summary: $ | \Alpha_j | ^ 2 $ 的預期值。
+    summary: $ | \ Alpha_j | ^ 2 $ 的預期值。
     isPrimitive: true
     uid: Double
   - name: qubits
@@ -41,9 +41,10 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73221434"
+metadata:
+  ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73221434"

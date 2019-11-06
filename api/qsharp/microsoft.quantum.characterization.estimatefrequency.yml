@@ -50,9 +50,10 @@ output:
       這在符合實體限制的目的機器上特別重要，因為這種可能性無法測量。
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: 1c27d38983f9fa9c1a1dc5c80548e307b7c36ffe
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73229186"
+metadata:
+  ms.openlocfilehash: 1c27d38983f9fa9c1a1dc5c80548e307b7c36ffe
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73229186"
