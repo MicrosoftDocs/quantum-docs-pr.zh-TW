@@ -30,9 +30,10 @@ output:
   - summary: 如果 `true`，則程式成功，而且應該接受較高品質的複製。 如果 `false`，程式就會失敗，而且應該將暫存器的狀態視為未定義。
     isPrimitive: true
     uid: Bool
-ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73226721"
+metadata:
+  ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73226721"

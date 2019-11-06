@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arithmetic
-name: Microsoft 量子演算法
+name: Microsoft.Quantum.Arithmetic
 summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含用於 coherently 計算算術的函式和作業。"
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
@@ -83,7 +83,7 @@ operations:
     判斷量子暫存器特定狀態的機率具有預期的值。
 
 
-    假設 $n $-qubit 配量狀態 $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \Alpha_j \ket{j} $，判斷提示 $ \Alpha_j $ \ket{j} | ^ 2 $ （由 $j $ 編制索引）的機率為預期值。
+    假設 $n $-qubit 量子 state $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ Alpha_j \ket{j} $，判斷提示 $ \ket{j} $j $ 的機率 $ | \ Alpha_j | ^ 2 $ 具有預期的值。
 - uid: microsoft.quantum.arithmetic.carry
   summary: 會執行可還原的「包含」閘道。 假設在 qubit `carryIn` 中編碼的傳入位，以及 `summand1` 和 `summand2`中編碼的兩個被加數位，會在 qubit `summand1` 中計算 `carryIn`、`summand2` 和 `summand2` 的位 xor，而執行會進行 xor 至 qubit `carryOut`。
 - uid: microsoft.quantum.arithmetic.cascadeccnot
@@ -215,9 +215,10 @@ newtypes:
     例如，如果 $ \ket{x} $ 是以計算為基礎的 $x 整數的位元組由小到大編碼，則 $ \operatorname{QFTLE} \ket{x} $ 就是 QFT 中 $x $ 的編碼方式。
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: 以小序儲存的帶正負號整數類型（請參閱 LittleEndian）。
-ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065141"
+metadata:
+  ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065141"
