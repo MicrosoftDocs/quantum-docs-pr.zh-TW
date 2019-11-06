@@ -20,9 +20,10 @@ output:
   types:
   - summary: 藉由指定 `QECC` 類型，傳回配量錯誤更正程式碼的執行。
     uid: microsoft.quantum.errorcorrection.qecc
-ms.openlocfilehash: 1865ededef3e3ada743a49ef81141aeffdcfed0a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73220397"
+metadata:
+  ms.openlocfilehash: 1865ededef3e3ada743a49ef81141aeffdcfed0a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73220397"

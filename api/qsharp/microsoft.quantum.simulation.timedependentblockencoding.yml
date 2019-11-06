@@ -7,16 +7,17 @@ summary: >-
   表示由時鐘暫存器控制的 `BlockEncoding`。
 
 
-  也就是說，`TimeDependentBlockEncoding` 是由 clock 暫存器中的 state $ \ket{k}_d $ 所控制的單一 $U $ `d` 讓在系統暫存器上作用的任意運算子 $H _k $，`s` 是以對應至輔助狀態 $ \ket 的左上角區塊進行編碼{0}_a $。 那是
+  也就是說，`TimeDependentBlockEncoding` 是由 state $ \ket{k} _d $ in clock 暫存器所控制的單一 $U $ `d` 因此，在系統暫存器上作用的任意運算子 $H _k $，`s` 會在對應至輔助狀態 $ \ket 的左上角區塊中進行編碼{0}_a $。 那是
 
 
-  $ $ \begin{align} （\bra{0}\_a\otimes I_ {ds}） U （\ket{0}\_a\otimes I_ {ds}） = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k。
+  $ $ \begin{align} （\bra{0}\_a\otimes I_ {ds}） U （\ket{0}\_a\otimes I_ {ds}） = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k。
 
   \end{align} $ $。
 syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl);
-ms.openlocfilehash: 1f41d7592e7f031085430a42edaa341874724851
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73211013"
+metadata:
+  ms.openlocfilehash: 1f41d7592e7f031085430a42edaa341874724851
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73211013"

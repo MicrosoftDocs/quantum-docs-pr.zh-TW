@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.characterization
-name: Microsoft 量子的特性
+name: Microsoft.Quantum.Characterization
 summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含用於學習配量狀態和進程之屬性的函數和作業，包括 tomography 和階段估計。"
 operations:
 - uid: microsoft.quantum.characterization.continuousphaseestimationiteration
@@ -25,9 +25,10 @@ operations:
   summary: 針對給定的 oracle `U` 和 eigenstate 執行健全的非反復式配量階段估計演算法，並在海森堡限制的變異數調整的情況下，提供階段的單一實際值估計。
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: 指定特定的通道，以 Pauli 為基礎執行單一 qubit 進程 tomography 測量。
-ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056937"
+metadata:
+  ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056937"

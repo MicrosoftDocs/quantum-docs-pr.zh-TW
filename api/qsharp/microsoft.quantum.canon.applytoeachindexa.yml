@@ -9,7 +9,7 @@ summary: >-
   修飾詞 `A` 表示單一 qubit 作業是 adjointable。
 syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[]) : Unit"
 input:
-  content: （singleElementOperation：（（Int，t） = > Unit 的形容詞），register： t []）
+  content: "(singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[])"
   types:
   - name: singleElementOperation
     summary: 要套用至每個 qubit 的作業。
@@ -26,13 +26,13 @@ input:
         uid: Unit
     functors:
     - Adjoint
-  - name: 註冊
+  - name: register
     summary: 要套用指定作業的 qubits 陣列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
-  content: 單位
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -43,9 +43,10 @@ functors:
 - Adjoint
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
-ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068473"
+metadata:
+  ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068473"

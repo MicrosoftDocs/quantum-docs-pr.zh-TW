@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.canon
-name: Canon
+name: Microsoft.Quantum.Canon
 functions:
 - uid: microsoft.quantum.canon.asqubitarray
   summary: >-
@@ -247,13 +247,13 @@ functions:
     > 已淘汰，請使用 @"microsoft.quantum.math.modulusi"。
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
-    傳回在 qubit 數位 state $ \ket{j} $ 控制時，套用單一 $V _j $ 的乘法控制單一運算 $U $。
+    傳回乘法控制的單一作業 $U $，此作業會套用單一 $V _j $ （由 n-qubit number state $ \ket{j} $ 控制）。
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
 - uid: microsoft.quantum.canon.multiplexerfromgenerator
   summary: >-
-    傳回在 qubit 數位 state $ \ket{j} $ 控制時，套用單一 $V _j $ 的乘法控制單一運算 $U $。
+    傳回乘法控制的單一作業 $U $，此作業會套用單一 $V _j $ （由 n-qubit number state $ \ket{j} $ 控制）。
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
@@ -464,10 +464,10 @@ operations:
     將複雜階段的陣列套用至 qubits 暫存器的數值基礎狀態。
 
 
-    也就是說，這會在 $n $-qubit number state $ \ket{j} $ 上，執行 $U $ 的對角線作業，以套用複雜階段 $e ^ {i \theta_j} $。
+    也就是說，這會在 $n $-qubit number state $ \ket{j} $ 上，執行 $U $ 的對角線作業，以套用複雜階段 $e ^ {i \ theta_j} $。
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ ket {j} \ bra {j} $。
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j} $。
 - uid: microsoft.quantum.canon.applyfermionicswap
   summary: 套用 Fermionic 交換。
 - uid: microsoft.quantum.canon.applyif
@@ -752,7 +752,7 @@ operations:
     將 qubits 陣列的同位，計算為目標 qubit。
 
 
-    如果陣列一開始是處於 state $ \ket{q_0} \ket{q_1} \cdots \ket{q_{\text{target}}} $，則最後的狀態是由 $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{target}}} $ 提供。
+    如果陣列一開始處於 state $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{target}}} $，則最後的狀態是由 $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{target}}} $。
 - uid: microsoft.quantum.canon.copymostsignificantbitle
   summary: >-
     > [!WARNING]
@@ -789,7 +789,7 @@ operations:
     將 Y 基準類比套用至交換 Z 和 Y 軸的 Hadamard 轉換。
 
 
-    單一 qubit 上的 Y Hadamard 轉換 $H _Y = S H $ 是：
+    單一 qubit 上的 Y Hadamard 轉換 $H _Y = S H $ 為：
 
 
     \begin{align} H_Y \mathrel{： =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}。
@@ -854,19 +854,19 @@ operations:
     套用由數位狀態陣列控制的作業陣列。
 
 
-    也就是說，會套用 $U $ 的乘法控制單一作業，而此作業會在由 $n $-qubit number state $ \ket{j} $ 控制時套用單一 $V _j $。
+    也就是說，會套用乘以控制的單一作業 $U $，而此作業會在由 $n $-qubit number state $ \ket{j} $ 控制時，套用單一 $V _j $。
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
 - uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
   summary: >-
-    套用由 qubit 數位 state $ \ket{j} $ 控制時，套用單一 $V _j $ 的乘法控制單一運算 $U $。
+    套用在 qubit 數位 state $ \ket{j} $ 所控制的單一 $V _j $ 時，套用 $U $ 的乘法控制單一運算。
 
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
 - uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
   summary: >-
-    套用在 qubit 數位 state $ \ket{j} $ 控制時，套用單一 $V _j $ 的乘法控制單一運算 $U $。
+    套用在 qubit 數位 state $ \ket{j} $ 所控制的單一 $V _j $ 時，套用一個已控制的單一運算 $U $。
 
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
@@ -875,19 +875,19 @@ operations:
     在 qubits 的陣列上套用 Pauli 旋轉。
 
 
-    這會套用乘法控制的單一作業 $U $ 來執行依角度 $ \theta_j $ $P $ 的旋轉，而此作業是由 $n $-qubit number state $ \ket{j} $ 所控制。
+    這會套用乘法控制的單一作業 $U $ 來執行依角度 $ \ theta_j $ 關於單一 qubit Pauli 運算子 $P $ 的旋轉，而此作業是由 $n $-qubit number state $ \ket{j} $ 所控制。
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $。
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $。
 - uid: microsoft.quantum.canon.multiplexz
   summary: >-
     適用于 qubits 陣列的 Pauli Z 旋轉。
 
 
-    這會套用乘法控制的單一作業 $U $ 來執行依角度 $ \theta_j $ $Z $ 的旋轉，而此作業是由 $n $-qubit number state $ \ket{j} $ 所控制。
+    這會套用乘法控制的單一作業 $U $ 來執行依角度 $ \ theta_j $ 關於單一 qubit Pauli 運算子 $Z $ 的旋轉，而此作業是由 $n $-qubit number state $ \ket{j} $ 所控制。
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $。
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z x theta_j} $。
 - uid: microsoft.quantum.canon.noop
   summary: 在引數上執行身分識別作業（無 op）。
 - uid: microsoft.quantum.canon.qft
@@ -936,9 +936,10 @@ newtypes:
     `Result` 變數的後進先出堆疊。
 
     堆疊包含整數容量、堆疊指標和 `Result` 陣列。
-ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065158"
+metadata:
+  ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065158"
