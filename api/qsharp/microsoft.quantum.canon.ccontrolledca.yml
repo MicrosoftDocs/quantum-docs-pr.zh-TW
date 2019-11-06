@@ -9,7 +9,7 @@ summary: >-
   修飾詞 `CA` 表示作業可控制和 adjointable。
 syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
 input:
-  content: （op：（t = > 單位是 Ctl + 形容詞））
+  content: "(op : ('T => Unit is Ctl + Adj))"
   types:
   - name: op
     summary: 要有條件地套用的作業。
@@ -26,7 +26,7 @@ input:
     - Adjoint
     - Controlled
 output:
-  content: （（Bool，t） = > Unit 是 Ctl + 形容詞）
+  content: ((Bool, 'T) => Unit is Ctl + Adj)
   types:
   - summary: 如果傳統控制項位為 true，則為 op 的新作業。
     isOperation: true
@@ -48,9 +48,10 @@ typeParameters:
   summary: 要有條件地套用之作業的輸入類型。
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
-ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068065"
+metadata:
+  ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068065"

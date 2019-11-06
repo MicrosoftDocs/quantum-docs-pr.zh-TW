@@ -7,7 +7,7 @@ summary: >-
   針對指定的 Pauli 軸套用旋轉。
 
 
-  \begin{align} R_ {\mu} （\theta） \mathrel{： =} e ^ {-i \theta \sigma_{\mu}/2}，\end{align}，其中 $ \mu \in \{I，X，Y，Z\}$。
+  \begin{align} R_ {\mu} （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_ {\mu}/2}，\end{align}，其中 $ \mu \in \{I，X，Y，Z\}$。
 remarks: 使用 `pauli = PauliI`呼叫時，此作業會套用*全域階段*。 與 `Controlled` 仿函數搭配使用時，這個階段可能會很重要。
 syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit'
 input:
@@ -33,9 +33,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: cb7cf0c4c2a758b1abaa80d6fe3c265fc9feabb2
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73234014"
+metadata:
+  ms.openlocfilehash: cb7cf0c4c2a758b1abaa80d6fe3c265fc9feabb2
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73234014"

@@ -14,9 +14,10 @@ operations:
   summary: 以 `Z` 為基礎來測量單一 qubit，並將它重設為標準的基礎狀態 | 0 〉之後的測量。
 - uid: microsoft.quantum.measurement.multim
   summary: 根據標準，測量給定陣列中的每個 qubit。
-ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210979"
+metadata:
+  ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73210979"
