@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: a7c077eda3e46430cbe6598cb899adb460451f75
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c3039b92c4b3235a397d5cf31280ac2673706e9d
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443914"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462830"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>快速入門：在 Q# 中實作量子亂數產生器
 量子亂數產生器是以 Q # 撰寫量子演算法的一個簡單範例。 此演算法利用量子機制的本質來產生亂數。 
@@ -69,4 +69,4 @@ ms.locfileid: "73443914"
 
 <img src="./Measurement2.svg" width="450">
 
-由於測量的結果完全隨機，我們便能得到一個隨機位元。 我們可以呼叫此函式多次來建立整數。 例如，如果我們呼叫此函式三次來取得三個隨機位元，則可以建立隨機的 3位元數字 (也就是介於 0 和 7 之間的亂數)。
+由於測量的結果完全隨機，我們便能得到一個隨機位元。 我們可以呼叫此作業多次來建立整數。 例如，如果我們呼叫此作業三次來取得三個隨機位元，則可以建立隨機的 3位元數字 (也就是介於 0 和 7 之間的亂數)。

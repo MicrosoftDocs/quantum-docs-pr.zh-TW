@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 8967fee11931c6cef4b2d98084b2e319cea55284
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444101"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529965"
 ---
 # <a name="how-to-learn-quantum-computing"></a>如何學習量子運算？
 
@@ -29,7 +29,7 @@ ms.locfileid: "73444101"
 
 * [基本的量子力學](xref:microsoft.quantum.concepts.intro)：我們說過，就算不知道量子物理也能開始編碼 (實際上也確實如此！)。 但如果對量子力學和其數學符號有一些基本概念，將有助於您了解量子程式設計。
 
-* **線性代數 (向量和矩陣)** ：在量子運算中，量子態會以向量表示，並以線性轉換的方式對這些向量實施量子操作。  這裡有[有關線性代數的 Jupyter Notebook 教學課程](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)。  您也可以在我們的概念指南中，閱讀有關[向量和矩陣](xref:microsoft.quantum.concepts.vectors)的詳細資訊。
+* **線性代數 (向量和矩陣)** ：在量子運算中，量子態會以向量表示，並以線性轉換的方式對這些向量實施量子操作。  這裡有[有關線性代數的 Jupyter Notebook 教學課程](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)。  您也可以在我們的[向量和矩陣](xref:microsoft.quantum.concepts.vectors)相關概念指南中，閱讀有關線性代數的詳細資訊。
 
 * **複雜算術**：量子態向量的係數為複數。 即使不懂複數，您也可以了解一些基本的量子運算概念，但若要更深入地運用，您就必須在量子工具組中納入複數。  這裡有[有關複雜算術的 Jupyter Notebook 教學課程](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)，其中說明處理量子運算所需的一些數學背景。 
 
@@ -45,14 +45,14 @@ ms.locfileid: "73444101"
 
 * 從我們的[量子運算概念](xref:microsoft.quantum.concepts.intro)指南來開始，裡面彙編了量子運算的基本概念。
 * 「使用 Python 和 Q# 學習量子運算」  (Sarah C. Kaiser 和 Christopher E. Granade) 為幾乎不懂量子力學、但有一些程式設計背景的人提供了出色的簡介。
-* 「量子運算和量子資訊」  (Michael A. Nielsen, Isaac L. Chuang) 是量子運算領域中最常被引用的教科書。 相關人士將其視為這方面主題的標準教科書。 本書假設讀者先前只懂一點量子力學和電腦科學。 對於想要對此主題有嚴謹認識的讀者，以及正在尋找參考資料以獲得進階概念的讀者來說，本書是很好的選擇。
-* MIT OpenCourseWare 有優秀的[線上課程](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr)，授課者是 Allan Adams，您可從中學到量子力學的基礎知識。 適合想要進一步了解基礎物理學的讀者。
+* 「量子運算和量子資訊」  (Michael A. Nielsen, Isaac L. Chuang) 是量子運算領域中最常被引用的教科書，且被視為這方面主題的標準教科書。 本書假設讀者先前只懂一點量子力學和電腦科學。 對於想要對此主題有嚴謹認識的讀者，以及正在尋找參考資料以獲得進階概念的讀者來說，本書是很好的選擇。
+* MIT OpenCourseWare 有優秀的[線上課程](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr)，授課者是 Allan Adams，您可從中學到量子力學的基礎知識。 適合想要進一步了解基礎物理學的開發人員。
 
 ## <a name="join-the-quantum-community"></a>加入量子社群
 
 您不必獨自學習，有一大群愛好者和專家會樂意幫忙。 不要害怕提出問題！
 
-* 如果您有任何關於 Q# 或量子運算的問題，請不要遲疑，立即探訪量子運算 StackExchange 網站。 如果在其中找不到您的具體問題，請隨時發問新的問題。 
+* 如果您有任何關於 Q# 或量子運算的問題，請不要遲疑，立即探訪量子運算 StackExchange 網站。 如果在其中找不到您的具體問題，請隨時發問。 
 * 造訪 [Q# 部落格](https://devblogs.microsoft.com/qsharp/)和 [Microsoft Quantum 部落格](https://cloudblogs.microsoft.com/quantum/)，隨時了解有關 Q# 的最新消息和資源。
 * 造訪 [Q# 社群](https://qsharp.community/)和 [Awesome Q#](https://project-awesome.org/ebraminio/awesome-qsharp)，以尋找更多資源和資料。
 
