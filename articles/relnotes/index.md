@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 868d256270516cf99c228a757a11c6dc1a6319df
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
+ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463332"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74153316"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -20,6 +20,17 @@ ms.locfileid: "73463332"
 如需安裝指示，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
+
+## <a name="version-01019111607"></a>版本 0.10.1911.1607
+
+*發行日期：2019 年 11 月 17 日*
+
+此版本包含下列項目：
+
+- [Quantum Katas](https://github.com/Microsoft/QuantumKatas) 和 Jupyter 筆記本的效能修正
+
+請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)和 [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
+
 
 ## <a name="version-0101911307"></a>版本 0.10.1911.307
 
