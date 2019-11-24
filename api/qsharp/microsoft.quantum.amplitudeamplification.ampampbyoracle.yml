@@ -4,7 +4,7 @@ name: AmpAmpByOracle
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: 標準振幅放大演算法
-remarks: 這是由 `AmpAmpPhasesStandard` 所計算之反映階段的選擇所取得的標準振幅放大演算法，假設 \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ text {target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，\end{align} 此作業準備州 \begin{align} \operatorname{AmpAmpByOracle}\ket{0}\_{f} \ket{0}\_s = \sin （（2n + 1） \sin ^{-1}（\lambda）） \ket{1}\_f\ket {\ text {target}}\_s + \cdots\ket{0}\_f \end{align} 在大多數情況下，`flagQubit` 和 `ancillaRegister` 會以 state $ \ket{0}\_f\ket{0}進行初始化 \_$。
+remarks: 這是由 `AmpAmpPhasesStandard` 所計算之反映階段的選擇所取得的標準波幅放大演算法，假設 \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ text {target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，\end{align} 此作業準備狀態 \begin{align} \operatorname{AmpAmpByOracle}\ket{0}\_{f} \ket{0}\_s = \sin （（2n + 1） \sin ^{-1}（\lambda）） \ket{1}\_f\ket {\ text {target}}\_s + \cdots\ket{0}\_f \end{align} 在大多數情況下，`flagQubit` 和 `ancillaRegister` 會以 state $ \ket{0}\_f\ket{0}\_a $ 來初始化。
 syntax: 'function AmpAmpByOracle (nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 references: '- [*G. Brassard，Hoyer，Mosca，Tapp*](https://arxiv.org/abs/quant-ph/0005055)'
 input:

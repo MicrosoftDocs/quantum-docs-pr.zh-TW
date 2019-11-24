@@ -46,7 +46,7 @@ input:
 output:
   content: Double
   types:
-  - summary: $M （P （\ket{00 \cdots 0} \bra{00 \cdots 0}）） $ 所取得之頻率的估計 $ \hat{p} $ 會傳回 `Zero`，使用非偏誤二項式估計工具 $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $，其中 $n\_{\向上箭號} $ 是觀察到的 `Zero` 結果數目。
+  - summary: $M （P （\ket{00 \cdots 0} \bra{00 \cdots 0}）） $ 所取得之頻率的估計 $ \hat{p} $ 會傳回 `Zero`，使用非偏誤二項式估計工具 $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $，其中 $n\_{\uparrow} $ 是觀察到的 `Zero` 結果數目。
     isPrimitive: true
     uid: Double
 metadata:

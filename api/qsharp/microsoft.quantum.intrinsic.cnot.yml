@@ -7,7 +7,7 @@ summary: >-
   將受控制的 NOT （CNOT-CONTAINS）閘道套用至一對 qubits。
 
 
-  \begin{align} \operatorname{CNOT} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}, \end{align}
+  \begin{align} \operatorname{CNOT} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}，\end{align}
 
 
   其中，資料列和資料行的排序方式就像在「配量概念指南」中。

@@ -7,11 +7,11 @@ summary: 遺忘式以 oracles 進行部分反射的振幅放大。
 remarks: >-
   這會在 ancilla 開始和目標狀態的形式上，比 `AmpAmpObliviousByReflectionPhases`更嚴格的條件。
 
-  假設 $A \ket{0}\_f\ket{0}\_A = \ket{\text{start}}\_{fa} $ 準備 ancilla 開始狀態 $ \ket{\text{start}}\_{fa} $ （從計算基礎 $ \ket{0}\_f\ket{0}$。
+  假設 $A \ket{0}\_f\ket{0}\_A = \ket{\text{start}}\_{fa} $ 從計算基礎 $ \ket{\text{start}}\_{0}\ket \_$ 準備 ancilla 開始狀態 $ f\ket{0}{fa} $。
 
   假設目標狀態是以 $ \ket{1}\_f $ 標示。
 
-  假設 \begin{align} O\ket {\ text {start}}\_{fa} \ket{\psi}\_s = \lambda\ket{1}\_f\ket {\ text {任何}}\_a\ket {\ text {target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，某些單一 $U $ 的 \end{align}。
+  假設 \begin{align} O\ket {\ text {start}}\_{fa} \ket{\psi}\_s = \lambda\ket{1}\_f\ket {\ text {任何}}\_a\ket {\ text {target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，\end{align} 適用于某些單一的 $U $。
 syntax: 'function AmpAmpObliviousByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'

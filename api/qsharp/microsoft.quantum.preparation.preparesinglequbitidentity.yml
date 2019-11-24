@@ -7,7 +7,7 @@ summary: >-
   準備最常混合狀態中的 qubit。
 
 
-  它會藉由套用 depolarizing channel $ $ \begin{align} \Omega （\rho） \mathrel{： =} \frac{1}{4} \ sum_ {\mu \in \{0，1，2，3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\，準備 $ \boldone/$2 狀態中的指定 qubit。dagger}、\end{align} $ $，其中 $ \sigma\_i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是密度運算子，代表混合的狀態。
+  它會套用 depolarizing channel $ $ \begin{align} \Omega （\rho） \mathrel{，以準備 $ \boldone/$2 狀態中的指定 qubit： =} \frac{1}{4} \ sum_ {\mu \in \{0，1，2，3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}，\end{align} $ $，其中 $ \sigma\_i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是密度運算子，代表混合的狀態。
 remarks: >-
   混合狀態 $ \boldone/$2 描述將此作業套用至狀態的結果會隱含地描述此作業中隨機播放所預期的值。
 
