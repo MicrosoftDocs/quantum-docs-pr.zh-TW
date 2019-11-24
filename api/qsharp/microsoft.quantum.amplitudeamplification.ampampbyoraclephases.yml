@@ -9,7 +9,7 @@ remarks: >-
 
   假設目標狀態是以 $ \ket{1}\_f $ 標示。
 
-  假設 \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ text {target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，在大部分的情況下，`flagQubit` 和 `ancillaRegister` 會在 state $ \ket{0}\_{f} \ket{0}\_s $ 中初始化。
+  假設 \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ text {target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，\end{align} 在大多數情況下，`flagQubit` 和 `ancillaRegister` 會在 state $ \ket{0}\_{f} \ket{0}\_s $ 中初始化。
 syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'

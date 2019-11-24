@@ -458,7 +458,7 @@ operations:
     在目標 qubits 上執行受控制的「和階梯」。
 
 
-    這會在計算基礎向量上套用下列地圖所提供的單一物件： $ $ \begin{align} \ket{x\_1、\dots ..、x\_n} \ket{y\_1、\dots ..、y\_{n-1}} \mapsto \ket{x\_1，\dots ..，x\_n} \ket{y\_1 \oplus （x\_1 \land x\_2），\dots ..，y\_{n-1} \oplus （x\_1 \land x\_2 \land \cdots \land x\_{n-1}}\end{align} $ $，其中 $ \ket{x\_1、\dots ..、x\_n} $ 指的是 `controls`的計算基礎狀態，其中 $ \ket{y\_1，\dots ..，y\_{n-1}} $ 指的是 `targets`的計算基礎狀態。
+    這會在計算基礎向量上套用下列地圖所提供的單一物件： $ $ \begin{align} \ket{x\_1，\dots ..，x\_n} \ket{y\_1，\dots ..，y\_{n-1}} \mapsto \ket{x\_1，\dots ..，x\_n} \ket{y\_1 \oplus （x\_1 \land x\_2），\dots ..，y\_{n-1} \oplus （x\_1 \land x\_2 \land \cdots \land x\_{n-1}}\end{align} $ $，其中 $ \ket{x\_1、\dots ..、x\_n} $ 指的是 `controls`的計算基礎狀態，其中 $ \ket{y\_1，\dots ..，y\_{n-1}} $ 指的是 `targets`的計算基礎狀態。
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: >-
     將複雜階段的陣列套用至 qubits 暫存器的數值基礎狀態。
@@ -763,19 +763,19 @@ operations:
     將受控制的 X （CX）閘道套用至一對 qubits。
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align}，資料列和資料行的組織方式如 [量子概念指南] 所示。
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align}，$ $，其中資料列和資料行的組織方式如量子概念指南所示。
 - uid: microsoft.quantum.canon.cy
   summary: >-
     將受控制的 Y （CY）閘道套用至一對 qubits。
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & \\0 \end{align}，資料列和資料行的組織方式如 [量子概念指南] 所示。
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & & 0 \end{align}，$ $，其中資料列和資料行的組織方式如量子概念指南所示。
 - uid: microsoft.quantum.canon.cz
   summary: >-
     將受控制的 Z （CZ）閘道套用至一對 qubits。
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align}，資料列和資料行的組織方式如 [量子概念指南] 所示。
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align}，$ $，其中資料列和資料行的組織方式如量子概念指南中所示。
 - uid: microsoft.quantum.canon.delay
   summary: 套用具有延遲的指定作業。
 - uid: microsoft.quantum.canon.delaya

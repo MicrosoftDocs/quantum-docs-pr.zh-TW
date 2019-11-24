@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.simulation
 name: Microsoft.Quantum.Simulation
-summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含 coherently 模擬量子系統之動態的函式和作業。"
+summary: " # <a name=\"summary\"></a>Summary\n 這個命名空間包含 coherently 模擬量子系統之動態的函式和作業。"
 functions:
 - uid: microsoft.quantum.simulation.addgeneratorsystems
   summary: 加入兩個 `GeneratorSystem`，以建立新的 `GeneratorSystem`。
@@ -143,7 +143,7 @@ newtypes:
     表示由時鐘暫存器控制的 `BlockEncoding`。
 
 
-    也就是說，`TimeDependentBlockEncoding` 是由 state $ \ket{k} _d $ in clock 暫存器所控制的單一 $U $ `d` 因此，在系統暫存器上作用的任意運算子 $H _k $，`s` 會在對應至輔助狀態 $ \ket 的左上角區塊中進行編碼{0}_a $。 那是
+    也就是說，`TimeDependentBlockEncoding` 是由 state $ \ket{k} _d $ in clock register `d` 所控制的單一 $U $，如此一來，在系統暫存器上作用的任意運算子 $H _k $，`s` 會在對應至輔助狀態 $ \ket{0}_a $ 的左上角區塊中進行編碼。 那是
 
 
     $ $ \begin{align} （\bra{0}\_a\otimes I_ {ds}） U （\ket{0}\_a\otimes I_ {ds}） = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k。

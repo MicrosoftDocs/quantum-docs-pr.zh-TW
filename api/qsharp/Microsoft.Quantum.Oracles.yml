@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>總結\n 這個命名空間會提供使用者定義型別，以根據其在配量演算法（例如階段估計和振幅放大）中的預期用途來裝飾各種 oracles 類型。"
+summary: " # <a name=\"summary\"></a>Summary\n 這個命名空間會提供使用者定義型別，以根據其在配量演算法（例如階段估計和振幅放大）中的預期用途來裝飾各種 oracles 類型。"
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
   summary: 將類型 `StateOracle` 的 oracle 轉換成 `DeterministicStateOracle`。
