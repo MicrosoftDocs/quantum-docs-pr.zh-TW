@@ -5,14 +5,14 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9c266fe16b8e2a265d91a99f8574a6acfcf03160
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183245"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442561"
 ---
-# <a name="what-is-q"></a>問 # 是什麼？ #
+# <a name="q-program-overview"></a>Q# 程式概觀
 
 問 # 是一種可調整、多架構的領域專屬程式設計語言，適用于量子運算。 問 # 是一種量副程式設計語言，它可以用來描述如何在量子機器上執行指令。 可設為目標的電腦範圍從模擬器到實際的量子硬體。 問 # 是可擴充的：它可以用來撰寫簡單的示範程式，像是在幾個 qubits 上執行的「傳送」，但也支援撰寫大型、複雜的程式，例如模擬複雜的分子驅使分子，這會需要含有數百萬 qubits 的大型機器。 雖然大型實體機器仍在未來，但問 # 可讓程式設計人員立即設計複雜的量子演算法。 什麼是更多，Q # 支援以可擴充的方式進行各種工作，例如，偵錯工具、分析、資源估計和特定特殊用途的模擬。 
 
