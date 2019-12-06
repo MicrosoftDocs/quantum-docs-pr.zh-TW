@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyseriesofopsca
+name: ApplySeriesOfOpsCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 依序在陣列上套用 ops 及其目標的清單。 （Adjoint + 控制）
+syntax: "operation ApplySeriesOfOpsCA (listOfOps : ('T[] => Unit is Adj + Ctl)[], targets : Int[][], register : 'T[]) : Unit"
+input:
+  content: "(listOfOps : ('T[] => Unit is Adj + Ctl)[], targets : Int[][], register : 'T[])"
+  types:
+  - name: listOfOps
+    summary: >-
+      要套用的 ops 清單，每個都採用不是陣列。 它們會依序套用，並優先套用至最低索引。
+
+      每個都必須同時具有 Adjoint 和受控制的仿函數。
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: targets
+    summary: 描述 op 目標的嵌套陣列。 每個陣列都應該包含描述要使用之索引的整數清單。
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Int
+  - name: register
+    summary: 要處理的 Qubit register。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyoprepeatedlyover
+metadata:
+  ms.openlocfilehash: 797928c16e9b14127d12bf6853181cf1e2c8c4ae
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866371"

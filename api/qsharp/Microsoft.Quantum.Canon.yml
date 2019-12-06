@@ -3,85 +3,37 @@ uid: microsoft.quantum.canon
 name: Microsoft.Quantum.Canon
 functions:
 - uid: microsoft.quantum.canon.asqubitarray
-  summary: >-
-    > [!WARNING]
-
-    > 已取代此函式已被移除。
+  summary: "\n> [!WARNING]\n> 取代\n\nAsQubitArray 已被取代。\n此函式已移除。"
 - uid: microsoft.quantum.canon.assertalmostequal
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Diagnostics.NearEqualityFactD"。
+  summary: "\n> [!WARNING]\n> 取代\n\nAssertAlmostEqual 已被取代。 請改用 @\"microsoft.quantum.diagnostics.nearequalityfactd\"。\n請改用 @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\"。"
 - uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact"。
+  summary: "\n> [!WARNING]\n> 取代\n\nAssertAlmostEqualTol 已被取代。 請改用 @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\"。\n請改用 @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\"。"
 - uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Diagnostics.AllEqualityFactB"。
+  summary: "\n> [!WARNING]\n> 取代\n\nAssertBoolArrayEqual 已被取代。 請改用 @\"microsoft.quantum.diagnostics.allequalityfactb\"。\n請改用 @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\"。"
 - uid: microsoft.quantum.canon.assertboolequal
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Diagnostics.EqualityFactB"。
+  summary: "\n> [!WARNING]\n> 取代\n\nAssertBoolEqual 已被取代。 請改用 @\"microsoft.quantum.diagnostics.equalityfactb\"。\n請改用 @\"Microsoft.Quantum.Diagnostics.EqualityFactB\"。"
 - uid: microsoft.quantum.canon.assertintequal
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Diagnostics.EqualityFactI"。
+  summary: "\n> [!WARNING]\n> 取代\n\nAssertIntEqual 已被取代。 請改用 @\"microsoft.quantum.diagnostics.equalityfacti\"。\n請改用 @\"Microsoft.Quantum.Diagnostics.EqualityFactI\"。"
 - uid: microsoft.quantum.canon.assertresultequal
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Diagnostics.EqualityFactR"。
+  summary: "\n> [!WARNING]\n> 取代\n\nAssertResultEqual 已被取代。 請改用 @\"microsoft.quantum.diagnostics.equalityfactr\"。\n請改用 @\"Microsoft.Quantum.Diagnostics.EqualityFactR\"。"
 - uid: microsoft.quantum.canon.bigendiantolittleendian
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian"。
+  summary: "\n> [!WARNING]\n> 取代\n\nBigEndianToLittleEndian 已被取代。 請改用 @\"microsoft.quantum.arithmetic.bigendianaslittleendian\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"。"
 - uid: microsoft.quantum.canon.bind
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.bound"。
+  summary: "\n> [!WARNING]\n> 取代\n\nBind 已被取代。 請改用 @\"microsoft.quantum.canon.bound\"。\n請使用 @\"microsoft.quantum.canon.bound\"。"
 - uid: microsoft.quantum.canon.binda
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.bounda"。
+  summary: "\n> [!WARNING]\n> 取代\n\nBindA 已被取代。 請改用 @\"microsoft.quantum.canon.bounda\"。\n請使用 @\"microsoft.quantum.canon.bounda\"。"
 - uid: microsoft.quantum.canon.bindc
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.boundc"。
+  summary: "\n> [!WARNING]\n> 取代\n\nBindC 已被取代。 請改用 @\"microsoft.quantum.canon.boundc\"。\n請使用 @\"microsoft.quantum.canon.boundc\"。"
 - uid: microsoft.quantum.canon.bindca
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.boundca"。
+  summary: "\n> [!WARNING]\n> 取代\n\nBindCA 已被取代。 請改用 @\"microsoft.quantum.canon.boundca\"。\n請使用 @\"microsoft.quantum.canon.boundca\"。"
 - uid: microsoft.quantum.canon.bitsize
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.math.bitsizei"。
+  summary: "\n> [!WARNING]\n> 取代\n\nBitSize 已被取代。 請改用 @\"microsoft.quantum.math.bitsizei\"。\n請使用 @\"microsoft.quantum.math.bitsizei\"。"
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.convert.intasboolarray"。
+  summary: "\n> [!WARNING]\n> 取代\n\nBoolArrFromPositiveInt 已被取代。 請改用 @\"microsoft.quantum.convert.intasboolarray\"。\n請使用 @\"microsoft.quantum.convert.intasboolarray\"。"
 - uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.convert.resultarrayasboolarray"。
+  summary: "\n> [!WARNING]\n> 取代\n\nBoolArrFromResultArr 已被取代。 請改用 @\"microsoft.quantum.convert.resultarrayasboolarray\"。\n請使用 @\"microsoft.quantum.convert.resultarrayasboolarray\"。"
 - uid: microsoft.quantum.canon.boolfromresult
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.convert.resultasbool"。
+  summary: "\n> [!WARNING]\n> 取代\n\nBoolFromResult 已被取代。 請改用 @\"microsoft.quantum.convert.resultasbool\"。\n請使用 @\"microsoft.quantum.convert.resultasbool\"。"
 - uid: microsoft.quantum.canon.bound
   summary: 假設有一系列作業在單一輸入上執行，就會產生一個依序執行每個指定運算的新操作。
 - uid: microsoft.quantum.canon.bounda
@@ -131,10 +83,7 @@ functions:
 - uid: microsoft.quantum.canon.conjugatedbyca
   summary: 若有外部和內部作業，則會傳回新的作業，以 conjugates 外部運算的內部運算。
 - uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.math.continuedfractionconvergenti"。
+  summary: "\n> [!WARNING]\n> 取代\n\nContinuedFractionConvergent 已被取代。 請改用 @\"microsoft.quantum.math.continuedfractionconvergenti\"。\n請使用 @\"microsoft.quantum.math.continuedfractionconvergenti\"。"
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: 傳回在目標暫存器上套用 oracle 的單一運算子（如果控制項註冊狀態對應至指定的位元遮罩）。
 - uid: microsoft.quantum.canon.controlledonint
@@ -146,10 +95,7 @@ functions:
 
     也就是說，假設有兩個輸入的作業，則此函式會套用 Curry 的 isomorphism $f （x，y） \equiv f （x）（y） $ 來傳回一個輸入的作業，而這項作業會傳回一個輸入的作業。
 - uid: microsoft.quantum.canon.curryop
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.curriedop"。
+  summary: "\n> [!WARNING]\n> 取代\n\nCurryOp 已被取代。 請改用 @\"microsoft.quantum.canon.curriedop\"。\n請使用 @\"microsoft.quantum.canon.curriedop\"。"
 - uid: microsoft.quantum.canon.decomposeintotimestepsca
   summary: 針對指定的作業，傳回執行 Trotter – Plat'home co. 整合器的作業。
 - uid: microsoft.quantum.canon.delayed
@@ -163,88 +109,43 @@ functions:
 - uid: microsoft.quantum.canon.embedpauli
   summary: 假設有單一 qubit Pauli 運算子和 qubit 的索引，會傳回具有指定之單一 Pauli 運算子的多 qubit Qubit 運算子，該索引會在每個其他索引上 `PauliI`。
 - uid: microsoft.quantum.canon.expmod
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.math.expmodi"。
+  summary: "\n> [!WARNING]\n> 取代\n\nExpMod 已被取代。 請改用 @\"microsoft.quantum.math.expmodi\"。\n請使用 @\"microsoft.quantum.math.expmodi\"。"
 - uid: microsoft.quantum.canon.extendedgcd
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.math.extendedgreatestcommondivisori"。
+  summary: "\n> [!WARNING]\n> 取代\n\nExtendedGCD 已被取代。 請改用 @\"microsoft.quantum.math.extendedgreatestcommondivisori\"。\n請使用 @\"microsoft.quantum.math.extendedgreatestcommondivisori\"。"
 - uid: microsoft.quantum.canon.filter
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Arrays.Filtered"。
+  summary: "\n> [!WARNING]\n> 取代\n\n篩選已被取代。 請改用 @\"microsoft.quantum.arrays.filtered\"。\n請改用 @\"Microsoft.Quantum.Arrays.Filtered\"。"
 - uid: microsoft.quantum.canon.forall
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Arrays.All"。
+  summary: "\n> [!WARNING]\n> 取代\n\nForAll 已被取代。 請改用 @\"microsoft.quantum.arrays.all\"。\n請改用 @\"Microsoft.Quantum.Arrays.All\"。"
 - uid: microsoft.quantum.canon.forany
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Arrays.Any"。
+  summary: "\n> [!WARNING]\n> 取代\n\nForAny 已被取代。 請改用 @\"microsoft.quantum.arrays.any\"。\n請改用 @\"Microsoft.Quantum.Arrays.Any\"。"
 - uid: microsoft.quantum.canon.fst
   summary: 指定一組，會傳回其第一個元素。
 - uid: microsoft.quantum.canon.gcd
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.math.greatestcommondivisori"。
+  summary: "\n> [!WARNING]\n> 取代\n\nGCD 已被取代。 請改用 @\"microsoft.quantum.math.greatestcommondivisori\"。\n請使用 @\"microsoft.quantum.math.greatestcommondivisori\"。"
 - uid: microsoft.quantum.canon.ignore
   summary: 忽略作業或函數的輸出。
 - uid: microsoft.quantum.canon.intabs
-  summary: >-
-    > [!WARNING]
-
-    > 已取代此函式已被移除。
+  summary: "\n> [!WARNING]\n> 取代\n\nIntAbs 已被取代。 請改用 @\"microsoft.quantum.math.absi\"。\n此函式已移除。"
 - uid: microsoft.quantum.canon.intarrayfromrange
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.convert.rangeasintarray"。
+  summary: "\n> [!WARNING]\n> 取代\n\nIntArrayFromRange 已被取代。 請改用 @\"microsoft.quantum.convert.rangeasintarray\"。\n請使用 @\"microsoft.quantum.convert.rangeasintarray\"。"
 - uid: microsoft.quantum.canon.intmax
-  summary: >-
-    > [!WARNING]
-
-    > 已取代此函式已被移除。
+  summary: "\n> [!WARNING]\n> 取代\n\nIntMax 已被取代。 請改用 @\"microsoft.quantum.math.maxi\"。\n此函式已移除。"
 - uid: microsoft.quantum.canon.inversemod
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.math.inversemodi"。
+  summary: "\n> [!WARNING]\n> 取代\n\nInverseMod 已被取代。 請改用 @\"microsoft.quantum.math.inversemodi\"。\n請使用 @\"microsoft.quantum.math.inversemodi\"。"
 - uid: microsoft.quantum.canon.iscoprime
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.math.greatestcommondivisori"。
+  summary: "\n> [!WARNING]\n> 取代\n\nIsCoprime 已被取代。 請改用 @\"microsoft.quantum.math.iscoprimei\"。\n請使用 @\"microsoft.quantum.math.greatestcommondivisori\"。"
 - uid: microsoft.quantum.canon.isresultone
   summary: 測試給定的結果值是否等於 `One`。
 - uid: microsoft.quantum.canon.isresultzero
   summary: 測試給定的結果值是否等於 `Zero`。
 - uid: microsoft.quantum.canon.littleendiantobigendian
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian"。
+  summary: "\n> [!WARNING]\n> 取代\n\nLittleEndianToBigEndian 已被取代。 請改用 @\"microsoft.quantum.arithmetic.littleendianasbigendian\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"。"
 - uid: microsoft.quantum.canon.map
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Arrays.Mapped"。
+  summary: "\n> [!WARNING]\n> 取代\n\n對應已被取代。 請改用 @\"microsoft.quantum.arrays.mapped\"。\n請改用 @\"Microsoft.Quantum.Arrays.Mapped\"。"
 - uid: microsoft.quantum.canon.mapindex
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Arrays.MappedByIndex"。
+  summary: "\n> [!WARNING]\n> 取代\n\nMapIndex 已被取代。 請改用 @\"microsoft.quantum.arrays.mappedbyindex\"。\n請改用 @\"Microsoft.Quantum.Arrays.MappedByIndex\"。"
 - uid: microsoft.quantum.canon.modulus
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.math.modulusi"。
+  summary: "\n> [!WARNING]\n> 取代\n\n模數已被取代。 請改用 @\"microsoft.quantum.math.modulusi\"。\n請使用 @\"microsoft.quantum.math.modulusi\"。"
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
     傳回乘法控制的單一作業 $U $，此作業會套用單一 $V _j $ （由 n-qubit number state $ \ket{j} $ 控制）。
@@ -258,10 +159,7 @@ functions:
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
 - uid: microsoft.quantum.canon.nearequalityfact
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Diagnostics.NearEqualityFactD"。
+  summary: "\n> [!WARNING]\n> 取代\n\nNearEqualityFact 已被取代。 請改用 @\"microsoft.quantum.diagnostics.nearequalityfactd\"。\n請改用 @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\"。"
 - uid: microsoft.quantum.canon.operationpow
   summary: >-
     將作業提升為乘冪。
@@ -293,30 +191,15 @@ functions:
 
     也就是，假設有一個代表閘道 $U $ 的作業，會針對 power $m $ 傳回新作業 $U ^ m $。
 - uid: microsoft.quantum.canon.pad
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Arrays.Padded"。
+  summary: "\n> [!WARNING]\n> 取代\n\nPad 已被取代。 請改用 @\"microsoft.quantum.arrays.padded\"。\n請改用 @\"Microsoft.Quantum.Arrays.Padded\"。"
 - uid: microsoft.quantum.canon.paulifrombitstring
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.convert.boolarrayaspauli"。
+  summary: "\n> [!WARNING]\n> 取代\n\nPauliFromBitString 已被取代。 請改用 @\"microsoft.quantum.convert.boolarrayaspauli\"。\n請使用 @\"microsoft.quantum.convert.boolarrayaspauli\"。"
 - uid: microsoft.quantum.canon.pnormalize
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.math.pnormalized"。
+  summary: "\n> [!WARNING]\n> 取代\n\nPNormalize 已被取代。 請改用 @\"microsoft.quantum.math.pnormalized\"。\n請使用 @\"microsoft.quantum.math.pnormalized\"。"
 - uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.convert.boolarrayasint"。
+  summary: "\n> [!WARNING]\n> 取代\n\nPositiveIntFromBoolArr 已被取代。 請改用 @\"microsoft.quantum.convert.boolarrayasint\"。\n請使用 @\"microsoft.quantum.convert.boolarrayasint\"。"
 - uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.resultarrayasint"。
+  summary: "\n> [!WARNING]\n> 取代\n\nPositiveIntFromResultArr 已被取代。 請改用 @\"microsoft.quantum.convert.resultarrayasint\"。\n請使用 @\"microsoft.quantum.canon.resultarrayasint\"。"
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: 將作業限制為暫存器的索引陣列，亦即 subregister。
 - uid: microsoft.quantum.canon.restrictedtosubregistera
@@ -335,52 +218,25 @@ functions:
 
     修飾詞 `CA` 表示作業可控制和 adjointable。
 - uid: microsoft.quantum.canon.restricttosubregister
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.restrictedtosubregister"。
+  summary: "\n> [!WARNING]\n> 取代\n\nRestrictToSubregister 已被取代。 請改用 @\"microsoft.quantum.canon.restrictedtosubregister\"。\n請使用 @\"microsoft.quantum.canon.restrictedtosubregister\"。"
 - uid: microsoft.quantum.canon.restricttosubregistera
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.restrictedtosubregistera"。
+  summary: "\n> [!WARNING]\n> 取代\n\nRestrictToSubregisterA 已被取代。 請改用 @\"microsoft.quantum.canon.restrictedtosubregistera\"。\n請使用 @\"microsoft.quantum.canon.restrictedtosubregistera\"。"
 - uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.restrictedtosubregisterc"。
+  summary: "\n> [!WARNING]\n> 取代\n\nRestrictToSubregisterC 已被取代。 請改用 @\"microsoft.quantum.canon.restrictedtosubregisterc\"。\n請使用 @\"microsoft.quantum.canon.restrictedtosubregisterc\"。"
 - uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.restrictedtosubregisterca"。
+  summary: "\n> [!WARNING]\n> 取代\n\nRestrictToSubregisterCA 已被取代。 請改用 @\"microsoft.quantum.canon.restrictedtosubregisterca\"。\n請使用 @\"microsoft.quantum.canon.restrictedtosubregisterca\"。"
 - uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.convert.resultarrayasboolarray"。
+  summary: "\n> [!WARNING]\n> 取代\n\nResultArrFromBoolArr 已被取代。 請改用 @\"microsoft.quantum.convert.boolarrayasresultarray\"。\n請使用 @\"microsoft.quantum.convert.resultarrayasboolarray\"。"
 - uid: microsoft.quantum.canon.resultasint
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.convert.resultarrayasint"。
+  summary: "\n> [!WARNING]\n> 取代\n\nResultAsInt 已被取代。 請改用 @\"microsoft.quantum.convert.resultarrayasint\"。\n請使用 @\"microsoft.quantum.convert.resultarrayasint\"。"
 - uid: microsoft.quantum.canon.resultfrombool
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.convert.boolasresult"。
+  summary: "\n> [!WARNING]\n> 取代\n\nResultFromBool 已被取代。 請改用 @\"microsoft.quantum.convert.boolasresult\"。\n請使用 @\"microsoft.quantum.convert.boolasresult\"。"
 - uid: microsoft.quantum.canon.reverse
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Arrays.Reversed"。
+  summary: "\n> [!WARNING]\n> 取代\n\n反向已被取代。 請改用 @\"microsoft.quantum.arrays.reversed\"。\n請改用 @\"Microsoft.Quantum.Arrays.Reversed\"。"
 - uid: microsoft.quantum.canon.snd
   summary: 指定一組，會傳回其第二個元素。
 - uid: microsoft.quantum.canon.splitarray
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請改用 @"Microsoft.Quantum.Arrays.Partitioned"。
+  summary: "\n> [!WARNING]\n> 取代\n\nSplitArray 已被取代。 請改用 @\"microsoft.quantum.arrays.partitioned\"。\n請改用 @\"Microsoft.Quantum.Arrays.Partitioned\"。"
 - uid: microsoft.quantum.canon.stackcapacity
   summary: 抓取 <xref:microsoft.quantum.canon.resultstack>的容量。
 - uid: microsoft.quantum.canon.stacklength
@@ -394,10 +250,7 @@ functions:
 - uid: microsoft.quantum.canon.stackpush
   summary: 將新的專案推送至 <xref:microsoft.quantum.canon.resultstack>。
 - uid: microsoft.quantum.canon.tooperation
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.convert.functionasoperation"。
+  summary: "\n> [!WARNING]\n> 取代\n\nToOperation 已被取代。 請改用 @\"microsoft.quantum.convert.functionasoperation\"。\n請使用 @\"microsoft.quantum.convert.functionasoperation\"。"
 - uid: microsoft.quantum.canon.transformedoperation
   summary: 在指定函式和作業的情況下，會傳回新的作業，而該作業的輸入會由指定的函數轉換。
 - uid: microsoft.quantum.canon.transformedoperationa
@@ -424,35 +277,20 @@ functions:
 
     修飾詞 `CA` 表示作業可控制和 adjointable。
 - uid: microsoft.quantum.canon.uncurryop
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.uncurriedop"。
+  summary: "\n> [!WARNING]\n> 取代\n\nUncurryOp 已被取代。 請改用 @\"microsoft.quantum.canon.uncurriedop\"。\n請使用 @\"microsoft.quantum.canon.uncurriedop\"。"
 - uid: microsoft.quantum.canon.uncurryopa
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.uncurriedopa"。
+  summary: "\n> [!WARNING]\n> 取代\n\nUncurryOpA 已被取代。 請改用 @\"microsoft.quantum.canon.uncurriedopa\"。\n請使用 @\"microsoft.quantum.canon.uncurriedopa\"。"
 - uid: microsoft.quantum.canon.uncurryopc
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.uncurriedopc"。
+  summary: "\n> [!WARNING]\n> 取代\n\nUncurryOpC 已被取代。 請改用 @\"microsoft.quantum.canon.uncurriedopc\"。\n請使用 @\"microsoft.quantum.canon.uncurriedopc\"。"
 - uid: microsoft.quantum.canon.uncurryopca
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.canon.uncurriedopca"。
+  summary: "\n> [!WARNING]\n> 取代\n\nUncurryOpCA 已被取代。 請改用 @\"microsoft.quantum.canon.uncurriedopca\"。\n請使用 @\"microsoft.quantum.canon.uncurriedopca\"。"
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: 傳回指定 qubits 數目的擁有權數 1 Pauli 運算子陣列。
 - uid: microsoft.quantum.canon.xor
   summary: 這會計算兩個位的互斥或。
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"microsoft.quantum.simuilation.pnormalized"。
+  summary: "\n> [!WARNING]\n> 取代\n\nAdiabaticStateEnergyUnitary 已被取代。 請改用 @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\"。\n請使用 @\"microsoft.quantum.simuilation.pnormalized\"。"
 - uid: microsoft.quantum.canon.andladder
   summary: >-
     在目標 qubits 上執行受控制的「和階梯」。
@@ -520,6 +358,14 @@ operations:
     套用單個受控制作業的乘以控制版本。
 
     修飾詞 `CA` 表示單一 qubit 作業可控制和 adjointable。
+- uid: microsoft.quantum.canon.applyoprepeatedlyover
+  summary: 在 qubit 暫存器上套用相同的 op 多次。
+- uid: microsoft.quantum.canon.applyoprepeatedlyovera
+  summary: 在 qubit 暫存器上套用相同的 op 多次。
+- uid: microsoft.quantum.canon.applyoprepeatedlyoverc
+  summary: 在 qubit 暫存器上套用相同的 op 多次。
+- uid: microsoft.quantum.canon.applyoprepeatedlyoverca
+  summary: 在 qubit 暫存器上套用相同的 op 多次。
 - uid: microsoft.quantum.canon.applypauli
   summary: 假設有多 qubit 的 Pauli 運算子，則會將對應的作業套用至暫存器。
 - uid: microsoft.quantum.canon.applypaulifrombitstring
@@ -527,62 +373,37 @@ operations:
 - uid: microsoft.quantum.canon.applyquantumfouriertransform
   summary: 在配量的量子暫存器上執行配量傅立葉轉換，其中包含以小序表示的整數。
 - uid: microsoft.quantum.canon.applyquantumfouriertransformbe
-  summary: >-
-    > [!WARNING]
-
-    > 已取代此作業已被移除。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyQuantumFourierTransformBE 已被取代。 請改用 @ \"applyquantumfouriertransform （bigendianaslittleendian （qs））\"。\n已移除此操作。"
 - uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: ''
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyQuantumFourierTransformLE 已被取代。 請改用 @\"microsoft.quantum.canon.applyquantumfouriertransform\"。\n請使用 @\"microsoft.quantum.canon.applyquantumfouriertransform\"。"
 - uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE"。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyReversedOpBigEndian 已被取代。 請改用 @\"microsoft.quantum.arithmetic.applyreversedopbe\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"。"
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA"。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyReversedOpBigEndianA 已被取代。 請改用 @\"microsoft.quantum.arithmetic.applyreversedopbea\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"。"
 - uid: microsoft.quantum.canon.applyreversedopbigendianc
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC"。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyReversedOpBigEndianC 已被取代。 請改用 @\"microsoft.quantum.arithmetic.applyreversedopbec\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"。"
 - uid: microsoft.quantum.canon.applyreversedopbigendianca
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC"。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyReversedOpBigEndianCA 已被取代。 請改用 @\"microsoft.quantum.arithmetic.applyreversedopbeca\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"。"
 - uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE"。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyReversedOpLittleEndian 已被取代。 請改用 @\"microsoft.quantum.arithmetic.applyreversedople\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"。"
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA"。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyReversedOpLittleEndianA 已被取代。 請改用 @\"microsoft.quantum.arithmetic.applyreversedoplea\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"。"
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC"。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyReversedOpLittleEndianC 已被取代。 請改用 @\"microsoft.quantum.arithmetic.applyreversedoplec\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"。"
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC"。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyReversedOpLittleEndianCA 已被取代。 請改用 @\"microsoft.quantum.arithmetic.applyreversedopleca\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"。"
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
-  summary: >-
-    > [!WARNING]
-
-    > 已取代此作業已被移除。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyRippleCarryComparatorBE 已被取代。 請改用 @ \"compareusingripplecarry （bigendianaslittleendian （x），bigendianaslittleendian （y），output）\"。\n已移除此操作。"
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry"。
+  summary: "\n> [!WARNING]\n> 取代\n\nApplyRippleCarryComparatorLE 已被取代。 請改用 @\"microsoft.quantum.arithmetic.compareusingripplecarry\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"。"
+- uid: microsoft.quantum.canon.applyseriesofops
+  summary: 依序在陣列上套用 ops 及其目標的清單。
+- uid: microsoft.quantum.canon.applyseriesofopsa
+  summary: 依序在陣列上套用 ops 及其目標的清單。 (Adjoint)
+- uid: microsoft.quantum.canon.applyseriesofopsc
+  summary: 依序在陣列上套用 ops 及其目標的清單。 管理
+- uid: microsoft.quantum.canon.applyseriesofopsca
+  summary: 依序在陣列上套用 ops 及其目標的清單。 （Adjoint + 控制）
 - uid: microsoft.quantum.canon.applytoeach
   summary: 將單一 qubit 作業套用至暫存器中的每個元素。
 - uid: microsoft.quantum.canon.applytoeacha
@@ -721,15 +542,9 @@ operations:
 - uid: microsoft.quantum.canon.approximateqft
   summary: 將大約的配量傅立葉轉換（AQFT）套用至量子暫存器。
 - uid: microsoft.quantum.canon.asserthighestbit
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit"。
+  summary: "\n> [!WARNING]\n> 取代\n\nAssertHighestBit 已被取代。 請改用 @\"microsoft.quantum.arithmetic.assertmostsignificantbit\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"。"
 - uid: microsoft.quantum.canon.assertlessthanphasele
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan"。
+  summary: "\n> [!WARNING]\n> 取代\n\nAssertLessThanPhaseLE 已被取代。 請改用 @\"microsoft.quantum.arithmetic.assertphaselessthan\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"。"
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
     判斷等重迭狀態的階段具有預期的值。
@@ -737,10 +552,7 @@ operations:
 
     具體而言，會判斷提示的階段 $ \phi $ 屬於可能以 $ \frac{e ^ {i t}} {\sqrt{2}} （e ^ {i\phi} \ ket{0} + e ^ {-i\phi} \ ket{1}） $ 表示的量子狀態，其值應為。
 - uid: microsoft.quantum.canon.assertprobintbe
-  summary: >-
-    > [!WARNING]
-
-    > 已取代此作業已被移除。
+  summary: "\n> [!WARNING]\n> 取代\n\nAssertProbIntBE 已被取代。 請改用 @ \"assertprobint （stateindex，prob，bigendianaslittleendian （qubits），容忍）\"。\n已移除此操作。"
 - uid: microsoft.quantum.canon.cnotchain
   summary: >-
     計算就地 qubits 陣列的同位檢查。
@@ -754,10 +566,7 @@ operations:
 
     如果陣列一開始處於 state $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{target}}} $，則最後的狀態是由 $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{target}}} $。
 - uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit"。
+  summary: "\n> [!WARNING]\n> 取代\n\nCopyMostSignificantBitLE 已被取代。 請改用 @\"microsoft.quantum.arithmetic.copymostsignificantbit\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"。"
 - uid: microsoft.quantum.canon.cx
   summary: >-
     將受控制的 X （CX）閘道套用至一對 qubits。
@@ -796,59 +605,29 @@ operations:
 
     \end{align}
 - uid: microsoft.quantum.canon.inplacexorbe
-  summary: >-
-    > [!WARNING]
-
-    > 已取代此作業已被移除。
+  summary: "\n> [!WARNING]\n> 取代\n\nInPlaceXorBE 已被取代。 請改用 @ \"applyreversedopleca （applyxorinplace （值，_），target）\"。\n已移除此操作。"
 - uid: microsoft.quantum.canon.inplacexorle
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Measurement.ApplyXorInPlace"。
+  summary: "\n> [!WARNING]\n> 取代\n\nInPlaceXorLE 已被取代。 請改用 @\"microsoft.quantum.measurement.applyxorinplace\"。\n請使用 @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"。"
 - uid: microsoft.quantum.canon.integerincrementle
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.IncrementByInteger"。
+  summary: "\n> [!WARNING]\n> 取代\n\nIntegerIncrementLE 已被取代。 請改用 @\"microsoft.quantum.arithmetic.incrementbyinteger\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"。"
 - uid: microsoft.quantum.canon.integerincrementphasele
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger"。
+  summary: "\n> [!WARNING]\n> 取代\n\nIntegerIncrementPhaseLE 已被取代。 請改用 @\"microsoft.quantum.arithmetic.incrementphasebyinteger\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"。"
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
   summary: 透過笛卡兒乘積 [0，系結-1] × [0，系結-1] × [0，系結-1] 來逐一查看變數，並針對笛卡兒乘積的每個元素呼叫 op （arr）
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
   summary: 藉由笛卡兒乘積 [0，界限 [0]-1] × [0，界限 [1]-1] × [0，界限 [長度（界限）-1]-1] 來逐一查看變數 `arr`，並針對笛卡兒乘積的每個元素呼叫 op （arr）
 - uid: microsoft.quantum.canon.measureintegerbe
-  summary: >-
-    > [!WARNING]
-
-    > 已取代此作業已被移除。
+  summary: "\n> [!WARNING]\n> 取代\n\nMeasureIntegerBE 已被取代。 請改用 @ \"measureinteger （bigendianaslittleendian （目標））\"。\n已移除此操作。"
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger"。
+  summary: "\n> [!WARNING]\n> 取代\n\nModularAddProductLE 已被取代。 請改用 @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"。"
 - uid: microsoft.quantum.canon.modularaddproductphasele
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger"。
+  summary: "\n> [!WARNING]\n> 取代\n\nModularAddProductPhaseLE 已被取代。 請改用 @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"。"
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger"。
+  summary: "\n> [!WARNING]\n> 取代\n\nModularIncrementLE 已被取代。 請改用 @\"microsoft.quantum.arithmetic.modularincrementbyinteger\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"。"
 - uid: microsoft.quantum.canon.modularincrementphasele
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger"。
+  summary: "\n> [!WARNING]\n> 取代\n\nModularIncrementPhaseLE 已被取代。 請改用 @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"。"
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger"。
+  summary: "\n> [!WARNING]\n> 取代\n\nModularMultiplyByConstantLE 已被取代。 請改用 @\"microsoft.quantum.arithmetic.multiplybymodularinteger\"。\n請使用 @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"。"
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
     套用由數位狀態陣列控制的作業陣列。
@@ -890,6 +669,8 @@ operations:
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z x theta_j} $。
 - uid: microsoft.quantum.canon.noop
   summary: 在引數上執行身分識別作業（無 op）。
+- uid: microsoft.quantum.canon.permutequbits
+  summary: 使用交換作業來 Permutes qubits。
 - uid: microsoft.quantum.canon.qft
   summary: 在配量暫存器上執行配量傅立葉轉換，其中包含以大序表示的整數。
 - uid: microsoft.quantum.canon.qftle
@@ -909,25 +690,13 @@ operations:
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: 使用交換閘道反轉 qubits 在暫存器中的順序。
 - uid: microsoft.quantum.canon.with
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Canon.ApplyWith"。
+  summary: "\n> [!WARNING]\n> 取代\n\nWith 已被取代。 請改用 @\"microsoft.quantum.canon.applywith\"。\n請使用 @\"Microsoft.Quantum.Canon.ApplyWith\"。"
 - uid: microsoft.quantum.canon.witha
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Canon.ApplyWithA"。
+  summary: "\n> [!WARNING]\n> 取代\n\nWithA 已被取代。 請改用 @\"microsoft.quantum.canon.applywitha\"。\n請使用 @\"Microsoft.Quantum.Canon.ApplyWithA\"。"
 - uid: microsoft.quantum.canon.withc
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Canon.ApplyWithC"。
+  summary: "\n> [!WARNING]\n> 取代\n\nWithC 已被取代。 請改用 @\"microsoft.quantum.canon.applywithc\"。\n請使用 @\"Microsoft.Quantum.Canon.ApplyWithC\"。"
 - uid: microsoft.quantum.canon.withca
-  summary: >-
-    > [!WARNING]
-
-    > 已淘汰，請使用 @"Microsoft.Quantum.Canon.ApplyWithCA"。
+  summary: "\n> [!WARNING]\n> 取代\n\nWithCA 已被取代。 請改用 @\"microsoft.quantum.canon.applywithca\"。\n請使用 @\"Microsoft.Quantum.Canon.ApplyWithCA\"。"
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: CCNOT 閘道的簽章類型。
@@ -937,9 +706,9 @@ newtypes:
 
     堆疊包含整數容量、堆疊指標和 `Result` 陣列。
 metadata:
-  ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 457d211ace716ddc09ebcd94c5cbc3c33b42d704
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065158"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858542"

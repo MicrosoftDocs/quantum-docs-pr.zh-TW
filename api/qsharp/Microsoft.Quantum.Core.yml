@@ -3,6 +3,8 @@ uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含 Q # 核心函數和作業。\n\n # <a name=\"remarks\"></a>備註\n 這個命名空間會由 Q # 編譯器自動開啟，因此，此命名空間的所有元素一律可供使用。"
 functions:
+- uid: microsoft.quantum.core.default
+  summary: 傳回指定類型的預設實例。
 - uid: microsoft.quantum.core.length
   summary: 傳回陣列中的元素數目。
 - uid: microsoft.quantum.core.rangeend
@@ -13,10 +15,17 @@ functions:
   summary: 傳回指定範圍的已定義起始值。
 - uid: microsoft.quantum.core.rangestep
   summary: 傳回整數，指定如何計算範圍的下一個值。
+newtypes:
+- uid: microsoft.quantum.core.attribute
+  summary: 編譯器可辨識的屬性，用來將使用者定義類型標記為屬性。
+- uid: microsoft.quantum.core.deprecated
+  summary: 編譯器可辨識的屬性，用來將類型標記為已被取代。
+- uid: microsoft.quantum.core.entrypoint
+  summary: 編譯器可識別的屬性，用來標示可執行檔的進入點。
 metadata:
-  ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6391521907deddbf4425b927b1dec12e73f0ee5d
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056898"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858576"
