@@ -5,18 +5,17 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4677b0f9c4f64a9c1bc46d34e8a883dc006ba8f0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183296"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863141"
 ---
-# <a name="going-further"></a>進一步瞭解 #
+# <a name="going-further"></a>更進一步 #
 
 既然您已瞭解如何在 Q # 中撰寫有趣的配量程式，本節將進一步介紹一些更先進的主題，以供未來使用。
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## <a name="generic-operations-and-functions"></a>一般作業和函數 ##
 
@@ -119,7 +118,7 @@ function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
 
 在這裡，我們必須確切指定 `A`、`B`和 `C` 的內容，因此會嚴重限制新的 `Compose` 函數的公用程式。
 畢竟，`Compose` 只取決於 `A`、`B`，以及透過 `innerFn`*和 `outerFn`的 `C`。*
-或者，我們可以將型別參數新增至 `Compose`，表示它適用于*任何*`A`、`B`和 `C`，只要這些參數符合 `innerFn` 和 `outerFn`所預期的參數即可。:
+或者，我們可以將型別參數新增至 `Compose`，表示它適用于*任何*`A`、`B`和 `C`，只要這些參數符合 `innerFn` 和 `outerFn`所預期的參數即可：
 
 ```qsharp
 function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
@@ -178,6 +177,6 @@ is Adj + Ctl {
 }
 ```
 
-請注意，`With` 結合---的廣泛使用，其格式適用于支援 adjoint 的作業，也就是在此範例中進行 `WithA`---，這是很好的程式設計風格，因為只會將控制項新增至涉及 `With` 的結構將控制項傳播至內部作業。 此外，請注意，除了作業的 `body` 之外，也會明確提供作業的 `controlled` 主體的執行，而不是使用 `controlled auto` 的語句。 這是因為我們從線路的結構得知如何輕鬆加入進一步的控制項，相較于將控制項新增至 `body`中的每個個別閘道。 
+請注意，`With` 結合---的廣泛使用，其格式適用于支援 adjoint 的作業，也就是在此範例中進行 `WithA`---，這是很好的程式設計風格，因為將控制項加入至包含 `With` 的結構只會將控制項傳播至內部作業。 此外，請注意，除了作業的 `body` 之外，也會明確提供作業的 `controlled` 主體的執行，而不是使用 `controlled auto` 的語句。 這是因為我們從線路的結構得知如何輕鬆加入進一步的控制項，相較于將控制項新增至 `body`中的每個個別閘道。 
 
 將此程式碼與另一個 canon 函式進行比較有其意義 `MultiControlledXClean` 這種方式可達到相同的目標來執行乘法控制的 `X` 作業，不過，它會使用 `using` 機制的幾個乾淨 qubits。 
