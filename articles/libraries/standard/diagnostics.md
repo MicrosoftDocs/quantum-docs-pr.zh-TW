@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: b59f91b660281167eab182529b415b6d379e3d63
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d5889b8d5a92801b0ada65f7a17c655c959fc57f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184486"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864333"
 ---
 # <a name="diagnostics"></a>診斷程式 #
 
@@ -42,7 +42,7 @@ Message($"About to rotate by an angle of {angle}...");
 
 ## <a name="facts-and-assertions"></a>事實和判斷提示 ##
 
-如[測試和](xref:microsoft.quantum.techniques.testing-and-debugging)偵測中所述，簽章 `Unit -> Unit` 或 `Unit => Unit`的函式或作業，分別可以呼叫為*單元測試*。
+如[測試和](xref:microsoft.quantum.techniques.testing-and-debugging)偵測中所述，簽章 `Unit -> Unit` 或 `Unit => Unit`的函式或作業會分別標記為*單元測試*。
 每個單元測試通常包含一個小型的配量程式，以及一個或多個檢查該程式正確性的條件。
 這些條件可以是_事實_的形式，它會檢查輸入的值，或_判斷_提示，檢查傳遞做為輸入的一個或多個 qubits 的狀態。
 
@@ -109,7 +109,7 @@ using (register = Qubit()) {
 因此，我們需要指定三個彼此獨立的判斷提示，以便判斷提示所預期的狀態。
 我們會藉由 `Zero` 找出每個 Pauli 測量的機率，以指定 $ \Alpha $ 和 $ \Beta $，並個別進行判斷提示。
 讓 $x $、$y $ 和 $z $ 分別是 Pauli $X $、$Y $ 和 $Z $ 度量的 `Result` 值。
-然後，使用量子量測的可能性函式，\begin{align} \Pr （x = \texttt{Zero} | \Alpha，\Beta） & = \frac12 + a\_r b\_r + a\_i b\_i \\\\ \Pr （y = \texttt{Zero} | \Alpha，\Beta） & = \frac12 + a\_r b\_i\_i b\_r \\\\ \Pr （z = \texttt{Zero} | \Alpha，\Beta） & = \frac12\left （1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right）。
+然後，使用量子測量的可能性函數 \begin{align} \Pr （x = \texttt{Zero} | \Alpha，\Beta） & = \frac12 + a\_r b\_r + a\_i b\_我 \\\\ \Pr （y = \texttt{Zero} | \Alpha，\Beta） & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \Pr （z = \texttt{Zero} | \Alpha，\Beta） & = \frac12\left （1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right）。
 \end{align}
 
 <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> 作業會以 <xref:microsoft.quantum.math.complex>類型的值，將指定的 $ \Alpha $ 和 $ \Beta $ 標記法實作為這些判斷提示。

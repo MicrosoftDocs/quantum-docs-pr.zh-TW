@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d77085aa8aa83c18858056bab1858d990efdb36e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185557"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864367"
 ---
 # <a name="quantum-characterization-and-statistics"></a>量子特性和統計資料 #
 
@@ -30,7 +30,7 @@ ms.locfileid: "73185557"
 ## <a name="iterative-phase-estimation"></a>反復階段估計 ##
 
 根據量子特性來查看配量程式設計，會建議對量子階段估計有用的替代方法。
-也就是說，我們可以將階段估計視為*傳統*代理程式透過其學習量子系統屬性的過程，而不是準備 $n $ qubit 暫存器包含階段的二進位標記法。測評.
+也就是說，我們可以將階段估計視為*傳統*代理程式透過測量來學習量子系統屬性的過程，而不是準備 $n $ qubit 暫存器包含階段的二進位標記法。
 我們會在量子案例中繼續進行，方法是使用階段 kickback，將黑色方塊作業的應用程式轉換成未知的角度旋轉，但會測量在旋轉後緊接在每個步驟中旋轉的 ancilla qubit。
 這有個優點，我們只需要一個額外的 qubit 來執行量子案例中所述的階段 kickback，因為我們接著會以反復的方式從每個步驟的測量結果中學習階段。  
 下面所提議的每一種方法，都使用不同的策略來設計實驗和不同的資料處理方法，以瞭解階段。  它們各有獨特的優勢，範圍從具有嚴格的錯誤界限，到納入先前資訊的能力、容許錯誤或在記憶體 limitted 的傳統電腦上執行。
@@ -39,7 +39,7 @@ ms.locfileid: "73185557"
 如[資料結構](xref:microsoft.quantum.libraries.data-structures)中的 oracles 一節所述，Q # canon 會依 <xref:microsoft.quantum.oracles.discreteoracle> 使用者定義型別（由元組類型所定義） `((Int, Qubit[]) => Unit : Adjoint, Controlled)`來進行作業。
 具體而言，如果 `U : DiscreteOracle`，則 `U(m)` 會為 `m : Int`實 $U ^ m $。
 
-當此定義就緒時，反復階段估計的每個步驟 $U 都會繼續進行 $ \ket{+} $ 狀態的輔助 qubit，以及[我們假設的](xref:microsoft.quantum.concepts.matrix-advanced)初始狀態 $ \ket{\phi} $，亦即 $U （m） \ket{\phi} = e ^ {im\phi}\ket{\phi} $。  
+有了這個定義之後，反復階段估計的每個步驟 $U 就會繼續進行 $ \ket{+} $ 狀態的輔助 qubit，以及[我們假設的](xref:microsoft.quantum.concepts.matrix-advanced)初始狀態 $ \ket{\phi} $，亦即 $U （m） \ket{\phi} = e ^ {im\phi} \ ket {\ phi} $。  
 接著會使用 `U(m)` 的受控應用程式來準備 state $ \left （R\_1 （m \phi） \ket{+} \right） \ket{\phi} $。
 如同在量子案例中，oracle `U(m)` 的受控制應用程式的效果，與在 $ \ket{+} $ 的未知階段套用 $R _1 $ 的效果完全相同，因此我們可以更簡單的方式來描述 $U $ 的效果。
 或者，此演算法會藉由套用 $R _1 （-m\theta） $ 來取得 state $ \ket{\psi} = \left （R\_1 （m [\phi-\theta]） \ket{+} \right） \ket{\phi} $ $，以旋轉控制項 qubit。
@@ -47,17 +47,17 @@ ms.locfileid: "73185557"
 
 此時，會從透過反復階段估計取得的 `Result` 值來重建階段，這是一種傳統的統計推斷問題。
 找出最大化所取得之資訊的 $m $ 值，只是統計資料中的問題。
-我們藉由在貝氏參數估計形式的理論層級簡述反復階段估計，再繼續描述用於解決此傳統推斷的 Q # canon 中所提供的統計演算法，來強調這一點問題.
+我們藉由在貝氏參數估計形式中簡要說明理論層級的反復階段估計，然後再繼續描述 Q # canon 中提供的統計演算法來解決此傳統推斷問題，以強調這一點。
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>不 Eigenstates 的反復階段估計 ###
 
 如果提供的輸入狀態不是 eigenstate，也就是假設如果 $U （m） \ket{\phi\_j} = e ^ {im\phi\_j} $，則階段估計的程式會以非決定性的方式引導到單一能源 eigenstate 的量子狀態。  最後聚合到的 eigenstate 是最有可能產生觀察 `Result`的 eigenstate。
 
-具體而言，PE 的單一步驟會在狀態 \begin{align} \ sum_j \sqrt{\Pr （\phi\_j）} \ket{\phi\_j} \mapsto \sum\_j\frac {\ sqrt {\ Pr （\phi\_j）} \sqrt{\Pr （\text{Result} | \）上執行下列非單一的轉換phi\_j）} \ket{\phi\_j}} {\sqrt{\Pr （\phi\_j） \sum\_j \Pr （\text{Result} | \phi\_j）}}。
+具體而言，PE 的單一步驟會在 state \begin{align} \ sum_j \sqrt{\Pr （\phi\_j）} \ket{\phi\_j} \mapsto \sum\_j\frac {\ sqrt {\ Pr 上執行下列非單一的轉換（\phi\_j）} \sqrt{\Pr （\text{Result} | \phi\_j）} \ket{\phi\_j}} {\sqrt{\Pr （\phi\_j） \sum\_j \Pr （\text{Result} | \phi\_j）}}。
 \end{align} 因為此程式會反復執行多個 `Result` 值，所以沒有 $ \ prod_k \Pr （\text{Result}\_k | \phi\_j） $ 的最大值的 eigenstates 將會以指數方式隱藏。
 因此，如果已正確選擇實驗，則推斷程式通常會聚合成具有單一 eigenvalue 的狀態。
 
-貝氏機率分類 ' 定理會進一步建議以 \begin{align} \frac{\sqrt{\Pr （\phi\_j）} \sqrt{\Pr （\text{Result} | \phi\_j）} \ket{\phi\_j}} {\sqrt{\Pr （\phi\_j） \sum 格式撰寫階段估計所產生的狀態。\_j \Pr （\text{Result} | \phi\_j）}} = \ sum_j \sqrt{\Pr （\phi\_j | \text{Result}）} \ket{\phi\_j}。
+貝氏機率分類 ' 定理會進一步建議，從階段估計產生的狀態是以 \begin{align} \frac{\sqrt{\Pr （\phi\_j）} \sqrt{\Pr （\text{Result} | \phi\_j）} \ket{\phi\_j}} {\sqrt{\Pr （\phi\_j） \sum\_j \Pr （\text{Result} | \phi\_j）}} = \ sum_j \sqrt{\Pr （\phi\_j | \text{Result}）} \ket{\phi\_j} 的形式寫入。
 \end{align} 這裡 $ \Pr （\phi\_j | \text{Result}） $ 可以解釋為每個假設有 ascribe 的機率：
 
 1. 測量之前的量子狀態知識，
@@ -71,7 +71,7 @@ ms.locfileid: "73185557"
 ### <a name="bayesian-phase-estimation"></a>貝氏階段估計 ###
 
 > [!TIP]
-> 如需在實務中貝氏階段估計的詳細資訊，請參閱[**PhaseEstimation**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation)範例。
+> 如需在實務中貝氏階段估計的詳細資訊，請參閱[**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)範例。
 
 貝氏階段估計的概念很簡單。
 您可以從階段估計通訊協定收集測量統計資料，然後使用貝氏推斷來處理結果，並提供參數的預估。
@@ -87,10 +87,10 @@ ms.locfileid: "73185557"
 遵循傳統的傳統術語，我們呼叫 $ \eqref{eq：階段-est-機率} $ 反復階段估計的*可能性函數*。
 
 在觀察到反復階段估計可能性函式中的 `Result` 之後，我們就可以使用貝氏機率分類的規則，規定我們應該認為該階段遵循該觀察。
-具體而言、\begin{equation} \Pr （\phi | d） = \frac{\Pr （d | \phi） \Pr （\phi）} {\int \Pr （d | \phi） \Pr （\phi） {\mathrm d} \phi} \Pr （\phi）、\end{equation}，其中 $d \in \\{\texttt{Zero}，\texttt{One}\\} $ 是 `Result`，其中 $ \Pr （\phi） $描述關於 $ \phi $ 的先前信念。
+具體而言、\begin{equation} \Pr （\phi | d） = \frac{\Pr （d | \phi） \Pr （\phi）} {\int \Pr （d | \phi） \Pr （\phi） {\mathrm d} \phi} \Pr （\phi）、\end{equation}，其中 $d \in \\{\texttt{Zero}，\texttt{One}\\} $ 是 `Result`，其中 $ \Pr （\phi） $ 描述我們先前信念的 $ \phi $。
 這會使反復階段估計的反復性質明確，因為「事後 posterior 散發 $ \Pr （\phi | d） $ 會立即描述我們在下一個 `Result`的觀察之前的信念。
 
-在此程式中的任何時間點，我們可以將傳統控制器所推斷的階段 $ \hat{\phi} $ 報告為 \begin{equation} \hat{\phi} \mathrel{： =} \expect [\phi | \text{data}] = \int \phi \Pr （\phi | \text{data}） {\mathrm d} \phi，\end{equation}，其中 $ \文字 {data} $ 代表所有取得的 `Result` 值的完整記錄。
+在此程式中的任何時間點，我們可以將傳統控制器所推斷的階段 $ \hat{\phi} $ 報告為 \begin{equation} \hat{\phi} \mathrel{： =} \expect [\phi | \text{data}] = \int \phi \Pr （\phi | \text{data}） {\mathrm d} \phi，\end{equation}，其中 $ \text{data} $ 代表所有取得之 `Result` 值的完整記錄。
 
 實際的貝氏推斷實際上是棘手。
 為了查看這種假設，我們想要瞭解 $ $x $ $n $ 位變數。
@@ -104,12 +104,12 @@ ms.locfileid: "73185557"
 
 具有有效率的傳統後置處理步驟的其中一個範例是[健全的階段估計演算法](https://arxiv.org/abs/1502.02677)，其簽章和輸入都是上面所述。 它假設輸入單一的黑色方塊 $U $ 已封裝為 `DiscreteOracle` 類型，因此只會查詢受控制 $U $ 的整數乘冪。 如果 `Qubit[]` 暫存器中的輸入狀態是 eigenstate $U \ket{\psi} = e ^ {i\phi} \ ket {\ psi} $，則健全的階段估計演算法會以 `Double`的形式傳回 $ \hat{\phi}\in $ 的預估 $ \pi [-\pi，\phi） $。
 
-健全的階段估計最重要的功能是與其他大部分有用的變體共用，是 $ \hat{\phi} $ 的重建品質在某種程度上是海森堡有限的。 這表示如果 $ \hat{\phi} $ 與 true 值的偏差是 $ \sigma $，則 $ \sigma $ 會以反比星號調整至 $U $ 所控制的查詢總數 $Q $，亦即 $ \sigma = \mathcal{O} （1/Q） $。 現在，偏差的定義會因不同的估計演算法而有所不同。 在某些情況下，它可能表示至少有 $ \mathcal{O} （1） $ 機率，估計錯誤 $ | \hat{\phi}-\phi |\_\circ\le \sigma $ on a 迴圈量值 $ \circ $。 針對健全的階段估計，如果我們將定期階段解除包裝成單一的有限間隔 $ （-\hat{\phi}-\phi，\pi] $，則偏差就會精確地指向 $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [（\mod\_{2 \ pi} （\pi + \pi）-\pi） ^ 2] $。 更精確地說，穩健階段估計中的標準差符合到差異 $ $ \begin{align} 2.0 \pi/Q \le \sigma \le 2 \ pi/2 ^ {n} \le 10.7 \ pi/Q，\end{align} $ $，其中下限達到 asymptotically 大型 $Q $ 和上限的限制即使是較小的樣本大小，仍可保證系結。  請注意，由 `bitsPrecision` 輸入所選取的 $n $ 會隱含定義 $Q $。
+健全的階段估計最重要的功能是與其他大部分有用的變體共用，是 $ \hat{\phi} $ 的重建品質在某種程度上是海森堡有限的。 這表示如果 $ \hat{\phi} $ 與 true 值的偏差是 $ \sigma $，則 $ \sigma $ 會以反比星號調整至 $U $ 所控制的查詢總數 $Q $，亦即 $ \sigma = \mathcal{O} （1/Q） $。 現在，偏差的定義會因不同的估計演算法而有所不同。 在某些情況下，它可能表示至少有 $ \mathcal{O} （1） $ 機率，估計錯誤 $ | \hat{\phi}-\phi |\_\circ\le \sigma $ on a 迴圈量值 $ \circ $。 針對健全的階段估計，如果我們將定期階段解除包裝成單一的有限間隔 $ （-\hat{\phi}-\phi，\pi] $，則偏差就會精確地指向 $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [（\mod\_{2 \ pi} （\pi + \pi）-\pi） ^ 2] $。 更精確地說，健全狀況估計中的標準差符合到差異 $ $ \begin{align} 2.0 \pi/Q \le \sigma \le 2 \ pi/2 ^ {n} \le 10.7 \ pi/Q，\end{align} $ $，其中下限達到 asymptotically 大型 $Q $ 的限制，而上限則是針對小型樣本大小所保證。  請注意，由 `bitsPrecision` 輸入所選取的 $n $ 會隱含定義 $Q $。
 
 其他相關的詳細資料包括只有 $1 $ ancilla qubit 的小空間額外負荷，或程式是非彈性的，這表示所需的量子實驗順序與中繼測量結果無關。 在此和即將推出的範例中，階段估計演算法的選擇很重要，其中一個應該參考檔，例如 @"microsoft.quantum.canon.robustphaseestimation" 和參考的發行集，以取得詳細資訊和其執行方式。
 
 > [!TIP]
-> 有許多範例會使用健全的階段估計。 如需瞭解各種實體系統之接地能源的階段估計，請參閱[ **H2 模擬**範例](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine)、 [ **SimpleIsing**範例](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing)和[ **Hubbard 模型**範例](https://github.com/Microsoft/Quantum/tree/master/Samples/src/HubbardSimulation)。
+> 有許多範例會使用健全的階段估計。 如需瞭解各種實體系統之接地能源的階段估計，請參閱[ **H2 模擬**範例](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)、 [ **SimpleIsing**範例](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)和[ **Hubbard 模型**範例](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)。
 
 
 ### <a name="continuous-oracles"></a>連續 Oracles ###

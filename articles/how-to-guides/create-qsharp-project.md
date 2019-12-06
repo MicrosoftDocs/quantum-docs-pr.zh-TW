@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: b4bec5e7a174b7e2d588331dd2093c7b23a728b0
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444169"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864401"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>在開發環境中建立 Q # 專案
 
@@ -99,15 +99,15 @@ Q # 專案包含包含量子代碼的 Q # 檔案，以及執行配量程式的�
 
 1. 選取要執行筆記本的資料**格** > **執行的單元**格。 `SayHello` 很快就會顯示在資料格的輸出中：
 
-    ![使用 Q # 程式碼的 Jupyter 筆記本儲存格](~/media/install-guide-jupyter.png)
+    ![Jupyter 筆記本資料格搭配 Q# 程式碼](~/media/install-guide-jupyter.png)
 
     在 Jupyter 筆記本中執行時，會編譯 Q # 程式碼，而筆記本會輸出找到的作業名稱。
 
-1. 在新的資料格中，使用 `%simulate` 魔術來模擬您剛才建立之作業的量子電腦中的執行：
+1. 在新的資料格中，使用 `%simulate` magic 在剛剛建立的作業量子電腦中模擬執行：
 
-    ![具有% 模擬魔術的 Jupyter 筆記本資料格](~/media/install-guide-jupyter-simulate.png)
+    ![Jupyter 筆記本資料格搭配 %simulate magic](~/media/install-guide-jupyter-simulate.png)
 
-    您應該會在畫面上看到列印的訊息，以及您叫用之作業的結果（在此案例中為空白）。
+    You should see the message printed on the screen along with the result of the operation you invoked (in this case, empty).
 
 您現在可以新增其他的 Q # 作業，以繼續進行您的量子開發。
 
@@ -150,12 +150,14 @@ Q # 專案包含包含量子代碼的 Q # 檔案，以及執行配量程式的�
 
     * 移至 [檢視] -> [命令選擇區]
     * 選取 [ **Q #：建立新專案**]
+    * 選取**獨立主控台應用程式**
     * 瀏覽至您要建立應用程式的檔案系統位置
     * 專案建立好之後，請按一下 [開啟新專案...] 按鈕
 
 1. 執行應用程式：
 
-    * 移至 [偵錯] -> [啟動但不偵錯]
+    * 移至**終端**機 -> **新的終端**機
+    * 輸入 `dotnet run`
     * 您應該會看到下列文字出現在輸出視窗中 `Hello quantum world!`
 
 您現在可以使用 Visual Studio Code 繼續進行量子開發。

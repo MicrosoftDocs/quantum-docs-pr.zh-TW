@@ -6,12 +6,12 @@ ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: d1a8ccc9423a9a04e12bc98e3783790232b2f5d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183466"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864248"
 ---
 # <a name="working-with-qubits"></a>使用 Qubits #
 
@@ -72,7 +72,7 @@ operation Example() : Unit {
 > [!TIP]
 > 之後，我們會看到更精簡的方式來撰寫此作業，而不需要手動進行流量控制。
 
-我們也可以使用 \Right 轉換{0} $ 來準備狀態，例如 $ \ket{+} = \left （\ket{0} + \ket{1}\sqrt）/\ket{2}$ 和 $ \left{-} = \ket （\ket{1}-\right{2}\sqrt）/Hadamard $H $，由內建作業在 Q # 中表示 `H : (Qubit => Unit is Adj + Ctl)`：
+我們也可以使用 \Right 轉換{0} $ 來準備狀態，例如 $ \ket{+} = \left （\ket{0} + \ket{1}\sqrt）/\ket{2}$ 和 $ \left{-} = \ket （\ket{1}-\right{2}\sqrt）/Hadamard $H $，方法是 `H : (Qubit => Unit is Adj + Ctl)`：
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -88,9 +88,9 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 }
 ```
 
-## <a name="measurements"></a>量測 ##
+## <a name="measurements"></a>度量 ##
 
-使用 `Measure` 作業，這是內建的內建函式非單一作業，我們可以從類型的物件中解壓縮傳統資訊 `Qubit` 並指派傳統值做為結果，其中具有保留類型 `Result`，表示結果為 [否]較長的量子狀態。 `Measure` 的輸入是 Bloch 球體上的 Pauli 軸，以 `Pauli` 類型的物件（例如 `PauliX`）和 `Qubit`類型的物件表示。 
+使用 `Measure` 作業，這是內建的內建函式非單一作業，我們可以從類型的物件中提取傳統資訊 `Qubit` 並指派傳統值做為結果，其中具有保留類型 `Result`，表示結果不再是配量狀態。 `Measure` 的輸入是 Bloch 球體上的 Pauli 軸，以 `Pauli` 類型的物件（例如 `PauliX`）和 `Qubit`類型的物件表示。 
 
 下列作業是一個簡單的範例，它會在 $ \ket{0}$ state 中建立一個 qubit，然後對它套用 Hadamard 閘道 ``H``，然後以 `PauliZ` 為基礎來測量結果。 
 
@@ -129,7 +129,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-Q # 語言允許將傳統控制流程相依于 qubits 的測量結果。 這可讓執行功能強大的概率小工具，以降低執行 unitaries 的計算成本。 例如，您可以輕鬆地在 Q # 中執行所謂的*重複直到成功*，也就是在基本閘道方面具有*預期*低成本的概率線路，但真正的成本取決於實際執行和實際的各種可能的分支交錯。 
+Q # 語言允許將傳統控制流程相依于 qubits 的測量結果。 這可讓執行功能強大的概率小工具，以降低執行 unitaries 的計算成本。 例如，您可以輕鬆地在 Q # 中執行所謂的*重複直到成功*，也就是在基本閘道方面具有*預期*低成本的概率線路，但真正的成本取決於實際執行，以及各種可能分支的實際交錯。 
 
 為了協助重複執行-成功（ru）模式，Q # 支援結構
 ```qsharp
@@ -167,7 +167,7 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 這個範例示範如何使用可變動的變數 `finished` 這是在整個重複執行-修復迴圈的範圍內，而且會在迴圈之前初始化，並在修復步驟中更新。
 
-最後，我們會顯示一個 ru 模式範例，以準備量子狀態 $ \frac{1}{\sqrt{3}} \left （\sqrt{2}\ket{0}+ \ket{1}\right） $，從 $ \ket{+} $ 狀態開始。 另請參閱[標準程式庫所提供的單元測試範例](https://github.com/Microsoft/Quantum/blob/master/Samples/src/UnitTesting/RepeatUntilSuccessCircuits.qs)： 
+最後，我們會顯示一個 ru 模式範例，以準備量子狀態 $ \frac{1}{\sqrt{3}} \left （\sqrt{2}\ket{0}+ \ket{1}\right） $，從 $ \ket{+} $ 狀態開始。 另請參閱[標準程式庫所提供的單元測試範例](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)： 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
@@ -212,4 +212,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 }
 ```
  
-這項作業所顯示的值得注意的程式設計功能，是包含量子作業的迴圈中更複雜的 `fixup` 部分，以及使用 `AssertProb` 的語句來確定測量程式. 如需 `Assert` 和 `AssertProb` 語句的詳細資訊，請參閱[測試和調試](xref:microsoft.quantum.techniques.testing-and-debugging)程式。 
+這項作業中所顯示的重要程式設計功能，是包含配量作業的迴圈中較複雜的 `fixup` 部分，以及使用 `AssertProb` 的語句，來確定在程式中特定點測量量子狀態的機率。 如需 `Assert` 和 `AssertProb` 語句的詳細資訊，請參閱[測試和調試](xref:microsoft.quantum.techniques.testing-and-debugging)程式。 

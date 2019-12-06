@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5aac40686ba9b45a51e0274a1828f2ff7cce6fc3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184435"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863192"
 ---
 # <a name="error-correction"></a>錯誤修正 #
 
@@ -36,9 +36,9 @@ ms.locfileid: "73184435"
 | 錯誤 $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ |
 | --- | --- | --- |
 | $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ |
-| $X _0 $ | $ \ket{100}$ | $ \ket{011}$ |
-| $X _1 $ | $ \ket{010}$ | $ \ket{101}$ |
-| $X _2 $ | $ \ket{001}$ | $ \ket{110}$ |
+| $X_0$ | $ \ket{100}$ | $ \ket{011}$ |
+| $X_1$ | $ \ket{010}$ | $ \ket{101}$ |
+| $X_2$ | $ \ket{001}$ | $ \ket{110}$ |
 
 為了保護我們所編碼的狀態，我們必須能夠區分彼此和身分識別 $ \boldone $ 之間的三個錯誤，而不區分 $ \ket{\overline{0}} $ 和 $ \ket{\overline{1}} $。
 例如，如果我們測量 $Z _0 $，在無錯誤情況下，我們會針對 $ \ket{\overline{0}} $ 和 $ \ket{\overline{1}} $ 取得不同的結果，因此會折迭編碼的狀態。
@@ -53,9 +53,9 @@ ms.locfileid: "73184435"
 | 錯誤 $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | $Z _0 Z_1 $ 的結果 | $Z _1 Z_2 $ 的結果 |
 | --- | --- | --- | --- | --- |
 | $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ | $+$ | $+$ |
-| $X _0 $ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
-| $X _1 $ | $ \ket{010}$ | $ \ket{101}$ | $-$ | $-$ |
-| $X _2 $ | $ \ket{001}$ | $ \ket{110}$ | $+$ | $-$ |
+| $X_0$ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
+| $X_1$ | $ \ket{010}$ | $ \ket{101}$ | $-$ | $-$ |
+| $X_2$ | $ \ket{001}$ | $ \ket{110}$ | $+$ | $-$ |
 
 因此，這兩個度量的結果會唯一判斷發生的位翻轉錯誤，但不會顯示我們所編碼之狀態的任何相關資訊。
 我們將這些結果稱為「*症狀*」，並參考將症狀對應到導致它復原的錯誤的*程式。*
@@ -67,7 +67,7 @@ ms.locfileid: "73184435"
 > 同樣地，套用階段翻轉作業 `Z` 會將 $ \ket{\overline{1}} $ 對應至 $-\ket{\overline{1}} $，因此會將 $ \ket{\overline{+}} $ 對應至 $ \ket{\overline{-}} $。
 > 一般來說，可以建立代碼來處理較大的錯誤數目，以及處理 $Z $ 錯誤以及 $X $ 錯誤。
 
-我們可以在對所有程式碼狀態採取相同方式的量子錯誤更正中描述度量的深入解析，就是*穩定形式*的 essense。
+我們可以在對所有程式碼狀態採取相同方式的量子錯誤更正中描述度量的深入解析，就是穩定的*形式*的本質。
 Q # canon 提供了一個架構，可描述從穩定程式碼進行編碼和解碼，以及描述如何從錯誤中復原。
 在本節中，我們會將此架構及其應用程式描述為一些簡單的量子錯誤更正代碼。
 
@@ -117,6 +117,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-我們會在[位翻轉程式碼範例](https://github.com/Microsoft/Quantum/tree/master/Samples/src/BitFlipCode)中更詳細地探索此功能。
+我們會在[位翻轉程式碼範例](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)中更詳細地探索此功能。
 
-除了比對程式碼之外，還提供了[五個 qubit 完美程式](https://arxiv.org/abs/1305.08)代碼的 canon，以及[七 qubit 的程式碼](https://arxiv.org/abs/quant-ph/9705052)，兩者都可以更正任意的單一 qubit 錯誤。
+除了比對程式碼之外，還提供了[五個 qubit 完美程式](https://arxiv.org/abs/quant-ph/9602019)代碼的 canon，以及[七 qubit 的程式碼](https://arxiv.org/abs/quant-ph/9705052)，兩者都可以更正任意的單一 qubit 錯誤。

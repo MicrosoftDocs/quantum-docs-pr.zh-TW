@@ -1,17 +1,17 @@
 ---
 title: 多個 qubits |Microsoft Docs
-description: 多個 qubits
+description: 多個量子位元
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e0404cfd67f693ff6b7a8297566e59208fc7ec0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183772"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863211"
 ---
 # <a name="multiple-qubits"></a>多個 Qubits
 
@@ -38,14 +38,14 @@ $ $ \begin{bmatrix} \ Alpha_{00} \\\\ \ Alpha_{01} \\\\ \ Alpha_{10} \\\\ \ Alph
 
 如果我們提供兩個不同的 qubits，一個在 state $ \begin{bmatrix} \Alpha \\\\ \Beta \end{bmatrix} $，而第二個 qubit 處於 state $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $，對應的雙 qubit 狀態為
 
-$ $ \begin{bmatrix} \Alpha \\\\ \Beta \end{bmatrix} \otimes \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} = \begin{bmatrix} \Alpha \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} \\\\ \搶鮮版（Beta） \begin{bmatrix}\gamma \\\\ \delta \end{bmatrix} \end{bmatrix} = \begin{bmatrix} \Alpha\gamma \\\\ \Alpha\delta \\\\ \Beta\gamma \\\\ \Beta\delta \end{bmatrix}，$ $
+$ $ \begin{bmatrix} \Alpha \\\\ \Beta \end{bmatrix} \otimes \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} = \begin{bmatrix} \Alpha \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} \\\\ \Beta \begin{bmatrix}\gamma \\\\ \delta \end{bmatrix} \end{bmatrix} = \begin{bmatrix} \Alpha\gamma \\\\ \Alpha\delta \\\\ \Beta\gamma \\\\ \Beta\delta \end{bmatrix}, $$
 
 其中，$ \otimes $ 的作業稱為向量的張量產品（或 Kronecker 產品）。 請注意，雖然我們一定可以讓兩個單一 qubit 狀態的張量產品形成兩個 qubit 的狀態，而不是所有的兩 qubit 配量狀態都可以撰寫為兩個單一張量狀態的 qubit 產品。
 例如，沒有州 $ \psi = \begin{bmatrix} \Alpha \\\\ \Beta \end{bmatrix} $ 和 $ \phi = \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $，使其張量產品為狀態 
 
 $ $ \psi\otimes \phi = \begin{bmatrix} 1/\ sqrt{2} \\\\ 0 \\\\ 0 \\\\ 1/\ sqrt{2} \end{bmatrix}. $ $ 
 
-這種 qubit 狀態無法寫入為單一 qubit 狀態的張量產品，稱為「光子狀態」;這兩個 qubits 稱為[*光子*](https://en.wikipedia.org/wiki/Quantum_entanglement)。  鬆散說，因為無法將配量狀態視為單一 qubit 狀態的張量產品，所以狀態所保存的資訊不會個別限制為任何 qubits。  而是在這兩個狀態之間的相互關聯中，以非本機方式儲存資訊。  這種非位置的資訊是傳統運算上的量子運算的其中一項主要區別功能，對於一些量子通訊協定（包括[量子 teleportation](https://github.com/Microsoft/Quantum/tree/master/Samples/src/Teleportation)和[量子錯誤更正](xref:microsoft.quantum.libraries.error-correction)）而言，這是很重要的。
+這種 qubit 狀態無法寫入為單一 qubit 狀態的張量產品，稱為「光子狀態」;這兩個 qubits 稱為[*光子*](https://en.wikipedia.org/wiki/Quantum_entanglement)。  鬆散說，因為無法將配量狀態視為單一 qubit 狀態的張量產品，所以狀態所保存的資訊不會個別限制為任何 qubits。  而是在這兩個狀態之間的相互關聯中，以非本機方式儲存資訊。  這種非位置的資訊是傳統運算上的量子運算的其中一項主要區別功能，對於一些量子通訊協定（包括[量子 teleportation](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/teleportation)和[量子錯誤更正](xref:microsoft.quantum.libraries.error-correction)）而言，這是很重要的。
 
 ## <a name="measuring-two-qubit-states"></a>測量兩個 Qubit 的狀態 ##
 測量兩個 qubit 的狀態與單一 qubit 測量非常類似。 測量狀態
@@ -59,7 +59,7 @@ $$
 
 您也可以只測量兩個 qubit 量子狀態的一個 qubit。 在只測量其中一個 qubits 的情況下，測量的影響會稍微不同，因為整個狀態不會折迭成計算基礎狀態，而只會折迭到一個子系統。  換句話說，在這種情況下，測量只有一個 qubit 只會折迭其中一個子系統，而不是全部折迭。  
 
-若要瞭解這一點，請考慮測量下列狀態的第一個 qubit，這是透過套用 Hadamard 轉換 $H $ （一開始是設定為 "0" 狀態的兩個 qubits 上所形成）： $ $ H ^ {\otimes 2} \left （\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \right） = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 &t_10_ \\ 1 &-1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ end {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \mapsto \begin{cases}\text{outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{案例}。
+若要查看這一點，請考慮測量下列狀態的第一個 qubit，這是藉由套用 Hadamard 轉換 $H $ （一開始是設定為 "0" 狀態的兩個 qubits）來形成： $ $ H ^ {\otimes 2} \left （\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right） = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\-1 \\ & 1 &-1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ 結束 {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \mapsto \begin{cases}\text{outcome} = 0 & \frac{1}{2}0\\\\ 0\\\\\\ \text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}。
 $ $ 這兩個結果的發生率為50%。  這兩者的結果為50% 機率的 intuited，是因為第一個 qubit 上的初始配量狀態向量在交換 $0 $1 $ 底下不變。
 
 測量第一個或第二個 qubit 的數學規則很簡單。  如果我們讓 $e _k $ 是 $k ^ {\rm th} $ 計算基礎向量，並讓 $S $ 是所有 $e $ 的集合，如此一來，問題的 qubit 就會將該值 _k $ 的值設為 $1 $。  例如，如果我們有興趣測量第一個 qubit，則 $S $ 會包含 $e _2 \ HTTP-equiv $10 和 $e _3 \ HTTP-equiv $11。  同樣地，如果我們對第二個 qubit 有興趣 $S $ 會包含 $e _1 \ HTTP-equiv $1 和 $e _3 \equiv $11。  然後，測量所選 qubit 為 $1 $ 的機率是針對狀態向量 $ \psi $
@@ -85,7 +85,7 @@ $$
 請注意，這只是測量結果 $10 $ 和 $11 $ 所預期的兩個機率的總和，全都是要測量的 qubits。
 在我們的範例中，這會評估為
 
-$ $ \frac{1}{4}\left | \begin{bmatrix}0 & 0 & 1 & 0 \ 結束 {bmatrix} \ begin {bmatrix} 1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \right | ^ 2 + \frac{1}{4}\left | \開始 {bmatrix} 0 & 0 & 0 & 1 \ end {bmatrix} \ begin {bmatrix} 1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \right | ^ 2 = \frac{1}{2}。
+$ $ \frac{1}{4}\left | \begin{bmatrix}0 & 0 & 1 & 0 \ 結束 {bmatrix} \ begin {bmatrix} 1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \right | ^ 2 + \frac{1}{4}\left | \begin{bmatrix}0 & 0 & 0 & 1 \ end {bmatrix} \ begin {bmatrix} 1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \right | ^ 2 = \frac{1}{2}。
 $$
 
 這完全符合我們的直覺告訴我們機率的可能性。  同樣地，狀態可以寫成
@@ -107,7 +107,7 @@ $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
 
 $ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
 
-對於第一個和第二個 qubits，這相當於套用張量\\產品所指定的兩個 qubit，\\ c-d \end{bmatrix} \otimes \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} = \begin {bmatrix} ae \ qubit \ bf \\\\ ag \ 張量 \\\\ ce \ cf \ de \ df \\\\ cg \ ch \ dg \ dh \end{bmatrix}. $ $，因此我們可以藉由採用一些已知單一 qubit 閘道的產品來形成兩個的閘道。 兩個 qubit 閘道的一些範例包括 $H \otimes H $、$X \otimes \boldone $ 和 $X \otimes Z $。
+分別到第一個和第二個 qubits，這相當於套用張量產品所指定的兩個 qubit。 $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} \otimes \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} = \begin{bmatrix} ae \ af \ bf \\\\ ag \ ah \ bg \ bh \\\\ ce \ cf \ de \ df \\\\ cg \ ch \ dg \ \end{bmatrix}. $ $，因此我們可以採用一些已知的單一 qubit 閘道的張量產品來形成兩個 qubit 的閘道。 兩個 qubit 閘道的一些範例包括 $H \otimes H $、$X \otimes \boldone $ 和 $X \otimes Z $。
 
 請注意，雖然任何兩個單一 qubit 閘道都是藉由接受張量產品來定義雙 qubit 閘道，相反的情況也不是如此。 並非所有的兩個 qubit 閘道都可以撰寫成單一 qubit 閘道的張量產品。  這種閘道稱為*entangling*閘道。 Entangling 閘道的其中一個範例是 CNOT-CONTAINS 閘道。
 
@@ -130,7 +130,7 @@ $$
 
 量子閘道的工作方式完全相同。  例如，如果我們想要將 $X $ 閘道套用至第一個 qubit，然後在第二個和第三個 qubits 之間執行 CNOT-CONTAINS，我們可以將此轉換表示為
 
-\begin{align} & （X \otimes \operatorname{CNOT}_{12}\otimes \boldone\otimes \boldone \otimes \boldone \otimes \boldone） \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\\\\ & \qquad\qquad\equiv 0011001。
+\begin{align} & （X \otimes \operatorname{CNOT}_{12}\otimes \boldone\otimes \boldone \otimes \boldone \otimes \boldone） \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes\begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\\\\ & \qquad\qquad\equiv 0011001。
 \end{align}
 
 在許多 qubit 系統中，通常需要配置和取消配置 qubits，做為量子電腦的暫存記憶體。  這種 qubit 稱為 ancilla。  根據預設，我們假設 qubit 狀態已初始化為在配置時 $e _0 $。  我們會進一步假設在解除配置之前，會再次傳回 $e _0 $。  這項假設很重要，因為如果 ancilla qubit 在解除配置時，與另一個 qubit 暫存器光子，則取消配置的程式將會損毀 ancilla。  基於這個理由，我們一律假設這類 qubits 會在發行之前還原成其初始狀態。

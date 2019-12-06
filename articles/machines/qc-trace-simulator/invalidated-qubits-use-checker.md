@@ -1,24 +1,24 @@
 ---
 title: 不正確 qubits use 檢查工具 |量子電腦追蹤模擬器 |Microsoft Docs
-description: 量子電腦追蹤模擬器的總覽
+description: 量子電腦追蹤模擬器概觀
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 7403381b995ab660aa5cbc5a52b1e12c5c9ce442
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 283cc7d7d88f731f40fa396c38ae5ea8dd90537f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184962"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863175"
 ---
 # <a name="invalidated-qubits-use-checker"></a>不正確 Qubits Use 檢查工具
 
 `Invalidated Qubits Use Checker` 是針對偵測程式碼中的潛在 bug 而設計的量子電腦[TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)的一部分。 請考慮下列的 Q # 程式碼，以說明 `Invalidated Qubits Use Checker`偵測到的問題。
 
 ```qsharp
-operation UseReleasedQubitTest () : Unit {
+operation UseReleasedQubit () : Unit {
     mutable q = new Qubit[1];
     using (ans = Qubit()) {
         set q w/= 0 <- ans;

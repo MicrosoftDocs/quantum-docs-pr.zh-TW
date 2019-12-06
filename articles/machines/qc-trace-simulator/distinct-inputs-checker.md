@@ -1,21 +1,21 @@
 ---
-title: Distinct inputs checker | Quantum computer trace simulator | Microsoft Docs
-description: Overview of quantum computer trace simulator
+title: 相異輸入檢查程式 |量子電腦追蹤模擬器 |Microsoft Docs
+description: 量子電腦追蹤模擬器概觀
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 0df28f6d74279db4678c3485a23a9341680eec52
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ce3f156a84a4509781a74c9276b953c79670a756
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184690"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864299"
 ---
-# <a name="distinct-inputs-checker"></a>Distinct Inputs Checker
+# <a name="distinct-inputs-checker"></a>相異的輸入檢查
 
-The `Distinct Inputs Checker` is a part of the quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). It is designed for detecting potential bugs in the code. Consider the following piece of Q# code to illustrate the issues detected by this package:
+`Distinct Inputs Checker` 是「量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器」的一部分。 其設計目的是要偵測程式碼中的潛在 bug。 請考慮下列 Q 號碼程式碼，以說明此套件所偵測到的問題：
 
 ```qsharp
 operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => Unit)) : Unit {
@@ -25,10 +25,10 @@ operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => 
 }
 ```
 
-When the user looks at this program, they assume that the order in which `op1` and `op2` are called does not matter because `q1` and `q2` are different qubits and operations acting on different qubits commute. Let us now consider an example, where this operation is used:
+當使用者查看這個程式時，他們會假設呼叫 `op1` 和 `op2` 的順序並不重要，因為 `q1` 和 `q2` 是不同的 qubits 和作業在不同的 qubits 向下。 現在讓我們來看一個範例，其中會使用此作業：
 
 ```qsharp
-operation DisctinctQubitCaptured2Test () : Unit {
+operation CapturedQubits () : Unit {
 
     using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);
@@ -38,11 +38,11 @@ operation DisctinctQubitCaptured2Test () : Unit {
 }
 ```
 
-Now `op1` and `op2` are both obtained using partial application and share a qubit. When the user calls `DoBoth` in the example above the result of the operation will depend on the order of `op1` and `op2` inside `DoBoth`. This is definitely not what the user would expect to happen. The `Distinct Inputs Checker` will detect such situations when enabled and will throw `DistinctInputsCheckerException`. See the API documentation on [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) for more details.
+現在 `op1` 和 `op2` 都是使用部分應用程式取得，並共用 qubit。 當使用者呼叫上述範例中的 `DoBoth` 時，作業的結果將取決於 `DoBoth`內 `op1` 和 `op2` 的順序。 這絕對不是使用者預期會發生的情況。 `Distinct Inputs Checker` 會在啟用時偵測到這類情況，而且將會擲回 `DistinctInputsCheckerException`。 如需詳細資訊，請參閱[DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException)上的 API 檔。
 
-## <a name="using-the-distinct-inputs-checker-in-your-c-program"></a>Using the Distinct Inputs Checker in your C# Program
+## <a name="using-the-distinct-inputs-checker-in-your-c-program"></a>在您C#的程式中使用相異的輸入檢查
 
-The following is an example of C# driver code for using the quantum computer trace simulator with the `Distinct Inputs Checker` enabled:
+以下是在啟用 `Distinct Inputs Checker` 的C#情況下，使用配量電腦追蹤模擬器的驅動程式代碼範例：
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -66,7 +66,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-The class `QCTraceSimulatorConfiguration` stores the configuration of the quantum computer trace simulator and can be provided as an argument for the `QCTraceSimulator` constructor. When `useDistinctInputsChecker` is set to true the `Distinct Inputs Checker` is enabled. 如需詳細資訊，請參閱[QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)和[QCTRACESIMULATORCONFIGURATION](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?)上的 API 檔。
+類別 `QCTraceSimulatorConfiguration` 會儲存配量電腦追蹤模擬器的設定，而且可以當做 `QCTraceSimulator` 的引數提供。 當 `useDistinctInputsChecker` 設定為 true 時，就會啟用 `Distinct Inputs Checker`。 如需詳細資訊，請參閱[QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)和[QCTRACESIMULATORCONFIGURATION](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?)上的 API 檔。
 
 ## <a name="see-also"></a>請參閱
 

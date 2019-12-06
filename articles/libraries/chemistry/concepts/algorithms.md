@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: 905b03478d453e475fc1e49ea5f88dd0cd2704bc
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4d1924386eadb427e8f53bc0a177453a341f185f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184061"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864452"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>模擬 Hamiltonian Dynamics
 
@@ -29,10 +29,10 @@ Trotter-Plat'home co. 公式背後的概念很簡單：將 Hamiltonian 表達為
 
 如果 $t $ 很大，則 Trotter – Plat'home co. 公式仍然可以藉由將其細分為一系列簡短的時間步驟，來正確模擬 dynamics。
 讓 $r $ 成為時間演進所採取的步驟數目。
-然後，我們有 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left （\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right） ^ r + O （m ^ 2 t ^ 2/r），$ $，表示如果 $r $ 縮放為 $m ^ 2 t ^ 2/\ epsilon $，則任何 $ \epsilon 最多可以為 $ \epsilon $ 建立錯誤> 0 $。
+然後，我們有 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left （\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right） ^ r + O （m ^ 2 t ^ 2/r），$ $ 表示如果 $r $ 縮放為 $m ^ 2 t ^ 2/\ epsilon $，則任何 $ \epsilon > 0 $ 的最大可為 $ \epsilon $ 建立錯誤。
 
 藉由建立一連串的運算子指數來建立更精確的近似值，使錯誤詞彙取消。
-最簡單的這類公式（對稱 Trotter 公式或 Strang 分割）採用的格式為 $ $ U_1 （t） = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O （m ^ 3 t ^ 3），藉由選擇 $，可以針對任何 $ \epsilon > 0 $ 建立小於 $ \epsilon $ 的 $ $r $ 可調整為 $m ^ {3/2} t ^ {3/2}/\sqrt {\ epsilon} $。
+最簡單的這類公式（對稱 Trotter 公式或 Strang 分割）採用的格式為 $ $ U_1 （t） = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O （m ^ 3 t ^ 3），藉由選擇 $r $ 來調整為 $m ^ {3/2} t ^ {3/2}/\sqrt {\ epsilon} $，可以針對任何 $ \epsilon > 0 $ 建立小於 $ \epsilon $。
 
 更高順序的 Trotter 公式可以根據 $U 的 _1 $ 來加以建造。
 最簡單的是下列第四個訂單公式。原本是由 Plat'home co.： $ $ U_2 （t） = U_1 ^ 2 （s_1t） U_1 （[1-4s_1] t） U_1 ^ 2 （s_1 t） = e ^ {-iHt} + O （m ^ 5t ^ 5），$ $ where $s _1 = （4-4 ^ {1/3}） ^{-1}$。
@@ -86,7 +86,7 @@ $ $ 這裡，$e ^ {-iHt} \ket{00} = e ^ {it} \ket{00}$ 和 $e ^ {-iHt} \ket{01} 
     var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
-此格式的 Wigner reprsentation 由 Q # 模擬演算法取用，是使用者定義的型別，`JordanWignerEncodingData`。
+這種類型的 Wigner 標記法可供 Q # 模擬演算法取用，這種格式是使用者定義的型別，`JordanWignerEncodingData`。
 在 Q # 中，這種格式會傳遞至便利的函式 `TrotterStepOracle` 會使用 Trotter （Plat'home co. 整合器）（除了執行所需的其他參數），傳回將逼近時間演進的運算子。
 
 ```qsharp
@@ -101,7 +101,7 @@ let integratorOrder = 4;
 
 // `oracle` is an operation that applies a single time-step of evolution for duration `stepSize`.
 // `rescale` is just `1.0/stepSize` -- the number of steps required to simulate unit-time evolution.
-// `nQubits` is the number of qubits that must be allocated to run the `oracle` operatrion.
+// `nQubits` is the number of qubits that must be allocated to run the `oracle` operation.
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 
 // Let us now apply a single time-step.
@@ -115,7 +115,7 @@ using(qubits = Qubit[nQubits]){
 }
 ```
 
-重要的是，這項實行會套用一些優化，以[模擬使用量子電腦 Hamiltonians 的電子結構](https://arxiv.org/abs/1001.3855)，並[改善量子化學](https://arxiv.org/abs/1403.1539)的配量演算法，以將需要單一 qubit 旋轉，以及減少模擬錯誤。
+重要的是，這項實作為在[模擬使用量子電腦 Hamiltonians 的電子結構](https://arxiv.org/abs/1001.3855)時所討論的一些優化，並[改善量子化學](https://arxiv.org/abs/1403.1539)的配量演算法，以將所需的單一 qubit 旋轉數目降至最低，以及減少模擬錯誤。
 
 ## <a name="qubitization"></a>Qubitization
 
@@ -141,7 +141,7 @@ $ \Operatorname{Select} $ 作業（或許很驚訝）實際上是反映作業。
 這種情況可以看出，$ \operatorname{Select} ^ 2 \ ket {j} \ket{\psi} = \ket{j} \ket{\psi} $，因為每個 $H _j $ 是單一和 Hermitian，因此具有特徵值 $ \pm $1。
 
 第二個子程式稱為 $ \operatorname{Prepare} $。
-雖然選取作業提供 coherently 存取每個 Hamiltonian 詞彙的方法 $H _j $ 「準備」副程式提供了存取係數 $h _j $、\begin{equation} \operatorname{Prepare}\ket{0} = \ sum_j \sqrt{\frac{h_j} {| h | _1}} \ket{j}。
+雖然選取作業提供 coherently 存取每個 Hamiltonian 詞彙的方法 $H _j $ 「準備」副程式提供了存取係數 $h _j $、\begin{equation} \operatorname{Prepare}\ket{0} = \ sum_j \sqrt{\frac{h_j} {| H | _1}} \ket{j}。
 \end{equation} 接著，藉由使用「乘以控制階段」閘道，我們會看到 $ $ \Lambda\ket{0}^ {\otimes n} = \begin{cases} \-\ket{x} & \text{if} x = 0 \\\
         \ket{x} & \text{otherwise} \end{cases}。
 $$
@@ -154,7 +154,7 @@ $ \Operatorname{Prepare} $ 作業不會直接在 qubitization 中使用，而是
 這些副程式在 Q # 中很容易設定。
 例如，假設有一個簡單的 qubit 橫向 Ising Hamiltonian，其中 $H = X_1 + X_2 + Z_1 Z_2 $。
 在此情況下，會由 <xref:microsoft.quantum.canon.multiplexoperations>叫用執行 $ \operatorname{Select} $ 作業的 Q # 程式碼，而 $ \operatorname{Prepare} $ 作業則可以使用 <xref:microsoft.quantum.preparation.preparearbitrarystate>來執行。
-如需模擬 Hubbard 模型的範例，請參閱[Q # 範例](https://github.com/Microsoft/Quantum/tree/master/Samples/src/HubbardSimulation)。
+如需模擬 Hubbard 模型的範例，請參閱[Q # 範例](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)。
 
 針對任意化學問題手動指定這些步驟需要耗費大量的工作，這是使用化學程式庫來避免的。
 類似于上述的 Trotter – Plat'home co. 模擬演算法，`JordanWignerEncodingData` 會傳遞至方便函式 `QubitizationOracle`，除了執行所需的其他參數之外，也會傳回逐步解說運算子。
@@ -165,7 +165,7 @@ let qSharpData = ...
 
 // `oracle` is an operation that applies a single time-step of evolution for duration `stepSize`.
 // `rescale` is just `1.0/oneNorm`, where oneNorm is the sum of absolute values of all probabilities in state prepared by `Prepare`.
-// `nQubits` is the number of qubits that must be allocated to run the `oracle` operatrion.
+// `nQubits` is the number of qubits that must be allocated to run the `oracle` operation.
 let (nQubits, (rescale, oracle)) =  QubitizationOracle (qSharpData, stepSize, integratorOrder);
 
 // Let us now apply a single step of the quantum walk.

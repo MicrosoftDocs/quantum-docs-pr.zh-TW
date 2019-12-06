@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e8b28561f1aba37cb5bf41c6176386d19bfacf06
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184503"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864350"
 ---
 # <a name="data-structures-and-modeling"></a>資料結構和模型化 #
 
@@ -20,7 +20,7 @@ ms.locfileid: "73184503"
 除了用來表示量子概念的使用者定義型別之外，canon 也提供作業、函式和型別，來處理用於控制量子系統的傳統資料。
 例如，<xref:microsoft.quantum.arrays.reversed> 函數會採用陣列做為輸入，並以反向順序傳回相同的陣列。
 然後，這可以在 `Qubit[]` 類型的陣列上使用，以避免在整數的量子表示之間進行轉換時，必須套用不必要的 $ \operatorname{SWAP} $ 閘道。
-同樣地，我們在上一節中看到，`(Int, Int -> T)` 的表單類型可用於代表隨機存取集合，因此 <xref:microsoft.quantum.arrays.lookupfunction> 函式提供了從陣列類型來建立這類類型的 convienent 方式。
+同樣地，我們在上一節中看到，`(Int, Int -> T)` 的表單類型可用於代表隨機存取集合，因此 <xref:microsoft.quantum.arrays.lookupfunction> 函式提供了從陣列類型來建立這類類型的便利方式。
 
 ### <a name="pairs"></a>形式 ###
 
@@ -73,11 +73,11 @@ ApplyToEach(
 您通常可以將此副程式視為接受 oracle 的量子演算法輸入，除了其他一些參數之外，也會套用一系列的量子作業，並將此量子副程式的呼叫視為基本閘道。
 很明顯地，若要實際執行較大的演算法，必須提供 oracle 的實體分解，但不需要這樣的分解，就能瞭解呼叫 oracle 的演算法。
 在 Q # 中，此抽象概念是藉由使用該作業為第一個類別的值來表示，因此作業可以用黑箱的方式傳遞至配量演算法的實現。
-此外，使用者定義的型別也用來以型別安全的方式標記不同的 oracle 標記法，因而難以意外人們不同種類的黑色方塊作業。
+此外，使用者定義的型別也用來以型別安全的方式標記不同的 oracle 標記法，因此很容易不小心人們不同種類的黑箱作業。
 
 這類 oracles 會出現在許多不同的內容中，包括著名的範例，例如[Grover 的搜尋](https://en.wikipedia.org/wiki/Grover%27s_algorithm)和量子模擬演算法。
 在這裡，我們只著重在兩個應用程式所需的 oracles：振幅放大和階段估計。
-我們會先討論振幅放大 oracles，再 proceding 至階段估計。
+我們會先討論振幅放大 oracles，再繼續進行階段估計。
 
 ### <a name="amplitude-amplification-oracles"></a>振幅放大 Oracles ###
 
@@ -145,20 +145,20 @@ is Adj + Ctl {
 }
 ```
 
-然後，我們可以將這兩個 oracles 合併在一起，並以決定性的方式將 $ \ket{+} ^ {\otimes n} $ 轉換成 $ \ket{0}$，並使用與 $ Hadamard ^ n} $ （ie $m \sqrt{2 \propto ^ n} $）成正比的幾層 \Sqrt{2 閘道在觀察到結果 $0 $ 之前，您必須先準備並測量初始狀態，以不具決定性的方式來準備 $ \ket{0}$ 狀態，而不是大約 $ 2 ^ n $ 層。
+然後，我們可以將這兩個 oracles 合併在一起，以在兩個狀態之間旋轉，並以決定性的方式將 $ \ket{+} ^ {\otimes n} $ 轉換成 $ \ket{0}$ 使用與 $ Hadamard ^ n} $ 成正比的幾個 \Sqrt{2 閘道層級（ie $m \propto \sqrt{2 ^ n} $）與大約 $ 2 ^ n $ 層，在觀察到結果 $0 $ 之前，您必須先準備並測量初始狀態，以非決定性的方式準備 $ \ket{0}$ 狀態。
 
 ### <a name="phase-estimation-oracles"></a>階段估計 Oracles ###
 
 針對階段估計，oracles 會更自然。
 階段估計的目標是設計一個副程式，它能夠從單一矩陣的特徵值進行取樣。
-這個方法是在量子模擬中不可或缺，因為在化學和材質科學中，有許多實體問題，這些特徵值提供了配量系統的狀態 energies，可提供我們有關階段圖表的重要資訊適用于分子驅使分子的材質和反應 dynamics。
+此方法在量子模擬中是不可或缺的，因為在化學和材質科學中，有許多實體問題這些特徵值提供了配量系統的基礎狀態 energies適用于分子驅使分子的材質和反應 dynamics。
 階段估計的每個類別都需要輸入單一。
 這個單一的程式通常是由兩種 oracles 類型的其中一種來描述。
 
 > [!TIP]
 > 以下所述的兩個 oracle 類型都涵蓋在範例中。
-> 若要深入瞭解連續查詢 oracles，請參閱[ **PhaseEstimation**範例](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation)。
-> 若要深入瞭解離散查詢 oracles，請參閱[ **IsingPhaseEstimation**範例](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation)。
+> 若要深入瞭解連續查詢 oracles，請參閱[ **PhaseEstimation**範例](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)。
+> 若要深入瞭解離散查詢 oracles，請參閱[ **IsingPhaseEstimation**範例](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)。
 
 第一種類型的 oracle，我們稱之為獨立查詢 oracle，並以使用者定義型別來表示 <xref:microsoft.quantum.oracles.discreteoracle>，只牽涉到單一的矩陣。
 如果 $U $ 是我們想要預估其特徵值的單一，則適用于 $U $ 的 oracle 只是執行 $U $ 之副程式的一個獨立元件。
@@ -167,7 +167,7 @@ is Adj + Ctl {
 這會獲得使用 Grover oracle $Q $ 做為輸入，以作為幅度估計的標記，來進行階段估計的應用。
 在量子測量中廣泛使用的另一個常見應用程式包含估計較小的旋轉角度。
 換句話說，我們想要針對未知的旋轉閘道估計 $ \theta $，其格式為 $R _z （\theta） $。
-在這種情況下，我們要與之互動的副程式是 $ $ \begin{align} U & = R_z （\theta） \\\\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \theta/2} \end{bmatrix}。
+在這種情況下，我們要與之互動的副程式是 $ $ \begin{align} U & = R_z （\theta） \\\\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \ theta/2} \end{bmatrix}。
 \end{align} $ $
 
 第二種類型的 oracle 在階段估計中使用的是連續查詢 oracle，以 <xref:microsoft.quantum.oracles.continuousoracle> 類型表示。
@@ -208,8 +208,8 @@ $ $ \begin{align} U （t） & = \left （e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdot
 Dynamical 產生器模型程式庫提供一個架構，可根據簡單的產生器，有系統地編碼複雜的產生器。 如此一來，您就可以將這類描述傳遞給模擬程式庫，以透過選擇的模擬演算法來執行時間演進，並自動處理許多細節。
 
 > [!TIP]
-> 以下所述的 dynamical 產生器程式庫已涵蓋在範例中。 如需以 Ising 模型為基礎的範例，請參閱[ **IsingGenerators**範例](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators)。
-> 如需以分子 Hydrogen 為基礎的範例，請參閱[**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine)和[**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI)範例。
+> 以下所述的 dynamical 產生器程式庫已涵蓋在範例中。 如需以 Ising 模型為基礎的範例，請參閱[ **IsingGenerators**範例](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators)。
+> 如需以分子 Hydrogen 為基礎的範例，請參閱[**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)和[**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui)範例。
 
 ### <a name="complete-description-of-a-generator"></a>產生器的完整描述 ###
 
@@ -225,7 +225,7 @@ newtype EvolutionGenerator = (EvolutionSet, GeneratorSystem);
 newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
 ```
 
-元組的第一個元素 `Int` 會儲存 Hamiltonian 中 $d $ 的詞彙數目，而第二個元素 `(Int -> GeneratorIndex)` 是將 $\{0、1,..., d-1\}$ 中的整數索引對應至唯一識別每個的 `GeneratorIndex` 使用者定義類型的函式。Hamiltonian 中的基本詞彙。 請注意，藉由將 Hamiltonian 中的詞彙集合表示為函式，而不是陣列 `GeneratorIndex[]`，這可讓您即時計算 `GeneratorIndex`，這在以大量詞彙描述 Hamiltonians 時特別有用。
+元組的第一個元素 `Int` 會在 Hamiltonian 中儲存 $d $ 的詞彙數目，而第二個元素 `(Int -> GeneratorIndex)` 是將 $\{0，1,..., d-1\}$ 中的整數索引對應至 `GeneratorIndex` 的使用者自訂類型（可唯一識別 Hamiltonian 中的每個基本詞彙）的函式。 請注意，藉由將 Hamiltonian 中的詞彙集合表示為函式，而不是陣列 `GeneratorIndex[]`，這可讓您即時計算 `GeneratorIndex`，這在以大量詞彙描述 Hamiltonians 時特別有用。
 
 十分，我們不會對 `GeneratorIndex` 所識別的基本型詞彙做一些容易模擬的慣例。 比方說，基本詞彙可以是 Pauli 運算子，如上所述，但它們也可以 Fermionic 在量子化學模擬中常用的 annihilation 和建立運算子。 `GeneratorIndex` 本身並沒有意義，因為它不會描述它所指向之詞彙的時間演進如何實作為配量線路。
 
