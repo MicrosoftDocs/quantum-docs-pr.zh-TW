@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+name: TupleArrayAsNestedArray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 將2個元組的清單變成一個嵌套陣列。
+syntax: "function TupleArrayAsNestedArray (tupleList : ('T, 'T)[]) : 'T[][]"
+input:
+  content: "(tupleList : ('T, 'T)[])"
+  types:
+  - name: tupleList
+    summary: 要轉換成嵌套陣列的2個元組清單。
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'T"
+      isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - summary: >-
+      長度符合 tupleList 的嵌套陣列。
+
+
+      ## <a name="example"></a>範例
+
+
+      ```qsharp
+
+      // The following returns [[2, 3], [4, 5]]
+
+      TupleArrayAsNestedArray([(2, 3), (4, 5)]);
+
+      ```
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+metadata:
+  ms.openlocfilehash: edc939bc4ebfe093ec4a97eda24888f6d7810e82
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866456"

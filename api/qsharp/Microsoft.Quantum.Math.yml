@@ -17,17 +17,17 @@ functions:
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
   summary: 傳回 `ComplexPolar`類型複數的平方絕對值。
 - uid: microsoft.quantum.math.arccos
-  summary: 傳回其餘弦為指定數位的角度。
+  summary: 傳回餘弦函數 (Cosine) 是指定數字的角。
 - uid: microsoft.quantum.math.arccosh
   summary: 計算數位的反雙曲余弦值。
 - uid: microsoft.quantum.math.arcsin
-  summary: 傳回其正弦為指定數位的角度。
+  summary: 傳回正弦函數 (Sine) 是指定數字的角。
 - uid: microsoft.quantum.math.arcsinh
   summary: 計算數位的反雙曲正弦值。
 - uid: microsoft.quantum.math.arctan
-  summary: 傳回其正切為指定數位的角度。
+  summary: 傳回正切函數 (Tangent) 是指定數字的角。
 - uid: microsoft.quantum.math.arctan2
-  summary: 傳回其正切為兩個指定數位之商的角度。
+  summary: 傳回正切函數是兩個指定數字之商數的角。
 - uid: microsoft.quantum.math.arctanh
   summary: 計算數位的反雙曲正切值。
 - uid: microsoft.quantum.math.argcomplex
@@ -47,23 +47,23 @@ functions:
 
     也就是說，會傳回最小的 $n $，使 $a < 2 ^ n $。
 - uid: microsoft.quantum.math.ceiling
-  summary: 傳回大於或等於指定數位的最小整數。
+  summary: 傳回大於或等於指定數字的最小整數。
 - uid: microsoft.quantum.math.complexascomplexpolar
   summary: 將 `Complex` 類型的複數轉換成 `ComplexPolar`類型的複數數。
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: 將 `ComplexPolar` 類型的複數轉換成 `Complex`類型的複數數。
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: ''
+  summary: "\n> [!WARNING]\n> 取代\n\nComplexPolarToComplex 已被取代。 請改用 @\"microsoft.quantum.math.complexpolarascomplex\"。"
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: ''
+  summary: "\n> [!WARNING]\n> 取代\n\nComplexToComplexPolar 已被取代。 請改用 @\"microsoft.quantum.math.complexascomplexpolar\"。"
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: 尋找最接近 `fraction` 分母小於或等於 `denominatorBound` 的繼續分數聚合
 - uid: microsoft.quantum.math.continuedfractionconvergentl
   summary: 尋找最接近 `fraction` 分母小於或等於 `denominatorBound` 的繼續分數聚合
 - uid: microsoft.quantum.math.cos
-  summary: 傳回指定角度的余弦值。
+  summary: 傳回指定角的餘弦函數。
 - uid: microsoft.quantum.math.cosh
-  summary: 傳回指定角度的雙曲余弦值。
+  summary: 傳回指定角的雙曲線餘弦函數。
 - uid: microsoft.quantum.math.dividedbyc
   summary: 傳回兩個輸入的商。
 - uid: microsoft.quantum.math.dividedbycp
@@ -95,7 +95,7 @@ functions:
 - uid: microsoft.quantum.math.greatestcommondivisorl
   summary: 計算 $a $ 和 $b $ 的最大公除數。 GCD 一律為正數。
 - uid: microsoft.quantum.math.ieeeremainder
-  summary: 傳回指定數位除以另一個指定數位所得的餘數。
+  summary: 傳回指定數字除以另一個指定數字所得的餘數。
 - uid: microsoft.quantum.math.inversemodi
   summary: 傳回 $b $，$a \cdot b = 1 （\operatorname{mod} \texttt{modulus}） $。
 - uid: microsoft.quantum.math.inversemodl
@@ -109,17 +109,17 @@ functions:
 - uid: microsoft.quantum.math.log
   summary: 傳回指定數位的自然（基底 $e $）對數。
 - uid: microsoft.quantum.math.log10
-  summary: 傳回指定數位的以10為底數的對數。
+  summary: 傳回指定數字的以 10 為底數的對數。
 - uid: microsoft.quantum.math.logof2
   summary: 傳回2的自然對數。
 - uid: microsoft.quantum.math.max
   summary: 假設有整數陣列，則會傳回最大的元素。
 - uid: microsoft.quantum.math.maxd
-  summary: 傳回兩個指定數位中較大的一個。
+  summary: 傳回兩個指定數字中較大的一個。
 - uid: microsoft.quantum.math.maxi
-  summary: 傳回兩個指定數位中較大的一個。
+  summary: 傳回兩個指定數字中較大的一個。
 - uid: microsoft.quantum.math.maxl
-  summary: 傳回兩個指定數位中較大的一個。
+  summary: 傳回兩個指定數字中較大的一個。
 - uid: microsoft.quantum.math.min
   summary: 假設有整數陣列，則會傳回最小的元素。
 - uid: microsoft.quantum.math.mind
@@ -159,7 +159,7 @@ functions:
 - uid: microsoft.quantum.math.negationl
   summary: 傳回輸入的一元否定。
 - uid: microsoft.quantum.math.pi
-  summary: 表示圓形圓周和其直徑（由常數π指定）的比率。
+  summary: 代表圓周率，由常數 π 指定。
 - uid: microsoft.quantum.math.plusa
   summary: 傳回兩個輸入的總和（串連）。
 - uid: microsoft.quantum.math.plusc
@@ -197,23 +197,23 @@ functions:
 - uid: microsoft.quantum.math.realmod
   summary: 計算兩個實數之間的模數。
 - uid: microsoft.quantum.math.round
-  summary: 將值四捨五入到最接近的整數或指定的小數位數。
+  summary: 將值四捨五入為最接近的整數或是指定的小數位數。
 - uid: microsoft.quantum.math.signd
-  summary: 傳回整數，表示數位的正負號。
+  summary: 傳回整數，表示數字的正負號。
 - uid: microsoft.quantum.math.signi
-  summary: 傳回整數，表示數位的正負號。
+  summary: 傳回整數，表示數字的正負號。
 - uid: microsoft.quantum.math.signl
-  summary: 傳回整數，表示數位的正負號。
+  summary: 傳回整數，表示數字的正負號。
 - uid: microsoft.quantum.math.sin
-  summary: 傳回指定角度的正弦值。
+  summary: 傳回指定角的正弦函數。
 - uid: microsoft.quantum.math.sinh
-  summary: 傳回指定角度的雙曲正弦值。
+  summary: 傳回指定角的雙曲線正弦函數。
 - uid: microsoft.quantum.math.sqrt
-  summary: 傳回指定數位的平方根。
+  summary: 傳回指定數字的平方根。
 - uid: microsoft.quantum.math.tan
-  summary: 傳回指定角度的正切函數。
+  summary: 傳回指定角的正切函數。
 - uid: microsoft.quantum.math.tanh
-  summary: 傳回指定角度的雙曲正切值。
+  summary: 傳回指定角的雙曲線正切函數。
 - uid: microsoft.quantum.math.timesc
   summary: 傳回兩個輸入的乘積。
 - uid: microsoft.quantum.math.timescp
@@ -225,7 +225,7 @@ functions:
 - uid: microsoft.quantum.math.timesl
   summary: 傳回兩個輸入的乘積。
 - uid: microsoft.quantum.math.truncate
-  summary: 計算數位的整數部分。
+  summary: 計算數字的整數部分。
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
   summary: 表示 `p/q`表單的有理數。 整數 `p` 是元組的第一個元素，而 `q` 是元組的第二個元素。
@@ -253,9 +253,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: 以隨機的的單一 qubit Pauli 運算子，傳回一個一致的。
 metadata:
-  ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 00156d553e8378b1a38dcd6f1749c4ff3cb689a7
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056291"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858253"

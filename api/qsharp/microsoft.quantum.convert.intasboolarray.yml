@@ -4,7 +4,10 @@ name: IntAsBoolArray
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: 使用傳回之陣列的位元組由小到大表示，產生正整數的二進位標記法。
-remarks: 輸入 `number` 最多隻能有 $ 2 ^ {\texttt{bits}}-$1。
+remarks: >-
+  輸入 `bits` 必須介於0到63之間。
+
+  輸入 `number` 必須介於0和 $ 2 ^ {\texttt{bits}}-$1 之間。
 syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
@@ -25,9 +28,9 @@ output:
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5f9dcb138c24390f5abfec3e0b9b12263b6119d6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e75eede507f04178755e886258e7eb73a6cc3dce
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220363"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858984"

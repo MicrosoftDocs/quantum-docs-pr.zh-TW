@@ -73,11 +73,14 @@ operations:
     最後一個引數會定義判斷提示所使用的容錯。
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: 判斷 qubit `q` 在預期的 Pauli Z 運算子 eigenstate 中，直到指定的容錯為止。
+newtypes:
+- uid: microsoft.quantum.diagnostics.test
+  summary: 編譯器可識別的屬性，用來標示單元測試。
 summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含適用于診斷用途的函數和作業，包括 assert 作業和宣告函式。"
 metadata:
-  ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a633a9555f380e6aa6c6701d277d026c58130ff2
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056864"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858270"
