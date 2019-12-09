@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
-ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
+ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153316"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863158"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -20,6 +20,18 @@ ms.locfileid: "74153316"
 如需安裝指示，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
+
+## <a name="version-01019120501"></a>版本 0.10.1912.0501
+
+*發行日期：2019 年 12 月 5 日*
+
+此版本包含下列項目：
+
+- 關於 Q# 單元測試的新測試屬性，請參閱[這裡](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test)的更新 API 文件，以及[這裡](xref:microsoft.quantum.techniques.testing-and-debugging)的更新測試和偵錯手冊
+- 在 Q# 程式執行錯誤案例中新增了堆疊追蹤
+- 由於 [OmniSharp C# Visual Studio Code 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)更新，支援在 Visual Studio Code 中的中斷點
+
+請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)和 [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
 
 ## <a name="version-01019111607"></a>版本 0.10.1911.1607
 
@@ -205,7 +217,7 @@ ms.locfileid: "74153316"
 
 - 新增 Jupyter Notebook 的支援，這可提供了解 Q# 的絕佳途徑。  請[查看新的 Jupyter Notebook 範例，並了解如何撰寫您自己的 Notebook](xref:microsoft.quantum.install)。 
 
-- 將整數 adder 演算法新增至 Quantum Canon 程式庫。  另請參閱[說明如何使用新的整數 adder](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb) 的 Jupyter Notebook。
+- 將整數 adder 演算法新增至 Quantum Canon 程式庫。  另請參閱[說明如何使用新的整數 adder](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb) 的 Jupyter Notebook。
 
 - 社群回報的 DumpRegister 問題 ([#148](https://github.com/Microsoft/Quantum/issues/148)) 的 Bug 修正。
 
