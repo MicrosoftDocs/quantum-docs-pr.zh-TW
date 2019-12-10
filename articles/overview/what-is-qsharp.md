@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
-ms.openlocfilehash: 3fd288439c7db7f939240b4388c9cdb114b6535c
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: e04d72bafe390ff5c79af408db1d9400754b06ce
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529978"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864282"
 ---
 # <a name="what-is-q"></a>什麼是 Q#？
 
@@ -25,12 +25,11 @@ Q# 程式設計語言提供了一組直覺式的類型、作業和邏輯運算�
 
 在量子運算初期，演算法是用類似古典運算中的電路圖來做出圖表化的視覺呈現。  雖然電路模型長年來在量子運算研究領域發揮了良好成效，但 Microsoft 相信開發人員可以超越量子電路，而使用 Q# 來開發量子演算法和應用程式。 建置 Q# 語言的目的，是要利用我們數十年來進行傳統軟體開發所獲得的成果，讓開發人員能夠使用針對量子運算而設計的高階語言功能。
 
-
 ## <a name="how-does-q-work"></a>Q# 的運作方式為何？
 
 Q# 的其中一個基本構成要素是 `Qubit` 類型，它無法複製或直接存取，就像實際的量子位元一樣。 不過，我們可加以測量，並將測量的結果儲存在 `Result` 變數中，這是可接受兩個可能值的 Q# 類型：`Zero` 和 `One`。 這樣的結構可確保演算法一律會遵循量子物理的法則，並且可在量子電腦或模擬器上正確執行。
 
-Q# 也包含傳統邏輯功能 (例如條件或迴圈)，並且藉由細微的差異確保能遵循所有量子規則。 例如，限制迴圈的執行方式，以確保量子作業。
+Q# 也包含傳統邏輯功能 (例如條件和迴圈)，並且藉由細微的差異確保能遵循所有量子規則。 例如，限制執行迴圈的方式，確保不會在只能包含確定性傳統子程式的函式中呼叫量子作業。
 
 Q# 程式通常會與以 C# 或 Python 撰寫的主機程式配對，這有助於組織傳統和量子程式碼。 除了支援 C# 和 Python 等語言以外，QDK 還提供具有 IQ# Jupyter 核心的 Jupyter Notebook 支援。
 
