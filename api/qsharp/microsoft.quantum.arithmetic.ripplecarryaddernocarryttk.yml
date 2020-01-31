@@ -3,7 +3,11 @@ uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
 name: RippleCarryAdderNoCarryTTK
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 可還原的就地 ripple-在不執行的情況下加入兩個整數。假設在 LittleEndian 中編碼的兩個 $n $ bit 整數 `xs` 和 `ys`，作業會計算兩個整數模數 $ 2 ^ n $ 的總和，其中 $n $ 是輸入 `xs` 和 `ys`的位大小。 它不會計算執行位。
+summary: >-
+  可還原的就地 ripple-在不執行的情況下加入兩個整數。
+
+
+  假設在 LittleEndian 中編碼的兩個 $n $ bit 整數 `xs` 和 `ys`，作業會計算兩個整數模數 $ 2 ^ n $ 的總和，其中 $n $ 是輸入 `xs` 和 `ys`的位大小。 它不會計算執行位。
 remarks: 這種作業與 RippleCarryAdderTTK 具有相同的功能，但不會傳回「執行位」。
 syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
@@ -27,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9aa955764b16806df1ea6205b92483f4747463f5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5147d6d78582ad3f45587938f1b4cf3f8a2dd506
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214515"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871051"

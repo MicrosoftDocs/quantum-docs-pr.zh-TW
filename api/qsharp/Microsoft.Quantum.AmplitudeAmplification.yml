@@ -1,26 +1,42 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.amplitudeamplification
 name: Microsoft.Quantum.AmplitudeAmplification
-summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含執行波幅放大的函數和作業。\n\n # <a name=\"description\"></a>描述\n 以部分反射進行遺忘式的振幅，是在這裡實作為最常見的振幅放大形式。\n\n 這會透過作業 AmpAmpObliviousByReflectionPhases 來呼叫。\n\n 這有兩個暫存器： `ancillaRegister` 和 `systemRegister`。\n\n 這會針對 `ReflectionOracle` 類型的反射接受兩個 oracles，其只會在 `ancillaRegister` 暫存器上作用。\n\n 這會接受 oracle 特殊的來遺忘式類型 `ObliviousOracle` 的振幅放大，同時在兩個註冊上共同運作。\n\n `ancillaRegister` 的輸入狀態會假設為第一個反映運算子的唯一 $-$1 eigenstate，$I-2 \\ ket {s} \\ bra {s} $。\n\n 關於目標配量狀態的反映通常是透過假設存取從計算基礎 $ \\ket{0\\cdots 0} $ 準備該狀態的 oracle 來執行。\n\n 這些 oracles 的慣例需要兩個暫存器：單一 qubit `flagQubit` 註冊，並在 ancillaRegister 暫存器上註冊其他所有專案。\n\n `StateOracle` 類型的 oracle 會同時在這兩個暫存器上共同運作，以在 `flagQubit` 暫存器中以一些真實的振幅建立以 $ \\ket{1}$ 標記的目標狀態。\n\n 此旗標狀態的反映 `ReflectionOracle` 是由作業 `TargetStateReflectionOracle`所產生。\n\n `ancillaRegister` 的輸入狀態的反映 `ReflectionOracle` 是由反轉 StateOracle 所產生，然後再以 ReflectionStart （）反映 $ \\ket{0\\cdots 0} $。\n\n `DeterministicStateOracle` 類型的 oracle 會在 `qubitState` 暫存器上進行處理，以完全不使用旗標來建立目標狀態。\n\n `AmpAmpObliviousByOraclePhases` 是可接受 oracles `StateOracle` 和 `ObliviousOracle` 而非反射的遺忘式振幅放大版本。\n\n 請注意，振幅放大是遺忘式幅度放大的特殊案例，其中 `ObliviousOracle` 是身分識別運算子，而且沒有系統 qubits，亦即 `systemRegister` 是空的。\n\n 這會透過作業 `AmpAmByReflectionPhases` 呼叫，並 `AmpAmpByOraclePhases`。\n\n Grover 搜尋標準案例中的部分反射階段是由函數 AmpAmpPhasesStandard 提供。\n\n 例如，我們有下列相依性： AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases。"
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含執行波幅放大的函數和作業。\n\n # <a name=\"description\"></a>說明\n 以部分反射進行遺忘式的振幅，是在這裡實作為最常見的振幅放大形式。\n\n 這會透過作業 AmpAmpObliviousByReflectionPhases 來呼叫。\n\n 這有兩個暫存器： `ancillaRegister` 和 `systemRegister`。\n\n 這會針對 `ReflectionOracle` 類型的反射接受兩個 oracles，其只會在 `ancillaRegister` 暫存器上作用。\n\n 這會接受 oracle 特殊的來遺忘式類型 `ObliviousOracle` 的振幅放大，同時在兩個註冊上共同運作。\n\n `ancillaRegister` 的輸入狀態會假設為第一個反映運算子的唯一 $-$1 eigenstate，$I-2 \\ ket {s} \\ bra {s} $。\n\n 關於目標配量狀態的反映通常是透過假設存取從計算基礎 $ \\ket{0\\cdots 0} $ 準備該狀態的 oracle 來執行。\n\n 這些 oracles 的慣例需要兩個暫存器：單一 qubit `flagQubit` 註冊，並在 ancillaRegister 暫存器上註冊其他所有專案。\n\n `StateOracle` 類型的 oracle 會同時在這兩個暫存器上共同運作，以在 `flagQubit` 暫存器中以一些真實的振幅建立以 $ \\ket{1}$ 標記的目標狀態。\n\n 此旗標狀態的反映 `ReflectionOracle` 是由作業 `TargetStateReflectionOracle`所產生。\n\n `ancillaRegister` 的輸入狀態的反映 `ReflectionOracle` 是由反轉 StateOracle 所產生，然後再以 ReflectionStart （）反映 $ \\ket{0\\cdots 0} $。\n\n `DeterministicStateOracle` 類型的 oracle 會在 `qubitState` 暫存器上進行處理，以完全不使用旗標來建立目標狀態。\n\n `AmpAmpObliviousByOraclePhases` 是可接受 oracles `StateOracle` 和 `ObliviousOracle` 而非反射的遺忘式振幅放大版本。\n\n 請注意，振幅放大是遺忘式幅度放大的特殊案例，其中 `ObliviousOracle` 是身分識別運算子，而且沒有系統 qubits，亦即 `systemRegister` 是空的。\n\n 這會透過作業 `AmpAmByReflectionPhases` 呼叫，並 `AmpAmpByOraclePhases`。\n\n Grover 搜尋標準案例中的部分反射階段是由函數 AmpAmpPhasesStandard 提供。\n\n 例如，我們有下列相依性： AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases。"
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
-  summary: 標準振幅放大演算法
+  summary: "\n> [!WARNING]\n> 取代\n\nAmpAmpByOracle 已被取代。 請改用 @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"。\n請使用 @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"。"
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
-  summary: 以 oracles 進行部分反射的振幅放大。
-- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
-  summary: 以部分反射放大的振幅。
+  summary: "\n> [!WARNING]\n> 取代\n\nAmpAmpByOraclePhases 已被取代。 請改用 @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"。\n請使用 @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"。"
+- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionphases
+  summary: "\n> [!WARNING]\n> 取代\n\nAmpAmpByReflectionPhases 已被取代。 請改用 @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"。\n請使用 @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"。"
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
-  summary: 遺忘式以 oracles 進行部分反射的振幅放大。
+  summary: "\n> [!WARNING]\n> 取代\n\nAmpAmpObliviousByOraclePhases 已被取代。 請改用 @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"。\n請使用 @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"。"
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
-  summary: 藉由指定部分反射來傳回實遺忘式幅度放大的單一。
+  summary: "\n> [!WARNING]\n> 取代\n\nAmpAmpObliviousByReflectionPhases 已被取代。 請改用 @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"。\n請使用 @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"。"
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
-  summary: 計算固定點振幅放大的部分反映階段。
+  summary: "\n> [!WARNING]\n> 取代\n\nAmpAmpPhasesFixedPoint 已被取代。 請改用 @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"。\n請使用 @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"。"
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
-  summary: 計算標準幅度放大的部分反映階段。
+  summary: "\n> [!WARNING]\n> 取代\n\nAmpAmpPhasesStandard 已被取代。 請改用 @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"。\n請使用 @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"。"
 - uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
-  summary: 將指定為單一 qubit 旋轉的階段，轉換為指定為部分反射的階段。
+  summary: "\n> [!WARNING]\n> 取代\n\nAmpAmpRotationToReflectionPhases 已被取代。 請改用 @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"。\n請使用 @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"。"
+- uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections
+  summary: 以部分反射放大的振幅。
+- uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
+  summary: 以 oracles 進行部分反射的振幅放大。
+- uid: microsoft.quantum.amplitudeamplification.fixedpointreflectionphases
+  summary: 計算固定點振幅放大的部分反映階段。
+- uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections
+  summary: 藉由指定部分反射來傳回實遺忘式幅度放大的單一。
+- uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation
+  summary: 遺忘式以 oracles 進行部分反射的振幅放大。
 - uid: microsoft.quantum.amplitudeamplification.reflectionstart
   summary: 會建立有關全部-零字串 | 0 ... 0 〉的反映，這是對振幅放大的一般輸入狀態。
+- uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
+  summary: 將指定為單一 qubit 旋轉的階段，轉換為指定為部分反射的階段。
+- uid: microsoft.quantum.amplitudeamplification.standardamplitudeamplification
+  summary: 標準振幅放大演算法
+- uid: microsoft.quantum.amplitudeamplification.standardreflectionphases
+  summary: 計算標準幅度放大的部分反映階段。
 - uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
   summary: >-
     針對旗標 qubit 唯一標記的目標狀態，來建立相關的 `ReflectionOracle`。
@@ -29,16 +45,22 @@ functions:
     目標狀態的單一 qubit 設定為1，而其他所有0： $ \ket{1}_f $。
 operations:
 - uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+  summary: "\n> [!WARNING]\n> 取代\n\nAmpAmpRUSByOracle 已被取代。 請改用 @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"。\n請使用 @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"。"
+- uid: microsoft.quantum.amplitudeamplification.applyamplitudeamplification
+  summary: 使用一組指定的階段和 oracles 來反映初始和最終狀態，以在指定的暫存器上套用波幅放大。
+- uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
   summary: 固定點振幅放大演算法
+- uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
+  summary: 藉由指定部分反射來遺忘式幅度放大。
 newtypes:
 - uid: microsoft.quantum.amplitudeamplification.reflectionphases
   summary: 幅度放大中部分反射順序的階段。
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: 以幅度放大的單一 qubit 旋轉順序的階段。
 metadata:
-  ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7b6aec2bd2300a84550f92740e24f33ce243ea7c
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73057039"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870377"

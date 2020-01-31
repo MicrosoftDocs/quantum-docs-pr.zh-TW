@@ -7,7 +7,9 @@ summary: >-
   在 qubit 暫存器上以整數常數執行模組化乘法。
 
 
-  讓我們以 N 和 constMultiplier 來表示模數，然後此作業會在計算基礎上，執行下列對應所定義的單一元件： | y ⟩↦ | a ⋅ y （mod N）⟩，適用于0和 N-1 之間的所有 y
+  讓我們以 $a $ 的 $N $ 和 `constMultiplier` 來表示 `modulus`。
+
+  然後，這項作業會根據計算基礎來執行下列對應所定義的單一作業： $ $ \begin{align} \ket{y} \mapsto \ket{（\cdot y） \operatorname{mod} N} \end{align} $ $ 適用于 $0 $ 和 $N-$1 之間的所有 $y $。
 remarks: >-
   - 如需線路圖表和說明，請參閱第[8 頁 arXiv 的圖7： quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
 
@@ -21,14 +23,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: 乘法運算會執行模數 `modulus`
+    summary: 乘法運算會執行模數 `modulus`。
     isPrimitive: true
     uid: Int
   - name: multiplier
     summary: >-
       要乘以常數的數位。
 
-      這是 qubits 的陣列，代表以位元組為小的位順序的整數。
+      這是 qubits 編碼整數的陣列，以位元組由小到大的格式提供。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -39,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4a99aff903b22ad4edcd96f2a980bd65c740025f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 49d46d1dda5afaf4a35667ec98d24aeb51beba1f
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218748"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871374"

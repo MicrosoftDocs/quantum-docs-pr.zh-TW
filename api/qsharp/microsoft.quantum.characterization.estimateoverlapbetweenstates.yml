@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
+name: EstimateOverlapBetweenStates
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: 針對每個準備狀態複本的兩項作業，會估計每項操作備妥的狀態之間的平方重迭。
+remarks: 這種作業會使用交換測試來尋找 $ $ \begin{align} \left |\braket{00\cdots 0 |V ^ {\dagger} U |00 \ cdots 0} \right | ^ 2 \end{align} $ $，其中 $U $ 是 `preparation1`動作的單一標記法，其中 $V $ 會對應到 `preparation2`。
+syntax: 'operation EstimateOverlapBetweenStates (preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: preparation1
+    summary: 要比較的兩個狀態準備作業的第一個。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: preparation2
+    summary: 要比較的兩個狀態準備作業的第二個。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: nQubits
+    summary: '`commonPreparation`、`preparation1`和 `preparation2` 全部動作的 qubits 數目。'
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: 要用於估計重迭的測量數目。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+seeAlso:
+- microsoft.quantum.characterization.estimaterealoverlapbetweenstates
+- microsoft.quantum.characterization.estimateimagoverlapbetweenstates
+metadata:
+  ms.openlocfilehash: aa8713a1ef7176793a0b11baa675b22e48d61411
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872609"

@@ -3,7 +3,11 @@ uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 會執行嚴格大於兩個整數 $x $ 和 $y $ 的比較，並在 qubit 中編碼 xs 和 y)。 如果 $x > y $，則結果 qubit 會翻轉，否則會保留其狀態。
+summary: >-
+  在編碼成 qubit 暫存器的兩個整數之間套用大於比較，並根據比較結果來翻轉目標 qubit。
+
+
+  會執行嚴格大於兩個整數 $x $ 和 $y $ 的比較，並在 qubit 中編碼 xs 和 y)。 如果 $x > y $，則結果 qubit 會翻轉，否則結果 qubit 會保留其狀態。
 remarks: 使用 $x-y = （x ' + y） ' $ 的訣竅，其中 ' 代表一個補數。
 syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 references: >-
@@ -33,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6961a6a4f22d2290a264298a3be3b15f7bdb0ac7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 062d892ad66b8ab41e8ad0bbd2fce6e1eaff0baa
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214940"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870847"

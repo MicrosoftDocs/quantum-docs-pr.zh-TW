@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.simulation
 name: Microsoft.Quantum.Simulation
-summary: " # <a name=\"summary\"></a>Summary\n 這個命名空間包含 coherently 模擬量子系統之動態的函式和作業。"
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含 coherently 模擬量子系統之動態的函式和作業。"
 functions:
 - uid: microsoft.quantum.simulation.addgeneratorsystems
   summary: 加入兩個 `GeneratorSystem`，以建立新的 `GeneratorSystem`。
@@ -62,11 +62,7 @@ functions:
 - uid: microsoft.quantum.simulation.paulistringfromgenidx
   summary: 針對 `GeneratorIndex`所描述的 Pauli 詞彙，解壓縮 Pauli 字串及其 qubit 索引。
 - uid: microsoft.quantum.simulation.quantumwalkbyqubitization
-  summary: >-
-    將 `BlockEncodingReflection` 轉換成配量的逐步解說。
-
-
-    也就是，假設有一個 `BlockEncodingReflection` 的單一 $U $，將某些運算子編碼 $H $，將它轉換成包含 $ \pm e ^ {\pm i\sin ^{-1}（H）} $ 頻譜的量子切入 $W $。
+  summary: 將區塊編碼反映轉換成配量逐步解說。
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
   summary: 加入多個 `GeneratorSystem`，以建立新的 GeneratorSystem。
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
@@ -162,9 +158,9 @@ newtypes:
 - uid: microsoft.quantum.simulation.unitary
   summary: 代表單一運算子下的進化。
 metadata:
-  ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 967c27e6c5c8f475e54f7e9d4f3a14594fb04cc5
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215875"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869822"

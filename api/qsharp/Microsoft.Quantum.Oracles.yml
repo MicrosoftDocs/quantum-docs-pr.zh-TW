@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>Summary\n 這個命名空間會提供使用者定義型別，以根據其在配量演算法（例如階段估計和振幅放大）中的預期用途來裝飾各種 oracles 類型。"
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間會提供使用者定義型別，以根據其在配量演算法（例如階段估計和振幅放大）中的預期用途來裝飾各種 oracles 類型。"
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
   summary: 將類型 `StateOracle` 的 oracle 轉換成 `DeterministicStateOracle`。
@@ -10,11 +10,7 @@ functions:
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: 假設有一個代表「黑箱」 oracle 的作業，會傳回代表「黑箱」 oracle 重複多次的「獨立時間」 oracle。
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: >-
-    根據 oracle 的給定狀態來建立反映。
-
-
-    假設 <xref:microsoft.quantum.oracles.deterministicstateoracle>的 oracle $O $ 類型，此函式的結果會反映狀態 $ \ket{\psi} $，其中 $O \ket{0} = \ket{\psi} $。
+  summary: 根據 oracle 的給定狀態來建立反映。
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
   summary: 將類型 `DeterministicStateOracle` 的 oracle 轉換成 `StateOracle`。
 newtypes:
@@ -73,9 +69,9 @@ newtypes:
 
     - 系統註冊 $s $，將會儲存所需的量子狀態 $ \ket{\psi}\_s $。
 metadata:
-  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216096"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869998"

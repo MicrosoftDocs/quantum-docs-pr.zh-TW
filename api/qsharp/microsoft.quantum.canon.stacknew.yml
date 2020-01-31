@@ -3,24 +3,22 @@ uid: microsoft.quantum.canon.stacknew
 name: StackNew
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: 使用指定的容量建立新的空 <xref:microsoft.quantum.canon.resultstack>。
+summary: StackNew 已被取代。
 syntax: 'function StackNew (size : Int) : Microsoft.Quantum.Canon.ResultStack'
 input:
   content: '(size : Int)'
   types:
   - name: size
-    summary: 新堆疊的容量。
     isPrimitive: true
     uid: Int
 output:
   content: Microsoft.Quantum.Canon.ResultStack
   types:
-  - summary: 具有容量 `size` 且長度為0的新 `ResultStack`。
-    uid: microsoft.quantum.canon.resultstack
+  - uid: microsoft.quantum.canon.resultstack
 metadata:
-  ms.openlocfilehash: 4ce9db8cdae4d6c7813a4d5cfbd04e1b8d25cfaf
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bd4180407c93f8d1209bcd786a4db4116c1fc8f2
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222182"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871442"

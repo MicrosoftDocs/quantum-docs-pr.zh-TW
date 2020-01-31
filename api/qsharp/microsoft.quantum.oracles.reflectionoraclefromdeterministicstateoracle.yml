@@ -7,26 +7,26 @@ summary: >-
   根據 oracle 的給定狀態來建立反映。
 
 
-  假設 <xref:microsoft.quantum.oracles.deterministicstateoracle>的 oracle $O $ 類型，此函式的結果會反映狀態 $ \ket{\psi} $，其中 $O \ket{0} = \ket{\psi} $。
+  假設 determinstic 狀態準備是由單一矩陣 $O $ 所表示，則此函式的結果會是 oracle，它會針對 oracle $O $ 所準備的 state $ \ket{\psi} $ 套用反映：也就是 state $ \ket{\psi} $，讓 $O \ket{0} = \ket{\psi} $。
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: oracle
-    summary: 類型為 "DeterministicStateOracle" 的 Oracle
+    summary: 準備狀態 $ \ket{\psi} $ 之複本的 oracle。
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: 反映狀態 $ \ket{\psi} $ 的 `ReflectionOracle`。
+  - summary: 反映狀態 $ \ket{\psi} $ 的 oracle。
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
-- deterministicstateoracle
-- reflectionoracle
+- microsoft.quantum.oracles.deterministicstateoracle
+- microsoft.quantum.oracles.reflectionoracle
 metadata:
-  ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 604c0dab70979e3f429b58168a969a7557e2a0de
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73050321"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76868929"
