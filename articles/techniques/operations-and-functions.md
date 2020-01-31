@@ -1,17 +1,17 @@
 ---
-title: 'Q # 技術-作業和函式 |Microsoft Docs'
-description: 'Q # 技術-作業和函式'
+title: '作業和函數-Q # 技術 |Microsoft Docs'
+description: '作業和函數-Q # 技術'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183449"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820771"
 ---
 # <a name="q-operations-and-functions"></a>Q # 作業和函數
 
@@ -66,7 +66,7 @@ operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
 這些特製化的存在可以宣告為作業簽章的一部分：在下列範例中 `is Adj + Ctl`。 然後編譯器會產生每個這類隱含宣告特製化的對應執行。 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-在上述範例中，`adjoint invert;` 指出 adjoint 特製化是藉由將主體實作為反轉而產生，`controlled adjoint invert;` 表示會藉由反轉指定的執行方式來產生受控制的 adjoint 特製化受控制的特製化。
+在上述範例中，`adjoint invert;` 指出 adjoint 特製化是藉由將主體實作為反轉而產生，`controlled adjoint invert;` 表示會藉由反轉受控制特製化的指定實作為來產生受控制的 adjoint 特製化。
 
 我們會在[更高順序的控制流程](xref:microsoft.quantum.concepts.control-flow)中看到更多的範例。
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 每次呼叫 `U` 時，它在 `target`上會有不同的動作。
 特別的是，編譯器無法保證如果我們將 `adjoint auto` 特製化宣告加入 `U`，`U(target); Adjoint U(target);` 會做為身分識別（也就是不需要 op）。
-這會違反我們在[向量和矩陣](xref:microsoft.quantum.concepts.vectors)中看到的 adjoint 定義，讓能夠在我們呼叫作業的作業中自動產生 adjoint 特製化，<xref:microsoft.quantum.math.randomreal> 會中斷編譯器所提供的保證。;<xref:microsoft.quantum.math.randomreal> 是不存在 adjoint 或控制版本的作業。
+這會違反我們在[向量和矩陣](xref:microsoft.quantum.concepts.vectors)中看到的 adjoint 定義，讓能夠在我們呼叫作業的作業中自動產生 adjoint 特製化，<xref:microsoft.quantum.math.randomreal> 會中斷編譯器所提供的保證;<xref:microsoft.quantum.math.randomreal> 是不存在 adjoint 或控制版本的作業。
 
 另一方面，允許 `Square` 之類的函式呼叫是安全的，因為編譯器可以確保它只需要保留 `Square` 的輸入，才能保持其輸出穩定。
 因此，將盡可能多的傳統邏輯隔離到函式，可讓您輕鬆地在其他函數和作業中重複使用該邏輯。

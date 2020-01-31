@@ -3,24 +3,22 @@ uid: microsoft.quantum.canon.stacklength
 name: StackLength
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: 抓取 <xref:microsoft.quantum.canon.resultstack>中儲存的元素數目。
+summary: StackLength 已被取代。
 syntax: 'function StackLength (stack : Microsoft.Quantum.Canon.ResultStack) : Int'
 input:
   content: '(stack : Microsoft.Quantum.Canon.ResultStack)'
   types:
   - name: stack
-    summary: 要判斷其長度的堆疊。
     uid: microsoft.quantum.canon.resultstack
 output:
   content: Int
   types:
-  - summary: 堆疊上的元素數目。
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: e8f1dbaed90c3c5bfed9d915c7a6433aa4c6f023
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7f76c04d7cd8f7414d2398b63f48f3d05edd8322
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222250"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870949"

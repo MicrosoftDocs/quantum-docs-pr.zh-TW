@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.characterization
 name: Microsoft.Quantum.Characterization
-summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含用於學習配量狀態和進程之屬性的函數和作業，包括 tomography 和階段估計。"
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含用於學習配量狀態和進程之屬性的函數和作業，包括 tomography 和階段估計。"
 operations:
 - uid: microsoft.quantum.characterization.continuousphaseestimationiteration
   summary: 使用單一 oracle 的任意實際動力，執行反復（傳統方式控制）階段估計演算法的單一反復專案。
@@ -11,12 +11,14 @@ operations:
   summary: 在指定準備和測量時，會藉由執行指定數目的試用來估計測量成功（傳回 `Zero`）的頻率。
 - uid: microsoft.quantum.characterization.estimatefrequencya
   summary: 假設有 adjointable 和測量的準備，會藉由執行指定數目的試用來估計該測量成功的頻率（傳回 `Zero`）。
+- uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
+  summary: 針對每個準備狀態複本的兩項作業，會估計每項作業準備的狀態之間重迭的虛數部分。
+- uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
+  summary: 針對每個準備狀態複本的兩項作業，會估計每項操作備妥的狀態之間的平方重迭。
+- uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
+  summary: 針對每個準備狀態複本的兩項作業，會估計每項操作備妥的狀態之間的實際重迭部分。
 - uid: microsoft.quantum.characterization.measureallz
-  summary: >-
-    以 Pauli Z 為基礎，共同測量 qubits 的暫存器。
-
-
-    換句話說，會在指定的暫存器上測量作業 $Z \otimes Z \otimes \cdots \otimes Z $。
+  summary: "\n> [!WARNING]\n> 取代\n\nMeasureAllZ 已被取代。 請改用 @\"microsoft.quantum.measurement.measureallz\"。\n請使用 @\"microsoft.quantum.measurement.measureAllZ\"。"
 - uid: microsoft.quantum.characterization.measureidentity
   summary: 測量 qubits 註冊上的身分識別運算子。
 - uid: microsoft.quantum.characterization.quantumphaseestimation
@@ -26,9 +28,9 @@ operations:
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: 指定特定的通道，以 Pauli 為基礎執行單一 qubit 進程 tomography 測量。
 metadata:
-  ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ff2bee3d5885c4b83a7ba17eeaf578c226dbbf20
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056937"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870676"

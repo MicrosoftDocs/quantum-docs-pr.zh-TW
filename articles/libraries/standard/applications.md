@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864384"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868963"
 ---
 # <a name="applications"></a>應用程式 #
 
@@ -69,15 +69,16 @@ newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[])
 
 ```qsharp
 function TrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : SimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: SimulationAlgorithm {
     ...
 }
+
 function TimeDependentTrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : TimeDependentSimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: TimeDependentSimulationAlgorithm {
     ...
 }
 ```
@@ -99,11 +100,11 @@ Hamiltonian 模擬的一個常見應用就是 adiabatic 狀態準備。 這裡�
 
 ```qsharp
 function InterpolatedEvolution(
-        interpolationTime: Double, 
-        evolutionGeneratorStart: EvolutionGenerator,
-        evolutionGeneratorEnd: EvolutionGenerator,
-        timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit is Adj + Ctl) {
+        interpolationTime : Double, 
+        evolutionGeneratorStart : EvolutionGenerator,
+        evolutionGeneratorEnd : EvolutionGenerator,
+        timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)
+: (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -114,13 +115,13 @@ function InterpolatedEvolution(
 我們也定義了一個有用的作業，可自動執行典型「量子化學」實驗的所有步驟。 比方說，我們有下列各項，它會傳回 adiabatic 狀態準備所產生之狀態的能源預估：
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
-    statePrepUnitary: (Qubit[] => Unit),
-    adiabaticUnitary: (Qubit[] => Unit),
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
+    statePrepUnitary : (Qubit[] => Unit),
+    adiabaticUnitary : (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
-    : Double {
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
+: Double {
 ...
 }
 ```
@@ -174,7 +175,7 @@ $U _a $ 的特徵值是 $ $ U\_\ket{x\_s} = e ^ {2 \ pi i s/r} \ket{x\_s}。 $$
 若要達到 $ （a ^ nx） \text{mod} N $，我們可以直接套用受控制的 $U _ {a ^ n} $，其中我們會計算 $a ^ N \text{mod} N $ 傳統方式以插入量子線路。  
 如需達成這類別模組化算術的線路，請參閱[量子算術檔](./algorithms.md#arithmetic)，特別是我們需要模組化乘冪來執行受控制的 $U\_{a ^ i} $ 作業。
 
-雖然上述線路對應至配量[階段估計](xref:microsoft.quantum.characterization.quantumphaseestimation)，並明確啟用訂單尋找，但我們可以減少所需的 qubits 數目。 我們可以依照[arXiv： quant-ph/0205095v3 的第8頁](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)中所述的順序尋找 Beauregard 的方法，或使用中提供的其中一個階段估計常式。 例如，[健全的階段估計](xref:microsoft.quantum.characterization.robustphaseestimation)也會使用一個額外的 qubit。
+雖然上述線路對應至配量[階段估計](xref:microsoft.quantum.characterization.quantumphaseestimation)，並明確啟用訂單尋找，但我們可以減少所需的 qubits 數目。 我們可以依照[arXiv： quant-ph/0205095v3 的第8頁](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)中所述的順序尋找 Beauregard 的方法，或使用 Microsoft 所提供的其中一個階段估計常式。 例如，[健全的階段估計](xref:microsoft.quantum.characterization.robustphaseestimation)也會使用一個額外的 qubit。
  
 ### <a name="factoring"></a>出來 ###
 「分解」的目標是要判斷兩個整數 $N $ 的主要因素，其中 $N $ 是 $n $ 位數位。  

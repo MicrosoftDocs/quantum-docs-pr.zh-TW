@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: f34233bc17ff68a9e04256959f8d79be2682c34f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5d9038e440a2022547395e889e149a531a7ef818
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184044"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820533"
 ---
 # <a name="jordan-wigner-representation"></a>約旦-Wigner 標記法
 
@@ -25,7 +25,12 @@ Wigner 標記法是直接衍生的。
 回想一下，state $ \ket{0}_j $ 表示微調 orbital $j $ 是空的，而 $ \ket{1}_j $ 表示它已被佔用。
 這表示 qubits 可以自然地儲存指定微調 orbital 的職業。
 接著，$a ^ \ dagger_j \ket{0}_j = \ket{1}_j $ and $a ^ \ dagger_j \ket{1}_j = $0。
-您可以輕鬆地確認 \begin{align} a ^ \ dagger_j & = \begin{bmatrix}0 & 1 \\\ 0 & 0 \end{bmatrix} = \frac{X_j + iY_j}{2}，\nonumber\\\\ a_j & = \begin{bmatrix}0 & 0 \\\ 1 & 0 \end{bmatrix} = \frac{X_j-iY_j}{2}、\end{align}，其中 $X _j $ 和 $Y _j $ 是 Pauli $X $ 和-$Y $ 運算子，其作用於 qubit $j $。
+您可以輕鬆地驗證 \begin{align} ^ \ dagger_j & = \begin{bmatrix}0 & 0 \\\ 1 & 0 \end{bmatrix} = \frac{X_j-iY_j}{2}，\nonumber\\\\ a_j & = \begin{bmatrix}0 & 1 \\\ 0 & 0 \end{bmatrix} = \frac{X_j + iY_j}{2}，\end{align}，其中 $X _j $ 和 $Y _j $ 是以 Pauli $X $ 為目標的 Qubit $Y $ 和-$j $ 運算子。
+
+>[!NOTE]
+> 在 Q # 中，$ \ket{0}$ state 代表 $Z $ 運算子的 + 1 eigenstate。 在物理 $ \ket{0}$ 的某些區域中，代表低能量地面狀態，因此是 $Z $ 運算子的-1 eigenstate。 因此，某些公式可能會與熱門的文獻不同。
+
+在化學程式庫中，我們使用 $ \ket{0}$ 來代表未佔用的微調 orbital。
 這表示針對單一微調 orbital，很容易就能根據量子電腦瞭解的單一矩陣來呈現建立和 annihilation 運算子。
 請注意，雖然 $X $ 和 $Y $ 是單一 $a ^ \dagger $，而 $a $ 則不是。
 我們稍後會看到這不會造成模擬的挑戰。
@@ -40,7 +45,7 @@ $ $ 換句話說，這兩個建立運算子不會視需要進行反上運算。
 因此，藉由將 $Z $ 運算子 interspersing 到運算子的結構中，我們可以模擬正確的反 commutation。
 完整的結構如下所示： 
 
-\begin{align} ^ \ dagger_1 & = \left （\frac{X-iY}{2}\right） \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1，\\\\ ^ \ dagger_2 & = Z\otimes\left （\frac{X-iY}{2}\right） \otimes 1 \ otimes 1 \otimes \cdots \otimes 1，\\\\ ^ \ dagger_3 & = Z\otimes Z\otimes \left （\frac{X-iY}{2}\right） \otimes 1 \otimes \cdots \otimes 1，\\\\ & \vdots\\\\ a ^ \ dagger_N & = Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimesZ\otimes \left （\frac{X-iY}{2}\right）。 \label{eq： JW} \end{align}
+\begin{align} a ^ \ dagger_1 & = \left （\frac{X-iY}{2}\right） \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1，\\\\ ^ \ dagger_2 & = Z\otimes\left （\frac{X-iY}{2}\right） \otimes 1 \ otimes 1 \otimes \cdots \otimes 1，\\\\ ^ \ dagger_3 & = Z\otimes Z\otimes \left （\frac{X-iY}{2}\right） \otimes 1 \otimes \cdots \otimes 1，\\\\ & \vdots\\\\ ^ \ dagger_N & = Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimes Z \otimes \left （\frac{X-iY}{2}\right）。 \label{eq： JW} \end{align}
 
 在 Pauli 運算子方面，表達數位運算子（$n _j $）也很方便。
 幸好，$Z $ operators （稱為 Wigner 字串）的字串會在進行這項替代之後取消。
@@ -56,7 +61,7 @@ $ $ 換句話說，這兩個建立運算子不會視需要進行反上運算。
 這五個類別會對應到不同的方法，我們可以在 Hamiltonian 的單一主體和兩個內文詞彙中挑選 $p、q $ 和 $p、q、r、s $。
 這五個類別，在 $p > q > r > s $ 和實值 orbitals 的情況下，
 
-\begin{align} h_ {pp} a_p ^ \dagger a_p & = \ sum_p \frac{h_ {pp}}{2}（1-Z_p）\\\\ h_ {pq} （a_p ^ \dagger a_q + a ^ \ dagger_q a_p） & = \frac{h_ {pq}}{2}\left （\ prod_ {j = q + 1} ^ {p-1} Z_j \right） \left （X_pX_q + Y_pY_q \right）\\\\ h_ {pqqp} n_p n_q & = \frac{h_ {pqqp}}{4}\left （1-Z_p-Z_q + Z_pZ_q \right）\\\\ H_ {pqqr} & = \frac{h_ {pqqr}}{2}\left （\ prod_ {j =r + 1} ^ {p-1} Z_j \right） \left （X_pX_r + Y_pY_r \right） \left （\frac{1-Z_q}{2}\right）\\\\ H_ {pqrs} & = \frac{h_ {pqrs}}{8}\ prod_ {j = s + 1} ^ {r-1} Z_j \ prod_ {k = q + 1} ^ {p-1} Z_k \Big （XXXX-XXYY +XYXY\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + YXXY + YXYX-YYXX\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + XYYX + YYYY\Big） \end{align}
+\begin{align} h_ {pp} a_p ^ \dagger a_p & = \ sum_p \frac{h_ {pp}}{2}（1-Z_p）\\\\ h_ {pq} （a_p ^ \dagger a_q + a ^ \ dagger_q a_p） & = \frac{h_ {pq}}{2}\left （\ prod_ {j = q + 1} ^ {p-1} Z_j \right） \left （X_pX_q + Y_pY_q \right）\\\\ h_ {pqqp} n_p n_q & = \frac{h_ {pqqp}}{4}\left （1-Z_p-Z_q + Z_pZ_q \right）\\\\ H_ {pqqr}} & \frac{（\ h_ {j =r + 1} ^ {p-1} Z_j \right） \left （X_pX_r + Y_pY_r \right） \left （\frac{1-Z_q}{2}\right）\\\\ H_ {pqrs} & = \frac{h_ {pqrs}}{8}\ prod_ {j = s + 1} ^ {r-1} Z_j \ prod_ {k = q + 1} ^ {p-1} Z_k \Big （XXXX-XXYY + XYXY\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + YXXY + YXYX-YYXX\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + XYYX + YYYY\Big） \end{align}
 
 雖然只是以手動方式產生這類 Hamiltonians 需要套用這些取代規則，但在大型分子驅使分子中可能會包含數百萬 Hamiltonian 詞彙，這是不可行的。
 或者，我們可以根據 Hamiltonian 的 `FermionHamiltonian` 標記法，自動建立 `JordanWignerEncoding`。

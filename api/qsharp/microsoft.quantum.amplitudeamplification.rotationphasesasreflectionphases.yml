@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
+name: RotationPhasesAsReflectionPhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: 將指定為單一 qubit 旋轉的階段，轉換為指定為部分反射的階段。
+syntax: 'function RotationPhasesAsReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+references: >-
+  我們會使用中的慣例
+
+
+  - [ *G.H. Low，Chuang* ](https://arxiv.org/abs/1707.05391) ，用於將單一 qubit 迴圈階段與反映運算子階段相關聯。
+input:
+  content: '(rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases)'
+  types:
+  - name: rotPhases
+    summary: 要轉換成部分反射的單一 qubit 旋轉陣列。
+    uid: microsoft.quantum.amplitudeamplification.rotationphases
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: 一種作業，可執行指定為部分反射的階段。
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+metadata:
+  ms.openlocfilehash: b5f0716988262edb247d5c72a30eab2063727d32
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872728"

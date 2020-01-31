@@ -3,41 +3,16 @@ uid: microsoft.quantum.canon.cnotchaintarget
 name: CNOTChainTarget
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  將 qubits 陣列的同位，計算為目標 qubit。
-
-
-  如果陣列一開始處於 state $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{target}}} $，則最後的狀態是由 $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{target}}} $。
-remarks: >-
-  以下是相同的：
-
-
-  ```qsharp
-
-  CNOTChainTarget(Most(qs), Last(qs));
-
-  ```
-
-
-  與
-
-
-  ```qsharp
-
-  CNOTChain(qs);
-
-  ```
+summary: CNOTChainTarget 已被取代。 請改用 @"microsoft.quantum.canon.applycnotchainwithtarget"。
 syntax: 'operation CNOTChainTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
 input:
   content: '(qubits : Qubit[], targetQubit : Qubit)'
   types:
   - name: qubits
-    summary: 計算同位的 qubits 陣列。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targetQubit
-    summary: "' Qubits ' 的同位檢查是進行 xor 的最終 qubit。"
     isPrimitive: true
     uid: Qubit
 output:
@@ -49,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 26893296ec8fe7ec8d8cc5309e2bd5066f315849
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 691709d2406862885887a1e35d093611063d26cf
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068031"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871289"

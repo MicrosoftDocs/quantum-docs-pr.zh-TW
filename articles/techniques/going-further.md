@@ -1,18 +1,19 @@
 ---
-title: 'Q # 技術-進一步探討 |Microsoft Docs'
-description: 'Q # 技術-進一步'
+title: '進一步瞭解-Q # 技術 |Microsoft Docs'
+description: '進一步瞭解-Q # 技術'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+uid: microsoft.quantum.techniques.going-further
+ms.openlocfilehash: bd2b799d4001e280baccb04158247891b9cbb5bc
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863141"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820193"
 ---
-# <a name="going-further"></a>更進一步 #
+# <a name="going-further"></a>進一步瞭解 #
 
 既然您已瞭解如何在 Q # 中撰寫有趣的配量程式，本節將進一步介紹一些更先進的主題，以供未來使用。
 

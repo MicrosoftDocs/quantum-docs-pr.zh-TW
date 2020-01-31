@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863158"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871612"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -20,6 +20,19 @@ ms.locfileid: "74863158"
 如需安裝指示，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
+
+## <a name="version-01020012831"></a>0\.10.2001.2831 版
+
+*發行日期：2020 年 1 月 29 日*
+
+此版本包含下列項目：
+
+- 新的 Microsoft.Quantum.SDK NuGet 套件，請參閱 [README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md) 中的詳細資訊
+- 新增 .NET Core 3.1 支援，強烈建議您安裝 3.1.100 版，因為使用舊版 .NET Core SDK 版本可能會造成問題
+- 在 Microsoft.Quantum.QsCompiler.Experimental 下提供新的編譯器轉換
+- 在 IQ# 中將輸出狀態向量以 HTML 公開的新功能
+- 已將 EstimateFrequencyA 支援新增至適用於 Hadamard 和 SWAP 測試的 Microsoft.Quantum.Characterization
+- AmplitudeAmplification 命名空間現在使用 Q# 樣式指南
 
 ## <a name="version-01019120501"></a>版本 0.10.1912.0501
 
@@ -154,7 +167,7 @@ ms.locfileid: "74863158"
 此版本重組了程式庫，使其能以一致的方式擴展：
 * 將 Microsoft.Quantum.Primitive 命名空間重新命名為 Microsoft.Quantum.Intrinsic。  這些作業會由目標電腦實作。  Microsoft.Quantum.Primitive 命名空間已被取代。  當程式使用已被取代的名稱呼叫作業和函式時，會有執行階段警告提出建議。
 
-* 將 Microsoft.Quantum.Canon 套件重新命名為 Microsoft.Quantum.Standard。  此套件包含大部分 Q# 程式通用的命名空間。  其中包括：  
+* 將 Microsoft.Quantum.Canon 套件重新命名為 Microsoft.Quantum.Standard。  此套件包含大部分 Q# 程式通用的命名空間。  這包括：  
     - 一般作業的 Microsoft.Quantum.Canon
     - 一般用途算術運算的 Microsoft.Quantum.Arithmetic
     - 作業用來準備量子位元狀態的 Microsoft.Quantum.Preparation
@@ -351,13 +364,13 @@ ms.locfileid: "74863158"
 
 *發行日期：2018 年 6 月 22 日*
 
-此版本包含幾項社群貢獻，以及有所改善的偵錯體驗和增進的效能。  具體而言：
+此版本包含幾項社群貢獻，以及有所改善的偵錯體驗和增進的效能。  具體來說：
 
 * QuantumSimulator 目標電腦的小型和大型模擬的效能改進。
 * 改良的偵錯功能。
 * 社群在 Bug 修正、新的 Helper 函式、作業和新範例等方面的貢獻。
 
-### <a name="performance-improvements"></a>效能改進
+### <a name="performance-improvements"></a>效能改善
 
 這項更新包括所有目標電腦的大量和少量量子位元模擬皆有顯著的效能改善。  經由在 Quantum Development Kit 中作為標準範例的 H<sub>2</sub> 模擬，可發現改善的幅度顯而易見。
 
@@ -433,7 +446,7 @@ dotnet clean
 
 *發行日期：2018 年 2 月 26 日*
 
-此版本提供在更多平台上進行開發的支援、語言互通性，和效能的強化。 具體而言：
+此版本提供在更多平台上進行開發的支援、語言互通性，和效能的強化。 具體來說：
 
 - 支援以 macOS 和 Linux 為基礎的開發。 
 - .NET Core 相容性，包括對 Visual Studio Code 的跨平台支援。
@@ -502,7 +515,7 @@ dotnet clean
 
 - 量子模擬器會使用 OpenMP 來平行處理所需的線性代數。 根據預設，OpenMP 會使用所有可用的硬體執行緒，這表示具有少量量子位元的程式常會執行緩慢，因為所需的協調會阻礙實際的工作。 將環境變數 OMP_NUM_THREADS 設定為較小的數值，即可修正此問題。 一個非常粗略的經驗法則是，1 個執行緒最多可用於 4 個量子位元，而其後的每個量子位元則應使用一個額外的執行緒，但這主要取決於您的演算法。
 
-#### <a name="debugging"></a>Debugging
+#### <a name="debugging"></a>偵錯
 
 - F11 (逐步執行) 在 Q# 程式碼中無法運作。
 - 在中斷點或單一步驟暫停時，Q# 程式碼中醒目提示的程式碼有時並不正確。 醒目提示的程式碼行是正確的，但有時候，醒目提示的開頭和結尾會位於行中不正確的資料行上。

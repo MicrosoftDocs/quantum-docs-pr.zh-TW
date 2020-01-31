@@ -3,17 +3,14 @@ uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
 name: AmpAmpRUSByOracle
 type: operation
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: 固定點振幅放大演算法
-remarks: StartQubits 必須是 $ \ket{0 \cdots 0} $ 狀態。 這項作業會反復查看數個 $2 $ 的查詢，直到達到最大的查詢數目，或找到目標狀態為止。
+summary: AmpAmpRUSByOracle 已被取代。 請改用 @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification"。
 syntax: 'operation AmpAmpRUSByOracle (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
 input:
   content: '(statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[])'
   types:
   - name: statePrepOracle
-    summary: 準備啟動狀態的單一 oracle。
     uid: microsoft.quantum.oracles.stateoracle
   - name: startQubits
-    summary: Qubit register
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -23,9 +20,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: a652d0fc94986552946a438a21bf9bfcba193eea
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a8b3c884b0d42a2c7d45cf42d4077cef486f7815
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215569"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870830"

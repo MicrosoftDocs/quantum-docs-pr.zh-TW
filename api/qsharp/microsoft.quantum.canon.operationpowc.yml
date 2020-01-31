@@ -10,11 +10,11 @@ summary: >-
 
 
   也就是，假設有一個代表閘道 $U $ 的作業，會針對 power $m $ 傳回新作業 $U ^ m $。
-syntax: "function OperationPowC (oracle : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
+syntax: "function OperationPowC (op : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
 input:
-  content: "(oracle : ('T => Unit is Ctl), power : Int)"
+  content: "(op : ('T => Unit is Ctl), power : Int)"
   types:
-  - name: oracle
+  - name: op
     summary: $U $ 的作業，代表要重複的閘道。
     isOperation: true
     input:
@@ -52,9 +52,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: 5bc317597ef660bf92291b690fdb2d255eaaa616
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c8da707ae2a47e427204f95f11040154e0d53e02
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230801"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871255"

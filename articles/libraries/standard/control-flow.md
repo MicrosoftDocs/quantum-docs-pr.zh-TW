@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5e865dbb48029724b6f507ecb63b85d10d80c9a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ff73cef12a3b8c2a6559308dc244c7c2e865ba9f
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185642"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820448"
 ---
 # <a name="higher-order-control-flow"></a>較高順序的控制流程 #
 
@@ -52,9 +52,9 @@ Canon 所提供的其中一個主要抽象概念是反復專案的其中一個�
 ```qsharp
 /// # Summary
 /// Applies $H$ to all qubits in a register.
-operation HAll(register : Qubit[]) : Unit 
-is Adj + Ctl {
-
+operation ApplyHadamardToAll(
+    register : Qubit[])
+: Unit is Adj + Ctl {
     for (qubit in register) {
         H(qubit);
     }
@@ -108,9 +108,9 @@ Canon 所提供的控制流程結構會採用作業和函式做為其輸入，�
 比方說，模式 $UVU ^ {\dagger} $ 在量副程式設計中非常常見，因此 canon 會提供作業 <xref:microsoft.quantum.canon.applywith> 做為此模式的抽象概念。
 此抽象層也可讓您以更有效率的方式 compliation 到線路，因為 `Controlled` 的順序 `U(qubit); V(qubit); Adjoint U(qubit);` 不需要對每個 `U`採取行動。
 若要查看此情況，請讓 $c （U） $ 是代表 `Controlled U([control], target)` 的單一，並讓 $c （V） $ 以相同的方式定義。
-然後適用于任意狀態 $ \ket{\psi} $、\begin{align} c （u） c （V） c （U） ^ \dagger \ket{1} \otimes \ket{\psi} & = \ket{1} \otimes （UVU ^ {\dagger} \ket{\psi}） \\\\ & = （\boldone \otimes u）（c （V）） \ket{1} \otimes \ket{\psi}。
+然後適用于任意狀態 $ \ket{\psi} $、\begin{align} c （u） c （V） c （U） ^ \dagger \ket{1} \otimes \ket{\psi} & = \ket{1} \otimes （UVU ^ {\dagger} \ket{\psi}） \\\\ & = （\boldone \otimes u）（c （V））（\boldone \otimes U ^ \dagger） \ket{1} \otimes \ket{\psi}。
 由 `Controlled`的定義 \end{align}。
-另一方面，\begin{align} c （U） c （V） c （U） ^ \dagger \ket{0} \otimes \ket{\psi} & = \ket{0} \otimes \ket{\psi} \\\\ & = \ket{0} \otimes （UU ^ \dagger \ket{\psi}） \\\\ & = （\boldone \otimes U）（c （V））（\boldone \otimes U ^ \dagger） \ket{0} \otimes \ket{\psi}。
+另一方面，\begin{align} c （U） c （V） c （U） ^ \dagger \ket{0} \otimes \ket{\psi} & = \ket{0} \otimes \ket{\psi} \\\\ & = \ket{0} \otimes （UU ^ \dagger \ket{\psi}） \\\\ & = （\boldone \otimes u）（\boldone \otimes U ^ \dagger） \ket{0} \otimes \ket{\psi}。
 藉由線性 \end{align}，我們可以讓我們以這種方式將所有輸入狀態的 $U $ out 納入考慮。
 也就是 $c （UVU ^ \dagger） = U c （V） U ^ \dagger $。
 由於控制作業通常會耗用很多資源，因此使用受控制的變異，例如 `WithC` 和 `WithCA` 有助於減少需要套用的控制項函子數目。
@@ -123,26 +123,26 @@ Canon 所提供的控制流程結構會採用作業和函式做為其輸入，�
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-同樣地，<xref:microsoft.quantum.canon.bind> 會產生作業，這會依次套用其他作業的順序。
+同樣地，<xref:microsoft.quantum.canon.bound> 會產生作業，這會依次套用其他作業的順序。
 例如，下列是相同的：
 
 ```qsharp
 H(qubit); X(qubit);
-Bind([H, X], qubit);
+Bound([H, X], qubit);
 ```
 
 結合反復專案模式可以讓此功能特別有用：
 
 ```qsharp
 // Bracket the quantum Fourier transform with $XH$ on each qubit.
-ApplyWith(ApplyToEach(Bind([H, X]), _), QFT, _);
+ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
 ### <a name="time-ordered-composition"></a>依時間排序的組合 ###
 
 我們還可以在部分應用程式和傳統函式的角度思考流量控制，也可以根據傳統流量控制來建立更複雜的量子概念模型。
 這種比喻是精確的辨識，因為單一運算子會完全對應到呼叫作業的副作用，因此任何單一運算子的分解會對應到特定的傳統副程式的呼叫順序，會發出指示做為特定的單一運算子。
-在此視圖下，`Bind` 精確地表示矩陣產品，因為 `Bind([A, B])(target)` 相當於 `A(target); B(target);`，而後者則是對應至 $BA $ 的呼叫序列。
+在此視圖下，`Bound` 精確地表示矩陣產品，因為 `Bound([A, B])(target)` 相當於 `A(target); B(target);`，而後者則是對應至 $BA $ 的呼叫序列。
 
 更複雜的範例是[Trotter – plat'home co. 擴充](https://arxiv.org/abs/math-ph/0506007v1)。
 如[資料結構](xref:microsoft.quantum.libraries.data-structures)的 Dynamical 產生器表示一節中所述，Trotter – plat'home co. 擴充提供特別有用的方式來表達矩陣指數。
@@ -183,12 +183,11 @@ DecomposeIntoTimeStepsCA((2, U), 1);
 
 ```qsharp
 operation _ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl),
-        controlRegister : Qubit[],
-        targetRegister: Qubit[]) 
-: Unit 
-is Adj + Ctl {
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl),
+    controlRegister : Qubit[],
+    targetRegister: Qubit[])
+: Unit is Adj + Ctl
 ```
 
 請注意，我們會採用以 `Bool` 陣列表示的位字串，讓我們用來指定要套用至作業 `oracle` 所提供的調節。
@@ -201,6 +200,7 @@ is Adj + Ctl {
 這項結構會精確 `ApplyWith`，因此我們會據此撰寫新作業的本文：
 
 ```qsharp
+{
     ApplyWithCA(
         ApplyPauliFromBitString(PauliX, false, bits, _),
         (Controlled oracle)(_, targetRegister),
@@ -219,8 +219,8 @@ is Adj + Ctl {
 
 ```qsharp
 function ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl)) 
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl))
 : ((Qubit[], Qubit[]) => Unit is Adj + Ctl) {
     return _ControlledOnBitString(bits, oracle, _, _);
 }

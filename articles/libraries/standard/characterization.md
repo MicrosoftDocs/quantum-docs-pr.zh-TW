@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864367"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870343"
 ---
 # <a name="quantum-characterization-and-statistics"></a>量子特性和統計資料 #
 
@@ -43,7 +43,7 @@ ms.locfileid: "74864367"
 接著會使用 `U(m)` 的受控應用程式來準備 state $ \left （R\_1 （m \phi） \ket{+} \right） \ket{\phi} $。
 如同在量子案例中，oracle `U(m)` 的受控制應用程式的效果，與在 $ \ket{+} $ 的未知階段套用 $R _1 $ 的效果完全相同，因此我們可以更簡單的方式來描述 $U $ 的效果。
 或者，此演算法會藉由套用 $R _1 （-m\theta） $ 來取得 state $ \ket{\psi} = \left （R\_1 （m [\phi-\theta]） \ket{+} \right） \ket{\phi} $ $，以旋轉控制項 qubit。
-用來做為 `U(m)` 之控制項的輔助 qubit，接著會以 $X $ 為單位測量，以取得單一傳統 `Result`。
+然後，用來做為 `U(m)` 之控制項的輔助 qubit 會以 $X $ 為單位測量，以取得單一傳統 `Result`。
 
 此時，會從透過反復階段估計取得的 `Result` 值來重建階段，這是一種傳統的統計推斷問題。
 找出最大化所取得之資訊的 $m $ 值，只是統計資料中的問題。
@@ -106,7 +106,7 @@ ms.locfileid: "74864367"
 
 健全的階段估計最重要的功能是與其他大部分有用的變體共用，是 $ \hat{\phi} $ 的重建品質在某種程度上是海森堡有限的。 這表示如果 $ \hat{\phi} $ 與 true 值的偏差是 $ \sigma $，則 $ \sigma $ 會以反比星號調整至 $U $ 所控制的查詢總數 $Q $，亦即 $ \sigma = \mathcal{O} （1/Q） $。 現在，偏差的定義會因不同的估計演算法而有所不同。 在某些情況下，它可能表示至少有 $ \mathcal{O} （1） $ 機率，估計錯誤 $ | \hat{\phi}-\phi |\_\circ\le \sigma $ on a 迴圈量值 $ \circ $。 針對健全的階段估計，如果我們將定期階段解除包裝成單一的有限間隔 $ （-\hat{\phi}-\phi，\pi] $，則偏差就會精確地指向 $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [（\mod\_{2 \ pi} （\pi + \pi）-\pi） ^ 2] $。 更精確地說，健全狀況估計中的標準差符合到差異 $ $ \begin{align} 2.0 \pi/Q \le \sigma \le 2 \ pi/2 ^ {n} \le 10.7 \ pi/Q，\end{align} $ $，其中下限達到 asymptotically 大型 $Q $ 的限制，而上限則是針對小型樣本大小所保證。  請注意，由 `bitsPrecision` 輸入所選取的 $n $ 會隱含定義 $Q $。
 
-其他相關的詳細資料包括只有 $1 $ ancilla qubit 的小空間額外負荷，或程式是非彈性的，這表示所需的量子實驗順序與中繼測量結果無關。 在此和即將推出的範例中，階段估計演算法的選擇很重要，其中一個應該參考檔，例如 @"microsoft.quantum.canon.robustphaseestimation" 和參考的發行集，以取得詳細資訊和其執行方式。
+其他相關的詳細資料包括只有 $1 $ ancilla qubit 的小空間額外負荷，或程式是非彈性的，這表示所需的量子實驗順序與中繼測量結果無關。 在此和即將推出的範例中，階段估計演算法的選擇很重要，其中一個應該參考檔，例如 @"microsoft.quantum.characterization.robustphaseestimation" 和參考的發行集，以取得詳細資訊和其執行方式。
 
 > [!TIP]
 > 有許多範例會使用健全的階段估計。 如需瞭解各種實體系統之接地能源的階段估計，請參閱[ **H2 模擬**範例](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)、 [ **SimpleIsing**範例](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)和[ **Hubbard 模型**範例](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)。
@@ -154,9 +154,9 @@ operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, ei
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
@@ -165,14 +165,16 @@ operation H2EstimateEnergy(
 同樣地，使用隨機的逐步解說階段估計，會以與 canon 所提供的其他演算法大致相同的方式進行：
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 
-operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-
-    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+operation EstimateBayesianPhase(eigenphase : Double) : Double {
+    let oracle = ContinuousOracle(ApplyExampleOracle(eigenphase, _, _));
     using (eigenstate = Qubit()) {
         X(eigenstate);
         // The additional inputs here specify the mean and variance of the prior, the number of

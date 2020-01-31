@@ -1,23 +1,23 @@
 ---
-title: '問 # 技巧-全部整合 |Microsoft Docs'
-description: 問與答技巧-全部整合在一起
+title: '全部整合-Q # 技術 |Microsoft Docs'
+description: '全部整合-Q # 技術'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183262"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820159"
 ---
 # <a name="putting-it-all-together-teleportation"></a>全部放在一起： Teleportation #
 讓我們回到配量[線路](xref:microsoft.quantum.concepts.circuits)中所定義之 teleportation 電路的範例。 我們將使用它來說明我們到目前為止所學到的概念。 以下針對不熟悉理論的使用者提供配量 teleportation 的說明，後面接著 Q # 中的程式碼執行逐步解說。 
 
 ## <a name="quantum-teleportation-theory"></a>量子 Teleportation：理論
-「量子 teleportation」是一種將不明的量子狀態（我們稱為「__訊息__」）從某個位置的 qubit 傳送至另一個位置 qubit 的技術（我們會將這些 qubits 稱為「__這裡__」和「__該處__」，分別為）。 我們可以使用 Dirac 標記法，將__訊息__表示為向量： 
+「量子 teleportation」是一種將不明的量子狀態（我們將其稱為「__訊息__」）從某個位置的 qubit 傳送至另一個位置中 qubit 的技術（我們會分別將這些 qubits 稱為「__此處__」和「此處」）。 我們可以使用 Dirac 標記法，將__訊息__表示為向量： 
 
 $ $ \ket{\psi} = \Alpha\ket{0} + \Beta\ket{1} $ $
 
@@ -125,7 +125,7 @@ operation Teleport(msg : Qubit, there : Qubit) : Unit {
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>步驟1：建立光子狀態
-然後，我們可以使用 @"microsoft.quantum.primitive.h" 和 @"microsoft.quantum.primitive.cnot" 作業，在 `here` 和 `there` 之間建立光子組：
+然後，我們可以使用 @"microsoft.quantum.intrinsic.h" 和 @"microsoft.quantum.intrinsic.cnot" 作業，在 `here` 和 `there` 之間建立光子組：
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ operation Teleport(msg : Qubit, there : Qubit) : Unit {
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>步驟 3 & 4：測量並解讀結果
-最後，我們會使用 @"microsoft.quantum.primitive.m" 來執行測量，並執行必要的閘道作業，以取得所需的狀態，如 `if` 的語句所表示：
+最後，我們會使用 @"microsoft.quantum.intrinsic.m" 來執行測量，並執行必要的閘道作業，以取得所需的狀態，如 `if` 的語句所表示：
 
 ```qsharp
         // Measure out the entanglement

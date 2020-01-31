@@ -6,23 +6,22 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: ae0c0ec2e677be03dc8dc1497dc62ad9034295a4
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442416"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820363"
 ---
 # <a name="width-counter"></a>Width 計數器
 
 `Width Counter` 會計算每個作業所配置和借用的 qubits 數目。
-`Microsoft.Quantum.Primitive` 命名空間中的所有作業都是以單一 qubit 旋轉、T 閘道、單一 qubit Clifford 閘道、CNOT-CONTAINS 閘道，以及多 qubit Pauli 可預見值的度量來表示。 某些基本作業可以配置額外的 qubits。 例如，將控制的 `X` 閘道或控制 `T` 閘道相乘。 讓我們計算乘以控制 `X` 閘道的實值所配置的額外 qubits 數目：
+`Microsoft.Quantum.Intrinsic` 命名空間中的所有作業都是以單一 qubit 旋轉、T 閘道、單一 qubit Clifford 閘道、CNOT-CONTAINS 閘道，以及多 qubit Pauli 可預見值的度量來表示。 某些基本作業可以配置額外的 qubits。 例如，將控制的 `X` 閘道或控制 `T` 閘道相乘。 讓我們計算乘以控制 `X` 閘道的實值所配置的額外 qubits 數目：
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Intrinsic;
 open Microsoft.Quantum.Arrays;
-operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
-
+operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
     using(qubits = Qubit[numberOfQubits]) {
         Controlled X (Rest(qubits), Head(qubits));
     } 
@@ -38,20 +37,20 @@ var config = new QCTraceSimulatorConfiguration();
 config.useWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
-var res = MultiControlledXDriver.Run(sim, totalNumberOfQubits).Result;
+var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
 
 double allocatedQubits = 
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.ExtraWidth,
         functor: OperationFunctor.Controlled); 
 
 double inputWidth =
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.InputWidth,
         functor: OperationFunctor.Controlled);
 ```
 
-程式的第一個部分會 `MultiControlledXDriver`執行。 在第二個部分中，我們使用方法 `QCTraceSimulator.GetMetric` 來取得已配置的 qubits 數目，以及控制 `X` 接收為輸入的 qubits 數目。 
+程式的第一個部分會 `ApplyMultiControlledX`執行。 在第二個部分中，我們使用方法 `QCTraceSimulator.GetMetric` 來取得已配置的 qubits 數目，以及控制 `X` 接收為輸入的 qubits 數目。 
 
 最後，若要輸出由 width 計數器收集的所有統計資料（CSV 格式），我們可以使用下列內容：
 ```csharp

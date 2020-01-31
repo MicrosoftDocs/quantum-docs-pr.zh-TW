@@ -1,29 +1,29 @@
 ---
 title: '問 # 標準程式庫-演算法 |Microsoft Docs'
-description: 'Q # 標準程式庫'
+description: Q# 標準程式庫
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 61efddb9e7199543370ffd66d08f78ec013f4f79
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185693"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821009"
 ---
 # <a name="quantum-algorithms"></a>量子演算法 #
 
-## <a name="amplitude-amplification"></a>調幅放大 ##
+## <a name="amplitude-amplification"></a>幅度放大 ##
 
 *振幅放大*是量子運算的基本工具之一。 這是基礎 Grover 搜尋、振幅估計和許多量子機器學習演算法的基本概念。  有許多變化，而在 Q # 中，我們提供了以部分反射為基礎的遺忘式振幅放大的一般版本，以允許應用程式的最廣泛區域。
 
-在振幅放大背後的主要概念，是藉由執行一系列反射來擴展所需結果的機率。  這些反射會將初始狀態旋轉到想要的目標狀態，通常稱為標示的狀態。  具體而言，如果測量初始狀態的機率是 $ \sin ^ 2 （\theta） $，然後在套用振幅放大 $m $ 倍，成功的機率就會變成 $ \sin ^ 2 （（2m + 1） \theta） $。  這表示如果 $ \theta = \ pi/[2 （2n + 1）] $ 適用于某些 $n $ 的值，則振幅放大能夠在 $n $ 反覆運算幅度放大之後，提高成功到 $100\\% $ 的機率。  由於 $ \theta = \sin ^{-1}（\sqrt{\Pr （success）}） $ 這表示取得成功時所需的反復專案數，其 quadratically 低於使用隨機尋找標記狀態時所需的預期數目抽樣.
+在振幅放大背後的主要概念，是藉由執行一系列反射來擴展所需結果的機率。  這些反射會將初始狀態旋轉到想要的目標狀態，通常稱為標示的狀態。  具體而言，如果測量初始狀態的機率是 $ \sin ^ 2 （\theta） $，然後在套用振幅放大 $m $ 倍，成功的機率就會變成 $ \sin ^ 2 （（2m + 1） \theta） $。  這表示如果 $ \theta = \ pi/[2 （2n + 1）] $ 適用于某些 $n $ 的值，則振幅放大能夠在 $n $ 反覆運算幅度放大之後，提高成功到 $100\\% $ 的機率。  由於 $ \theta = \sin ^{-1}（\sqrt{\Pr （success）}） $ 這表示取得成功所需的反復專案數目，會 quadratically 低於使用隨機取樣來以非決定性的方式尋找標示的狀態所需的數目。
 
 振幅放大的每次反覆運算都需要指定兩個反映運算子。 具體而言，如果 $Q $ 是「幅度放大」會逐一查看並 $P _0 $ 是在初始子空間上的投影機運算子，而 $P _1 $ 是投影機放在標示的子空間上，然後 $Q =-（\boldone-2P_0）（\boldone-2P_1） $。  回想一下，投影機是具有特徵值 $ + $1 和 $0 $ 的 Hermitian 運算子，因此 $ （\boldone-2P_0） $ 是單一的，因為它有一個屬於 unity 根的特徵值（在此案例中為 $ \pm $1）。 例如，假設 Grover 的搜尋案例中的初始狀態 $H ^ {\otimes n} \ket{0}$ 並標示 state $ \ket{m} $、$P _0 = H ^ {\otimes n} \ket{0}\bra{0}H ^ {\otimes n} $ 和 $P _1 = \ket{m}\bra{m} $。  在大部分的振幅放大應用程式中 $P _0 $ 將會成為初始狀態的投影機，這表示 $P _0 = \boldone-2 \ ket {\ psi} \ bra {\ psi} $ 適用于某些向量 $ \ket{\psi} $;不過，對於遺忘式的振幅 amplication $P _0 $ 通常會投射到許多配量狀態（也就是 $ + $1 eigenvalue 的多重性，$P _0 $ 大於 $1 $）。
 
-在振幅放大後的邏輯會直接從 $Q $ 的特徵分解。  具體而言，$Q $ 的特徵向量 $ （初始狀態具有非零的支援）可以顯示為 $ + $1 特徵向量的線性組合，$P _0 $ 和 $P _1 $。  具體而言，幅度放大的初始狀態（假設它是 $P _0 $ 的 $ + $1 eigenvector）可以寫成 $ $ \ket{\psi} = \frac{-i}{\sqrt{2}} \left （e ^ {i\theta} \ ket {\ psi_ +} + e ^ {-i\theta} \ ket {\ psi_-} \right），$ $ where $ \ket{\ psi_ \pm} $ $Q $ with 特徵值 $e ^ {\pm 2i \ theta} $ 的特徵向量，而且只支援 $P 特徵向量 $ 和 $P _1 $ 的 $ + $1 _0。  特徵值是 $e ^ {\pm i \theta} $ 的事實，意味著運算子 $Q $ 會在兩個投影機所指定的二維子空間中執行旋轉，以及旋轉角度為 $ 2 \ theta $ 的初始狀態。  這就是為什麼在 $m $ 反復 $Q $ 的成功機率為 $ \sin ^ 2 （[2m + 1] \theta） $ 之後。
+在振幅放大後的邏輯會直接從 $Q $ 的特徵分解。  具體而言，$Q $ 的特徵向量 $ （初始狀態具有非零的支援）可以顯示為 $ + $1 特徵向量的線性組合，$P _0 $ 和 $P _1 $。  具體而言，幅度放大的初始狀態（假設它是 $P _0 $ 的 $ + $1 eigenvector）可以寫成 $ $ \ket{\psi} = \frac{-i}{\sqrt{2}} \left （e ^ {i\theta} \ ket {\ psi_ +} + e ^ {-i\theta} \ ket {\ psi_-} \right）、$ $，其中 $ \ket{\ psi_ \pm} $ 特徵向量 $Q $ with 特徵值 $e ^ {\pm 2i \ theta} $，而且只支援 $P 特徵向量 $ 和 $P _1 $ 的 $ + $1 _0。  特徵值是 $e ^ {\pm i \theta} $ 的事實，意味著運算子 $Q $ 會在兩個投影機所指定的二維子空間中執行旋轉，以及旋轉角度為 $ 2 \ theta $ 的初始狀態。  這就是為什麼在 $m $ 反復 $Q $ 的成功機率為 $ \sin ^ 2 （[2m + 1] \theta） $ 之後。
 
 另一個很實用的屬性，就是 eigenvalue $ \theta $ 與初始狀態標示的機率直接相關（在此情況下，$P 的 _0 $ 只會放在初始狀態）。  由於 $Q $ 的 eigenphases 是 $ 2 \ theta = 2 \ sin ^{-1}（\sqrt{\Pr （success）}） $，因此，如果我們將階段估計套用到 $Q $，我們就可以瞭解單一量副程式成功的機率。  這項功能很有用，因為它需要 quadratically 較少的量副程式應用程式，以瞭解比其他方式需要的成功機率。
 
@@ -47,7 +47,7 @@ ms.locfileid: "73185693"
 此外，配量*傅立葉轉換*（QFT）的效率遠超過傳統電腦上的可能結果，使其成為設計配量演算法時的第一個選擇工具。
 
 做為 QFT 的大致一般化，我們提供了 <xref:microsoft.quantum.canon.approximateqft> 作業，可讓您藉由剪除所需演算法精確度不一定需要的旋轉來進行進一步的優化。
-大約的 QFT 需要 dyadic $Z $-輪替作業 <xref:microsoft.quantum.primitive.rfrac>，以及 <xref:microsoft.quantum.intrinsic.h> 作業。
+大約的 QFT 需要 dyadic $Z $-輪替作業 <xref:microsoft.quantum.intrinsic.rfrac>，以及 <xref:microsoft.quantum.intrinsic.h> 作業。
 假設輸入和輸出是以位元組由大到小的編碼方式進行編碼（最低位/qubit 是在左邊，與[ket 標記法](xref:microsoft.quantum.concepts.dirac)相同）。
 近似值參數 $a $ 決定 $Z $-輪替的剪除層級，也就是 $a \in [0 ... n] $。
 在此情況下，所有 $Z $-輪替 $ 2 \ pi/2 ^ k $，其中 $k > $ 會從 QFT 迴圈中移除。
@@ -60,9 +60,9 @@ ms.locfileid: "73185693"
 
 $ $ \operatorname{Add} （b） \ket{a} = \ket{a + b}。
 $ $ 這個基本的產生程式線路比 incrementer 更多。
-它可以轉換成具有兩個配量輸入的加入器，透過 $ $ \operatorname{Add}\ket{a}\ket{b} = \ket{a}\ket{a + b}，$ $ $n 使用 adders 格式為 \begin{align} \operatorname{Add} \ket{a} \ket{b} & = \Lambda\_{a\_0} \left （\operatorname{Add} （1） \right） \Lambda\_{a\_1} \left （\operatorname{Add} （2） \right） \Lambda\_{a\_2} \left （\operatorname{Add} （4） \right） \cdots \Lambda\_{a\_{n-1}} \left （\運算子名稱 {Add} （{{n-1}}） \right） \ket{a}\ket{b} \\\\ & = \ket{a} \ket{b + a}、\end{align} for $n $ bit integer $a $ and $b $ 和加法模數 $ 2 ^ n $。  回想一下，標記法 $ \Lambda\_x （A） $ 代表任何作業 $A $，到該作業的受控制版本，並以 qubit $x $ 作為控制項。
+您可以透過 $ $ \operatorname{Add}\ket{a}\ket{b} = \ket{a}\ket{a + b} 將它轉換成具有兩個配量輸入的加入器，$ $ 使用格式為 \begin{align} \operatorname{Add} \ket{a} \ket{b} adders 的 $n $ 受控制應用程式 & = \Lambda\_{a\_0} \left （\operatorname{Add} （1） \right） \Lambda\_{a\_1} \left （\operatorname{Add} （2） \right） \Lambda\_{a\_2} \left （\operatorname{Add} （4） \right） \cdots \Lambda\_{a\_{n-1}} \left （\運算子名稱 {Add} （{{n-1}}） \right） \ket{a}\ket{b} \\\\ & = \ket{a} \ket{b + a}、\end{align} for $n $ bit integer $a $ and $b $ 和加法模數 $ 2 ^ n $。  回想一下，標記法 $ \Lambda\_x （A） $ 代表任何作業 $A $，到該作業的受控制版本，並以 qubit $x $ 作為控制項。
 
-同樣地，傳統方式控管的乘法（這是快速鍵的分解演算法不可或缺的模組化形式）可以使用一系列的受控制新增來執行： \begin{align} \operatorname{Mult} （a） \ket{x}\ket{b} & = \Lambda\_{x\_0} \left （\operatorname{Add} （2 ^ 0 a） \right） \Lambda\_{a\_1} \left （\operatorname{Add} （2 ^ 1a） \right） \Lambda\_{a\_2} \left （\operatorname{Add} （2 ^ 2 a） \right） \cdots \Lambda\_{x\_{n-1}} \left （\operatorname{Add} （{2 ^ {n-1}} a） \right） \ket{x}\ket{b} \\\\ & = \ket{x}\ket{b + ax}。
+同樣地，您可以使用類似的一系列受控制新增來執行傳統方式控制乘法（這是快速鍵的分解演算法不可或缺的模組化形式）： \begin{align} \operatorname{Mult} （a） \ket{x}\ket{b} & = \Lambda\_{x\_0} \left （\operatorname{Add} （2 ^ 0 a） \right） \Lambda\_{a\_1} \left （\operatorname{Add} （2 ^ 1a） \right） \Lambda\_{a\_2} \left （\operatorname{Add} （2 ^ 2 a） \right） \cdots \Lambda\_{x\_{n-1}} \left （\operatorname{Add} （{2 ^ {n-1}} a） \right） \ket{x}\ket{b} \\\\ & = \ket{x}\ket{b + ax}。
 \end{align} 有一個奧妙在配量電腦上有乘法，您可能會注意到上面的 $ \operatorname{Mult} $ 定義。  不同于新增，此線路的量子版本會將輸入的產品儲存在輔助暫存器中，而不是輸入暫存器中。  在此範例中，會使用值 $b $ 初始化暫存器，但通常會開始保留值零。  這在中是必要的，因為一般而言，一般 $a $ 和 $x $ 不會有乘法的反向。  由於所有的量子作業（儲存量測）都是可復原的，因此我們需要保留足夠的資訊來反轉乘法。  基於這個理由，結果會儲存在不同的陣列中。  將無法復原之作業的輸出（例如乘法）儲存在個別的暫存器中，在 Charlie Bennett 之後稱為「Bennett 技巧」，而且是可還原和量子運算的基本工具。
 
 許多配量線路已針對加法提出建議，而且每個電路都會根據 qubits （空間）數目和所需的閘道作業數（時間）來探索不同的取捨。  我們在下方回顧兩個高空間效率的 adders，稱為 Draper 的「進行」和「Beauregard」。
@@ -76,7 +76,7 @@ $ $ 如果我們定義 $ $ \ket{\phi\_k （a）} = \frac{1}{\sqrt{2}} \left （\
 $ $ 執行轉換程式的路徑會在觀察到輸入的總和可以寫成 $ $ \ket{a + b} = \operatorname{QFT} ^{-1}\ket{\phi\_1 （a + b）} \otimes \cdots \otimes \ket{\phi\_n （a + b）} 之後變得清楚。
 $ $ $B $ 和 $a $ 的整數可以藉由使用 $b $ 作為控制項的位，在分解中的每個 qubits 上執行控制階段旋轉來新增。
 
-請注意，對於任何整數 $j $ 和 real $x $、$e ^ {i2\pi （x + j）} = e ^ {i2\pi x} $，都可以進一步簡化這項擴充。  這是因為如果您在圓圈中旋轉 $ 360 ^ {\circ} $ 度數（$ 2 \ pi $ radians），就會精確地結束您的開始位置。  $E ^ {i2\pi x} $ 的 $x $ 唯一重要的部分，就是 $x $ 的小數部分。  具體而言，如果我們的 binary 擴充形式是 $x = y +0. x\_0x\_2 \ ldots x\_n $ then $e ^ {i2\pi x} = e ^ {i2\pi （0. x\_0x\_2 \ ldots x\_{n-1}）} $，因此 $ $ \ket{\phi\_k （a + b）} = \frac{1}{\sqrt{2}} \left （\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right）。 $ $ 這表示如果我們以遞增的方式執行加法張量 $ \ket{a} $ 的傅立葉轉換時的因素，然後隨著 $k $ 減少，旋轉數目會縮小。  這會大幅減少在「增加項」中所需的量子閘道數目。  我們代表以 $ \operatorname{QFT} ^{-1} \left （\phi\\\!\operatorname{ADD}\right） \operatorname{QFT} $ 形式組成 Draper 加入程式的傅立葉轉換、階段新增和反向傅立葉轉換步驟。 以下是使用這種簡化來執行整個程式的量子線路。
+請注意，對於任何整數 $j $ 和 real $x $、$e ^ {i2\pi （x + j）} = e ^ {i2\pi x} $，都可以進一步簡化這項擴充。  這是因為如果您在圓圈中旋轉 $ 360 ^ {\circ} $ 度數（$ 2 \ pi $ radians），就會精確地結束您的開始位置。  $E ^ {i2\pi x} $ 的 $x $ 唯一重要的部分，就是 $x $ 的小數部分。  具體而言，如果我們有格式的二進位擴充 $x = y +0. x\_0x\_2 \ ldots x\_n $ then $e ^ {i2\pi x} = e ^ {i2\pi （0）。 x\_0x\_2 \ ldots x\_{n-1}）} $，因此 $ $ \ket{\phi\_k （a + b）} = \frac{1}{\sqrt{2}} \left （\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right）。 $ $ 這表示如果我們藉由遞增每個張量 $ \ket{a} $ 的傅立葉轉換時的因素，然後隨著 $k $ 減少，旋轉數目會縮小。  這會大幅減少在「增加項」中所需的量子閘道數目。  我們代表以 $ \operatorname{QFT} ^{-1} \left （\phi\\\!\operatorname{ADD}\right） \operatorname{QFT} $ 形式組成 Draper 加入程式的傅立葉轉換、階段新增和反向傅立葉轉換步驟。 以下是使用這種簡化來執行整個程式的量子線路。
 
 ![顯示為「電路圖」的 Draper](~/media/draper.png)
 
@@ -97,20 +97,20 @@ Beauregard 的加入載入項會使用 Draper 的加入或更具體的 $ \phi\\\
 
 如需詳細資訊，請參閱[Roetteler、Beth](http://doi.org/10.1007/s00200-008-0072-2 )和[Coppersmith](https://arxiv.org/abs/quant-ph/0201067)。
 
-### <a name="quantum-phase-estimation"></a>量子階段估計 ###
+### <a name="quantum-phase-estimation"></a>量子相位估算法 ###
 
 配量傅立葉轉換的一個特別重要應用，是瞭解單一運算子的特徵值，這是一個稱為「*階段估計*」的問題。
 請考慮使用單一 $U $ 和 state $ \ket{\phi} $，讓 $ \ket{\phi} $ 是 $U $ 的 eigenstate，其中包含未知的 eigenvalue $ \phi $、\begin{equation} U\ket {\ phi} = \phi\ket{\phi}。
 \end{equation} 如果我們只有 $U $ 做為 oracle 的存取權，我們就可以藉由使用對受控制作業的目標所套用的 $Z $ 旋轉，來學習階段 $ \phi $，將其傳播回控制項上。
 
-假設 $V $ 是受控制的 $U $ 應用程式，因此 \begin{align} V （\ket{0} \otimes \ket{\phi}） & = \ket{0} \otimes \ket{\phi} \\\\ \textrm{和} V （\ket{1} \otimes \ket{\phi}） & = e ^ {i \phi} \ket{1} \otimes \ket{\phi}.
+假設 $V $ 是受控制的 $U $ 應用程式，因此 \begin{align} V （\ket{0} \otimes \ket{\phi}） & = \ket{0} \otimes \ket{\phi} \\\\ \textrm{和} V （\ket{1} \otimes \ket{\phi}） & = e ^ {i \phi} \ket{1} \otimes \ket{\phi}。
 \end{align} Then，by 線性，\begin{align} V （\ket{+} \otimes \ket{\phi}） & = \frac{（\ket{0} \otimes \ket{\phi}） + e ^ {i \phi} （\ket{1} \otimes \ket{\phi}）} {\sqrt{2}}。
 \end{align} 我們可以收集詞彙以尋找 \begin{align} V （\ket{+} \otimes \ket{\phi}） & = \frac{\ket{0} + e ^ {i \phi} \ket{1}} {\sqrt{2}} \otimes \ket{\phi} \\\\ & = （R_1 （\phi） \ket{+}） \otimes \ket{\phi}，\end{align}，其中 $R _1 $ 是 <xref:microsoft.quantum.intrinsic.r1> 作業所套用的單一。
 以不同的方式放置，套用 $V $ 的效果與將 $R _1 $ 與未知的角度一起套用，即使我們只有以 oracle 的方式存取 $V $ 也一樣。
 因此，在本討論的其餘部分，我們將根據 $R _1 （\phi） $ 來討論階段估計，我們使用所謂的*階段 kickback*來實現。
 
 由於控制項和目標暫存器在此程式之後仍然 untangled，因此我們可以重複使用 $ \ket{\phi} $ 做為受控制應用程式的目標，$U ^ $2 來準備第二個控制項 qubit 的狀態 $R _1 （2 \phi） \ket{+} $。
-以這種方式繼續進行，我們可以取得表單 \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 （2 ^ j \phi） \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left （\ket{0} + \exp （i 2 ^ {j} \phi） \ket{1}\right） \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp （i \phi k） \ket{k} \end{align}，其中 $n $ 是我們所需的精確度位數，而我們已使用 ${} \propto {}$ 來表示我們已抑制 $ 的正規化因數1/\sqrt{2 ^ n} $。
+以這種方式繼續進行，我們可以取得表單 \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 （2 ^ j \phi） \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left （\ket{0} + \exp （i 2 ^ {j} \phi） \ket{1}\right） \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp （i \phi k） \ket{k} \end{align}，其中 $n $ 是我們需要的精確度位數，我們使用 ${} \propto {}$ 來表示我們已抑制 $ 的正規化因數1/\sqrt{2 ^ n} $。
 
 如果我們假設 $ \phi = 2 \pi p/2 ^ k $ 適用于 integer $p $，則我們會將它辨識為 $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots . p_n} $，其中 $p _j $ 是 $2 \textrm{th}} \pi $ 的 $j ^ {\phi $ bit。
 套用配量傅立葉轉換的 adjoint 時，我們會取得編碼為配量狀態之階段的二進位標記法。

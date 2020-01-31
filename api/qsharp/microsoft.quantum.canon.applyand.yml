@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyand
+name: ApplyAnd
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  只有在兩個控制項 qubits 都處於1狀態時，才反轉指定的目標 qubit，並使用測量來執行 adjoint 作業。
+
+
+  只有當兩個控制項都是1，但假設 `target` 處於狀態0時，才會反轉 `target`。  作業具有 T 計數4，T-深度2，而且不需要協助程式 qubit，因此，如果已知 `target` 為0，則最好是 CCNOT 作業。  此作業的 adjoint 是以度量為基礎，而且不需要任何 T 閘道。
+
+
+  這項作業受控制的應用程式不需要 helper qubit，`2^c` `Rz` 的閘道，而且也不會針對深度優化，其中 `c` 是整體控制項 qubits 的數目，包括來自 `ApplyAnd` 作業的兩個控制項。  受 adjoint 控制的應用程式需要 `2^c - 1` `Rz` 閘道（具有兩倍的非 adjoint 作業大小）、沒有 helper qubit，而且未針對深度優化。
+syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+references: >-
+  - Cody： "Novel Toffoli 閘道的結構"，Phys。87，022328，2013 [arXiv： 1212.5069](https://arxiv.org/abs/1212.5069) doi： 10.1103/PhysRevA. 87.022328
+
+  - Craig Gidney： "減半量子加法的成本"，量子2，page 74，2018 [arXiv： 1709.06648](https://arxiv.org/abs/1709.06648) doi： 10.1103/PhysRevA. 85.044302
+
+  - Mathias Soeken：「量子 Oracle 線路和聖誕樹狀結構模式」，[來自 Decemer 19，2019的 Blog 文章](https://msoeken.github.io/blog_qac.html)（注意：說明多個受控制的結構）
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    summary: 第一個控制項 qubit
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: 第二個控制項 qubit
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: 目標輔助 qubit;必須處於狀態0
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872983"

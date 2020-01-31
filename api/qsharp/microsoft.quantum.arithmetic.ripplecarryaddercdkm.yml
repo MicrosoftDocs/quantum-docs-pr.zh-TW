@@ -6,6 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   可還原的就地 ripple-加入兩個整數。
 
+
   假設在 LittleEndian 中編碼的兩個 $n $ bit 整數 `xs` 和 `ys`，而 qubit 包含，則作業會計算兩個整數的總和，其中結果的 $n $ 最低位會保留在 `ys` 中，而執行位則是進行 xor 至 qubit `carry`。
 remarks: 這項作業的功能與 RippleCarryAdderD 相同，但只會使用一個 ancilla qubit，而不是 $n $。
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
@@ -34,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2d973659a9457c301ba65a282e4fd4b627c93671
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bc5a7af8534741cab8e7b18a404b1745454a20c4
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218476"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871357"

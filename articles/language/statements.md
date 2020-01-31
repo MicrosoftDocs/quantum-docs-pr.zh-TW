@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5bcbee868c76aaf53d0b7969e6e634da62689aaa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184860"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821060"
 ---
 # <a name="statements-and-other-constructs"></a>語句和其他結構
 
@@ -54,8 +54,7 @@ ms.locfileid: "73184860"
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
@@ -90,7 +89,6 @@ operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
@@ -181,7 +179,7 @@ for (i in 1 .. 2 .. 10) {
 所有二元運算子都有類似的語句，其中左邊的型別符合運算式型別。 這會提供一個簡單的方法來累積值：
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
@@ -193,7 +191,7 @@ for (q in qubits) {
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -209,19 +207,17 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 在陣列的案例中，我們的標準程式庫包含許多常見陣列初始化和操作需求所需的工具，因此可協助避免必須在一開始就更新陣列專案。 Update-重新指派語句會在需要時提供替代方法：
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -236,10 +232,9 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 函式
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
@@ -249,15 +244,15 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 例如，您可以使用 `Microsoft.Quantum.Arrays`中的函式 `ConstantArray` 來簡化，並傳回復制和更新運算式：
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
 ### <a name="binding-scopes"></a>系結範圍
 
 一般而言，符號系結會超出範圍，而且會在其發生的語句區塊結尾處變成無法執行。
-此規則有兩個例外狀況：
+這項規則有兩個例外狀況：
 
 - `for` 迴圈之迴圈變數的系結是在 for 迴圈主體的範圍內，而不是在迴圈結束之後。
 - `repeat`/`until` 迴圈（主體、測試和修復）的三個部分會視為單一範圍，因此在本文中系結的符號會在測試和修復中提供。
@@ -330,8 +325,8 @@ if (a == b) {
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -359,13 +354,13 @@ for ((index, measured) in results) {
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
@@ -374,25 +369,25 @@ fixup {
 請注意，完成修復的執行會結束語句的範圍，因此在本文或修復期間所做的符號系結，無法用於後續的重複。
 
 例如，下列程式碼是使用 Hadamard 和 T 閘道 $V _3 = （\boldone + 2 i Z）/\sqrt{5}$ 執行重要旋轉閘道的概率電路。
-迴圈會平均終止8/5 重複。
+迴圈會在 $ \frac 中終止，{8}平均 {5}$ 重複。
 如需詳細資訊，請參閱[*重複直到成功：單一 qubit unitaries 的非決定性分解*](https://arxiv.org/abs/1311.1074)（Paetznick 和 Svore，2014）。
 
 ```qsharp
-using (anc = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
@@ -480,7 +475,7 @@ return ();
 return (results, qubits);
 ```
 
-### <a name="fail"></a>不合格
+### <a name="fail"></a>失敗
 
 Fail 語句會結束執行作業，並將錯誤值傳回給呼叫者。
 其中包含關鍵字 `fail`，後面接著字串和結尾的分號。
@@ -519,15 +514,15 @@ Qubits 應該位於語句區塊結尾的計算 `Zero` 狀態;建議使用模擬�
 例如，
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-### <a name="dirty-qubits"></a>已變更 Qubits
+### <a name="borrowed-qubits"></a>借用的 Qubits
 
 `borrowing` 語句是用來取得暫時使用的 qubits。 語句包含關鍵字 `borrowing`，後面接著左括弧 `(`、系結、右括弧 `)`，以及可使用 qubits 的語句區塊。
 系結會遵循與 `using` 語句中的相同模式和規則。
@@ -535,10 +530,10 @@ using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
 例如，
 
 ```qsharp
-borrowing (q = Qubit()) {
+borrowing (qubit = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
@@ -547,8 +542,7 @@ borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
 借方會認可，使 qubits 處於借用時的相同狀態，也就是其在語句區塊開頭和結尾的狀態應該是相同的。
 此狀態特別不一定是傳統狀態，因此在大部分情況下，借用範圍不應包含測量。 
 
-這種 qubits 通常稱為「中途 ancilla」。
-如需已中途 Svore 使用的範例，請參閱[*使用具有以 Toffoli 為基礎的模組化乘法*](https://arxiv.org/abs/1611.07995)（Haner、Roetteler 和 ancilla 2017）的 2n + 2 qubits 進行的分解。
+如需借用 Svore 使用的範例，請參閱[*使用具有以 Toffoli 為基礎的模組化乘法*](https://arxiv.org/abs/1611.07995)（Haner、Roetteler 和 qubit 2017）的 2n + 2 qubits 進行的分解。
 
 當借用 qubits 時，系統會先嘗試從使用中的 qubits 填入要求，但在 `borrowing` 語句的本文中不會存取。
 如果沒有足夠的 qubits，則會配置新的 qubits 來完成要求。

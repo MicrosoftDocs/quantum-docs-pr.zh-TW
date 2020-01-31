@@ -3,32 +3,22 @@ uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
 name: AmpAmpByOraclePhases
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: 以 oracles 進行部分反射的振幅放大。
-remarks: >-
-  這會在開始和目標狀態的形式上，比 `AmpAmpByReflectionPhases`更嚴格的條件。
-
-  假設目標狀態是以 $ \ket{1}\_f $ 標示。
-
-  假設 \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ text {target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，\end{align} 在大多數情況下，`flagQubit` 和 `ancillaRegister` 會在 state $ \ket{0}\_{f} \ket{0}\_s $ 中初始化。
+summary: AmpAmpByOraclePhases 已被取代。 請改用 @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation"。
 syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
   types:
   - name: phases
-    summary: 部分反射的階段
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
   - name: stateOracle
-    summary: 準備開始狀態的單一 oracle $A $
     uid: microsoft.quantum.oracles.stateoracle
   - name: idxFlagQubit
-    summary: Qubit 旗標的索引
     isPrimitive: true
     uid: Int
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: 一種作業，可執行部分反射所實 oracles 的振幅放大。
-    isOperation: true
+  - isOperation: true
     input:
       types:
       - isArray: true
@@ -42,9 +32,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: cacd3b34fae01697ee5bba414d9a7422b3260e2f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a20dbb207841bf5dd9e46746814b4d7560cc67
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215824"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869223"

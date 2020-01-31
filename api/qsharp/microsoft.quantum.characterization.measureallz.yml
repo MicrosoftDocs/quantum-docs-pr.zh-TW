@@ -3,30 +3,24 @@ uid: microsoft.quantum.characterization.measureallz
 name: MeasureAllZ
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: >-
-  以 Pauli Z 為基礎，共同測量 qubits 的暫存器。
-
-
-  換句話說，會在指定的暫存器上測量作業 $Z \otimes Z \otimes \cdots \otimes Z $。
+summary: MeasureAllZ 已被取代。 請改用 @"microsoft.quantum.measurement.measureallz"。
 syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: 要測量的暫存器。
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Result
   types:
-  - summary: 測量 $Z \otimes Z \otimes \cdots \otimes Z $ 的結果。
-    isPrimitive: true
+  - isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: d9582f1656cbee854600eaf37bf3a0effa52869f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 894ff0836f6efef5124a118bdea16057a3d84a77
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229135"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870881"

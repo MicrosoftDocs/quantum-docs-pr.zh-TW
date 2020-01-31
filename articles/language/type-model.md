@@ -1,17 +1,17 @@
 ---
 title: '問 # 型別模型 |Microsoft Docs'
-description: '問 # 型別模型'
+description: Q# 類型模型
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4e251053d1b8306bf8956314d8099e95c56bce55
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184741"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871629"
 ---
 # <a name="the-type-model"></a>型別模型
 
@@ -120,7 +120,7 @@ let odds = arr[1..2..4]; // [11, 49]
 
 Q # 檔案可能會定義新的命名類型，其中包含任何合法類型的單一值。
 對於 `T`的任何元組類型，我們可以宣告新的使用者自訂類型，這是使用 `newtype` 語句 `T` 的子類型。
-例如，在 @"microsoft.quantum.canon" 命名空間中，複數會定義為使用者定義型別：
+例如，在 @"microsoft.quantum.math" 命名空間中，複數會定義為使用者定義型別：
 
 ```qsharp
 newtype Complex = (Double, Double);
@@ -141,7 +141,7 @@ newtype Nested = (Double, (ItemName : Int, String));
 命名專案的優點是可以透過存取運算子 `::`直接存取它們。 
 
 ```qsharp
-function Addition (c1 : Complex, c2 : Complex) : Complex {
+function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
     return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
 }
 ```
@@ -151,7 +151,7 @@ function Addition (c1 : Complex, c2 : Complex) : Complex {
 這類「解除包裝」運算式的類型是使用者定義類型的基礎類型。 
 
 ```qsharp
-function PrintMsg (value : Nested) : Unit {
+function PrintedMessage(value : Nested) : Unit {
     let (d, (_, str)) = value!;
     Message ($"{str}, value: {d}");
 }
@@ -227,7 +227,7 @@ newtype Polar = (Radius : Double, Phase : Double);
 ## <a name="operation-and-function-types"></a>Operation 和 Function 類型
 
 Q _# 作業_是量子副程式。
-也就是說，它是可呼叫的常式，其中包含量子作業。
+也就是說，它是包含量子作業的可呼叫常式。
 
 Q # 函式是在量子演算法內_使用的傳統_副程式。
 它可能包含傳統程式碼，但不含量子作業。
@@ -286,27 +286,28 @@ Q # 是可呼叫傳回類型的協變數：傳回類型的可呼叫 `'A` 與具�
 也就是，假設有下列定義：
 
 ```qsharp
-operation Invertible (qs : Qubit[]) : Unit 
+operation Invert(qubits : Qubit[]) : Unit 
 is Adj {...} 
-operation Unitary (qs : Qubit[]) : Unit 
+
+operation ApplyUnitary(qubits : Qubit[]) : Unit 
 is Adj + Ctl {...} 
 
-function ConjugateInvertibleWith (
-   inner: (Qubit[] => Unit is Adj),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateInvertWith(
+    inner : (Qubit[] => Unit is Adj),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj) {...}
 
-function ConjugateUnitaryWith (
-   inner: (Qubit[] => Unit is Adj + Ctl),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateUnitaryWith(
+    inner : (Qubit[] => Unit is Adj + Ctl),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj + Ctl) {...}
 ```
 
 下列為 true：
 
-- 您可以使用 `Invertible` 或 `Unitary`的 `inner` 引數來叫用作業 `ConjugateInvertibleWith`。
-- 您可以使用 `Unitary`的 `inner` 引數來叫用作業 `ConjugateUnitaryWith`，但不能 `Invertible`。
-- 可能會從 `ConjugateInvertibleWith`傳回 `(Qubit[] => Unit is Adj + Ctl)` 類型的值。
+- 函數 `ConjugateInvertWith` 可以使用 `Invert` 或 `ApplyUnitary`的 `inner` 引數來叫用。
+- 函數 `ConjugateUnitaryWith` 可以使用 `ApplyUnitary`的 `inner` 引數來叫用，但不能用 `Invert`。
+- 可能會從 `ConjugateInvertWith`傳回 `(Qubit[] => Unit is Adj + Ctl)` 類型的值。
 
 > [!IMPORTANT]
 > 問 # 0.3 在使用者定義型別的行為上帶來了顯著的差異。
@@ -377,14 +378,12 @@ Adjoint 仿函數是它自己的反向;也就是說，`Adjoint Adjoint Op` 一�
 ```qsharp
 /// # Summary
 /// Prepares a state and measures it in the Pauli-Z basis.
-operation MeasureOneQubit () : Result {
+operation MeasureOneQubit() : Result {
         mutable result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit
-
             set result = M(qubit);      // Measure the qubit
-
             if (result == One) {    // Reset the qubit so that it can be released
                 X(qubit);
             }
@@ -396,12 +395,11 @@ operation MeasureOneQubit () : Result {
 
 此函式的範例來自[PhaseEstimation](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)範例。 它包含純粹的傳統程式碼。 您可以看到，與上述範例不同的是，不會配置任何 qubits，也不會使用任何量子作業。
 
-
 ```qsharp
 /// # Summary
 /// Given two arrays, returns a new array that is the pointwise product
 /// of each of the given arrays.
-function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
+function PointwiseProduct(left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
     for (idxElement in IndexRange(left)) {
@@ -417,7 +415,10 @@ function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
 /// # Summary
 /// Translate MCT masks into multiple-controlled Toffoli gates (with single
 /// targets).
-function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGate[] {
+function GateMasksToToffoliGates(
+    qubits : Qubit[], 
+    masks : MCMTMask[]) 
+: MCTGate[] {
 
     mutable result = new MCTGate[0];
     let n = Length(qubits);

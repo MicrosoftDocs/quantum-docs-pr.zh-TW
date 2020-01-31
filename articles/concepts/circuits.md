@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210599"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820788"
 ---
 # <a name="quantum-circuits"></a>量子線路
 請思考一下單一轉換 $ \text{CNOT-CONTAINS} _{01}（H\otimes 1） $。
@@ -39,7 +39,7 @@ $ $ \mathrm{CNOT}_{01}（H\otimes 1） \ket{00} = \frac{1}{\sqrt{2}} \left （\k
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-是作用於單一 qubit 暫存器的[Hadamard](xref:microsoft.quantum.primitive.h)閘道。
+是作用於單一 qubit 暫存器的[Hadamard](xref:microsoft.quantum.intrinsic.h)閘道。
 
 配量閘道會按照時間順序排列，並以最左邊的閘道作為第一次套用到 qubits 的閘道。
 換句話說，如果您將線路畫成包含配量狀態，則電線會從左至右的圖表中的每個閘道顯示配量狀態。
@@ -72,7 +72,7 @@ $ $ \mathrm{CNOT}_{01}（H\otimes 1） \ket{00} = \frac{1}{\sqrt{2}} \left （\k
 
 ## <a name="controlled-gates"></a>控制的閘道
 另一個內建于多 qubit 配量電路圖的結構是 control。
-配量單一控制閘道（表示 $ \Lambda （G） $）的動作，其中單一 qubit 的值會控制 $G $ 的應用程式，您可以查看下列產品狀態輸入 $ \Lambda （G）的範例（\Alpha \ket{0} + \Beta \ket）來瞭解其內容{1}） \ket{\psi} = \Alpha \ket{0} \ket{\psi} + \Beta \ket{1} G\ket {\ psi} $。
+配量單一控制閘道（表示 $ \Lambda （G） $）的動作，其中 qubit 的值控制 $G $ 的應用程式，您可以查看下列產品狀態輸入 $ \Lambda （G）（\Alpha \ket{0} + \Beta \ket{1}） \ket{\psi} = \Alpha \ket{0} \ket{\psi} + \Beta \ket{1} G\ket {\ psi} $ 的範例來瞭解。
 也就是說，只有在控制項 qubit 接受值 $1 $ 時，受控制的閘道才會將 $G $ 套用至包含 $ \psi $ 的暫存器。
 一般來說，我們會在電路圖中描述這類受控制的作業，如下所示：
 
@@ -81,7 +81,7 @@ $ $ \mathrm{CNOT}_{01}（H\otimes 1） \ket{00} = \frac{1}{\sqrt{2}} \left （\k
 ![](~/media/concepts_5.png)
 
 在這裡，黑色圓圈代表控制閘道的配量位，而垂直線代表當控制項 qubit 接受值 $1 $ 時所套用的單一。
-針對 $G = X $ 且 $G = Z $ 的特殊情況，我們引進了下列標記法來描述控制的閘道版本（請注意，受控制的 X 閘道是[$CNOT $](xref:microsoft.quantum.primitive.cnot)閘道）：
+針對 $G = X $ 且 $G = Z $ 的特殊情況，我們引進了下列標記法來描述控制的閘道版本（請注意，受控制的 X 閘道是[$CNOT $](xref:microsoft.quantum.intrinsic.cnot)閘道）：
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![測量電路](~/media/concepts_7.png)
 
-問 # 會針對此用途來實行[量值運算子](xref:microsoft.quantum.primitive.measure)。
+問 # 會針對此用途來實行[量值運算子](xref:microsoft.quantum.intrinsic.measure)。
 如需詳細資訊，請參閱[測量的一節](xref:microsoft.quantum.libraries.standard.prelude#measurements)。
 
 同樣地，subcircuit

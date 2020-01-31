@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185183"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821077"
 ---
 # <a name="file-structure"></a>檔案結構
 
@@ -84,13 +84,13 @@ newtype PairOfInts = (Int, Int);
 
 作業名稱在命名空間中必須是唯一的，而且可能不會與型別和函式名稱衝突。
 
-作業宣告包含關鍵字 `operation`，後面接著是作業名稱的符號、定義作業引數的類型識別碼元組、冒號 `:`、描述作業結果類型的類型注釋、選擇性具有作業特性的注釋、左大括弧 `{`、作業宣告的主體，以及最後的右大括弧 `}`。
+作業宣告包含關鍵字 `operation`，後面接著是作業名稱的符號、定義作業之引數的具類型識別碼元組、冒號 `:`、描述作業結果類型的類型注釋、選擇性具有作業特性的注釋、左括弧 `{`、作業宣告的主體，以及最後的右大括弧 `}`。
 
 作業宣告的主體是由預設的實值或特製化清單所組成。
 如果只需要明確指定預設主體特製化的執行，則可以在宣告中直接指定預設的實值。
 在此情況下，在宣告中具有作業特性的注釋，有助於確保編譯器會根據預設的執行自動產生其他特製化。 
 
-例如 
+例如： 
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-在上述範例中，`adjoint invert;` 指出 adjoint 特製化是藉由將主體實作為反轉而產生，`controlled adjoint invert;` 表示會藉由反轉指定的執行方式來產生受控制的 adjoint 特製化受控制的特製化。
+在上述範例中，`adjoint invert;` 指出 adjoint 特製化是藉由將主體實作為反轉而產生，`controlled adjoint invert;` 表示會藉由反轉受控制特製化的指定實作為來產生受控制的 adjoint 特製化。
 
 若要支援 `Adjoint` 和/或 `Controlled` 仿函數之應用程式的作業，其傳回型別一定要 `Unit`。 
 
@@ -187,12 +187,12 @@ Q # 作業可以包含下列明確的特製化宣告：
 如果需要明確宣告預設主體以外的一個或多個特製化，則預設主體的執行也必須包裝為適當的特製化宣告：
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ operation CountOnes(qs: Qubit[]) : Int {
 如果作業的宣告包含 adjoint 特製化的隱含或明確宣告，則作業支援 `Adjoint` 仿函數。
 明確宣告的受控制 adjoint 特製化表示 adjoint 特製化的存在。 
 
-對於本文包含重複執行迴圈、set 語句、量值、傳回語句或不支援 `Adjoint` 仿函數之其他作業的呼叫，請在 `invert` 之後自動產生 adjoint 特製化，或 @no__不可能 t_2_ 指示詞。
+如果作業的主體包含重複執行迴圈、set 語句、量值、傳回語句，或呼叫不支援 `Adjoint` 仿函數的其他作業，則不可能 `invert` 或 `auto` 指示詞之後自動產生 adjoint 特製化。
 
 ### <a name="controlled"></a>管理
 
@@ -236,7 +236,7 @@ operation CountOnes(qs: Qubit[]) : Int {
 作業宣告可能會像下面這樣簡單，其定義基本的 Pauli X 運算：
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 函式在 Q # 中純粹是傳統的常式。
 每個 Q # 來源檔案可能會定義任意數目的函數。
 
-函式宣告包含關鍵字 `function`，後面接著是函式名稱的符號、具類型的識別碼元組、描述函數傳回類型的類型注釋，以及描述其執行的語句區塊。函數.
+函式宣告包含關鍵字 `function`，後面接著是函式名稱的符號、具類型的識別碼元組、描述函數傳回類型的類型注釋，以及描述函式執行的語句區塊。
 
 定義函式的語句區塊必須括在 `{` 中，而 `}` 就像任何其他語句區塊一樣。
 

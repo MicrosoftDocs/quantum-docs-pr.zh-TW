@@ -1,19 +1,19 @@
 ---
-title: 'Q # 技術-測試和調試 |Microsoft Docs'
-description: 'Q # 技術-測試和調試'
+title: '測試和調試-Q # 技術 |Microsoft Docs'
+description: '測試和調試-Q # 技術'
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864265"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820108"
 ---
-# <a name="testing-and-debugging"></a>測試與偵錯
+# <a name="testing-and-debugging"></a>測試和調試
 
 就像傳統程式設計一樣，要能夠檢查配量程式是否符合預期，以及能夠診斷出不正確的量副程式，是很重要的。
 在本節中，我們將討論 Q # 提供的工具，以測試和偵測量副程式。
@@ -50,8 +50,8 @@ $ code . # To open in Visual Studio Code
     @Test("QuantumSimulator")
     operation AllocateQubit () : Unit {
 
-        using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        using (qubit = Qubit()) {
+            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -136,7 +136,7 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ***
 
-## <a name="assertions"></a>判斷提示
+## <a name="assertions"></a>聲明
 
 因為 Q # 中的函式沒有_邏輯_副作用，所以執行其輸出類型為空元組的函式的任何_其他類型_`()` 永遠不會從 Q # 程式中觀察到。
 也就是說，目的電腦可以選擇不執行任何會傳回 `()` 的函式，保證此省略不會修改任何下列 Q 號碼程式碼的行為。

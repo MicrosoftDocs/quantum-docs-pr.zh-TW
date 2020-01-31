@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 5c7f2c4a572f6194ee846f056016a25b8c5303a2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442549"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820754"
 ---
 # <a name="quantum-computing-glossary"></a>量子運算詞彙
 
@@ -39,10 +39,9 @@ ms.locfileid: "73442549"
 |序言|每個個別目的電腦所定義的一組基本和傳統作業和函式，而不是在 Q # 層級。|
 |量子線路|適用于量子電腦的程式標記法。 如需詳細資訊，請參閱 <xref:microsoft.quantum.concepts.circuits> 一節。|
 |量子狀態|系統中 qubits 的標記法。 這通常表示為複雜的資料行向量。 如需詳細資訊，請參閱 <xref:microsoft.quantum.concepts.vectors>。 |
-|qubit|量子儲存體的單位。 如需詳細資訊，請參閱 <xref:microsoft.quantum.concepts.qubit> 一節。|
+|Qubit|量子儲存體的單位。 如需詳細資訊，請參閱 <xref:microsoft.quantum.concepts.qubit> 一節。|
 |重複直到-成功|機率成功的量子演算法。 失敗時，常式會重新嘗試直到成功為止（或已達到限制）。 |
-|軟體堆疊|一組完整的傳統和量子軟體，以及操作量子電腦所需的編譯器、模擬器和執行時間。 如需詳細資訊，請參閱 <xref:microsoft.quantum.concepts.software-stack> 一節。 |
 |目的電腦|將抽象的量副程式降低到硬體或模擬的編譯目標。 這通常包括重新寫入的許多用途，包括閘道更換、錯誤更正的編碼、幾何版面配置等等。|
-|構成|以逗號分隔的類型會透過括弧分組在一起。 |
+|Tuple|以逗號分隔的類型會透過括弧分組在一起。 |
 |使用者定義型別|內建或先前定義之類型的集合，可能稱為單一單位。|
 

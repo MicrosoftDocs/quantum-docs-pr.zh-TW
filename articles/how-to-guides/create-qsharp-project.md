@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864401"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819887"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>在開發環境中建立 Q # 專案
 
@@ -23,16 +23,16 @@ Q # 專案包含包含量子代碼的 Q # 檔案，以及執行配量程式的�
 從下列各節選擇您的開發環境和語言：
 
 * [Python](#create-a-python-project)
-* [Jupyter 筆記本](#create-a-jupyter-notebook-project)
+* [Q # Jupyter 筆記本](#create-a-q-jupyter-notebook-project)
 * [C#使用 Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [C#使用 VS Code](#create-a-c-project-using-vs-code)
 * [C#使用命令列](#create-a-c-project-using-the-dotnet-command-line-tool)
 
 ## <a name="create-a-python-project"></a>建立 Python 專案
 
-1. 先決條件
+1. 必要條件
 
-     * [適用于 Python 的量子開發工具組](xref:microsoft.quantum.install#develop-with-python)
+     * 安裝[適用于 Python 的量子開發工具組](xref:microsoft.quantum.install.python)
 
 1. 為您的專案建立資料夾，並流覽至該資料夾
 
@@ -75,11 +75,11 @@ Q # 專案包含包含量子代碼的 Q # 檔案，以及執行配量程式的�
 
 您現在可以繼續開發您的「量子」程式。
 
-## <a name="create-a-jupyter-notebook-project"></a>建立 Jupyter Notebook 專案
+## <a name="create-a-q-jupyter-notebook-project"></a>建立 Q # Jupyter Notebook 專案
 
-1. 先決條件
+1. 必要條件
 
-    * [適用于 Jupyter 筆記本的量子開發工具組](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+    * 安裝[適用于 Jupyter 筆記本的量子開發工具組](xref:microsoft.quantum.install.jupyter)
 
 1. 執行下列命令以啟動筆記本伺服器：
 
@@ -113,9 +113,9 @@ Q # 專案包含包含量子代碼的 Q # 檔案，以及執行配量程式的�
 
 ## <a name="create-a-c-project-on-windows-using-visual-studio"></a>使用 Visual Studio C#在 Windows 上建立專案
 
-1. 先決條件
+1. 必要條件
 
-    * [Visual Studio 的量子開發工具組](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+    * 安裝[適用于 Visual Studio 的量子開發工具組擴充](xref:microsoft.quantum.install.cs)功能
 
 1. 建立新的 C# 應用程式
 
@@ -142,9 +142,9 @@ Q # 專案包含包含量子代碼的 Q # 檔案，以及執行配量程式的�
 
 ## <a name="create-a-c-project-using-vs-code"></a>使用 VS Code C#建立專案
 
-1. 先決條件
+1. 必要條件
 
-    * [VS Code 的量子開發工具組](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
+    * 安裝[適用于 VS Code 的量子開發工具組擴充](xref:microsoft.quantum.install.cs)功能
 
 1. 建立新專案：
 
@@ -167,9 +167,9 @@ Q # 專案包含包含量子代碼的 Q # 檔案，以及執行配量程式的�
 
 ## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>使用 `dotnet` C#命令列工具建立專案
 
-1. 先決條件
+1. 必要條件
 
-    * [命令列的量子開發工具組](xref:microsoft.quantum.install#develop-with-c-using-the-dotnet-command-line-tool)
+    * 安裝[命令列的量子開發工具組](xref:microsoft.quantum.install.cs)
 
 1. 建立新的應用程式
 
