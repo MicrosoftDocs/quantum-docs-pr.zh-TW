@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 75028a1dc29abe5fbea2e789d896563f3d6331c9
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443931"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820346"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>快速入門：以 Q# 執行格羅弗搜尋演算法
 
@@ -23,7 +23,7 @@ ms.locfileid: "73443931"
 
 只要幾行程式碼，您就可以建置格羅弗搜尋演算法。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - Microsoft [Quantum Development Kit][install]。
 
@@ -43,11 +43,11 @@ ms.locfileid: "73443931"
 
 1. 將下列程式碼新增至新專案中的 `Operations.qs` 檔案：
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs?highlight=5,27)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
 
 1. 若要定義我們要搜尋的清單，請建立新檔案 `Reflections.qs`，並貼到下列程式碼中：
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/Reflections.qs" range="4-70":::
 
     `ReflectAboutMarked` 作業會定義您要搜尋的標記輸入：替代零和一的字串。 此範例會進行標記輸入的硬式編碼，並且可進行擴充以搜尋不同的輸入，或進行一般化以搜尋任何輸入。
 
@@ -57,7 +57,7 @@ ms.locfileid: "73443931"
 
     若要從 Python 執行新的 Q# 程式，請將下列程式碼儲存為 `host.py`：
 
-    [!code-python[](~/quantum/samples/algorithms/simple-grover/host.py)]
+    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
 
     然後，您可以從命令列執行 Python 主機程式：
 
@@ -75,7 +75,7 @@ ms.locfileid: "73443931"
 
     若要從 C# 執行新的 Q# 程式，請修改 `Driver.cs` 以納入下列 C# 程式碼：
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     然後，您可以從命令列執行 C# 主機程式：
 
@@ -94,7 +94,7 @@ ms.locfileid: "73443931"
 
     若要從 Visual Studio 中的 C# 執行新的 Q# 程式，請修改 `Driver.cs` 以納入下列 C# 程式碼：
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     然後按 F5 鍵，程式會開始執行，並跳出一個新視窗顯示下列結果： 
 
