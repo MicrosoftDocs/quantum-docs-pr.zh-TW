@@ -6,16 +6,18 @@ author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 8fb3b7181632bd6f2b562735546adbf4b461a1b6
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 4308bf7e0e48e5735419fab836e479641455e9a5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73530027"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819922"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>開始使用 Quantum Development Kit (QDK)
 
-歡迎使用 Microsoft Quantum Development Kit！  在這裡，您會找到所有必要工具，以學習如何使用 Q# 進行量子程式設計。  為了引導您學習如何使用 Q# 進行量子運算，我們提供了這份「使用者入門指南」，其中針對想要開始編寫量子程式的使用者，以及尚未準備好開始編寫程式碼、但想要深入了解 Q# 和量子程式設計的人員，提供適用的旅程指南。
+歡迎使用 Microsoft Quantum Development Kit！  在這裡，您會找到所有必要工具，以學習如何使用 Q# 進行量子程式設計。  為了引導您學習如何使用 Q# 進行量子運算，我們提供了這份「使用者入門指南」，其中針對想要開始編寫量子程式的使用者，以及尚未準備好開始編寫程式碼、但想要深入了解 Q# 和量子程式設計的人員，提供適用的指南。 
+
+如果您已準備好開始撰寫程式碼，[立即安裝 QDK](xref:microsoft.quantum.install)。
 
 ## <a name="questions-about-quantum-computing"></a>量子運算相關問題
 
@@ -54,9 +56,8 @@ Q# 和 Quantum Development Kit 可提供必要工具讓您開發量子運算程�
 * 請探索我們的 [Q# 範例](https://docs.microsoft.com/samples/browse/?languages=qsharp)，並找出您可以使用量子運算解決的問題。
 
 * 在本機電腦上，使用您所選的主機程式設計語言和開發環境進行開發：
-  * 使用 [Python](xref:microsoft.quantum.install#develop-with-python) 來開發
-  * 使用 [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio) 來開發
-  * 使用 [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code) 來開發
-  * 使用 [Jupyter Notebook](xref:microsoft.quantum.install#develop-with-jupyter-notebooks) 來開發
+  * 使用 [Q# + Python](xref:microsoft.quantum.install.python) 來開發
+  * 使用 [Q# + C#](xref:microsoft.quantum.install.cs) 來開發
+  * 使用 [Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter) 來開發
 
 * 藉由參與 [QDK](xref:microsoft.quantum.contributing) 開放原始碼專案來成為 Microsoft Quantum 社群的一分子。
