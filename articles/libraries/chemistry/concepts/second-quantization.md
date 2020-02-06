@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
-ms.openlocfilehash: b3cc7eb8139d2df6e02de371ccf7a423e58ea76d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4b7b5a6be6d0c1f3520128609e6b9fa83e5460d5
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210401"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036418"
 ---
 # <a name="second-quantization"></a>第二個量化
 
@@ -153,7 +153,7 @@ n_i \ket{1}_i & = \ket{1}_i。
 \end{align} 類似于上述 `FermionTerm` 範例，此數位運算子的結構如下所示。
 ```csharp
     // Let us use a new method to compactly create a sequence of ladder
-    // operators. Note that we have ommitted specifying whether the 
+    // operators. Note that we have omitted specifying whether the 
     // operators are raising or lowering. In this case, the first half
     // will be raising operators, and the second half will be lowering 
     // operators.
@@ -213,13 +213,13 @@ $ $ 這類運算子稱為「反運算」，一般而言，在任何 $i 中，j $
 這可能會 unsurprising[電子系統的量子模型](xref:microsoft.quantum.chemistry.concepts.quantummodels)中的 Hamiltonian，可以根據建立和 annihilation 運算子來撰寫。
 特別是，如果 $ \psi\_j $ 是構成基礎的微調 orbitals，則
 
-\begin{equation} \hat{H} = \sum\_{pq} H\_{pq} a ^ \dagger\_p a\_q + \frac{1}{2}\sum\_{pqrs} H\_{pqrs} a ^ \dagger\_p a ^ \dagger\_q a\_ra\_s + h\_{\textrm nuc}，\label{eq： totalHam} \end{equation}，其中 $h\_{\textrm nuc} $ 是一項的能源（這是在近似值之下的常數），而
+\begin{equation} \hat{H} = \sum\_{pq} H\_{pq} a ^ \dagger\_p a\_q + \frac{1}{2}\sum\_{pqrs} H\_{pqrs} a ^ \dagger\_p a ^ \dagger\_q a\_ra\_s + H\_{\textrm nuc}，\label{eq： totalHam} \end{equation}，其中 $h\_{\textrm nuc} $ 是指的是一種的核用能源（這是在近似值之下的常數），而
 
 \begin{align} h\_{pq} & = \int\_{-\infty} ^ \infty \psi ^\*\_p （x\_1） \left （-\frac{\nabla ^ 2}{2} + V （x\_1） \right） \psi\_q （x\_1） \mathrm{d} ^ 3 倍\_1，\end{align}
 
 其中 $V （x） $ 是 mean 欄位的潛能，而
 
-\begin{align} h\_{pqrs} & = \int\_{-\infty} ^ \infty \int\_{-\infty} ^ \infty\psi\_p ^\*（x\_1） \psi\_q ^\*（x\_2） \left （\frac{1}{| x_1-x_2 |} \right） \psi\_r （x\_2） \psi\_s （x\_1） \mathrm{d} ^ 3 倍\_1 \ mathrm {d} ^ 3 倍\_2. \ 標籤 {eq：積分} \end{align}
+\begin{align} h\_{pqrs} & = \int\_{-\infty} ^ \infty \int\_{-\infty} ^ \infty\psi\_p ^\*（x\_1） \psi\_q ^\*（x\_2） \left （\frac{1}{| x_1-x_2 |} \right） \psi\_r （x\_2） \psi\_s （x\_1） \mathrm{d} ^ 3 倍\_1 \ mathrm {d} ^ 3 倍\_2。 \ 標籤 {eq：積分} \end{align}
 
 \_{pq} $ $h 的詞彙稱為一個 electron 的積分，因為所有這類詞彙都只牽涉到單一 electrons，同樣地 $h\_{pqrs} $ 是兩個 electron 的積分。
 它們稱為「積分」，因為計算這些係數的值需要整數。
@@ -306,10 +306,10 @@ $ $ \begin{align} H = \sum\_{pq} H\_{pq} a ^ \dagger\_{p} a\_{q} + \frac{1}{2}\s
 
 在此標記法中，最多有 $N ^ 2 + N ^ 4 $ 係數。
 不過，其中許多係數可能會隨著對應至相同的運算子而收集。
-例如，如果 $p、q、r、s $ 是相異的索引，我們可以使用反 commutation 規則來顯示： $ $ a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} =-a ^ \dagger\_{q} a ^ \dagger\_{p} a\_{r} a\_{s} =-a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{s} a\_{r} = a ^ \dagger\_{q} a ^ \dagger\_{p} a\_{r}。
+例如，在 $p、q、r、s $ 是相異的索引，我們可以使用反 commutation 規則來顯示： $ $ a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} =-a ^ \dagger\_{q} a ^ \dagger\_{p} a\_{r} a\_{s} =-a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{s} a\_{r} = a ^ \dagger\_{q} a ^ \dagger\_{p} a\_{r}。\_
 $$
 
-此外，當 $H $ Hermitian 時，每個非 Hermitian 的 fermionic 運算子（假設 $h\_{pqrs} a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} $，在 $H $ 中也可以找到 Hermitian 共軛。 為了唯一編制這些 symmetries 所特性的詞彙群組的索引，我們定義了指數 $ （i\_1、\cdots、i\_n、j\_1、\cdots、j\_m） $ （任何 $n + m $ fermionic 運算子 $a ^ \dagger 的順序）\_{i\_1} \cdots ^ \dagger\_{i\_n}\_{j\_1} \cdots a\_{j\_m} $as 遵循：
+此外，當 $H $ Hermitian 時，每個非 Hermitian 的 fermionic 運算子（假設 $h\_{pqrs} a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} $，在 $H $ 中也可以找到 Hermitian 共軛。 若要以唯一的方式為這些 symmetries 所特性的詞彙群組編制索引，我們定義了指數 $ （i\_1，\cdots，i\_n，j\_1，\cdots，j\_m） $ 的任何 $n + m $ fermionic 運算子序列 $a ^ \dagger\_{i\_1} \cdots a ^ \dagger\_{i\_n}\_{j\_1} \cdots a\_:\_
 -   所有建立運算子 $a ^ \dagger\_{i\_\cdot} $ 都放在所有 annihilation 運算子之前，$a\_{j\_\cdot} $。
 -   所有建立運算子索引都是以遞增順序排序，也就是 $i\_1 < i\_2 < \cdots < i\_n $。
 -   所有的 annihilation 運算子索引都是以遞減順序排序，也就是 $j\_1 > j\_2 \cdots > j\_m $。
@@ -318,5 +318,5 @@ $$
 讓我們將這組以標準方式排序索引識別為 $ $ \begin{align} （i\_1，\cdots，i\_n，j\_1，\cdots，j\_m） \in S\_{n，m}。
 \end{align} $ $
 
-使用此標準順序時，fermionic Hamiltonian 可能會以 $ $ \begin{align} H = \sum\_{（p，q） \in S\_{1,1}} H '\_{pq} \frac{a ^ \dagger\_{p} a\_{q} + a ^ \dagger\_{q} a\_{p}}{2}+ \sum\_{（p，q，r，s） \in S\_{2,2}} h '\_{pqrs} \frac{a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} + a ^ \dagger\_{s} a ^ \dagger\_{r} a\_{q} a\_{p}}{2}，\end{align} $ $ 搭配適當調整的一對一和雙 electron 積分 $h '\_{pq} $ 和 $h '\_{pqrs} $。
+使用此標準順序時，fermionic Hamiltonian 可能會以 $ $ \begin{align} H = \sum\_{（p，q） \in S\_{1,1}} H '\_{pq} \frac{a ^ \dagger\_{p} a\_{q} + a ^ \dagger\_{q} a\_{p}}{2}+ \sum\_{（p，q、r、S） \in S\_{2,2}} H '\_{pqrs} \frac{a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} + a ^ \dagger\_{s} a ^ \dagger\_{r} a\_{q} a\_{p}}{2}，\end{align} $ $ 搭配適當調整的一對一和雙 electron 積分 $h '\_{pq} $ 和 $h '\_{pqrs} $。
 

@@ -3,15 +3,15 @@ title: 數值程式庫安裝和驗證 |Microsoft Docs
 description: 數值程式庫安裝和驗證
 author: thomashaener
 ms.author: thhaner
-ms.date: 5/14/2019
+ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: 8369a6f342ee8e6f56b69bd1f2ce3df40e4093aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184622"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036452"
 ---
 # <a name="numerics-library-installation-and-validation"></a>數值程式庫安裝和驗證
 
@@ -33,7 +33,7 @@ ms.locfileid: "73184622"
 
 或者，您可以使用套件管理員主控台，透過命令列介面將數值程式庫新增至您的專案。
 
-![](~/media/vs2017-nuget-console-menu.png)
+![](../../media/vs2017-nuget-console-menu.png)
 
 從 [套件管理員主控台] 執行下列步驟：
 
@@ -45,7 +45,7 @@ Install-Package Microsoft.Quantum.Numerics
 
 **命令列或 Visual Studio Code：** 單獨使用命令列或從 Visual Studio Code 內，您可以使用 `dotnet` 命令，將 NuGet 套件參考新增至您的專案：
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Numerics
 ```
 
@@ -55,10 +55,10 @@ dotnet add package Microsoft.Quantum.Numerics
 就像其他的量子開發工具組一樣，數值程式庫隨附的範例可協助您儘快開始使用。
 若要使用這些範例來測試您的安裝，請複製[主要的範例存放庫](https://github.com/Microsoft/Quantum)，然後執行其中一個範例。
 
-若要執行[`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/Numerics/CustomModAdd)範例：
+若要執行[`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/samples/numerics/CustomModAdd)範例：
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics/CustomModAdd
+cd Quantum/samples/numerics/CustomModAdd
 dotnet run
 ```

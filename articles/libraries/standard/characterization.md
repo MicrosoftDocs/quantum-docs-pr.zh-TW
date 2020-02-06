@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870343"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036248"
 ---
 # <a name="quantum-characterization-and-statistics"></a>量子特性和統計資料 #
 
@@ -88,7 +88,7 @@ ms.locfileid: "76870343"
 
 在觀察到反復階段估計可能性函式中的 `Result` 之後，我們就可以使用貝氏機率分類的規則，規定我們應該認為該階段遵循該觀察。
 具體而言、\begin{equation} \Pr （\phi | d） = \frac{\Pr （d | \phi） \Pr （\phi）} {\int \Pr （d | \phi） \Pr （\phi） {\mathrm d} \phi} \Pr （\phi）、\end{equation}，其中 $d \in \\{\texttt{Zero}，\texttt{One}\\} $ 是 `Result`，其中 $ \Pr （\phi） $ 描述我們先前信念的 $ \phi $。
-這會使反復階段估計的反復性質明確，因為「事後 posterior 散發 $ \Pr （\phi | d） $ 會立即描述我們在下一個 `Result`的觀察之前的信念。
+這會使反復階段估計的反復性質明確，因為「事後 posterior 散發 $ \Pr （\phi | d） $ 會立即描述我們在下一個 `Result`觀察之前的信念。
 
 在此程式中的任何時間點，我們可以將傳統控制器所推斷的階段 $ \hat{\phi} $ 報告為 \begin{equation} \hat{\phi} \mathrel{： =} \expect [\phi | \text{data}] = \int \phi \Pr （\phi | \text{data}） {\mathrm d} \phi，\end{equation}，其中 $ \text{data} $ 代表所有取得之 `Result` 值的完整記錄。
 

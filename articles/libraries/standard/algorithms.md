@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821009"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036350"
 ---
 # <a name="quantum-algorithms"></a>量子演算法 #
 
@@ -48,7 +48,8 @@ ms.locfileid: "76821009"
 
 做為 QFT 的大致一般化，我們提供了 <xref:microsoft.quantum.canon.approximateqft> 作業，可讓您藉由剪除所需演算法精確度不一定需要的旋轉來進行進一步的優化。
 大約的 QFT 需要 dyadic $Z $-輪替作業 <xref:microsoft.quantum.intrinsic.rfrac>，以及 <xref:microsoft.quantum.intrinsic.h> 作業。
-假設輸入和輸出是以位元組由大到小的編碼方式進行編碼（最低位/qubit 是在左邊，與[ket 標記法](xref:microsoft.quantum.concepts.dirac)相同）。
+假設輸入和輸出是以 big endian 編碼來編碼---也就是說，具有索引 `0` 的 qubit 會以二進位整數表示的最左邊（最高）位編碼。
+這會與[ket 標記法](xref:microsoft.quantum.concepts.dirac)對齊，如同 state $ \ket 中的三個 qubits 的暫存器，{100}$ 對應到 $q _0 $ 在 state $ \ket{1}$ 中，而 $q _1 $ 和 $q _2 $ 同時處於 state $ \ket{0}$。
 近似值參數 $a $ 決定 $Z $-輪替的剪除層級，也就是 $a \in [0 ... n] $。
 在此情況下，所有 $Z $-輪替 $ 2 \ pi/2 ^ k $，其中 $k > $ 會從 QFT 迴圈中移除。
 已知 $k \ge \ log_2 （n） + \ log_2 （1/\epsilon） + $3。 一個可以系結 $\\|\operatorname{QFT}-\operatorname{AQFT} \\|< \epsilon $。
@@ -56,7 +57,7 @@ ms.locfileid: "76821009"
 
 ## <a name="arithmetic"></a>算術 ##
 
-就像算術在傳統運算中扮演中央角色一樣，它也會在量子運算中不可或缺。  演算法（例如快速鍵的分解演算法、量子模擬方法以及許多 oracular 演算法）依賴一致的算數運算。  在量子加入線路上進行算術組建的大部分方法。  最簡單的加入程式會採用傳統輸入 $b $，並將值新增至保留整數 $ \ket{a} $ 的量子狀態。  在數學上，此「對應器」（其代表 $ \operatorname{Add} （b） $ 用於傳統輸入 $b $）的屬性為
+就像算術在傳統運算中扮演中央角色一樣，這在量子計算中也是不可或缺的。  演算法（例如快速鍵的分解演算法、量子模擬方法以及許多 oracular 演算法）依賴一致的算數運算。  在量子加入線路上進行算術組建的大部分方法。  最簡單的加入程式會採用傳統輸入 $b $，並將值新增至保留整數 $ \ket{a} $ 的量子狀態。  在數學上，此「對應器」（其代表 $ \operatorname{Add} （b） $ 用於傳統輸入 $b $）的屬性為
 
 $ $ \operatorname{Add} （b） \ket{a} = \ket{a + b}。
 $ $ 這個基本的產生程式線路比 incrementer 更多。

@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0a3ee595022ec389ecadcab081ccd126cb3252ae
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 300a1ebcfd5d7bca8b025c69adebaad03106433d
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819904"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036591"
 ---
 # <a name="pauli-measurements"></a>Pauli 測量
 
@@ -91,7 +91,7 @@ $$
 因此，兩個 Pauli $Z $ 運算子的張量產品會形成一個矩陣，其中包含由 $ + $1 和 $-$1 特徵值組成的兩個空格。
 就像單一 qubit 的情況一樣，兩者都構成一半空間，這表示可存取的兩個向量空間一半屬於 $ + $1 eigenspace，而其餘一半則是 $-$1 eigenspace。
 一般來說，您可以從張量產品的定義中查看 Pauli-$Z $ operators 的任何張量產品，以及身分識別也會遵守這項功能。
-例如，
+例如：
 
 $ $ \begin{align} Z \otimes \boldone = \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 &-1 & 0 \\\\ 0 & 0 & 0 &-1 \end{bmatrix}。
 \end{align} $ $

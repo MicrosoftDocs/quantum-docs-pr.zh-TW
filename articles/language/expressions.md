@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185200"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036302"
 ---
 # <a name="expressions"></a>運算式
 
@@ -22,7 +22,7 @@ ms.locfileid: "73185200"
 
 在[型別模型](xref:microsoft.quantum.language.type-model#tuple-types)中所描述的簡單值和單一元素元組的等價，會移除 `(6)` 與群組之間的不明確，並 `(6)` 為單一元素的元組。
 
-## <a name="symbols"></a>標點符號
+## <a name="symbols"></a>符號
 
 系結或指派給型別之值的符號名稱 `'T` 是 `'T`型別的運算式。
 例如，如果符號 `count` 系結至 `5`的整數值，則 `count` 為整數運算式。
@@ -61,7 +61,7 @@ let bigOne = bigZero + 1L;
 
 假設有兩個整數或大整數運算式，可以使用 `%` （模數）、`&&&` （位 AND）、`|||` （位 OR）或 `^^^` （位 XOR）運算子來形成新的整數或大整數運算式。
 
-指定左邊的整數或大整數運算式，以及右邊的整數運算式時，可以使用 `<<<` （算術左移位）或 `>>>` （算術右移位）運算子，來建立與左側相同類型的新運算式運算式.
+假設左邊有整數或大整數運算式，而且右邊有整數運算式，則可以使用 `<<<` （算術左移位）或 `>>>` （算術右移位）運算子，來建立與左邊運算式具有相同類型的新運算式。
 
 轉換作業的第二個參數（移位量）必須大於或等於零;負位移金額的行為未定義。
 任何移位作業的移位量也必須符合32位;如果不是，則會引發執行階段錯誤。
@@ -73,7 +73,7 @@ let bigOne = bigZero + 1L;
 
 整數除法和整數模數會遵循與負數相同的行為C#。
 也就是說，`a % b` 一定會具有與 `a`相同的正負號，而且 `b * (a / b) + a % b` 一律會等於 `a`。
-例如：
+例如，
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -94,9 +94,9 @@ let bigOne = bigZero + 1L;
 這兩個 `Bool` 常值是 `true` 和 `false`。
 
 假設有兩個相同基本型別的運算式，就可以使用 `==` 和 `!=` 二元運算子來建立 `Bool` 運算式。
-如果兩個運算式（resp）相等，則運算式會是 true。
+如果兩個運算式相等，則運算式會是 true，否則為 false。
 
-可能不會比較使用者定義類型的值，只可以比較它們的值。 例如，
+可能不會比較使用者定義類型的值，只可以比較其未包裝的值。 例如，使用「解除包裝」運算子 `!` （在 [ [Q # 類型模型] 頁面](xref:microsoft.quantum.language.type-model#user-defined-types)中說明），
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -112,7 +112,7 @@ let t = x == y;               // This will cause a compiler error.
 `Double` 值的相等比較可能會因為進位效果而誤導。
 例如，`49.0 * (1.0/49.0) != 1.0`。
 
-假設有兩個數值運算式，二元運算子 `>`、`<`、`>=`和 `<=` 可用來建立新的布林運算式，如果第一個運算式分別大於、小於、大於或等於，則為 true或小於或等於第二個運算式。
+假設有兩個數值運算式，可以使用二元運算子 `>`、`<`、`>=`和 `<=` 來建立新的布林運算式，如果第一個運算式分別大於、小於、大於或等於或小於或等於第二個運算式，則會是 true。
 
 假設有兩個布林運算式，`and` 和 `or` 二元運算子可以用來建立新的布林運算式，如果兩個運算式都是 true，則為 true。
 
@@ -229,7 +229,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 如果未指定型別參數化引數，部分應用程式（如下所示）就需要此參數。
 當將具有不同仿函數支援的作業傳遞至可呼叫的時，它有時也很有用。
 
-例如，如果 `Func` 有簽章 `('T1, 'T2, 'T1) -> 'T2`，`Op1` 和 `Op2` 有簽章 `(Qubit[] => Unit is Adj)`，而 `Op3` 具有簽章 `(Qubit[] => Unit)`，以 `Func` 當做第一個引數來叫用 `Op1`，`Op2` 為第二個，並 `Op3` 做為第三個：
+例如，如果 `Func` 有簽章 `('T1, 'T2, 'T1) -> 'T2`，`Op1` 和 `Op2` 會有簽章 `(Qubit[] => Unit is Adj)`，而 `Op3` 具有簽章 `(Qubit[] => Unit)`，以 `Func` 做為第一個引數，`Op1` 做為第二個，然後 `Op2` 為第三個：`Op3`
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -306,7 +306,7 @@ Q # callables 允許直接或間接遞迴。
 
 `!` 運算子的優先順序有一個可能不明顯的影響。
 如果函式或作業傳回值，因而解除包裝，則函式或作業呼叫必須以括弧括住，讓引數元組系結至呼叫，而不是系結。
-例如：
+例如，
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -347,7 +347,7 @@ let g = Foo(arg)!;      // Syntax error
 
 每種類型的預設值為：
 
-Type | 預設值
+類型 | 預設
 ---------|----------
  `Int` | `0`
  `BigInt` | `0L`
@@ -490,17 +490,17 @@ newtype Complex = (Re : Double, Im : Double);
 
 運算子 | Arity | 描述 | 運算元類型
 ---------|----------|---------|---------------
- 尾端 `!` | 一元 | 解除包裝 | 任何使用者定義型別
- `-`、`~~~`, `not` | 一元 | 數值負數、位補數、邏輯否定 | `Int`、`BigInt` 或 `Double` `-`、`Int` 或 `BigInt` `~~~`、`Bool`
+ 尾端 `!` | 一元 (Unary) | 解除包裝 | 任何使用者定義型別
+ `-`、`~~~`、`not` | 一元 (Unary) | 數值負數、位補數、邏輯否定 | `Int`、`BigInt` 或 `Double` `-`、`Int` 或 `BigInt` `~~~`、`Bool``not`
  `^` | Binary | 整數乘冪 | `Int` 或 `BigInt` 作為基底，`Int` 指數
- `/`、`*`, `%` | Binary | 除法、乘法、integer 模數 | `Int`、`BigInt` 或 `Double` `/` 和 `*`、`Int` 或 `BigInt` `%`
- `+`，`-` | Binary | 加法或字串和陣列串連，減法 | `Int`、`BigInt` 或 `Double`，此外 `String` 或任何 `+` 的陣列類型
- `<<<`，`>>>` | Binary | 左 shift、right shift | `Int` 或 `BigInt`
- `<`、`<=`、`>`、`>=` | Binary | 小於、小於或等於、大於、大於、等於或相等的比較 | `Int`、`BigInt` 或 `Double`
- `==`，`!=` | Binary | 等於、不等於比較 | 任何基本類型
- `&&&` | Binary | 位 AND | `Int` 或 `BigInt`
- `^^^` | Binary | 位 XOR | `Int` 或 `BigInt`
- <code>\|\|\|</code> | Binary | 位 OR | `Int` 或 `BigInt`
+ `/`、`*`、`%` | Binary | 除法、乘法、integer 模數 | `Int`、`BigInt` 或 `Double` `/` 和 `*`、`Int` 或 `BigInt` `%`
+ `+`, `-` | Binary | 加法或字串和陣列串連，減法 | `Int`、`BigInt` 或 `Double`，此外 `String` 或任何 `+` 的陣列類型
+ `<<<`, `>>>` | Binary | 左 shift、right shift | `Int` 或 `BigInt`
+ `<`, `<=`, `>`, `>=` | Binary | 小於、小於或等於、大於、大於、等於或相等的比較 | `Int`、`BigInt` 或 `Double`
+ `==`, `!=` | Binary | 等於、不等於比較 | 任何基本類型
+ `&&&` | Binary | 位元 AND | `Int` 或 `BigInt`
+ `^^^` | Binary | 位元 XOR | `Int` 或 `BigInt`
+ <code>\|\|\|</code> | Binary | 位元 OR | `Int` 或 `BigInt`
  `and` | Binary | 邏輯 AND | `Bool`
  `or` | Binary | 邏輯 OR | `Bool`
  `..` | Binary/三元 | Range 運算子 | `Int`
