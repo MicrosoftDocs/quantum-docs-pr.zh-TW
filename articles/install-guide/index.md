@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: b209f0b600d973c3870c66060e1b484ec519322f
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 0e9dd1c74316eeb1fa7bbbf657d2e78231ee4294
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820703"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036503"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>安裝 Microsoft Quantum Development Kit (QDK)
 
@@ -19,7 +19,7 @@ ms.locfileid: "76820703"
 
 - Q# 程式設計語言
 - 可在 Q# 中抽象呈現複雜功能的一組程式庫
-- 適用於 Python 和 .NET 語言 (即C#、F#、VB.NET) 的 API，可執行以 Q# 撰寫的量子程式
+- 適用於 Python 和 .NET languages (C#、F#、VB.NET) 的 API，可執行以 Q# 撰寫的量子程式
 - 用來協助您進行開發的工具
 
 Q# 程式通常會搭配以 .NET 語言 (通常是 C#) 或 Python 撰寫的主機程式。 這可讓我們從傳統程式內呼叫量子作業。
