@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831013"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036282"
 ---
 # <a name="develop-with-q--c"></a>使用 Q # + 進行開發C#
 
@@ -23,7 +23,7 @@ ms.locfileid: "76831013"
 - [使用 Visual Studio Code 的C# Q # + （Windows、Linux 和 Mac）](#VSC)
 - [使用 `dotnet` 命令C#行工具的 Q # +](#command)
 
-## 使用 Visual Studio 的 Q # C# + 進行開發<a name="VS"></a>
+## 使用 Visual Studio 的 Q # C# + 進行開發 <a name="VS"></a>
 
 Visual Studio 提供開發 Q # 程式的豐富環境。 Q # Visual Studio 延伸模組包含 Q # 檔案和專案的範本，以及語法醒目提示、程式碼完成和 IntelliSense 支援。
 
@@ -59,7 +59,7 @@ Visual Studio 提供開發 Q # 程式的豐富環境。 Q # Visual Studio 延伸
 > [!NOTE]
 > * 如果您在一個 Visual Studio 解決方案內放入了多個專案，則解決方案中包含的所有專案必須位於與解決方案相同的資料夾中，或解決方案的其中一個子資料夾中。  
 
-## 使用 Visual Studio Code 的 Q # C# + 進行開發<a name="VSC"></a>
+## 使用 Visual Studio Code 的 Q # C# + 進行開發 <a name="VSC"></a>
 
 Visual Studio Code （VS Code）提供豐富的環境，供您在 Windows、Linux 和 Mac 上開發 Q # 程式。  Q # VS Code 延伸模組包含 Q # 語法反白顯示、程式碼完成和 Q # 程式碼片段的支援。
 
@@ -101,7 +101,7 @@ Visual Studio Code （VS Code）提供豐富的環境，供您在 Windows、Linu
 > [!NOTE]
 > * Visual Studio Code 擴充功能目前不支援具有多個根資料夾的工作區。 如果您在一個 VS Code 工作區中有多個專案，則所有專案都必須包含在相同的根資料夾內。
 
-## 使用 `dotnet` 命令列工具C#搭配 Q # + 進行開發<a name="command"></a>
+## 使用 `dotnet` 命令列工具C#搭配 Q # + 進行開發 <a name="command"></a>
 
 當然，您也可以從命令列建置並執行 Q# 程式，只要安裝 .NET Core SDK 和 QDK 專案範本即可。 
 
@@ -111,7 +111,7 @@ Visual Studio Code （VS Code）提供豐富的環境，供您在 Windows、Linu
 
 1. 安裝適用於 .NET 的 Quantum 專案範本
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ Visual Studio Code （VS Code）提供豐富的環境，供您在 Windows、Linu
 
     - 建立新的應用程式
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - 瀏覽至新的應用程式目錄
@@ -135,13 +135,13 @@ Visual Studio Code （VS Code）提供豐富的環境，供您在 Windows、Linu
 
     - 執行應用程式
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
         您應該會看見下列輸出：`Hello quantum world!`
 
     
-## <a name="whats-next"></a>接下來呢？
+## <a name="whats-next"></a>下一步
 
 您已在慣用環境中安裝了 Quantum Development Kit，因此接下來可以編寫和執行[您的第一個量子程式](xref:microsoft.quantum.write-program)。
