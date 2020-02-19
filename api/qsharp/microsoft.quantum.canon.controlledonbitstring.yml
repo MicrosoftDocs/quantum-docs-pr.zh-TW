@@ -3,18 +3,73 @@ uid: microsoft.quantum.canon.controlledonbitstring
 name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: 傳回在目標暫存器上套用 oracle 的單一運算子（如果控制項註冊狀態對應至指定的位元遮罩）。
+summary: >-
+  傳回在目標暫存器上套用 oracle 的單一運算子（如果控制項註冊狀態對應至指定的位元遮罩）。
+
+
+  這個函式的輸出可以透過單一轉換 $U $ 來表示，\begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\psi} & \textrm{if} （b_0 b_1 \cdots b_ {n-1}） = \texttt{bits} \\\\ \ket{\psi} & \textrm{otherwise} \end{cases}，\end{align}，其中 $V $ 是代表 `oracle` 作業動作的單一轉換。
+remarks: >-
+  `bits` 和 `controlRegister` 的長度必須相等。
+
+
+  假設布林陣列 `bits` 和單一作業 `oracle`，此函式的輸出就是執行下列步驟的作業：
+
+
+  * 將 `X` 作業套用至控制項暫存器的每個 qubit，其對應至 `bits``false` 元素;
+
+  * 將 `Controlled oracle` 套用至控制項和目標暫存器;
+
+  * 將 `X` 作業套用至控制項暫存器的每個 qubit，並再次對應至 `bits` 的 `false` 元素，以將控制項暫存器傳回原始狀態。
+
+
+  `Controlled` 仿函數的輸出是 `ControlledOnBitString` 的特殊案例，其中 `bits` 等於 `[true, ..., true]`。
+examples: >-
+  下列程式碼片段是相等的：
+
+
+  ```qsharp
+
+  (ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+
+  ```
+
+
+  和
+
+
+  ```qsharp
+
+  within {
+      ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+  } apply {
+      Controlled oracle(controlRegister, targetRegister);
+  }
+
+  ```
+
+
+  下列程式碼會準備狀態 $ \frac{1}{2}（\ket{00}-\ket{01} + \ket{10} + \ket{11}） $：
+
+
+  ```qsharp
+
+  using (register = Qubit[2]) {
+      ApplyToEach(H, register);
+      (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+  }
+
+  ```
 syntax: "function ControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: 布林值陣列。
+    summary: 要在其上控制指定之單一運算子的位字串。
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: 單一運算子。
+    summary: 要在目標暫存器上套用的單一運算子。
     isOperation: true
     input:
       types:
@@ -47,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 1abe0f1abcbab06aa9821c52878cf85b03d2c592
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
+  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227384"
+  ms.lasthandoff: 02/18/2020
+  ms.locfileid: "77441062"
