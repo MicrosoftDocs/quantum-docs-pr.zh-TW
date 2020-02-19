@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
+ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871612"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77441040"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -21,13 +21,14 @@ ms.locfileid: "76871612"
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
 
+
 ## <a name="version-01020012831"></a>0\.10.2001.2831 版
 
 *發行日期：2020 年 1 月 29 日*
 
 此版本包含下列項目：
 
-- 新的 Microsoft.Quantum.SDK NuGet 套件，請參閱 [README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md) 中的詳細資訊
+- 新的 Microsoft.Quantum.SDK NuGet 套件
 - 新增 .NET Core 3.1 支援，強烈建議您安裝 3.1.100 版，因為使用舊版 .NET Core SDK 版本可能會造成問題
 - 在 Microsoft.Quantum.QsCompiler.Experimental 下提供新的編譯器轉換
 - 在 IQ# 中將輸出狀態向量以 HTML 公開的新功能
