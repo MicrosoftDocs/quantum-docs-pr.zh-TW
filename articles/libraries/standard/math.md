@@ -1,16 +1,16 @@
 ---
-title: 'Q # 標準程式庫-數學 |Microsoft Docs'
-description: 'Q # 標準程式庫-數學'
+title: 'Q # 標準程式庫中的數學運算'
+description: '瞭解用於內建資料類型的 Q # 標準程式庫中的傳統數學函數。'
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 7ac9d321f59f7cc95ad8939a4cf7c36e0c5e0491
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: bec866472abc0d4327cdc570306341375395f492
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184452"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906146"
 ---
 # <a name="classical-mathematical-functions"></a>傳統數學函式 #
 

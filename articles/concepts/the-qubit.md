@@ -1,17 +1,17 @@
 ---
-title: Qubit |Microsoft Docs
-description: 量子位元
+title: 量子運算中的 qubit
+description: 深入瞭解 qubits，這是量子運算的基本資訊單位。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.qubit
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f29319c3ec19fecc45f5a9f7c16061b9aa9f71ec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 770b739d95f5c1512234f6f7d2ca4544f1d80e64
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183636"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907523"
 ---
 # <a name="the-qubit"></a>Qubit
 
@@ -25,7 +25,7 @@ ms.locfileid: "73183636"
 
 具有標準 $1 $ 之實數或複數的任何二維資料行向量，代表 qubit 所持有的可能量子狀態。 因此，$ \begin{bmatrix} \Alpha \\\\ \Beta \end{bmatrix} $ 代表 qubit 狀態，如果 $ \Alpha $ 和 $ \Beta $ 是滿足 $ | \Alpha | ^ 2 + | \Beta | ^ 2 = $1 的複雜數位。 代表 qubits 的有效量子狀態向量範例包括
 
-$ $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}、\begin{bmatrix} 0 \\\\ 1 \end{bmatrix}、\begin{bmatrix} \frac{1}{\sqrt{2}} \\\\ \frac{1}{\sqrt{2}} \end{bmatrix}，\begin{bmatrix} \frac{1}{\sqrt{2}} \\\\ \frac{-1}{\sqrt{2}} \end{bmatrix}，\text{and} \begin{bmatrix} \frac{1}{\sqrt{2}} \\\\ \frac{i}{\sqrt{2}} \end{bmatrix}. $ $
+$ $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}、\begin{bmatrix} 0 \\\\ 1 \end{bmatrix}、\begin{bmatrix} \frac{1}{\sqrt{2}} \\\\ \frac{1}{\sqrt{2}} \end{bmatrix}、\begin{bmatrix} \frac{1}{\sqrt{2}} \\\\ \frac{-1}{\sqrt{2}} \end{bmatrix}、\text{和} \begin{bmatrix} \frac{1}{\sqrt{2}} \\\\ \frac{i}{\sqrt{2}} \end{bmatrix}. $ $
 
 量子狀態向量 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 和 $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 接受特殊角色。 這兩個向量會形成向量空間的基礎，以描述 qubit 的狀態。 這表示任何量子狀態向量都可以撰寫為這些基礎向量的總和。 具體而言，向量 $ \begin{bmatrix} x \\\\ y \end{bmatrix} $ 可以撰寫為 $x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $。 雖然這些向量的任何旋轉都可做為 qubit 的有效基礎，但我們選擇以*計算為基礎*來進行這項工作的許可權。
 
@@ -41,7 +41,7 @@ $ $ 0 \ HTTP-equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}，\qquad 1 \equiv \beg
 
 測量的屬性也表示量子狀態向量的整體正負號無關。 否定向量相當於 $ \Alpha \rightarrow-\Alpha $ 和 $ \Beta \rightarrow-\Beta $。 因為測量 $0 $ 和 $1 $ 的機率取決於詞彙的大小平方，所以插入這類符號並不會改變機率。 這類階段通常稱為[``*全域階段*' '](https://en.wikipedia.org/wiki/Phase_factor) ，而更一般的形式可以是 $e ^ {i \phi} $，而不只是 $ \pm $1。
 
-測量的最後一個重要屬性是，它不一定會損毀所有的量子狀態向量。 如果我們從 state $ \begin{bmatrix} 1 的 qubit 開始 \\\\ 0 \end{bmatrix} $ （對應于傳統狀態 $0 $），測量此狀態一律會產生結果 $0 $，並讓配量狀態維持不變。 就這一點而言，如果我們只有傳統位（也就是 $ \begin{bmatrix}1 \\\\ 0 \end{bmatrix} $ 或 $ \begin{bmatrix}0 \\\\ 1 \end{bmatrix} $），那麼測量就不會損毀系統。 這表示我們可以在量子電腦上複寫傳統資料，並將它操作，就像在傳統電腦上一樣。 不過，若要一次儲存這兩個狀態的資訊，其功能就是將配量運算提升到可能的傳統方式，並進一步 robs 量子電腦不加上複製量子資料的能力，另請參閱[不復制定理](https://en.wikipedia.org/wiki/No-cloning_theorem).
+測量的最後一個重要屬性是，它不一定會損毀所有的量子狀態向量。 如果我們從 state $ \begin{bmatrix} 1 的 qubit 開始 \\\\ 0 \end{bmatrix} $ （對應于傳統狀態 $0 $），測量此狀態一律會產生結果 $0 $，並讓配量狀態維持不變。 就這一點而言，如果我們只有傳統位（也就是 $ \begin{bmatrix}1 \\\\ 0 \end{bmatrix} $ 或 $ \begin{bmatrix}0 \\\\ 1 \end{bmatrix} $），那麼測量就不會損毀系統。 這表示我們可以在量子電腦上複寫傳統資料，並將它操作，就像在傳統電腦上一樣。 不過，若要一次儲存這兩個狀態的資訊，您可以將配量運算提升至傳統方式，並進一步 robs 量子電腦不加上複製量子資料的能力，另請參閱[不復制定理](https://en.wikipedia.org/wiki/No-cloning_theorem)。
 
 ## <a name="visualizing-qubits-and-transformations-using-the-bloch-sphere"></a>使用 Bloch 球體視覺化 Qubits 和轉換
 
@@ -98,12 +98,12 @@ $$
 
 如需這些作業的詳細資訊、其 Bloch 球體標記法和 Q # 實作為，請參閱[內部作業和函數](xref:microsoft.quantum.libraries.standard.prelude#intrinsic-operations-and-functions)。
 
-如需如何從這些基本專案建立單一轉換的範例，上述 Bloch 球體中所示的三個轉換對應至閘道序列 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \mapsto HZH \begin{bmatrix} 1\\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $。
+如需如何從這些基本專案建立單一轉換的範例，上述 Bloch 球體中所示的三個轉換對應至閘道序列 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \mapsto HZH \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $。
 
 雖然先前的構成最受歡迎的基本閘道，可在堆疊的邏輯層級上描述作業（將邏輯層級視為配量演算法的層級），但是在演算法上考慮較少的基本作業通常會很方便層級，例如較接近函數描述層級的作業。 幸好，問 # 也有可用來執行較高層級 unitaries 的方法，而這可讓您在不明確分解所有專案到 Clifford 和 $T $-閘道的情況下，執行高階演算法。
 
 最簡單的這種基本類型就是單一的 qubit 旋轉。 通常會考慮三個單一 qubit 旋轉： $R _x $、$R _y $ 和 $R _z $。 例如，若要以視覺化方式呈現旋轉 $R _x （\theta） $ 的動作，請想像以 Bloch 球體的 $x $ 軸方向指向右邊，並透過 $ \ theta/2 $ 弧度的角度旋轉向量。 這項令人困惑的 $2 $ 因素，是因為當繪製在 Bloch 球體上時，直角的向量是 $ 180 ^ \circ $，但實際上是 $ 90 ^ \circ $ 度數。 對應的單一矩陣如下：
 
-\begin{align *} & R_z （\theta） = e ^ {-I\theta z/2} = \begin{bmatrix} e ^ {-i \ theta/2} & 0\\\\ 0 & e ^ {i \ theta/2} \end{bmatrix}，\\\\ & R_x （\theta） = e ^ {-I\theta x/2} = HR_z （\theta） H = \begin{bmatrix} \cos （\theta/2） &-i\sin （\ theta/2）\\\\-i\sin （\ theta/2） & \cos （\ theta/2） \end{bmatrix}，\\\\ & R_y （\theta） = e ^ {-i\theta Y/2} = SHR_z （\theta） HS ^ \dagger = \begin{bmatrix} \cos （\ theta/2） &-\sin （\ theta/2）\\\\ \sin （\ theta/2） & \cos （\ theta/2） \end{bmatrix}。\end{align*}
+\begin{align *} & R_z （\theta） = e ^ {-I\theta z/2} = \begin{bmatrix} e ^ {-i \ theta/2} & 0\\\\ 0 & e ^ {i \ theta/2} \end{bmatrix}，\\\\ & R_x （\theta） = e ^ {-I\theta x/2} = HR_z （\theta） H = \begin{bmatrix} \cos （\ theta/2） &-i\sin （\ theta/2）\\\\-i\sin （\ theta/2） & \cos （\ theta/2） \end{bmatrix}，\\\\ & R_y （\theta） = e ^ {-I\theta y/2} = SHR_z （\theta） HS ^ \dagger = \begin{bmatrix} \cos （\ theta/2） &-\sin （\ theta/2）\\\\ \sin （\ theta/2） & \cos （\ theta/2） \end{bmatrix}。\end{align*}
 
 就像任何三個旋轉可以合併在一起，以在三個維度中執行任意旋轉，可以從 Bloch 球體標記法看出，任何單一矩陣也可以撰寫成三種旋轉的序列。 具體而言，針對每個單一矩陣 $U $ 存在 $ \Alpha、\Beta、\gamma、\delta $，$U = e ^ {i\Alpha} R_x （\Beta） R_z （\gamma） R_x （\delta） $。 因此 $R _z （\theta） $ 和 $H $ 也會構成通用閘道集，雖然 $ \theta $ 可以接受任何值。 基於這個理由，以及由於配量模擬中的應用程式，這類連續閘道對於量子計算很重要，尤其是在量子演算法設計層級。 為了達到容錯硬體的執行，最終會將它們編譯成緊密接近這些旋轉的離散閘道序列。

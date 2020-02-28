@@ -1,17 +1,17 @@
 ---
-title: 量子 oracles |Microsoft Docs
-description: 量子 oracles
+title: 量子 Oracle
+description: 瞭解如何使用並定義用來做為其他演算法輸入的「量子 oracles」、「黑色箱」作業。
 author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 07/11/2018
 ms.topic: article
-ms.openlocfilehash: 96949b371a3a5a1135d624690933a48ea0214a2e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1d1d0b0903db8e994166c3e8a5798f70742a1c7e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184707"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904922"
 ---
 # <a name="quantum-oracles"></a>量子 Oracles
 
@@ -43,7 +43,7 @@ $ $ \begin{align} O （\ket{x} \otimes \ket{y}） = \ket{x} \otimes \ket{y \oplu
 請考慮 Hadamard 作業，例如，它是由 $H \ket{0} = \ket{+} $ 和 $H \ket{1} = \ket{-}$ 所定義。
 如果我們想要知道 $ \ket{+} $ 的 $H $ 如何運作，我們可以使用 $H $ 是線性的。
 
-$ $ \begin{align} H\ket {+} & = \frac{1}{\sqrt{2}} H （\ket{0} + \ket{1}） = \frac{1}{\sqrt{2}} （H\ket{0} + H\ket{1}） \\\\ & = \frac{1}{\sqrt{2}} （\ket {+} + \ket{-}） = \frac12 （\ket{0} + \ket{1} + \ket{0}-\ket{1}） = \ket{0}。
+$ $ \begin{align} H\ket {+} & = \frac{1}{\sqrt{2}} H （\ket{0} + \ket{1}） = \frac{1}{\sqrt{2}} （H\ket{0} + H\ket{1}） \\\\ & = \frac{1}{\sqrt{2}} （\ket{+} + \ket{-}） = \frac12 （\ket{0} + \ket{1} + \ket{0}-\ket{1}） = \ket{0}。
 \end{align} $ $
 
 在定義 oracle $O $ 的案例中，我們可以同樣地使用 $n + m $ qubits 上的任何 state $ \ket{\psi} $ 可以撰寫成
@@ -52,7 +52,7 @@ $ $ \begin{align} \ket{\psi} & = \ sum_ {x \in \\{0，1\\} ^ n，y \in \\{0，1\
 
 其中 $ \Alpha： \\{0，1\\} ^ n \times \\{0，1\\} ^ m \to \mathbb{C} $ 代表 state $ \ket{\psi} $ 的係數。 於是
 
-$ $ \begin{align} O \ket{\psi} & = O \ sum_ {x \in \\{0，1\\} ^ n，y \in \\{0，1\\} ^ m} \Alpha （x，y） \ket{x} \ket{y} \\\\ & = \ sum_ {x \in \\{0、1\\} ^ n、y \in \\{0，1\\} ^ m} \Alpha （x，y） O \ket{x} \ket{y} \\\\ & = \ sum_ {x \in \\{0，1\\} ^ n，y \in \\{0，1\\} ^ m} \Alpha （x，y） \ket{x} \ket{y \oplus f （x）}。
+$ $ \begin{align} O \ket{\psi} & = O \ sum_ {x \in \\{0，1\\} ^ n，y \in \\{0，1\\} ^ m} \Alpha （x，y） \ket{x} \ket{y} \\\\ & = \ sum_ {x \in \\{0，1\\} ^ n，y \in \\{0，1\\} ^ m} \Alpha （x，y） O \ket{x} \ket{y} \\\\ & = \ sum_ {x \in \\{0，1\\} ^ n，y \in \\{0，1\\} ^ m} \Alpha （x，y） \ket{x} \ket{y \oplus f （x）}。
 \end{align} $ $
 
 ## <a name="phase-oracles"></a>階段 oracles

@@ -1,17 +1,17 @@
 ---
-title: 多個 qubits |Microsoft Docs
-description: 多個量子位元
+title: 多個量子位元
+description: 瞭解如何在兩個或多個 qubits 上執行作業。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863211"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907540"
 ---
 # <a name="multiple-qubits"></a>多個 Qubits
 
@@ -59,7 +59,7 @@ $$
 
 您也可以只測量兩個 qubit 量子狀態的一個 qubit。 在只測量其中一個 qubits 的情況下，測量的影響會稍微不同，因為整個狀態不會折迭成計算基礎狀態，而只會折迭到一個子系統。  換句話說，在這種情況下，測量只有一個 qubit 只會折迭其中一個子系統，而不是全部折迭。  
 
-若要查看這一點，請考慮測量下列狀態的第一個 qubit，這是藉由套用 Hadamard 轉換 $H $ （一開始是設定為 "0" 狀態的兩個 qubits）來形成： $ $ H ^ {\otimes 2} \left （\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right） = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\-1 \\ & 1 &-1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ 結束 {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \mapsto \begin{cases}\text{outcome} = 0 & \frac{1}{2}0\\\\ 0\\\\\\ \text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}。
+若要查看這一點，請考慮測量下列狀態的第一個 qubit，這是藉由套用 Hadamard 轉換 $H $ （一開始是設定為 "0" 狀態的兩個 qubits）來形成： $ $ H ^ {\otimes 2} \left （\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right） = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\-1 \\ & 1 &-1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ 結束 {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \mapsto \begin{cases}\text{outcome} = 0 & \frac{1}{2}0\\\\ 0\\\\\\ \text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}。\\\\\\\\\\
 $ $ 這兩個結果的發生率為50%。  這兩者的結果為50% 機率的 intuited，是因為第一個 qubit 上的初始配量狀態向量在交換 $0 $1 $ 底下不變。
 
 測量第一個或第二個 qubit 的數學規則很簡單。  如果我們讓 $e _k $ 是 $k ^ {\rm th} $ 計算基礎向量，並讓 $S $ 是所有 $e $ 的集合，如此一來，問題的 qubit 就會將該值 _k $ 的值設為 $1 $。  例如，如果我們有興趣測量第一個 qubit，則 $S $ 會包含 $e _2 \ HTTP-equiv $10 和 $e _3 \ HTTP-equiv $11。  同樣地，如果我們對第二個 qubit 有興趣 $S $ 會包含 $e _1 \ HTTP-equiv $1 和 $e _3 \equiv $11。  然後，測量所選 qubit 為 $1 $ 的機率是針對狀態向量 $ \psi $
@@ -103,7 +103,7 @@ $ $ \operatorname{CNOT} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 
 
 $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
 
-與
+和
 
 $ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
 

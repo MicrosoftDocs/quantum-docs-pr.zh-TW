@@ -1,17 +1,17 @@
 ---
-title: 深度計數器 |量子電腦追蹤模擬器 |Microsoft Docs
-description: 量子電腦追蹤模擬器概觀
+title: 深度計數器
+description: 深入瞭解 Microsoft QDK Depth 計數器，它會收集在量副程式中叫用的每個作業深度計數。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 07f927c794e2c62e53e4e053b5bc683d24bbed8d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: d532a9f512b8c87d83d62ed26e3bb67e1b6f668b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820465"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906095"
 ---
 # <a name="depth-counter"></a>深度計數器
 
@@ -37,7 +37,7 @@ operation ApplySampleWithCCNOT() : Unit {
 
 若要確認 `CCNOT` 具有 `T` 深度5，且 `ApplySampleWithCCNOT` 具有 `T` 深度6，我們可以使用C#下列程式碼：
 
-```csharp 
+```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
@@ -61,6 +61,6 @@ double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Dept
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a>請參閱 ##
+## <a name="see-also"></a>另請參閱 ##
 
 - 量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。

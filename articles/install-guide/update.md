@@ -1,17 +1,18 @@
 ---
 title: 瞭解如何更新 Microsoft Quantum Development Kit （QDK）
+description: '描述如何將您的 Q # 專案和 Microsoft Quantum Development Kit 更新為目前的版本。'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: f19285ae0e008b3460d06430a236f098d716e268
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 264b5640216b2c0a468b625cdef4b9e0123d8b39
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036301"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904752"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>更新 Microsoft Quantum Development Kit （QDK）
 
@@ -128,7 +129,7 @@ ms.locfileid: "77036301"
     dotnet iqsharp --version
     ```
 
-    您應該會看到下列輸出：
+    您應該會看見下列輸出：
 
     ```bash
     iqsharp: 0.10.1912.501
@@ -149,7 +150,7 @@ ms.locfileid: "77036301"
     pip show qsharp
     ```
 
-    您應該會看到下列輸出：
+    您應該會看見下列輸出：
 
     ```bash
     Name: qsharp

@@ -1,17 +1,17 @@
 ---
 title: 使用 Qubits
-description: '使用 Qubits-Q # 技術'
+description: 瞭解如何配置 qubits、在作業和函式中使用它們，以及測量結果。
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: dc6db93dadc37534aece9624fe516125d919f8cd
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1aa2432996dda61d099e3b5bb4db78379ce43d97
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819989"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907642"
 ---
 # <a name="working-with-qubits"></a>使用 Qubits
 
@@ -87,7 +87,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 }
 ```
 
-## <a name="measurements"></a>度量
+## <a name="measurements"></a>量測
 
 使用 `Measure` 作業，這是內建的內建函式非單一作業，我們可以從類型的物件中解壓縮傳統資訊 `Qubit` 並指派傳統值做為結果，其中具有保留類型 `Result`，表示結果不再是配量狀態。
 `Measure` 的輸入是 Bloch 球體上的 Pauli 軸，以 `Pauli` 類型的值（例如 `PauliX`）和 `Qubit`類型的值來表示。

@@ -1,17 +1,17 @@
 ---
-title: Dirac 標記法 |Microsoft Docs
-description: Dirac 標記法
+title: Dirac 標記
+description: 瞭解如何使用 Dirac 標記法來表示配量狀態和模擬量子作業。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 33d964d079c94bd947e35d2c09516b29df1bba11
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 204e56cc97fe28f9c52dcfb882aadec7e09bb2dc
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184758"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907557"
 ---
 # <a name="dirac-notation"></a>Dirac 標記法
 
@@ -36,7 +36,7 @@ $$
 
 下列標記法通常用來描述將 Hadamard 閘道套用至 $ \ket{0}$ 和 $ \ket{1}$ （對應至 Bloch 球體上 $ + x $ 和 $-x $ 指示中的單位向量）所產生的狀態：
 
-$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}，\qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-} .
+$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}，\qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-}。
 $$
 
 您也可以使用 Dirac 標記法，將這些狀態擴充為 $ \ket{0}$ 和 $ \ket{1}$ 的總和：
@@ -95,14 +95,14 @@ Bra 向量遵循類似的慣例來 ket 向量。  例如，vector $ \bra{\psi}\b
 
 例如，假設我們想要計算測量 state $ \ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ 的機率，方法是使用配量程式將狀態測量為 $ \ket{+} $ 或 $ \ket{-}$。 然後，裝置會輸出狀態為 $ \ket{-}$ 的機率為 
 
-$ $ | \braket{-| \psi} | ^ 2 = \left | \frac{1}{\sqrt{2}} （\bra{0}-\bra{1}）（\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}） \right | ^ 2 = \left |-\frac{3}{5 \ sqrt{2}} + \frac{4}{5 \ sqrt{2}} \right | ^ 2 = \frac{1}{50}. $ $
+$ $ | \braket{-| \psi} | ^ 2 = \left | \frac{1}{\sqrt{2}} （\bra{0}-\bra{1}）（\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}） \right | ^ 2 = \left |-\frac{3}{5 \ sqrt{2}} + \frac{4}{5 \ sqrt{2}} \right | ^ 2 = \frac{1}{50}
 
 負號出現在機率計算中的事實，是一種量子干擾的表現，這是配量運算透過傳統運算獲得優勢的機制之一。
 
 ## <a name="ketbra-or-outer-product"></a>ketbra 或外部產品
 在 Dirac 標記法中，值得討論的最後一個專案是*ketbra*或外部產品。  外部產品在 Dirac 標記法中是以 $ \ket{\psi} \bra{\phi} $ 的形式呈現，有時也稱為 ketbras，因為 bras 和 kets 的順序會與 brakets 相反。  外部產品是透過矩陣乘法定義為 $ \ket{\psi} \bra{\phi} = \psi \phi ^ \dagger $ （適用于量子狀態向量 $ \psi $ 和 $ \phi $）。  最簡單且可說是此標記法的最常見範例，就是
 
-$ $ \ket{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1 & 0 \end{bmatrix} = \begin{bmatrix}1 & 0\\\\ 0 & 0 \ end {bmatrix} \qquad \ket{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0 & 1 \end{bmatrix} = \begin{bmatrix}0 & 0\\\\ 0 & 1 \ end {bmatrix}。
+$ $ \ket{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1 & 0 \end{bmatrix} = \begin{bmatrix}1 & 0\\\\ 0 & 0 \ 結束 {bmatrix} \qquad \ket{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0 & 1 \end{bmatrix} = \begin{bmatrix}0 & 0\\\\ 0 & 1 \ end {bmatrix}。
 $$
 
 Ketbras 通常稱為投影機，因為它們會將配量狀態投射到固定值上。  因為這些作業不是單一的（而且甚至不會保留向量的標準），所以量子電腦無法以決定性的方式套用投影機，應該不會感到驚訝。  不過，投影機會執行一項美觀的作業來描述測量在配量狀態上的動作。  例如，如果我們將 state $ \ket{\psi} $ 測量為 $0 $，則產生的轉換會因為測量而導致狀態體驗
@@ -146,4 +146,3 @@ $ $ P （\text{first qubit = 1}） = \psi ^ \dagger （e\_{10}e\_{10}^ \dagger +
 
 ## <a name="q-gate-sequences-equivalent-to-quantum-states"></a>Q # 閘道序列相當於量子狀態
 關於量子標記法和 Q # 程式設計語言的最後一點：我們在本檔的萌芽中提到，配量狀態是量子運算中資訊的基本物件。  這可能會令人驚訝的是，在問 # 中，沒有配量狀態的概念。  相反地，所有狀態只會由用來準備它們的作業來描述。  先前的範例是這個的絕佳說明。  我們可以將結果表示為 $H ^ {\otimes n} \ket{0}$，而不是在暫存器中的每個配量位字串上表示統一重迭。  這種狀態的指數較短描述不僅具有我們可以傳統方式其相關原因的優點，還會簡明扼要地定義透過軟體堆疊傳播以執行演算法所需的作業。  基於這個理由，Q # 的設計是用來發出閘道序列，而不是配量狀態。不過，理論層級的兩個觀點是相等的。
-

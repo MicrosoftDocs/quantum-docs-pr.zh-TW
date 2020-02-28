@@ -1,17 +1,17 @@
 ---
-title: 參與檔 |Microsoft Docs
-description: 參與檔
+title: 參與 Microsoft QDK 的檔
+description: 瞭解如何將概念或 API 內容提供給 Microsoft 量子檔集。
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: 1e24dd859c0b75a161f4f3c7151e2eec227075a2
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183670"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904888"
 ---
 # <a name="improving-documentation"></a>改善檔 #
 
@@ -24,8 +24,8 @@ ms.locfileid: "73183670"
 
 話雖如此，每一種形式的檔都有不同的細節：
 
-- **概念檔**包含發行至 https://docs.microsoft.com/quantum 的一系列文章，並說明從量子計算的基本概念到交換格式的技術規格等所有事項。 這些文章是以[DocFX-Flavored Markdown （DFM）](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)撰寫，這是用來建立豐富檔集的 Markdown 變體。
-- **API 參考**是每個 Q # 函數、作業和使用者定義類型的一組頁面，已發行至 https://docs.microsoft.com/qsharp/api/ 。 這些頁面會記錄每個可呼叫的輸入和作業，以及範例和詳細資訊的連結。 API 參考會在每次發行時，從 Q # 原始程式碼中的小型 DFM 檔自動解壓縮。
+- **概念檔**包含發行至 https://docs.microsoft.com/quantum的一系列文章，並說明從量子計算的基本概念到交換格式的技術規格等所有事項。 這些文章是以[DocFX-Flavored Markdown （DFM）](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)撰寫，這是用來建立豐富檔集的 Markdown 變體。
+- **API 參考**是每個 Q # 函數、作業和使用者定義類型的一組頁面，已發行至 https://docs.microsoft.com/qsharp/api/。 這些頁面會記錄每個可呼叫的輸入和作業，以及範例和詳細資訊的連結。 API 參考會在每次發行時，從 Q # 原始程式碼中的小型 DFM 檔自動解壓縮。
 - 包含在每個範例和 kata 中的**讀我檔案<!---->** ，說明如何使用該範例或 kata、它涵蓋的內容，以及它與其他的量子開發工具組的關係。 這些檔案是使用[GitHub Flavored Markdown （GFM）](https://github.github.com/gfm/)所撰寫，這是更輕量的替代方案，可將檔直接附加至程式碼存放庫。
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>參與概念檔 ##
@@ -45,48 +45,85 @@ ms.locfileid: "73183670"
 
 若要改善 API 參考的效果，在記載的程式碼上直接開啟提取要求最有説明。
 每個函數、作業或使用者自訂類型都支援檔批註（以 `///` 表示，而不是 `//`）。
-當我們編譯每個版本的「配量」開發工具組時，這些批註會用來產生 https://docs.microsoft.com/qsharp/api/ 的 API 參考，包括每個可呼叫之輸入和輸出的詳細資訊、每個可呼叫的假設，以及如何使用它們的範例。
+當我們編譯每個版本的「配量」開發工具組時，這些批註會用來產生 https://docs.microsoft.com/qsharp/api/的 API 參考，包括每個可呼叫之輸入和輸出的詳細資訊、每個可呼叫的假設，以及如何使用它們的範例。
 
 > [!IMPORTANT]
 > 請務必不要手動編輯產生的 API 檔，因為每個新版本都會覆寫這些檔案。
 > 我們將您對您的貢獻做為價值，並想要確保您的變更在發行後仍持續協助使用者發行。
 
-例如，請考慮 `PrepareTrialState(angles : Double[], register : Qubit[]) : Unit`的作業。
-檔批註應可協助使用者瞭解如何解讀 `angles`、作業假設 `register`的初始狀態、對 `register` 的影響等等。
+例如，請考慮函數 `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)`。
+檔批註應可協助使用者瞭解如何解讀 `bits` 和 `oracle`，以及函式的功能。
 您可以透過檔批註中特別命名的 Markdown 區段，將這些不同的資訊片段提供給 Q # 編譯器。
-在 `PrepareTrialState`的範例中，我們可能會撰寫如下所示的內容：
+在 `ControlledOnBitString`的範例中，我們可能會撰寫如下所示的內容：
 
 ```qsharp
-/// # Summary
-/// Given a register of qubits, prepares them in a trial state by rotating each
-/// independently.
-///
-/// # Description
-/// This operation prepares the input register by performing a
-/// $Y$ rotation on each qubit by an angle given in `angles`.
-///
-/// # Input
-/// ## angles
-/// An array of parameters
-/// ## register
-/// A register of qubits initially in the $\ket{00\cdots0}$ state.
-///
-/// # Example
-/// To prepare an equal superposition $\ket{++\cdots+}$ over all input qubits:
-/// ```qsharp
-/// PrepareTrialState(ConstantArray(Length(register), PI() / 2.0), register);
-/// ```
-///
-/// # Remarks
-/// This operation is generally useful in the inner loop of an optimization
-/// algorithm.
-///
-/// # See Also
-/// - Microsoft.Quantum.Intrinsic.Ry
-operation PrepareTrialState(angles : Double[], register : Qubit[]) : Unit {
-    // ...
-}
+ /// # Summary
+ /// Returns a unitary operation that applies an oracle on the target register if the 
+ /// control register state corresponds to a specified bit mask.
+ ///
+ /// # Description
+ /// The output of this function is an operation that can be represented by a
+ /// unitary transformation $U$ such that
+ /// \begin{align}
+ ///     U \ket{b_0 b_1 \cdots b_{n - 1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_{n-1}} \otimes
+ ///     \begin{cases}
+ ///         V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_{n - 1}) = \texttt{bits} \\\\
+ ///         \ket{\psi} & \textrm{otherwise}
+ ///     \end{cases},
+ /// \end{align}
+ /// where $V$ is a unitary transformation that represents the action of the
+ /// `oracle` operation.
+ ///
+ /// # Input
+ /// ## bits
+ /// The bit string to control the given unitary operation on.
+ /// ## oracle
+ /// The unitary operation to be applied on the target register.
+ ///
+ /// # Output
+ /// A unitary operation that applies `oracle` on the target register if the control 
+ /// register state corresponds to the bit mask `bits`.
+ ///
+ /// # Remarks
+ /// The length of `bits` and `controlRegister` must be equal.
+ ///
+ /// Given a Boolean array `bits` and a unitary operation `oracle`, the output of this function
+ /// is an operation that performs the following steps:
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits`;
+ /// * apply `Controlled oracle` to the control and target registers;
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits` again to return the control register to the original state.
+ ///
+ /// The output of the `Controlled` functor is a special case of `ControlledOnBitString` where `bits` is equal to `[true, ..., true]`.
+ ///
+ /// # Example
+ /// The following code snippets are equivalent:
+ /// ```qsharp
+ /// (ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+ /// ```
+ /// and
+ /// ```qsharp
+ /// within {
+ ///     ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+ /// } apply {
+ ///     Controlled oracle(controlRegister, targetRegister);
+ /// }
+ /// ```
+ ///
+ /// The following code prepares a state $\frac{1}{2}(\ket{00} - \ket{01} + \ket{10} + \ket{11})$:
+ /// ```qsharp
+ /// using (register = Qubit[2]) {
+ ///     ApplyToEach(H, register);
+ ///     (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+ /// }
+ /// ```
+ function ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)
+ {
+     return ControlledOnBitStringImpl(bits, oracle, _, _);
+ }
 ```
+您可以在 `ControlledOnBitString` 函式的[API 檔](xref:microsoft.quantum.canon.controlledonbitstring)中，看到上述程式碼的轉譯版本。
 
 除了撰寫檔的一般作法外，在撰寫 API 檔批註時，您可以記住一些事項：
 

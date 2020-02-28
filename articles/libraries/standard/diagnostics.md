@@ -1,18 +1,18 @@
 ---
-title: '問 # 標準程式庫-診斷 |Microsoft Docs'
-description: '問 # 標準程式庫-診斷'
+title: 'Q # 標準程式庫中的診斷'
+description: '瞭解用於在量副程式中攔截錯誤或錯誤的 Q # 標準程式庫中的診斷功能和作業。'
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 67ec6780d8cbbda7223d46026a9df97cebc92b33
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ba2f248327bb3db4ee895f8e65ea31c17e42b5f4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820975"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906231"
 ---
-# <a name="diagnostics"></a>診斷程式 #
+# <a name="diagnostics"></a>診斷 #
 
 與傳統開發一樣，要能夠診斷量副程式中的錯誤和錯誤是很重要的。
 問 # 標準程式庫提供各種不同的方式來確保量副程式的正確性，如 <xref:microsoft.quantum.techniques.testing-and-debugging>中所述。

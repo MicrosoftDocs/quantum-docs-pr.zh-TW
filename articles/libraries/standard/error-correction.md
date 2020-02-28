@@ -1,17 +1,17 @@
 ---
-title: '問 # 標準程式庫-錯誤更正 |Microsoft Docs'
-description: '問 # 標準程式庫-錯誤更正'
+title: '問答 # 標準程式庫中的錯誤修正'
+description: '瞭解如何在您的 Q # 程式中使用錯誤更正代碼，同時保護 qubits 的狀態。'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863192"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907761"
 ---
 # <a name="error-correction"></a>錯誤修正 #
 
@@ -36,9 +36,9 @@ ms.locfileid: "74863192"
 | 錯誤 $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ |
 | --- | --- | --- |
 | $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ |
-| $X_0$ | $ \ket{100}$ | $ \ket{011}$ |
-| $X_1$ | $ \ket{010}$ | $ \ket{101}$ |
-| $X_2$ | $ \ket{001}$ | $ \ket{110}$ |
+| $X _0 $ | $ \ket{100}$ | $ \ket{011}$ |
+| $X _1 $ | $ \ket{010}$ | $ \ket{101}$ |
+| $X _2 $ | $ \ket{001}$ | $ \ket{110}$ |
 
 為了保護我們所編碼的狀態，我們必須能夠區分彼此和身分識別 $ \boldone $ 之間的三個錯誤，而不區分 $ \ket{\overline{0}} $ 和 $ \ket{\overline{1}} $。
 例如，如果我們測量 $Z _0 $，在無錯誤情況下，我們會針對 $ \ket{\overline{0}} $ 和 $ \ket{\overline{1}} $ 取得不同的結果，因此會折迭編碼的狀態。
@@ -53,9 +53,9 @@ ms.locfileid: "74863192"
 | 錯誤 $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | $Z _0 Z_1 $ 的結果 | $Z _1 Z_2 $ 的結果 |
 | --- | --- | --- | --- | --- |
 | $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ | $+$ | $+$ |
-| $X_0$ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
-| $X_1$ | $ \ket{010}$ | $ \ket{101}$ | $-$ | $-$ |
-| $X_2$ | $ \ket{001}$ | $ \ket{110}$ | $+$ | $-$ |
+| $X _0 $ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
+| $X _1 $ | $ \ket{010}$ | $ \ket{101}$ | $-$ | $-$ |
+| $X _2 $ | $ \ket{001}$ | $ \ket{110}$ | $+$ | $-$ |
 
 因此，這兩個度量的結果會唯一判斷發生的位翻轉錯誤，但不會顯示我們所編碼之狀態的任何相關資訊。
 我們將這些結果稱為「*症狀*」，並參考將症狀對應到導致它復原的錯誤的*程式。*

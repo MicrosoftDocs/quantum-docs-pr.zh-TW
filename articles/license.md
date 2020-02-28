@@ -1,17 +1,17 @@
 ---
 title: Microsoft Quantum Development Kit 授權
-description: Microsoft Quantum Development Kit 授權
+description: Microsoft Quantum Development Kit 的授權條款、免責聲明和使用者權限。
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463376"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907115"
 ---
-# <a name="microsoft-software-license-terms"></a>Microsoft 軟體授權條款 
+# <a name="microsoft-software-license-terms"></a>MICROSOFT 軟體授權條款 
 ## <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT 量子開發工具組（預覽）
 
 
@@ -29,13 +29,13 @@ ms.locfileid: "73463376"
 
      a. **一般**： 您只能使用 Microsoft Quantum Development Kit （預覽）軟體協助您開發和測試應用程式。
 
-     b.這是另一個 C# 主控台應用程式。 **協力廠商軟體**。 本軟體可能含有協力廠商應用程式，依此合約或該應用程式之條款授權予　貴用戶使用。 協力廠商應用程式的授權條款、注意事項和通知（如果有的話）可能可以在[協力廠商通知](https://3rdpartysource.microsoft.com/)或隨附的通知檔案中線上存取。 即使此類應用程式受其他合約規範，以下免責聲明、限制和損害排除也適用於適行法律所允許的範圍。 由 ETH 蘇黎世（瑞士）所開發的核心，獲. Troyer 的群組。
+     b. **協力廠商軟體**。 本軟體可能含有協力廠商應用程式，依此合約或該應用程式之條款授權予　貴用戶使用。 協力廠商應用程式的授權條款、注意事項和通知（如果有的話）可能可以在[協力廠商通知](https://3rdpartysource.microsoft.com/)或隨附的通知檔案中線上存取。 即使此類應用程式受其他合約規範，以下免責聲明、限制和損害排除也適用於適行法律所允許的範圍。 由 ETH 蘇黎世（瑞士）所開發的核心，獲. Troyer 的群組。
  
 2. **時間緊迫的軟體。**
 
      a. **句點**。 軟體有時間相關性，而且可能會在軟體中定義的日期停止執行。
 
-     b.這是另一個 C# 主控台應用程式。 **請注意**。 您可能會透過軟體定期收到此日期的提醒通知。
+     b. **請注意**。 您可能會透過軟體定期收到此日期的提醒通知。
 
      c. **資料的存取權**。 當軟體停止執行時，您可能無法存取其所使用的資料。
 
@@ -50,7 +50,7 @@ ms.locfileid: "73463376"
 
     a. 解決軟體中只允許您以特定方式使用它的任何技術限制;
 
-    b.這是另一個 C# 主控台應用程式。 對軟體進行還原工程、反編譯或拆解;
+    b. 對軟體進行還原工程、反編譯或拆解;
 
     c. 移除、最小化、封鎖或修改 Microsoft 或其供應商在軟體中的任何聲明;
 
@@ -74,7 +74,7 @@ ms.locfileid: "73463376"
 
     a. **澳大利亞**。 依據澳洲消費者法律 (Australian Consumer Law) 的規定，　貴用戶享有法定擔保，本合約無意影響這些權利。
 
-    b.這是另一個 C# 主控台應用程式。 **加拿大**。 若　貴用戶於加拿大境內取得軟體，即得透過關閉自動更新功能、中斷裝置網際網路連線 (然　貴用戶如重新連線上網，軟體將恢復檢查並安裝更新) 或是解除安裝軟體的方式停止接收更新。 隨附的任何產品文件可能亦有指明如何針對特定裝置或軟體關閉更新功能。
+    b. **加拿大**。 若　貴用戶於加拿大境內取得軟體，即得透過關閉自動更新功能、中斷裝置網際網路連線 (然　貴用戶如重新連線上網，軟體將恢復檢查並安裝更新) 或是解除安裝軟體的方式停止接收更新。 隨附的任何產品文件可能亦有指明如何針對特定裝置或軟體關閉更新功能。
 
     c. **德國和奧地利**。
 <p style="margin-left: 60px">i. <strong>擔保</strong>。 正當授權的軟體基本上會如軟體隨附的任何 Microsoft 資料所述的方式執行。 然而，Microsoft 就授權的軟體不提供任何履約保證。</p>

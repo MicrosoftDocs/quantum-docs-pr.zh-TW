@@ -1,17 +1,17 @@
 ---
-title: '作業和函數-Q # 技術 |Microsoft Docs'
-description: '作業和函數-Q # 技術'
+title: 'Q # 作業和函數'
+description: '瞭解問 # 作業和函式，以及如何將它們套用在量副程式中。'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 43f0cf2da192a607e514d0c7de57a9bdd067faf7
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820771"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907659"
 ---
 # <a name="q-operations-and-functions"></a>Q # 作業和函數
 
@@ -231,7 +231,7 @@ operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
 
 在此範例中，出現在類型 `(Qubit => Unit)` 中的 `=>` 箭號表示輸入欄位 `op` 是做為其輸入類型 `Qubit` 的作業，並產生空的元組做為其輸出。
 此外，我們還指定該作業類型的特性，其中包含支援哪些函子的相關資訊。
-`(Qubit => Unit)` 類型的作業不支援 `Adjoint` 或 `Controlled` 仿函數。 如果我們想要指出該類型的作業必須支援（例如 `Adjoint` 仿函數），我們必須將它宣告為 adjointable。 這是藉由使用注釋 `is Adj` 至類型來完成。 同樣地，`(Qubit => Unit is Ctl)` 表示該類型的作業支援 `Controlled` 仿函數。 我們將在討論 [Q # 中的類型] （x： microsoft 量子. 類型模型）時進一步探討。
+`(Qubit => Unit)` 類型的作業不支援 `Adjoint` 或 `Controlled` 仿函數。 如果我們想要指出該類型的作業必須支援（例如 `Adjoint` 仿函數），我們必須將它宣告為 adjointable。 這是藉由使用注釋 `is Adj` 至類型來完成。 同樣地，`(Qubit => Unit is Ctl)` 表示該類型的作業支援 `Controlled` 仿函數。 我們會在我們進一步討論[Q # 中的類型](xref:microsoft.quantum.language.type-model)時進一步探討。
 
 現在，我們強調，我們也可以將作業當做輸出的一部分傳回，讓我們可以將一些傳統條件式邏輯隔離為傳統函式，以作業的形式傳回量副程式的描述。
 做為簡單的範例，請考慮 teleportation 範例，其中接收兩個傳統訊息的合作物件需要使用訊息，將其 qubit 解碼為適當的傳送狀態。

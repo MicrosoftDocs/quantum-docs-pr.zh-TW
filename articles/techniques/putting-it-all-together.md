@@ -1,17 +1,17 @@
 ---
-title: '全部整合-Q # 技術 |Microsoft Docs'
-description: '全部整合-Q # 技術'
+title: 問與答技巧-全部整合在一起
+description: '逐步解說示範量子 teleportation 的基本 Q # 程式。'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820159"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906826"
 ---
 # <a name="putting-it-all-together-teleportation"></a>全部放在一起： Teleportation #
 讓我們回到配量[線路](xref:microsoft.quantum.concepts.circuits)中所定義之 teleportation 電路的範例。 我們將使用它來說明我們到目前為止所學到的概念。 以下針對不熟悉理論的使用者提供配量 teleportation 的說明，後面接著 Q # 中的程式碼執行逐步解說。 

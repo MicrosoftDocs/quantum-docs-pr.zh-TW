@@ -1,4 +1,4 @@
-- name: 參考
+- name: API 參考資料
   items:
     - name: 'Q# 程式庫'
       href: qsharp/toc.yml

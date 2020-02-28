@@ -1,17 +1,17 @@
 ---
-title: 約旦-Wigner 標記法 |Microsoft Docs
-description: 約旦-Wigner 表示概念檔
+title: 約旦-Wigner 標記法
+description: 瞭解 Wigner 標記法，這會將 Hamiltonian 操作員對應到可更輕鬆地在量子電腦上執行的單一矩陣。
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 5d9038e440a2022547395e889e149a531a7ef818
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820533"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904514"
 ---
 # <a name="jordan-wigner-representation"></a>約旦-Wigner 標記法
 
@@ -61,7 +61,7 @@ $ $ 換句話說，這兩個建立運算子不會視需要進行反上運算。
 這五個類別會對應到不同的方法，我們可以在 Hamiltonian 的單一主體和兩個內文詞彙中挑選 $p、q $ 和 $p、q、r、s $。
 這五個類別，在 $p > q > r > s $ 和實值 orbitals 的情況下，
 
-\begin{align} h_ {pp} a_p ^ \dagger a_p & = \ sum_p \frac{h_ {pp}}{2}（1-Z_p）\\\\ h_ {pq} （a_p ^ \dagger a_q + a ^ \ dagger_q a_p） & = \frac{h_ {pq}}{2}\left （\ prod_ {j = q + 1} ^ {p-1} Z_j \right） \left （X_pX_q + Y_pY_q \right）\\\\ h_ {pqqp} n_p n_q & = \frac{h_ {pqqp}}{4}\left （1-Z_p-Z_q + Z_pZ_q \right）\\\\ H_ {pqqr}} & \frac{（\ h_ {j =r + 1} ^ {p-1} Z_j \right） \left （X_pX_r + Y_pY_r \right） \left （\frac{1-Z_q}{2}\right）\\\\ H_ {pqrs} & = \frac{h_ {pqrs}}{8}\ prod_ {j = s + 1} ^ {r-1} Z_j \ prod_ {k = q + 1} ^ {p-1} Z_k \Big （XXXX-XXYY + XYXY\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + YXXY + YXYX-YYXX\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + XYYX + YYYY\Big） \end{align}
+\begin{align} h_ {pp} a_p ^ \dagger a_p & = \ sum_p \frac{h_ {pp}}{2}（1-Z_p）\\\\ h_ {pq} （a_p ^ \dagger a_q + a ^ \ dagger_q a_p） & = \frac{h_ {pq}}{2}\left （\ prod_ {j = q + 1} ^ {p-1} Z_j \right） \left （X_pX_q + Y_pY_q \right）\\\\ h_ {pqqp} n_p n_q & = \frac{h_ {pqqp}}{4}\left （1-Z_p-Z_q + Z_pZ_q \right）\\\\ H_ {pqqr}} & \frac{（\ h_ {j =r + 1} ^ {p-1} Z_j \right） \left （X_pX_r + Y_pY_r \right） \left （\frac{1-Z_q}{2}\right）\\\\ H_ {pqrs} & = \frac{h_ {pqrs}}{8}\ prod_ {j = s + 1} ^ {r-1} Z_j \ prod_ {k = q + 1} ^ {p-1} Z_k \Big （XXXX-XXYY + XYXY\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + YXXY + YXYX-YYXX\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + XYYX + YYYY\Big） \end{align}{2}
 
 雖然只是以手動方式產生這類 Hamiltonians 需要套用這些取代規則，但在大型分子驅使分子中可能會包含數百萬 Hamiltonian 詞彙，這是不可行的。
 或者，我們可以根據 Hamiltonian 的 `FermionHamiltonian` 標記法，自動建立 `JordanWignerEncoding`。

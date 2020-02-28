@@ -1,17 +1,17 @@
 ---
-title: 檔案結構 |Microsoft Docs
-description: 'Q # 檔案結構'
+title: 'Q # 檔案結構'
+description: '瞭解如何在 Q # 程式和程式庫中結構命名空間，以及作業、函式和使用者定義類型宣告。'
 author: QuantumWriter
 uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: b4bb7d4d70677dbd5d921a9f68313760499a56a1
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821077"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907387"
 ---
 # <a name="file-structure"></a>檔案結構
 

@@ -1,17 +1,17 @@
 ---
-title: 'Q # 語句 |Microsoft Docs'
-description: 'Q # 語句'
+title: 'Q # 語句'
+description: '瞭解 Q # 中語句的正確用法，包括函式和作業宣告、變數宣告和指派，以及運算呼叫。'
 author: QuantumWriter
 uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: e801a5fdd24b973f47d23d2aca6f11bbebf333d4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036486"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904667"
 ---
 # <a name="statements-and-other-constructs"></a>語句和其他結構
 
@@ -29,7 +29,7 @@ ms.locfileid: "77036486"
 如需 Markdown 的延伸模組，可以使用 `@"<ref target>"`包含 Q # 中作業、函式和使用者定義類型的交互參考，其中 `<ref target>` 會由所參考之程式碼物件的完整名稱取代。
 （選擇性）檔引擎也可能支援其他 Markdown 延伸模組。
 
-例如，
+例如：
 
 ```qsharp
 /// # Summary
@@ -160,7 +160,7 @@ let (r1, r2) = MeasureTwice(q1, PauliX, q2, PauliY);
 
 #### <a name="apply-and-reassign-statement"></a>Apply-重新指派語句
 
-我們稱為 apply 和-重新指派語句的一種特殊類型的集合語句，會在右側包含二元運算子的應用程式，並將結果重新系結至運算子的左邊引數時，提供便利的串連方式。 例如：
+我們稱為 apply 和-重新指派語句的一種特殊類型的集合語句，會在右側包含二元運算子的應用程式，並將結果重新系結至運算子的左邊引數時，提供便利的串連方式。 例如，
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -321,7 +321,7 @@ if (a == b) {
 
 宣告之符號的系結是不可變的，並遵循與其他變數系結相同的規則。 特別的是，在指派給迴圈變數時，可能會在陣列上進行反覆運算的陣列專案（例如）。
 
-例如：
+例如，
 
 ```qsharp
 // ...
@@ -425,7 +425,7 @@ while (index < Length(arr) && item < 0) {
 請注意，執行的任何區塊會在其本身的範圍中執行。
 在 if 語句結尾之後，不會顯示在 then、if、或 else 區塊內進行的系結。
 
-例如：
+例如，
 
 ```qsharp
 if (result == One) {
@@ -457,7 +457,7 @@ Return 語句會結束執行作業或函數，並將值傳回給呼叫者。
 作業中沒有 return 語句的最大數目。
 如果語句在區塊內遵循 return 語句，則編譯器可能會發出警告。
 
-例如：
+例如，
 
 ```qsharp
 return 1;
@@ -484,7 +484,7 @@ Fail 語句會結束執行作業，並將錯誤值傳回給呼叫者。
 作業內的 fail 語句數目沒有任何限制。
 如果語句在區塊內遵循 fail 語句，則編譯器可能會發出警告。
 
-例如：
+例如，
 
 ```qsharp
 fail $"Impossible state reached";
@@ -511,7 +511,7 @@ Qubits 應該位於語句區塊結尾的計算 `Zero` 狀態;建議使用模擬�
 系結遵循與 `let` 語句相同的模式：單一符號或符號的元組，後面接著等號 `=`，以及單一值或相符的初始化運算式元組。
 初始化運算式適用于單一 qubit，表示為 `Qubit()`或 qubits 陣列，以 `Qubit[`、`Int` 運算式和 `]`表示。
 
-例如：
+例如，
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -527,7 +527,7 @@ using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
 `borrowing` 語句是用來取得暫時使用的 qubits。 語句包含關鍵字 `borrowing`，後面接著左括弧 `(`、系結、右括弧 `)`，以及可使用 qubits 的語句區塊。
 系結會遵循與 `using` 語句中的相同模式和規則。
 
-例如：
+例如，
 
 ```qsharp
 borrowing (qubit = Qubit()) {
@@ -591,7 +591,7 @@ operation ApplyWith<'T>(
 這主要是在對傳回 `Unit` 的 qubits 呼叫作業時使用，因為語句的目的是要修改隱含的量子狀態。
 運算式評估語句需要結尾的分號。
 
-例如：
+例如，
 
 ```qsharp
 X(q);

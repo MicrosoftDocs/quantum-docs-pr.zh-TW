@@ -1,17 +1,17 @@
 ---
-title: '問 # 標準程式庫-應用程式 |Microsoft Docs'
-description: Q# 標準程式庫
+title: 'Q # 標準程式庫中的應用程式'
+description: 瞭解量子運算中的兩個基本應用程式-Hamiltonian 模擬和快速鍵的搜尋演算法。
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: b7c46b634c6d691c067c0dd995301395408c85ca
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868963"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907217"
 ---
 # <a name="applications"></a>應用程式 #
 
@@ -159,7 +159,7 @@ $U _a $ 的特徵值是 $ $ U\_\ket{x\_s} = e ^ {2 \ pi i s/r} \ket{x\_s}。 $$
 
 配量期間的線路圖表如下：
 
-![](./../../media/QPE.svg)
+![尋找配量期間的線路圖](./../../media/QPE.svg)
 
 這裡 $ 2n $ qubits 會初始化為 $ \ket{0}$，$n $ qubits 會初始化為 $ \ket{1}$。
 讀者可能會想知道，eigenstates 的量子暫存器為何會初始化為 $ \ket{1}$。

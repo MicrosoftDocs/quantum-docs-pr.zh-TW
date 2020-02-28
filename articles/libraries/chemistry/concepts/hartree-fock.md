@@ -1,17 +1,17 @@
 ---
-title: Hartree-Fock 理論 |Microsoft Docs
-description: Hartree-Fock 理論檔
+title: Hartree-Fock 理論
+description: 深入瞭解 Hartree – Fock 理論，這是一種簡單的方式，可為量子系統建立初始狀態。
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.hartreefock
-ms.openlocfilehash: e73111ae710e11ca6730581b8be711cf32783677
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6fa63cbe13fe98565ffb42b56f3ade86720cedb3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184095"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904446"
 ---
 # <a name="hartreefock-theory"></a>Hartree – Fock 理論
 
@@ -22,10 +22,10 @@ ms.locfileid: "73184095"
 例如，如果 $ \ket{\psi} $ 是任何純粹的量子狀態，則 \begin{equation} E = \bra{\psi} \hat{H} \ket{\psi} \end{equation} 會提供系統在該狀態下的平均能源。
 而地面狀態則是提供最小這類值的狀態。 因此，選擇盡可能接近實際狀態的狀態，非常重要的是直接評估能源（如同在 variational eigensolvers 中完成），或透過階段估計。
 
-Hartree – Fock 理論提供了一種簡單的方式來建造量子系統的初始狀態。 它會針對量子系統的基礎狀態產生單一 Slater 行列式近似值。 為此，它會在 Fock 空間內尋找旋轉，以將地面狀態的能源降到最低。 特別是，針對 $N $ electrons 的系統，此方法會執行輪替 \begin{equation} \ prod_ {j = 0} ^ {N-1} a ^ \ dagger_j \ket{0} \mapsto \ prod_ {j = 0} ^ {N-1} e ^ {u} a ^ \ dagger_j e ^ {-u} \ket{0}\defeq\ prod_ {j = 0} ^ {N-1} \widetilde{a} ^ \dagger_j \ket{0}、具有反 Hermitian 的 \end{equation} （亦即 $u =-u ^ \dagger $）矩陣 $u = \ sum_ {pq} u_ {pq} a ^ \ dagger_p a_q $。 請注意，矩陣 $u $ 代表 orbital 旋轉，而 $ \widetilde{a} ^ \ dagger_j $ 和 $ \widetilde{a} _j $ 代表 electrons 佔用 Hartree – Fock 分子微調-orbitals 的建立和 annihilation 運算子。
+Hartree – Fock 理論提供了一種簡單的方式來建造量子系統的初始狀態。 它會針對量子系統的基礎狀態產生單一 Slater 行列式近似值。 為此，它會在 Fock 空間內尋找旋轉，以將地面狀態的能源降到最低。 特別是，針對 $N $ electrons 的系統，此方法會執行輪替 \begin{equation} \ prod_ {j = 0} ^ {N-1} a ^ \ dagger_j \ket{0} \mapsto \ prod_ {j = 0} ^ {N-1} e ^ {u} a ^ \ dagger_j e ^ {-u} \ket{0}\defeq\ prod_ {j = 0} ^ {N-1} \widetilde{a} ^ \ dagger_j \ket{0}，具有反 Hermitian 的 \end{equation} （亦即，$u =-u ^ \dagger $）矩陣 $u = \ sum_ {pq} u_ {pq} a ^ \ dagger_p a_q $。 請注意，矩陣 $u $ 代表 orbital 旋轉，而 $ \widetilde{a} ^ \ dagger_j $ 和 $ \widetilde{a} _j $ 代表 electrons 佔用 Hartree – Fock 分子微調-orbitals 的建立和 annihilation 運算子。
 
 
-然後，$u $ 的矩陣經過優化，可將預期的能源 $ \bra{0} \ prod_ {j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \ dagger_k \ket{0}$。 雖然這類優化問題可能會很困難，但實際上 Hartree – Fock 演算法會快速地融合到優化問題的接近最佳解決方案，特別是均衡幾何中的封閉式 shell 分子驅使分子。 我們可以將這些狀態指定為 `FermionWavefunction` 物件的實例。 例如，狀態 $a ^ \ dagger_{1}^ \ dagger_{2}dagger_ \ket{6}$ 在化學程式庫中具現化，如下所示。
+然後，$u $ 的矩陣經過優化，可將預期的能源 $ \bra{0} \ prod_ {j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \ dagger_k \ket{0}$。 雖然這類優化問題可能會很困難，但實際上 Hartree – Fock 演算法會快速地融合到優化問題的接近最佳解決方案，特別是均衡幾何中的封閉式 shell 分子驅使分子。 我們可以將這些狀態指定為 `FermionWavefunction` 物件的實例。 例如，狀態 $a ^ \ dagger_{1}^ \ dagger_{2}dagger_ \ket{6}$ 在化學程式庫中具現化，如下所示。{0}
 ```csharp
 // Create a list of integer indices of the creation operators
 var indices = new[] { 1, 2, 6 };

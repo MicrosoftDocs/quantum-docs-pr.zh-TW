@@ -1,17 +1,17 @@
 ---
-title: 化學程式庫安裝和驗證 |Microsoft Docs
-description: 化學程式庫安裝和驗證
+title: 'Microsoft Q # 化學程式庫安裝和驗證'
+description: 瞭解如何安裝 Microsoft 量子化學程式庫，並將它與 NWChem 計算化學平臺搭配使用。
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 48bf7bc980e238e622053f5c2bdd09604c572596
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036469"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907353"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>化學程式庫安裝和驗證
 
@@ -21,25 +21,25 @@ ms.locfileid: "77036469"
 **Visual Studio 2019：** 如果您使用 Visual Studio 2019，您可以使用 NuGet 套件管理員來新增量子化學套件。
 若要開啟 [封裝管理員]，請以滑鼠右鍵按一下您想要新增化學程式庫的專案，然後選取 [管理 NuGet 套件 ...]，如下列螢幕擷取畫面所示。
 
-![](~/media/vs2017-nuget-manage-packages.png)
+![使用 Visual Studio 2019 中的 NuGet 套件管理員](~/media/vs2017-nuget-manage-packages.png)
 
 從 [流覽] 索引標籤中，搜尋封裝名稱 "Microsoft. 量子。
 
 > [!NOTE]
 > 請務必勾選 [包含發行前版本]。
 
-![](~/media/vs2017-nuget-package-search.png)
+![[包含發行前版本] 核取方塊](~/media/vs2017-nuget-package-search.png)
 
 這會列出可供下載的套件。
 按一下左側窗格中的 [...]，在右側窗格中選取最新的發行前版本，然後按一下 [安裝]：
 
-![](~/media/vs2017-nuget-select-chem.png)
+![安裝最新的 Microsoft 量子封裝](~/media/vs2017-nuget-select-chem.png)
 
 如需詳細資訊，請參閱[套件管理員 UI 指南](https://docs.microsoft.com/nuget/tools/package-manager-ui)。
 
 或者，您可以使用 [套件管理員主控台]，透過命令列介面，將量子化學程式庫新增至您的專案。
 
-![](~/media/vs2017-nuget-console-menu.png)
+![從命令列使用套件管理員主控台](~/media/vs2017-nuget-console-menu.png)
 
 從 [套件管理員主控台] 執行下列步驟：
 

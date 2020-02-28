@@ -1,17 +1,17 @@
 ---
-title: '問 # 標準程式庫-特性 |Microsoft Docs'
-description: '問 # 標準程式庫-特性'
+title: 量子特性和統計資料
+description: 瞭解階段估計的測量統計資料如何用來估計量副程式設計中的結果值。
 author: QuantumWriter
 uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036248"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907183"
 ---
 # <a name="quantum-characterization-and-statistics"></a>量子特性和統計資料 #
 

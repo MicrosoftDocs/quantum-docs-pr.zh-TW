@@ -1,17 +1,17 @@
 ---
-title: 'Q # 標準程式庫-序言 |Microsoft Docs'
-description: 'Q # 標準程式庫-序言'
+title: QDK 中的內部作業和函數
+description: 瞭解 QDK 中的內建作業和函式，包括傳統函數和單一、旋轉和測量作業。
 author: QuantumWriter
 uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: dddb3d4a5ebcdca16da41a5ae5520d98ea900a7f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: b1c26c632f36b6c254d940a89b13638f7592ab80
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73183228"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907200"
 ---
 # <a name="the-prelude"></a>序言 #
 
@@ -27,7 +27,7 @@ ms.locfileid: "73183228"
 - 執行測量的作業。
 
 由於 Clifford + $T $ 閘道集是適用于配量運算的[通用](xref:microsoft.quantum.concepts.multiple-qubits)集合，因此這些作業已足以在 negligibly 小型錯誤中執行任何量子演算法。
-藉由提供旋轉，Q # 可讓程式設計人員在單一 qubit 單一和 CNOT-CONTAINS 閘道程式庫中工作。 此程式庫較容易考慮，因為它不需要程式設計人員直接表達 Clifford + $T $ 分解，而且因為有高效率的方法可將單一 qubit unitaries 編譯成 Clifford 和 $T $ 閘道（請參閱[這裡](xref:microsoft.quantum.more-information)以取得詳細資訊）。
+藉由提供旋轉，Q # 可讓程式設計人員在單一 qubit 單一和 CNOT-CONTAINS 閘道程式庫中工作。 此程式庫較容易考慮，因為它不需要程式設計人員直接表達 Clifford + $T $ 分解，而且因為有高效能的方法可將單一 qubit unitaries 編譯成 Clifford 和 $T $ 閘道（如需詳細資訊，請參閱[這裡](xref:microsoft.quantum.more-information)）。
 
 可能的話，在序言中定義的作業（作用於 qubits）允許套用 `Controlled` 變異，如此目的電腦就會執行適當的分解。
 
@@ -96,17 +96,17 @@ Hadamard 閘道特別重要，因為它可以用來建立 $ \ket{0}$ 和 $ \ket{
 \begin{equation} \begin{bmatrix} 1 & 0 \\\\% FIXME：這目前使用 quadwhack 的駭客攻擊。
 0 & i \end{bmatrix} \end{equation}
 
-#### <a name="rotations"></a>輪替 ####
+#### <a name="rotations"></a>旋轉 ####
 
 除了上述的 Pauli 和 Clifford 作業，Q # 序言也提供各種表達旋轉的方式。
 如[單一 qubit 作業](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)中所述，旋轉的功能對量子演算法而言非常重要。
 
-我們一開始先重新開機，我們可以使用 $H $ 和 $T $ 閘道來表示任何單一 qubit 作業，其中 $H $ 是 Hadamard 作業，其中 \begin{equation} T \mathrel{： =} \begin{bmatrix} 1 & 0 \\\\% FIXME：這目前使用的是四回摧毀的駭客。
+我們一開始先重新開機，我們可以使用 $H $ 和 $T $ 閘道來表示任何單一 qubit 作業，其中 $H $ 是 Hadamard 作業，其中 \begin{equation} T \mathrel{： =} \begin{bmatrix} 1 & 0 \\\\% FIXME：這目前使用的是四回摧毀的駭客攻擊。
 0 & e ^ {i \pi/4} \end{bmatrix} \end{equation} 這是 <xref:microsoft.quantum.intrinsic.s> 作業的平方根，因此 $T ^ 2 = S $。
 $T $ 閘道接著由 <xref:microsoft.quantum.intrinsic.t> 作業執行，而且具有簽章 `(Qubit => Unit is Adj + Ctl)`，表示它是單一 qubit 上的單一作業。
 
 雖然這是用來描述任何任意單一 qubit 作業的原則，但不同的目的電腦對於 Pauli 運算子的輪替可能會有更有效率的標記法，因此序言包含各種不同的方式來 convienently表達這類旋轉。
-其中最基本的就是 <xref:microsoft.quantum.intrinsic.r> 作業，它會在指定的 Pauli 軸上執行旋轉、\begin{equation} R （\sigma、\phi） \mathrel{： =} \exp （-i \phi \sigma/2）、\end{equation}，其中 $ \sigma $ 是 Pauli 運算子，$ \phi $ 是一個角度，其中 $\exp $ 代表矩陣指數。
+其中最基本的是 <xref:microsoft.quantum.intrinsic.r> 作業，它會在指定的 Pauli 軸上執行旋轉、\begin{equation} R （\sigma、\phi） \mathrel{： =} \exp （-i \phi \sigma/2）、\end{equation}，其中 $ \sigma $ 是 Pauli 運算子，$ \phi $ 是角度，其中 $ \exp $ 代表矩陣指數。
 它具有簽章 `((Pauli, Double, Qubit) => Unit is Adj + Ctl)`，其中輸入的前兩個部分代表指定單一運算子 $R （\sigma，\phi） $ 所需的傳統引數 $ \sigma $ 和 $ \phi $。
 我們可以部分套用 $ \sigma $ 和 $ \phi $，以取得其類型為單一 qubit 單一的作業。
 例如，`R(PauliZ, PI() / 4, _)` 的類型 `(Qubit => Unit is Adj + Ctl)`。
@@ -155,7 +155,7 @@ $T $ 閘道接著由 <xref:microsoft.quantum.intrinsic.t> 作業執行，而且�
 
 除了上述的單一 qubit 作業，序言也會定義數個多 qubit 的作業。
 
-首先，<xref:microsoft.quantum.intrinsic.cnot> 作業會執行標準控制`NOT` 閘道，\begin{equation} \operatorname{CNOT} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1\\\\ 0 & 0 & 1 & 0 \end{bmatrix}。
+首先，<xref:microsoft.quantum.intrinsic.cnot> 作業會執行標準控制`NOT` 閘道，\begin{equation} \operatorname{CNOT} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 \end{bmatrix}。
 \end{equation} 它具有簽章 `((Qubit, Qubit) => Unit is Adj + Ctl)`，代表 $ \operatorname{CNOT} $ act unitarily 在兩個個別 qubits 上。
 `CNOT(q1, q2)` 與 `(Controlled X)([q1], q2)`相同。
 由於 `Controlled` 仿函數允許在暫存器上控制，因此我們使用陣列常值 `[q1]` 來表示我們只需要一個控制項。
@@ -165,7 +165,7 @@ $T $ 閘道接著由 <xref:microsoft.quantum.intrinsic.t> 作業執行，而且�
 `CCNOT(q1, q2, q3)` 與 `(Controlled X)([q1, q2], q3)`相同。
 
 <xref:microsoft.quantum.intrinsic.swap> 作業會交換兩個 qubits 的量子狀態。
-也就是說，它會執行單一矩陣 \begin{equation} \operatorname{SWAP} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 &0 & 0 & 1 \end{bmatrix}。
+也就是說，它會執行單一矩陣 \begin{equation} \operatorname{SWAP} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}。
 \end{equation} 它的簽章 `((Qubit, Qubit) => Unit is Adj + Ctl)`。
 `SWAP(q1,q2)` 相當於 `CNOT(q1, q2)` 後面接著 `CNOT(q2, q1)`，然後 `CNOT(q1, q2)`。
 
@@ -176,7 +176,7 @@ $T $ 閘道接著由 <xref:microsoft.quantum.intrinsic.t> 作業執行，而且�
 > 受控制的交換閘道（也稱為 Fredkin 閘道）功能強大，足以包含所有的傳統計算。
 
 最後，序言會提供兩個作業來代表多 qubit Pauli 運算子的指數。
-<xref:microsoft.quantum.intrinsic.exp> 作業會根據 Pauli 矩陣的張量產品執行迴圈，如多 qubit 的單一 \begin{equation} \operatorname{Exp} （\vec{\sigma}，\phi） \mathrel{： =} \exp\left （i \phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right）、\end{equation}，其中 $ \vec{\sigma} = （\ sigma_0，\ sigma_1，\dots ..，\ sigma_n） $ 是一系列的單一 qubit Pauli 運算子，其中 $ \phi $ 是角度。
+<xref:microsoft.quantum.intrinsic.exp> 作業會根據 Pauli 矩陣的張量產品來執行旋轉，如多 qubit 的單一 \begin{equation} \operatorname{Exp} （\vec{\sigma}，\phi） \mathrel{： =} \exp\left （i \phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right）所表示，\end{equation} 其中 $ \vec{\sigma} = （\ sigma_0，\ sigma_1，\dots ..，\ sigma_n） $ 是一系列單一 qubit Pauli 運算子，其中 $ \phi $ 是角度。
 `Exp` 旋轉會將 $ \vec{\sigma} $ 表示為 `Pauli` 元素的陣列，使其具有簽章 `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`。
 
 <xref:microsoft.quantum.intrinsic.expfrac> 作業會使用上述所討論的 dyadic 分數標記法來執行相同的旋轉。
@@ -186,7 +186,7 @@ $T $ 閘道接著由 <xref:microsoft.quantum.intrinsic.t> 作業執行，而且�
 > Pauli 運算子的張量產品指數與指數運算子 Pauli 的張量產品不同。
 > 也就是說，$e ^ {i （Z \otimes Z） \phi} \ne e ^ {i Z \phi} \otimes e ^ {i Z \phi} $。
 
-### <a name="measurements"></a>測量 ###
+### <a name="measurements"></a>量測 ###
 
 測量時，所測量之運算子的 + 1 eigenvalue 會對應至 `Zero` 的結果，而-1 eigenvalue 為 `One` 的結果。
 
@@ -235,7 +235,7 @@ return rs;
 雖然這不會對本機模擬器造成問題，但在使用遠端模擬器或實際硬體做為目的電腦時，這可能會造成效能問題。
 話雖如此，個別目的電腦可以藉由使用更有效率的特定系統版本來覆寫這些作業，以降低對效能的影響。
 
-### <a name="math"></a>運算式 ###
+### <a name="math"></a>數學 ###
 
 <xref:microsoft.quantum.extensions.math> 命名空間會從 .NET 基類庫的[`System.Math` 類別](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)提供許多有用的函式。
 這些函式的使用方式與其他任何 Q # 函數相同：

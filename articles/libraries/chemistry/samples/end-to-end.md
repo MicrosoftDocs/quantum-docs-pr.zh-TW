@@ -1,23 +1,23 @@
 ---
-title: 以 NWChem 進行端對端 |Microsoft Docs
-description: NWChem 檔的端對端檔
+title: 範例 NWChem 量副程式
+description: 使用 NWChem 的輸入組，逐步解說取得量子化學模擬的閘道計數範例。
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 8f727ea4599e06b41ced561c624c4e773b9887d9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185812"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906503"
 ---
-# <a name="end-to-end-with-nwchem"></a>使用 NWChem 端對端 #
+# <a name="end-to-end-with-nwchem"></a>端對端使用 NWChem #
 
 在此頁面中，我們將逐步解說如何取得量子化學模擬的閘道計數，從[NWChem](http://www.nwchem-sw.org/index.php/Main_Page)的輸入牌組開始。
 繼續進行此範例之前，請確定您已安裝 Docker，請遵循[安裝和驗證指南](xref:microsoft.quantum.chemistry.concepts.installation)。
 
-詳細資訊：
+其他資訊：
 - [NWChem 輸入卡座的結構](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
     - [用於配量開發工具組的輸入組命令](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
 - [安裝化學程式庫和相依性](xref:microsoft.quantum.chemistry.concepts.installation)
@@ -25,7 +25,7 @@ ms.locfileid: "73185812"
 
 > [!NOTE]
 > 此範例需要執行 Windows PowerShell Core。
-> 在 https://github.com/PowerShell/PowerShell 下載適用于 Windows、macOS 或 Linux 的 PowerShell Core。
+> 在 https://github.com/PowerShell/PowerShell下載適用于 Windows、macOS 或 Linux 的 PowerShell Core。
 
 ## <a name="importing-required-powershell-modules"></a>匯入必要的 PowerShell 模組 ##
 

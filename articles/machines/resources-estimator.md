@@ -1,24 +1,24 @@
 ---
-title: 量子開發工具組資源估計工具 |Microsoft Docs
-description: Microsoft 的量子開發工具組資源估計工具
+title: 量子開發工具組資源估計工具
+description: '深入瞭解資源估計工具，其會估計在量子電腦上執行 Q # 作業的指定實例所需的資源。'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820856"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907047"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator 目的電腦
 
 正如其名，`ResourcesEstimator` 會估計在量子電腦上執行 Q # 作業的指定實例所需的資源。
 它會執行量子作業，而不實際模擬量子電腦的狀態，來完成這項操作;基於這個理由，它可以估計使用數千個 qubits 的 Q # 作業資源。
 
-## <a name="usage"></a>用量
+## <a name="usage"></a>使用量
 
 `ResourcesEstimator` 只是另一種類型的目的電腦，因此可以用來執行任何 Q # 作業。 
 
@@ -130,7 +130,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 當 `ResourcesEstimator` 遇到 `AssertProb` 會記錄在 `source` 上測量 `PauliZ`，而 `q` 應獲得 `Zero` 的結果，機率為0.5。 當它在稍後執行 `M` 時，會發現結果機率的記錄值，而 `M` 會傳回 `Zero` 或 `One`，機率為0.5。
 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 `ResourcesEstimator` 是以「量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器」為基礎，可提供更豐富的計量集、在完整呼叫圖形上報告計量的能力，以及「[相異輸入檢查](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)」之類的功能，以協助找出問 # 程式上的錯誤。 如需詳細資訊，請參閱[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器檔。
 

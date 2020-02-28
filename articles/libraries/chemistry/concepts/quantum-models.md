@@ -1,22 +1,22 @@
 ---
-title: 電子系統的量子模型 |Microsoft Docs
-description: 電子系統的量子模型概念檔
+title: 電子系統的量子模型
+description: 瞭解如何使用量子模型模擬分子的電子系統。
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantummodels
-ms.openlocfilehash: 45d134333c8a3c8937d206cb0a4a9cc6101a85df
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9f9fc37944dd76026c2641d9cdf126e71053a598
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184146"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904412"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>電子系統的量子模型
 
 為了模擬電子系統，我們必須先指定 Hamiltonian，這可以透過上述的標準量化程式來找到。
-具體而言，針對 $N _e $ electrons with momenta $p _i $ （三個維度），以及大量 $m _e $ 和 position 向量 $x _i $，以及在 nuclei 加上費用 $Z _k e $ at $y _k $，Hamiltonian 運算子會讀取 \begin{equation} \hat{H} = \sum\_{i = 1} ^ {N\_e} \frac{\hat{p}\_i ^ 2} {2m\_e} + \frac{1}{2}\sum\_{i\ne j} \frac{e ^ 2} {| \hat{x}\_i-\hat{x}\_j |}-\sum\_{i，k} \frac{Z\_ke ^ 2} {| \hat{x}\_i-{y}\_k |}+ \frac{1}{2} \ sum_ {k\ne k '} \frac{Z\_kZ\_{k '} e ^ 2} {| y\_k-y\_k ' |}。 \label{eq： Ham} \end{equation} momenta operators $ \hat{p}\_i ^ 2 $ 可以在實際空間中視為拉普拉斯分配運算子，例如 $ \hat{p}\_i ^ 2 =-\partial\_{x\_i} ^ 2-\partial\_{y\_i} ^ 2-\partial\_{z\_i} ^ 2 $。
+具體而言，適用于 $N _e $ electrons with momenta $p _i $ （三個維度）和大量 $m _e $ 和 position 向量 $x _i $，以及 $Z e $ 的 nuclei，_k $y $，Hamiltonian 運算子會閱讀 \begin{equation} \hat{H} = \sum\_{i = 1} ^ {N\_e} \frac{\hat{p}\_i ^ 2} {2m\_e} + \frac{1}{2}\sum\_{i\ne j} \frac{e ^ 2} {| \hat{x}\_i-\hat{x}\_j |}-\sum\_{i，k} \frac{Z\_ke ^ 2} {| \hat{x}\_i-{y}\_k |}+ \frac{1}{2} \ sum_ {k\ne k '} \frac{Z\_kZ\_{k '} e ^ 2} {| y\_k-y\_k ' |}。 \label{eq： Ham} \end{equation} momenta operators $ \hat{p}\_我 ^ 2 $ 可以在實際空間中視為拉普拉斯分配運算子，例如 $ \hat{p}\_i ^ 2 =-\partial\_{x\_i} ^ 2-\partial\_{y\_i} ^ 2-\partial\_{z\_i} ^ 2 $。
 在這裡，我們將簡化假設分子的 nuclei 為 rest。
 這稱為「正式 Oppenheimer 近似值」，而且通常會對 $ \hat{H} $ 的低能量能源範圍有效，因為 electron 大量約為 $ 1/1836 $ proton 的品質。
 藉由寫出 $N\_e $ electrons 之系統的能源，並套用配量[Dynamics](xref:microsoft.quantum.chemistry.concepts.quantumdynamics)中所述的標準量化處理常式，可以輕鬆地找到此 Hamiltonian 運算子。
@@ -25,7 +25,7 @@ ms.locfileid: "73184146"
 為此，我們需要選擇座標系統或基礎來表示中的問題。
 例如，如果 $ \ psi_j $ 是 $N _e $ electrons 的一組正向基礎函數，則我們可以定義矩陣
 
-\begin{equation} H\_{i，j} = \int\_{-\infty} ^ \infty\int\_{-\infty} ^ \infty \psi ^ {\*}\_i （x\_1） \hat{H} \psi\_j （x\_2） \dd ^ 3 倍\_1 \dd ^ 3 倍\_2. \ label {eq： discreteHam} \end{equation}
+\begin{equation} H\_{i，j} = \int\_{-\infty} ^ \infty\int\_{-\infty} ^ \infty \psi ^ {\*}\_i （x\_1） \hat{H} \psi\_j （x\_2） \dd ^ 3 倍\_1 \dd ^ 3 倍\_2. \ 標籤 {eq： discreteHam} \end{equation}
 
 雖然準則中的運算子 $ \hat{H} $ 未系結，且不會在有限維度空間上作用，但具有元素的矩陣 $H\_\{i，j\}$）。
 這表示錯誤的產生是因為挑選太小的基礎集。不過，挑選一個大型的，可以讓模擬化學 dynamics 不切實際。

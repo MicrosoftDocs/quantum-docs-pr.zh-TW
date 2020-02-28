@@ -1,17 +1,17 @@
 ---
-title: 數值程式庫安裝和驗證 |Microsoft Docs
-description: 數值程式庫安裝和驗證
+title: Microsoft 量子數值程式庫-安裝和驗證
+description: 瞭解如何將 Microsoft 量子數值程式庫新增至您的 Visual Studio 2019 或更新版本的安裝。
 author: thomashaener
 ms.author: thhaner
 ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cb0d00a509b3986b605dd7f15f9bccc0661bb894
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036452"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906333"
 ---
 # <a name="numerics-library-installation-and-validation"></a>數值程式庫安裝和驗證
 
@@ -33,7 +33,7 @@ ms.locfileid: "77036452"
 
 或者，您可以使用套件管理員主控台，透過命令列介面將數值程式庫新增至您的專案。
 
-![](../../media/vs2017-nuget-console-menu.png)
+![從命令列使用套件管理員主控台](../../media/vs2017-nuget-console-menu.png)
 
 從 [套件管理員主控台] 執行下列步驟：
 

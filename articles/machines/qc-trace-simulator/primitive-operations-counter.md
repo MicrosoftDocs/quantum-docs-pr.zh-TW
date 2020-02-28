@@ -1,17 +1,17 @@
 ---
-title: 基本操作計數器 |量子電腦追蹤模擬器 |Microsoft Docs
-description: 量子電腦追蹤模擬器概觀
+title: 基本操作計數器
+description: 深入瞭解 Microsoft QDK 基本型別運算計數器，它會追蹤量副程式中的作業所使用的基本執行次數。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: 1f554c0a1b92c8f6b59be3a9d9965e0e25bd074f
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 8bdb0aed370e72b58b23025f1685ad7ce1a77a43
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820414"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77905942"
 ---
 # <a name="primitive-operations-counter"></a>基本操作計數器  
 
@@ -63,6 +63,6 @@ double cxCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveO
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>請參閱 ##
+## <a name="see-also"></a>另請參閱 ##
 
 - 量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。

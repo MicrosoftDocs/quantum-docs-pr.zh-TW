@@ -1,17 +1,17 @@
 ---
-title: 量子 Dynamics |Microsoft Docs
-description: 量子 Dynamics 概念檔
+title: 量子 Dynamics
+description: 瞭解配量 dynamics 和傳統 dynamics 之間的相似性和差異。
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
-ms.openlocfilehash: 0fd27e59921fdf8429bf164c4c64cfa3b8e44160
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9cb74ccd4b7806a90c0701300860d777fa8e5d75
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185336"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904480"
 ---
 # <a name="quantum-dynamics"></a>量子 Dynamics
 
@@ -29,7 +29,7 @@ ms.locfileid: "73185336"
 其中一個在量子機制中特別有用的公式是 Hamiltonian 的機制。
 在 Hamiltonian 的機制中，系統的總能源和（一般化）位置和 momenta 會提供描述任意傳統物件之動作所需的所有資訊。
 具體而言，let $f （x，p，t） $ 是系統的通用位置 $x $ 和 momenta $p $ 的部分函式，並讓 $H （x，p，t） $ 是 Hamiltonian 函數。
-例如，如果我們採用 $f （x，p，t） = x （t） $，$H （x，p，t） = p ^ 2 （t）/2m-V （x，t） $，則我們會復原上述有關
+例如，如果我們採用 $f （x，p，t） = x （t） $，$H （x，p，t） = p ^ 2 （t）/2m-V （x，t） $，則我們會復原上述有關 < 牛頓 dynamics 案例。
 就通用性而言，我們會讓 \begin{align} \frac{d}{dt} f & = \ partial_t f-（\ partial_x H \ partial_p f + \ partial_p H \ partial_x f）\\\\ & \defeq \ partial_t f + \\{f，H\\}。
 \end{align} 這裡 $\\{f，H\\} $ 稱為波氏[括弧](https://en.wikipedia.org/wiki/Poisson_bracket)，且在傳統 dynamics 中會出現 ubiquitously，因為它在定義 dynamics 時所扮演的中央角色。
 

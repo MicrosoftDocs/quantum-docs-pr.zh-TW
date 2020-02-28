@@ -1,17 +1,17 @@
 ---
-title: 取得能源等級估計 |Microsoft Docs
-description: 取得能源等級估計檔
+title: 取得能階估計值
+description: '逐步解說範例 Q # 程式，以評估分子 hydrogen 的能源等級值。'
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 3242d8c6dc6fad2bd99055027dd7ce4ec3510ff4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442571"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907302"
 ---
 # <a name="obtaining-energy-level-estimates"></a>取得能階估計值
 估計能源等級的值是量子化學的其中一個主要應用程式。 在這裡，我們將概述如何執行這項作業，以瞭解分子 Hydrogen 的標準範例。 本節中所參考的範例 `MolecularHydrogen` 在化學範例存放庫中。 繪製輸出的更多視覺效果範例是 `MolecularHydrogenGUI` 示範。

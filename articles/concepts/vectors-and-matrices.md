@@ -1,17 +1,17 @@
 ---
-title: 向量和矩陣 |Microsoft Docs
-description: 向量和矩陣
+title: 量子運算中的向量和矩陣
+description: 瞭解如何使用向量和矩陣的基本概念。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.vectors
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 58c96f9cda22b712e1a408e5566e0a8ee987bd6e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 076ab6242b7ae31d4936ae8505034f1f13fa4727
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183738"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904905"
 ---
 # <a name="vectors-and-matrices"></a>向量和矩陣
 
@@ -34,7 +34,7 @@ $$
 
 我們可以將向量與數位 $c $ 來形成新向量，其專案會乘以 $c $。 我們也可以加入兩個向量 $u $ 和 $v $ 來形成新向量，其專案為 $u $ 和 $v $ 專案的總和。 這些作業如下所示：
 
-$ $ \mathrm{If} ~ u = \begin{bmatrix} u_1\\\\ u_2\\\\ \vdots\\\\ u_n \end{bmatrix} ~ \mathrm{and} ~ v = \begin{bmatrix} v_1\\\\ v_2\\\\ \vdots\\\\ v_n \end{bmatrix}、~ \mathrm{then} ~ au + bv = \begin{bmatrix} au_1 + bv_1\\\\ au_2 + bv_2\\\\ \vdots\\\\ au_n + bv_n \end{bmatrix}。
+$ $ \mathrm{If} ~ u = \begin{bmatrix} u_1\\\\ u_2\\\\ \vdots\\\\ u_n \end{bmatrix} ~ \mathrm{and} ~ v = \begin{bmatrix} v_1\\\\ v_2\\\\ \vdots\\\\ v_n \end{bmatrix}，~ \mathrm{then} ~ au + bv = \begin{bmatrix} au_1 + bv_1\\\\ au_2 + bv_2\\\\ \vdots\\\\ au_n + bv_n \end{bmatrix}。
 $$
 
 大小 $m \times n $ 的[*矩陣*](https://en.wikipedia.org/wiki/Matrix_(mathematics))是以 $m $ rows 和 $n $ 資料行排列 $mn $ 複數的集合，如下所示：
@@ -47,7 +47,7 @@ $ $M = \begin{bmatrix} M_{11} ~ ~ M_{12} ~ ~ \cdots ~ ~ M_ {1n}\\\\ M_{21} ~ ~ M
 
 我們也可以將維度的兩個矩陣 $M $ $m \times n $ 和 $N $ of dimension $n \times p $ 來取得新的矩陣 $P $ of dimension $m \times p $，如下所示：
 
-\begin{align} & \begin{bmatrix} M_{11} ~ ~ M_{12} ~ ~ \cdots ~ ~ M_ {1n}\\\\ M_{21} ~ ~ M_{22} ~ ~ \cdots ~ ~ M_ {2n}\\\\ \ddots\\\\ M_ {m1} ~ ~ M_ {m2} ~ ~ \cdots ~ ~ M_ {mn} \end{bmatrix} \開始 {bmatrix} N_{11} ~ ~ N_{12} ~ ~ \cdots ~ ~ N_ {1 p}\\\\ N_{21} ~ ~ N_{22} ~ ~ \cdots ~ ~ N_ {2p}\\\\ \ddots\\\\ N_ {n1} ~ ~ N_ N_ {np} \cdots = \end{bmatrix} P_{11} ~ ~ P_{12} ~ ~ \cdots ~ ~ P_ {1 p}\\\\ P_{21} ~ ~ P_{22} ~ ~ \cdots ~ ~ P_ {2p}\\\\ \ddots\\\\ P_ {m1} ~ ~ P_ {m2} ~ ~ \cdots ~ ~ P_ {mp} \end{bmatrix} \end{align}
+\begin{align} & \begin{bmatrix} M_{11} ~ ~ M_{12} ~ ~ \cdots ~ ~ M_ {1n}\\\\ M_{21} ~ ~ M_{22} ~ ~ \cdots ~ ~ M_ {2n}\\\\ \ddots\\\\ M_ {m1} ~ ~ M_ {m2} ~ ~ \cdots ~ ~ M_ {mn} \end{bmatrix} \begin{bmatrix} N_{11} ~ ~ N_{12} ~ ~ \cdots ~ ~ N_ {1 p}\\\\ N_{21} ~ ~ N_{22} ~ ~ \cdots ~ ~ N_ {2p}\\\\ \ddots\\\\ N_ {n1} ~ ~ N_ {n2} ~ ~ \cdots ~ ~ N_ {np} \end{bmatrix} = \begin{bmatrix} P_{11} ~ ~ P_{12} ~ ~ \cdots ~ ~ P_ {1 p}\\\\ P_{21} ~ ~ P_{22} ~ ~ \cdots ~ ~ P_ {2p}\\\\ \ddots\\\\ P_ {m1} ~ ~ P_ {m2} ~ ~ \cdots ~ ~ P_ {mp} \end{bmatrix} \end{align}
 
 其中 $P $ 的專案 $P _ {ik} = \ sum_j M_ {ij} N_ {jk} $。 例如，專案 $P _{11}$ 是 $M $ 的第一個資料列的內部乘積，其中第一個資料行是 $N $。 請注意，由於向量只是一個特殊的矩陣案例，因此此定義會延伸至矩陣向量乘法。 
 
@@ -72,13 +72,12 @@ $ $ \langle v、v \rangle = v ^ \dagger v = v ^ \dagger U ^{-1} U v = v ^ \dagge
 
 $ $ \begin{bmatrix} a \\\\ b \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix} = \begin{bmatrix} a \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix} \\\\[1.5 em] b \begin{bmatrix} c \\\\ d \\\\ e\end {bmatrix} \end{bmatrix} = \begin{bmatrix} a c \\\\ a d \\\\ a e \\\\ bc \\\\ b d \\\\ be\end {bmatrix} $ $
 
-與
+和
 
 $ $ \begin{bmatrix} a \ b \\\\ c \ d \end{bmatrix} \otimes \begin{bmatrix} e \ f\\\\g \ h \end{bmatrix} = \begin{bmatrix} a\begin {bmatrix} e \ f\\\\ g \ h \end{bmatrix} b\begin {bmatrix} e \ f\\\\ g \ h \end{bmatrix} \\\\[1em] c\begin {bmatrix} e \ f\\\\ g \ h \end{bmatrix} d\begin {bmatrix} e \ f\\\\ g \ h \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ae \ af \ bf \\\\ ag \ ah \ bg \ bh \\\\ ce \ cf \ de \ df \\\\ cg \ ch \ dg \ dh \end{bmatrix}。
 $$
 
 張量產品的最後一個有用的標記慣例是，針對任何向量 $v $ 或 matrix $M $，$v ^ {\otimes n} $ 或 $M ^ {\otimes n} $ 是 $n $-折迭重複張量產品的一小手勢。  例如：
 
-\begin{align} & \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ {\otimes 1} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}，\qquad\begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ {\otimes 2} = \begin{bmatrix} 1 \\\\ 0 \\\\0 \\\\0 \end{bmatrix}，\qquad\begin{bmatrix} 1 \\\\-1 \end{bmatrix} ^ {\otimes 2} = \begin{bmatrix} 1 \\\\-1 \\\\-1 \\\\1 \end{bmatrix}、\\\\ & \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} ^ {\otimes 1} = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}，\qquad\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} ^ {\otimes 2} = \begin{bmatrix} 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0& 0 \ end {bmatrix}。
+\begin{align} & \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ {\otimes 1} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}，\qquad\begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ {\otimes 2} = \begin{bmatrix} 1 \\\\ 0 \\\\0 \\\\0 \end{bmatrix}，\qquad\begin{bmatrix} 1 \\\\-1 \end{bmatrix} ^ {\otimes 2} = \begin{bmatrix} 1 \\\\ 1 \end{bmatrix}、\\\\ & \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} ^ {\otimes 1} = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}，\qquad\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} ^ {\otimes 2} = \begin{bmatrix} 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ & & 1 & 0\\0 \\ 0 \ 結束 {bmatrix}.\\\\\\\\
 \end{align}
-

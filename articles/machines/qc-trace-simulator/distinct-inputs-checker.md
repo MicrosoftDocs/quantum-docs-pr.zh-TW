@@ -1,17 +1,17 @@
 ---
-title: 相異輸入檢查程式 |量子電腦追蹤模擬器 |Microsoft Docs
-description: 量子電腦追蹤模擬器概觀
+title: 相異的輸入檢查
+description: '深入瞭解 Microsoft QDK Distinct 輸入檢查工具，其會檢查您的 Q # 程式碼是否有與共享 qubits 的潛在衝突。'
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 3c21a54f5da83bf1ea0792e79cc773be5fba71e8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 11a0573242c8afb12f242aa3be5f9cff18290452
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820958"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907098"
 ---
 # <a name="distinct-inputs-checker"></a>相異的輸入檢查
 
@@ -71,6 +71,6 @@ namespace Quantum.MyProgram
 
 類別 `QCTraceSimulatorConfiguration` 會儲存配量電腦追蹤模擬器的設定，而且可以當做 `QCTraceSimulator` 的引數提供。 當 `useDistinctInputsChecker` 設定為 true 時，就會啟用 `Distinct Inputs Checker`。 如需詳細資訊，請參閱[QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)和[QCTRACESIMULATORCONFIGURATION](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?)上的 API 檔。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - 量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。

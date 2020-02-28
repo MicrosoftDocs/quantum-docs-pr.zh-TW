@@ -1,17 +1,17 @@
 ---
-title: 運算式 |Microsoft Docs
-description: 運算式
+title: 'Q # 運算式'
+description: '瞭解如何指定、參考和合併常數、變數、運算子、作業和函數，做為 Q # 中的運算式。'
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: fbde873f220d737db17f889d00be33541e3eb59b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036302"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907404"
 ---
 # <a name="expressions"></a>運算式
 
@@ -22,7 +22,7 @@ ms.locfileid: "77036302"
 
 在[型別模型](xref:microsoft.quantum.language.type-model#tuple-types)中所描述的簡單值和單一元素元組的等價，會移除 `(6)` 與群組之間的不明確，並 `(6)` 為單一元素的元組。
 
-## <a name="symbols"></a>符號
+## <a name="symbols"></a>Symbols
 
 系結或指派給型別之值的符號名稱 `'T` 是 `'T`型別的運算式。
 例如，如果符號 `count` 系結至 `5`的整數值，則 `count` 為整數運算式。
@@ -73,7 +73,7 @@ let bigOne = bigZero + 1L;
 
 整數除法和整數模數會遵循與負數相同的行為C#。
 也就是說，`a % b` 一定會具有與 `a`相同的正負號，而且 `b * (a / b) + a % b` 一律會等於 `a`。
-例如，
+例如：
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -306,7 +306,7 @@ Q # callables 允許直接或間接遞迴。
 
 `!` 運算子的優先順序有一個可能不明顯的影響。
 如果函式或作業傳回值，因而解除包裝，則函式或作業呼叫必須以括弧括住，讓引數元組系結至呼叫，而不是系結。
-例如，
+例如：
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result

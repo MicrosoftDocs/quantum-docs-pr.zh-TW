@@ -1,19 +1,19 @@
 ---
-title: 相互關聯的 wavefunctions |Microsoft Docs
-description: 量子 Dynamics 概念檔
+title: 關聯波函數
+description: 瞭解 wavefunctions 中使用 Microsoft 量子化學程式庫的動態和非動態相互關聯。
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
-ms.openlocfilehash: 0b14f373d31c5b63e313e07810daf62d9195b1d3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 005ef86382ca72969b06a4206cab01f3845718e2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184027"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904429"
 ---
-# <a name="correlated-wavefunctions"></a>相互關聯的 wavefunctions
+# <a name="correlated-wavefunctions"></a>關聯波函數
 
 對於許多系統而言，特別是接近均衡幾何的[Hartree – Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock)理論會透過單一行列式參考狀態，提供分子屬性的定性描述。 不過，若要達到量化精確度，必須同時考慮相互關聯的效果。 
 
@@ -25,7 +25,7 @@ Dynamical 相互關聯是從 electrons 的趨勢引發，例如因為 interelect
 
 ## <a name="sparse-multi-reference-wavefunction"></a>稀疏多重參考 wavefunction
 可以將多重參考狀態 $ \ket{\ psi_ {\rm {MCSCF}}} $ 明確指定為 $N $-electron Slater determininants 的線性組合。
-\begin{align} \ket{\ psi_ {\rm {MCSCF}}} \propto \ sum_ {i_1 < i_2 < \cdots < i_N} \ lambda_ {i_1，i_2，\cdots，i_N} a ^ \ dagger_ {i_1} \cdots a ^ \ dagger_ {i_2} \ket dagger_。
+\begin{align} \ket{\ psi_ {\rm {MCSCF}}} \propto \ sum_ {i_1 < i_2 < \cdots < i_N} \ lambda_ {i_1，i_2，\cdots，i_N} a ^ \ dagger_ {i_1} \cdots a ^ \ dagger_ {i_2} \ket dagger_。{0}
 \end{align} 例如，state $ \propto （0.1 a ^ \ dagger_1a ^ \ dagger_2a ^ \ dagger_6-0.2 a ^ \ dagger_2a ^ \ dagger_1a ^ \ dagger_5） \ket{0}$ 可以在化學程式庫中指定，如下所示。
 ```csharp
 // Create a list of tuples where the first item of each 
@@ -77,7 +77,7 @@ var clusterOperator = new[]
 var wavefunction = new FermionWavefunction<int>(reference, clusterOperator);
 ```
 
-微調 convervation 可以明確地進行，改為指定 `SpinOrbital` 索引，而不是整數索引。 例如，let $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_ {1，\uparrow} a ^ \ dagger_ {2，\downarrow}\ket{0}$，並讓 $T = 0.123 a ^ \ dagger_ {0，\uparrow} a_ {1，\uparrow} + 0.456 a ^ \ dagger_ {0，\uparrow} a ^ \ dagger_ {3，\downarrow} a_ {1，\uparrow} a_ {2，\download-downarrow-circled}-0.789 a ^ \ dagger_ {3，\uparrow} a ^ \ dagger_ {2，\uparrow} a_ {1，\uparrow} a_ {0，\uparrow} $ 是微調 convserving。 然後，此狀態會在化學程式庫中具現化，如下所示。
+微調 convervation 可以明確地進行，改為指定 `SpinOrbital` 索引，而不是整數索引。 例如，let $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_ {1，\uparrow} a ^ \ dagger_ {2，\downarrow}\ket{0}$，然後讓 $T = 0.123 a ^ \ dagger_ {0，\uparrow} a_ {1，\uparrow} + 0.456 a ^ dagger_ {0，\uparrow} a ^ \ dagger_ {3，\downarrow} a_ {1，\uparrow} a_ {2，\downarrow}-0.789 a ^ \ dagger_ {3，\uparrow} a ^ \ dagger_ {2，\uparrow} a_ {1，\uparrow} a_ {0，\uparrow} $ 是微調 convserving。 然後，此狀態會在化學程式庫中具現化，如下所示。
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state

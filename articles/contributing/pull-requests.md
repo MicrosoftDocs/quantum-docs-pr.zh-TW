@@ -1,17 +1,17 @@
 ---
-title: 開啟提取要求 |Microsoft Docs
-description: 開啟提取要求
+title: 開啟提取要求
+description: 瞭解當您準備好將程式碼或檔提供給 Microsoft Quantum Development Kit 時，如何提交 GitHub 提取要求。
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183721"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907455"
 ---
 # <a name="opening-pull-requests"></a>開啟提取要求 #
 
@@ -42,19 +42,19 @@ ms.locfileid: "73183721"
 假設您已在名為 `feature`的_分支_中啟動貢獻。
 接下來，您的**Microsoft/** 配量分支可能如下所示：
 
-![](~/media/git-workflow-step0.png)
+![GitHub 中的工作分支](~/media/git-workflow-step0.png)
 
 如果您在本機儲存機制中進行變更，您可以將其他存放庫中的變更_提取_到您的存放庫中，以趕上發生上游的任何變更。
 
-![](~/media/git-workflow-step1.png)
+![從上游存放庫提取和合併變更](~/media/git-workflow-step1.png)
 
 提取要求的工作方式相同，但相反地：當您開啟提取要求時，您會要求上游存放庫提取您的貢獻。
 
-![](~/media/git-workflow-step2.png)
+![要求將您的變更提取回原始存放庫](~/media/git-workflow-step2.png)
 
 當您開啟其中一個存放庫的提取要求時，GitHub 會為其他人提供機會，以查看您的變更摘要、對其加上批註，以及提出如何協助做出更好貢獻的建議。
 
-![](~/media/pull-request-header.png)
+![GitHub 中提取要求的螢幕擷取畫面](~/media/pull-request-header.png)
 
 使用此程式可協助我們使用 GitHub 功能來改善貢獻，並為量副程式設計小組維護高品質的產品。
 

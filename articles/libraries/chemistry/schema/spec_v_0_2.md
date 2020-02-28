@@ -1,16 +1,17 @@
 ---
-title: Broombridge 架構規格
+title: Broombridge 架構規格（0.2 版）
+description: 詳細說明 Microsoft 量子化學程式庫的 Broombridge 量子化學架構 v 0.2 規格。
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
-ms.openlocfilehash: 2f4be96bc6f1e8e6fe21b93bc0d9ab2aa367fd53
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: df7e651b7d32e672c6e83346ff603132bd55c1a2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185302"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907268"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge 規格 v 0。2 #
 
@@ -146,7 +147,7 @@ $ $ h_ {ij} = \int {\mathrm d} x \psi ^ *\_i （x） \left （\frac{1}{2}\nabla 
 
 而這兩個 electron 的詞彙是
 
-$ $ h\_\{ijkl\} = \iint \{\mathrm d\}x ^ 2 \psi ^\{\*\}\_i （x\_1） \psi\_j （x\_1） \frac\{1\}\{\|x\_1-x\_2\|\}\psi\_k ^\{\*\}（x\_2） \psi\_l （x\_2）。
+$ $ h\_\{ijkl\} = \iint \{\mathrm d\}x ^ 2 \psi ^\{\*\}\_i （x\_1） \psi\_j （x\_1） \frac\{1\}\{\|x\_1-x\_2\|\}\psi\_k ^\{\*l （x \}2） \psi。\_\_\_
 $$
 
 如 `integral_sets` 屬性之每個元素的[`basis_set` 屬性](#basis-set-object)說明中所述，我們會進一步明確假設使用的基礎函數是實際值。
@@ -181,7 +182,7 @@ Hamiltonian 物件的 `one_electron_integrals` 屬性必須是一個稀疏陣列
 
 這一節有資訊。
 
-下列 sparse 陣列數量代表 Hamiltonian $ $ H = \left （-5.0 （^\{\dagger\}\_{1，\uparrow} a\_{1，\uparrow} + a ^\{\dagger\}\_{1，\downarrow} a\_{1，\downarrow}） + 0.17 （^\{\dagger\}\_{2，\uparrow}\_{1，\uparrow} + a ^\{\dagger\}\_{1，\uparrow} a\_{2，\uparrow} + a ^\{\dagger\}\_{2，\downarrow}\_{1，\downarrow} + a ^\{\dagger\}\_{1，\downarrow} a\_{2，\downarrow}） \right）\\，\mathrm{Ha}。
+下列 sparse 陣列數量代表 Hamiltonian $ $ H = \left （-5.0 （a ^\{\dagger\}\_{1，\uparrow}\_{1，\uparrow} + a ^\{\dagger\}\_{1，\downarrow} a\_{1，\downarrow}） + 0.17 （^\{\dagger\}\_{2，\uparrow} a\_{1，\uparrow} + a ^\{\dagger\}\_{1，\uparrow} a\_{2，\uparrow} + a ^\{\dagger\}\_{2，\downarrow}\_{1，\downarrow} + a ^\{\dagger\}\_{1，\downarrow} a\_{2，\downarrow}） \right）\\，\mathrm{Ha}。
 $$
 
 ```yaml
@@ -206,7 +207,7 @@ Hamiltonian 物件的 `two_electron_integrals` 屬性必須是具有一個稱為
 
 每個 `two_electron_integrals` 屬性都必須具有 `index_convention` 屬性。
 `index_convention` 屬性的值必須是 [表 1] 中所列的其中一個允許值。
-如果 `index_convention` 的值為 `mulliken`，則針對 `two_electron_integrals` sparse 陣列數量的每個專案，載入 Broombridge 檔的剖析器必須具現化 Hamiltonian 詞彙，其等於雙 electron 運算子 $h _ {i，j，k，l} a ^ \ dagger_i ^ \ dagger_j a_k $，其中 $i $、$j $、$k $ 和 $l $ 必須是值至少為1的整數，而其中 $h _ {i，j，k，l} $ 是稀疏陣列數量的元素 `[i, j, k, l, h(i, j, k, l)]`。
+如果 `index_convention` 的值為 `mulliken`，則針對 `two_electron_integrals` sparse 陣列數量的每個元素，載入 Broombridge 檔的剖析器必須具現化 Hamiltonian 詞彙，其等於兩個 electron 運算子 $h _ {i，j、k、l} a ^ \ dagger_i ^ \ dagger_j a_k a_l $，其中 $i $，$j $，$k $，而 $l $ 必須是值至少為1的整數，而 $h _ {i，j，k，l} $ 是稀疏陣列數量的元素 `[i, j, k, l, h(i, j, k, l)]`。
 
 ###### <a name="symmetries"></a>Symmetries ######
 
@@ -234,7 +235,7 @@ Hamiltonian 物件的 `two_electron_integrals` 屬性必須是具有一個稱為
 
 下列物件會指定 Hamiltonian
 
-$ $ H = \frac12 \sum\_{\sigma，\rho\in\\{\uparrow，\downarrow\\}} \Biggr （1.6 a ^ {\dagger}\_{1，\sigma} a ^ {\dagger}\_{1，\rho} a\_{1，\rho} a\_{1，\sigma}-0.1 a ^ {\dagger}\_{6，\sigma} ^ {\dagger}\_{1，\rho} a\_{3，\rho} a\_{2，\sigma}-0.1 a ^ {\dagger}\_{6，\sigma} a ^ {\dagger}\_{1，\rho} a\_{2，\rho} a\_{3，\sigma}-0.1 a ^ {\dagger}\_{1，\sigma} a ^ {\dagger}\_{6，\rho} a\_{3，\rho} a\_{2，\sigma}-0.1 a ^ {\dagger}\_{1，\sigma} a {\dagger}\_{6，\rho} a\_{2，\rho} a\_{3，\sigma} $ $ $-0.1 a ^ {\dagger}\_{3，\sigma} a ^ {\dagger}\_{2，\rho} a\_{6，\rho} a\_{1，\sigma}-0.1 a ^ {\dagger}\_{3，\sigma} a ^ {\dagger}\_{2，\rho}\_{1，\rho} a\_{6，\sigma}-0.1 a ^ {\dagger}\_{2，\sigma} a ^ {\dagger}\_{3，\rho} a\_{6，\rho} a\_{1，\sigma}-0.1 a ^ {\dagger}\_{2，\sigma} ^ {\dagger}\_{3，\rho} a\_{1，\rho} a\_{6，\sigma}\Biggr）\\，\textrm{Ha}。
+$ $ H = \frac12 \sum\_{\sigma，\rho\in\\{\uparrow，\downarrow\\}} \Biggr （1.6 a ^ {\dagger}\_{1，\sigma} ^ {\dagger}\_{1，\rho} a\_{1，\rho} a\_{1，\sigma}-0.1 a ^ {\dagger}\_{6，\sigma} a ^ {\dagger}\_{1，\rho} a\_{3，\rho} a\_{2，\sigma}-0.1 a ^ {\dagger}\_{6，\sigma} a\_{2，\rho}\_{3，\sigma}-0.1 a ^ {\dagger}\_{1，\sigma} a ^ {\dagger}\_{6，\rho} a\_{3，\rho} a\_{2，\sigma}-0.1 a ^ {\dagger}\_{1，\sigma} a ^ {\dagger}\_{6，\rho} a\_{2，\rho} a\_{3，\sigma} $ $ $ $-0.1 a ^ {\dagger}\_{3，\sigma} a ^ {\dagger}\_{2，\rho} a\_{6，\rho} a\_{1，\sigma}-0.1 a ^ {\dagger}\_{3，\sigma} ^ {\dagger}\_{2，\rho} a\_{1，\rho} a\_{6，\sigma}-0.1 a ^ {\dagger}\_{2，\sigma} a ^ {\dagger}\_{3，\rho} a\_{6，\rho} a\_{1，\sigma}-0.1 a ^ {\dagger}\_{2，\sigma} a ^ {\dagger}\_{3，\rho} a\_{1，\rho} a\_{6，\sigma}\Biggr）\\，\textrm{Ha}。\_
 $$
 
 ```yaml
@@ -263,7 +264,7 @@ two_electron_integrals:
 
 如果 `method` 屬性的值為 `sparse_multi_configurational`，則狀態物件必須具有 `superposition` 屬性，其中包含基礎狀態陣列及其未標準化的 amplitudes。
 
-例如，初始狀態 $ $ \ket{G0} = \ket{G1} = \ket{G2} = （a ^ {\dagger}\_{1，\uparrow}a ^ {\dagger}\_{2，\uparrow}a ^ {\dagger}\_{2，\downarrow}） \ket{0} $ $ $ $ \ket{E} = \frac{0.1 （a ^ {\dagger}\_{1，\uparrow}a ^ {\dagger}\_{2，\uparrow}a ^ {\dagger}\_{2，\downarrow}） + 0.2 （^ {\dagger}\_{1，\uparrow}a ^ {\dagger}\_{3，\uparrow}a ^ {\dagger}\_{2，\downarrow}）} {\sqrt{| 0.1 | ^ 2 + | 0.2 | ^ 2}} \ket{0}，$ $，其中 $ \ket{E} $ 具有能源 $0.987 \textrm{Ha} $，其以表示
+例如，初始狀態 $ $ \ket{G0} = \ket{G1} = \ket{G2} = （a ^ {\dagger}\_{1，\uparrow}a ^ {\dagger}\_{2，\uparrow}a ^ {\dagger}\_{2，\downarrow}） \ket{0} $ $ $ $ \ket{E} = \frac{0.1 （^ {\dagger}\_{1，\uparrow}a ^ {\dagger}\_{2，\uparrow}a ^ {\dagger}\_{2，\downarrow}） + 0.2 （^ {\dagger}\_{1，\uparrow}a ^ {\dagger}\_{3，\uparrow}a ^ {\dagger}\_{2，\downarrow}）} {\sqrt{| 0.1 | ^ 2 + | 0.2 | ^ 2}} \ket{0}，$ $，其中 $ \ket{E} $ 具有能源 $0.987 \textrm{Ha} $，其以表示
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
   - label: "|G0>"
@@ -296,7 +297,7 @@ JSON 物件可能有一個 `two_body_amplitudes` 屬性，其值為兩個主體�
 
 $ $ \ket{\text{UCCSD}} = e ^ {T-T ^ \dagger}\ket{\text{reference}}，$ $
 
-$ $ T = 0.1 a ^ {\dagger}\_{3，\uparrow}a\_{2，\downarrow} + 0.2 a ^ {\dagger}\_{2，\uparrow}a\_{2，\downarrow}-0.3 a ^ {\dagger}\_{1，\uparrow}a ^ {\dagger}\_{3，\downarrow}a\_{3，\uparrow}a\_{2，\downarrow} $ $ 是以表示
+$ $ T = 0.1 a ^ {\dagger}\_{3，\uparrow}a\_{2，\downarrow} + 0.2 a ^ {\dagger}\_{2，\uparrow}a\_{2，\downarrow}-0.3 a ^ {\dagger}\_{1，\uparrow}a ^ {\dagger}\_{3，\downarrow}a\_{3，\uparrow}a\_{2，\downarrow} $ $ 是以
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
   - label: "UCCSD"

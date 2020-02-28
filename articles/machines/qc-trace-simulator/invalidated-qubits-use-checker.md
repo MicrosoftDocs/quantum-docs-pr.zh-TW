@@ -1,17 +1,17 @@
 ---
-title: 不正確 qubits use 檢查工具 |量子電腦追蹤模擬器 |Microsoft Docs
-description: 量子電腦追蹤模擬器概觀
+title: 不正確的量子位元使用檢查工具
+description: '深入瞭解 Microsoft QDK 失效的 Qubits Use 檢查工具，其會檢查您的 Q # 程式碼是否有潛在的無效 Qubits。'
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 093937346488725eacb69ef7da6affde764ec5c1
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e2bbb12448e27f28db030a0084302fb24f46f26b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820873"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907064"
 ---
 # <a name="invalidated-qubits-use-checker"></a>不正確 Qubits Use 檢查工具
 
@@ -58,6 +58,6 @@ namespace Quantum.MyProgram
 
 類別 `QCTraceSimulatorConfiguration` 會儲存配量電腦追蹤模擬器的設定，而且可以當做 `QCTraceSimulator` 的引數提供。 當 `useInvalidatedQubitsUseChecker` 設定為 true 時，就會啟用 `Invalidated Qubits Use Checker`。 如需詳細資訊，請參閱[QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)和[QCTRACESIMULATORCONFIGURATION](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration)上的 API 檔。
 
-## <a name="see-also"></a>請參閱 ##
+## <a name="see-also"></a>另請參閱 ##
 
 - 量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。

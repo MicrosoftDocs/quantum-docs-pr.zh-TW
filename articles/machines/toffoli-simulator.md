@@ -1,17 +1,17 @@
 ---
-title: 量子開發工具組 Toffoli 模擬器 |Microsoft Docs
-description: Microsoft 的量子開發工具組 Toffoli 模擬器總覽
+title: 量子開發工具組 Toffoli 模擬器
+description: 深入瞭解 Microsoft QDK Toffoli 模擬器，這是一種特殊用途的量子模擬器，可與數百萬個 qubits 搭配使用。
 author: alan-geller
 ms.author: ageller@microsoft.com
 ms.date: 01/16/2019
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: 26940d1a8fe31f1035e2d23a68940cd999517c6b
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8a29caaa0fa058600a74e7d130e644374cbfa19c
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442361"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907013"
 ---
 # <a name="quantum-development-kit-toffoli-simulator"></a>量子開發工具組 Toffoli 模擬器
 

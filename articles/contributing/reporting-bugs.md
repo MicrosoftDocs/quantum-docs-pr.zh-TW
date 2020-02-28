@@ -1,19 +1,19 @@
 ---
-title: 報告 bug |Microsoft Docs
-description: 報告錯誤
+title: 報告錯誤
+description: 瞭解如何報告 Microsoft Quantum Development Kit 的錯誤或問題（QDK）。
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.reporting
-ms.openlocfilehash: bc2a877448f545a3142217331af3e6711ad45329
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 510f842a068a61502d150ccf5e3b2b5742984f3a
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183653"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904786"
 ---
-# <a name="reporting-bugs"></a>報告錯誤 #
+# <a name="reporting-bugs"></a>報告錯誤 (Bug) #
 
 如果您認為在「量子開發工具組」的元件中發現錯誤，我們非常感謝您的報告。
 畢竟，其他人可能也會面臨相同的問題，讓我們知道可以協助我們為每個人進行修正。

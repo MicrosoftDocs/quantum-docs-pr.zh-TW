@@ -1,17 +1,17 @@
 ---
-title: 寬度計數器 |量子電腦追蹤模擬器 |Microsoft Docs
-description: 量子電腦追蹤模擬器概觀
+title: Width 計數器
+description: 深入瞭解 Microsoft QDK Width 計數器，其會計算量副程式中每項作業所配置和借用的 qubits 數目。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820363"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907081"
 ---
 # <a name="width-counter"></a>Width 計數器
 
@@ -57,6 +57,6 @@ double inputWidth =
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>請參閱 ##
+## <a name="see-also"></a>另請參閱 ##
 
 - 量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。

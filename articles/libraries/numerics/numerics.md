@@ -1,17 +1,17 @@
 ---
-title: 使用數值程式庫 |Microsoft Docs
-description: 使用數值程式庫
+title: '使用 Microsoft Q # 數值程式庫'
+description: 瞭解 Microsoft 量子數值程式庫中可用的類型和作業。
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821026"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907251"
 ---
 # <a name="using-the-numerics-library"></a>使用數值程式庫
 
@@ -36,7 +36,7 @@ open Microsoft.Quantum.Arithmetic;
 1. **`SignedLittleEndian`** ：與 `LittleEndian` 相同，不同之處在于它代表儲存在兩個補數中的帶正負號的整數。
 1. **`FixedPoint`** ：代表由 qubit 陣列 `qArr2 : Qubit[]` 和二進位點位置 `pos`所組成的實數，其會計算二進位點左邊的二進位位數數目。 `qArr2` 的儲存方式與 `SignedLittleEndian`相同。
 
-## <a name="operations"></a>Dynamics 365
+## <a name="operations"></a>作業
 
 針對上述三種類型的每一種，可以使用各種不同的作業：
 
@@ -109,7 +109,7 @@ EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 這會評估 $P _ {奇數} （x） = x + 2x ^ 3 $。
 
-## <a name="more-samples"></a>更多範例
+## <a name="more-samples"></a>其他範例
 
 您可以在[主要範例存放庫](https://github.com/Microsoft/Quantum)中找到更多範例。
 
