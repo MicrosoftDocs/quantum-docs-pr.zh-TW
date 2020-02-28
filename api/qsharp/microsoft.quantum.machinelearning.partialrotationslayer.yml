@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.partialrotationslayer
+name: PartialRotationsLayer
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: 傳回沿著指定軸的單一 qubit 旋轉陣列，由不同的模型參數參數化。
+syntax: 'function PartialRotationsLayer (idxsQubits : Int[], axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(idxsQubits : Int[], axis : Pauli)'
+  types:
+  - name: idxsQubits
+    summary: Qubits 的索引，用來做為每個旋轉的目標。
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: axis
+    summary: 指定圖層中每個旋轉的旋轉軸。
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: 關於指定軸的受控制旋轉陣列，每個 `nQubits` qubits 上各一個。
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: ece8381560c4d7501282eb909506a10e7ab1fe72
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908628"

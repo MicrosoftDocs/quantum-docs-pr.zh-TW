@@ -47,15 +47,15 @@ functions:
 
     也就是說，會傳回最小的 $n $，使 $a < 2 ^ n $。
 - uid: microsoft.quantum.math.ceiling
-  summary: 傳回大於或等於指定數位的最小整數。
+  summary: 傳回大於或等於指定數字的最小整數。
 - uid: microsoft.quantum.math.complexascomplexpolar
   summary: 將 `Complex` 類型的複數轉換成 `ComplexPolar`類型的複數數。
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: 將 `ComplexPolar` 類型的複數轉換成 `Complex`類型的複數數。
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> 取代\n\nComplexPolarToComplex 已被取代。 請改用 @\"microsoft.quantum.math.complexpolarascomplex\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nComplexPolarToComplex 已被取代。 請改用 @\"microsoft.quantum.math.complexpolarascomplex\"。"
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> 取代\n\nComplexToComplexPolar 已被取代。 請改用 @\"microsoft.quantum.math.complexascomplexpolar\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nComplexToComplexPolar 已被取代。 請改用 @\"microsoft.quantum.math.complexascomplexpolar\"。"
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: 尋找最接近 `fraction` 分母小於或等於 `denominatorBound` 的繼續分數聚合
 - uid: microsoft.quantum.math.continuedfractionconvergentl
@@ -210,6 +210,8 @@ functions:
   summary: 傳回指定角度的雙曲正弦值。
 - uid: microsoft.quantum.math.sqrt
   summary: 傳回指定數位的平方根。
+- uid: microsoft.quantum.math.squarednorm
+  summary: 傳回向量的平方2標準。
 - uid: microsoft.quantum.math.tan
   summary: 傳回指定角度的正切函數。
 - uid: microsoft.quantum.math.tanh
@@ -253,9 +255,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: 以隨機的的單一 qubit Pauli 運算子，傳回一個一致的。
 metadata:
-  ms.openlocfilehash: f1a0185252155a39572a6b4159a88686533154c0
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 03a0eba2101d3a20b393b7f685ac463b1abcd727
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870181"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905823"

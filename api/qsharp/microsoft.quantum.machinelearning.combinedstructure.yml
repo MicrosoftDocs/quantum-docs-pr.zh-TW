@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.combinedstructure
+name: CombinedStructure
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: 指定一或多個控制旋轉層級時，會傳回已移動模型參數索引的單一圖層，讓不同的層級會由不同的模型參數參數化。
+examples: >-
+  以下是相同的：
+
+
+  ```Q#
+
+  let structure = CombinedStructure([
+      LocalRotationLayer(2, PauliY),
+      CyclicEntanglingLayer(3, PauliX, 2)
+  ]);
+
+  let structure = [
+      ControlledRotation((0, new Int[0]), PauliY, 0),
+      ControlledRotation((1, new Int[0]), PauliY, 1),
+      ControlledRotation((0, [2]), PauliX, 2),
+      ControlledRotation((1, [0]), PauliX, 3),
+      ControlledRotation((2, [1]), PauliX, 4)
+  ];
+
+  ```
+syntax: 'function CombinedStructure (layers : Microsoft.Quantum.MachineLearning.ControlledRotation[][]) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(layers : Microsoft.Quantum.MachineLearning.ControlledRotation[][])'
+  types:
+  - name: layers
+    summary: 要合併的圖層。
+    isArray: true
+    types:
+    - isArray: true
+      uid: microsoft.quantum.machinelearning.controlledrotation
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: 控制旋轉的單一層，代表所有其他層的串連。
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: 484aef85795ab27aba90dcde89fbf4a0de43ab5a
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908713"

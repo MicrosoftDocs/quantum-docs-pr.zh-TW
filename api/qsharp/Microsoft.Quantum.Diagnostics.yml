@@ -4,6 +4,8 @@ name: Microsoft.Quantum.Diagnostics
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: 判斷提示兩個布林值陣列是否相等。
+- uid: microsoft.quantum.diagnostics.allequalityfacti
+  summary: 判斷兩個整數值陣列是否相等。
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: 傾印目前目的電腦的狀態。
 - uid: microsoft.quantum.diagnostics.dumpregister
@@ -76,11 +78,11 @@ operations:
 newtypes:
 - uid: microsoft.quantum.diagnostics.test
   summary: 編譯器可識別的屬性，用來標示單元測試。
-summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含適用于診斷用途的函數和作業，包括 assert 作業和宣告函式。"
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含適用于診斷用途的函數和作業，包括 assert 作業和宣告函式。"
 metadata:
-  ms.openlocfilehash: a633a9555f380e6aa6c6701d277d026c58130ff2
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858270"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905908"

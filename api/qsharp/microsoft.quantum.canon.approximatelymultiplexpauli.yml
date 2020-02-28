@@ -1,10 +1,10 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.multiplexpauli
-name: MultiplexPauli
+uid: microsoft.quantum.canon.approximatelymultiplexpauli
+name: ApproximatelyMultiplexPauli
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  在 qubits 的陣列上套用 Pauli 旋轉。
+  在 qubits 陣列上套用 Pauli 旋轉，並根據指定的容錯來截斷小型旋轉角度。
 
 
   這適用于乘以 $n $-qubit number state $ \ket{j} $ 所控制的單一 qubit Pauli 運算子 $P $ 時，會依角度 $ \ theta_j $ 來執行旋轉的「大規模控制」單一運算。
@@ -19,10 +19,14 @@ summary: >-
 
   ##
 remarks: 如果指定了少於 $ 2 ^ n $，`coefficients` 將會以 $ \ theta_j = $0.0 的元素填補。
-syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+syntax: 'operation ApproximatelyMultiplexPauli (tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
-  content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  content: '(tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
+  - name: tolerance
+    summary: 較小的係數會被截斷的容錯。
+    isPrimitive: true
+    uid: Double
   - name: coefficients
     summary: 最多 $ 2 ^ n $ 係數 $ \ theta_j $ 的陣列。 $J $ th 的係數會以位元組由小到大的格式來編制編碼的數位 state $ \ket{j} $。
     isArray: true
@@ -48,11 +52,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelymultiplexpauli
+- multiplexpauli
 metadata:
-  ms.openlocfilehash: 7c30159a7774b407d7574018028b53e8c72f8d0a
+  ms.openlocfilehash: e3b828de03845724fc1cad78babfff0c01b8ae24
   ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: zh-TW
   ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77906571"
+  ms.locfileid: "77907931"

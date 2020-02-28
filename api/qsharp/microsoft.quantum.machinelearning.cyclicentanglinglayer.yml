@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
+name: CyclicEntanglingLayer
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: 傳回指定軸上的單向控制旋轉陣列，在 qubits 的暫存器上排列迴圈，並由不同的模型參數進行參數化。
+examples: >-
+  以下是相同的：
+
+
+  ```Q#
+
+  let layer = CyclicEntanglingLayer(3, PauliX, 2);
+
+  let layer = [
+      ControlledRotation((0, [2]), PauliX, 0),
+      ControlledRotation((1, [0]), PauliX, 1),
+      ControlledRotation((2, [1]), PauliX, 2)
+  ];
+
+  ```
+syntax: 'function CyclicEntanglingLayer (nQubits : Int, axis : Pauli, stride : Int) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(nQubits : Int, axis : Pauli, stride : Int)'
+  types:
+  - name: nQubits
+    summary: 給定層處理的 qubits 數目。
+    isPrimitive: true
+    uid: Int
+  - name: axis
+    summary: 指定圖層中每個旋轉的旋轉軸。
+    isPrimitive: true
+    uid: Pauli
+  - name: stride
+    summary: 每次旋轉的目標和控制項索引之間的分隔。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: 由兩個 qubit 控制的旋轉陣列，會在 `nQubits` qubits 的暫存器上配置迴圈。
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: 64f64fcfe2cbb969a0d16fba07ca39d64b53cbd4
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908730"
