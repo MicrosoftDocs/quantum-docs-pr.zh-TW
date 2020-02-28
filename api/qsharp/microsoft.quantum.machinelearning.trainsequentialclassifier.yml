@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.trainsequentialclassifier
+name: TrainSequentialClassifier
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: 假設有順序分類器的結構，請在指定的標記定型集上訓練分類器。
+syntax: 'operation TrainSequentialClassifier (models : Microsoft.Quantum.MachineLearning.SequentialModel[], samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
+input:
+  content: '(models : Microsoft.Quantum.MachineLearning.SequentialModel[], samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
+  types:
+  - name: models
+    summary: 要在定型期間當做起點使用的模型陣列。
+    isArray: true
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: samples
+    summary: 一組標示的定型資料，將用來執行定型。
+    isArray: true
+    uid: microsoft.quantum.machinelearning.labeledsample
+  - name: options
+    summary: 定型時要使用的設定;如需詳細資訊，請參閱 @"microsoft.quantum.machinelearning.trainingoptions" 和 @"microsoft.quantum.machinelearning.defaulttrainingoptions"。
+    uid: microsoft.quantum.machinelearning.trainingoptions
+  - name: trainingSchedule
+    summary: 在定型步驟期間選取定型資料中的樣本時，所要使用的取樣排程。
+    uid: microsoft.quantum.machinelearning.samplingschedule
+  - name: validationSchedule
+    summary: 當選取哪一個起點產生最佳分類分數時，從定型資料中選取樣本時，所要使用的取樣排程。
+    uid: microsoft.quantum.machinelearning.samplingschedule
+output:
+  content: (Microsoft.Quantum.MachineLearning.SequentialModel, Int)
+  types:
+  - summary: >-
+      - 指定分類器的參數化以及兩個類別之間的偏差，與每個給定起點的最佳結果相互對應。
+
+      - 在最佳分類器模型中觀察到的遺漏數目。
+    types:
+    - uid: microsoft.quantum.machinelearning.sequentialmodel
+    - isPrimitive: true
+      uid: Int
+seeAlso:
+- microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
+- microsoft.quantum.machinelearning.validatesequentialclassifier
+metadata:
+  ms.openlocfilehash: 3abcfd38cbd089ec78cad6b48b157ad666813da9
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908458"

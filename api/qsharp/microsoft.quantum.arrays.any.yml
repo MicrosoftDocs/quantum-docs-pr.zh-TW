@@ -5,6 +5,26 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 針對陣列的元素定義陣列和述詞，會檢查陣列中至少有一個元素是否滿足述詞。
 remarks: "函數是針對泛型型別定義的，也就是說，每當有陣列 `'T[]`，而函式 `predicate: 'T -> Bool` 我們可以產生 `Bool` 值，指出某個元素是否符合 `predicate`。"
+examples: >-
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function IsThreePresent() : Bool {
+      let arrayOfInts = [1, 2, 3, 4, 5];
+      let is3Present = IsNumberPresentInArray(3, arrayOfInts);
+      return is3Present;
+  }
+
+
+  function IsNumberPresentInArray(n : Int, array : Int[]) : Bool {
+      return Any(EqualI(_, n), array);
+  }
+
+  ```
 syntax: "function Any (predicate : ('T -> Bool), array : 'T[]) : Bool"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
@@ -35,9 +55,9 @@ typeParameters:
 - uid: "'T"
   summary: '`array` 元素的類型。'
 metadata:
-  ms.openlocfilehash: 11e76d2b0b26d2dfcfed36d126e6ebb6ce76cef8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 35555080f90588bc61d70e89ea412a23209408d6
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218374"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905551"

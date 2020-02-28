@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.estimategradient
+name: EstimateGradient
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: 估計特定模型和指定編碼輸入之順序分類器的定型漸層。
+remarks: 這項作業會使用 Hadamard 測試和參數 shift 技術來估計漸層。
+syntax: 'operation EstimateGradient (model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int) : Double[]'
+input:
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int)'
+  types:
+  - name: model
+    summary: 要預估其漸層的順序模型。
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: encodedInput
+    summary: 順序分類器的輸入，已編碼為狀態準備作業。
+    uid: microsoft.quantum.machinelearning.stategenerator
+  - name: nMeasurements
+    summary: 要用於估計漸層的測量數目。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double[]
+  types:
+  - summary: 指定輸入和模型參數的定型漸層估計值。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 05f80d57bc84e937e3a2580e9941a50ec60eab56
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909410"

@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.preparation
 name: Microsoft.Quantum.Preparation
-summary: " # <a name=\"summary\"></a>Summary\n 這個命名空間包含準備 qubits 至任意初始狀態的函式和作業。"
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含準備 qubits 至任意初始狀態的函式和作業。"
 functions:
 - uid: microsoft.quantum.preparation.blochspherecoordinates
   summary: >-
@@ -42,17 +42,10 @@ functions:
 
     \end{align} $ $
 operations:
+- uid: microsoft.quantum.preparation.approximatelypreparearbitrarystate
+  summary: 假設有一組係數和一個小時間編碼的配量暫存器，就會在該暫存器上準備一個由指定係數所描述的狀態，直到指定的近似值容錯為止。
 - uid: microsoft.quantum.preparation.preparearbitrarystate
-  summary: >-
-    傳回準備指定之量子狀態的作業。
-
-
-    傳回的作業 $U $ 準備具有複雜係數的任意量子狀態 $ \ket{\psi} $ $r _j e ^ {i t_j} $ （來自 $n $-qubit 計算基礎狀態 $ \ket{0...0} $）。
-
-
-    $ $ \begin{align} U\ket {0 ... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}。
-
-    \end{align} $ $
+  summary: 假設有一組係數和以位元組為小的編碼配量暫存器，就會在該暫存器上準備指定係數所描述的狀態。
 - uid: microsoft.quantum.preparation.preparechoistate
   summary: 準備指定之作業的 Choi – Jamiłkowski 狀態至指定的參考和目標暫存器。
 - uid: microsoft.quantum.preparation.preparechoistatea
@@ -99,9 +92,9 @@ operations:
 
     \end{align} $ $。
 metadata:
-  ms.openlocfilehash: 2b9e3b89a29eb73b9b7417210628fce046c91209
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dd28a9a066fabd5afab7114d78cc2aca79254e18
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216011"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905670"

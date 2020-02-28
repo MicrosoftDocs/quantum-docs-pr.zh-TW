@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.controlledrotation
+name: ControlledRotation
+type: newtype
+namespace: Microsoft.Quantum.MachineLearning
+summary: 描述受控制的旋轉，其目標和控制項索引、旋轉軸，以及模型參數向量的索引。
+remarks: >-
+  將 `ControlIndices` 設定為索引的空陣列 `new Int[0]`，即可表示無法控制的旋轉。
+
+
+  ### <a name="examples"></a>範例
+
+  以下代表在暫存器中第一個 qubit 的 $X $ 軸的旋轉、在第二個 qubit 上控制，以及在連續模型中使用第四個參數所指定的角度：
+
+
+  ```Q#
+
+  let controlledRotation = ControlledRotation(
+      (0, [1]),
+      PauliX,
+      3
+  )
+
+  ```
+syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
+metadata:
+  ms.openlocfilehash: b09588e77a43be10493184d4e3b8bbe7a0025ce6
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909512"

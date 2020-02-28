@@ -1,10 +1,10 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.applydiagonalunitary
-name: ApplyDiagonalUnitary
+uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+name: ApproximatelyApplyDiagonalUnitary
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  將複雜階段的陣列套用至 qubits 暫存器的數值基礎狀態。
+  將複雜階段的陣列套用至 qubits 暫存器的數位基礎狀態，並根據指定的容錯來截斷小型旋轉角度。
 
 
   這種作業會執行一個對角線，以在 $n $-qubit number state $ \ket{j} $ 上套用複雜的階段 $e ^ {i \ theta_j} $。
@@ -16,11 +16,15 @@ summary: >-
 
   \end{align} $ $
 remarks: 如果指定了少於 $ 2 ^ n $，`coefficients` 將會以 $ \ theta_j = $0.0 的元素填補。
-syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: '- Vivek Shende、Stephen Bullock、Igor L. Markov https://arxiv.org/abs/quant-ph/0406176 的量子邏輯電路合成'
 input:
-  content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
+  - name: tolerance
+    summary: 較小的係數會被截斷的容錯。
+    isPrimitive: true
+    uid: Double
   - name: coefficients
     summary: 最多 $ 2 ^ n $ 係數 $ \ theta_j $ 的陣列。 $J $ th 的係數會以位元組由小到大的格式來編制編碼的數位 state $ \ket{j} $。
     isArray: true
@@ -37,11 +41,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelyapplydiagonalunitary
+- applydiagonalunitary
 metadata:
-  ms.openlocfilehash: a98bdfc2503f7acf4e5cb145df6d6de528fc3f4f
+  ms.openlocfilehash: 9d2ee3254a3cd7c182ae6b4a57a6c48a993fa679
   ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: zh-TW
   ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905264"
+  ms.locfileid: "77907948"

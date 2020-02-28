@@ -4,10 +4,10 @@ name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  傳回在目標暫存器上套用 oracle 的單一運算子（如果控制項註冊狀態對應至指定的位元遮罩）。
+  傳回在目標暫存器上套用 oracle 的單一作業（如果控制項註冊狀態對應至指定的位元遮罩）。
 
 
-  這個函式的輸出可以透過單一轉換 $U $ 來表示，\begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\psi} & \textrm{if} （b_0 b_1 \cdots b_ {n-1}） = \texttt{bits} \\\\ \ket{\psi} & \textrm{otherwise} \end{cases}，\end{align}，其中 $V $ 是代表 `oracle` 作業動作的單一轉換。
+  此函式的輸出是可由單一轉換 $U $ 表示的作業，因此 \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\psi} & \textrm{if} （b_0 b_1 \cdots b_ {n-1}） = \texttt{bits} \\\\ \ket{\psi} & \textrm{otherwise} \end{cases}，\end{align}，其中 $V $ 是代表 `oracle` 作業動作的單一轉換。
 remarks: >-
   `bits` 和 `controlRegister` 的長度必須相等。
 
@@ -64,12 +64,12 @@ input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: 要在其上控制指定之單一運算子的位字串。
+    summary: 要在其上控制指定之單一運算的位字串。
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: 要在目標暫存器上套用的單一運算子。
+    summary: 要在目標暫存器上套用的單一作業。
     isOperation: true
     input:
       types:
@@ -85,7 +85,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: 當控制項暫存器狀態對應到位元遮罩 `bits`時，會在目標暫存器上套用 `oracle` 的單一運算子。
+  - summary: 當控制項暫存器狀態對應到位元遮罩 `bits`時，會在目標暫存器上套用 `oracle` 的單一作業。
     isOperation: true
     input:
       types:
@@ -102,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
-  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+  ms.openlocfilehash: e6f7f8980b2b9b8305df12da41e30fc563e54ad1
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 02/18/2020
-  ms.locfileid: "77441062"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906520"

@@ -1,0 +1,72 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.machinelearning
+name: Microsoft.Quantum.MachineLearning
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間提供用於量子機器學習應用程式的函式和作業。\n\n # <a name=\"references\"></a>參考\n - Maria Schuld、Alex Bocharov、Krysta Svore、Nathan Wiebe、「以電路為中心的量子分類器」 https://arxiv.org/abs/1804.00633。"
+functions:
+- uid: microsoft.quantum.machinelearning.approximateinputencoder
+  summary: 假設有一組係數和一個容錯，會傳回狀態準備作業，將每個係數準備成計算基礎狀態的對應波幅，直到指定的容錯為止。
+- uid: microsoft.quantum.machinelearning.combinedstructure
+  summary: 指定一或多個控制旋轉層級時，會傳回已移動模型參數索引的單一圖層，讓不同的層級會由不同的模型參數參數化。
+- uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
+  summary: 傳回指定軸上的單向控制旋轉陣列，在 qubits 的暫存器上排列迴圈，並由不同的模型參數進行參數化。
+- uid: microsoft.quantum.machinelearning.defaulttrainingoptions
+  summary: 傳回定型分類器的預設選項組。
+- uid: microsoft.quantum.machinelearning.featureregistersize
+  summary: 傳回編碼特定功能向量所需的 qubits 數目。
+- uid: microsoft.quantum.machinelearning.inferredlabel
+  summary: 假設有分類機率和偏差的，會傳回從該機率推斷而來的標籤。
+- uid: microsoft.quantum.machinelearning.inferredlabels
+  summary: 假設有分類機率和偏差的陣列，則會傳回從每個機率推斷的標籤。
+- uid: microsoft.quantum.machinelearning.inputencoder
+  summary: 假設有一組係數和一個容錯，會傳回狀態準備作業，將每個係數準備成計算基礎狀態的對應波幅。
+- uid: microsoft.quantum.machinelearning.localrotationslayer
+  summary: 傳回指定軸的不受控制（單一 qubit）旋轉陣列，並針對暫存器中的每個 qubit 逐一旋轉，由不同的模型參數進行參數化。
+- uid: microsoft.quantum.machinelearning.misclassifications
+  summary: 假設有一組推斷的標籤和一組正確的標籤，則會針對每一組標籤的不同，傳回的索引。
+- uid: microsoft.quantum.machinelearning.nmisclassifications
+  summary: 假設有一組推斷的標籤和一組正確的標籤，會傳回每一組標籤不同的索引數目。
+- uid: microsoft.quantum.machinelearning.nqubitsrequired
+  summary: 傳回套用給定順序分類器所需的 qubits 數目。
+- uid: microsoft.quantum.machinelearning.partialrotationslayer
+  summary: 傳回沿著指定軸的單一 qubit 旋轉陣列，由不同的模型參數參數化。
+- uid: microsoft.quantum.machinelearning.sampled
+  summary: 使用指定的排程來取樣給定的陣列。
+- uid: microsoft.quantum.machinelearning.schedulelength
+  summary: 傳回給定取樣排程中的專案數。
+operations:
+- uid: microsoft.quantum.machinelearning.applysequentialclassifier
+  summary: 指定順序分類器的結構和參數化時，會將分類器套用至 qubits 的註冊。
+- uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
+  summary: 假設有一組範例和一個順序分類器，則會重複測量每個樣本上的分類器輸出，以估計這些樣本的分類機率。
+- uid: microsoft.quantum.machinelearning.estimateclassificationprobability
+  summary: 假設有一個範例和一個連續的分類器，會在指定的範例上重複測量分類器的輸出，以評估該樣本的分類機率。
+- uid: microsoft.quantum.machinelearning.estimategradient
+  summary: 估計特定模型和指定編碼輸入之順序分類器的定型漸層。
+- uid: microsoft.quantum.machinelearning.trainsequentialclassifier
+  summary: 假設有順序分類器的結構，請在指定的標記定型集上訓練分類器。
+- uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
+  summary: 假設有順序分類器的結構，請從特定模型開始，在指定的標記定型集上訓練分類器。
+- uid: microsoft.quantum.machinelearning.validatesequentialclassifier
+  summary: 根據指定的預先標記樣本集來驗證指定的順序分類器。
+newtypes:
+- uid: microsoft.quantum.machinelearning.controlledrotation
+  summary: 描述受控制的旋轉，其目標和控制項索引、旋轉軸，以及模型參數向量的索引。
+- uid: microsoft.quantum.machinelearning.labeledsample
+  summary: 範例，標示為該範例所屬的類別。
+- uid: microsoft.quantum.machinelearning.samplingschedule
+  summary: 從一組樣本繪製批次的排程。
+- uid: microsoft.quantum.machinelearning.sequentialmodel
+  summary: 描述配量分類器模型，其中包含一連串的參數化和控制旋轉、旋轉角度的指派，以及模型所辨識的兩個類別之間的偏差。
+- uid: microsoft.quantum.machinelearning.stategenerator
+  summary: 描述準備指定的輸入至順序分類器的作業。
+- uid: microsoft.quantum.machinelearning.trainingoptions
+  summary: 要在定型配量分類器中使用的選項組合。
+- uid: microsoft.quantum.machinelearning.validationresults
+  summary: 已針對一組範例驗證分類器的結果。
+metadata:
+  ms.openlocfilehash: be0c17b6f3e42c03bacadbf02c693980f89cbe39
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908305"
