@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 0e64fcd56929fa33397c45bf1b2e99bf687eca6f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820346"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906945"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>快速入門：以 Q# 執行格羅弗搜尋演算法
 
@@ -43,7 +43,7 @@ ms.locfileid: "76820346"
 
 1. 將下列程式碼新增至新專案中的 `Operations.qs` 檔案：
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
 
 1. 若要定義我們要搜尋的清單，請建立新檔案 `Reflections.qs`，並貼到下列程式碼中：
 
@@ -53,7 +53,7 @@ ms.locfileid: "76820346"
 
 1. 接著，執行新的 Q# 程式以尋找 `ReflectAboutMarked` 所標示的項目。
 
-    ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[使用 Visual Studio Code 或命令列的 Python](#tab/tabid-python)
+    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[使用 Visual Studio Code 或命令列的 Python](#tab/tabid-python)
 
     若要從 Python 執行新的 Q# 程式，請將下列程式碼儲存為 `host.py`：
 
@@ -71,7 +71,7 @@ ms.locfileid: "76820346"
     [0, 1, 0, 1, 0]
     ```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[使用 Visual Studio Code 或命令列的 C#](#tab/tabid-csharp)
+    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[使用 Visual Studio Code 或命令列的 C#](#tab/tabid-csharp)
 
     若要從 C# 執行新的 Q# 程式，請修改 `Driver.cs` 以納入下列 C# 程式碼：
 
@@ -90,7 +90,7 @@ ms.locfileid: "76820346"
     Press any key to continue...
     ```
 
-    ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[使用 Visual Studio 2019 的 C#](#tab/tabid-vs2019)
+    ### <a name="c-with-visual-studio-2019"></a>[使用 Visual Studio 2019 的 C#](#tab/tabid-vs2019)
 
     若要從 Visual Studio 中的 C# 執行新的 Q# 程式，請修改 `Driver.cs` 以納入下列 C# 程式碼：
 

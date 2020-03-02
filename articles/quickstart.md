@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 30135fa8a123e52a92b7187218f9980ba3cdbd2d
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442196"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906724"
 ---
 # <a name="quantum-basics-with-q"></a>搭配 Q# 使用的量子基本知識
 
@@ -19,7 +19,7 @@ ms.locfileid: "73442196"
 
 您將會撰寫一個名為 Bell 的應用程式以示範量子纏結。  Bell 這個名稱取自「貝爾狀態」，是指兩個量子位元的特定狀態，用來代表疊加和量子纏結的最簡單範例。 
 
-## <a name="pre-requisites"></a>先決條件
+## <a name="pre-requisites"></a>必要條件
 
 如果您已準備好要開始撰寫程式碼，請先遵循下列步驟再繼續進行： 
 
@@ -30,7 +30,7 @@ ms.locfileid: "73442196"
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>使用 Q# 示範量子位元行為
 
-回想一下我們簡單的[量子位元定義](xref:microsoft.quantum.overview.what#the-qubit)。  其中，古典位元會有單一二進位值，例如 0 或 1，而量子位元的狀態則可以同時是 0 和 1 的**疊加**。  在概念上，可以將量子位元想成空間中的方向 (又稱為向量)。  量子位元可以是任何可能方向的其中一個。 兩個**古典狀態**是兩個方向，分別代表 100% 測量到 0 的機率和 100% 測量到 1 的機率。  這種表示法也能以[布洛赫球體](/quantum/concepts/the-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere)更正式地視覺化。
+回想一下我們簡單的[量子位元定義](xref:microsoft.quantum.overview.what#the-qubit)。  其中，古典位元會有單一二進位值，例如 0 或 1，而量子位元的狀態則可以同時是 0 和 1 的**疊加**。  在概念上，可以將量子位元想成空間中的方向 (又稱為向量)。  量子位元可以是任何可能方向的其中一個。 兩個**古典狀態**是兩個方向，分別代表 100% 測量到 0 的機率和 100% 測量到 1 的機率。  這種表示法也能以[布洛赫球體](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)更正式地視覺化。
 
 
 測量動作會產生二進位結果，並變更量子位元狀態。 測量會產生一個二進位值，也就是 0 或 1。  量子位元會從疊加狀態 (任何方向) 變為兩個古典狀態的其中一個。  之後，在沒有任何干擾作業的情況下重複相同的測量，會產生相同的二進位結果。  
@@ -39,14 +39,14 @@ ms.locfileid: "73442196"
 
 現在，我們已準備好要來示範如何用 Q# 表示此行為。  您將從最簡單的程式著手建置，以示範量子疊加和量子纏結。
 
-## <a name="setup"></a>設定
+## <a name="setup"></a>安裝程式
 
 以 Microsoft 的 Quantum Development Kit 開發的應用程式會包含兩個部分：
 
 1. 一或多個量子演算法，使用 Q# 量子程式設計語言來實作。
 1. 一個主機程式，以作為主要進入點，並叫用 Q# 作業以執行量子演算法的程式設計語言來實作，例如 Python 或 C#。
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. 選擇應用程式的位置
 
@@ -54,7 +54,7 @@ ms.locfileid: "73442196"
 
 1. 建立名為 `host.py`的檔案。 此檔案會包含您的 Python 主機程式碼。
 
-#### <a name="c-command-linetabtabid-csharp"></a>[C# 命令列](#tab/tabid-csharp)
+#### <a name="c-command-line"></a>[C# 命令列](#tab/tabid-csharp)
 
 1. 建立新的 Q# 專案：
 
@@ -71,7 +71,7 @@ ms.locfileid: "73442196"
     mv Operation.qs Bell.qs
     ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. 建立新專案
 
@@ -177,7 +177,7 @@ Q# 作業是量子副程式。 也就是說，它是包含量子作業的可呼�
 
 ## <a name="create-the-host-application-code"></a>建立主應用程式的程式碼
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. 開啟 `host.py` 檔案並新增下列程式碼：
 
@@ -195,7 +195,7 @@ Q# 作業是量子副程式。 也就是說，它是包含量子作業的可呼�
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 1. 將 `Driver.cs` 檔案的內容取代為下列程式碼：
 
@@ -237,7 +237,7 @@ Q# 作業是量子副程式。 也就是說，它是包含量子作業的可呼�
 
 ### <a name="about-the-host-application-code"></a>關於主應用程式的程式碼
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 Python 主應用程式有三個部分：
 
@@ -245,7 +245,7 @@ Python 主應用程式有三個部分：
 * 呼叫已匯入之 Q# 作業的 `simulate()` 方法，以執行量子演算法。
 * 處理作業的結果。 在範例中，`res` 會接收作業的結果。 此處的結果是模擬器所測量的零數目 (`num_zeros`) 和一數目 (`num_ones`) 的元組。 我們會解構元組以取得這兩個欄位，並列印結果。
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 C# 主應用程式有四個部分：
 
@@ -260,7 +260,7 @@ C# 主應用程式有四個部分：
 
 ## <a name="build-and-run"></a>建置和執行
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. 在您的終端機上執行下列命令：
 
@@ -277,7 +277,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### <a name="command-line--visual-studio-codetabtabid-csharp"></a>[命令列/Visual Studio Code](#tab/tabid-csharp)
+#### <a name="command-line--visual-studio-code"></a>[命令列/Visual Studio Code](#tab/tabid-csharp)
 
 1. 在您的終端機上執行下列命令：
 
@@ -299,7 +299,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. 只要按 `F5`，您的程式應該就會建置並執行！
 
@@ -445,7 +445,7 @@ Set(Zero, q1);
 
 新的傳回值 (`agree`) 會追蹤第一個量子位元的測量與第二個量子位元的測量是否相符。 我們也必須據以更新主應用程式：
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -461,7 +461,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
@@ -496,7 +496,7 @@ Init:One  0s=490  1s=510  agree=1000
 
 恭喜，您已撰寫了第一個量子程式！
 
-## <a name="whats-next"></a>後續步驟
+## <a name="whats-next"></a>下一步
 
 「[格羅弗搜尋](xref:microsoft.quantum.quickstarts.search)」快速入門示範如何建立和執行格羅弗搜尋 (最受歡迎的量子運算演算法之一)，並提供 Q# 程式的絕佳範例，可用來解決量子運算的實際問題。  
 
