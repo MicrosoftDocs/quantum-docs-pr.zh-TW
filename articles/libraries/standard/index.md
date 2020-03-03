@@ -1,17 +1,17 @@
 ---
-title: Q# 標準程式庫 - 簡介 | Microsoft Docs
-description: Q# 標準程式庫 - 簡介
+title: Microsoft Q# 標準程式庫簡介
+description: 了解定義量子程式中所用作業、函式和資料類型的 Microsoft Q# 標準程式庫。
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
-ms.openlocfilehash: 547f4f6066e3ead627cd2a5970b1555999e988bb
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 820ad885e7134aa723116d4c9f853d88210a5514
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056390"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907149"
 ---
 # <a name="introduction-to-the-q-standard-libraries"></a>Q# 標準程式庫簡介 #
 

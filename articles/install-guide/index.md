@@ -1,17 +1,18 @@
 ---
 title: 了解如何安裝 Microsoft Quantum Development Kit (QDK)
+description: 如何安裝適用於 C#、Python 和 Jupyter Notebook 環境的 Microsoft Quantum Development Kit。
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 0e9dd1c74316eeb1fa7bbbf657d2e78231ee4294
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 5fafb736f34d27f9233370a0a8a66c0613606048
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036503"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904769"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>安裝 Microsoft Quantum Development Kit (QDK)
 

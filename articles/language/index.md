@@ -1,17 +1,17 @@
 ---
-title: Q# 程式設計語言 | Microsoft Docs
-description: Q# 程式設計語言
+title: Q# 程式設計語言
+description: 適用於量子程式開發的 Q# 語言簡介。
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b62e6866fc3609d95c26a5eab2a6eac325dfe330
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442482"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907370"
 ---
 # <a name="the-q-programming-language"></a>Q# 程式設計語言
 
@@ -41,7 +41,7 @@ Q# 中的最上層建構是使用者定義的類型、操作和函式。
 我們努力在確保所有情況下都會一致地使用常見標點符號。
 我們希望這麼做能夠讓您更容易學習和閱讀 Q#，因為這些標點符號永遠會代表相同的東西，而且相同的概念永遠會以相同的方式來表示。
 
-具體而言：
+具體來說：
 
 - 分號 (`;`)，用來結束陳述式或單行指示詞。
   分號不會用於其他用途。

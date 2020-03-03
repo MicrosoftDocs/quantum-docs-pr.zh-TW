@@ -1,18 +1,18 @@
 ---
-title: Quantum 開發技術 | Microsoft Docs
-description: Quantum 開發技術
+title: Quantum 開發技術
+description: 了解 Q# 程式開發的基本概念、使用作業、函式、變數和量子位元，以及建立簡單的量子程式。
 keywords: 請勿在未諮詢 SEO 之前新增或編輯關鍵字。
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 9/20/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.techniques.intro
-ms.openlocfilehash: c1263edb75f903702ab3c16cec0443857150b662
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e5b7fbde18afbc0333d89f70c5e4596848e30f4f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820805"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907710"
 ---
 # <a name="quantum-development-techniques"></a>Quantum 開發技術
 
