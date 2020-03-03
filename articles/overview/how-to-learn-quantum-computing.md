@@ -1,19 +1,19 @@
 ---
 title: 如何使用 Q# 學習量子運算？
-description: ''
+description: 可供獲得基本數理知識的資源，以協助您開始使用量子運算。
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 17fc4e7a73f93a86d981996bf8b59309bccb6e67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529965"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907744"
 ---
-# <a name="how-to-learn-quantum-computing"></a>如何學習量子運算？
+# <a name="how-to-learn-about-quantum-computing"></a>如何學習量子運算？
 
 取得指引以學習量子運算並編寫第一個程式。 本指南並不詳盡，僅供作為入門之用。
 

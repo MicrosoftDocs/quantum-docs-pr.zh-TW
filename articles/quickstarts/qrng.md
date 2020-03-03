@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: d1ad2c1153814e2fa19a38307b2c668c77eae4e3
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: b9c8592b1296a7de1b9ad5d0538ad1972ec25e31
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441065"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906979"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>快速入門：在 Q# 中實作量子亂數產生器
 量子亂數產生器是以 Q # 撰寫量子演算法的一個簡單範例。 此演算法利用量子機制的本質來產生亂數。 
@@ -44,17 +44,18 @@ ms.locfileid: "77441065"
 
 在布洛赫球體中，北極點代表古典值 **0**，而南極點代表古典值 **1**。 任何疊加都可以用球體上的點表示 (以箭頭表示)。 箭頭末端愈接近極點時，量子位元在測量時塌縮為指派給該極點的古典值的機率愈高。 例如，下面紅色箭頭所表示的量子位元 狀態，在我們測量它時有較高的機率是 **0** 值。
 
-<img src="~/media/qrng-Bloch.png" width="175">
+<img src="~/media/qrng-Bloch.png" width="175" alt="A qubit state with a high probability of measuring zero">
 
 我們可以用這個表示方式來將程式碼的作用視覺化呈現：
 
 * 首先，我們讓量子位元的初始狀態為 **0**，並套用 `H` 來建立疊加，疊加的 **0** 和 **1** 機率相同。
 
-<img src="~/media/qrng-H.png" width="450">
+<img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
+
 
 * 然後，我們測量量子位元並儲存輸出：
 
-<img src="~/media/qrng-meas.png" width="450">
+<img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
 由於測量的結果完全隨機，我們便能得到一個隨機位元。 我們可以呼叫此作業多次來建立整數。 例如，如果我們呼叫此作業三次來取得三個隨機位元，則可以建立隨機的 3位元數字 (也就是介於 0 和 7 之間的亂數)。
 

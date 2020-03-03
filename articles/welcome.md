@@ -1,17 +1,17 @@
 ---
 uid: microsoft.quantum.welcome
 title: 開始使用 Quantum Development Kit (QDK)
-description: 了解如何開始使用 QDK。
+description: 了解如何使用 Microsoft Quantum Development Kit (QDK) 以 Q# 開始為量子專案進行程式設計。
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 066981e3e2fb468c1ff2a4cf4d3e7cff057772ab
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cea39e47ec5e7e2ad97adbbb39ba586274564967
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036333"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907625"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>開始使用 Quantum Development Kit (QDK)
 
