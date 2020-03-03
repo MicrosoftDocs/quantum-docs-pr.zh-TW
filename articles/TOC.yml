@@ -1,23 +1,21 @@
 - name: Microsoft Quantum 文件
   href: index.yml
-- name: 概觀
+- name: 開始使用量子運算
   items:
-    - name: 開始使用
+    - name: 什麼是量子運算？
+      href: overview/what-is-quantum-computing.md
+    - name: 量子電腦有何功用？
+      href: overview/quantum-computers.md
+    - name: 為什麼要學習量子運算？
+      href: overview/why-learn-quantum-computing.md
+    - name: '什麼是 Q# 和 QDK？'
+      href: overview/what-is-qsharp.md
+    - name: 如何深入了解？
+      href: overview/how-to-learn-quantum-computing.md
+- name: 取得 Quantum Development Kit
+  items:
+    - name: 開始使用 QDK
       href: welcome.md
-    - name: 關於量子運算的五個問題
-      items:
-        - name: 什麼是量子運算？
-          href: overview/what-is-quantum-computing.md
-        - name: 量子電腦有何功用？
-          href: overview/quantum-computers.md
-        - name: 為什麼要學習量子運算？
-          href: overview/why-learn-quantum-computing.md
-        - name: '什麼是 Q#？'
-          href: overview/what-is-qsharp.md
-        - name: 如何學習量子運算？
-          href: overview/how-to-learn-quantum-computing.md
-- name: 安裝及更新
-  items:
     - name: 安裝 QDK
       items:
         - name: 安裝概觀
@@ -30,15 +28,23 @@
           href: install-guide/qjupyter.md
     - name: 更新 QDK
       href: install-guide/update.md
-- name: 快速入門
+    - name: '如何建立 Q# 專案'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Q# 學習資源'
   items:
-    - name: 量子隨機數字產生器
-      href: quickstarts/qrng.md
-    - name: '搭配 Q# 使用的量子基本知識'
-      href: quickstart.md
-    - name: 實作格羅弗搜尋演算法
-      href: quickstarts/search.md
-- name: 概念
+    - name: 快速入門
+      items:
+        - name: 量子隨機數字產生器
+          href: quickstarts/qrng.md
+        - name: '使用 Q# 探索纏結'
+          href: quickstart.md
+        - name: 實作格羅弗搜尋演算法
+          href: quickstarts/search.md
+    - name: '使用 Quantum Katas 來學習 Q#'
+      href: intro-to-katas.md
+    - name: 'Q# 程式碼範例'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
+- name: 深入了解 QDK
   items:
     - name: Quantum 開發技術
       topicHref: techniques/index.md
@@ -46,33 +52,17 @@
     - name: 'Q# 程式設計語言'
       topicHref: language/index.md
       href: language/toc.yml
-    - name: 'Q# 程式庫'
-      href: libraries/toc.yml
     - name: 量子模擬器和資源估算器
       href: machines/toc.yml
-    - name: 量子運算概念
-      href: concepts/toc.yml
-- name: 操作指南
-  items:
-    - name: '建立 Q# 專案'
-      href: how-to-guides/create-qsharp-project.md
-- name: 'Q# 學習資源'
-  items:
-    - name: 使用 Quantum Katas 來學習
-      href: intro-to-katas.md
-    - name: 'Q# 範例'
-      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: 資源
-  items:
-    - name: 詞彙
-      href: Glossary.md
-    - name: 深入閱讀
-      href: for-more-info.md
-    - name: QDK 版本資訊
-      topicHref: relnotes/index.md
-      href: relnotes/toc.yml
-    - name: 參與 QDK
-      href: contributing/toc.yml
-      topicHref: contributing/index.md
-    - name: 授權
-      href: license.md
+- name: 'Q# 程式庫'
+  href: libraries/toc.yml
+- name: 量子運算概念
+  href: concepts/toc.yml
+- name: 深入閱讀
+  href: for-more-info.md
+- name: 參與 QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: QDK 版本資訊
+  topicHref: relnotes/index.md
+  href: relnotes/toc.yml
