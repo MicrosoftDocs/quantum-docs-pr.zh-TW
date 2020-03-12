@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904871"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022486"
 ---
-# <a name="contributing-to-the-quantum-development-kit"></a>參與 Quantum Development Kit #
+# <a name="contributing-to-the-quantum-development-kit"></a>參與 Quantum Development Kit
 
 Quantum Development Kit 不僅僅是用來編寫量子程式的工具集合。
 它還是廣大社群的一部分，此社群裡面的人從事的是探索量子運算、執行量子演算法的研究、為量子裝置開發新的應用程式，以及致力於充分運用量子程式設計。
@@ -23,7 +23,7 @@ Quantum Development Kit 不僅僅是用來編寫量子程式的工具集合。
 
 在本指南中，我們會提供一些建議，讓您了解如何讓您的參與盡可能地對更廣泛的量子程式設計社群產生作用。
 
-## <a name="building-community"></a>建立社群 ##
+## <a name="building-community"></a>建立社群
 
 若想要參與，首先永遠是把您要參與的社群放在心上。
 只有對量子程式設計社群中的同好和其他人士保持敬意和專業態度，才能確保您投入的心力能夠建立最佳且最受歡迎的社群。
@@ -31,7 +31,7 @@ Quantum Development Kit 不僅僅是用來編寫量子程式的工具集合。
 有鑑於此，所有 Quantum Development Kit 專案都已採用 [Microsoft 開放原始碼管理辦法](https://opensource.microsoft.com/codeofconduct/)。
 如需詳細資訊，請參閱[管理辦法常見問題集](https://opensource.microsoft.com/codeofconduct/faq/)，如有任何其他問題或意見，則請連絡 [opencode@microsoft.com](mailto:opencode@microsoft.com)。
 
-## <a name="what-kinds-of-contributions-help-the-community"></a>哪種參與有助於社群？ ##
+## <a name="what-kinds-of-contributions-help-the-community"></a>哪種參與有助於社群？
 
 有許多不同的方式可透過您的參與來協助量子程式設計社群。
 在本指南中，我們將著重在三種與 Quantum Development Kit 特別相關的方式。
@@ -45,7 +45,7 @@ Quantum Development Kit 不僅僅是用來編寫量子程式的工具集合。
 這些不同種類的參與全都十分寶貴，我們為此深表感謝。
 在本指南的其餘部分，我們將提供有關如何做出每一種參與的建議。
 
-## <a name="where-do-contributions-go"></a>參與會進到何處？ ##
+## <a name="where-do-contributions-go"></a>參與會進到何處？
 
 Quantum Development Kit 包含許多不同的部分，在這些部分合作之下，才得以實現用來編寫量子程式的平台。
 這些不同的部分各自都會在不同的存放庫找到其歸屬，因此，較早事物的分類方式便是每個參與最適合的歸屬。
@@ -66,7 +66,7 @@ Quantum Development Kit 包含許多不同的部分，在這些部分合作之�
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty)：適用於 Q# 語法的 LaTeX 格式化支援。
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019)：適用於 Deutsch–Jozsa 教學課程的 IQ# Notebook，此教學課程是在 2019 年的實習研討會中提供的。
 
-## <a name="next-steps"></a>後續步驟 ##
+## <a name="next-steps"></a>後續步驟
 
 感謝您成為 Quantum Development Kit 社群的一部分，很高興您能做出參與！
 如果您想要深入了解如何參與，請繼續閱讀下列指南。
