@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904888"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022624"
 ---
-# <a name="improving-documentation"></a>改善檔 #
+# <a name="improving-documentation"></a>改善檔
 
 量子開發工具組的檔會採用數種不同的形式，讓量子開發人員可以立即使用該資訊。
 
@@ -28,7 +28,7 @@ ms.locfileid: "77904888"
 - **API 參考**是每個 Q # 函數、作業和使用者定義類型的一組頁面，已發行至 https://docs.microsoft.com/qsharp/api/。 這些頁面會記錄每個可呼叫的輸入和作業，以及範例和詳細資訊的連結。 API 參考會在每次發行時，從 Q # 原始程式碼中的小型 DFM 檔自動解壓縮。
 - 包含在每個範例和 kata 中的**讀我檔案<!---->** ，說明如何使用該範例或 kata、它涵蓋的內容，以及它與其他的量子開發工具組的關係。 這些檔案是使用[GitHub Flavored Markdown （GFM）](https://github.github.com/gfm/)所撰寫，這是更輕量的替代方案，可將檔直接附加至程式碼存放庫。
 
-## <a name="contributing-to-the-conceptual-documentation"></a>參與概念檔 ##
+## <a name="contributing-to-the-conceptual-documentation"></a>參與概念檔
 
 為了提供概念或讀我檔案的改進，在適當的情況下，您可以根據[**MicrosoftDocs/量子-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr/
 )、 [**microsoft/量子**](https://github.com/Microsoft/Quantum)或[**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas)，以提取要求開始。
@@ -41,7 +41,18 @@ ms.locfileid: "77904888"
 - 「量副程式設計」小組的許多成員都是學術研究人員，主要是透過對其投稿貢獻的引文來辨識。 除了協助讀者尋找額外的資料之外，也請務必適當地提及學術的輸出（例如論文、交談、blog 文章和軟體工具），以協助學術參與者繼續進行最佳的工作來改善社區。
 - 「量副程式設計」小組是廣泛而 wonderfully 的多樣化團體。 使用協力廠商範例中的名詞代名詞（例如：「如果使用者 ...，他將 ...」）可以工作來排除而不是包含。 在引文和連結中 cognizant 人員名稱，以及正確包含非 ASCII 字元，可以藉由顯示其成員來提供社區的多樣性。 同樣地，英文語言中的許多單字通常會以 hateful 的方式使用，因此在技術檔中使用時，可能會對個別讀者和大型團體造成損害。
 
-## <a name="contributing-to-the-api-references"></a>參與 API 參考 ##
+### <a name="referencing-sample-code-from-conceptual-articles"></a>參考概念文章中的範例程式碼
+
+如果您想要包含[範例存放庫](https://github.com/Microsoft/Quantum)中的程式碼，您可以使用特殊的 DocFX-Flavored Markdown 命令來執行此動作：
+
+```markdown
+:::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
+```
+
+此命令會[從 `chsh-game` 範例](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)匯入`Game.qs` 檔案的第4行，並將其標示為 Q # 程式碼，以用於語法醒目提示的目的。
+使用此命令，您可以避免在概念文章和範例存放庫之間複製程式碼，讓檔中的範例程式碼一律盡可能保持最新狀態。
+
+## <a name="contributing-to-the-api-references"></a>參與 API 參考
 
 若要改善 API 參考的效果，在記載的程式碼上直接開啟提取要求最有説明。
 每個函數、作業或使用者自訂類型都支援檔批註（以 `///` 表示，而不是 `//`）。
@@ -123,6 +134,7 @@ ms.locfileid: "77904888"
      return ControlledOnBitStringImpl(bits, oracle, _, _);
  }
 ```
+
 您可以在 `ControlledOnBitString` 函式的[API 檔](xref:microsoft.quantum.canon.controlledonbitstring)中，看到上述程式碼的轉譯版本。
 
 除了撰寫檔的一般作法外，在撰寫 API 檔批註時，您可以記住一些事項：

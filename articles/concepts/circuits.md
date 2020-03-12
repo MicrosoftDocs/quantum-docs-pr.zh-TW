@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 8ba4648f1837065d15957a01ab4ca8dd2d490a42
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 80d9df00159090768ea442e519c34043a99b050c
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77905143"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022675"
 ---
 # <a name="quantum-circuits"></a>量子線路
 請思考一下單一轉換 $ \text{CNOT-CONTAINS} _{01}（H\otimes 1） $。
@@ -24,7 +24,7 @@ $ $ \mathrm{CNOT}_{01}（H\otimes 1） \ket{00} = \frac{1}{\sqrt{2}} \left （\k
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-最常光子雙 qubit 狀態的 ![電路圖](~/media/Concepts1.png)
+最常光子雙 qubit 狀態的 ![電路圖](~/media/1.svg)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>配量線路圖慣例
 當您瞭解用來表示配量線路的慣例之後，可以更輕鬆地消化量子作業的視覺化語言，而不是寫下其對等的矩陣。
@@ -37,7 +37,7 @@ $ $ \mathrm{CNOT}_{01}（H\otimes 1） \ket{00} = \frac{1}{\sqrt{2}} \left （\k
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-Hadamard 作業的 ![符號，適用于單一 qubit 暫存器](~/media/concepts_2.png)
+Hadamard 作業的 ![符號，適用于單一 qubit 暫存器](~/media/2.svg)
 
 是在單一 qubit 暫存器上運作的[Hadamard](xref:microsoft.quantum.intrinsic.h)作業。
 
@@ -47,7 +47,7 @@ Hadamard 作業的 ![符號，適用于單一 qubit 暫存器](~/media/concepts_
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-從左至右套用的配量閘道 ![圖](~/media/concepts_3.png)
+從左至右套用的配量閘道 ![圖](~/media/3.svg)
 
 是單一矩陣 $CBA $。
 矩陣乘法遵守相反的慣例：第一次套用最右邊的矩陣。 不過，在配量電路圖中，會先套用最左邊的閘道。
@@ -65,7 +65,7 @@ Hadamard 作業的 ![符號，適用于單一 qubit 暫存器](~/media/concepts_
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-兩 qubit 單一作業的 ![電路圖](~/media/concepts_4.png)
+兩 qubit 單一作業的 ![電路圖](~/media/4.svg)
 
 我們也可以將 $B $ 視為在單一雙 qubit 暫存器上採取動作，而不是 2 1-qubit 暫存器，視使用電路的內容而定。 這類抽象循環圖表表可能是最有用的屬性，因為它們可讓複雜的量子演算法以高階方式描述，而不需要將它們編譯成基本閘道。
 這表示您可以針對大型配量演算法取得資料流程的直覺，而不需要瞭解演算法中每個副程式如何工作的所有詳細資料。
@@ -78,14 +78,14 @@ Hadamard 作業的 ![符號，適用于單一 qubit 暫存器](~/media/concepts_
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-單個控制閘道的 ![電路圖](~/media/concepts_5.png)
+單個控制閘道的 ![電路圖](~/media/5.svg)
 
 在這裡，黑色圓圈代表控制閘道的配量位，而垂直線代表當控制項 qubit 接受值 $1 $ 時所套用的單一。
 針對 $G = X $ 且 $G = Z $ 的特殊情況，我們引進了下列標記法來描述控制的閘道版本（請注意，受控制的 X 閘道是[$CNOT $](xref:microsoft.quantum.intrinsic.cnot)閘道）：
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-控制閘道特殊案例的 ![電路圖](~/media/concepts_6.png)
+控制閘道特殊案例的 ![電路圖](~/media/6.svg)
 
 問 # 提供自動產生受控制版本之作業的方法，可讓程式設計人員不必手動撰寫這些作業的程式碼。 範例如下所示：
 
@@ -104,7 +104,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-代表測量運算的 ![符號](~/media/concepts_7.png)
+代表測量運算的 ![符號](~/media/7.svg)
 
 問 # 會針對此用途來實行[量值運算子](xref:microsoft.quantum.intrinsic.measure)。
 如需詳細資訊，請參閱[測量的一節](xref:microsoft.quantum.libraries.standard.prelude#measurements)。
@@ -113,7 +113,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-代表受控制作業的 ![電路圖表](~/media/concepts_8.png)
+代表受控制作業的 ![電路圖表](~/media/8.svg)
 
 提供受傳統方式控制的閘道，其中 $G $ 會套用至傳統控制位的值 $1 $。
 
@@ -125,4 +125,4 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 下面提供量子 teleportation 線路;我們也會提供已標注的電路版本，以說明如何讀取配量線路。
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![量子 teleportation 線路](~/media/concepts_tp2.png)
+![量子 teleportation 線路](~/media/tp2.svg)

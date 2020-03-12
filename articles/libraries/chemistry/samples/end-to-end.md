@@ -5,16 +5,16 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906503"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022500"
 ---
 # <a name="end-to-end-with-nwchem"></a>端對端使用 NWChem #
 
-在此頁面中，我們將逐步解說如何取得量子化學模擬的閘道計數，從[NWChem](http://www.nwchem-sw.org/index.php/Main_Page)的輸入牌組開始。
+在本文中，您將逐步解說從[NWChem](http://www.nwchem-sw.org/index.php/Main_Page)的輸入牌中取得量子化學模擬的閘道計數的範例。
 繼續進行此範例之前，請確定您已安裝 Docker，請遵循[安裝和驗證指南](xref:microsoft.quantum.chemistry.concepts.installation)。
 
 其他資訊：
@@ -62,7 +62,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 接下來，我們將匯入**GetGateCount**範例所提供的 `Get-GateCount` 命令。
-如需完整詳細資料，請參閱[範例提供的指示](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount)。
+如需完整詳細資料，請參閱[範例提供的指示](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount)。
 接下來，根據您的作業系統，執行下列程式，將 `<runtime>` 取代為 `win10-x64`、`osx-x64`或 `linux-x64`：
 
 ```powershell
@@ -112,7 +112,7 @@ set tce:qelb  9
 
 ## <a name="producing-and-consuming-broombridge-output-from-nwchem"></a>產生和使用 NWChem 的 Broombridge 輸出 ##
 
-我們現在有了產生和使用 Broombridge 檔所需的所有專案。
+您現在已具備產生和使用 Broombridge 檔所需的所有專案。
 若要執行 NWChem，並為 `h4_sto6g_0.000.nw` 輸入組產生 Broombridge 檔，請執行 `Convert-NWChemToBroombridge`：
 
 > [!NOTE]
@@ -123,7 +123,7 @@ set tce:qelb  9
 Convert-NWChemToBroombridge h4_sto6g_0.000.nw 
 ```
 
-這會產生稱為 `h4_sto6g_0.000.yaml` 的 Broombridge 檔，可與 `Get-GateCount`搭配使用：
+這會產生名為 `h4_sto6g_0.000.yaml` 的 Broombridge 檔，可讓您搭配 `Get-GateCount`使用：
 
 ```powershell
 Get-GateCount -Format YAML h4_sto6g_0.000.yaml
@@ -164,7 +164,7 @@ ElapsedMilliseconds : 721
 - 請嘗試不同的預先定義的輸入組，例如，藉由在 `h4_sto6g_alpha.nw`中改變參數 `alpha`， 
 - 請嘗試直接編輯 NWChem 投影片來修改投影片，例如，探索適用于多種選擇的 `STO-nG` 模型， 
 - 嘗試其他在 `nwchem/qa/chem_library_tests`提供的預先定義 NWChem 輸入組。
-- 試用從 NWChem 產生的一組預先定義的 Broombridge YAML 基準測試，並以[Microsoft/量子存放庫](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)的一部分提供。 這些基準測試包括： 
+- 試用從 NWChem 產生的一組預先定義的 Broombridge YAML 基準測試，並以[Microsoft/量子存放庫](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)的一部分提供。 這些基準測試包括： 
     - 小型分子驅使分子，例如分子 hydrogen （H2）、Beryllium （是）、鋰鎳氫（LiH）、
     - 較大的分子驅使分子，例如 ozone （O3）、搶鮮版（Beta） carotene、cytosine 等等。 
 - 試試看具有 Microsoft Quantum Development Kit 介面的圖形化前端[EMSL 箭](https://arrows.emsl.pnnl.gov/api/qsharp_chem)號。 

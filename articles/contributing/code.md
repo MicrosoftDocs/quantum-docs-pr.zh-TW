@@ -6,27 +6,27 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907472"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022460"
 ---
-# <a name="contributing-code"></a>提供程式碼 #
+# <a name="contributing-code"></a>提供程式碼
 
 除了報告問題和改善檔外，將程式碼提供給量子開發工具組，是協助您的對等在「量副程式設計」小組中的直接方法。
 藉由貢獻程式碼，您可以協助修正問題、提供新的範例、讓現有的程式庫更容易使用，甚至新增全新的功能。
 
 在本指南中，我們將詳細說明我們在審查提取要求時所尋找的一些內容，以協助您的貢獻達到最佳效果。
 
-## <a name="what-we-look-for"></a>我們所尋找的內容 ##
+## <a name="what-we-look-for"></a>我們所尋找的內容
 
 理想的程式碼貢獻是以「量子開發工具組」存放庫中的現有工作為基礎，以修正問題、擴充現有功能，或新增在存放庫範圍內的新功能。
 當我們接受程式碼貢獻時，它會成為量子開發工具組本身的一部分，讓新功能的發行、維護和開發方式與其他的配量開發工具組相同。
 因此，當投稿新增的功能經過妥善測試並記載時，這會很有説明。
 
-### <a name="unit-tests"></a>單元測試 ###
+### <a name="unit-tests"></a>單元測試
 
 組成程式庫（例如 canon）的 Q # 函數、作業和使用者定義類型，會在[**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)存放庫的開發過程中自動進行測試。
 例如，當新的提取要求開啟時，我們的[Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/)設定會檢查提取要求中的變更是否不會中斷任何與量副程式設計人員所相依的現有功能。
@@ -56,7 +56,7 @@ function PairTest () : Unit {
 使用標準程式庫指南的[測試一節](xref:microsoft.quantum.libraries.diagnostics)中的技術，可以檢查更複雜的條件。
 例如，下列測試會檢查 `H(q); X(q); H(q);` 如 <xref:microsoft.quantum.canon.applywith> 所呼叫的動作，與 `Z(q)`的做法相同。
 
-```qsharp
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -79,7 +79,8 @@ operation TestApplyWith() : Unit {
 
 ### Citations and References ### -->
 
-## <a name="when-well-reject-a-pull-request"></a>當我們拒絕提取要求時 ##
+
+## <a name="when-well-reject-a-pull-request"></a>當我們拒絕提取要求時
 
 有時候，我們會拒絕投稿的提取要求。
 如果您發生這種情況，這並不表示它是壞的，因為我們可能會因為許多原因而無法接受特定的投稿。
@@ -98,10 +99,15 @@ operation TestApplyWith() : Unit {
 我們想要確保貢獻的是整個量子運算的群體，在其目前的絕佳多樣性中，而且未來隨著成長而變得更具其成果。
 我們非常感謝您實現此目標的協助。
 
-## <a name="next-steps"></a>後續步驟 ##
+## <a name="next-steps"></a>後續步驟
 
 感謝您協助讓量子開發工具組成為整個量副程式設計小組的絕佳資源！
 若要深入瞭解，請繼續進行 Q # 樣式的下列指南。
 
 > [!div class="nextstepaction"]
 > [瞭解問 # 樣式指導方針](xref:microsoft.quantum.contributing.style)
+
+根據您所貢獻的程式碼類型而定，您可能需要記住其他事項，以協助您讓您的貢獻盡可能符合社區的最大目的。
+
+> [!div class="nextstepaction"]
+> [瞭解參與範例](xref:microsoft.quantum.contributing.samples)
