@@ -6,20 +6,19 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 25a53e1cb8577761ef89cdcf2cfcddc509093f86
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056954"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022521"
 ---
-# <a name="q-standard-libraries"></a><span data-ttu-id="45145-103">Q# 標準程式庫</span><span class="sxs-lookup"><span data-stu-id="45145-103">Q# standard libraries</span></span> #
+# <a name="q-api-reference"></a><span data-ttu-id="4f946-103">Q# API 參考</span><span class="sxs-lookup"><span data-stu-id="4f946-103">Q# API reference</span></span> #
 
-<span data-ttu-id="45145-104">Q# 是由各種包含 Q#「標準程式庫」  的不同實用作業、函式和使用者定義的類型提供支援。</span><span class="sxs-lookup"><span data-stu-id="45145-104">Q# is supported by a range of different useful operations, functions, and user-defined types that comprise the Q# *standard library*.</span></span>
-<span data-ttu-id="45145-105">Q# 標準程式庫分為兩大部分：</span><span class="sxs-lookup"><span data-stu-id="45145-105">The Q# standard library is split into two main parts:</span></span>
+<span data-ttu-id="4f946-104">此 API 參考包含 Q # 標準程式庫和三個建置於其上的程式庫 - 化學、數值和機器學習程式庫。</span><span class="sxs-lookup"><span data-stu-id="4f946-104">This API reference includes the Q# standard library and the three libraries built on top of it - the chemistry, numerics, and machine learning libraries.</span></span> <span data-ttu-id="4f946-105">另外還有適用於 Q # 的 .NET 和 Python 程式庫。</span><span class="sxs-lookup"><span data-stu-id="4f946-105">There are also .NET and Python libraries available for Q#.</span></span>
 
-- <span data-ttu-id="45145-106">**序言**：定義為目標機器和編譯器一部分的操作和函式，通常採用傳統的原生 .NET 程式碼。</span><span class="sxs-lookup"><span data-stu-id="45145-106">**The prelude**: operations and functions defined as a part of the target machine and compiler, typically in classical native .NET code.</span></span>
-  <span data-ttu-id="45145-107">一般情況下，不同的目標機器可能會有適用於各個系統的不同序言實作。</span><span class="sxs-lookup"><span data-stu-id="45145-107">In general, different target machines may have different implementations of the prelude appropriate to each system.</span></span>
-- <span data-ttu-id="45145-108">**Canon**：在定義於序言的邏輯上，Q# 建置中所定義的操作和函式。</span><span class="sxs-lookup"><span data-stu-id="45145-108">**The canon**: operations and functions defined in Q# building on the logic defined in the prelude.</span></span>
-  <span data-ttu-id="45145-109">Canon 實作方式與目標機器無關。</span><span class="sxs-lookup"><span data-stu-id="45145-109">The canon implementation is agnostic with respect to target machines.</span></span>
-<span data-ttu-id="45145-110">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="sxs-lookup"><span data-stu-id="45145-110">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span>
+- [<span data-ttu-id="4f946-106">Q# 程式庫</span><span class="sxs-lookup"><span data-stu-id="4f946-106">Q# libraries</span></span>](xref:microsoft.quantum.qsharplibintro)
+- [<span data-ttu-id="4f946-107">.NET 程式庫</span><span class="sxs-lookup"><span data-stu-id="4f946-107">.NET libraries</span></span>](xref:microsoft.quantum.dotnetlibsintro)
+- [<span data-ttu-id="4f946-108">Python 程式庫</span><span class="sxs-lookup"><span data-stu-id="4f946-108">Python libraries</span></span>](https://docs.microsoft.com/python/qsharp)
+
+<span data-ttu-id="4f946-109">如需 Q# 程式庫的詳細資訊，請參閱 <xref:microsoft.quantum.libraries>。</span><span class="sxs-lookup"><span data-stu-id="4f946-109">For more information about the Q# libraries, see <xref:microsoft.quantum.libraries>.</span></span>
