@@ -6,20 +6,19 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 25a53e1cb8577761ef89cdcf2cfcddc509093f86
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056954"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022521"
 ---
-# <a name="q-standard-libraries"></a>Q# 標準程式庫 #
+# <a name="q-api-reference"></a>Q# API 參考 #
 
-Q# 是由各種包含 Q#「標準程式庫」  的不同實用作業、函式和使用者定義的類型提供支援。
-Q# 標準程式庫分為兩大部分：
+此 API 參考包含 Q # 標準程式庫和三個建置於其上的程式庫 - 化學、數值和機器學習程式庫。 另外還有適用於 Q # 的 .NET 和 Python 程式庫。
 
-- **序言**：定義為目標機器和編譯器一部分的操作和函式，通常採用傳統的原生 .NET 程式碼。
-  一般情況下，不同的目標機器可能會有適用於各個系統的不同序言實作。
-- **Canon**：在定義於序言的邏輯上，Q# 建置中所定義的操作和函式。
-  Canon 實作方式與目標機器無關。
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+- [Q# 程式庫](xref:microsoft.quantum.qsharplibintro)
+- [.NET 程式庫](xref:microsoft.quantum.dotnetlibsintro)
+- [Python 程式庫](https://docs.microsoft.com/python/qsharp)
+
+如需 Q# 程式庫的詳細資訊，請參閱 <xref:microsoft.quantum.libraries>。
