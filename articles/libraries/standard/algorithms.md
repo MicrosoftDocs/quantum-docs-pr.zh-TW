@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8b8a9019e8bc419f42b0c6f7558354d19a157917
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907234"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402845"
 ---
 # <a name="quantum-algorithms"></a>量子演算法 #
 
@@ -77,9 +77,9 @@ $ $ 如果我們定義 $ $ \ket{\phi\_k （a）} = \frac{1}{\sqrt{2}} \left （\
 $ $ 執行轉換程式的路徑會在觀察到輸入的總和可以寫成 $ $ \ket{a + b} = \operatorname{QFT} ^{-1}\ket{\phi\_1 （a + b）} \otimes \cdots \otimes \ket{\phi\_n （a + b）} 之後變得清楚。
 $ $ $B $ 和 $a $ 的整數可以藉由使用 $b $ 作為控制項的位，在分解中的每個 qubits 上執行控制階段旋轉來新增。
 
-請注意，對於任何整數 $j $ 和 real $x $、$e ^ {i2\pi （x + j）} = e ^ {i2\pi x} $，都可以進一步簡化這項擴充。  這是因為如果您在圓圈中旋轉 $ 360 ^ {\circ} $ 度數（$ 2 \ pi $ radians），就會精確地結束您的開始位置。  $E ^ {i2\pi x} $ 的 $x $ 唯一重要的部分，就是 $x $ 的小數部分。  具體而言，如果我們有格式的二進位擴充 $x = y +0. x\_0x\_2 \ ldots x\_n $ then $e ^ {i2\pi x} = e ^ {i2\pi （0）。 x\_0x\_2 \ ldots x\_{n-1}）} $，因此 $ $ \ket{\phi\_k （a + b）} = \frac{1}{\sqrt{2}} \left （\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right）。 $ $ 這表示如果我們藉由遞增每個張量 $ \ket{a} $ 的傅立葉轉換時的因素，然後隨著 $k $ 減少，旋轉數目會縮小。  這會大幅減少在「增加項」中所需的量子閘道數目。  我們代表以 $ \operatorname{QFT} ^{-1} \left （\phi\\\!\operatorname{ADD}\right） \operatorname{QFT} $ 形式組成 Draper 加入程式的傅立葉轉換、階段新增和反向傅立葉轉換步驟。 以下是使用這種簡化來執行整個程式的量子線路。
+請注意，對於任何整數 $j $ 和 real $x $、$e ^ {i2\pi （x + j）} = e ^ {i2\pi x} $，都可以進一步簡化這項擴充。  這是因為如果您在圓圈中旋轉 $ 360 ^ {\circ} $ 度數（$ 2 \ pi $ radians），就會精確地結束您的開始位置。  $E ^ {i2\pi x} $ 的 $x $ 唯一重要的部分，就是 $x $ 的小數部分。  具體而言，如果我們有格式的二進位擴充 $x = y +0. x\_0x\_2 \ ldots x\_n $ then $e ^ {i2\pi x} = e ^ {i2\pi （0）。 x\_0x\_2 \ ldots x\_{n-1}）} $，因此 $ $ \ket{\phi\_k （a + b）} = \frac{1}{\sqrt{2}} \left （\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right）。 $ $ 這表示如果我們藉由遞增 $ 張量 $ 的傅立葉轉換擴充中的每個 \ket{a} 因數來執行加法，隨著 $k $ 減少，旋轉的數目會縮小。  這會大幅減少在「增加項」中所需的量子閘道數目。  我們代表以 $ \operatorname{QFT} ^{-1} \left （\phi\\\!\operatorname{ADD}\right） \operatorname{QFT} $ 形式組成 Draper 加入程式的傅立葉轉換、階段新增和反向傅立葉轉換步驟。 以下是使用這種簡化來執行整個程式的量子線路。
 
-![顯示為「電路圖」的 Draper](~/media/draper.png)
+![顯示為「電路圖」的 Draper](~/media/draper.svg)
 
 線路中的每個受控制 $e ^ {i2 \ pi/k} $ 閘道指的是受控制階段的閘道。  這類閘道的屬性會在其作用的 qubits 上，$ \ket{00}\mapsto \ket{00}$ 但 $ \ket{11}\mapsto e ^ {i2 \ pi/k} \ ket{11}$。  此線路可讓我們使用除了儲存輸入和輸出所需的其他 qubits 來執行加法。
 
@@ -92,7 +92,7 @@ $$
 
 Beauregard 的加入載入項會使用 Draper 的加入或更具體的 $ \phi\\\!\operatorname{ADD} $），在階段中新增 $a $ 和 $b $。  然後，它會使用相同的作業來識別是否 $a + b < N $，方法是減去 $N $，並在 $a + b-N < 0 $ 時進行測試。  線路會將這項資訊儲存在輔助 qubit 中，然後在 $a + b < N $ 時，將 $N $ 返回註冊。  然後藉由 uncomputing 此輔助單位來結束（必須執行此步驟，才能確保在呼叫加入器之後可以解除配置 ancilla）。  以下提供 Beauregard 對應程式的線路。
 
-![顯示為「電路圖」的 Beauregard](~/media/beau.png)
+![顯示為「電路圖」的 Beauregard](~/media/beau.svg)
 
 這裡的閘道 $ \Phi\\\!\operatorname{ADD} $ 採用與 $ \Phi\\\!\operatorname{ADD} $ 相同的格式，但在此內容中，輸入是傳統而不是配量。  這可讓 $ \Phi\\\!\operatorname{ADD} $ 中受控制的階段取代為階段閘道，然後將其編譯成較少的作業，以減少 qubits 數目和加入程式所需的閘道數目。
 
@@ -111,7 +111,7 @@ Beauregard 的加入載入項會使用 Draper 的加入或更具體的 $ \phi\\\
 因此，在本討論的其餘部分，我們將根據 $R _1 （\phi） $ 來討論階段估計，我們使用所謂的*階段 kickback*來實現。
 
 由於控制項和目標暫存器在此程式之後仍然 untangled，因此我們可以重複使用 $ \ket{\phi} $ 做為受控制應用程式的目標，$U ^ $2 來準備第二個控制項 qubit 的狀態 $R _1 （2 \phi） \ket{+} $。
-以這種方式繼續進行，我們可以取得表單 \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 （2 ^ j \phi） \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left （\ket{0} + \exp （i 2 ^ {j} \phi） \ket{1}\right） \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp （i \phi k） \ket{k} \end{align}，其中 $n $ 是我們需要的精確度位數，我們使用 ${} \propto {}$ 來表示我們已抑制 $ 的正規化因數1/\sqrt{2 ^ n} $。
+以這種方式繼續進行，我們可以取得表單 \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 （2 ^ j \phi） \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left （\ket{0} + \exp （i 2 ^ {j} \phi） \ket{1}\right） \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp （i \phi k） \ket{k} \end{align}，其中 $n $ 是我們需要的精確度位數，我們使用 ${} \propto {}$ 來表示我們已抑制 $1/\sqrt 的正規化因數{2 ^ n} $。
 
 如果我們假設 $ \phi = 2 \pi p/2 ^ k $ 適用于 integer $p $，則我們會將它辨識為 $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots . p_n} $，其中 $p _j $ 是 $2 \textrm{th}} \pi $ 的 $j ^ {\phi $ bit。
 套用配量傅立葉轉換的 adjoint 時，我們會取得編碼為配量狀態之階段的二進位標記法。
