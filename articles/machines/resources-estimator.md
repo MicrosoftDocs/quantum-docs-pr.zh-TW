@@ -6,23 +6,23 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907047"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320809"
 ---
-# <a name="the-resourcesestimator-target-machine"></a><span data-ttu-id="33ede-103">ResourcesEstimator 目的電腦</span><span class="sxs-lookup"><span data-stu-id="33ede-103">The ResourcesEstimator Target Machine</span></span>
+# <a name="the-resourcesestimator-target-machine"></a><span data-ttu-id="b53b7-103">ResourcesEstimator 目的電腦</span><span class="sxs-lookup"><span data-stu-id="b53b7-103">The ResourcesEstimator Target Machine</span></span>
 
-<span data-ttu-id="33ede-104">正如其名，`ResourcesEstimator` 會估計在量子電腦上執行 Q # 作業的指定實例所需的資源。</span><span class="sxs-lookup"><span data-stu-id="33ede-104">As the name implies, the `ResourcesEstimator` estimates the resources required to run a given instance of a Q# operation on a quantum computer.</span></span>
-<span data-ttu-id="33ede-105">它會執行量子作業，而不實際模擬量子電腦的狀態，來完成這項操作;基於這個理由，它可以估計使用數千個 qubits 的 Q # 作業資源。</span><span class="sxs-lookup"><span data-stu-id="33ede-105">It accomplishes this by executing the quantum operation without actually simulating the state of a quantum computer; for this reason, it can estimate resources for Q# operations that use thousands of qubits.</span></span>
+<span data-ttu-id="b53b7-104">正如其名，`ResourcesEstimator` 會估計在量子電腦上執行 Q # 作業的指定實例所需的資源。</span><span class="sxs-lookup"><span data-stu-id="b53b7-104">As the name implies, the `ResourcesEstimator` estimates the resources required to run a given instance of a Q# operation on a quantum computer.</span></span>
+<span data-ttu-id="b53b7-105">它會執行量子作業，而不實際模擬量子電腦的狀態，來完成這項操作;基於這個理由，如果程式碼的傳統部分可以在合理的時間內執行，它可以估計使用數千個 qubits 的 Q # 作業資源。</span><span class="sxs-lookup"><span data-stu-id="b53b7-105">It accomplishes this by executing the quantum operation without actually simulating the state of a quantum computer; for this reason, it can estimate resources for Q# operations that use thousands of qubits, if the classical part of the code can be run in a reasonable time.</span></span>
 
-## <a name="usage"></a><span data-ttu-id="33ede-106">使用量</span><span class="sxs-lookup"><span data-stu-id="33ede-106">Usage</span></span>
+## <a name="usage"></a><span data-ttu-id="b53b7-106">使用量</span><span class="sxs-lookup"><span data-stu-id="b53b7-106">Usage</span></span>
 
-<span data-ttu-id="33ede-107">`ResourcesEstimator` 只是另一種類型的目的電腦，因此可以用來執行任何 Q # 作業。</span><span class="sxs-lookup"><span data-stu-id="33ede-107">The `ResourcesEstimator` is just another type of target machine, thus it can be used to run any Q# operation.</span></span> 
+<span data-ttu-id="b53b7-107">`ResourcesEstimator` 只是另一種類型的目的電腦，因此可以用來執行任何 Q # 作業。</span><span class="sxs-lookup"><span data-stu-id="b53b7-107">The `ResourcesEstimator` is just another type of target machine, thus it can be used to run any Q# operation.</span></span> 
 
-<span data-ttu-id="33ede-108">作為其他目的電腦，若要在C#主機程式上使用它，請建立實例，並將它當做作業 `Run` 方法的第一個參數來傳遞：</span><span class="sxs-lookup"><span data-stu-id="33ede-108">As other target machines, to use it on a C# host program create an instance and pass it as the first parameter of the operation's `Run` method:</span></span>
+<span data-ttu-id="b53b7-108">作為其他目的電腦，若要在C#主機程式上使用它，請建立實例，並將它當做作業 `Run` 方法的第一個參數來傳遞：</span><span class="sxs-lookup"><span data-stu-id="b53b7-108">As other target machines, to use it on a C# host program create an instance and pass it as the first parameter of the operation's `Run` method:</span></span>
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-<span data-ttu-id="33ede-109">如範例所示，`ResourcesEstimator` 會提供 `ToTSV()` 的方法，以產生可儲存在檔案中或寫入主控台進行分析的索引標籤分隔值（TSV）的資料表。</span><span class="sxs-lookup"><span data-stu-id="33ede-109">As the example shows, the `ResourcesEstimator` provides a `ToTSV()` method to generate a table with tab-seperated-values (TSV) that can be saved into a file or written to the console for analysis.</span></span> <span data-ttu-id="33ede-110">上述程式的輸出看起來應該像這樣：</span><span class="sxs-lookup"><span data-stu-id="33ede-110">The output of the above program should look something like this:</span></span>
+<span data-ttu-id="b53b7-109">如範例所示，`ResourcesEstimator` 會提供 `ToTSV()` 的方法，以產生可儲存在檔案中或寫入主控台進行分析的索引標籤分隔值（TSV）的資料表。</span><span class="sxs-lookup"><span data-stu-id="b53b7-109">As the example shows, the `ResourcesEstimator` provides a `ToTSV()` method to generate a table with tab-seperated-values (TSV) that can be saved into a file or written to the console for analysis.</span></span> <span data-ttu-id="b53b7-110">上述程式的輸出看起來應該像這樣：</span><span class="sxs-lookup"><span data-stu-id="b53b7-110">The output of the above program should look something like this:</span></span>
 
 ```Output
 Metric          Sum
@@ -57,15 +57,15 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> <span data-ttu-id="33ede-111">`ResourcesEstimator` 不會在每次執行時重設其計算，如果使用相同的實例來執行另一個作業，則會將匯總計數保留在現有的結果上方。</span><span class="sxs-lookup"><span data-stu-id="33ede-111">The `ResourcesEstimator` does not reset its calculations on every run, if the same instance is used to execute another operation it will keep aggregating counts on top of existing results.</span></span>
-> <span data-ttu-id="33ede-112">如果您需要重設執行之間的計算，請在每次執行時建立新的實例。</span><span class="sxs-lookup"><span data-stu-id="33ede-112">If you need to reset calculations between runs, create a new instance for every execution.</span></span>
+> <span data-ttu-id="b53b7-111">`ResourcesEstimator` 不會在每次執行時重設其計算，如果使用相同的實例來執行另一個作業，則會將匯總計數保留在現有的結果上方。</span><span class="sxs-lookup"><span data-stu-id="b53b7-111">The `ResourcesEstimator` does not reset its calculations on every run, if the same instance is used to execute another operation it will keep aggregating counts on top of existing results.</span></span>
+> <span data-ttu-id="b53b7-112">如果您需要重設執行之間的計算，請在每次執行時建立新的實例。</span><span class="sxs-lookup"><span data-stu-id="b53b7-112">If you need to reset calculations between runs, create a new instance for every execution.</span></span>
 
 
-## <a name="programmatically-retrieving-the-estimated-data"></a><span data-ttu-id="33ede-113">以程式設計方式抓取估計的資料</span><span class="sxs-lookup"><span data-stu-id="33ede-113">Programmatically Retrieving the Estimated Data</span></span>
+## <a name="programmatically-retrieving-the-estimated-data"></a><span data-ttu-id="b53b7-113">以程式設計方式抓取估計的資料</span><span class="sxs-lookup"><span data-stu-id="b53b7-113">Programmatically Retrieving the Estimated Data</span></span>
 
-<span data-ttu-id="33ede-114">除了 TSV 資料表以外，您也可以透過 `ResourcesEstimator`的 `Data` 屬性，以程式設計方式抓取估計的資源。</span><span class="sxs-lookup"><span data-stu-id="33ede-114">In addition to a TSV table, the resources estimated can be retrieved programmatically via the `ResourcesEstimator`'s `Data` property.</span></span> <span data-ttu-id="33ede-115">`Data` 提供具有兩個數據行的 `System.DataTable` 實例： `Metric` 和 `Sum`，並根據計量名稱編制索引。</span><span class="sxs-lookup"><span data-stu-id="33ede-115">`Data` provides a `System.DataTable` instance with two columns: `Metric` and `Sum`, indexed by the metrics names.</span></span>
+<span data-ttu-id="b53b7-114">除了 TSV 資料表以外，您也可以透過 `ResourcesEstimator`的 `Data` 屬性，以程式設計方式抓取估計的資源。</span><span class="sxs-lookup"><span data-stu-id="b53b7-114">In addition to a TSV table, the resources estimated can be retrieved programmatically via the `ResourcesEstimator`'s `Data` property.</span></span> <span data-ttu-id="b53b7-115">`Data` 提供具有兩個數據行的 `System.DataTable` 實例： `Metric` 和 `Sum`，並根據計量名稱編制索引。</span><span class="sxs-lookup"><span data-stu-id="b53b7-115">`Data` provides a `System.DataTable` instance with two columns: `Metric` and `Sum`, indexed by the metrics names.</span></span>
 
-<span data-ttu-id="33ede-116">下列程式碼示範如何抓取和列印 Q # 作業所使用的 `QubitClifford`、`T` 和 `CNOT` 閘道總數：</span><span class="sxs-lookup"><span data-stu-id="33ede-116">The following code shows how to retrieve and print the total number of `QubitClifford`, `T` and `CNOT` gates used by a Q# operation:</span></span>
+<span data-ttu-id="b53b7-116">下列程式碼示範如何抓取和列印 Q # 作業所使用的 `QubitClifford`、`T` 和 `CNOT` 閘道總數：</span><span class="sxs-lookup"><span data-stu-id="b53b7-116">The following code shows how to retrieve and print the total number of `QubitClifford`, `T` and `CNOT` gates used by a Q# operation:</span></span>
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -89,23 +89,23 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="metrics-reported"></a><span data-ttu-id="33ede-117">回報的計量</span><span class="sxs-lookup"><span data-stu-id="33ede-117">Metrics Reported</span></span>
+## <a name="metrics-reported"></a><span data-ttu-id="b53b7-117">回報的計量</span><span class="sxs-lookup"><span data-stu-id="b53b7-117">Metrics Reported</span></span>
 
-<span data-ttu-id="33ede-118">以下是 `ResourcesEstimator`所估計的計量清單：</span><span class="sxs-lookup"><span data-stu-id="33ede-118">The following is the list of metrics estimated by the `ResourcesEstimator`:</span></span>
+<span data-ttu-id="b53b7-118">以下是 `ResourcesEstimator`所估計的計量清單：</span><span class="sxs-lookup"><span data-stu-id="b53b7-118">The following is the list of metrics estimated by the `ResourcesEstimator`:</span></span>
 
-* <span data-ttu-id="33ede-119">__Cnot-contains__：執行的 cnot-contains （也稱為受控制的 Pauli X 閘道）的計數。</span><span class="sxs-lookup"><span data-stu-id="33ede-119">__CNOT__: The count of CNOT (also known as the Controlled Pauli X gate) gates executed.</span></span>
-* <span data-ttu-id="33ede-120">__QubitClifford__：執行的任何單一 qubit Clifford 和 Pauli 閘道的計數。</span><span class="sxs-lookup"><span data-stu-id="33ede-120">__QubitClifford__: The count of any single qubit Clifford and Pauli gates executed.</span></span>
-* <span data-ttu-id="33ede-121">__Measure__：任何已執行之測量的計數。</span><span class="sxs-lookup"><span data-stu-id="33ede-121">__Measure__:  The count of any measurements executed.</span></span>
-* <span data-ttu-id="33ede-122">__R__：任何執行的單一 qubit 輪替計數，不包括 T、Clifford 和 Pauli 閘道。</span><span class="sxs-lookup"><span data-stu-id="33ede-122">__R__: The count of any single qubit rotations executed, excluding T, Clifford and Pauli gates.</span></span>
-* <span data-ttu-id="33ede-123">__T__： t 閘道和其 conjugates 的計數，包括 t 閘道、T_x = .h 和 T_y = Hy Hy、執行。</span><span class="sxs-lookup"><span data-stu-id="33ede-123">__T__: The count of T gates and their conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.</span></span>
-* <span data-ttu-id="33ede-124">__深度__： Q # 作業所執行的量子線路深度。</span><span class="sxs-lookup"><span data-stu-id="33ede-124">__Depth__: Depth of the quantum circuit executed by the Q# operation.</span></span> <span data-ttu-id="33ede-125">根據預設，只有 T 閘道會在深度中計算，請參閱[深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)以取得詳細資料。</span><span class="sxs-lookup"><span data-stu-id="33ede-125">By default, only T gates are counted in the depth, see [depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) for details.</span></span>
-* <span data-ttu-id="33ede-126">__寬度__：在 Q # 作業執行期間配置的最大 qubits 數目。</span><span class="sxs-lookup"><span data-stu-id="33ede-126">__Width__: Maximum number of qubits allocated during the execution of the Q# operation.</span></span>
-* <span data-ttu-id="33ede-127">__BorrowedWidth__：在 Q # 作業內借用的 qubits 數目上限。</span><span class="sxs-lookup"><span data-stu-id="33ede-127">__BorrowedWidth__: Maximum number of qubits borrowed inside the Q# operation.</span></span>
+* <span data-ttu-id="b53b7-119">__Cnot-contains__：執行的 cnot-contains （也稱為受控制的 Pauli X 閘道）的計數。</span><span class="sxs-lookup"><span data-stu-id="b53b7-119">__CNOT__: The count of CNOT (also known as the Controlled Pauli X gate) gates executed.</span></span>
+* <span data-ttu-id="b53b7-120">__QubitClifford__：執行的任何單一 qubit Clifford 和 Pauli 閘道的計數。</span><span class="sxs-lookup"><span data-stu-id="b53b7-120">__QubitClifford__: The count of any single qubit Clifford and Pauli gates executed.</span></span>
+* <span data-ttu-id="b53b7-121">__Measure__：任何已執行之測量的計數。</span><span class="sxs-lookup"><span data-stu-id="b53b7-121">__Measure__:  The count of any measurements executed.</span></span>
+* <span data-ttu-id="b53b7-122">__R__：任何執行的單一 qubit 輪替計數，不包括 T、Clifford 和 Pauli 閘道。</span><span class="sxs-lookup"><span data-stu-id="b53b7-122">__R__: The count of any single qubit rotations executed, excluding T, Clifford and Pauli gates.</span></span>
+* <span data-ttu-id="b53b7-123">__T__： t 閘道和其 conjugates 的計數，包括 t 閘道、T_x = .h 和 T_y = Hy Hy、執行。</span><span class="sxs-lookup"><span data-stu-id="b53b7-123">__T__: The count of T gates and their conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.</span></span>
+* <span data-ttu-id="b53b7-124">__深度__： Q # 作業所執行的量子線路深度。</span><span class="sxs-lookup"><span data-stu-id="b53b7-124">__Depth__: Depth of the quantum circuit executed by the Q# operation.</span></span> <span data-ttu-id="b53b7-125">根據預設，只有 T 閘道會在深度中計算，請參閱[深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)以取得詳細資料。</span><span class="sxs-lookup"><span data-stu-id="b53b7-125">By default, only T gates are counted in the depth, see [depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) for details.</span></span>
+* <span data-ttu-id="b53b7-126">__寬度__：在 Q # 作業執行期間配置的最大 qubits 數目。</span><span class="sxs-lookup"><span data-stu-id="b53b7-126">__Width__: Maximum number of qubits allocated during the execution of the Q# operation.</span></span>
+* <span data-ttu-id="b53b7-127">__BorrowedWidth__：在 Q # 作業內借用的 qubits 數目上限。</span><span class="sxs-lookup"><span data-stu-id="b53b7-127">__BorrowedWidth__: Maximum number of qubits borrowed inside the Q# operation.</span></span>
 
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a><span data-ttu-id="33ede-128">提供測量結果的機率</span><span class="sxs-lookup"><span data-stu-id="33ede-128">Providing the Probability of Measurement Outcomes</span></span>
+## <a name="providing-the-probability-of-measurement-outcomes"></a><span data-ttu-id="b53b7-128">提供測量結果的機率</span><span class="sxs-lookup"><span data-stu-id="b53b7-128">Providing the Probability of Measurement Outcomes</span></span>
 
-<span data-ttu-id="33ede-129"><xref:microsoft.quantum.intrinsic> 命名空間中的 <xref:microsoft.quantum.intrinsic.assertprob> 可用來提供測量預期機率的相關資訊，以協助驅動 Q # 程式的執行。</span><span class="sxs-lookup"><span data-stu-id="33ede-129"><xref:microsoft.quantum.intrinsic.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace can be used to provide information about the expected probability of a measurement to help drive the execution of the Q# program.</span></span> <span data-ttu-id="33ede-130">下列範例會加以說明：</span><span class="sxs-lookup"><span data-stu-id="33ede-130">The following example illustrates this:</span></span>
+<span data-ttu-id="b53b7-129"><xref:microsoft.quantum.intrinsic> 命名空間中的 <xref:microsoft.quantum.intrinsic.assertprob> 可用來提供測量預期機率的相關資訊，以協助驅動 Q # 程式的執行。</span><span class="sxs-lookup"><span data-stu-id="b53b7-129"><xref:microsoft.quantum.intrinsic.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace can be used to provide information about the expected probability of a measurement to help drive the execution of the Q# program.</span></span> <span data-ttu-id="b53b7-130">下列範例會加以說明：</span><span class="sxs-lookup"><span data-stu-id="b53b7-130">The following example illustrates this:</span></span>
 
 ```qsharp
 operation Teleport(source : Qubit, target : Qubit) : Unit {
@@ -127,10 +127,10 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-<span data-ttu-id="33ede-131">當 `ResourcesEstimator` 遇到 `AssertProb` 會記錄在 `source` 上測量 `PauliZ`，而 `q` 應獲得 `Zero` 的結果，機率為0.5。</span><span class="sxs-lookup"><span data-stu-id="33ede-131">When the `ResourcesEstimator` encounters `AssertProb` it will record that measuring `PauliZ` on `source` and `q` should be given an outcome of `Zero` with probability 0.5.</span></span> <span data-ttu-id="33ede-132">當它在稍後執行 `M` 時，會發現結果機率的記錄值，而 `M` 會傳回 `Zero` 或 `One`，機率為0.5。</span><span class="sxs-lookup"><span data-stu-id="33ede-132">When it executes `M` later, it will find the recorded values of the outcome probabilities and `M` will return `Zero` or `One` with probability 0.5.</span></span>
+<span data-ttu-id="b53b7-131">當 `ResourcesEstimator` 遇到 `AssertProb` 會記錄在 `source` 上測量 `PauliZ`，而 `q` 應獲得 `Zero` 的結果，機率為0.5。</span><span class="sxs-lookup"><span data-stu-id="b53b7-131">When the `ResourcesEstimator` encounters `AssertProb` it will record that measuring `PauliZ` on `source` and `q` should be given an outcome of `Zero` with probability 0.5.</span></span> <span data-ttu-id="b53b7-132">當它在稍後執行 `M` 時，會發現結果機率的記錄值，而 `M` 會傳回 `Zero` 或 `One`，機率為0.5。</span><span class="sxs-lookup"><span data-stu-id="b53b7-132">When it executes `M` later, it will find the recorded values of the outcome probabilities and `M` will return `Zero` or `One` with probability 0.5.</span></span>
 
 
-## <a name="see-also"></a><span data-ttu-id="33ede-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="33ede-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b53b7-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b53b7-133">See also</span></span>
 
-<span data-ttu-id="33ede-134">`ResourcesEstimator` 是以「量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器」為基礎，可提供更豐富的計量集、在完整呼叫圖形上報告計量的能力，以及「[相異輸入檢查](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)」之類的功能，以協助找出問 # 程式上的錯誤。</span><span class="sxs-lookup"><span data-stu-id="33ede-134">The `ResourcesEstimator` is built on top of the quantum computer [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), which provides a richer set of metrics, the ability to report metrics on the full call-graph, and features like [distinct inputs checker](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) to help find bugs on Q# programs.</span></span> <span data-ttu-id="33ede-135">如需詳細資訊，請參閱[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器檔。</span><span class="sxs-lookup"><span data-stu-id="33ede-135">Please refer to the [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) documentation for more information.</span></span>
+<span data-ttu-id="b53b7-134">`ResourcesEstimator` 是以「量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器」為基礎，可提供更豐富的計量集、在完整呼叫圖形上報告計量的能力，以及「[相異輸入檢查](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)」之類的功能，以協助找出問 # 程式上的錯誤。</span><span class="sxs-lookup"><span data-stu-id="b53b7-134">The `ResourcesEstimator` is built on top of the quantum computer [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), which provides a richer set of metrics, the ability to report metrics on the full call-graph, and features like [distinct inputs checker](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) to help find bugs on Q# programs.</span></span> <span data-ttu-id="b53b7-135">如需詳細資訊，請參閱[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器檔。</span><span class="sxs-lookup"><span data-stu-id="b53b7-135">Please refer to the [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) documentation for more information.</span></span>
 
