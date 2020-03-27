@@ -1,6 +1,6 @@
 - name: 報告錯誤 (Bug)
   href: reporting-bugs.md
-- name: 提供文件
+- name: 改善文件
   href: docs.md
 - name: 開啟提取要求
   href: pull-requests.md

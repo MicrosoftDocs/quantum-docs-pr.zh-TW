@@ -1,17 +1,17 @@
 ---
-title: '問 # 程式總覽-Q # 技術 |Microsoft Docs'
-description: 'Q # 程式總覽-Q # 技術'
+title: Q# 程式概觀
+description: 瞭解配量程式的基本結構，以及它如何代表配量狀態的轉換。
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.file-structure
-ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 5c75bb5499efac2c49cbfc4555fd15b3e072181c
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820822"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907693"
 ---
 # <a name="q-program-overview"></a>Q# 程式概觀
 
@@ -19,7 +19,7 @@ ms.locfileid: "76820822"
 
 從技術觀點來看，配量程式可視為一組特定的傳統函式，當呼叫這些函式時，會產生量子線路作為其副作用。 該觀點的重要結果是，以 Q # 撰寫的程式並不會直接 qubits 本身的模型，而是說明傳統的控制項電腦與這些 qubits 的互動方式。
 根據設計，Q # 因此不會直接定義配量狀態或其他量子機制的屬性，而是間接透過語言中所定義之各種副程式的動作來進行。
-[例如，請考慮 量子計算概念指南》中所討論的狀態](xref:microsoft.quantum.concepts.intro) $ \ket{+} = \left （\ket{0} + \ket{1}\right）/\sqrt{2}$。
+例如，請考慮 <>[量子計算概念](xref:microsoft.quantum.concepts.intro)指南》中所討論的狀態 $ \ket{+} = \left （\ket{0} + \ket{1}\right）/\sqrt{2}$。
 若要在 Q # 中準備此狀態，我們會使用 qubits 在 $ \ket{0}$ state 中初始化的事實，以及 $ \ket{+} = H\ket{0}$，其中 $H $ 是 Hadamard 轉換：
 
 ```qsharp
