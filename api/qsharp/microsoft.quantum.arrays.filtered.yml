@@ -5,6 +5,29 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 針對陣列的元素所定義的陣列和述詞，會傳回包含符合述詞之元素的陣列。
 remarks: 函式是針對泛型型別定義的，也就是說，每當有陣列 `'T[]`，而述詞 `'T -> Bool` 我們可以篩選元素。
+examples: >-
+  下列程式碼示範「篩選」的函式。
+
+  述詞是使用 @"microsoft.quantum.logical.greaterthani" 函式定義的：
+
+
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function FilteredDemo() : Unit {
+     let predicate = GreaterThanI(_, 5);
+     let filteredArray = Filtered(predicate, [2, 5, 9, 1, 8]);
+     Message($"{filteredArray}");
+  }
+
+  ```
+
+
+  這個範例中應該會有的結果是大於5的數位陣列。
 syntax: "function Filtered (predicate : ('T -> Bool), array : 'T[]) : 'T[]"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
@@ -36,9 +59,9 @@ typeParameters:
 - uid: "'T"
   summary: '`array` 元素的類型。'
 metadata:
-  ms.openlocfilehash: f2749f204c6276a0a43ac67bdee9c4cda0de049e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8ce7f84c2243a5194b5a2223884fb68304767dbf
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218357"
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80320741"

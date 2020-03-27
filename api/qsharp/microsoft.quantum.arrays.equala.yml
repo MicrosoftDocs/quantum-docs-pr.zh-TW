@@ -1,0 +1,76 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.equala
+name: EqualA
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 假設有兩個相同類型的陣列，以及針對陣列的元素成對定義的述詞，則會檢查陣列是否相等。
+remarks: >-
+  此函式是針對泛型型別所定義;也就是，只要有兩個數組 `'T[]`，而函式 `equal: ('T, 'T) -> Bool`，這個函數就會傳回 `Bool` 值，指出陣列是否相等。
+
+  若要將兩個數組視為相等，它們的長度必須相等，而且陣列中相同位置的元素必須相等。
+examples: >-
+  下列程式碼會檢查不同配對的陣列是否相等：
+
+
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function EqualADemo() : Unit {
+      let equalArrays = EqualA(EqualI, [2, 3, 4], [2, 3, 4]);
+      let differentLength = EqualA(EqualD, [2.0, 3.0, 4.0], [2.0, 3.0]);
+      let differentElements = EqualA(EqualR, [One, Zero], [One, One]);
+      Message($"Equal arrays are {equalArrays ? "equal" | "not equal"}");
+      Message($"Arrays of different length are {differentLength ? "equal" | "not equal"}");
+      Message($"Arrays of the same length with different elements are {differentElements ? "equal" | "not equal"}");
+  }
+
+  ```
+syntax: "function EqualA (equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[]) : Bool"
+input:
+  content: "(equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[])"
+  types:
+  - name: equal
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array1
+    summary: 要比較的第一個陣列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: array2
+    summary: 要比較的第二個數組。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: >-
+      只有在 `array1` 和 `array2` 相等時，才會 `true` 值。
+
+      也就是說，如果這兩個數組具有相同的長度，而且所有元素都等於 `equal`所定義。
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: 每個陣列元素的類型。
+metadata:
+  ms.openlocfilehash: 466078fa243e2f394fa42dff15845ae5f1cd73df
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80321601"
