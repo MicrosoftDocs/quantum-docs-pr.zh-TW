@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 239073b7e7edafc49bc65cb60c9f45cf0af83dbe
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907540"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320877"
 ---
 # <a name="multiple-qubits"></a>多個 Qubits
 
@@ -27,7 +27,7 @@ ms.locfileid: "77907540"
 
 ## <a name="representing-two-qubits"></a>代表兩個 Qubits
 一到兩個 qubit 狀態的主要差異在於兩個 qubit 的狀態是四維，而不是二維。
-這是因為兩個 qubit 狀態的計算基礎是由一 qubit 狀態的張量產品所組成。  例如，我們有 \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}、\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}、\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}、\qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}。
+這是因為兩個 qubit 狀態的計算基礎是由一 qubit 狀態的張量產品所組成。  例如，我們有 \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}、\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}，\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}，\qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}。
 \end{align}
 
 很容易看到，$n $ qubits 的配量狀態通常是以維度 $ 2 ^ n $ 的單位向量表示，並使用此結構。  向量
@@ -59,13 +59,16 @@ $$
 
 您也可以只測量兩個 qubit 量子狀態的一個 qubit。 在只測量其中一個 qubits 的情況下，測量的影響會稍微不同，因為整個狀態不會折迭成計算基礎狀態，而只會折迭到一個子系統。  換句話說，在這種情況下，測量只有一個 qubit 只會折迭其中一個子系統，而不是全部折迭。  
 
-若要查看這一點，請考慮測量下列狀態的第一個 qubit，這是藉由套用 Hadamard 轉換 $H $ （一開始是設定為 "0" 狀態的兩個 qubits）來形成： $ $ H ^ {\otimes 2} \left （\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right） = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\-1 \\ & 1 &-1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ 結束 {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \mapsto \begin{cases}\text{outcome} = 0 & \frac{1}{2}0\\\\ 0\\\\\\ \text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}。\\\\\\\\\\
+若要查看這一點，請考慮測量下列狀態的第一個 qubit，這是藉由套用 Hadamard 轉換 $H $ （一開始是設定為 "0" 狀態的兩個 qubits）來形成： $ $ H ^ {\otimes 2} \left （\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right） = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\-1 \\-1 & 1 \end {bmatrix} \begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ 結束 {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \mapsto \begin{cases}\text{outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ \end{bmatrix}\\\\\\\\\\0 \text{outcome \\ & \frac{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}。\\\\{1}
 $ $ 這兩個結果的發生率為50%。  這兩者的結果為50% 機率的 intuited，是因為第一個 qubit 上的初始配量狀態向量在交換 $0 $1 $ 底下不變。
 
-測量第一個或第二個 qubit 的數學規則很簡單。  如果我們讓 $e _k $ 是 $k ^ {\rm th} $ 計算基礎向量，並讓 $S $ 是所有 $e $ 的集合，如此一來，問題的 qubit 就會將該值 _k $ 的值設為 $1 $。  例如，如果我們有興趣測量第一個 qubit，則 $S $ 會包含 $e _2 \ HTTP-equiv $10 和 $e _3 \ HTTP-equiv $11。  同樣地，如果我們對第二個 qubit 有興趣 $S $ 會包含 $e _1 \ HTTP-equiv $1 和 $e _3 \equiv $11。  然後，測量所選 qubit 為 $1 $ 的機率是針對狀態向量 $ \psi $
+測量第一個或第二個 qubit 的數學規則很簡單。  如果我們讓 $e _k $ 是 $k ^ {\rm th} $ 計算基礎向量，並讓 $S $ 是所有 $e $ 的集合，如此一來，問題的 qubit 就會將該值 _k $ 的值設為 $1 $。  例如，如果我們有興趣測量第一個 qubit，則 $S $ 會包含 $e _1 \ HTTP-equiv $10 和 $e _3 \ HTTP-equiv $11。  同樣地，如果我們對第二個 qubit 有興趣 $S $ 會包含 $e _2 \ HTTP-equiv $1 和 $e _3 \equiv $11。  然後，測量所選 qubit 為 $1 $ 的機率是針對狀態向量 $ \psi $
 
 $ $ P （\text{outcome} = 1） = \ sum_ {e_k 集合中的 \text{} S} \psi ^ \dagger e_k e_k ^ \dagger \psi。
 $$
+
+> [!NOTE]
+> 在本檔中，我們使用的是以位元組由小到大的格式來標示計算基礎。 以位元組由小到大的格式來說，最不重要的位優先。 例如，以位元組由小到大格式表示的數位4會以位001的字串代表。
 
 由於每個 qubit 量測只能產生 $0 $ 或 $1 $，測量 $0 $ 的機率只是 $1-P （\text{outcome} = 1） $。  這就是為什麼我們只會針對測量 $1 $ 的機率明確提供公式。
 
@@ -79,7 +82,7 @@ $$
 
 如果我們將 $ \psi $ 視為上述的統一狀態向量，並有興趣測量第一個 qubit， 
 
-$ $ P （第一個 qubit 的 \text{measurement} = 1） = （\psi ^ \dagger e_2）（e_2 ^ \dagger \psi） + （\psi ^ \dagger e_3）（e_3 ^ \dagger \psi） = | e_2 ^ \dagger \psi | ^ 2。
+$ $ P （第一個 qubit 的 \text{measurement} = 1） = （\psi ^ \dagger e_1）（e_1 ^ \dagger \psi） + （\psi ^ \dagger e_3）（e_3 ^ \dagger \psi） = | e_1 ^ \dagger \psi | ^ 2。
 $$
 
 請注意，這只是測量結果 $10 $ 和 $11 $ 所預期的兩個機率的總和，全都是要測量的 qubits。
@@ -90,12 +93,13 @@ $$
 
 這完全符合我們的直覺告訴我們機率的可能性。  同樣地，狀態可以寫成
 
-$ $ \frac{\frac{e_2}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ end {bmatrix} $ $
+$ $ \frac{\frac{e_1}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ end {bmatrix} $ $
 
 再次遵循我們的直覺。
 
 ## <a name="two-qubit-operations"></a>兩個 Qubit 的作業
-就像在單一 qubit 的情況下，任何單一轉換都是 qubits 上的有效操作。 一般來說，在 $n $ qubits 上的單一轉換是一個大小為 $ 2 ^ n \times 2 ^ n $ 的 $U 矩陣（因此它會作用於大小為 $ 2 ^ n $ 的向量），因此 $U ^{-1} = U ^ \dagger $。 例如，CNOT-CONTAINS （受控制-NOT）閘道是常用的兩個 qubit 閘道，由下列單一矩陣表示：
+就像在單一 qubit 的情況下，任何單一轉換都是 qubits 上的有效操作。 一般來說，在 $n $ qubits 上的單一轉換是一個大小為 $ 2 ^ n \times 2 ^ n $ 的 $U 矩陣（因此它會作用於大小為 $ 2 ^ n $ 的向量），因此 $U ^{-1} = U ^ \dagger $。
+例如，CNOT-CONTAINS （受控制-NOT）閘道是常用的兩個 qubit 閘道，由下列單一矩陣表示：
 
 $ $ \operatorname{CNOT} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 0 \ 0 \ 0 \ 1 \\\\ 0 \ 0 \ 1 \ 0 \end{bmatrix} $ $
 

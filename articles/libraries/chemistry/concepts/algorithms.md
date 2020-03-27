@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904633"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320714"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>模擬 Hamiltonian Dynamics
 
@@ -28,14 +28,14 @@ Trotter-Plat'home co. 公式背後的概念很簡單：將 Hamiltonian 表達為
 之所以會發生此錯誤，是因為 $e ^ {-iHt} $ 是運算子指數，因此使用此公式時發生錯誤，因為 $H _j $ 詞彙不會向下計算（*亦即*$H _j H_k \ne H_k H_j $ 一般）。
 
 如果 $t $ 很大，則 Trotter – Plat'home co. 公式仍然可以藉由將其細分為一系列簡短的時間步驟，來正確模擬 dynamics。
-讓 $r $ 成為時間演進所採取的步驟數目。
-然後，我們有 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left （\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right） ^ r + O （m ^ 2 t ^ 2/r），$ $ 表示如果 $r $ 縮放為 $m ^ 2 t ^ 2/\ epsilon $，則任何 $ \epsilon > 0 $ 的最大可為 $ \epsilon $ 建立錯誤。
+讓 $r $ 成為在時間演進期間所採取的步驟數，因此每次執行步驟時，$t/r $。 然後，我們有 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left （\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right） ^ r + O （m ^ 2 t ^ 2/r），$ $ 表示如果 $r $ 縮放為 $m ^ 2 t ^ 2/\ epsilon $，則任何 $ \epsilon > 0 $ 的最大可為 $ \epsilon $ 建立錯誤。
 
 藉由建立一連串的運算子指數來建立更精確的近似值，使錯誤詞彙取消。
-最簡單的這類公式（對稱 Trotter 公式或 Strang 分割）採用的格式為 $ $ U_1 （t） = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O （m ^ 3 t ^ 3），藉由選擇 $r $ 來調整為 $m ^ {3/2} t ^ {3/2}/\sqrt {\ epsilon} $，可以針對任何 $ \epsilon > 0 $ 建立小於 $ \epsilon $。
+最簡單的這類公式，第二個 order Trotter-Plat'home co. 公式，採用的格式為 $ $ U_2 （t） = \left （\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2r} \ right） ^ r = e ^ {-iHt} + O （m ^ 3 t ^ 3/r ^ 2），$ $ $r $ to scale as $m ^ {3/2} t ^ {3/2}/\sqrt {\ epsilon} $ 時，可以為任何 $ \epsilon > 0 $ 建立小於 $ \epsilon $ 的錯誤。
 
-更高順序的 Trotter 公式可以根據 $U 的 _1 $ 來加以建造。
-最簡單的是下列第四個訂單公式。原本是由 Plat'home co.： $ $ U_2 （t） = U_1 ^ 2 （s_1t） U_1 （[1-4s_1] t） U_1 ^ 2 （s_1 t） = e ^ {-iHt} + O （m ^ 5t ^ 5），$ $ where $s _1 = （4-4 ^ {1/3}） ^{-1}$。
+更高順序的公式，特別是（$ 2k $）第一個 $k > 0 $ 的順序，可以用遞迴方式來建造： $ $ U_ {2k} （t） = [U_ {2k-2} （s_k\~ t）] ^ 2 U_ {2k-2} （[1-4s_k] t） [U_ {2k-2} （s_k\~ t）] ^ 2 = e ^ {-iHt} + O （（m t） ^ {2k + 1}/r ^ {2k}），$ $，其中 $s _k = （4-4 ^ {1/（2k-1）}） ^{-1}$。
+
+最簡單的是下列第四個 order （$k = $2）公式，最初是由 Plat'home co.： $ $ U_4 （t） = [U_2 （s_2\~ t）] ^ 2 U_2 （[1-4s_2] t） [U_2 （s_2\~ t）] ^ 2 = e ^ {-iHt} + O （m ^ 5t ^ 5/r ^ 4） $ $，其中 $s _2 = （4-4 ^ {1/3}） ^{-1}$。
 一般來說，任意高階的公式都可以類似地進行結構化;不過，使用較複雜的整合者所產生的成本，通常比大部分實際問題的第四個順序還多。
 
 為了讓上述策略正常執行，我們需要有一個方法可模擬 $e ^ {-iH_j t} $ 的寬類別。
