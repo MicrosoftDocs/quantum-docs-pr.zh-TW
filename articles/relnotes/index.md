@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 61a91278ee2c77972ff12ed77b4f20c837b02643
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 4fbb740568ff6cdc99e4f6a813802ed8d4234ab4
+ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320694"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269381"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -21,6 +21,17 @@ ms.locfileid: "80320694"
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
 
+
+## <a name="version-01120032506"></a>0\.11.2003.2506 版
+
+*發行日期：2020 年 3 月 26 日*
+
+此版本包含下列項目：
+
+- Q# 中存取修飾詞的新支援。如需詳細資訊，請參閱 [檔案結構](xref:microsoft.quantum.language.file-structure)
+- 已更新為 .NET Core SDK 3.1
+
+請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)和 [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
 
 ## <a name="version-01020022610"></a>0\.10.2002.2610 版
 
