@@ -1,5 +1,5 @@
 ---
-title: Q# 和 QDK 是什麼？
+title: 什麼是 Q# 和 QDK？
 description: 了解 Q#，其既是由 Microsoft 所建立來開發量子電腦應用程式的程式設計語言，也是 Microsoft Quantum Development Kit 的重要元件
 author: natke
 ms.author: nakersha
@@ -7,13 +7,13 @@ ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
 ms.openlocfilehash: a4bf21887e34ac85f75e5e0b9a033138464fd09d
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77906996"
 ---
-# <a name="what-are-q-and-the-qdk"></a>Q# 和 QDK 是什麼？
+# <a name="what-are-q-and-the-qdk"></a>什麼是 Q# 和 QDK？
 
 Q# 是一種程式設計語言，其具有專門設計的功能，可與量子運算搭配使用。
 其作為 Microsoft Quantum Development Kit (QDK) 的重要元件，可為量子程式設計人員提供一個架構，讓您能夠專注於處理演算法，而不必擔心量子電腦的閘道序列最佳化或實體實作等技術細節。

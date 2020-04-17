@@ -7,10 +7,10 @@ ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "73529940"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>量子電腦有何功用？
@@ -29,7 +29,7 @@ ms.locfileid: "73529940"
 
 化學分子屬於量子系統，因此可透過這種方式進行分析。 這類化學製品的其中一例就是「固氮酶」  酵素，如果我們能更加了解其特性，就有可能降低當今肥料所消耗的能源和排放的溫室氣體。
 
-## <a name="cryptography"></a>加密
+## <a name="cryptography"></a>Cryptography
 
 量子電腦最著名的應用可能是在密碼學，1994 年 Peter Shor 證明可擴充的量子電腦可以破壞所有廣泛使用的加密技術。  傳統密碼學仰賴的是運算巨大數字極其困難的特性，例如將巨大數字因數分解為兩個質數。
 
@@ -37,7 +37,7 @@ ms.locfileid: "73529940"
 
 在 Microsoft，我們有領先全球的量子後密碼學和安全性開發量子抵抗演算法團隊。
 
-## <a name="optimization"></a>最佳化
+## <a name="optimization"></a>Optimization
 
 最佳化是針對高維度空間執行大型搜尋的工作，適用於指定最低代價函數的解決方案。   在量子電腦上，我們可以加速演算法的最佳化過程，以利尋找其他方法不可能達成的解決方案。 應用範圍從運輸物流、醫療保健，到診斷、材料科學等。 對於這些產業可能的效率提升有深遠的影響。
 
