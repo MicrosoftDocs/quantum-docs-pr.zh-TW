@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 7a080f82e586f06d40e9d793ee05932db4c3ccef
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
+ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81481407"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82030594"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -21,6 +21,11 @@ ms.locfileid: "81481407"
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
 
+## <a name="version-01120033107"></a>0\.11.2003.3107 版
+
+*發行日期：2020 年 3 月 31 日*
+
+此版本包含版本 0.11.2003.2506 的次要錯誤修正。
 
 ## <a name="version-01120032506"></a>0\.11.2003.2506 版
 
