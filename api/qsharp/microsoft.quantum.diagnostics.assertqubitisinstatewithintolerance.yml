@@ -7,7 +7,7 @@ summary: >-
   判斷提示 qubit 處於預期狀態。
 
 
-  `expected` 代表複雜的向量，$ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $。
+  `expected`表示複雜向量 $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $。
 
   元組的第一個元素代表每個 $a $，$b $ 是複數的實數部分，而第二個是虛數部分。
 
@@ -37,7 +37,7 @@ remarks: >-
   ```
 
 
-  容錯是由 $ \langle\psi | \psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ 和 real 向量（Y ₂）所定義的3維實數向量（x ₂、x ₃、x ₄）之間的 {\infty} $ 距離所\_的 $L。，y ₃，y ₄）由ρ = y ₁ I + y ₂ X + y ₃ Y + y ₄ Z 所定義，其中ρ是與暫存器狀態對應的密度矩陣。
+  \_容錯 $L 是3維度實際向量（x ₂，x ₃，x ₄）由 $ \langle\psi | \psi\rangle = x\_1 I + x\_2 x + x\_3 Y + x\_4 Z $ 和 real 向量（y ₂，y ₃，y ₄）定義，ρ = Y ₁ I + y ₂ x + y ₃ y + y ₄ Z，其中ρ是對應至暫存器狀態的密度矩陣。
 
   這在假設 Tr （ρ）和 Tr （| ψ⟩⟨ψ |）兩者都是1（例如 x ₁ = 1/2、y ₁ = 1/2）時才成立。
 
@@ -81,9 +81,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 8b43bac19173c5ae5a11ff6879a03209c32e7c76
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 77d28c122a44f39924242dedb6bd6163974e18c1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227112"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656592"
