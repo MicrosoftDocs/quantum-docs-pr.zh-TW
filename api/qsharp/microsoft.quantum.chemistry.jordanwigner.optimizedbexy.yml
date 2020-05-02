@@ -3,14 +3,14 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 在 $ （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} 上套用 Pauli 字串的單一 $U $ .。。Z_0 $ on qubits $ 0. p $ 的索引 $z \in\{0、1\}$ 和 $p $。 也就是說，$ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} .。。Z_0 \ket{\psi} \end{align} $ $
+summary: 在 $ （X ^ {z + 1}\_.py ^ {z}\_p） z\_{p-1} 上套用 Pauli 字串的單一 $U $Z_0 $ on qubits $ 0. p $ 的索引上，$z \in\{0，1\}$ 和 $p $。 也就是說，$ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} （X ^ {z + 1}\_.py ^ {z}\_p） z\_{p-1} .。。Z_0 \ket{\psi} \end{align} $ $
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
-references: '- 以線性 T 複雜度 Ryan Babbush、Craig Gidney、Dominic W Berry、Nathan Wiebe、Jarrod McClean、Zitec Paler、奧斯丁 Fowler、Hartmut Neven https://arxiv.org/abs/1805.03662 的量子線路中的電子 Spectra 編碼'
+references: '- 在配量線路中使用線性 T 複雜度的電子 Spectra 編碼 Ryan Babbush、Craig Gidney、Dominic W. Berry、Nathan Wiebe、Jarrod McClean、Zitec Paler、奧斯丁 Fowler、Hartmut Nevenhttps://arxiv.org/abs/1805.03662'
 input:
   content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: pauliBasis
-    summary: 當此 qubit 處於 state $ \ket{0}$ 時，就會套用 $X $。 當狀態為 $ \ket{1}$ 時，會套用 $Y $。
+    summary: 當此 qubit 處於 state $ \ket{0}$ 時，會套用 $X $。 當狀態為 $ \ket{1}$ 時，會套用 $Y $。
     isPrimitive: true
     uid: Qubit
   - name: indexRegister
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2208efefe094c472d4f179e3a75dae721c4ff211
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228455"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82665310"
