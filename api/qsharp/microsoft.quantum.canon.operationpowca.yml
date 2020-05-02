@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   將作業提升為乘冪。
 
-  修飾詞 `A` 表示作業可控制和 adjointable。
+  修飾`A`詞表示作業可控制和 adjointable。
 
 
   也就是，假設有一個代表閘道 $U $ 的作業，會針對 power $m $ 傳回新作業 $U ^ m $。
@@ -54,9 +54,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: d5fcdf5fe3cefd5ecc5bf0421960db542a7f59a3
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 896d142da1075eb282ef7889c26b9874ca478d16
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871510"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678649"

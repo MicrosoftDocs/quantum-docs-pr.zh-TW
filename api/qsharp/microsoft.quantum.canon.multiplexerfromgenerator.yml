@@ -13,7 +13,7 @@ input:
   content: '(unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl))))'
   types:
   - name: unitaryGenerator
-    summary: 元組，其中第一個專案 `Int` 是 unitaries $N $ 的數目，而第二個元素 `(Int -> ('T => () is Adj + Ctl))` 是在 $ [0，N-1] $ 中接受整數 $j $ 的函式，並輸出單一作業 $V _j $。
+    summary: 元組，其中第一個`Int`專案是 unitaries $N $ 的數目，而第二個`(Int -> ('T => () is Adj + Ctl))`元素是在 $ [0，n-1] $ 中接受整數 $j $ 的函式，並輸出單一作業 $V _j $。
     types:
     - isPrimitive: true
       uid: Int
@@ -40,7 +40,7 @@ input:
 output:
   content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: $U $ 的乘以控制的單一作業會套用 `unitaryGenerator`所描述的 unitaries。
+  - summary: $U $ 的乘以控制的單一作業，會套用所描述`unitaryGenerator`的 unitaries。
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.multiplexoperationsfromgenerator
 metadata:
-  ms.openlocfilehash: 52cd79e2450e7c33c8c5ff2b1d6fbf540200c7e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1000e7606b7afed988687839cc85442a0dd9ff30
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227758"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678837"

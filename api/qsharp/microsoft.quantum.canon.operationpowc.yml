@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   將作業提升為乘冪。
 
-  修飾詞 `C` 表示作業是可控制的。
+  修飾`C`詞表示作業是可控制的。
 
 
   也就是，假設有一個代表閘道 $U $ 的作業，會針對 power $m $ 傳回新作業 $U ^ m $。
@@ -52,9 +52,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: c8da707ae2a47e427204f95f11040154e0d53e02
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: b3714baaa9eb0f0769b5e141e9ba3f0dce7c70cf
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871255"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678678"

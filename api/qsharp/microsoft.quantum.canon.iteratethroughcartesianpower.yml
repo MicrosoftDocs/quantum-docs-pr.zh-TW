@@ -7,9 +7,9 @@ summary: >-
   在整數範圍的笛卡動力中，套用每個索引的作業。
 
 
-  針對 `0..(bound - 1)`範圍的笛卡兒乘冪的每個元素反復套用作業。
+  針對範圍`0..(bound - 1)`的笛卡動力，反復套用作業。
 examples: >-
-  假設有一項作業 `op`，下列兩個程式碼片段就是相同的：
+  假設有一`op`項作業，下列兩個程式碼片段就是相同的：
 
 
   ```Q#
@@ -39,7 +39,7 @@ input:
   content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
-    summary: 應該引發範圍 `0..(bound - 1)` 的笛卡動力。
+    summary: 應該引發範圍`0..(bound - 1)`的笛卡動力。
     isPrimitive: true
     uid: Int
   - name: bound
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: 4679e1b569dab167eecbb22947543ab993d7fa8d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870932"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679062"
