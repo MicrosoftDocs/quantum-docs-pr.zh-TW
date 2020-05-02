@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   將單一 qubit 作業套用至暫存器中的每個索引元素。
 
-  修飾詞 `A` 表示單一 qubit 作業是 adjointable。
+  修飾`A`詞表示單一 qubit 作業是 adjointable。
 syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[])"
@@ -44,9 +44,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
 metadata:
-  ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f380de31e21f060e64b3c39f81873563d7cf2d2b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068473"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674852"

@@ -4,7 +4,7 @@ name: R1
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  依據指定的角度，套用關於 $ \ket{1}$ 狀態的旋轉。
+  依據指定的角度，套用關於{1}$ \ket $ 狀態的旋轉。
 
 
   \begin{align} R_1 （\theta） \mathrel{： =} \operatorname{diag} （1，e ^ {i\theta}）。
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: ec15deeef7a097927221be19c35917be6aedcdd4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5be535daca1227284ddfa8c38a0082fdf8df7865
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233997"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674121"

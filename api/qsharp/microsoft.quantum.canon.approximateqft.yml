@@ -22,7 +22,7 @@ input:
       近似值參數，決定在哪一個層級中，QFT 電路中所控制的 Z 旋轉會被剪除。
 
 
-      近似值參數 a 決定 Z 旋轉的剪除層級，也就是∈ {0 ... n} 和所有 Z 旋轉2π/2k，其中 k > a 會從 QFT 電路中移除。 知道 k > = log ₂（n） + log ₂（1/ε） + 3 一個可以系結 | |QFT-AQFT | |< ε。
+      近似值參數 a 決定 Z 旋轉的剪除層級，也就是∈ {0 ... n} 和所有 Z 旋轉2π/2k，其中 k>a 會從 QFT 電路中移除。 知道 k >= log ₂（n） + log ₂（1/ε） + 3 一個可以系結 | |QFT-AQFT | |<ε。
     isPrimitive: true
     uid: Int
   - name: qs
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 44d6a5937924f13cab04137bd3d0eb81396824c9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212526"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674397"
