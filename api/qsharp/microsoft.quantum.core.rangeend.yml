@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: 傳回指定範圍的已定義結束值，這不一定是序列中的最後一個元素。
 remarks: >-
-  範圍運算式的第一個元素是 `start`、第二個元素是 `start+step`、第三個元素 `start+step+step`等等，直到傳遞 `end` 為止。
+  範圍運算式的第一個元素是`start`，其第二個`start+step`元素是，第`start+step+step`三個元素是， `end`依此類推，直到傳遞為止。
 
 
   請注意，定義的範圍結束值可能與範圍所指定之序列中的最後一個元素不同。例如，在範圍 0. 中。 2.。 5最後一個元素是4，但結束值為5。
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066637"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657629"

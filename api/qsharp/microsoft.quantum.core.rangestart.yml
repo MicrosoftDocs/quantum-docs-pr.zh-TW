@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: 傳回指定範圍的已定義起始值。
 remarks: >-
-  範圍運算式的第一個元素是 `start`、第二個元素是 `start+step`、第三個元素 `start+step+step`等等，直到傳遞 `end` 為止。
+  範圍運算式的第一個元素是`start`，其第二個`start+step`元素是，第`start+step+step`三個元素是， `end`依此類推，直到傳遞為止。
 
 
   請注意，除非範圍指定空的序列（例如，2.，否則範圍的定義起始值與序列的第一個元素相同。 1)。
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a5240da851b459e732c78f7be94b8a2d02b1f1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231753"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657242"
