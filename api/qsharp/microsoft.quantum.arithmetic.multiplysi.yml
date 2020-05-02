@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.multiplysi
 name: MultiplySI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 將帶正負號的整數 `xs` 的帶正負號的整數 `ys`，並將結果儲存在 `result`中，其一開始必須為零。
+summary: 以帶正負`xs`號的整數`ys`將帶正負號的`result`整數相乘，並將結果儲存在中，這必須是一開始。
 syntax: 'operation MultiplySI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
@@ -15,7 +15,7 @@ input:
     summary: n 位乘數（SignedLittleEndian）
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: 在一開始，SignedLittleEndian 必須處於狀態 $ \ket{0}$。
+    summary: 在一開始，您必須在狀態 $ \ket{0}$ 中採用2n 位結果（SignedLittleEndian）。
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -26,9 +26,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 154e870416e47547a115fcc5533d187b3ed67213
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b8710ecce1986b43e50a8b0567ae4746bda1589e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214804"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679460"

@@ -7,24 +7,24 @@ summary: >-
   這項作業會測試 qubits 的暫存器所代表的整數是否大於另一個整數，並將結果的 XOR 套用到輸出 qubit。
 
 
-  假設有兩個整數 `x`，且 `y` 儲存在大小相同的 qubit 暫存器中，此作業會檢查它們是否滿足 `x > y`。 如果為 true，則會將1進行 xor 到輸出 qubit。 否則，0會進行 xor 為輸出 qubit。
+  假設有兩`x`個`y`整數，並儲存在大小相等的 qubit 暫存器中，此`x > y`作業會檢查它們是否符合。 如果為 true，則會將1進行 xor 到輸出 qubit。 否則，0會進行 xor 為輸出 qubit。
 
-  換句話說，這項作業可以由單一 $ $ \begin{align} U\ket {x} \ ket {y} \ ket {z} = \ket{x}\ket{y}\ket{z\oplus （x > y）} 表示。
+  換句話說，這項作業可以由單一 $ $ \begin{align} U\ket {x} \ ket {y} \ ket {z} = \ket{x}\ket{y}\ket{z\oplus （x>y）} 表示。
 
   \end{align} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
-references: '- 新的量子 ripple-包含加法線路 Steven Cuccaro、Thomas g. Draper、Samuel A Kutin、David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
+references: '- 新的量子 ripple-包含加法線路 Steven Cuccaro、Thomas g. Draper、Samuel A Kutin、David Petrie Moultonhttps://arxiv.org/abs/quant-ph/0410184'
 input:
   content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
   types:
   - name: x
-    summary: 要比較的第一個數位，以 `LittleEndian` 格式儲存在 qubit 暫存器中。
+    summary: 要在 qubit 暫存器中以`LittleEndian`格式儲存的第一個數位。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: y
-    summary: 要比較的第二個數字，以 `LittleEndian` 格式儲存在 qubit 暫存器中。
+    summary: 要在 qubit 暫存器中以`LittleEndian`格式儲存的第二個數字。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: output
-    summary: Qubit 會將比較的結果儲存 $x > y $。
+    summary: Qubit 會將比較的結果儲存 $x>y $。
     isPrimitive: true
     uid: Qubit
 output:
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 1ef346a9fd33859abffe9c30b14b5ea95068169d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 08cff4d874060fce0b461c7eeadfdcadf6fa1453
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871119"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679766"
