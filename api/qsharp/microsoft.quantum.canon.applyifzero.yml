@@ -7,7 +7,7 @@ summary: >-
   將以傳統結果值為零的運算套用。
 
 
-  給定作業 `op` 並 `result`結果值時，如果 `result` 為 `Zero`，則會將 `op` 套用至 `target`。 如果 `One`，`target`就不會發生任何事。
+  `op`給定作業`result`和結果值， `op` `target`如果`result`為`Zero`，則適用于。 如果`One`為，則`target`不會發生任何動作。
 syntax: "operation ApplyIfZero (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit), target : 'T))"
@@ -44,9 +44,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: c9d524a4be9c3ce6179f59d59c8a83819a611966
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: def6af6461ea91bc1df4ce347a1a35c6fb31cb8a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213631"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672626"

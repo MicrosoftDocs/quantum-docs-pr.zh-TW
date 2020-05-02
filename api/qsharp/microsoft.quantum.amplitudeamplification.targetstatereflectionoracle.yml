@@ -4,7 +4,7 @@ name: TargetStateReflectionOracle
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: >-
-  針對旗標 qubit 唯一標記的目標狀態，來建立相關的 `ReflectionOracle`。
+  針對旗`ReflectionOracle`標 qubit 唯一標記的目標狀態，來建立。
 
 
   目標狀態的單一 qubit 設定為1，而其他所有0： $ \ket{1}_f $。
@@ -19,14 +19,14 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: 反映 $ \ket{1}_f $ 標記之狀態的 `ReflectionOracle`。
+  - summary: ， `ReflectionOracle`其反映 $ \ket{1}_f $ 所標記的狀態。
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
 metadata:
-  ms.openlocfilehash: c86011664da3f59bc978641b0aefcca5a50d3b1a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6f398f2c9122769dd6f83fd002d311c0b55db158
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215433"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672912"

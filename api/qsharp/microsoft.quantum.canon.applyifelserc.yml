@@ -7,17 +7,17 @@ summary: >-
   會根據傳統結果的值，套用兩個可控作業的其中一個。
 
 
-  假設結果 `result`，當 `result` 等於 `Zero`時，會套用作業 `zeroOp` 搭配 `zeroInput` 作為其輸入，並在 `oneOp(oneInput)` 時套用 `result == One`。
+  指定結果`result`時，會在等於`zeroOp` `zeroInput` `result` `Zero`時套用作業，並在時`oneOp(oneInput)` `result == One`套用。
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: 用來判斷是否套用 `zeroOp` 或 `oneOp` 的測量結果。
+    summary: 用來判斷是否`zeroOp`已套用或`oneOp`的測量結果。
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: '`result == Zero`時要套用的可控制作業。'
+    summary: 要在其上套用的可`result == Zero`控制作業。
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: '`result == Zero`時要提供給 `zeroOp` 的輸入。'
+    summary: 要`zeroOp`在何時`result == Zero`提供的輸入。
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: '`result == One`時要套用的可控制作業。'
+    summary: 要在其上套用的可`result == One`控制作業。
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: '`result == One`時要提供給 `oneOp` 的輸入。'
+    summary: 要`oneOp`在何時`result == One`提供的輸入。
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 作業的輸入類型 `zeroOp` 要有條件地套用。
+  summary: '`zeroOp`要有條件地套用之作業的輸入類型。'
 - uid: "'U"
-  summary: 作業的輸入類型 `oneOp` 要有條件地套用。
+  summary: '`oneOp`要有條件地套用之作業的輸入類型。'
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220924"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672731"
