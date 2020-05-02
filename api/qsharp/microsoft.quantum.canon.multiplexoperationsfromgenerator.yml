@@ -8,14 +8,14 @@ summary: >-
 
 
   $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
-remarks: 如果指定了少於 $ 2 ^ n $，`coefficients` 將會以 identity 元素填補。 此執行會使用 $n-$1 輔助 qubits。
+remarks: '`coefficients`如果指定了少於 $ 2 ^ n $，將會以 identity 元素填補。 此執行會使用 $n-$1 輔助 qubits。'
 syntax: "operation MultiplexOperationsFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 references: '- [*Andrew M. Childs、Dmitri Maslov、Yunseong，Neil J. Ross、中國人民幣 Su*、arXiv：1711.10980](https://arxiv.org/abs/1711.10980)'
 input:
   content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
   - name: unitaryGenerator
-    summary: 元組，其中第一個專案 `Int` 是 unitaries $N $ 的數目，而第二個元素 `(Int -> ('T => () is Adj + Ctl))` 是在 $ [0，N-1] $ 中接受整數 $j $ 的函式，並輸出單一作業 $V _j $。
+    summary: 元組，其中第一個`Int`專案是 unitaries $N $ 的數目，而第二個`(Int -> ('T => () is Adj + Ctl))`元素是在 $ [0，n-1] $ 中接受整數 $j $ 的函式，並輸出單一作業 $V _j $。
     types:
     - isPrimitive: true
       uid: Int
@@ -54,9 +54,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 54c0db61b5e18c7a598b6c8ec930f2851ba608f2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b9599723cf6296367412a5603f4b36a3d610acc5
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227775"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678797"
