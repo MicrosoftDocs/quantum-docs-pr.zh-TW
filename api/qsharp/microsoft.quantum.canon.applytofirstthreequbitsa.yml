@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   將作業套用至註冊中的前三個 qubits。
 
-  修飾詞 `A` 表示作業 adjointable。
+  修飾`A`詞表示作業是 adjointable。
 remarks: >-
   這相當於：
 
@@ -52,9 +52,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytofirstthreequbits
 metadata:
-  ms.openlocfilehash: 1915d304889509d90d8522a4aa92b70e757c3f27
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7f19681e6bec0af50bba497a97373ccb632871fb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213393"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82668075"
