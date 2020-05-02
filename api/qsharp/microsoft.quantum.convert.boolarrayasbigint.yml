@@ -7,7 +7,7 @@ summary: >-
   將指定的布林陣列轉換為相等的大整數。
 
   陣列的0元素是大整數的最小有效位。
-remarks: 如需詳細資訊，請參閱[ C# BigInteger](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_)函式。
+remarks: '如需詳細資訊，請參閱[c # BigInteger](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_)的函式。'
 syntax: 'function BoolArrayAsBigInt (a : Bool[]) : BigInt'
 input:
   content: '(a : Bool[])'
@@ -22,9 +22,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 40a263976361a3322142d17213c28b2b8ec7d81d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 770b565a3137085ff6af3ea3d4a1ad3ff5938f6d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227469"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82661980"
