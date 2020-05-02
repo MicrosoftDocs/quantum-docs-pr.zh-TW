@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.cosh
 name: Cosh
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 傳回指定角度的雙曲余弦值。
+summary: 傳回指定角的雙曲線餘弦函數。
 remarks: 如需詳細資訊，請參閱[Cosh](https://docs.microsoft.com/dotnet/api/system.math.cosh) 。
 syntax: 'function Cosh (d : Double) : Double'
 input:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: f674bb91712988c614e9105728d9e568c4233a7d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7108679e7afa00728baeb362099bc8b7298d32b0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229798"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685673"

@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.continuedfractionconvergentl
 name: ContinuedFractionConvergentL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 尋找最接近 `fraction` 分母小於或等於 `denominatorBound` 的繼續分數聚合
+summary: 尋找最接近`fraction`分母小於或等於的聚合接續分數`denominatorBound`
 syntax: 'function ContinuedFractionConvergentL (fraction : Microsoft.Quantum.Math.BigFraction, denominatorBound : BigInt) : Microsoft.Quantum.Math.BigFraction'
 input:
   content: '(fraction : Microsoft.Quantum.Math.BigFraction, denominatorBound : BigInt)'
@@ -16,12 +16,12 @@ input:
 output:
   content: Microsoft.Quantum.Math.BigFraction
   types:
-  - summary: 最接近小於或等於分母 `fraction` 的分數 `denominatorBound`
+  - summary: 接近`fraction`小於或等於分母的接續分數`denominatorBound`
     uid: microsoft.quantum.math.bigfraction
 metadata:
-  ms.openlocfilehash: 33092dc94b5af0693a019ad2ba19586d8e46c412
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5b17320e044bc984553f6fc13cec028bcb16bb2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229832"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685701"
