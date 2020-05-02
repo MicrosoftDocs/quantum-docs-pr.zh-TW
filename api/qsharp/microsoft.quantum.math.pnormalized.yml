@@ -4,10 +4,10 @@ name: PNormalized
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  正規化 `L(p)` 標準中 `Double`s 的向量。
+  標準化在此`L(p)`標準`Double`中的向量。
 
 
-  也就是說，如果陣列 $x $ 的類型 `Double[]`，這會傳回陣列，其中所有元素都除以 $p $-標準 $\|x\|_p $。
+  也就是說，如果陣列 $x $ 的類型`Double[]`，這會傳回陣列，其中所有元素都除以 $p $-標準 $\|x\|_p $。
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
   content: '(p : Double, array : Double[])'
@@ -30,9 +30,9 @@ output:
 seeAlso:
 - pnorm
 metadata:
-  ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 68697fe159fecfeed0078f95de8d91f825125f41
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067283"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684020"

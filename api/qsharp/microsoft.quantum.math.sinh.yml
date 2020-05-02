@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.sinh
 name: Sinh
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 傳回指定角度的雙曲正弦值。
+summary: 傳回指定角的雙曲線正弦函數。
 remarks: 如需詳細資訊，請參閱[Sinh](https://docs.microsoft.com/dotnet/api/system.math.sinh) 。
 syntax: 'function Sinh (d : Double) : Double'
 input:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 0a722677e787e634efb2497279e96a56f4e5a980
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 44542c22554806190323f097d50e0e5941f634d6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231702"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683263"

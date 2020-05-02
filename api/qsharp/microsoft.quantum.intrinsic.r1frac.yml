@@ -4,7 +4,7 @@ name: R1Frac
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  依據指定為 dyadic 分數的角度，套用關於 $ \ket{1}$ 狀態的旋轉。
+  以指定為 dyadic 分數的角度{1}，套用關於 $ \ket $ 狀態的旋轉。
 
 
   \begin{align} R_1 （n，k） \mathrel{： =} \operatorname{diag} （1，e ^ {i \pi k/2 ^ n}）。
@@ -14,7 +14,7 @@ summary: >-
 
   > [!WARNING]
 
-  > 這項作業會使用 @"microsoft.quantum.intrinsic.r"中的**相反**正負號慣例，而且不包含 @"microsoft.quantum.intrinsic.r1"所包含 $ 1/2 $ 的因素。
+  > 這項作業會**opposite**使用中@"microsoft.quantum.intrinsic.r"的相反正負號慣例，而且不包含所包含之 $ 1/2 $ @"microsoft.quantum.intrinsic.r1"的因素。
 remarks: >-
   相當於：
 
@@ -51,9 +51,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: c91aa9424abd038fa3a5a22fd23ac92cce171414
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 45fa756e94be8b580c909004016e0f40861111c1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233980"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683741"
