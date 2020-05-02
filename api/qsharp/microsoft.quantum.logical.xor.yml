@@ -19,13 +19,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: 只有在 `true``a` 和 `b` 之一時，才 `true`。
+  - summary: '`true`只有當`a`和`b`只有一個為時，才`true`為。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: a876025d8b3a928e91d686b90f8ceccd65cc1e7c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de35d7427d3de31e27465319bf8fa96ba2fb9aed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235136"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682843"

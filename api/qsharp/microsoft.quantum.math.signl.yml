@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.signl
 name: SignL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 傳回整數，表示數位的正負號。
+summary: 傳回整數，表示數字的正負號。
 remarks: 如[需](https://docs.microsoft.com/dotnet/api/system.math.sign)詳細資訊，請參閱 system.string。
 syntax: 'function SignL (a : BigInt) : Int'
 input:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 8aa5404d9f0df648c78c7d0de0981b4a8b108e01
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 426c59418b741c3369a3b5d733bc2e3488d44761
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223644"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682724"

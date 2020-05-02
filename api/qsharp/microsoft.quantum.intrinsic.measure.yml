@@ -7,9 +7,9 @@ summary: >-
   在指定的 Pauli 基底中執行一或多個 qubits 的聯合測量。
 
 
-  輸出結果是由散發所提供： \begin{align} \Pr （\texttt{Zero} | \ket{\psi}） = \frac12 \braket{\psi \mid | \left （\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right） \mid | \psi}，\end{align}，其中 $P _i $ 是的 $i $ th 元素 `bases`和，其中 $N = \texttt{Length} （\texttt{bases}） $。
+  輸出結果是由散發所提供： \begin{align} \Pr （\texttt{Zero} | \ket{\psi}） = \frac12 \braket{\psi \mid | \left （\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right） \mid | \psi}、\end{align}，其中 $P _i $ 是的 $i $ th 元素`bases`，其中 $N = \texttt{Length} （\texttt{bases}） $。
 
-  也就是說，量測會傳回 `Result` $d $，讓觀察到的測量效果的 eigenvalue 是 $ （-1） ^ d $。
+  也就是說，測量結果會傳回`Result` $d $，讓觀察到的測量效果的 eigenvalue 是 $ （-1） ^ d $。
 remarks: 如果基礎陣列和 qubit 陣列的長度不同，則作業將會失敗。
 syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
 input:
@@ -28,13 +28,13 @@ input:
 output:
   content: Result
   types:
-  - summary: '`Zero` 是否觀察到 $ + $1 eigenvalue，並 `One` 是否觀察到 $ $1 eigenvalue。'
+  - summary: '`Zero`如果觀察到 $ + $1 eigenvalue，則為`One` ，如果觀察到 $-$1 eigenvalue 則為。'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a2f89d1eea48ac0a4dab7e35ef661d89a40ae84a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234099"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682845"

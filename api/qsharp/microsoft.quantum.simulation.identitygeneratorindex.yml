@@ -3,13 +3,13 @@ uid: microsoft.quantum.simulation.identitygeneratorindex
 name: IdentityGeneratorIndex
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: 傳回與零 Hamiltonian （`H = 0`）一致的產生器索引，其對應于身分識別進化作業。
+summary: 傳回與零 Hamiltonian （ `H = 0`對應到身分識別進化作業）一致的產生器索引。
 syntax: 'function IdentityGeneratorIndex (idxTerm : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(idxTerm : Int)'
   types:
   - name: idxTerm
-    summary: 此輸入會被忽略，而且會定義為與 <xref:microsoft.quantum.simulation.generatorsystem> 使用者定義型別一致。
+    summary: 此輸入會被忽略，而且會定義為與<xref:microsoft.quantum.simulation.generatorsystem>使用者定義型別一致。
     isPrimitive: true
     uid: Int
 output:
@@ -18,9 +18,9 @@ output:
   - summary: 產生器索引，表示 Hamiltonian $H = $0 之下的演進。
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: 004eea82988c6a4f6c776802d5f4634f600ed404
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b498cc055bed2fcc69ac28548fc08b2bbaa74430
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065583"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683064"

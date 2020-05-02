@@ -4,7 +4,7 @@ name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: 產生大於或等於零且小於所提供上限的已均勻取樣隨機整數。
-remarks: 此函式會呼叫 <xref:microsoft.quantum.intrinsic.random>，因此其隨機性取決於 `Random`的執行。
+remarks: 此函式<xref:microsoft.quantum.intrinsic.random>會呼叫，因此其隨機性取決於的`Random`執行。
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
@@ -16,13 +16,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 從指定的間隔中，隨機地以一致的整數 $x $;也就是，使用 $ \Pr （x） = \frac{1}{\texttt{maxInt}} $。
+  - summary: 從指定的間隔中，隨機地以一致的整數 $x $;也就是，使用 $ \Pr （x） ={1}\Frac {\texttt{maxInt}} $。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 83db1cc0e58cfbf2e3da4af4c72f59ccde4fedf9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220023"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682743"

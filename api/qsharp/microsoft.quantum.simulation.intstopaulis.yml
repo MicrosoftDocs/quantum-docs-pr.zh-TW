@@ -9,21 +9,21 @@ input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    summary: 要轉換成 Pauli 運算子之範圍 `0..3` 的整數陣列。
+    summary: 要轉換成 Pauli 運算子之`0..3`範圍中的整數陣列。
     isArray: true
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[]
   types:
-  - summary: Pauli 運算子的陣列 `paulis` `Pauli[]` 與 `ints` 相同的長度，因此 `paulis[idxPauli]` 等於 `[PauliI, PauliX, PauliY, PauliZ]` 所指定 `ints[idxPauli]`的元素。
+  - summary: Pauli 運算子`paulis` `Pauli[]` `ints`的陣列，其長度與相等， `paulis[idxPauli]`等於所`[PauliI, PauliX, PauliY, PauliZ]`指定的元素。 `ints[idxPauli]`
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066977"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682608"

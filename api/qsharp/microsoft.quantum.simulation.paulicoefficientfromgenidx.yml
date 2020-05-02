@@ -3,24 +3,24 @@ uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
 name: PauliCoefficientFromGenIdx
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: 將 `GeneratorIndex`所描述的 Pauli 詞彙的係數解壓縮。
+summary: 將`GeneratorIndex`所描述的 Pauli 詞彙的係數解壓縮。
 syntax: 'function PauliCoefficientFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Double'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: 編碼 Pauli 詞彙的 `GeneratorIndex` 類型。
+    summary: '`GeneratorIndex`編碼 Pauli 詞彙的類型。'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: Double
   types:
-  - summary: '`GeneratorIndex`所描述之詞彙的係數。'
+  - summary: 所描述之詞彙的係數`GeneratorIndex`。
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: f4e3412028f11758e5e4dbf50616ede1ed6f294a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8fbf424210cde86aa57068f2f5d2b7a1c85033a7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065413"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682538"
