@@ -7,7 +7,7 @@ summary: >-
   執行 Knill 魔術 state 公司演算法。
 
 
-  假設有15份神奇狀態 $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}，$ $ 會產生一個高品質的複本。
+  針對神奇狀態 $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align} 的15個大約複本，$ $ 會產生一個較高品質的複本。
 remarks: >-
   我們會遵循 Knill 的演算法。
 
@@ -20,20 +20,20 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: 包含神奇狀態大約複本的十五個 qubits 的暫存器。 遵循此公司程式的應用程式，`roughMagic[0]` 將會包含一個高品質的複本，而註冊的其餘部分將會重設為 $ \ket{00\cdots 0} $ 狀態。
+    summary: 包含神奇狀態大約複本的十五個 qubits 的暫存器。 遵循此公司程式的應用， `roughMagic[0]`會包含一個較高品質的複本，而註冊的其餘部分將會重設為 $ \ket{00\cdots 0} $ 狀態。
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Bool
   types:
-  - summary: 如果 `true`，則程式成功，而且應該接受較高品質的複製。 如果 `false`，程式就會失敗，而且應該將暫存器的狀態視為未定義。
+  - summary: 如果`true`為，則程式成功，而且應該接受較高品質的複製。 如果`false`為，則程式會失敗，而且應該將暫存器的狀態視為未定義。
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226721"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682352"

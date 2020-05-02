@@ -8,13 +8,13 @@ summary: >-
 
 
   Hamiltonian $H = \ sum_ {j} \ Alpha_j P_j $ 是由 Pauli 詞彙總和 $P _j $ 所描述，每個字詞都有實際係數 $ \ Alpha_j $。
-remarks: 這是藉由準備和 unpreparing state $ \ sum_ {j} \sqrt{\ Alpha_j/\Alpha}\ket{j} $）來取得，並 <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> 和 <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>。
+remarks: 這是藉由準備和 unpreparing state $ \ sum_ {j} \sqrt{\ Alpha_j/\Alpha}\ket{j} $）來取得，並建立一個乘以控制<xref:microsoft.quantum.preparation.statepreparationpositivecoefficients>的<xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>單一和。
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: 描述 $H $ Pauli 詞彙總和的 `GeneratorSystem`
+    summary: '`GeneratorSystem` ，描述 $H $ Pauli 詞彙的總和'
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
@@ -29,15 +29,15 @@ output:
       ## <a name="second-parameter"></a>第二個參數
 
 
-      `BlockEncodingReflection` 單一 $U $ Hamiltonian $H $。 因為這個單一滿足 $U ^ 2 = I $，所以它也是一個反映。
+      Hamiltonian `BlockEncodingReflection` $H $ 的單一 $U $。 因為這個單一滿足 $U ^ 2 = I $，所以它也是一個反映。
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216130"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682550"

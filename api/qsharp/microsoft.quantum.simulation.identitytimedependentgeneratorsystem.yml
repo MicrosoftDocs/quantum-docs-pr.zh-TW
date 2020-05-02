@@ -14,9 +14,9 @@ output:
   - summary: 時間相依的產生器系統，代表所有 $s $ 之 Hamiltonian $H （s）的演進 = $0。
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 metadata:
-  ms.openlocfilehash: 348b97223c63422bf7ab9ea08e5a1e0ee3e31738
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e181d778ec0a7fdd3961780f27259a2501d5697e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065549"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683018"
