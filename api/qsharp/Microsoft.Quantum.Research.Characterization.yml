@@ -1,0 +1,14 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.research.characterization
+name: Microsoft.Quantum.Research.Characterization
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間提供量子特性和階段估計的先進研究方法。"
+operations:
+- uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
+  summary: 使用隨機的逐步解說來執行反復階段估計，以估計給定 oracle 和 eigenstate 的傳統測量結果的貝氏推斷。
+metadata:
+  ms.openlocfilehash: 8f4ca8b0f5f16f5eae8b6db42e1da32cfc3a778f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82706698"
