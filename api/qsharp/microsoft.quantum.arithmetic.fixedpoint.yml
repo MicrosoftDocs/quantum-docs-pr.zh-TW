@@ -6,9 +6,9 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: 代表 qubits 編碼固定點數的暫存器。 包含一個整數，其等於二進位點左側的 qubits 數，也就是權數大於或等於1的 qubits，以及一個量子暫存器。
 syntax: newtype FixedPoint = (Int, Qubit[]);
 metadata:
-  ms.openlocfilehash: 4ab209ab14486893ea3b23b32e14e6c8a05da514
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a7dfac25f4a35bea5ef11cff090a8619f0457ce2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219071"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679625"

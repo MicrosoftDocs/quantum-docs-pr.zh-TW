@@ -7,10 +7,10 @@ summary: >-
   在傳統整數與 qubits 的暫存器所代表的整數之間套用位 XOR 運算。
 
 
-  以整數中的1位為基礎，將 `X` 作業套用至以位元組為基的暫存器中的 qubits。
+  以`X`整數中的1位為基礎，將作業套用至以小到基的暫存器中的 qubits。
 
 
-  讓我們表示 `value`，並讓 y 成為 `target`中編碼的不帶正負號整數，然後 `InPlaceXorLE` 執行下列對應所提供的作業： $ \ket{y}\rightarrow \ket{y\oplus a} $，其中 $ \oplus $ 是位互斥 OR 運算子。
+  讓我們以`value`表示，並讓 y 成為以`target`不帶正負號的整數`InPlaceXorLE`編碼，然後執行下列對應所提供的作業： $ \ket{y}\rightarrow \ket{y\oplus a} $，其中 $ \oplus $ 是位互斥 OR 運算子。
 syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: 用來儲存 `value` 的量子暫存器，以位元組到小的編碼方式。
+    summary: 用來儲存`value`以位元組到小的編碼方式的量子暫存器。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9d3d837d92537cc5d51a80e8e1c83c230b7acc28
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 27568274d343242f3b3bd0eef8de6e48d546de1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871170"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679919"

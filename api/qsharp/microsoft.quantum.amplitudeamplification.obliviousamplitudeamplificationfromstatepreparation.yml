@@ -5,13 +5,13 @@ type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: 遺忘式以 oracles 進行部分反射的振幅放大。
 remarks: >-
-  這會在輔助啟動和目標狀態的形式上，比 `AmpAmpObliviousByReflectionPhases`更嚴格的條件。
+  這會在輔助啟動和目標狀態的形式上，比中`AmpAmpObliviousByReflectionPhases`更嚴格的條件。
 
-  假設 $A \ket{0}\_f\ket{0}\_A = \ket{\text{start}}\_{fa} $ 從計算基礎 $ \ket\_{0}f\ket \_$ 準備輔助啟動狀態 $ \ket{\text{start}}{0}{fa} $。
+  假設 $A{0}\_\ket f\ket{0}\_A = \ket{\text{start}}\_{fa} $ 從計算基礎 $ \ket\_{0}\_f\ket{0}$ 準備輔助啟動狀態 $ \ket{\text{start}} {fa} $。
 
-  假設目標狀態是以 $ \ket{1}\_f $ 標示。
+  假設目標狀態是以 $ \ket{1}\_f $ 標記。
 
-  假設 \begin{align} O\ket {\ text {start}}\_{fa} \ket{\psi}\_s = \lambda\ket{1}\_f\ket {\ text {任何}}\_a\ket {\ text {target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，\end{align} 適用于某些單一的 $U $。
+  假設\_\begin{align} O\ket {\ text {start}} {fa} \ket{\psi}\_s = \lambda\ket{1}\_f\ket {\ text {任何}}\_a\ket {\ text {target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，\end{align} 適用于某些單一 $U $。
 syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
@@ -23,7 +23,7 @@ input:
     summary: 準備輔助啟動狀態的單一 oracle $A $
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: '`ObliviousOracle` 的單一 oracle $O $ 類型，可在輔助和系統暫存器上共同運作'
+    summary: 可在輔助和系統緩存`ObliviousOracle`器上共同運作之類型的單一 oracle $O $
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: idxFlagQubit
     summary: Qubit 旗標注冊的索引
@@ -50,9 +50,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: fa44068c55a1bb92f8827095889f9c3b4d6f1011
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: adc6f48a5d335eb9dc92dcb13425de900b5c8563
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872439"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680133"

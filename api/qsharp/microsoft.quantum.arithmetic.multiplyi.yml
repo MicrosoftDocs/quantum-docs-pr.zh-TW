@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 將整數 `xs` 乘以整數 `ys` 並將結果儲存在 `result`中，其一開始必須為零。
+summary: 將整數`xs`乘以整數`ys` ，並將結果儲存`result`在中，其一開始必須為零。
 remarks: >-
   會使用標準的 shift 和 add 方法來執行乘法。
 
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5af23390ef67bf339e816e4e8af1d3f52847aaa7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fcb55b47c0d5ca82736e8c3da14190daffd2b414
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218731"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679480"

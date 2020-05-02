@@ -17,7 +17,7 @@ input:
     summary: 要評估多項式的輸入固定點數位。
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: 輸出固定點數位，將會保存 P （x）。 一開始必須處於 state $ \ket{0}$。
+    summary: 輸出固定點數位，將會保存 P （x）。 一開始必須是 state ${0}\ket $。
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ae6ab137b2c257a98b0ec777c19212d8732f619
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae149fe3ef12b5384bd08b62daabd6368e130399
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219105"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679661"

@@ -7,7 +7,7 @@ summary: >-
   使用階段旋轉，將不帶正負號的量子暫存器遞增為傳統整數。
 
 
-  假設 `target` 將不帶正負號的整數編碼 $x $ （以位元組為小的編碼），而且該 `increment` 等於 $a $。
+  假設以`target`位元組由小到大的編碼方式，將`increment`不帶正負號的整數 $x $ 編碼，且等於 $a $。
 
   然後，此作業會執行單一 $ \ket{x} \mapsto \ket{x + a} $，其中的加法會執行模數 $ 2 ^ n $，其中 $n = \texttt{Length （target！）}$.
 remarks: >-
@@ -21,7 +21,7 @@ input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
-    summary: 用來遞增 `target` 的整數。
+    summary: 用來遞增的`target`整數。
     isPrimitive: true
     uid: Int
   - name: target
@@ -39,9 +39,9 @@ seeAlso:
 - incrementbyintegerbe
 - incrementbyintegerle
 metadata:
-  ms.openlocfilehash: 379e643826ca54e123c8b855f4bba48a9d79a137
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2893d432b4043bbacb425f3ae42cbbdd3d4dc225
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219037"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679525"

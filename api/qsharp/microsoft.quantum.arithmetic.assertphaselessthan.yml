@@ -3,18 +3,18 @@ uid: microsoft.quantum.arithmetic.assertphaselessthan
 name: AssertPhaseLessThan
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 判斷 PhaseLittleEndian 中編碼的 `number` 小於 `value`。
+summary: 在 PhaseLittleEndian 中`number`編碼的判斷提示小於`value`。
 remarks: 此作業的受控制版本會忽略控制項。
 syntax: 'operation AssertPhaseLessThan (value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: value
-    summary: '`number` 必須小於此。'
+    summary: '`number`必須小於這個。'
     isPrimitive: true
     uid: Int
   - name: number
-    summary: 與 `value`比較的不帶正負號整數。
+    summary: 與比較的不帶正負`value`號整數。
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -25,9 +25,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 391e90783666da5d1549a26f2ad828863aa7dd3b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f5943bf2275cf3e94037113595686dd04f12b38e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221417"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679876"

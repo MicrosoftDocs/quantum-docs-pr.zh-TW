@@ -8,15 +8,15 @@ summary: >-
 
 
   例如，如果 $ \ket{x} $ 是以計算為基礎的 $x 整數的位元組由小到大編碼，則 $ \operatorname{QFTLE} \ket{x} $ 就是 QFT 中 $x $ 的編碼方式。
-remarks: 我們會將 `PhaseLittleEndian` 縮寫為檔中的 `PhaseLE`。
+remarks: 我們在`PhaseLittleEndian`檔`PhaseLE`中以縮寫。
 syntax: newtype PhaseLittleEndian = Qubit[];
 seeAlso:
 - qft
 - qftle
 metadata:
-  ms.openlocfilehash: 8efb8b58ff7ee5c0530abfb81792366f6990997e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a4c547a88ef49de180f68534f4f61fb1062a4764
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218714"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679438"

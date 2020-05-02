@@ -16,7 +16,7 @@ input:
     summary: 要比較的第二個固定點數位。
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: 比較的結果。 如果 `fp1 > fp2`，將會翻轉。
+    summary: 比較的結果。 如果`fp1 > fp2`為，則會翻轉。
     isPrimitive: true
     uid: Qubit
 output:
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6a7e87a53d91c928d45719dea8d7179ac347ec70
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 851baa02ebf746966b5534a96f1c1bc285632bc2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221281"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679807"

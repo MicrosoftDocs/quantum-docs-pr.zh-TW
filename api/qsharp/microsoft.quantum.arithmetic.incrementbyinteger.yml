@@ -7,7 +7,7 @@ summary: >-
   使用階段旋轉，將不帶正負號的量子暫存器遞增為傳統整數。
 
 
-  假設 `target` 將不帶正負號的整數編碼 $x $ （以位元組為小的編碼），而且該 `increment` 等於 $a $。
+  假設以`target`位元組由小到大的編碼方式，將`increment`不帶正負號的整數 $x $ 編碼，且等於 $a $。
 
   然後，此作業會執行單一 $ \ket{x} \mapsto \ket{x + a} $，其中的加法會執行模數 $ 2 ^ n $，其中 $n = \texttt{Length （target！）}$.
 syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
@@ -15,7 +15,7 @@ input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: increment
-    summary: 用來遞增 `target` 的整數。
+    summary: 用來遞增的`target`整數。
     isPrimitive: true
     uid: Int
   - name: target
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d05ed867e62f4f7474319ffe23dcd23aa34675c5
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: c07015f69d9cab08b287c383230fe79b5d67d6a0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871153"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679547"
