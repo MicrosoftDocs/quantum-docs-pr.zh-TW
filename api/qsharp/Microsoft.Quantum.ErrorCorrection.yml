@@ -20,12 +20,12 @@ functions:
 - uid: microsoft.quantum.errorcorrection.steanecoderecoveryz
   summary: ⟦7，1，3⟧ Steane 量子代碼之「穩定」群組的 Z 部分的解碼器。
 - uid: microsoft.quantum.errorcorrection.tablelookuprecovery
-  summary: 針對指定之 qubits 暫存器上的 Pauli 作業，此函式會傳回類型的物件，`RecoveryFn` 其中包含執行與指定的 Pauli 作業陣列相關的資料表查閱解碼所需的所有資訊。
+  summary: 針對指定之 qubits 暫存器上的 Pauli 作業，此函式會傳回類型`RecoveryFn`的物件，其中包含執行與指定之 Pauli 作業陣列相關的資料表查閱解碼所需的所有資訊。
 operations:
 - uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  summary: "\n> [!WARNING]\n> 取代\n\nBitFlipDecoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\"。\n請使用 @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nBitFlipDecoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\"。\n請使用 @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"。"
 - uid: microsoft.quantum.errorcorrection.bitflipencoder
-  summary: "\n> [!WARNING]\n> 取代\n\nBitFlipEncoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"。\n請使用 @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nBitFlipEncoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"。\n請使用 @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"。"
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
   summary: 從 [3，1，3]/⟦3，1，1⟧位翻轉程式碼進行解碼。
 - uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
@@ -39,9 +39,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.encodeintosteanecode
   summary: 編碼作業，會將未編碼的量子暫存器對應到⟦7，1，3⟧ Steane 量子代碼底下的編碼量子暫存器。
 - uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  summary: "\n> [!WARNING]\n> 取代\n\nFiveQubitCodeDecoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"。\n請使用 @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nFiveQubitCodeDecoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"。\n請使用 @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"。"
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
-  summary: "\n> [!WARNING]\n> 取代\n\nFiveQubitCodeEncoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"。\n請使用 @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nFiveQubitCodeEncoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"。\n請使用 @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"。"
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
   summary: 將 Y 軸旋轉的單一 qubit 乘以π/4。
 - uid: microsoft.quantum.errorcorrection.knilldistill
@@ -49,16 +49,16 @@ operations:
 - uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
   summary: 測量一組指定的穩定器群組產生器。
 - uid: microsoft.quantum.errorcorrection.recover
-  summary: 根據 `QECC` 類型所描述的量子代碼，執行單一錯誤更正。
+  summary: 依據`QECC`類型所描述的量子代碼，執行單一錯誤更正。
 - uid: microsoft.quantum.errorcorrection.recovercss
-  summary: 根據 `CSS` 類型所描述的量子代碼，執行單一錯誤更正。
+  summary: 依據`CSS`類型所描述的量子代碼，執行單一錯誤更正。
 - uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  summary: "\n> [!WARNING]\n> 取代\n\nSteaneCodeDecoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.decodefromsteanecode\"。\n請使用 @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nSteaneCodeDecoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.decodefromsteanecode\"。\n請使用 @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"。"
 - uid: microsoft.quantum.errorcorrection.steanecodeencoder
-  summary: "\n> [!WARNING]\n> 取代\n\nSteaneCodeEncoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.encodeintosteanecode\"。\n請使用 @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nSteaneCodeEncoder 已被取代。 請改用 @\"microsoft.quantum.errorcorrection.encodeintosteanecode\"。\n請使用 @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"。"
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css
-  summary: 代表 Calderbank –快速鍵– Steane （CSS）程式碼，如其編碼器、解碼器，以及分別用於 `X` 和 `Z` 錯誤的症狀測量程式所定義。
+  summary: 分別代表 Calderbank –快速鍵– Steane （CSS）程式碼，如其編碼器、解碼器和其每個`X` `Z`錯誤的症狀測量程式所定義。
 - uid: microsoft.quantum.errorcorrection.decodeop
   summary: >-
     代表將編碼的暫存器解碼成實體暫存器的作業，以及用來記錄症狀的臨時 qubits。
@@ -72,19 +72,19 @@ newtypes:
 
     第一個引數會被視為將會編碼的實體暫存器，而第二個引數則會被視為將使用的臨時暫存器。
 - uid: microsoft.quantum.errorcorrection.logicalregister
-  summary: 輸入可編碼邏輯 qubits 的實體 qubits `Qubit[]` 的註冊。
+  summary: 針對編碼邏輯 qubits 的實體`Qubit[]` qubits 註冊輸入。
 - uid: microsoft.quantum.errorcorrection.qecc
   summary: 代表錯誤更正的程式碼，如其編碼器、解碼器和症狀測量程式所定義。
 - uid: microsoft.quantum.errorcorrection.recoveryfn
-  summary: 適用于函式的類型，會將錯誤的症狀對應至一系列可更正偵測到之錯誤的 `Pauli[]` 作業。
+  summary: 適用于函式的類型，其會將錯誤的`Pauli[]`症狀對應至可更正偵測到之錯誤的一連串作業。
 - uid: microsoft.quantum.errorcorrection.syndrome
-  summary: 測量結果的類型，`Result[]` 指定量子代碼的錯誤症狀。
+  summary: 指定量子代碼的`Result[]`錯誤症狀之測量結果的類型。
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: 表示用來測量錯誤更正程式碼區塊之症狀的作業。
 metadata:
-  ms.openlocfilehash: 0a149810314453e816c7754dd535b2f3bb7d8e58
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: b4d7aaa55fee7e99b9c96ebf3cecb36706a66062
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870783"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673320"

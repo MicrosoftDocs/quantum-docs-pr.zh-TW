@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: 針對陣列的元素所定義的陣列和述詞，會傳回包含符合述詞之元素的陣列。
 - uid: microsoft.quantum.arrays.fold
-  summary: 透過傳回 `f(f(f(initialState, array[0]), array[1]), ...)`的陣列 `array`，逐一查看函數 `f`。
+  summary: '`f`透過陣列`array`逐一查看函式，傳回`f(f(f(initialState, array[0]), array[1]), ...)`。'
 - uid: microsoft.quantum.arrays.head
   summary: 傳回陣列的第一個元素。
 - uid: microsoft.quantum.arrays.indexof
@@ -69,9 +69,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: 針對陣列的元素所定義的陣列和作業，會傳回新的陣列，其中包含作業下原始陣列的影像。
 metadata:
-  ms.openlocfilehash: 422564f632efd7a6d093d78358a15ee012f918f8
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320733"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673399"

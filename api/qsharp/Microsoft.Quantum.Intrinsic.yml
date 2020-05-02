@@ -16,7 +16,7 @@ operations:
     將受控制的 NOT （CNOT-CONTAINS）閘道套用至一對 qubits。
 
 
-    \begin{align} \operatorname{CNOT} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}, \end{align}
+    \begin{align} \operatorname{CNOT} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 \\ \\ & 0 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}，\end{align}
 
 
     其中，資料列和資料行的排序方式就像在「配量概念指南」中。
@@ -25,19 +25,19 @@ operations:
     套用多 qubit Pauli 運算子的指數。
 
 
-    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}，\end{align}，其中 $P _i $ 是 $i 的 `paulis`$ th 元素，其中 $N = $`Length(paulis)`。
+    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}，\end{align}，其中 $P _i $ 是的 $i $ th 元素`paulis`，其中 $N = $`Length(paulis)`。
 - uid: microsoft.quantum.intrinsic.expfrac
   summary: >-
     以 dyadic 分數所指定的引數，套用多 qubit Pauli 運算子的指數。
 
 
-    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}，\end{align} 其中 $P _i $ 是 $i 的 `paulis`$ th 元素，其中 $N = $`Length(paulis)`。
+    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}，\end{align}，其中 $P _i $ 是的 $i $ th 元素`paulis`，其中 $N = $`Length(paulis)`。
 - uid: microsoft.quantum.intrinsic.h
   summary: >-
     將 Hadamard 轉換套用至單一 qubit。
 
 
-    \begin{align} H \mathrel{： =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ 1 &-1 \end{bmatrix}。
+    \begin{align} H \mathrel{： =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ \\ 1 &-1 \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.i
@@ -55,18 +55,18 @@ operations:
     在指定的 Pauli 基底中執行一或多個 qubits 的聯合測量。
 
 
-    輸出結果是由散發所提供： \begin{align} \Pr （\texttt{Zero} | \ket{\psi}） = \frac12 \braket{\psi \mid | \left （\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right） \mid | \psi}，\end{align}，其中 $P _i $ 是的 $i $ th 元素 `bases`和，其中 $N = \texttt{Length} （\texttt{bases}） $。
+    輸出結果是由散發所提供： \begin{align} \Pr （\texttt{Zero} | \ket{\psi}） = \frac12 \braket{\psi \mid | \left （\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right） \mid | \psi}、\end{align}，其中 $P _i $ 是的 $i $ th 元素`bases`，其中 $N = \texttt{Length} （\texttt{bases}） $。
 
-    也就是說，量測會傳回 `Result` $d $，讓觀察到的測量效果的 eigenvalue 是 $ （-1） ^ d $。
+    也就是說，測量結果會傳回`Result` $d $，讓觀察到的測量效果的 eigenvalue 是 $ （-1） ^ d $。
 - uid: microsoft.quantum.intrinsic.r
   summary: >-
     針對指定的 Pauli 軸套用旋轉。
 
 
-    \begin{align} R_ {\mu} （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_ {\mu}/2}，\end{align}，其中 $ \mu \in \{I，X，Y，Z\}$。
+    \begin{align} R_ {\mu} （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_ {\mu}/2}，\end{align}，其中 $ \mu \{\in i，X，Y，\}Z $。
 - uid: microsoft.quantum.intrinsic.r1
   summary: >-
-    依據指定的角度，套用關於 $ \ket{1}$ 狀態的旋轉。
+    依據指定的角度，套用關於{1}$ \ket $ 狀態的旋轉。
 
 
     \begin{align} R_1 （\theta） \mathrel{： =} \operatorname{diag} （1，e ^ {i\theta}）。
@@ -74,7 +74,7 @@ operations:
     \end{align}
 - uid: microsoft.quantum.intrinsic.r1frac
   summary: >-
-    依據指定為 dyadic 分數的角度，套用關於 $ \ket{1}$ 狀態的旋轉。
+    以指定為 dyadic 分數的角度{1}，套用關於 $ \ket $ 狀態的旋轉。
 
 
     \begin{align} R_1 （n，k） \mathrel{： =} \operatorname{diag} （1，e ^ {i \pi k/2 ^ n}）。
@@ -84,10 +84,10 @@ operations:
 
     > [!WARNING]
 
-    > 這項作業會使用 @"microsoft.quantum.intrinsic.r"中的**相反**正負號慣例，而且不包含 @"microsoft.quantum.intrinsic.r1"所包含 $ 1/2 $ 的因素。
+    > 這項作業會**opposite**使用中@"microsoft.quantum.intrinsic.r"的相反正負號慣例，而且不包含所包含之 $ 1/2 $ @"microsoft.quantum.intrinsic.r1"的因素。
 - uid: microsoft.quantum.intrinsic.random
   summary: >-
-    隨機作業會採用 double 的陣列做為輸入，並將隨機選取的索引當做 `Int`傳回陣列。
+    隨機作業會採用 double 的陣列做為輸入，並將隨機選取的索引以形式傳回至陣列`Int`。
 
     選取特定索引的機率會與該索引的 array 元素值成正比。
 
@@ -101,34 +101,22 @@ operations:
     以指定為 dyadic 分數的角度，對指定的 Pauli 軸套用旋轉。
 
 
-    \begin{align} R_ {\mu} （n，k） \mathrel{： =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}，\end{align}，其中 $ \mu \in \{I，X，Y，Z\}$。
+    \begin{align} R_ {\mu} （n，k） \mathrel{： =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}，\end{align}，其中 $ \mu \{\in i，X，Y，\}Z $。
 
 
     > [!WARNING]
 
-    > 這種作業會使用 @"microsoft.quantum.intrinsic.r"的**相反**正負號慣例。
+    > 這種作業會使用的**相反**正負@"microsoft.quantum.intrinsic.r"號慣例。
 - uid: microsoft.quantum.intrinsic.rx
-  summary: >-
-    依據指定的角度，套用關於 $x $ 軸的旋轉。
-
-
-    \begin{align} R_x （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_x/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-i\sin \frac{\theta}{2}\\\\-i\sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}。
-
-    \end{align}
+  summary: "依據指定的角度，套用關於 $x $ 軸的旋轉。\n\n\\begin{align} R_x （\\theta） \\mathrel{： =} e ^ {-i \\theta \\ sigma_x/2} = \\begin{bmatrix} \\cos \\frac{\\theta}{2} &-i\\sin \\frac{\\theta}{2} \\\\ \\\\ -i\\sin \\frac{\\theta}{2} & \\cos \\frac{\\theta}{2} \\end{bmatrix}。  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.ry
-  summary: >-
-    依據指定的角度，套用關於 $y $ 軸的旋轉。
-
-
-    \begin{align} R_y （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_y/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-\sin \frac{\theta}{2}\\\\ \sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}。
-
-    \end{align}
+  summary: "依據指定的角度，套用關於 $y $ 軸的旋轉。\n\n\\begin{align} R_y （\\theta） \\mathrel{： =} e ^ {-i \\theta \\ sigma_y/2} = \\begin{bmatrix} \\cos \\frac{\\theta}{2} &-\\sin \\frac{\\theta}{2} \\\\ \\\\ \\sin \\frac{\\theta}{2} & \\cos \\frac{\\theta}{2} \\end{bmatrix}。  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.rz
   summary: >-
     依據指定的角度，套用關於 $z $ 軸的旋轉。
 
 
-    \begin{align} R_z （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \theta/2} \end{bmatrix}。
+    \begin{align} R_z （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \theta/2} \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.s
@@ -136,7 +124,7 @@ operations:
     將π/4 階段閘道套用至單一 qubit。
 
 
-    \begin{align} S \mathrel{： =} \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}。
+    \begin{align} S \mathrel{： =} \begin{bmatrix} 1 & 0 \\ \\ 0 & i \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.swap
@@ -144,7 +132,7 @@ operations:
     將交換閘道套用至一對 qubits。
 
 
-    \begin{align} \operatorname{SWAP} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
+    \begin{align} \operatorname{SWAP} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 \\ \\ & 0 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}，\end{align}
 
 
     其中，資料列和資料行的排序方式就像在「配量概念指南」中。
@@ -153,7 +141,7 @@ operations:
     將π/8 閘道套用至單一 qubit。
 
 
-    \begin{align} T \mathrel{： =} \begin{bmatrix} 1 & 0 \\\\ 0 & e ^ {i \pi/4} \end{bmatrix}。
+    \begin{align} T \mathrel{： =} \begin{bmatrix} 1 & 0 \\ \\ 0 & e ^ {i \pi/4} \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.x
@@ -161,7 +149,7 @@ operations:
     套用 Pauli $X $ 閘道。
 
 
-    \begin{align} \ sigma_x \mathrel{： =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}。
+    \begin{align} \ sigma_x \mathrel{： =} \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.y
@@ -169,7 +157,7 @@ operations:
     套用 Pauli $Y $ 閘道。
 
 
-    \begin{align} \ sigma_y \mathrel{： =} \begin{bmatrix} 0 &-i \\\\ 我 & 0 \end{bmatrix}。
+    \begin{align} \ sigma_y \mathrel{： =} \begin{bmatrix} 0 &-i \\ \\ & 0 \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.z
@@ -177,13 +165,13 @@ operations:
     套用 Pauli $Z $ 閘道。
 
 
-    \begin{align} \ sigma_z \mathrel{： =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}。
+    \begin{align} \ sigma_z \mathrel{： =} \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix}。
 
     \end{align}
 metadata:
-  ms.openlocfilehash: a2f80ca98d86e5a1457efb6dad34c60d6ef75a2e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 303e6d0376841672b9c8dbd3d8bd47ff7b24916a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056353"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673234"

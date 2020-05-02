@@ -3,81 +3,81 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: "\n> [!WARNING]\n> 取代\n\nAbsB 已被取代。 請改用 @\"microsoft.quantum.math.absl\"。\n請使用 @\"microsoft.quantum.math.absl\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nAbsB 已被取代。 請改用 @\"microsoft.quantum.math.absl\"。\n請使用 @\"microsoft.quantum.math.absl\"。"
 - uid: microsoft.quantum.extensions.math.absd
-  summary: "\n> [!WARNING]\n> 取代\n\nAbsD 已被取代。 請改用 @\"microsoft.quantum.math.absd\"。\n請使用 @\"microsoft.quantum.math.absd\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nAbsD 已被取代。 請改用 @\"microsoft.quantum.math.absd\"。\n請使用 @\"microsoft.quantum.math.absd\"。"
 - uid: microsoft.quantum.extensions.math.absi
-  summary: "\n> [!WARNING]\n> 取代\n\nAbsI 已被取代。 請改用 @\"microsoft.quantum.math.absi\"。\n請使用 @\"microsoft.quantum.math.absi\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nAbsI 已被取代。 請改用 @\"microsoft.quantum.math.absi\"。\n請使用 @\"microsoft.quantum.math.absi\"。"
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: "\n> [!WARNING]\n> 取代\n\nArcCos 已被取代。 請改用 @\"microsoft.quantum.math.arccos\"。\n請使用 @\"microsoft.quantum.math.arccos\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nArcCos 已被取代。 請改用 @\"microsoft.quantum.math.arccos\"。\n請使用 @\"microsoft.quantum.math.arccos\"。"
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: "\n> [!WARNING]\n> 取代\n\nArcSin 已被取代。 請改用 @\"microsoft.quantum.math.arcsin\"。\n請使用 @\"microsoft.quantum.math.arcsin\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nArcSin 已被取代。 請改用 @\"microsoft.quantum.math.arcsin\"。\n請使用 @\"microsoft.quantum.math.arcsin\"。"
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: "\n> [!WARNING]\n> 取代\n\nArcTan 已被取代。 請改用 @\"microsoft.quantum.math.arctan\"。\n請使用 @\"microsoft.quantum.math.arctan\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nArcTan 已被取代。 請改用 @\"microsoft.quantum.math.arctan\"。\n請使用 @\"microsoft.quantum.math.arctan\"。"
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: "\n> [!WARNING]\n> 取代\n\nArcTan2 已被取代。 請改用 @\"microsoft.quantum.math.arctan2\"。\n請使用 @\"microsoft.quantum.math.arctan2\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nArcTan2 已被取代。 請改用 @\"microsoft.quantum.math.arctan2\"。\n請使用 @\"microsoft.quantum.math.arctan2\"。"
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: "\n> [!WARNING]\n> 取代\n\n上限已被取代。 請改用 @\"microsoft.quantum.math.ceiling\"。\n請使用 @\"microsoft.quantum.math.ceiling\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\n上限已被取代。 請改用 @\"microsoft.quantum.math.ceiling\"。\n請使用 @\"microsoft.quantum.math.ceiling\"。"
 - uid: microsoft.quantum.extensions.math.cos
-  summary: "\n> [!WARNING]\n> 取代\n\nCos 已被取代。 請改用 @\"microsoft.quantum.math.cos\"。\n請使用 @\"microsoft.quantum.math.cos\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nCos 已被取代。 請改用 @\"microsoft.quantum.math.cos\"。\n請使用 @\"microsoft.quantum.math.cos\"。"
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: "\n> [!WARNING]\n> 取代\n\nCosh 已被取代。 請改用 @\"microsoft.quantum.math.cosh\"。\n請使用 @\"microsoft.quantum.math.cosh\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nCosh 已被取代。 請改用 @\"microsoft.quantum.math.cosh\"。\n請使用 @\"microsoft.quantum.math.cosh\"。"
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: "\n> [!WARNING]\n> 取代\n\nDivRemB 已被取代。 請改用 @\"microsoft.quantum.math.divreml\"。\n請使用 @\"microsoft.quantum.math.divreml\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nDivRemB 已被取代。 請改用 @\"microsoft.quantum.math.divreml\"。\n請使用 @\"microsoft.quantum.math.divreml\"。"
 - uid: microsoft.quantum.extensions.math.e
-  summary: "\n> [!WARNING]\n> 取代\n\nE 已被取代。 請使用 @\"microsoft.quantum.math.e\" 時所收集。\n請使用 @\"microsoft.quantum.math.e\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nE 已被取代。 請使用@\"microsoft.quantum.math.e\" 加以取代。\n請使用 @\"microsoft.quantum.math.e\"。"
 - uid: microsoft.quantum.extensions.math.expd
-  summary: "\n> [!WARNING]\n> 取代\n\nExpD 已被取代。 請改用 @\"microsoft.quantum.math.expd\"。\n請使用 @\"microsoft.quantum.math.expd\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nExpD 已被取代。 請改用 @\"microsoft.quantum.math.expd\"。\n請使用 @\"microsoft.quantum.math.expd\"。"
 - uid: microsoft.quantum.extensions.math.floor
-  summary: "\n> [!WARNING]\n> 取代\n\n樓層已被取代。 請改用 @\"microsoft.quantum.math.floor\"。\n請使用 @\"microsoft.quantum.math.floor\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\n樓層已被取代。 請改用 @\"microsoft.quantum.math.floor\"。\n請使用 @\"microsoft.quantum.math.floor\"。"
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: "\n> [!WARNING]\n> 取代\n\nIEEERemainder 已被取代。 請改用 @\"microsoft.quantum.math.ieeeremainder\"。\n請使用 @\"microsoft.quantum.math.ieeeremainder\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nIEEERemainder 已被取代。 請改用 @\"microsoft.quantum.math.ieeeremainder\"。\n請使用 @\"microsoft.quantum.math.ieeeremainder\"。"
 - uid: microsoft.quantum.extensions.math.log
-  summary: "\n> [!WARNING]\n> 取代\n\n記錄檔已被取代。 請改用 @\"microsoft.quantum.math.log\"。\n請使用 @\"microsoft.quantum.math.log\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\n記錄檔已被取代。 請改用 @\"microsoft.quantum.math.log\"。\n請使用 @\"microsoft.quantum.math.log\"。"
 - uid: microsoft.quantum.extensions.math.log10
-  summary: "\n> [!WARNING]\n> 取代\n\nLog10 已被取代。 請改用 @\"microsoft.quantum.math.log10\"。\n請使用 @\"microsoft.quantum.math.log10\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nLog10 已被取代。 請改用 @\"microsoft.quantum.math.log10\"。\n請使用 @\"microsoft.quantum.math.log10\"。"
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: "\n> [!WARNING]\n> 取代\n\nMaxB 已被取代。 請改用 @\"microsoft.quantum.math.maxl\"。\n請使用 @\"microsoft.quantum.math.maxl\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nMaxB 已被取代。 請改用 @\"microsoft.quantum.math.maxl\"。\n請使用 @\"microsoft.quantum.math.maxl\"。"
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: "\n> [!WARNING]\n> 取代\n\nMaxD 已被取代。 請改用 @\"microsoft.quantum.math.maxd\"。\n請使用 @\"microsoft.quantum.math.maxd\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nMaxD 已被取代。 請改用 @\"microsoft.quantum.math.maxd\"。\n請使用 @\"microsoft.quantum.math.maxd\"。"
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: "\n> [!WARNING]\n> 取代\n\nMaxI 已被取代。 請改用 @\"microsoft.quantum.math.maxi\"。\n請使用 @\"microsoft.quantum.math.maxi\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nMaxI 已被取代。 請改用 @\"microsoft.quantum.math.maxi\"。\n請使用 @\"microsoft.quantum.math.maxi\"。"
 - uid: microsoft.quantum.extensions.math.minb
-  summary: "\n> [!WARNING]\n> 取代\n\nMinB 已被取代。 請改用 @\"microsoft.quantum.math.minl\"。\n請使用 @\"microsoft.quantum.math.minl\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nMinB 已被取代。 請改用 @\"microsoft.quantum.math.minl\"。\n請使用 @\"microsoft.quantum.math.minl\"。"
 - uid: microsoft.quantum.extensions.math.mind
-  summary: "\n> [!WARNING]\n> 取代\n\n想法已被取代。 請改用 @\"microsoft.quantum.math.mind\"。\n請使用 @\"microsoft.quantum.math.mind\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\n想法已被取代。 請改用 @\"microsoft.quantum.math.mind\"。\n請使用 @\"microsoft.quantum.math.mind\"。"
 - uid: microsoft.quantum.extensions.math.mini
-  summary: "\n> [!WARNING]\n> 取代\n\n迷你已被取代。 請改用 @\"microsoft.quantum.math.mini\"。\n請使用 @\"microsoft.quantum.math.mini\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\n迷你已被取代。 請改用 @\"microsoft.quantum.math.mini\"。\n請使用 @\"microsoft.quantum.math.mini\"。"
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: "\n> [!WARNING]\n> 取代\n\nModPowB 已被取代。 請改用 @\"microsoft.quantum.math.modpowl\"。\n請使用 @\"microsoft.quantum.math.modpowl\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nModPowB 已被取代。 請改用 @\"microsoft.quantum.math.modpowl\"。\n請使用 @\"microsoft.quantum.math.modpowl\"。"
 - uid: microsoft.quantum.extensions.math.pi
-  summary: "\n> [!WARNING]\n> 取代\n\nPI 已被取代。 請改用 @\"microsoft.quantum.math.pi\"。\n請使用 @\"microsoft.quantum.math.pi\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nPI 已被取代。 請改用 @\"microsoft.quantum.math.pi\"。\n請使用 @\"microsoft.quantum.math.pi\"。"
 - uid: microsoft.quantum.extensions.math.powd
-  summary: "\n> [!WARNING]\n> 取代\n\nPowD 已被取代。 請改用 @\"microsoft.quantum.math.powd\"。\n請使用 @\"microsoft.quantum.math.powd\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nPowD 已被取代。 請改用 @\"microsoft.quantum.math.powd\"。\n請使用 @\"microsoft.quantum.math.powd\"。"
 - uid: microsoft.quantum.extensions.math.round
-  summary: "\n> [!WARNING]\n> 取代\n\nRound 已被取代。 請改用 @\"microsoft.quantum.math.round\"。\n請使用 @\"microsoft.quantum.math.round\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nRound 已被取代。 請改用 @\"microsoft.quantum.math.round\"。\n請使用 @\"microsoft.quantum.math.round\"。"
 - uid: microsoft.quantum.extensions.math.signb
-  summary: "\n> [!WARNING]\n> 取代\n\nSignB 已被取代。 請改用 @\"microsoft.quantum.math.signl\"。\n請使用 @\"microsoft.quantum.math.signl\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nSignB 已被取代。 請改用 @\"microsoft.quantum.math.signl\"。\n請使用 @\"microsoft.quantum.math.signl\"。"
 - uid: microsoft.quantum.extensions.math.signd
-  summary: "\n> [!WARNING]\n> 取代\n\nSignD 已被取代。 請改用 @\"microsoft.quantum.math.signd\"。\n請使用 @\"microsoft.quantum.math.signd\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nSignD 已被取代。 請改用 @\"microsoft.quantum.math.signd\"。\n請使用 @\"microsoft.quantum.math.signd\"。"
 - uid: microsoft.quantum.extensions.math.signi
-  summary: "\n> [!WARNING]\n> 取代\n\nSignI 已被取代。 請改用 @\"microsoft.quantum.math.signi\"。\n請使用 @\"microsoft.quantum.math.signi\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nSignI 已被取代。 請改用 @\"microsoft.quantum.math.signi\"。\n請使用 @\"microsoft.quantum.math.signi\"。"
 - uid: microsoft.quantum.extensions.math.sin
-  summary: "\n> [!WARNING]\n> 取代\n\nSin 已被取代。 請改用 @\"microsoft.quantum.math.sin\"。\n請使用 @\"microsoft.quantum.math.sin\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nSin 已被取代。 請改用 @\"microsoft.quantum.math.sin\"。\n請使用 @\"microsoft.quantum.math.sin\"。"
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: "\n> [!WARNING]\n> 取代\n\nSinh 已被取代。 請改用 @\"microsoft.quantum.math.sinh\"。\n請使用 @\"microsoft.quantum.math.sinh\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nSinh 已被取代。 請改用 @\"microsoft.quantum.math.sinh\"。\n請使用 @\"microsoft.quantum.math.sinh\"。"
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: "\n> [!WARNING]\n> 取代\n\nSqrt 已被取代。 請改用 @\"microsoft.quantum.math.sqrt\"。\n請使用 @\"microsoft.quantum.math.sqrt\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nSqrt 已被取代。 請改用 @\"microsoft.quantum.math.sqrt\"。\n請使用 @\"microsoft.quantum.math.sqrt\"。"
 - uid: microsoft.quantum.extensions.math.tan
-  summary: "\n> [!WARNING]\n> 取代\n\nTan 已被取代。 請改用 @\"microsoft.quantum.math.tan\"。\n請使用 @\"microsoft.quantum.math.tan\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nTan 已被取代。 請改用 @\"microsoft.quantum.math.tan\"。\n請使用 @\"microsoft.quantum.math.tan\"。"
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: "\n> [!WARNING]\n> 取代\n\nTanh 已被取代。 請改用 @\"microsoft.quantum.math.tanh\"。\n請使用 @\"microsoft.quantum.math.tanh\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nTanh 已被取代。 請改用 @\"microsoft.quantum.math.tanh\"。\n請使用 @\"microsoft.quantum.math.tanh\"。"
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: "\n> [!WARNING]\n> 取代\n\n截斷已被取代。 請改用 @\"microsoft.quantum.math.truncate\"。\n請使用 @\"microsoft.quantum.math.truncate\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\n截斷已被取代。 請改用 @\"microsoft.quantum.math.truncate\"。\n請使用 @\"microsoft.quantum.math.truncate\"。"
 metadata:
-  ms.openlocfilehash: 1eb20bd8834d2a34022ee503808fd26eccaf8c64
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: b94b4c7aa1523d9f3e8b42359e759ffa356b25ea
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858831"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673267"

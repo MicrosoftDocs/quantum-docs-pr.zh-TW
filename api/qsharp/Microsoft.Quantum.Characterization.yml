@@ -8,9 +8,9 @@ operations:
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
   summary: 使用單一 oracle 的整數乘冪，執行反復（傳統方式控制）階段估計演算法的單一反復專案。
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: 在指定準備和測量時，會藉由執行指定數目的試用來估計測量成功（傳回 `Zero`）的頻率。
+  summary: 在指定準備和測量時，會藉由執行指定數目的試用來`Zero`估計該測量成功（傳回）的頻率。
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: 假設有 adjointable 和測量的準備，會藉由執行指定數目的試用來估計該測量成功的頻率（傳回 `Zero`）。
+  summary: 假設有 adjointable 和測量的準備，會藉由執行指定數目的試用來估計該`Zero`測量成功（傳回）的頻率。
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: 針對每個準備狀態複本的兩項作業，會估計每項作業準備的狀態之間重迭的虛數部分。
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
@@ -18,19 +18,19 @@ operations:
 - uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
   summary: 針對每個準備狀態複本的兩項作業，會估計每項操作備妥的狀態之間的實際重迭部分。
 - uid: microsoft.quantum.characterization.measureallz
-  summary: "\n> [!WARNING]\n> 取代\n\nMeasureAllZ 已被取代。 請改用 @\"microsoft.quantum.measurement.measureallz\"。\n請使用 @\"microsoft.quantum.measurement.measureAllZ\"。"
+  summary: "\n> [!WARNING]\n> 已被取代\n\nMeasureAllZ 已被取代。 請改用 @\"microsoft.quantum.measurement.measureallz\"。\n請使用 @\"microsoft.quantum.measurement.measureAllZ\"。"
 - uid: microsoft.quantum.characterization.measureidentity
   summary: 測量 qubits 註冊上的身分識別運算子。
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: 針對給定的 oracle `U` 和 `targetState`執行配量階段估計演算法，並將階段讀入以大至小的量子暫存器。
+  summary: 針對給定的 oracle `U`和，執行配量階段估計`targetState`演算法，並將階段讀入以大至小的量子暫存器。
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: 針對給定的 oracle `U` 和 eigenstate 執行健全的非反復式配量階段估計演算法，並在海森堡限制的變異數調整的情況下，提供階段的單一實際值估計。
+  summary: 針對給定的 oracle `U`和 eigenstate 執行健全的非反復式配量階段估計演算法，並以海森堡限制的變異數調整，提供階段的單一實際值估計。
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: 指定特定的通道，以 Pauli 為基礎執行單一 qubit 進程 tomography 測量。
 metadata:
-  ms.openlocfilehash: ff2bee3d5885c4b83a7ba17eeaf578c226dbbf20
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870676"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673367"

@@ -12,16 +12,16 @@ summary: >-
 
   - 索引旗標 qubit $f $ 的整數。
 
-  - 系統註冊 $s $，將會儲存所需的量子狀態 $ \ket{\psi}\_s $。
+  - 系統會登錄 $s $，以儲存所需的量子狀態 $\_\ket{\psi} s $。
 remarks: >-
-  此 oracle 由 $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，$ $ 作用於計算基礎狀態 $ \ket{0}\_{f} \ket{0}\_s $，以以 $ \ket\_{1}f $ 標記的基礎，建立目標狀態 $ \ket{\psi} \_s $，並以波幅 $ \lambda $ 為准。
+  此 oracle 由 $ ${0}\_O\ket {{0}\_f} \ket s = \lambda\ket{1}\_f\ket {\\_psi} s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，$ $ 作用於計算基礎狀態 $ \ket{0}\_{f} \ket{0}\_s $，以 $\_{1}\_\ket{\psi} f $ 標記的基礎來建立目標狀態 $ \lambda s $ with 波幅 $ \ket $。
 
-  第一個參數是 $ \ket{0}的 qubit 暫存器的索引，\_f $。 第二個參數同時包含這兩個暫存器。
+  第一個參數是 $ \ket{0}\_f $ 的 qubit 暫存器的索引。 第二個參數同時包含這兩個暫存器。
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067215"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673474"

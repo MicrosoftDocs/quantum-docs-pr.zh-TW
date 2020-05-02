@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.machinelearning
 name: Microsoft.Quantum.MachineLearning
-summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間提供用於量子機器學習應用程式的函式和作業。\n\n # <a name=\"references\"></a>參考\n - Maria Schuld、Alex Bocharov、Krysta Svore、Nathan Wiebe、「以電路為中心的量子分類器」 https://arxiv.org/abs/1804.00633。"
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間提供用於量子機器學習應用程式的函式和作業。\n\n # <a name=\"references\"></a>參考\n - Maria Schuld、Alex Bocharov、Krysta Svore、Nathan Wiebe、「以電路為中心的量子分類https://arxiv.org/abs/1804.00633器」、。"
 functions:
 - uid: microsoft.quantum.machinelearning.approximateinputencoder
   summary: 假設有一組係數和一個容錯，會傳回狀態準備作業，將每個係數準備成計算基礎狀態的對應波幅，直到指定的容錯為止。
@@ -64,9 +64,9 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.validationresults
   summary: 已針對一組範例驗證分類器的結果。
 metadata:
-  ms.openlocfilehash: be0c17b6f3e42c03bacadbf02c693980f89cbe39
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 43b40489e34a2483ff9331b34b6cd289e3a7bb56
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908305"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673174"
