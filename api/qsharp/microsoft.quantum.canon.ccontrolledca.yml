@@ -4,9 +4,9 @@ name: CControlledCA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  假設有作業作業，會傳回新作業，此作業會在傳統控制項位為 true 時套用 op。 如果 `false`，就不會發生任何事。
+  假設有作業作業，會傳回新作業，此作業會在傳統控制項位為 true 時套用 op。 如果`false`為，則不會發生任何事。
 
-  修飾詞 `CA` 表示作業可控制和 adjointable。
+  修飾`CA`詞表示作業可控制和 adjointable。
 syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
 input:
   content: "(op : ('T => Unit is Ctl + Adj))"
@@ -49,9 +49,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
 metadata:
-  ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a0a30761119d661d759f585d4ce4f6a4e7b30f94
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068065"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675870"

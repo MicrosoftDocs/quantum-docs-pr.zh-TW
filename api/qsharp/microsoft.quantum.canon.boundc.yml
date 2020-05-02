@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   假設有一系列作業在單一輸入上執行，就會產生一個依序執行每個指定運算的新操作。
 
-  修飾詞 `C` 表示陣列中的所有作業都是可控制的。
+  修飾`C`詞表示陣列中的所有作業都是可控制的。
 examples: >-
   以下是相同的：
 
@@ -20,7 +20,7 @@ examples: >-
   ```
 
 
-  與
+  和
 
 
   ```qsharp
@@ -67,9 +67,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.bound
 metadata:
-  ms.openlocfilehash: 46a82065b3a236ad0e0a02894d6b1b3e2a1ceba1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 50129f54048e9b6b9e50970d581a0b72935a697e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068167"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675972"
