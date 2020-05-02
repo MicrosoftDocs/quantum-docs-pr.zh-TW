@@ -4,7 +4,7 @@ name: DoubleAsString
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: 將指定的雙精確度浮點數轉換為相等的字串表示。
-remarks: 如需詳細資訊，請參閱[ C# Convert. ToString](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Double_) 。
+remarks: '如需詳細資訊，請參閱[c # Convert。](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Double_)'
 syntax: 'function DoubleAsString (a : Double) : String'
 input:
   content: '(a : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: String
 metadata:
-  ms.openlocfilehash: f946d55fe15879763df03b0a281d0ec1b3dc05d2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 23f1323f87b4a49ab314b152133a0dab6febd814
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066841"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82660268"
