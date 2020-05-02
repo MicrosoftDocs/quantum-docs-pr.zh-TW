@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.maxd
 name: MaxD
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 傳回兩個指定數位中較大的一個。
+summary: 傳回兩個指定數字中較大的一個。
 remarks: 如需詳細資訊，請參閱 system.string [。](https://docs.microsoft.com/dotnet/api/system.math.max)
 syntax: 'function MaxD (a : Double, b : Double) : Double'
 input:
@@ -21,9 +21,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 691582f764d79976b682b762eb01261cdb58866c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 70571b66d0a02dd3134b877c2436f668aacc7140
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234949"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673726"

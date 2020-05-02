@@ -14,11 +14,11 @@ functions:
     使用量子 ROM 技術來表示指定的密度矩陣。
 
 
-    提供 $N $ 係數 $ \ Alpha_j $ 的清單時，這會傳回一個使用量子 ROM 技術來準備近似值 $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ of 密度矩陣 $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{的單一 $U $Alpha_j |}{\ sum_k | \ Alpha_k |}\ket{j}\bra{j} $。 在此近似值中，錯誤 $ \epsilon $ 就是 $ | p_j-\frac{| Alpha_j |}{\ sum_k | \ Alpha_k |} |\le \epsilon/N $ 和 $\|\tilde\rho-\rho\| \le \epsilon $。 換句話說，$ $ \begin{align} U\ket{0}^ {\lceil\ log_2 N\rceil} \ ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{garbage} _j}。
+    提供 $N $ 係數 $ \ Alpha_j $ 的清單時，這會傳回一個使用量子 ROM 技術來準備近似值 $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ of 密度矩陣 $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| Alpha_j |} 之淨化的單一 $U ${\ sum_k | \ Alpha_k |}\ket{j}\bra{j} $。 在此近似值中，錯誤 $ \epsilon $ 就是 $ | p_j-\frac{| Alpha_j |}{\ sum_k | \ Alpha_k |} |\le \epsilon/N $ 和 $\|\tilde\rho-\rho\| \le \epsilon $。 換句話說，$ $ \begin{align} U\ket{0}^ {\Lceil\ log_2 N\rceil} \ ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{garbage} _j}。
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.quantumromqubitcount
-  summary: 傳回 qubits 的總次數，必須配置給 `QuantumROM`所傳回的作業。
+  summary: 傳回必須配置給所傳回之作業的 qubits 總數`QuantumROM`。
 - uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   summary: >-
     傳回準備特定量子狀態的作業。
@@ -59,7 +59,7 @@ operations:
     成對的 entangles 兩個 qubit 暫存器。
 
 
-    也就是說，假設有兩個暫存器，請在個別暫存器的每一對 \left 之間準備最常光子 state $ \frac{1}{\sqrt{2}} \ket （\ket{00} + \right{11} qubits） $，假設每個暫存器都是以 $ \ket{0\cdots 0} $ 狀態開始。
+    也就是說，假設有兩個暫存器，則會在個別緩存{1}器的{2}每一對 \left{00}之間準備{11}最常光子 state $ \frac {\sqrt} \ket （\ket + \right qubits） $，前提是每個暫存器都是以 $ \ket{0\cdots 0} $ 狀態開始。
 - uid: microsoft.quantum.preparation.prepareidentity
   summary: >-
     在指定暫存器的情況下，以最常混合狀態準備該註冊。
@@ -73,28 +73,28 @@ operations:
     如果指定了 identity 運算子，則會以最常混合狀態來準備 qubit。
 
 
-    如果 qubit 一開始是在 $ \ket{0}$ 狀態中，這項作業會在指定 Pauli 運算子的 $ + $1 eigenstate 中準備 qubit，或在最常混合狀態中為 `PauliI`（請參閱 <xref:microsoft.quantum.preparation.preparesinglequbitidentity>）。
+    如果 qubit 一開始是在 $ \ket{0}$ 狀態，則此作業會準備指定 Pauli 運算子的 $ + $1 eigenstate 中的 qubit，或在最常混合`PauliI`狀態中為（請參閱<xref:microsoft.quantum.preparation.preparesinglequbitidentity>）。
 
 
-    如果 qubit 處於 $ \ket{0}$ 以外的狀態，這項作業會套用下列閘道： `PauliX`的 $H $、$HS $ 代表 `PauliY`、$I $ 代表 `PauliZ` 並 <xref:microsoft.quantum.preparation.preparesinglequbitidentity> 用於 `PauliI`。
+    如果 qubit{0}處於 $ \ket $ 以外的狀態，則此作業會套用下列閘道： $H $ for `PauliX`、$HS $ for `PauliY`、$I $ 用於`PauliZ`和<xref:microsoft.quantum.preparation.preparesinglequbitidentity>的。 `PauliI`
 - uid: microsoft.quantum.preparation.preparesinglequbitidentity
   summary: >-
     準備最常混合狀態中的 qubit。
 
 
-    它會套用 depolarizing channel $ $ \begin{align} \Omega （\rho） \mathrel{，以準備 $ \boldone/$2 狀態中的指定 qubit： =} \frac{1}{4} \ sum_ {\mu \in \{0，1，2，3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}，\end{align} $ $，其中 $ \sigma\_i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是密度運算子，代表混合的狀態。
+    它會套用 depolarizing channel $ $ \begin{align} \Omega （\rho） \mathrel{，以準備 $ \boldone/$2 狀態中的指定 qubit： =} \frac{1} {4} \ sum_ {\mu \in \{0，1，2，3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}，\end{align} $ $，其中 $\_\sigma i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是密度運算子，代表混合的狀態。
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
-    建立編碼0到 `nIndices`之狀態的統一重迭。
+    建立編碼0到`nIndices`之狀態的統一重迭。
 
 
-    也就是說，這個單一 $U $ 會在給定輸入 state $ \ket{0\cdots 0} $ 的情況下，建立所有數位狀態 $0 $ 到 $M-$1 的統一重迭。 換句話說，$ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}。
+    也就是說，這個單一 $U $ 會在給定輸入 state $ \ket{0\cdots 0} $ 的情況下，建立所有數位狀態 $0 $ 到 $M-$1 的統一重迭。 換句話說，$ $ \begin{align} U\ket{0}= \Frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}。
 
     \end{align} $ $。
 metadata:
-  ms.openlocfilehash: dd28a9a066fabd5afab7114d78cc2aca79254e18
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 25ebe80b64af0cfd50e5a32c1ef91f8a299cef04
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905670"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673093"

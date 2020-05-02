@@ -13,15 +13,15 @@ operations:
 - uid: microsoft.quantum.measurement.mresety
   summary: 以 Y 為單位測量單一 qubit，並在測量之後，將它重設為標準的基礎狀態 | 0 〉。
 - uid: microsoft.quantum.measurement.mresetz
-  summary: 以 `Z` 為基礎來測量單一 qubit，並將它重設為標準的基礎狀態 | 0 〉之後的測量。
+  summary: 測量單一 qubit 的`Z`基礎，並在測量之後，將它重設為標準的基礎狀態 | 0 〉。
 - uid: microsoft.quantum.measurement.multim
   summary: 根據標準，測量給定陣列中的每個 qubit。
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: 藉由測量 qubit 並視需要套用位翻轉，將 qubit 設定為給定的計算基礎狀態。
 metadata:
-  ms.openlocfilehash: dc74db43b60728bf9924c05346bae4c6b329a265
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905755"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673133"

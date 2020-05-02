@@ -3,12 +3,12 @@ uid: microsoft.quantum.math.fraction
 name: Fraction
 type: newtype
 namespace: Microsoft.Quantum.Math
-summary: 表示 `p/q`表單的有理數。 整數 `p` 是元組的第一個元素，而 `q` 是元組的第二個元素。
+summary: 代表表單`p/q`的有理數。 Integer `p`是元組的第一個元素， `q`而是元組的第二個元素。
 syntax: newtype Fraction = (Int, Int);
 metadata:
-  ms.openlocfilehash: 5eee4a315cde3e04c93cc7b2a1d558ab9323273c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3059bc8bfb8e5f0cd92f373bc3999e25374dd777
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232943"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673807"

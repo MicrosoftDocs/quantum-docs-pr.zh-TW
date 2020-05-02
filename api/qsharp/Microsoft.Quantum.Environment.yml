@@ -1,19 +1,19 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.environment
 name: Microsoft.Quantum.Environment
-summary: " # <a name=\"summary\"></a>總結\n 這些函式會提供發生配量計算之環境的相關資訊。"
+summary: " # <a name=\"summary\"></a>摘要\n 這些函式會提供發生配量計算之環境的相關資訊。"
 operations:
 - uid: microsoft.quantum.environment.getqubitsavailabletoborrow
   summary: >-
     傳回目前可供借用的 qubits 數目。
 
-    這包括未使用的 qubits;也就是說，這包括 `GetQubitsAvailableToUse`傳回的 qubits。
+    這包括未使用的 qubits;也就是，這包括所傳回的`GetQubitsAvailableToUse`qubits。
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
   summary: 傳回目前可供使用的 qubits 數目。
 metadata:
-  ms.openlocfilehash: 50e5cfb7c1b9a4075c25b2705d00b435a09e159e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bd6d442aabb179f4c5fea0a0f48efaa472ec00cf
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056822"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673338"
