@@ -4,19 +4,19 @@ name: GeneratorIndex
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  代表所有 dynamical 產生器集合中的單一基本詞彙（例如 Hermitian 運算子），該產生器會從該產生器中存在一個對應，到該產生器的時間演進，透過 `EvolutionSet`。
+  代表所有 dynamical 產生器集合中的單一基本詞彙（例如 Hermitian 運算子），該產生器會從該產生器中存在一個對應，到該產生器的時間`EvolutionSet`演進。
 
 
   第一個元素（Int []，Double []）是單一詞彙的索引，例如，係數0.5 的 Pauli 字串 XXY 會由（[1，1，2]，[0.5]）編制索引。 或者，以連續變數（例如 X cos φ + Y sin φ）參數化的 Hamiltonians，可能會以（[]，[φ]）來表示。 第二個元素會針對產生器作用所在的子系統進行索引。
 remarks: >-
   > [!WARNING]
 
-  > 除非參考一組特定的產生器，否則不會定義 `GeneratorIndex` 的轉譯。
+  > 除了參考一組`GeneratorIndex`特定的產生器以外，不會定義的轉譯。
 
 
   ### <a name="examples"></a>範例
 
-  使用 <xref:microsoft.quantum.simulation.paulievolutionset>，X_2 X_5 Y_9 $ 的運算子 $ \pi 會以下列方式表示：
+  使用<xref:microsoft.quantum.simulation.paulievolutionset>，運算子 $ \pi X_2 X_5 Y_9 $ 會表示為：
 
 
   ```qsharp
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: dc5f5b96a6d1708e94de918a65cbd68e0af06192
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067045"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655152"
