@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   將單一 qubit 作業套用至暫存器中的每個元素。
 
-  修飾詞 `C` 表示單一 qubit 作業是可控制的。
+  修飾`C`詞表示單一 qubit 作業是可控制的。
 examples: >-
   準備三 qubit $ \ket{+} $ 狀態：
 
@@ -53,9 +53,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytoeach
 metadata:
-  ms.openlocfilehash: ba49e50f643f061b3f1257e66f9ebb4c686ee1ba
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 66792660a304db918cbf158c969bd0a8896fbee7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210482"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674901"

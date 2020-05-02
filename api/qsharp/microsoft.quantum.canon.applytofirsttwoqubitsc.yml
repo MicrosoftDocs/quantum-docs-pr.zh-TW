@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   將作業套用至註冊中的前兩個 qubits。
 
-  修飾詞 `C` 表示作業是可控制的。
+  修飾`C`詞表示作業是可控制的。
 remarks: >-
   這相當於：
 
@@ -50,9 +50,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytofirsttwoqubits
 metadata:
-  ms.openlocfilehash: def9af6b641d5f4a3301c77319dfbf55e348f142
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2d7fd1ab6e588300f90f0f50881d2eef4680e5c8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225514"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674670"

@@ -7,17 +7,17 @@ summary: >-
   根據傳統位的值，套用兩個可控作業的其中一個。
 
 
-  假設有位 `bit`，當 `bit` `true`時，會使用 `trueInput` 來套用作業 `trueOp` 做為輸入，並在 `falseOp(falseInput)` `bit` 時套用 `false`。
+  `bit`若為，則會在為`trueOp` `trueInput` `bit` `true`時將作業套用為其輸入，而`falseOp(falseInput)`當`bit`為`false`時則適用。
 syntax: "operation ApplyIfElseBC (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: 用來判斷是否套用 `trueOp` 或 `falseOp` 的布林值。
+    summary: 用來判斷是否`trueOp`套用或`falseOp`的布林值。
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: '`true``bit` 時要套用的可控制作業。'
+    summary: 當為`bit` `true`時，要套用的可控制作業。
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: trueInput
-    summary: '`true``bit` 時，要提供給 `trueOp` 的輸入。'
+    summary: 當為`trueOp` `bit` `true`時，要提供給的輸入。
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: '`false``bit` 時要套用的可控制作業。'
+    summary: 當為`bit` `false`時，要套用的可控制作業。
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: falseInput
-    summary: '`false``bit` 時，要提供給 `falseOp` 的輸入。'
+    summary: 當為`falseOp` `bit` `false`時，要提供給的輸入。
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 作業的輸入類型 `trueOp` 要有條件地套用。
+  summary: '`trueOp`要有條件地套用之作業的輸入類型。'
 - uid: "'U"
-  summary: 作業的輸入類型 `falseOp` 要有條件地套用。
+  summary: '`falseOp`要有條件地套用之作業的輸入類型。'
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: b28d861971d834f4251f5a4746a17d0cbbf2158a
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: c1d7c1fdf83b5ec87b8d5e8b22c45bb00072f69a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870983"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674995"

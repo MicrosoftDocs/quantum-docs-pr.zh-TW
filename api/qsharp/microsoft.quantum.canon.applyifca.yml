@@ -7,11 +7,11 @@ summary: >-
   套用對傳統位進行條件運算的單一作業。
 
 
-  給定作業 `op` 和位值 `bit`，如果 `bit` 為 `true`，則會將 `op` 套用至 `target`。 如果 `false`，`target`就不會發生任何事。
+  `op`給定作業`bit`和位值， `op` `target`如果`bit`為`true`，則適用于。 如果`false`為，則`target`不會發生任何動作。
 
-  尾碼 `CA` 表示要套用的作業是單一的（可控制且 adjointable）。
+  尾碼`CA`表示要套用的作業是單一的（可控制和 adjointable）。
 examples: >-
-  以下會將 qubits 的暫存器準備成以指定為 `Bool` 值陣列之傳統位字串所代表的計算基礎狀態：
+  以下會將 qubits 的暫存器準備成以指定為值陣列之`Bool`傳統位字串所代表的計算基礎狀態：
 
 
   ```Q#
@@ -67,9 +67,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: c78136688111a71e6a9a58972c9b9bb71603e0cf
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2b716ef4a7d429176aa1359fb22b3ce24be0d5f4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213750"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675049"

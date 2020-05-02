@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: 根據布林條件的值傳回兩個值的其中一個。
 remarks: >-
-  不同于 `?|` 運算子，此函式不會執行最少運算，因此這兩個輸入都會完全評估。
+  不同于`?|`運算子，此函式不會執行最少運算，因此這兩個輸入都會完全評估。
 
 
   最高的運算行為，以下是相同的：
@@ -27,23 +27,23 @@ input:
     isPrimitive: true
     uid: Bool
   - name: ifTrue
-    summary: '`true``condition` 時要傳回的值。'
+    summary: 當為`condition` `true`時，所要傳回的值。
     uid: "'T"
     isLocal: true
   - name: ifFalse
-    summary: '`false``condition` 時要傳回的值。'
+    summary: 當為`condition` `false`時，所要傳回的值。
     uid: "'T"
     isLocal: true
 output:
   content: "'T"
   types:
-  - summary: 如果 `true``condition`，則 `ifTrue`，否則會 `ifFalse`。
+  - summary: '`ifTrue`如果`condition`為`true`，則`ifFalse`為，否則為。'
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: f26e540b181ce405125dbf80cd97c3e177ad9531
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c5a255fe0434c7dfc9bf49f1a1c9c6be03cd8055
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233334"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674070"
