@@ -4,14 +4,14 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  建立編碼0到 `nIndices`之狀態的統一重迭。
+  建立編碼0到`nIndices`之狀態的統一重迭。
 
 
-  也就是說，這個單一 $U $ 會在給定輸入 state $ \ket{0\cdots 0} $ 的情況下，建立所有數位狀態 $0 $ 到 $M-$1 的統一重迭。 換句話說，$ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}。
+  也就是說，這個單一 $U $ 會在給定輸入 state $ \ket{0\cdots 0} $ 的情況下，建立所有數位狀態 $0 $ 到 $M-$1 的統一重迭。 換句話說，$ $ \begin{align} U\ket{0}= \Frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}。
 
   \end{align} $ $。
 examples: >-
-  下列範例會準備州 $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ on $3 $ qubits。
+  下列範例會準備 $3 $ qubits 上{1}的 state{6}$ \frac {\sqrt} \ sum_ {j{5}= 0} ^ \ket{j} $。
 
 
   ```Q#
@@ -33,7 +33,7 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      以 `LittleEndian` 格式儲存數位狀態的 qubit 暫存器。
+      以`LittleEndian`格式儲存數位狀態的 qubit 註冊。
 
       此暫存器必須能夠儲存 $M-$1 的數位，並假設在 state $ \ket{0\cdots 0} $ 中初始化。
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4bb7c83382f8d48f132fbd91acfd2184a570aea4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226483"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686532"

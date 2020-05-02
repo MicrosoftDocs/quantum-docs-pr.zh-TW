@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.estimateenergy
 name: EstimateEnergy
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: 藉由在自動設定的輸入狀態階段估計上套用 `statePrepUnitary`，來執行狀態準備，方法是使用 `phaseEstAlgorithm`針對產生的狀態 `qpeUnitary`。
+summary: 藉由`statePrepUnitary`使用，在自動設定的輸入狀態階段估計`qpeUnitary`上套用，以執行狀態準備。 `phaseEstAlgorithm`
 syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -25,7 +25,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: 代表單一運算子 $U $ 的 oracle，代表 dynamical 產生器下的 time $ \delta t $ 進化，其狀態為 $ \ket{\phi} $，而地面狀態為 $E = \phi\\，\delta t $。
+    summary: 代表單一運算子 $U $ 的 oracle，代表 dynamical 產生器下的 time $ \delta t $ 演進，其狀態為 $ \ket{\phi} $，而地面州能源 $E\\= \phi，\delta t $。
     isOperation: true
     input:
       types:
@@ -62,9 +62,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: aff8ac5575b6a5e08dc80263a7a8d4bfec59fa12
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d7f32999782763bbb6224afc2c764188c718379b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223321"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686886"

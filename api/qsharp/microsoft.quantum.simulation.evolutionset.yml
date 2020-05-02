@@ -7,12 +7,12 @@ summary: >-
   代表一組可以立即實及用來執行模擬演算法的閘道。
 
 
-  集合中的專案是由 <xref:microsoft.quantum.simulation.generatorindex>編制索引，而每個集合都是由 `GeneratorIndex` 至 <xref:microsoft.quantum.simulation.evolutionunitary>的函式所描述，這是以實數代表時間來參數化的作業
+  集合中的專案是由編制索引<xref:microsoft.quantum.simulation.generatorindex>，而且每個集合都是由從`GeneratorIndex`到<xref:microsoft.quantum.simulation.evolutionunitary>的函式所描述，而這些作業是由代表時間的實數來參數化
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211081"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686993"
