@@ -7,7 +7,7 @@ summary: >-
   假設有兩個作業，則判斷提示其對所有輸入狀態的行為都相同。
 
 
-  此判斷提示的執行方式，是檢查所有表單狀態的作業動作 $V _0 \otimes ... \otimes V_ {n-1} $，其中 $V _k $ 是其中一個狀態 $ \ket{0}$，$ \ket{1}$，$ \ket{+} $ 和 $ \ket{i} $ （Eigenstate Y 運算子的 + 1 Pauli）。
+  此判斷提示的執行方式是檢查所有表單狀態的作業動作 $V _0 \otimes ... \otimes V_ {n-1} $，其中 $V _k $ 是其中一個狀態 $ \ket{0}$、$ \ket{1}$、$ \ket{+} $ 和 $ \ket{i} $ （eigenstate Y 運算子的 + 1 Pauli）。
 
 
   這個判斷提示會使用 $n $ qubits，而且需要比較多個呼叫作業。
@@ -17,7 +17,7 @@ input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: 作業 `givenU` 和 `expectedU` 操作的 qubits $n $ 數目。
+    summary: 作業`givenU`和`expectedU`操作所在的 qubits $n $ 數目。
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: $N $ qubits 上 `givenU` 要與比較的參考作業。
+    summary: 要與 $n $ qubits 的`givenU`參考作業。
     isOperation: true
     input:
       types:
@@ -54,9 +54,9 @@ output:
 seeAlso:
 - assertoperationsequalreferenced
 metadata:
-  ms.openlocfilehash: a6c58f51bbc30f3917457d4137afb083533519fe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 007bb4b3dedd5a95fc464608fe8160784b02341b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225752"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657024"
