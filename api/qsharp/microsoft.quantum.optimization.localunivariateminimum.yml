@@ -39,9 +39,9 @@ output:
   - summary: 給定函式的本機 optima，位於指定的界限內。
     uid: microsoft.quantum.optimization.univariateoptimizationresult
 metadata:
-  ms.openlocfilehash: a93eed007d3720b38529b56d6b9b235869a37eee
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 50dd7031f1c2d0e6a582bf9fa0774e4e71c5fc44
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77909002"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681342"

@@ -4,7 +4,7 @@ name: OracleToDiscrete
 type: function
 namespace: Microsoft.Quantum.Oracles
 summary: 假設有一個代表「黑箱」 oracle 的作業，會傳回代表「黑箱」 oracle 重複多次的「獨立時間」 oracle。
-examples: '`OracleToDiscrete(U)(3, target)` 相當於 `U(target)` 重複三次。'
+examples: '`OracleToDiscrete(U)(3, target)`相當於`U(target)`重複三次。'
 syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
 input:
   content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
@@ -30,9 +30,9 @@ output:
   - summary: 部分套用於「黑箱」 oracle 的作業，代表離散化 oracle
     uid: microsoft.quantum.oracles.discreteoracle
 metadata:
-  ms.openlocfilehash: e82c2f3a9d606b1e5316c45aaceeff702d067258
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b7361693d14245fcb99be5fa36d20d2f332ded0a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230886"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681220"

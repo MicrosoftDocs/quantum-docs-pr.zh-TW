@@ -15,13 +15,13 @@ input:
 output:
   content: Result
   types:
-  - summary: 以 Pauli $X $ 為基礎測量 `target` 的結果。
+  - summary: 以 Pauli $X $ `target`為單位測量的結果。
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 48c819595cf492588fd5d4b08e1315cfb092fcd1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de0422b51d7772892919ee1faeff1f27e9d0616b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231226"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681415"
