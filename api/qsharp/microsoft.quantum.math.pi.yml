@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.pi
 name: PI
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 表示圓形圓周和其直徑（由常數π指定）的比率。
+summary: 代表圓周率，由常數 π 指定。
 remarks: 如需詳細資訊，請參閱[system.object](https://docs.microsoft.com/dotnet/api/system.math.pi) 。
 syntax: 'function PI () : Double'
 input:
@@ -15,9 +15,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: c7b0985cfe132351f9bee9e70d1fcfafd40b757d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 692fd1dc9f4801098ab2e2c97362af9fa24603ec
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211370"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684154"

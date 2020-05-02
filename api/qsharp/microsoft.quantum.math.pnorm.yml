@@ -4,10 +4,10 @@ name: PNorm
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  傳回 `Double`s 向量的 `L(p)` 標準。
+  傳回的`L(p)`向量`Double`的標準。
 
 
-  也就是說，如果陣列 $x $ 類型 `Double[]`，這會傳回 $p $-標準 $\|x\|\_p = （\ sum_ {j} | x_j | ^ {p}） ^ {1/p} $。
+  也就是說，如果陣列 $x `Double[]`$ 的類型，這會傳回 $p $-標準 $\|x\|\_p = （\ sum_ {j} | x_j | ^ {p}） ^ {1/p} $。
 syntax: 'function PNorm (p : Double, array : Double[]) : Double'
 input:
   content: '(p : Double, array : Double[])'
@@ -27,9 +27,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 16350e3df18d7e98d6c5706c85a931b1d37915d2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5583e7d14c7363538ca11f48564ebac7240f511b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211115"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684035"

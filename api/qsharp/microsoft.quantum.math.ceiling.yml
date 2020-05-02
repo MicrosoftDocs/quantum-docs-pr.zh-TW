@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.ceiling
 name: Ceiling
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 傳回大於或等於指定數位的最小整數。
+summary: 傳回大於或等於指定數字的最小整數。
 remarks: 如需詳細資訊，請參閱[system.object](https://docs.microsoft.com/dotnet/api/system.math.ceiling) 。
 syntax: 'function Ceiling (value : Double) : Int'
 input:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: d27a634183d82c5ef18ee82b8553fe9299c64a37
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 97ba849c2216c116c0151fd2605646f674860227
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230138"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683384"
