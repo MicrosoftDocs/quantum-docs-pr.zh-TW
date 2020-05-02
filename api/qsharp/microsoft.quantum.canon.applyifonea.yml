@@ -7,9 +7,9 @@ summary: >-
   將以傳統結果值為條件的 adjointable 作業套用至其中一個。
 
 
-  給定作業 `op` 並 `result`結果值時，如果 `result` 為 `One`，則會將 `op` 套用至 `target`。 如果 `Zero`，`target`就不會發生任何事。
+  `op`給定作業`result`和結果值， `op` `target`如果`result`為`One`，則適用于。 如果`Zero`為，則`target`不會發生任何動作。
 
-  尾碼 `A` 表示要套用的作業是 adjointable。
+  尾碼`A`表示要套用的作業是 adjointable。
 syntax: "operation ApplyIfOneA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 5846b1178a8373f4b21faaa63ae9f6f86e514339
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 041b9f1f97ec5fe615b6ff83fe7c69bf5a7d0894
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217405"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672674"

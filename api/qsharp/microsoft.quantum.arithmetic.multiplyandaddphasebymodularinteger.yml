@@ -5,9 +5,9 @@ type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: 與 MultiplyAndAddByModularInteger 相同，但會假設被加數會以 QFT 為基礎來編碼整數。
 remarks: >-
-  假設 `phaseSummand` 的最高位設定為0。
+  假設`phaseSummand`已將最高位設定為0。
 
-  也假設 `phaseSummand` 的值小於 $N $。
+  也假設的值`phaseSummand`小於 $N $。
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: 代表不帶正負號整數的量子暫存器，其值會加入至 `summand`的每個基礎狀態標籤中。
+    summary: 代表不帶正負號整數的量子暫存器，其值會加入的每個基礎`summand`狀態標籤中。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: phaseSummand
     summary: 表示做為此作業目標之不帶正負號整數的量子暫存器。
@@ -36,9 +36,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 metadata:
-  ms.openlocfilehash: 3728e95ad26768d486af79e7c4158a2a2715bbd2
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 029ff8fb767ae018b7462f19a5fe09e83e606c6e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871391"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672808"

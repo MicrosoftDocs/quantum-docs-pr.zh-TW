@@ -5,12 +5,12 @@ type: operation
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: 藉由指定部分反射來遺忘式幅度放大。
 remarks: >-
-  給定特定的輔助啟動狀態 $ \ket{\text{start}}\_$，特定的輔助目標狀態 $ \ket{\text{target}}\_$，而任何系統狀態 $ \ket{\psi}\_s $，假設 \begin{align} O\ket {\ text {start}}\_a\ket {\ psi}\_s = \lambda\ket{\text{target}}\_U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\text{target} ^ \perp}\_a\cdots \end{align} 適用于某些單一 $U $。
+  假設有特定的輔助啟動狀態 $\_\ket{\text{start}} a $、特定的輔助目標狀態 $\_\ket{\text{target}} a $ 和任何系統狀態 $ \ket{\psi}\_s $，假設 \begin{align} O\ket {\ text\_{start}} a\ket {\ psi}\_s = \lambda\ket{\text{target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\text{target} ^ \perp}\_a\cdots \end{align} 適用于某些單一 $U $。
 
-  透過一系列有關輔助暫存器開始和目標狀態的反映，由 `signalOracle` 及其 adjoint 的應用程式交錯，套用 U 的成功機率可能會改變。
+  藉由一系列有關輔助暫存器的開始和目標狀態， `signalOracle`與的應用程式交錯，以及其 adjoint，套用 U 的成功機率可能會改變。
 
 
-  在大部分情況下，`auxiliaryRegister` 會在狀態 $ \ket{\text{start}} 中初始化，\_$。
+  在大部分情況下`auxiliaryRegister` ，會在狀態 $ \ket{\text{start}}\_a $ 中初始化。
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   請參閱
@@ -32,7 +32,7 @@ input:
     summary: 關於輔助暫存器目標狀態的反映運算子
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: '`ObliviousOracle` 的單一 oracle $O $ 類型，共同在輔助和系統暫存器上運作。'
+    summary: 單一 oracle $O $ 類型`ObliviousOracle` ，可在輔助和系統暫存器上共同運作。
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: 輔助暫存器
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ed252d38ebe32900a7ac22079f46eaf04f2018d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872541"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672953"
