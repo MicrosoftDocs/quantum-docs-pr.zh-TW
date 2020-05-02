@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907251"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677099"
 ---
 # <a name="using-the-numerics-library"></a>使用數值程式庫
 
@@ -23,7 +23,7 @@ ms.locfileid: "77907251"
 1. **高階整數功能**是建置於基本功能之上;其中包括乘法、除法、反轉等等。 適用于帶正負號和不帶正負號的整數。
 1. 具有固定點初始化、加法、乘法、倒數、多項式評估和測量的**定點算術功能**。
 
-所有這些元件都可以使用單一 `open` 語句來存取：
+所有這些元件都可以使用單一`open`語句來存取：
 ```qsharp
 open Microsoft.Quantum.Arithmetic;
 ```
@@ -32,9 +32,9 @@ open Microsoft.Quantum.Arithmetic;
 
 數值程式庫支援下列類型
 
-1. **`LittleEndian`** ：代表整數的 qubit 陣列 `qArr : Qubit[]`，其中 `qArr[0]` 表示最不重要的位。
-1. **`SignedLittleEndian`** ：與 `LittleEndian` 相同，不同之處在于它代表儲存在兩個補數中的帶正負號的整數。
-1. **`FixedPoint`** ：代表由 qubit 陣列 `qArr2 : Qubit[]` 和二進位點位置 `pos`所組成的實數，其會計算二進位點左邊的二進位位數數目。 `qArr2` 的儲存方式與 `SignedLittleEndian`相同。
+1. **`LittleEndian`**：代表整數的`qArr : Qubit[]` qubit 陣列，其中`qArr[0]`表示最不重要的位。
+1. **`SignedLittleEndian`**：與相同`LittleEndian` ，不同之處在于它代表儲存在兩個補數中的帶正負號的整數。
+1. **`FixedPoint`**：代表由 qubit 陣列`qArr2 : Qubit[]`和二進位點位置`pos`組成的實數，其會計算二進位點左邊的二進位數。 `qArr2`的儲存方式與相同`SignedLittleEndian`。
 
 ## <a name="operations"></a>作業
 
@@ -75,8 +75,8 @@ open Microsoft.Quantum.Arithmetic;
 operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
-        x = LittleEndian(xQubits); // define bit order
-        y = LittleEndian(yQubits);
+        let x = LittleEndian(xQubits); // define bit order
+        let y = LittleEndian(yQubits);
         
         ApplyXorInPlace(xValue, x); // initialize values
         ApplyXorInPlace(yValue, y);
@@ -90,15 +90,15 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 ## <a name="sample-evaluating-smooth-functions"></a>範例：評估平滑功能
 
-若要在量子電腦上評估如 $ \sin （x） $ 之類的平滑功能，其中 $x $ 是量子 `FixedPoint` 號碼，則配量開發工具組數值程式庫會提供作業 `EvaluatePolynomialFxP` 和 `Evaluate[Even/Odd]PolynomialFxP`。
+若要在量子電腦上評估如 $ \sin （x） $ 之類的平滑功能，其中 $x $ 是`FixedPoint`配量編號，則「量子開發工具組數值連結`EvaluatePolynomialFxP`庫`Evaluate[Even/Odd]PolynomialFxP`」會提供作業和。
 
-第一個 `EvaluatePolynomialFxP`，可讓評估格式為 $ $ P （x） = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d，$ $ 的多項式，其中 $d $ 代表該*程度*。 若要這麼做，只需要多項式係數 `[a_0,..., a_d]` （類型 `Double[]`）、輸入 `x : FixedPoint` 和輸出 `y : FixedPoint` （一開始為零）：
+第一個`EvaluatePolynomialFxP`是，可讓評估格式為 $ $ P （x） = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d，$ $ 的多項式，其中 $d $ 代表該*程度*。 若要`[a_0,..., a_d]`這麼做，只需要多項式係數（類型`Double[]`為）、輸入`x : FixedPoint`和輸出`y : FixedPoint` （一開始為零）：
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
-$P （x） = 1 + 2x $ 的結果將會儲存在 `yFxP`中。
+$P （x） = 1 + 2x $ 的結果將會儲存在中`yFxP`。
 
-第二個、`EvaluateEvenPolynomialFxP`和第三個 `EvaluateOddPolynomialFxP`，分別適用于偶數和奇數函式的案例。 也就是說，若是偶數/奇數函數 $f （x） $ 和 $ $ P_ {偶數} （x） = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2d}，$ $ $f （x） $ 可 $P _ {偶數} （x） $ 或 $P _ {奇數} （x）： = x\cdot P_ {偶數} （x） $ 分別為近似值。
+第二個`EvaluateEvenPolynomialFxP`、和第三`EvaluateOddPolynomialFxP`個分別是偶數和奇數函式的特製化。 也就是說，若是偶數/奇數函數 $f （x） $ 和 $ $ P_ {偶數} （x） = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2d}，$ $ $f （x） $ 可 $P _ {偶數} （x） $ 或 $P _ {奇數} （x）： = x\cdot P_ {偶數} （x） $ 分別為近似值。
 在 Q # 中，這兩個案例可以依照下列方式處理：
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
@@ -113,14 +113,14 @@ EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 
 您可以在[主要範例存放庫](https://github.com/Microsoft/Quantum)中找到更多範例。
 
-若要開始使用，請複製存放庫，並開啟 [`Numerics`] 子資料夾：
+若要開始使用`Numerics` ，請複製存放庫並開啟子資料夾：
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
 cd Quantum/Numerics
 ```
 
-然後，`cd` 到其中一個範例資料夾，並透過執行範例
+然後， `cd`放入其中一個範例資料夾，並透過執行範例
 
 ```bash
 dotnet run

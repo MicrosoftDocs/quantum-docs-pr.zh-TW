@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.squaresi
 name: SquareSI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: '`xs` 的方形帶正負號的整數，並將結果儲存在 `result`中，其一開始必須為零。'
+summary: 方形帶正負`xs`號的整數，並`result`將結果儲存在中，其一開始必須為零。
 remarks: 此實作為依賴 IntegerSquare。
 syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
@@ -13,7 +13,7 @@ input:
     summary: n 位整數到正方形（SignedLittleEndian）
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: 在一開始，SignedLittleEndian 必須處於狀態 $ \ket{0}$。
+    summary: 在一開始，您必須在狀態 $ \ket{0}$ 中採用2n 位結果（SignedLittleEndian）。
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 71a3ffc190540ccfb51eb81febdce6a943dc99fb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e4a212094c38d370e2489b586ee8014131bef9dc
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218408"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676594"

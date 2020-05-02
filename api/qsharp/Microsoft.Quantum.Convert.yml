@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.convert
 name: Microsoft.Quantum.Convert
-summary: " # <a name=\"summary\"></a>總結\n 這個命名空間包含在各種 Q # 資料類型之間轉換的函式。"
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含在各種 Q # 資料類型之間轉換的函式。"
 functions:
 - uid: microsoft.quantum.convert.bigintasboolarray
   summary: >-
@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: 假設有位字串，會傳回以單一 qubit Pauli 運算子陣列表示的多 qubit Pauli 運算子。
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: 將 `Bool[]` 類型轉換成 `Result[]` 類型，其中 `true` 會對應到 `One`，而 `false` 會對應至 `Zero`。
+  summary: '`Bool[]`將`Result[]`類型轉換為類型，其中`true`對應至`One` ，並`false`對應至。 `Zero`'
 - uid: microsoft.quantum.convert.boolasresult
-  summary: 將 `Bool` 類型轉換成 `Result` 類型，其中 `true` 會對應到 `One`，而 `false` 會對應至 `Zero`。
+  summary: '`Bool`將`Result`類型轉換為類型，其中`true`對應至`One` ，並`false`對應至。 `Zero`'
 - uid: microsoft.quantum.convert.boolasstring
   summary: 將指定的布林值轉換為相等的字串表示。
 - uid: microsoft.quantum.convert.doubleasstring
@@ -47,20 +47,20 @@ functions:
 - uid: microsoft.quantum.convert.pauliarrayasint
   summary: 將以單一 qubit Pauli 運算子陣列表示的多 qubit Pauli 運算子編碼成整數。
 - uid: microsoft.quantum.convert.rangeasintarray
-  summary: 建立 `arr` 由 start. 列舉的整數陣列。步驟：。成品.
+  summary: 建立由 start `arr`所列舉的整數陣列。步驟：。成品.
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: 將 `Result[]` 類型轉換成 `Bool[]` 類型，其中 `One` 會對應到 `true`，而 `Zero` 會對應至 `false`。
+  summary: '`Result[]`將`Bool[]`類型轉換為類型，其中`One`對應至`true` ，並`Zero`對應至。 `false`'
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: 以位元組由小到大的格式，從結果的字串產生正整數。
 - uid: microsoft.quantum.convert.resultasbool
-  summary: 將 `Result` 類型轉換成 `Bool` 類型，其中 `One` 會對應到 `true`，而 `Zero` 會對應至 `false`。
+  summary: '`Result`將`Bool`類型轉換為類型，其中`One`對應至`true` ，並`Zero`對應至。 `false`'
 operations:
 - uid: microsoft.quantum.convert.call
   summary: 呼叫具有指定輸入的函式。
 metadata:
-  ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210962"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677007"

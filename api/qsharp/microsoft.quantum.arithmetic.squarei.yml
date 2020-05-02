@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.squarei
 name: SquareI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 將整數 `xs` 的平方計算成 `result`，一開始必須是零。
+summary: 將整數`xs`的平方計算為`result`，其一開始必須為零。
 remarks: 會使用標準的 shift 和 add 方法來計算正方形。 會儲存 $n-$1 qubits 相較于正向解決方案，其會先複製 x，再套用一般乘數，然後再復原複製作業。
 syntax: 'operation SquareI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: ae55cd24a5dad065c010006f01484f7e903e76f6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: eedc2536da0fd75712929af44f5167d3fc73add3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218425"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676617"

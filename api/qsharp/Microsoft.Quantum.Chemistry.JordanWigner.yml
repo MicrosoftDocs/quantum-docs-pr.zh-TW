@@ -3,19 +3,19 @@ uid: microsoft.quantum.chemistry.jordanwigner
 name: Microsoft.Quantum.Chemistry.JordanWigner
 functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
-  summary: 將 `JWOptimizedHTerms` 所描述的 Hamiltonian，轉換為以 Pauli `GeneratorIndex`表示的 `GeneratorSystem`。
+  summary: 將所描述的 Hamiltonian `JWOptimizedHTerms`轉換為`GeneratorSystem`以 Pauli `GeneratorIndex`表示的。
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorevolutionset
   summary: 將 dynamical 產生器表示為一組 simulatable 閘道，並以 JordanWigner 為基礎來展開。
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
-  summary: 將 `JWOptimizedHTerms` 所描述的 Hamiltonian，轉換為以這個檔案中定義的 `GeneratorIndex` 慣例表示的 `GeneratorSystem`。
+  summary: 將所描述的 Hamiltonian `JWOptimizedHTerms`轉換成`GeneratorSystem`以這個檔案中定義`GeneratorIndex`的慣例表示的。
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionevolutionset
   summary: 將 dynamical 產生器表示為一組 simulatable 閘道，並以 JordanWigner 為基礎來展開。
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionfunction
   summary: 將 dynamical 產生器表示為一組 simulatable 閘道，並以 JordanWigner 為基礎來展開。
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignergeneratorsystem
-  summary: 將 `JWOptimizedHTerms` 所描述的 Hamiltonian，轉換為以這個檔案中定義的 `GeneratorIndex` 慣例表示的 `GeneratorSystem`。
+  summary: 將所描述的 Hamiltonian `JWOptimizedHTerms`轉換成`GeneratorSystem`以這個檔案中定義`GeneratorIndex`的慣例表示的。
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
-  summary: 將 `JWOptimizedHTerms` 所描述的 Hamiltonian，轉換為以 Pauli `GeneratorIndex`表示的 `GeneratorSystem`。
+  summary: 將所描述的 Hamiltonian `JWOptimizedHTerms`轉換為`GeneratorSystem`以 Pauli `GeneratorIndex`表示的。
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
   summary: 傳回 T 計數優化 Qubitization 作業，以及執行它所需的參數。
 - uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
@@ -24,7 +24,7 @@ functions:
   summary: 傳回 Trotter 步驟作業，以及執行它所需的參數。
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
-  summary: 在 $ （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} 上套用 Pauli 字串的單一 $U $ .。。Z_0 $ on qubits $ 0. p $ 的索引 $z \in\{0、1\}$ 和 $p $。 也就是說，$ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} （X ^ {z + 1}\_.Py ^ {z}\_p） Z\_{p-1} .。。Z_0 \ket{\psi} \end{align} $ $
+  summary: 在 $ （X ^ {z + 1}\_.py ^ {z}\_p） z\_{p-1} 上套用 Pauli 字串的單一 $U $Z_0 $ on qubits $ 0. p $ 的索引上，$z \in\{0，1\}$ 和 $p $。 也就是說，$ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} （X ^ {z + 1}\_.py ^ {z}\_p） z\_{p-1} .。。Z_0 \ket{\psi} \end{align} $ $
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
   summary: 藉由佔用微調 orbitals 來準備試用狀態的簡單狀態
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
@@ -38,24 +38,24 @@ operations:
 newtypes:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   summary: >-
-    從C#傳遞至 Q # 的資料格式，代表 Hamiltonian 模擬的所有資訊。
+    從 c # 傳遞至 Q # 的資料格式，以代表 Hamiltonian 模擬的所有資訊。
 
     所表示資料的意義取決於接收它的演算法。
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
-  summary: '將從C#傳遞至 Q # 的資料格式表示準備初始狀態時，所表示的資料意義是由接收它的演算法決定。'
+  summary: '從 c # 傳遞至 Q # 的資料格式若要代表初始狀態的準備，所表示的資料意義取決於接收它的演算法。'
 - uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
   summary: >-
-    從C#傳遞至 Q # 的資料格式，以代表 Hamiltonian 的詞彙。
+    從 c # 傳遞至 Q # 的資料格式，以代表 Hamiltonian 的詞彙。
 
     所表示資料的意義取決於接收它的演算法。
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
-  summary: 此函式會傳回指定整數 `n`之詞彙 `n` `OptimizedBETermIndex` 資料，以及第一個 `Int` 中的詞彙數目，以及 `Double`中所有詞彙係數的絕對值總和。
+  summary: 函式， `OptimizedBETermIndex`會傳回指定`n`整數`n`之詞彙的資料，以及第一個`Int`中的詞彙數目和中所有詞彙係數之絕對值的總和。 `Double`
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
   summary: 優化的區塊編碼演算法中的詞彙資料。
 metadata:
-  ms.openlocfilehash: d84c4f8bf74f902cdffc19dc7e489f80c63d7949
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bbc51f1ca36c81f15f96d0e526eb15bf79922373
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210928"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677031"
