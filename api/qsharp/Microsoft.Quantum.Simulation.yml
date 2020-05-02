@@ -4,33 +4,33 @@ name: Microsoft.Quantum.Simulation
 summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含 coherently 模擬量子系統之動態的函式和作業。"
 functions:
 - uid: microsoft.quantum.simulation.addgeneratorsystems
-  summary: 加入兩個 `GeneratorSystem`，以建立新的 `GeneratorSystem`。
+  summary: 新增兩`GeneratorSystem`個以建立新`GeneratorSystem`的。
 - uid: microsoft.quantum.simulation.blockencodingbylcu
   summary: >-
-    將感關注的操作員編碼成 `BlockEncoding`。
+    將感關注的操作員編碼成`BlockEncoding`。
 
 
-    這會 `BlockEncoding` 單一 $U = P\cdot V\cdot P ^ \dagger $ 來編碼某些運算子 $H = \ sum_ {j} | \ Alpha_j |Unitaries 是線性組合的重要 U_j $。 一般來說，$P $ 是單一狀態準備，因此 $P \ket{0}\_a = \ sum_j \sqrt{\ Alpha_j/\|\vec\Alpha\|\_2} \ket{j}\_$，以及 $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $。
+    這會建立`BlockEncoding`一個單一的 $U = P\cdot V\cdot P ^ \dagger $，將某些運算子編碼 $H = \ sum_ {j} | \ Alpha_j |Unitaries 是線性組合的重要 U_j $。 一般來說，$P $ 是單一狀態{0}\_準備，因此\|$P \ket a = \ sum_j \sqrt{\ Alpha_j/\vec\Alpha\|\_2} \ket{j}\_a $，以及 $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $。
 - uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
   summary: >-
-    將感關注的操作員編碼成 `BlockEncodingReflection`。
+    將感關注的操作員編碼成`BlockEncodingReflection`。
 
 
-    這會 `BlockEncodingReflection` 單一 $U = P\cdot V\cdot P ^ \dagger $ 來編碼某些運算子 $H = \ sum_ {j} | \ Alpha_j |Unitaries 是線性組合的重要 U_j $。 一般來說，$P $ 是單一狀態準備，因此 $P \ket{0}\_\ sum_j \sqrt{\ Alpha_j/\|\vec\Alpha\|\_2} \ket{j}\_$，$V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $。
+    這會建立`BlockEncodingReflection`一個單一的 $U = P\cdot V\cdot P ^ \dagger $，將某些運算子編碼 $H = \ sum_ {j} | \ Alpha_j |Unitaries 是線性組合的重要 U_j $。 一般來說，$P $ 是單一狀態{0}\_準備，因此\|$P \ket \ sum_j \sqrt{\ Alpha_j/\vec\Alpha\|\_2} \ket{j}\_a $，以及 $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $。
 - uid: microsoft.quantum.simulation.blockencodingtoreflection
   summary: >-
-    將 `BlockEncoding` 轉換為對等的 `BLockEncodingReflection`。
+    將轉換`BlockEncoding`為對等`BLockEncodingReflection`的。
 
 
-    也就是，假設有一個 `BlockEncoding` 的單一 $U $，將某些運算子編碼 $H $，將它轉換成 `BlockEncodingReflection` $U ' $ 來編碼相同的運算子，但也符合 $U ' ^ \dagger = U ' $。
+    也就是，假設`BlockEncoding`有一個可將某些運算子編碼 $H $ 的單一 $U $，將它`BlockEncodingReflection`轉換成 $U ' $ 來編碼相同的運算子，但也符合 $U ' ^ \dagger = U ' $。
 
     這會增加一個 qubit 的輔助暫存器的大小 $U $。
 - uid: microsoft.quantum.simulation.getgeneratorsystemfunction
-  summary: 抓取 `GeneratorSystem`中的 `GeneratorIndex` 函數。
+  summary: 抓取中`GeneratorIndex`的函式`GeneratorSystem`。
 - uid: microsoft.quantum.simulation.getgeneratorsystemnterms
-  summary: 抓取 `GeneratorSystem`中的詞彙數目。
+  summary: 抓取中的詞彙數目`GeneratorSystem`。
 - uid: microsoft.quantum.simulation.identitygeneratorindex
-  summary: 傳回與零 Hamiltonian （`H = 0`）一致的產生器索引，其對應于身分識別進化作業。
+  summary: 傳回與零 Hamiltonian （ `H = 0`對應到身分識別進化作業）一致的產生器索引。
 - uid: microsoft.quantum.simulation.identitygeneratorsystem
   summary: 傳回與零 Hamiltonian `H = 0`一致的產生器系統，其對應于身分識別進化作業。
 - uid: microsoft.quantum.simulation.identitytimedependentgeneratorsystem
@@ -38,15 +38,15 @@ functions:
 - uid: microsoft.quantum.simulation.interpolatedevolution
   summary: 在兩個具有統一排程的產生器之間進行插補，會傳回一個作業，此作業會將產生的時間相依產生器下的模擬演進套用至 qubit 暫存器。
 - uid: microsoft.quantum.simulation.interpolategeneratorsystems
-  summary: 傳回 `TimeDependentGeneratorSystem`，代表兩個 `GeneratorSystem`s 之間的線性插補。
+  summary: 傳回， `TimeDependentGeneratorSystem`表示兩個`GeneratorSystem`之間的線性插補。
 - uid: microsoft.quantum.simulation.intstopaulis
   summary: 將整數陣列轉換成單一 qubit Pauli 運算子的陣列。
 - uid: microsoft.quantum.simulation.inttopauli
   summary: 將整數轉換成單一 qubit 的 Pauli 運算子。
 - uid: microsoft.quantum.simulation.multiplygeneratorindex
-  summary: 將 `GeneratorIndex`中的係數相乘。
+  summary: 將中的係數相乘`GeneratorIndex`。
 - uid: microsoft.quantum.simulation.multiplygeneratorsystem
-  summary: 將 `GeneratorSystem`中所有詞彙的係數相乘。
+  summary: 將`GeneratorSystem`中所有詞彙的係數相乘。
 - uid: microsoft.quantum.simulation.pauliblockencoding
   summary: >-
     為 Hamiltonian 建立單一區塊編碼。
@@ -54,42 +54,42 @@ functions:
 
     Hamiltonian $H = \ sum_ {j} \ Alpha_j P_j $ 是由 Pauli 詞彙總和 $P _j $ 所描述，每個字詞都有實際係數 $ \ Alpha_j $。
 - uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
-  summary: 將 `GeneratorIndex`所描述的 Pauli 詞彙的係數解壓縮。
+  summary: 將`GeneratorIndex`所描述的 Pauli 詞彙的係數解壓縮。
 - uid: microsoft.quantum.simulation.paulievolutionfunction
   summary: 將 dynamical 產生器表示為一組 simulatable 閘道，並以 Pauli 為基礎來展開。
 - uid: microsoft.quantum.simulation.paulievolutionset
   summary: 將 dynamical 產生器表示為一組 simulatable 閘道，並以 Pauli 為基礎來展開。
 - uid: microsoft.quantum.simulation.paulistringfromgenidx
-  summary: 針對 `GeneratorIndex`所描述的 Pauli 詞彙，解壓縮 Pauli 字串及其 qubit 索引。
+  summary: 針對所描述的 Pauli 詞彙，解壓縮 Pauli 字串及其 qubit 索引`GeneratorIndex`。
 - uid: microsoft.quantum.simulation.quantumwalkbyqubitization
   summary: 將區塊編碼反映轉換成配量逐步解說。
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
-  summary: 加入多個 `GeneratorSystem`，以建立新的 GeneratorSystem。
+  summary: 新增多`GeneratorSystem`個，以建立新的 GeneratorSystem。
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
-  summary: "`TimeDependentSimulationAlgorithm` 函式，使用 Trotter – Plat'home co. 分解來估計可解決與時間相依之 Schrodinger 方程式的單一運算子。"
+  summary: "`TimeDependentSimulationAlgorithm`此函式會使用 Trotter – Plat'home co. 分解來估計可解決與時間相依之 Schrodinger 方程式的單一運算子。"
 - uid: microsoft.quantum.simulation.trottersimulationalgorithm
-  summary: "`SimulationAlgorithm` 函式，其使用 Trotter – Plat'home co. 分解來估計時間進化運算子_exp （-iHt）_。"
+  summary: "`SimulationAlgorithm`使用 Trotter – Plat'home co. 分解來估計時間進化運算子_exp （-iHt）_ 的函數。"
 - uid: microsoft.quantum.simulation.trotterstep
-  summary: 藉由使用 Trotter – Plat'home co. 分解的 `EvolutionGenerator` 中所述的系統，執行時間演進的單一時間。
+  summary: 藉由`EvolutionGenerator`使用 Trotter – plat'home co. 分解中所述的系統，執行時間演進的單一時間。
 operations:
 - uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
-  summary: 藉由套用輸入狀態的 `statePrepUnitary`，然後使用 `adiabaticUnitary`adiabatic 狀態準備，最後階段估計，與使用 `phaseEstAlgorithm`的結果狀態 `qpeUnitary`相關，來執行狀態準備。
+  summary: 藉由套用輸入狀態的`statePrepUnitary`來執行狀態準備，接著使用 adiabatic 狀態準備`adiabaticUnitary`，最後根據使用產生的狀態進行階段估計`qpeUnitary` `phaseEstAlgorithm`。
 - uid: microsoft.quantum.simulation.estimateenergy
-  summary: 藉由在自動設定的輸入狀態階段估計上套用 `statePrepUnitary`，來執行狀態準備，方法是使用 `phaseEstAlgorithm`針對產生的狀態 `qpeUnitary`。
+  summary: 藉由`statePrepUnitary`使用，在自動設定的輸入狀態階段估計`qpeUnitary`上套用，以執行狀態準備。 `phaseEstAlgorithm`
 - uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
-  summary: 藉由在自動設定的輸入狀態下套用 `statePrepUnitary`，然後使用 `adiabaticUnitary`adiabatic 狀態準備，最後階段估計，與使用 `phaseEstAlgorithm`的結果狀態 `qpeUnitary`有關，來執行狀態準備。
+  summary: 藉由`statePrepUnitary`在自動設定的輸入狀態上套用，然後使用 adiabatic 狀態準備`adiabaticUnitary`，最後`qpeUnitary`根據產生的狀態使用，來執行狀態準備。 `phaseEstAlgorithm`
 newtypes:
 - uid: microsoft.quantum.simulation.blockencoding
   summary: >-
     表示在左上方區塊中編碼任意相關運算子的單一位置。
 
 
-    也就是說，`BlockEncoding` 是一個單一 $U $，其中對系統暫存器進行作用的任意運算子 $H $，`s` 會在對應到輔助狀態 $ \ket{0}_a $ 的左上角區塊中進行編碼。 那是
+    也就是說， `BlockEncoding`是一個單一的 $U $，在系統暫存器上作用的任意運算子 $H $ `s`會在對應到輔助狀態 $ \ket{0}_a $ 的左上角區塊中編碼。 那是
 
 
-    $ $ \begin{align} （\bra{0}_a \otimes I_s） U （\ket{0}_a \otimes I_s） = H \end{align} $ $。
+    $ $ \begin{align} （\bra{0}_a \otimes I_s） U （\ket{0}_a \Otimes I_s） = H \end{align} $ $。
 - uid: microsoft.quantum.simulation.blockencodingreflection
-  summary: 表示也是反映的 `BlockEncoding`。
+  summary: '`BlockEncoding`表示也是反映的。'
 - uid: microsoft.quantum.simulation.evolutiongenerator
   summary: >-
     將 dynamical 產生器表示為一組 simulatable 閘道，並以該基礎的角度進行擴充。
@@ -101,13 +101,13 @@ newtypes:
     表示時間相依的 dynamical 產生器。
 
 
-    `Double` 參數是 $ [0，1] $ 中的排程。
+    `Double`參數是 $ [0，1] $ 中的排程。
 - uid: microsoft.quantum.simulation.evolutionset
   summary: >-
     代表一組可以立即實及用來執行模擬演算法的閘道。
 
 
-    集合中的專案是由 <xref:microsoft.quantum.simulation.generatorindex>編制索引，而每個集合都是由 `GeneratorIndex` 至 <xref:microsoft.quantum.simulation.evolutionunitary>的函式所描述，這是以實數代表時間來參數化的作業
+    集合中的專案是由編制索引<xref:microsoft.quantum.simulation.generatorindex>，而且每個集合都是由從`GeneratorIndex`到<xref:microsoft.quantum.simulation.evolutionunitary>的函式所描述，而這些作業是由代表時間的實數來參數化
 - uid: microsoft.quantum.simulation.evolutionunitary
   summary: >-
     表示單一時間進化運算子。
@@ -116,13 +116,13 @@ newtypes:
     第一個參數是時間演進的持續時間，而第二個參數則是由單一的 qubit 暫存器所採取的動作。
 - uid: microsoft.quantum.simulation.generatorindex
   summary: >-
-    代表所有 dynamical 產生器集合中的單一基本詞彙（例如 Hermitian 運算子），該產生器會從該產生器中存在一個對應，到該產生器的時間演進，透過 `EvolutionSet`。
+    代表所有 dynamical 產生器集合中的單一基本詞彙（例如 Hermitian 運算子），該產生器會從該產生器中存在一個對應，到該產生器的時間`EvolutionSet`演進。
 
 
     第一個元素（Int []，Double []）是單一詞彙的索引，例如，係數0.5 的 Pauli 字串 XXY 會由（[1，1，2]，[0.5]）編制索引。 或者，以連續變數（例如 X cos φ + Y sin φ）參數化的 Hamiltonians，可能會以（[]，[φ]）來表示。 第二個元素會針對產生器作用所在的子系統進行索引。
 - uid: microsoft.quantum.simulation.generatorsystem
   summary: >-
-    表示 `GeneratorIndex`es 的集合。
+    代表`GeneratorIndex`es 的集合。
 
 
     我們會使用單一索引整數逐一查看此集合，並假設集合大小為已知。
@@ -131,15 +131,15 @@ newtypes:
     表示與時間無關的模擬演算法。
 
 
-    與時間無關的模擬技術會將 <xref:microsoft.quantum.simulation.evolutiongenerator>
+    與時間無關的模擬技術會將<xref:microsoft.quantum.simulation.evolutiongenerator>
 
     到一段時間間隔的單一時間進化。
 - uid: microsoft.quantum.simulation.timedependentblockencoding
   summary: >-
-    表示由時鐘暫存器控制的 `BlockEncoding`。
+    `BlockEncoding`表示由時鐘暫存器控制的。
 
 
-    也就是說，`TimeDependentBlockEncoding` 是由 state $ \ket{k} _d $ in clock register `d` 所控制的單一 $U $，如此一來，在系統暫存器上作用的任意運算子 $H _k $，`s` 會在對應至輔助狀態 $ \ket{0}_a $ 的左上角區塊中進行編碼。 那是
+    也就是， `TimeDependentBlockEncoding`是由時鐘暫存器中的 state $ \ket{k} _d $ 所控制的單一`d` $U $，如此一來，在系統暫存器上作用的任意運算子`s` $H _k $ 會在對應至輔助狀態 $ \ket{0}_a $ 的左上角區塊中進行編碼。 那是
 
 
     $ $ \begin{align} （\bra{0}\_a\otimes I_ {ds}） U （\ket{0}\_a\otimes I_ {ds}） = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k。
@@ -152,15 +152,15 @@ newtypes:
     表示時間相依的模擬演算法。
 
 
-    時間相依模擬技術會將 <xref:microsoft.quantum.simulation.evolutionschedule>
+    時間相依模擬技術會將<xref:microsoft.quantum.simulation.evolutionschedule>
 
     針對某個時間間隔進行單一時間進化。
 - uid: microsoft.quantum.simulation.unitary
   summary: 代表單一運算子下的進化。
 metadata:
-  ms.openlocfilehash: 967c27e6c5c8f475e54f7e9d4f3a14594fb04cc5
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cdcfc7e688b576d0e7941695ad0a63b030bb5692
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76869822"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675454"

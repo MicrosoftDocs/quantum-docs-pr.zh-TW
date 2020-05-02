@@ -26,7 +26,7 @@ input:
 output:
   content: (Unit => 'U)
   types:
-  - summary: 使用輸入 `arg` 套用 `op` 的新作業
+  - summary: 適用于`op`輸入的新作業`arg`
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ seeAlso:
 - microsoft.quantum.canon.delayedca
 - microsoft.quantum.canon.delay
 metadata:
-  ms.openlocfilehash: 33a8e225d8478c36a83bc2240c6f622a5c1d0155
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c7a0d7bb01828c03eff6a7297c9984f7697b7a10
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219632"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675665"

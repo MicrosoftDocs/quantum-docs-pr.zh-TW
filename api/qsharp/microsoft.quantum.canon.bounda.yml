@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   假設有一系列作業在單一輸入上執行，就會產生一個依序執行每個指定運算的新操作。
 
-  修飾詞 `A` 表示陣列中的所有作業都是 adjointable。
+  修飾`A`詞表示陣列中的所有作業都是 adjointable。
 examples: >-
   以下是相同的：
 
@@ -20,7 +20,7 @@ examples: >-
   ```
 
 
-  與
+  和
 
 
   ```qsharp
@@ -67,9 +67,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.bound
 metadata:
-  ms.openlocfilehash: a4707b75fdedf6612343690f0b42368fe0979ead
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a965cd80372dbec05810739ed3774b886dc0aa53
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220618"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675994"
