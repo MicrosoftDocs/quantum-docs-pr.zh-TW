@@ -3,7 +3,7 @@ uid: microsoft.quantum.characterization.estimatefrequency
 name: EstimateFrequency
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: 在指定準備和測量時，會藉由執行指定數目的試用來估計測量成功（傳回 `Zero`）的頻率。
+summary: 在指定準備和測量時，會藉由執行指定數目的試用來`Zero`估計該測量成功（傳回）的頻率。
 syntax: 'operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
@@ -44,16 +44,16 @@ output:
   content: Double
   types:
   - summary: >-
-      $M （P （\ket{00 \cdots 0} \bra{00 \cdots 0}）） $ 所取得之頻率的估計 $ \hat{p} $ 會傳回 `Zero`，使用非偏誤二項式估計工具 $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $，其中 $n\_{\向上箭號} $ 是觀察到的 `Zero` 結果數目。
+      $M （P （\ket{00 \cdots 0} \bra{00 \cdots 0}）） $ 傳回之頻率的估計 $ \hat{p} `Zero`$，使用非偏誤二項式估計工具 $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $ 來取得，其中 $n\_{\uparrow} $ 是觀察到的`Zero`結果數目。
 
 
       這在符合實體限制的目的機器上特別重要，因為這種可能性無法測量。
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 1c27d38983f9fa9c1a1dc5c80548e307b7c36ffe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 973ab328d11410fee400659f18a99d50c1883156
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229186"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677742"

@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: 測量 qubits 註冊上的身分識別運算子。
 remarks: >-
-  因為 $ \boldone $ 只有 eigenvalue $1 $，而且沒有負 eigenvalue，所以此作業一律會傳回 `Zero`，對應至 eigenvalue $ + 1 = （-1） ^ 0 $，而且不會折迭 `register`的狀態。
+  因為 $ \boldone $ 只有 eigenvalue $1 $，而且沒有負 eigenvalue，所以此作業一律會傳回`Zero`，對應至 eigenvalue $ + 1 = （-1） ^ 0 $，而且不會造成的狀態折迭。 `register`
 
 
   這項作業本身並不實用，但在進程 tomography 的內容中很有用，因為它提供了有關配量處理的追蹤保留資訊。
@@ -23,13 +23,13 @@ input:
 output:
   content: Result
   types:
-  - summary: '`Zero`的結果值。'
+  - summary: 結果值`Zero`。
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229118"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677628"

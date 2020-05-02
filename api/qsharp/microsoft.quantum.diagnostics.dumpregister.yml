@@ -7,10 +7,10 @@ summary: 傾印與指定 qubits 相關聯的目前目的機器狀態。
 remarks: >-
   這個方法可讓您將與指定 qubits 的狀態相關聯的資訊，傾印到檔案或其他位置。
 
-  產生的實際資訊和 `location` 的語義是每部目的電腦特有的。 不過，將空的元組提供為位置（`()`）通常是指將輸出產生至主控台。
+  產生的實際資訊以及每一部`location`目的電腦特有的語義。 不過，將空的元組提供為位置`()`（）通常是指將輸出產生至主控台。
 
 
-  針對散發為「配量開發工具組」一部分的本機完整狀態模擬器，這個方法預期會有一個檔案路徑的字串，其中會將指定 qubits （也就是對應子系統的 wave 函式）的狀態寫入為一維 ar複數的光線，其中每個元素都代表測量對應狀態的機率 amplitudes。
+  對於分散在「量子開發工具組」中的本機完整狀態模擬器，這個方法會預期具有檔案路徑的字串，其會將指定之 qubits 的狀態（也就是對應子系統的 wave 函式）寫入為複數的一維陣列，其中每個專案都代表測量對應狀態之機率的 amplitudes。
 
   如果指定的 qubits 是以其他 qubit 光子，而且無法分隔其狀態，則只會報告 qubits 為光子。
 syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
@@ -33,9 +33,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 6d553a95bfa619d142b681e2830fc0375c6bcae5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3bf5302364b37cb1ccef651935833b966ff84464
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227027"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677218"

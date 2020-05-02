@@ -4,7 +4,7 @@ name: AssertOperationsEqualInPlaceCompBasis
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
 summary: >-
-  檢查作業 `givenU` 是否等於指定輸入大小的運算 `expectedU`，方法是只從計算基礎檢查向量的作業動作。
+  檢查作業`givenU`是否等於指定輸入大小的運算`expectedU` ，方法是只從計算基礎檢查向量上的作業動作。
 
   這是兩個 unitaries 相等的必要但不夠的條件。
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
@@ -12,7 +12,7 @@ input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: 作業 `givenU` 和 `expectedU` 操作的 qubits $n $ 數目。
+    summary: 作業`givenU`和`expectedU`操作所在的 qubits $n $ 數目。
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: $N $ qubits 上 `givenU` 要與比較的參考作業。
+    summary: 要與 $n $ qubits 的`givenU`參考作業。
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c3a98dee80b9e41ea3c27e1e52c3046751307912
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066552"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677280"

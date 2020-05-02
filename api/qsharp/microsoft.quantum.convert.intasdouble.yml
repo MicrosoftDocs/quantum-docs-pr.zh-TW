@@ -4,7 +4,7 @@ name: IntAsDouble
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: 將指定的整數轉換為相等的雙精確度浮點數。
-remarks: 如需詳細資訊，請參閱[ C# ToDouble](https://docs.microsoft.com/dotnet/api/system.convert.todouble?view=netframework-4.7.1#System_Convert_ToDouble_System_Int64_) 。
+remarks: '如需詳細資訊，請參閱[c # Convert ToDouble](https://docs.microsoft.com/dotnet/api/system.convert.todouble?view=netframework-4.7.1#System_Convert_ToDouble_System_Int64_) 。'
 syntax: 'function IntAsDouble (a : Int) : Double'
 input:
   content: '(a : Int)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: a81a6f63c00b6d7ab0632d3b55d07b06e0fdfd5a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 87ae45f7b96fb3c66ef8b49ab6ca297a7ca48871
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233487"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677466"

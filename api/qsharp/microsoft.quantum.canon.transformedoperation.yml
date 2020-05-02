@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: 在指定函式和作業的情況下，會傳回新的作業，而該作業的輸入會由指定的函數轉換。
 examples: >-
-  下列呼叫會使用 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" 將針對 @"Microsoft.Quantum.Arithmetic.BigEndian" 輸入而設計的作業，轉換為接受類型 @"Microsoft.Quantum.Arithmetic.LittleEndian"之輸入的作業：
+  下列呼叫會使用@"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" ，將針對輸入而設計@"Microsoft.Quantum.Arithmetic.BigEndian"的作業轉換為接受類型@"Microsoft.Quantum.Arithmetic.LittleEndian"輸入的作業：
 
 
   ```qsharp
@@ -42,7 +42,7 @@ input:
 output:
   content: ('U => Unit)
   types:
-  - summary: 新的作業 tbat 會呼叫其輸入 `fn`，然後將產生的輸出傳遞給 `op`。
+  - summary: 新的作業會 tbat `fn`呼叫與其輸入，然後將產生的輸出傳遞`op`給。
     isOperation: true
     input:
       types:
@@ -59,9 +59,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: 8bf89235c2f702ec6cd3a9d8950c13ff6ce8cf8c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a2ac6d6682fdbe064e655e5af9a9e8454edac5d3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217099"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678069"

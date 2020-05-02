@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  如果 `[P0, ..., Pn]`的 Pauli 運算子陣列，此函式會傳回整數，並以位元組由大到小的 `bits(Pn) ... bits(P0)`順序來串連每個 Pauli 運算子的對應，以形成二進位擴充。
+  假設有一個 Pauli 運算子`[P0, ..., Pn]`陣列，此函式會傳回整數，並以位元組由大到小的順序`bits(Pn) ... bits(P0)`串連每個 Pauli 運算子的對應，以形成二進位擴充。
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 唯一識別 `paulis`的整數，如下所述。
+  - summary: 唯一識別`paulis`的整數，如下所述。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230750"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677400"
