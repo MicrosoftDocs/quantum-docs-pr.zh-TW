@@ -3,12 +3,12 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
 name: OptimizedBEGeneratorSystem
 type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 此函式會傳回指定整數 `n`之詞彙 `n` `OptimizedBETermIndex` 資料，以及第一個 `Int` 中的詞彙數目，以及 `Double`中所有詞彙係數的絕對值總和。
+summary: 函式， `OptimizedBETermIndex`會傳回指定`n`整數`n`之詞彙的資料，以及第一個`Int`中的詞彙數目和中所有詞彙係數之絕對值的總和。 `Double`
 syntax: newtype OptimizedBEGeneratorSystem = (Int, Double, (Int -> Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex));
 metadata:
-  ms.openlocfilehash: 4f3375a952bbd72331742d77c3a6e2a56b1814c8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 76e4e810dc31779efcd281c9c132e7f4b97556b9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228472"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82665988"
