@@ -7,11 +7,11 @@ summary: >-
   以整數常數執行 qubit 暫存器的模組化增量。
 
 
-  讓我們透過 `target` $ $a $ `modulus`、$N $ 和 $y 編碼的整數來表示 `increment`。
+  藉由 $y `increment` $，讓我們`modulus`以`target` $a $，$N $ 和 integer 編碼來表示。
 
   然後，作業會執行下列轉換： \begin{align} \ket{y} \mapsto \ket{（y + a） \operatorname{mod} N} \end{align} 整數會以不限位元組格式的 QFT 為基礎來編碼。
 remarks: >-
-  假設 `target` 的最高位設定為0。
+  假設`target`已將最高位設定為0。
 
   也假設 target 的值小於 $N $。
 
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: '`increment` $a $ 新增至的階段編碼位元組 $y $ 的整數。'
+    summary: $A $ 新增至的`increment`階段編碼之位元組 $y $ 的整數。
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871408"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676860"

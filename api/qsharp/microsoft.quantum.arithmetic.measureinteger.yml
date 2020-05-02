@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.measureinteger
 name: MeasureInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 測量量子暫存器的內容，並將它轉換成整數。 測量是根據標準計算來執行，亦即 `PauliZ`的 eigenbasis。
+summary: 測量量子暫存器的內容，並將它轉換成整數。 測量是以標準計算為基礎來執行，亦即 eigenbasis `PauliZ`。
 remarks: 此作業會將其輸入暫存器重設為 $ \ket{00\cdots 0} $ 狀態，適用于釋回目的電腦。
 syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
 input:
@@ -15,15 +15,15 @@ input:
 output:
   content: Int
   types:
-  - summary: 不帶正負號的整數，其中包含 `target`的測量值。
+  - summary: 不帶正負號的整數，其中包含`target`的測量值。
     isPrimitive: true
     uid: Int
 seeAlso:
 - microsoft.quantum.canon.measureintegerbe
 metadata:
-  ms.openlocfilehash: 989302867cbfb6b429bf8e8d4b8a76a0c1c4e61d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cb7432ccf4c66b4f508b182e8c96bd73b13e2f08
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214872"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676763"

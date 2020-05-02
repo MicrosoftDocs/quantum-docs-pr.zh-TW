@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: 代表不帶正負號整數的量子暫存器，其值會加入至 `summand`的每個基礎狀態標籤中。
+    summary: 代表不帶正負號整數的量子暫存器，其值會加入的每個基礎`summand`狀態標籤中。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: summand
     summary: 表示做為此作業目標之不帶正負號整數的量子暫存器。
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 metadata:
-  ms.openlocfilehash: d0f3a28df20b6dd3a353a445bb9a6130e6100f99
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 38efb2840406fc82b7ae24640bec6641f048a5b2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871425"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676742"

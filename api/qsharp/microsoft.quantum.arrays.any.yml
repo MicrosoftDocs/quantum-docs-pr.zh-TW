@@ -4,7 +4,7 @@ name: Any
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 針對陣列的元素定義陣列和述詞，會檢查陣列中至少有一個元素是否滿足述詞。
-remarks: "函數是針對泛型型別定義的，也就是說，每當有陣列 `'T[]`，而函式 `predicate: 'T -> Bool` 我們可以產生 `Bool` 值，指出某個元素是否符合 `predicate`。"
+remarks: "函式是針對泛型型別定義的，也就是說，每當我們有陣列`'T[]`和函數`predicate: 'T -> Bool`時，我們可以產生`Bool`一個值來指出某個元素是否`predicate`符合。"
 examples: >-
   ```qsharp
 
@@ -30,7 +30,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: "`'T` 的函式，用來檢查元素的 `Bool`。"
+    summary: 從`'T`到`Bool`的函式，用來檢查元素。
     isFunction: true
     input:
       types:
@@ -41,23 +41,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: 透過 `'T`的元素陣列。
+    summary: 的元素陣列`'T`。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: 套用至所有元素之述詞或函式的 `Bool` 值。
+  - summary: 套用`Bool`至所有專案之述詞的或函數值。
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
-  summary: '`array` 元素的類型。'
+  summary: '`array`元素的類型。'
 metadata:
-  ms.openlocfilehash: 35555080f90588bc61d70e89ea412a23209408d6
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 4e80b5c39c83bc5d5b26d4df9ca86b8cbc796aeb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905551"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676568"

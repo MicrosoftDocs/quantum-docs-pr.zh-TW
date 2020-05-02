@@ -4,11 +4,11 @@ name: Filtered
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 針對陣列的元素所定義的陣列和述詞，會傳回包含符合述詞之元素的陣列。
-remarks: 函式是針對泛型型別定義的，也就是說，每當有陣列 `'T[]`，而述詞 `'T -> Bool` 我們可以篩選元素。
+remarks: 函式是針對泛型型別定義的，也就是說，只要有陣列`'T[]`和述詞， `'T -> Bool`我們就可以篩選元素。
 examples: >-
   下列程式碼示範「篩選」的函式。
 
-  述詞是使用 @"microsoft.quantum.logical.greaterthani" 函式定義的：
+  使用@"microsoft.quantum.logical.greaterthani"函式定義述詞：
 
 
   ```qsharp
@@ -33,7 +33,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: "`'T` 的函式，用來篩選元素的布林值。"
+    summary: 從`'T`到布林值的函式，用來篩選元素。
     isFunction: true
     input:
       types:
@@ -44,24 +44,24 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: 透過 `'T`的元素陣列。
+    summary: 的元素陣列`'T`。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: 滿足述詞之元素的陣列 `'T[]`。
+  - summary: 符合述`'T[]`詞的元素陣列。
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` 元素的類型。'
+  summary: '`array`元素的類型。'
 metadata:
-  ms.openlocfilehash: 8ce7f84c2243a5194b5a2223884fb68304767dbf
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: 6aa19a279425672675182f3c8098e7c47fb5cce6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320741"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676455"

@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: 假設有一項作業接受部分輸入、傳回與該作業相容的輸出，以及該函式的輸入，則會使用函式來套用作業，以將輸入轉換成作業所預期的格式。
 examples: >-
-  下列呼叫會使用 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian"，將針對 @"Microsoft.Quantum.Arithmetic.BigEndian" 輸入所設計的作業套用至類型 @"Microsoft.Quantum.Arithmetic.LittleEndian"的輸入：
+  下列呼叫會使用@"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" ，將針對@"Microsoft.Quantum.Arithmetic.BigEndian"輸入而設計的作業套用至類型@"Microsoft.Quantum.Arithmetic.LittleEndian"的輸入：
 
 
   ```qsharp
@@ -54,9 +54,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: f97f065cb140af86566c1f21d292a8748b1cc434
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 16a4fe250118c60a4ff6b206503baa1309b78bbd
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212679"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676284"

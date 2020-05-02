@@ -3,23 +3,23 @@ uid: microsoft.quantum.chemistry
 name: Microsoft.Quantum.Chemistry
 functions:
 - uid: microsoft.quantum.chemistry.htermstogenidx
-  summary: 將 `HTerm[]` 資料格式的索引轉換成 GeneratorIndex 的 Hamiltonian 詞彙。
+  summary: 將`HTerm[]`資料格式的 Hamiltonian 詞彙的索引轉換為 GeneratorIndex。
 - uid: microsoft.quantum.chemistry.htermstogensys
-  summary: 將 `HTerm[]` 資料格式的 Hamiltonian 轉換為 GeneratorSystem。
+  summary: 將`HTerm[]`資料格式的 Hamiltonian 轉換為 GeneratorSystem。
 - uid: microsoft.quantum.chemistry.htermtogenidx
-  summary: 將 `HTerm` 資料格式的 Hamiltonian 詞彙轉換成 GeneratorIndex。
+  summary: 將`HTerm`資料格式的 Hamiltonian 詞彙轉換成 GeneratorIndex。
 - uid: microsoft.quantum.chemistry.isnotzero
-  summary: 檢查 `Double` 的數位是否不約為零。
+  summary: 檢查`Double`數位是否不約為零。
 newtypes:
 - uid: microsoft.quantum.chemistry.hterm
   summary: >-
-    從C#傳遞至 Q # 的資料格式，以代表 Hamiltonian 的詞彙。
+    從 c # 傳遞至 Q # 的資料格式，以代表 Hamiltonian 的詞彙。
 
     所表示資料的意義取決於接收它的演算法。
 metadata:
-  ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fda6e5c8daebeae115046771e85e0e49d057e666
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210911"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677027"

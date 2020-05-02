@@ -3,7 +3,7 @@ uid: microsoft.quantum.arrays.fold
 name: Fold
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: 透過傳回 `f(f(f(initialState, array[0]), array[1]), ...)`的陣列 `array`，逐一查看函數 `f`。
+summary: '`f`透過陣列`array`逐一查看函式，傳回`f(f(f(initialState, array[0]), array[1]), ...)`。'
 examples: >-
   ```qsharp
 
@@ -45,18 +45,18 @@ input:
 output:
   content: "'State"
   types:
-  - summary: 在反復查看 `array`的所有專案之後，資料夾傳回的最後狀態。
+  - summary: 在逐一查看的`array`所有專案之後，資料夾所傳回的最終狀態。
     uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"
-  summary: '`folder` 函式所處理的狀態類型，亦即，會接受做為其第一個引數，並傳回。'
+  summary: 函式運作所在的`folder`狀態類型，亦即，會接受做為其第一個引數，並傳回。
 - uid: "'T"
-  summary: '`array` 元素的類型。'
+  summary: '`array`元素的類型。'
 metadata:
-  ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d02d20c049e8b8d21214028efcd6a647067bf71f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214345"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676436"

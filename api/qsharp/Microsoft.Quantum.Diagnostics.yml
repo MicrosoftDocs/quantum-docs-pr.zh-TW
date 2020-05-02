@@ -34,7 +34,7 @@ functions:
   summary: 判斷傳統浮點值的預期值，最高可達 1e-10 的小容錯。
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: 判斷給定 qubits 的全部都是 $ \ket{0}$ 狀態。
+  summary: 指定 qubits 的判斷提示全都處於 $ \ket{0}$ 狀態。
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: 判斷指定的 qubits 全都在 $ \ket{0}$ 狀態中，直到指定的容錯為止。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
@@ -42,13 +42,13 @@ operations:
     假設有兩個作業，則判斷提示其對所有輸入狀態的行為都相同。
 
 
-    此判斷提示的執行方式，是檢查所有表單狀態的作業動作 $V _0 \otimes ... \otimes V_ {n-1} $，其中 $V _k $ 是其中一個狀態 $ \ket{0}$，$ \ket{1}$，$ \ket{+} $ 和 $ \ket{i} $ （Eigenstate Y 運算子的 + 1 Pauli）。
+    此判斷提示的執行方式是檢查所有表單狀態的作業動作 $V _0 \otimes ... \otimes V_ {n-1} $，其中 $V _k $ 是其中一個狀態 $ \ket{0}$、$ \ket{1}$、$ \ket{+} $ 和 $ \ket{i} $ （eigenstate Y 運算子的 + 1 Pauli）。
 
 
     這個判斷提示會使用 $n $ qubits，而且需要比較多個呼叫作業。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    檢查作業 `givenU` 是否等於指定輸入大小的運算 `expectedU`，方法是只從計算基礎檢查向量的作業動作。
+    檢查作業`givenU`是否等於指定輸入大小的運算`expectedU` ，方法是只從計算基礎檢查向量上的作業動作。
 
     這是兩個 unitaries 相等的必要但不夠的條件。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -62,27 +62,29 @@ operations:
 
     例如，這個判斷提示可以用來確保作業的優化版本與它的完整執行完全相同，或是在非配量輸入範圍上運作的作業會與已知的案例相關。
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: 判斷 qubit `q` 在 Pauli Z 運算子的預期 eigenstate 中。
+  summary: 判斷提示 qubit `q`在 Pauli Z 運算子的預期 eigenstate 中。
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     判斷提示 qubit 處於預期狀態。
 
 
-    `expected` 代表複雜的向量，$ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $。
+    `expected`表示複雜向量 $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $。
 
     元組的第一個元素代表每個 $a $，$b $ 是複數的實數部分，而第二個是虛數部分。
 
     最後一個引數會定義判斷提示所使用的容錯。
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: 判斷 qubit `q` 在預期的 Pauli Z 運算子 eigenstate 中，直到指定的容錯為止。
+  summary: 判斷 qubit `q`是在 Pauli Z 運算子的預期 eigenstate 中，直到指定的容錯為止。
 newtypes:
+- uid: microsoft.quantum.diagnostics.enabletestingvianame
+  summary: 編譯器已辨識的屬性，可以在載入類型或可呼叫作為測試用途時，用來定義替代名稱。
 - uid: microsoft.quantum.diagnostics.test
   summary: 編譯器可識別的屬性，用來標示單元測試。
 summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含適用于診斷用途的函數和作業，包括 assert 作業和宣告函式。"
 metadata:
-  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905908"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676948"
