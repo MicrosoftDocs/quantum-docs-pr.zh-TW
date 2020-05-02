@@ -27,7 +27,7 @@ input:
 output:
   content: ('Input => 'Output)
   types:
-  - summary: 作業 `op`，讓 `op(input)` 與所有 `input`的 `fn(input)` 相同。
+  - summary: '`op`所有`input`的作業， `op(input)`與完全相同`fn(input)` 。'
     isOperation: true
     input:
       types:
@@ -43,9 +43,9 @@ typeParameters:
 - uid: "'Output"
   summary: 要轉換之函式的輸出類型。
 metadata:
-  ms.openlocfilehash: a58e2fc4f9c8f931b4020cb06abebdd94c642bd9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a1383f44c1515e60cde3ee44f8daf3c53a621839
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220380"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82659532"
