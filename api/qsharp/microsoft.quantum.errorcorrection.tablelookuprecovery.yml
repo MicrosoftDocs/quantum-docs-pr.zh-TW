@@ -3,7 +3,7 @@ uid: microsoft.quantum.errorcorrection.tablelookuprecovery
 name: TableLookupRecovery
 type: function
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: 針對指定之 qubits 暫存器上的 Pauli 作業，此函式會傳回類型的物件，`RecoveryFn` 其中包含執行與指定的 Pauli 作業陣列相關的資料表查閱解碼所需的所有資訊。
+summary: 針對指定之 qubits 暫存器上的 Pauli 作業，此函式會傳回類型`RecoveryFn`的物件，其中包含執行與指定之 Pauli 作業陣列相關的資料表查閱解碼所需的所有資訊。
 syntax: 'function TableLookupRecovery (table : Pauli[][]) : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: '(table : Pauli[][])'
@@ -18,12 +18,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: '`RecoveryFn`類型的物件，也就是對應 `Syndrome -> Pauli[]` 與指定的症狀陣列相關聯的 Pauli 校正作業。'
+  - summary: 類型`RecoveryFn`的物件，也`Syndrome -> Pauli[]`就是與指定的症狀陣列相關聯的對應 Pauli 校正作業。
     uid: microsoft.quantum.errorcorrection.recoveryfn
 metadata:
-  ms.openlocfilehash: cd84c24f5a50574a9bc2ab189832ada6516f12a8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 20400c4afb1819225192ea695e4cc525e0b2f22b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232212"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684801"

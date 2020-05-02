@@ -7,7 +7,7 @@ summary: 傳回函式，將錯誤的症狀測量對應至⟦5，1，3⟧量子�
 remarks: >-
   藉由逐一查看擁有權數 $1 $ 的錯誤，我們總共取得 $ 3 \ 次 5 = 15 $ 可能的非一般 syndromes。
 
-  連同身分識別，會建立一份錯誤資料表和對應的症狀。 針對5個 qubit 程式碼，此資料表是由所提供： $X\_1：（0，0，0，1）;X\_2：（1，0，0，0）;X\_3：（1，1，0，0）;X\_4：（0，1，1，0）;X\_5：（0，0，1，1） $，$Z\_1：（1，0，1，0）;Z\_2：（0，1，0，1）;Z\_3：（0，0，1，0）;Z\_4：（1，0，0，1）;Z\_5：（0，1，0，0） $ 加上 $Y _i $，方法是新增 $X _i $ 和 $Z _i $ syndromes。 請注意，資料表查閱復原中的順序是藉由將 bitvectors 轉換成整數（使用位元組由小到大）來指定。
+  連同身分識別，會建立一份錯誤資料表和對應的症狀。 針對5個 qubit 程式碼，此資料表是由所\_提供： $X 1：（0，0，0，1）;X\_2：（1，0，0，0）;X\_3：（1，1，0，0）;X\_4：（0，1，1，0）;X\_5：（0，0，1，1） $，$Z\_1：（1，0，1，0）;Z\_2：（0，1，0，1）;Z\_3：（0，0，1，0）;Z\_4：（1，0，0，1）;Z\_5：（0，1，0，0） $ 加上 $Y _i $，方法是新增 $X _i $ 和 $Z _i $ syndromes。 請注意，資料表查閱復原中的順序是藉由將 bitvectors 轉換成整數（使用位元組由小到大）來指定。
 syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: ()
@@ -15,14 +15,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: '`RecoveryFn` 的型別函式，會 `Result[]` 採取症狀測量，並傳回更正偵測到之錯誤的 `Pauli[]` 運算子。'
+  - summary: 類型`RecoveryFn`的函式，其採用不`Result[]`會進行症狀`Pauli[]`測量，並傳回更正偵測到之錯誤的運算子。
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - recoveryfn
 metadata:
-  ms.openlocfilehash: efeabbeb6595d1440882eef73f152610a3ac74c5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8de748ddaf446cfcf7b8694079bd84bfc171211c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211625"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684892"
