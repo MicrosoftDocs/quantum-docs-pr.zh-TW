@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.cos
 name: Cos
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 傳回指定角度的余弦值。
+summary: 傳回指定角的餘弦函數。
 remarks: 如需詳細資訊，請參閱[system.object](https://docs.microsoft.com/dotnet/api/system.math.cos) 。
 syntax: 'function Cos (theta : Double) : Double'
 input:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: e540c467ad8768f92f4850d5ea2e091b205c47bc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 66d95b487e1de42c68f1cb6623577c74a1f2e418
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229815"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685684"
