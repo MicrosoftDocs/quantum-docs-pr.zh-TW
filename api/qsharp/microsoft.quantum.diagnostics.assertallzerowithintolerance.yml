@@ -9,12 +9,12 @@ input:
   content: '(qubits : Qubit[], tolerance : Double)'
   types:
   - name: qubits
-    summary: 判斷提示為 $ \ket{0}$ state 的 Qubits。
+    summary: 已判斷提示為 $ \ket{0}$ 狀態的 Qubits。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: 狀態應為 $ \ket{0}$ state 的精確度
+    summary: 狀態應處於 $ \ket{0}$ 狀態的精確度
     isPrimitive: true
     uid: Double
 output:
@@ -28,9 +28,9 @@ functors:
 seeAlso:
 - assertqubitwithintolerance
 metadata:
-  ms.openlocfilehash: 0e3b560d08077bb353147d98a921a2c2ca3ae202
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae55998333d6bc3a4d8b41341842147d80dcd183
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066535"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677287"

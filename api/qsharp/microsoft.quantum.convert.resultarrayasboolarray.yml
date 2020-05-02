@@ -3,27 +3,27 @@ uid: microsoft.quantum.convert.resultarrayasboolarray
 name: ResultArrayAsBoolArray
 type: function
 namespace: Microsoft.Quantum.Convert
-summary: 將 `Result[]` 類型轉換成 `Bool[]` 類型，其中 `One` 會對應到 `true`，而 `Zero` 會對應至 `false`。
+summary: '`Result[]`將`Bool[]`類型轉換為類型，其中`One`對應至`true` ，並`Zero`對應至。 `false`'
 syntax: 'function ResultArrayAsBoolArray (input : Result[]) : Bool[]'
 input:
   content: '(input : Result[])'
   types:
   - name: input
-    summary: 要轉換 `Result[]`。
+    summary: '`Result[]`要轉換的。'
     isArray: true
     isPrimitive: true
     uid: Result
 output:
   content: Bool[]
   types:
-  - summary: 表示 `input`的 `Bool[]`。
+  - summary: '`Bool[]`，代表 `input`。'
     isArray: true
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: d2ccd4c2b8f1b3e67050f7ebb0756def5bea3b07
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 19a9287931dddf1a302a66cb85d4e925163688ad
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230733"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677360"

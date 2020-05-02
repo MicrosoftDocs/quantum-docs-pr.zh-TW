@@ -3,13 +3,13 @@ uid: microsoft.quantum.chemistry.htermtogenidx
 name: HTermToGenIdx
 type: function
 namespace: Microsoft.Quantum.Chemistry
-summary: 將 `HTerm` 資料格式的 Hamiltonian 詞彙轉換成 GeneratorIndex。
+summary: 將`HTerm`資料格式的 Hamiltonian 詞彙轉換成 GeneratorIndex。
 syntax: 'function HTermToGenIdx (term : Microsoft.Quantum.Chemistry.HTerm, termType : Int[]) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(term : Microsoft.Quantum.Chemistry.HTerm, termType : Int[])'
   types:
   - name: term
-    summary: 以 `HTerm` 格式輸入資料。
+    summary: 輸入資料的`HTerm`格式為。
     uid: microsoft.quantum.chemistry.hterm
   - name: termType
     summary: 新增至 GeneratorIndex 的其他資訊。
@@ -19,12 +19,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
-  - summary: 代表 `term`所表示之 Hamiltonian 詞彙的 GeneratorIndex，以及 `termType`新增的其他資訊。
+  - summary: 代表所表示之 Hamiltonian 詞彙的 GeneratorIndex `term`，以及新增的`termType`其他資訊。
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: edfd08b1e9f80a0f468d50a10a7ad3ff0187511c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cf8f527c6acf2762b5ce415b707358f1011997ef
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228863"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677518"

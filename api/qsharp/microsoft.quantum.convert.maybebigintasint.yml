@@ -7,7 +7,7 @@ summary: >-
   盡可能將指定的大整數轉換為相等的整數。
 
   函式會傳回一對產生的整數，以及只有在可能轉換時才為 true 的布林值旗標。
-remarks: 如需詳細資訊，請參閱[ C# BigInteger](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_)函式。
+remarks: '如需詳細資訊，請參閱[c # BigInteger](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_)的函式。'
 syntax: 'function MaybeBigIntAsInt (a : BigInt) : (Int, Bool)'
 input:
   content: '(a : BigInt)'
@@ -24,9 +24,9 @@ output:
     - isPrimitive: true
       uid: Bool
 metadata:
-  ms.openlocfilehash: cd679df4a0cf178bf53bbf566bdfa0395ad8b019
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 98bd88315e9a1cbce2770ba82fd0eed18eac73c3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230767"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677409"

@@ -4,14 +4,14 @@ name: HTerm
 type: newtype
 namespace: Microsoft.Quantum.Chemistry
 summary: >-
-  從C#傳遞至 Q # 的資料格式，以代表 Hamiltonian 的詞彙。
+  從 c # 傳遞至 Q # 的資料格式，以代表 Hamiltonian 的詞彙。
 
   所表示資料的意義取決於接收它的演算法。
 syntax: newtype HTerm = (Int[], Double[]);
 metadata:
-  ms.openlocfilehash: 9284a94448e3f0c3738e8e68df0839e349c7946a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 06a54570477ceaacc2b8e1d3df4094235eebc573
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228965"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677548"

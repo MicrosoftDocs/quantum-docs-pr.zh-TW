@@ -3,14 +3,14 @@ uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
 name: AssertQubitWithinTolerance
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: 判斷 qubit `q` 在預期的 Pauli Z 運算子 eigenstate 中，直到指定的容錯為止。
-remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> 允許判斷提示任意 qubit 狀態，而不只是 $Z $ eigenstates。
+summary: 判斷 qubit `q`是在 Pauli Z 運算子的預期 eigenstate 中，直到指定的容錯為止。
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>允許判斷提示任意 qubit 狀態，而不只是 $Z $ eigenstates。
 syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: 預期 qubit 的狀態： `Zero` 或 `One`。
+    summary: 預期的 qubit 狀態： `Zero`或。 `One`
     isPrimitive: true
     uid: Result
   - name: q
@@ -29,9 +29,9 @@ output:
 seeAlso:
 - assertqubitisinstatewithintolerance
 metadata:
-  ms.openlocfilehash: ccb44aed5612c369ff7c4e687e72fc65fba4180e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2749c682128e7c67506c2291d7a9e6034998731d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227078"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677235"

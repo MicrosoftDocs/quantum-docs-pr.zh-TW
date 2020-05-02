@@ -3,7 +3,7 @@ uid: microsoft.quantum.convert.rangeasintarray
 name: RangeAsIntArray
 type: function
 namespace: Microsoft.Quantum.Convert
-summary: 建立 `arr` 由 start. 列舉的整數陣列。步驟：。成品.
+summary: 建立由 start `arr`所列舉的整數陣列。步驟：。成品.
 examples: >-
   ```qsharp
 
@@ -17,20 +17,20 @@ input:
   content: '(range : Range)'
   types:
   - name: range
-    summary: 要轉換成陣列 `start..step..end` 值的 `Range`。
+    summary: 要`Range`轉換為`start..step..end`陣列之值的。
     isPrimitive: true
     uid: Range
 output:
   content: Int[]
   types:
-  - summary: 對應至 `range`反復查看之值的新整數陣列。
+  - summary: 對應于逐一`range`查看之值的新整數陣列。
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: a6765698daf8838312c1501e8bbf1e43f609b068
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f909319a624459b2453db2ac73d3ceaec38f6911
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232331"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677383"
