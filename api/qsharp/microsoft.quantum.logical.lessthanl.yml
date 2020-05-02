@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: 只有在 `a` 絕對小於 `b`時，才 `true`。
+  - summary: '`true`只有當完全小於`a`時，才為`b`。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 0be14fe5fe2439108f983494edee59f5f596881c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9d4f97dc354ae51052c812d6cef3673edee84cb0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235578"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684695"

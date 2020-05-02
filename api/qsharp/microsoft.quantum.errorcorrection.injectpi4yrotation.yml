@@ -7,10 +7,10 @@ summary: >-
   將 Y 軸旋轉的單一 qubit 乘以π/4。
 
 
-  執行與 `Y`的π/4 旋轉。
+  執行與的π/4 旋轉`Y`。
 
 
-  旋轉是藉由使用魔術狀態來執行;也就是 state $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}的複本。
+  旋轉是藉由使用魔術狀態來執行;也就是 state $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \sin \frac{\pi}{8} \ket{1}的複本。
 
   \end{align} $ $
 remarks: >-
@@ -24,7 +24,7 @@ remarks: >-
   ```
 
 
-  與
+  和
 
 
   ```qsharp
@@ -38,7 +38,7 @@ remarks: >-
   ```
 
 
-  這項作業支援 `Adjoint` 仿函數，在這種情況下會耗用相同的魔術狀態，但是對資料 qubit 的影響是 $-\ pi/4 $ $Y $-輪替。
+  這項作業支援`Adjoint`仿函數，在這種情況下會耗用相同的魔術狀態，但是對資料 qubit 的影響是 $-\ pi/4 $ $Y $-輪替。
 syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
 input:
   content: '(data : Qubit, magic : Qubit)'
@@ -48,7 +48,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: magic
-    summary: 一開始處於神奇狀態的 qubit。 遵循此作業的應用程式，`magic` 會傳回 $ \ket{0}$ 狀態。
+    summary: 一開始處於神奇狀態的 qubit。 遵循這項作業的應用`magic`程式，會傳回 $ \ket{0}$ 狀態。
     isPrimitive: true
     uid: Qubit
 output:
@@ -59,9 +59,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 9792980f4b8ad01ec41f1317fb574de85e2d4683
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cb0efd896b4d8f9b4b81c061b644a1e2f7f74e96
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871646"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684871"

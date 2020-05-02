@@ -3,12 +3,12 @@ uid: microsoft.quantum.errorcorrection.syndrome
 name: Syndrome
 type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: 測量結果的類型，`Result[]` 指定量子代碼的錯誤症狀。
+summary: 指定量子代碼的`Result[]`錯誤症狀之測量結果的類型。
 syntax: newtype Syndrome = Result[];
 metadata:
-  ms.openlocfilehash: 6d2e3658e80b1ffc7fe5ac694fb46d771c2433cb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a354e8c2ccbfd8741e378cef855130b57eeebfba
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234524"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684841"
