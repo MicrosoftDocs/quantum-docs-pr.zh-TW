@@ -11,12 +11,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.EvolutionSet
   types:
-  - summary: 將 JordanWigner 基礎的 `GeneratorIndex` 對應至 ' EvolutionUnitary 的 `EvolutionSet`。
+  - summary: "`EvolutionSet` ，其會將`GeneratorIndex` JordanWigner 基礎的對應至 ' EvolutionUnitary。"
     uid: microsoft.quantum.simulation.evolutionset
 metadata:
-  ms.openlocfilehash: fb30b3b74df59b9f5cbc9763cf024219f4a472a7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a28058b9327d1ad9ef59a727567e5c03dc8312aa
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228693"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82667335"
