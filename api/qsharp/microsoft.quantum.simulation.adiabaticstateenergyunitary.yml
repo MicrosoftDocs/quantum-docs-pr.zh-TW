@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
 name: AdiabaticStateEnergyUnitary
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: 藉由套用輸入狀態的 `statePrepUnitary`，然後使用 `adiabaticUnitary`adiabatic 狀態準備，最後階段估計，與使用 `phaseEstAlgorithm`的結果狀態 `qpeUnitary`相關，來執行狀態準備。
+summary: 藉由套用輸入狀態的`statePrepUnitary`來執行狀態準備，接著使用 adiabatic 狀態準備`adiabaticUnitary`，最後根據使用產生的狀態進行階段估計`qpeUnitary` `phaseEstAlgorithm`。
 syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[]) : Double'
 input:
   content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: 代表單一運算子 $U $ 的 oracle，代表 dynamical 產生器下的 time $ \delta t $ 進化，其狀態為 $ \ket{\phi} $，而地面狀態為 $E = \phi\\，\delta t $。
+    summary: 代表單一運算子 $U $ 的 oracle，代表 dynamical 產生器下的 time $ \delta t $ 演進，其狀態為 $ \ket{\phi} $，而地面州能源 $E\\= \phi，\delta t $。
     isOperation: true
     input:
       types:
@@ -75,9 +75,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 747e9f6d926863ce1add86d183ca2ed1dc43c8a4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2e8e3917b6f3f741fba3f03aeb467a8785b5325c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232025"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687124"

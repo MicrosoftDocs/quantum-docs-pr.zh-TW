@@ -7,7 +7,7 @@ summary: >-
   準備最常混合狀態中的 qubit。
 
 
-  它會套用 depolarizing channel $ $ \begin{align} \Omega （\rho） \mathrel{，以準備 $ \boldone/$2 狀態中的指定 qubit： =} \frac{1}{4} \ sum_ {\mu \in \{0，1，2，3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}，\end{align} $ $，其中 $ \sigma\_i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是密度運算子，代表混合的狀態。
+  它會套用 depolarizing channel $ $ \begin{align} \Omega （\rho） \mathrel{，以準備 $ \boldone/$2 狀態中的指定 qubit： =} \frac{1} {4} \ sum_ {\mu \in \{0，1，2，3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}，\end{align} $ $，其中 $\_\sigma i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是密度運算子，代表混合的狀態。
 remarks: >-
   混合狀態 $ \boldone/$2 描述將此作業套用至狀態的結果會隱含地描述此作業中隨機播放所預期的值。
 
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 944178e3a8473b2206de037031bd8def546425b8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4dd07e9e59575d60bca81c996ad5fc1a3a82b16d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226517"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686512"

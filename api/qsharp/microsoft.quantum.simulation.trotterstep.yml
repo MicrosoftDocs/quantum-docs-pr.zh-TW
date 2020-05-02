@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.trotterstep
 name: TrotterStep
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: 藉由使用 Trotter – Plat'home co. 分解的 `EvolutionGenerator` 中所述的系統，執行時間演進的單一時間。
+summary: 藉由`EvolutionGenerator`使用 Trotter – plat'home co. 分解中所述的系統，執行時間演進的單一時間。
 remarks: 如需 Trotter – Plat'home co. 分解的詳細資訊，請參閱[時間排序組合](/quantum/libraries/control-flow#time-ordered-composition)。
 syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
 input:
@@ -23,7 +23,7 @@ input:
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: 單一作業，近似持續時間 `trotterStepSize`的單一步驟。
+  - summary: 單一作業，接近持續`trotterStepSize`時間演進的單一步驟。
     isOperation: true
     input:
       types:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 0605c7de832286b8b7a11b82af50b528d233d18c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7059972ad5494e7d2cd86c943314005f620ad60f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065209"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687219"

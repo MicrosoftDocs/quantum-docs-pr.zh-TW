@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907455"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686844"
 ---
 # <a name="opening-pull-requests"></a>開啟提取要求 #
 
@@ -39,7 +39,7 @@ ms.locfileid: "77907455"
 使用 Git 時，任何變更都會_表示為認可，以描述_這些變更在這些變更之前與存放庫的狀態有何關聯。
 我們會經常繪製圖表，其中的認可會繪製成具有先前認可箭號的圓圈。
 
-假設您已在名為 `feature`的_分支_中啟動貢獻。
+假設您已在名`feature`為的_分支_中啟動貢獻。
 接下來，您的**Microsoft/** 配量分支可能如下所示：
 
 ![GitHub 中的工作分支](~/media/git-workflow-step0.png)
@@ -60,9 +60,9 @@ ms.locfileid: "77907455"
 
 ## <a name="how-to-make-a-pull-request"></a>如何提出提取要求 ##
 
-有兩個主要的方式可建立提取要求。
-對於只會影響單一檔案的小型變更，GitHub web 介面可以用來完全線上建立提取要求。
-如需更複雜的貢獻，最好先使用本機電腦來準備提取要求。
+有兩個主要的方式可建立提取要求。  
+對於只會影響單一檔案的小型變更，GitHub web 介面可以用來完全線上建立提取要求。 只要流覽至您想要編輯的檔案，然後使用 [編輯] 圖示。  
+對於更複雜的貢獻，將存放庫複製到本機電腦最容易的方式，是先為提取要求做準備。
 
 <!--
 ### Using the Web Interface ###
