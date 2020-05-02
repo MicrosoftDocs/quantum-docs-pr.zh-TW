@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 傳回陣列中符合指定述詞之第一個元素的第一個索引。 如果沒有這類元素存在，則會傳回-1。
 examples: >-
-  假設 `IsEven : Int -> Bool` 是一個函式，只有在其輸入為偶數時，才會傳回 `true`。 然後，這可以與 `IndexOf` 搭配使用，以尋找陣列中的第一個偶數元素：
+  假設`IsEven : Int -> Bool`是一個函式， `true`只有在其輸入為偶數時才會傳回。 然後，這可與`IndexOf`搭配使用，以尋找陣列中的第一個偶數元素：
 
 
   ```Q#
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 最小的索引 `idx`，讓 `predicate(arr[idx])` 為 true，如果沒有這類元素，則為-1。
+  - summary: 最小的索引`idx` ，例如`predicate(arr[idx])` true，或如果沒有這類元素存在，則為-1。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218187"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680993"

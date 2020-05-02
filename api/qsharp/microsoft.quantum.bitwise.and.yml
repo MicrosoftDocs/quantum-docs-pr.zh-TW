@@ -6,8 +6,8 @@ namespace: Microsoft.Quantum.Bitwise
 summary: >-
   傳回兩個整數的位 AND。
 
-  這會執行與內建 `&&&` 運算子相同的計算。
-remarks: 如需詳細資訊，請參閱[ C# &amp; 運算子](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/and-operator)（binary）。
+  這會執行與內`&&&`建運算子相同的計算。
+remarks: '如需詳細資訊，請參閱[c # &amp;運算子](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/and-operator)（binary）。'
 examples: >-
   ```qsharp
 
@@ -34,9 +34,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 4565a281e8d33e266beda5a8bb34c669988f9cb6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 502101daebe79aeb14732f6e484f96e45e65d089
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214141"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680703"

@@ -5,15 +5,15 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: 針對指定的作業，傳回執行 Trotter – Plat'home co. 整合器的作業。
 remarks: >-
-  使用等於 `1`的 `order` 來呼叫時，此函式會傳回可由最低順序 Trotter （Plat'home co. 整合器 $ $ \begin{align} S_1 （\lambda） = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}）模擬的作業。 \end{align} $ $，我們已遵循[quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)的標記法，並讓 $ \lambda $ 成為進化時間（以所傳回之作業的第一個輸入表示），並讓 $\{H_j\}_ {j = 1} ^ {m} $ 是要整合的一組（扭曲-Hermitian） dynamical 產生器。該 `op(j, lambda, _)` 由單一運算子模擬，$e ^ {H_j \lambda} $。
+  使用`order`等於的呼叫時`1`，此函式會傳回可由最低順序的 Trotter （plat'home co. 整合器 $ $ \begin{align} S_1 （\lambda） = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}）模擬的運算。 \end{align} $ $，我們已遵循[quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)的標記法，並讓 $ \lambda $ 成為進化時間（以所傳回作業的第一個輸入表示）。並讓 $\{H_j\}_ {j = 1} ^ {m} $ 成為整合的一組（扭曲 Hermitian） dynamical 產生器，這是`op(j, lambda, _)`由單一運算子所模擬，$e ^ {H_j \lambda} $。
 
 
-  同樣地，`2` 的 `order` 會傳回第二個訂單對稱 Trotter – Plat'home co. 整合者 $ $ \begin{align} S_2 （\lambda） = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^{1} e ^ {H_ {j '} \lambda/2}。
+  同樣地， `order`的`2`會傳回第二個 Order 對稱 Trotter – plat'home co. 整合器 $ $ \begin{align} S_2 （\lambda） = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m{1} } ^ e ^ {H_ {j '} \lambda/2}。
 
   \end{align} $ $
 
 
-  較高的 `order` 值會使用[quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)的遞迴結構來執行。
+  較高的偶數`order`會使用[quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)的遞迴結構來執行。
 syntax: "function DecomposedIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: '- [*D. Berry、G. Ahokas、Cleve、b. Sanders*](https://arxiv.org/abs/quant-ph/0508139)'
 input:
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: op
-    summary: 接受索引輸入（類型 `Int`）和時間輸入（類型 `Double`）進行分解的作業。
+    summary: 接受索引輸入（類型`Int`）和時間輸入（類型`Double`）進行分解的作業。
     isOperation: true
     input:
       types:
@@ -51,7 +51,7 @@ input:
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: 傳回實 Trotter – Plat'home co. 整合器的單一，其中第一個參數 `Double` 是整合步驟的大小，而第二個參數則是針對其採取動作的目標。
+  - summary: 會傳回一個實 Trotter – Plat'home co. 整合器的，其中第一個`Double`參數是整合步驟的大小，而第二個參數則是針對其採取動作的目標。
     isOperation: true
     input:
       types:
@@ -68,11 +68,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: 每個時間步驟應作用的類型：通常是 `Qubit[]` 或 `Qubit`。
+  summary: 每個時間步驟應作用的類型：通常是`Qubit[]`或`Qubit`。
 metadata:
-  ms.openlocfilehash: 66b2d7ca6394f525e8ec0dcb3516776bf91bd0cb
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 1fdb15e9a28c24ac58f026a89779951b982edb27
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76873017"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680260"
