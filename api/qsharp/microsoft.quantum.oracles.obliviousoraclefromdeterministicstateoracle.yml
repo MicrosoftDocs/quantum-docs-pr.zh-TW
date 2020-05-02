@@ -3,29 +3,29 @@ uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
 name: ObliviousOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: 結合 oracles `DeterministicStateOracle` 和 `ObliviousOracle`。
+summary: 結合 oracles `DeterministicStateOracle`和`ObliviousOracle`。
 syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle'
 input:
   content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: 準備 oracle $A $ 類型 `DeterministicStateOracle` 的狀態，其作用於 register $a $。
+    summary: 狀態準備 oracle $A $ 的類型`DeterministicStateOracle` ，其作用於 register $a $。
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: '`ObliviousOracle` 的 oracle $U $ 類型，共同于 register $a，s $。'
+    summary: Oracle $U $ 的類型`ObliviousOracle` ，共同于 register $a，s $。
     uid: microsoft.quantum.oracles.obliviousoracle
 output:
   content: Microsoft.Quantum.Oracles.ObliviousOracle
   types:
-  - summary: Oracle $O = UA $ of `ObliviousOracle`類型。
+  - summary: Oracle $O = UA $ （類型`ObliviousOracle`為）。
     uid: microsoft.quantum.oracles.obliviousoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
 metadata:
-  ms.openlocfilehash: 2fc80a583ef8990b0a9043e4847d926f37b48b77
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 036d89ed2a9b3a0db2637964e4fabec7352a67d9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231005"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681233"

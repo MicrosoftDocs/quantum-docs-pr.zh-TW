@@ -4,13 +4,13 @@ name: PrepareChoiState
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: 準備指定之作業的 Choi – Jamiłkowski 狀態至指定的參考和目標暫存器。
-remarks: 量子進程的 Choi – Jamiłkowski 狀態 $J （\Lambda） $ 定義為 $ $ \begin{align} J （\Lambda） \mathrel{： =} （\boldone \otimes \Lambda）（| \boldone\rangle\!\rangle\langle\!\langle\boldone |），\end{align} $ $，其中 $ |X\rangle\!\rangle $ 是資料行堆疊慣例中，矩陣 $X $ 的*向量化*。 瞭解此狀態的傳統描述，可提供對任意輸入狀態作用之 $ \Lambda $ 的效果完整資訊，並構成*量子進程 tomography*的基礎。
+remarks: 量子進程的 Choi – Jamiłkowski state $J （\Lambda） $ 定義為 $ $ \begin{align} J （\Lambda） \mathrel{： =} （\boldone \otimes \Lambda）（| \boldone\rangle\!\rangle\langle\!\langle\boldone |），\end{align} $ $ where $ |X\rangle\!\rangle $ 是資料行堆疊慣例中，$X $ 矩陣的*向量化*。 瞭解此狀態的傳統描述，可提供對任意輸入狀態作用之 $ \Lambda $ 的效果完整資訊，並構成*量子進程 tomography*的基礎。
 syntax: 'operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit'
 input:
   content: '(op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[])'
   types:
   - name: op
-    summary: 要準備其 Choi – Jamiłkowski 狀態 $J （\Lambda）/2 ^ N $ 的 Operation $ \Lambda $，其中 $N $ 是 `op` 作用的 qubits 數目。
+    summary: 要準備其 Choi – Jamiłkowski 狀態 $J （\Lambda）/2 ^ N $ 的 Operation $ \Lambda $，其中 $N $ 是作用所在`op`的 qubits 數目。
     isOperation: true
     input:
       types:
@@ -22,12 +22,12 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: reference
-    summary: 從 $ \ket{00\cdots 0} $ 狀態開始的 qubits 暫存器，用來做為 `op`動作的參考。
+    summary: 從 $ \ket{00\cdots 0} $ 狀態開始的 qubits 暫存器，用來做為動作的`op`參考。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: 一開始會在要套用 `op` 的 $ \ket{00\cdots 0} $ 狀態中註冊 qubits。
+    summary: 一開始會在要套用的 $ \ket{00\cdots 0} $ 狀態`op`中 qubits 的暫存器。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -41,9 +41,9 @@ seeAlso:
 - preparechoistatec
 - preparechoistateca
 metadata:
-  ms.openlocfilehash: f1f0ea6233d13ce1850b3b8dfb210ab6b0e378f8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c23954131c9ef7c609089e3f58b3577151409993
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228115"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681178"

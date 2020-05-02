@@ -12,16 +12,16 @@ summary: >-
 
   - $O $ 的 ancilla 暫存器 $a $ 作用於。
 
-  - 已選取要套用所需之單一 $U $ 的系統暫存器 $s $，請在註冊 $a $ 的 post 上，于 $ \ket{t}\_$。
+  - 已選取要套用所需之單一 $U $ 的系統暫存器 $s $，請在註冊 $a $ \ket{t}\_a $ 中進行後選擇。
 remarks: >-
-  此 oracle 由 $ $ O\ket {s} 定義\_a\ket {\ psi}\_s = \lambda\ket{t}\_U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ 作用於 ancilla state $ \ket{s}\_a $ to在任何系統狀態 $ \ket{\psi}\_s $ 上執行單一 $U $，並以 $ \ket{t} 標記的基數\_$ 來進行 \lambda $。
+  此 oracle 由\_$ $ O\ket {s} a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ 作用於 ancilla state $ \ket{s}\_a $，在任何系統狀態 $ \ket{\psi}\_s $ 上，以 $ \lambda\_a $ 標記的基礎來執行單一 $U $。
 
-  第一個參數是 $ \ket{s}\_$ 的 qubit 暫存器。 第二個參數是 $ \ket{\psi}\_s $ 的 qubit 暫存器。
+  第一個參數是 $ \ket{s}\_a $ 的 qubit 暫存器。 第二個參數是 $ \ket{\psi}\_s $ 的 qubit 暫存器。
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231056"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681247"
