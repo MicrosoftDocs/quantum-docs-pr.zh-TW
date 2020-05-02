@@ -4,7 +4,7 @@ name: LookupFunction
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 指定陣列時，會傳回函式，此函式會傳回該陣列的元素。
-remarks: 此函式主要適用于與接受 `Int -> 'T` 函式做為其引數的函式和作業進行交互操作。 例如，在產生器表示程式庫中，這是很常見的，其中函式是用來避免需要在記憶體中記錄整個陣列。
+remarks: 此函式主要適用于與接受`Int -> 'T`函式做為其引數的函式和作業交互操作。 例如，在產生器表示程式庫中，這是很常見的，其中函式是用來避免需要在記憶體中記錄整個陣列。
 syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
 input:
   content: "(array : 'T[])"
@@ -17,7 +17,7 @@ input:
 output:
   content: (Int -> 'T)
   types:
-  - summary: 函式 `f`，因此 `f(idx) == f[idx]`。
+  - summary: '`f`這樣的`f(idx) == f[idx]`函式。'
     isFunction: true
     input:
       types:
@@ -31,9 +31,9 @@ typeParameters:
 - uid: "'T"
   summary: 要表示為 lookup 函式之陣列元素的類型。
 metadata:
-  ms.openlocfilehash: b4f509de7137377465f1e76e59a04abfd9a22fd1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4d911a3952c273e050c75e4d785e6812d54f5fa1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218102"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680962"

@@ -26,7 +26,7 @@ input:
 output:
   content: ('T1, 'T2, 'T3)[]
   types:
-  - summary: 陣列，其中包含每個 `idx``(first[idx], second[idx], third[idx])` 表單的3個元組。 如果這三個數組的長度不相等，輸出就會是較短的輸入。
+  - summary: 陣列，其中包含每個`(first[idx], second[idx], third[idx])` `idx`的表單3個元組。 如果這三個數組的長度不相等，輸出就會是較短的輸入。
     isArray: true
     types:
     - uid: "'T1"
@@ -46,9 +46,9 @@ seeAlso:
 - zip
 - zip4
 metadata:
-  ms.openlocfilehash: 1a4f3a533178e089d975d5a510d202afe004d999
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 899066b309e41df3a1bb2bdce93382ff58de2662
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214175"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680744"

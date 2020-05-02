@@ -7,11 +7,11 @@ summary: >-
   套用以傳統位為條件的可控作業。
 
 
-  給定作業 `op` 和位值 `bit`，如果 `bit` 為 `true`，則會將 `op` 套用至 `target`。 如果 `false`，`target`就不會發生任何事。
+  `op`給定作業`bit`和位值， `op` `target`如果`bit`為`true`，則適用于。 如果`false`為，則`target`不會發生任何動作。
 
-  尾碼 `C` 表示要套用的作業是可控制的。
+  尾碼`C`表示要套用的作業是可控制的。
 examples: >-
-  以下會將 qubits 的暫存器準備成以指定為 `Bool` 值陣列之傳統位字串所代表的計算基礎狀態：
+  以下會將 qubits 的暫存器準備成以指定為值陣列之`Bool`傳統位字串所代表的計算基礎狀態：
 
 
   ```Q#
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 166f61f877a282578a71419a74fea6361cc2cac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a41eea8aafeabd5bda6bcc55b958598e58f52184
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217575"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680483"

@@ -3,8 +3,8 @@ uid: microsoft.quantum.arithmetic.sum
 name: Sum
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 執行可還原的總和閘道。 假設在 `carryIn` qubit 中編碼的執行位，以及 `summand1` 和 `summand2`中編碼的兩個被加數位，會在 qubit `summand1` 中計算 `carryIn`、`summand2` 和 `summand2`的位 xor。
-remarks: 相較于 `Carry` 作業，這不會計算執行時的位。
+summary: 執行可還原的總和閘道。 假設在 qubit `carryIn`中編碼的執行位，以及在`summand1`和`summand2`中編碼的兩個被加數位，會在`carryIn`qubit `summand1` `summand2`中`summand2`計算和的位 xor。
+remarks: 與作業不同的`Carry`是，這不會計算執行時的位。
 syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit)'
@@ -18,7 +18,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: 第二個被加數 qubit 會取代為 `summand1` 和 `summand2`總和的下限。
+    summary: 第二個被加數 qubit，會取代為`summand1`和`summand2`總和的較低位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 125ee44b5debf5d8c83d7fb5176c4298bd702563
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d72ec97c01944b73ed459afcddbdfb3aa1cf3c49
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218391"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681058"

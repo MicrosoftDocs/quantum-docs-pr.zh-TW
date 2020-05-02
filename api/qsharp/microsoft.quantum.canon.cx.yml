@@ -7,7 +7,7 @@ summary: >-
   將受控制的 X （CX）閘道套用至一對 qubits。
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align}，$ $，其中資料列和資料行的組織方式如量子概念指南所示。
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{align}，$ $，其中資料列和資料行的組織方式如量子概念指南中所示。
 remarks: >-
   相當於：
 
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d5a987001de638b9415a1d5ede1dc88aee7edf0f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067861"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680303"

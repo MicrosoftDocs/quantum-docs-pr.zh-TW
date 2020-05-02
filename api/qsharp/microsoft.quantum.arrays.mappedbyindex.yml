@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: 從 `(Int, 'T)` 到 `'U` 的函式，用來對應元素及其索引。
+    summary: 從`(Int, 'T)`到`'U`的函式，用來對應元素及其索引。
     isFunction: true
     input:
       types:
@@ -41,28 +41,28 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: 透過 `'T`的元素陣列。
+    summary: 的元素陣列`'T`。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: "`mapper` 函式所對應之元素的陣列 `'U[]`。"
+  - summary: 由`mapper`函`'U[]`式所對應的元素陣列。
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` 元素的類型。'
+  summary: '`array`元素的類型。'
 - uid: "'U"
-  summary: '`mapper` 函數的結果類型。'
+  summary: '`mapper`函數的結果類型。'
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 08dacd9b53b151d5cadcef16db8b460d4326d746
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214277"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680924"

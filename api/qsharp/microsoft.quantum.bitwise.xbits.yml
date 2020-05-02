@@ -4,7 +4,7 @@ name: XBits
 type: function
 namespace: Microsoft.Quantum.Bitwise
 summary: 傳回一個整數，代表 Pauli 運算子陣列的 X 位。
-remarks: 如果 `paulis` 陣列的長度大於63，則函式會擲回。
+remarks: 如果`paulis`陣列的長度大於63，則函式會擲回。
 syntax: 'function XBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: 以 binary 表示 $ （p_{62}\,p_{61}\,\dots ..\,p_0） $ $x $ 的整數，其中 $p _i = $0，如果 `paulis[i]` 是 `PauliI` 或 `PauliZ`，$p _i = $1 `paulis[i]`或 `PauliY`。
+  - summary: '{62} \,以 binary 表示 $ （p_{61}\,\,p_ \dots .. p_0） $ $x $ 的整數，其中 $p _i = $0 如果`paulis[i]`是`PauliI`或`PauliZ` ，而如果`paulis[i]`為`PauliX`或`PauliY`，則為 $p _i = $1。'
     isPrimitive: true
     uid: Int
 seeAlso:
 - zbits
 metadata:
-  ms.openlocfilehash: 9319e664aaa7af3ea500bd5bee78c09a92d9573b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0dccf94d895984b3661790b44f10455fce35331d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217728"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680575"

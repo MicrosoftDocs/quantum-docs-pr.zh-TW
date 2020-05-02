@@ -7,7 +7,7 @@ summary: >-
   將受控制的 Z （CZ）閘道套用至一對 qubits。
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align}，資料列和資料行的組織方式如 [量子概念指南] 所示。
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 0 & 0 &-1 \end{align}，$ $，其中資料列和資料行的組織方式如量子概念指南中所示。
 remarks: >-
   相當於：
 
@@ -38,9 +38,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 000bcb896589343372e415e5a7e628a0665bbc7d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ebece418cac216516b6c34ca22ead35275ac37c7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226160"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680273"
