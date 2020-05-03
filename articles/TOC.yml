@@ -17,15 +17,7 @@
     - name: 開始使用 QDK
       href: welcome.md
     - name: 安裝 QDK
-      items:
-        - name: 安裝概觀
-          href: install-guide/index.md
-        - name: 'Q# + C#'
-          href: install-guide/csinstall.md
-        - name: 'Q# + Python'
-          href: install-guide/pyinstall.md
-        - name: 'Q# Jupyter Notebook'
-          href: install-guide/qjupyter.md
+      href: install-guide/toc.yml
     - name: 更新 QDK
       href: install-guide/update.md
     - name: '如何建立 Q# 專案'
