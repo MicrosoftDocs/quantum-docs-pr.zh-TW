@@ -1,0 +1,13 @@
+items:
+  - name: 安裝概觀
+    href: index.md
+  - name: 'Q # 命令列應用程式'
+    href: standalone.md
+  - name: 'Q# Jupyter Notebook'
+    href: qjupyter.md
+  - name: '將 Q # 與其他語言搭配使用'
+    items:
+      - name: '將 Q # 與 Python 搭配使用'
+        href: pyinstall.md
+      - name: '將 Q # 與 .NET 搭配使用'
+        href: csinstall.md
