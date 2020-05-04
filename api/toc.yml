@@ -15,3 +15,5 @@
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
     - name: Python 程式庫
       href: 'https://docs.microsoft.com/python/qsharp'
+    - name: 'IQ # 魔術命令'
+      href: iqsharp-magic/toc.yml
