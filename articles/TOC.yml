@@ -20,8 +20,6 @@
       href: install-guide/toc.yml
     - name: 更新 QDK
       href: install-guide/update.md
-    - name: '如何建立 Q# 專案'
-      href: how-to-guides/create-qsharp-project.md
 - name: 教學課程
   items:
     - name: 量子隨機數字產生器
