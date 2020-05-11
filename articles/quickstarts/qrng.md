@@ -6,29 +6,29 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: b9c8592b1296a7de1b9ad5d0538ad1972ec25e31
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 5a433606f08f4c6a4ab7b5df67a7f0c30d2b3f0d
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906979"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82683012"
 ---
-# <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>快速入門：在 Q# 中實作量子亂數產生器
-量子亂數產生器是以 Q # 撰寫量子演算法的一個簡單範例。 此演算法利用量子機制的本質來產生亂數。 
+# <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>快速入門：在 Q\# 中實作量子亂數產生器
+
+量子亂數產生器是以 Q # 撰寫量子演算法的一個簡單範例。 此演算法利用量子機制的本質來產生亂數。
 
 ## <a name="prerequisites"></a>Prerequisites
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)。
 - [建立 Q# 專案](xref:microsoft.quantum.howto.createproject)
 
-
 ## <a name="write-a-q-operation"></a>撰寫 Q# 作業
 
 ### <a name="q-operation-code"></a>Q# 作業程式碼
 
-1. 以下列程式碼取代 Operation.qs 檔案的內容：
+1. 使用下列程式碼取代 Program.qs 檔案的內容：
 
- :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-14":::
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
 如[什麼是量子運算？](xref:microsoft.quantum.overview.what)文中所述，量子位元是一種可疊加的量子資訊單位。 測量時，量子位元只能是 0 或 1。 不過在執行期間，量子位元的狀態代表著測量讀數為 0 或 1 的機率。 這個概率性的狀態稱為疊加。 我們可以使用此機率來產生亂數。
 
@@ -36,7 +36,7 @@ ms.locfileid: "77906979"
 
 使用 `H` 作業，我們可以將 `Qubit` 置於疊加狀態。 若要測量量子位元並讀取其值，請使用 `M` 內建作業。
 
-藉由將 `Qubit` 置於疊加並加以測量，每次叫用程式碼時，結果就會是不同的值。 
+藉由將 `Qubit` 置於疊加並加以測量，每次叫用程式碼時，結果就會是不同的值。
 
 解除配置 `Qubit` 時，必須將它明確設定回 `Zero` 狀態，否則模擬器將會報告執行階段錯誤。 叫用 `Reset` 是達成此動作的簡單做法。
 
@@ -52,52 +52,68 @@ ms.locfileid: "77906979"
 
 <img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
 
-
 * 然後，我們測量量子位元並儲存輸出：
 
 <img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
 由於測量的結果完全隨機，我們便能得到一個隨機位元。 我們可以呼叫此作業多次來建立整數。 例如，如果我們呼叫此作業三次來取得三個隨機位元，則可以建立隨機的 3位元數字 (也就是介於 0 和 7 之間的亂數)。
 
-## <a name="creating-a-complete-random-number-generator-using-a-host-program"></a>使用主機程式建立完整的亂數產生器
 
-既然我們已經有產生隨機位的 Q # 作業，我們可以用來建立完整的配量亂數產生器與主機程式。
+## <a name="creating-a-complete-random-number-generator"></a>建立完整的亂數產生器
 
- ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[使用 Visual Studio Code 或命令列的 Python](#tab/tabid-python)
- 
- 若要從 Python 執行新的 Q# 程式，請將下列程式碼儲存為 `host.py`：
- 
-:::code language="python" source="~/quantum/samples/getting-started/qrng/host.py" range="11-30":::
+既然我們已經有產生隨機位元的 Q # 作業，我們可以用來建立完整的量子亂數產生器。 我們可以使用 Q # 命令列應用程式或使用主機程式。
 
- 然後，您可以從命令列執行 Python 主機程式：
- ```bash
- $ python host.py
- Preparing Q# environment...
- ..The random number generated is 42
- ```
- ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[使用 Visual Studio Code 或命令列的 C#](#tab/tabid-csharp)
- 
- 若要從 C# 執行新的 Q# 程式，請修改 `Driver.cs` 以納入下列 C# 程式碼：
- 
- :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
- 
- 然後，您可以從命令列執行 C# 主機程式：
- 
- ```bash
- $ dotnet run
- The random number generated is 42
- ```
 
- ### <a name="c-with-visual-studio-2019"></a>[使用 Visual Studio 2019 的 C#](#tab/tabid-vs2019)
 
- 若要從 Visual Studio 中的 C# 執行新的 Q# 程式，請修改 `Driver.cs` 以納入下列 C# 程式碼：
+### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[具有 Visual Studio 或 Visual Studio Code 的 Q # 命令列應用程式](#tab/tabid-qsharp)
 
- :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+若要建立完整的 Q # 命令列應用程式，請將下列進入點新增至您的 Q # 程式： 
 
- 然後按 F5 鍵，程式會開始執行，並跳出一個新視窗顯示產生的亂數： 
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
- ```bash
- $ dotnet run
- The random number generated is 42
- ```
- ***
+視專案設定和命令列選項而定，可執行檔將會在模擬器或資源估計工具上執行標記為 `@EntryPoint()` 屬性的作業或函式。
+
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
+
+在 Visual Studio 中，只要按 Ctrl + F5 執行指令碼即可。
+
+在 VS Code 中，透過在終端機中輸入下列命令，以第一次建立 Program.qs：
+
+```dotnetcli
+dotnet build
+```
+
+在後續的執行中，不需要重新建立。 若要執行，請輸入下列命令並按 Enter 鍵：
+
+```dotnetcli
+dotnet run --no-build
+```
+
+### <a name="python-with-visual-studio-code-or-the-command-line"></a>[使用 Visual Studio Code 或命令列的 Python](#tab/tabid-python)
+
+若要從 Python 執行新的 Q# 程式，請將下列程式碼儲存為 `host.py`：
+
+:::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
+
+然後，您可以從命令列執行 Python 主機程式：
+
+```bash
+$ python host.py
+Preparing Q# environment...
+..The random number generated is 42
+```
+
+### <a name="c-with-visual-studio-code-or-visual-studio"></a>[擁有 Visual Studio Code 或 Visual Studio 的 C#](#tab/tabid-csharp)
+
+若要從 C# 執行新的 Q# 程式，請修改 `Driver.cs` 以納入下列 C# 程式碼：
+
+:::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
+
+然後，您可以從命令列 (在 Visual Studio 中您必須按 F5) 執行 C# 主機程式：
+
+```bash
+$ dotnet run
+The random number generated is 42
+```
+
+***

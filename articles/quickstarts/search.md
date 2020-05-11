@@ -6,14 +6,14 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 0e64fcd56929fa33397c45bf1b2e99bf687eca6f
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: c67ccd16957ceef694552bdd9c073ba5a35d8aaf
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906945"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686833"
 ---
-# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>快速入門：以 Q# 執行格羅弗搜尋演算法
+# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>快速入門：以 Q\# 執行格羅弗搜尋演算法
 
 在本快速入門中，您可以瞭解如何建立及執行格羅弗搜尋，以加速搜尋非結構化資料。  格羅弗搜尋是最受歡迎的量子運算演算法之一，而這個相對小型的 Q# 實作，可讓您使用高階的 Q# 量子程式設計語言來表達量子運算法，瞭解量子解決方案程式設計的一些優點。  在本指南最後，您會看到模擬輸出示範了如何在有序項目清單中成功地搜尋特定字串，且花費的時間比古典電腦搜尋所需的少了許多。
 
@@ -41,9 +41,9 @@ ms.locfileid: "77906945"
 
 1. 使用 Quantum Development Kit，在您選擇的開發環境中[建立新的 Q# 專案](xref:microsoft.quantum.howto.createproject) (名為 `Grover`)。
 
-1. 將下列程式碼新增至新專案中的 `Operations.qs` 檔案：
+1. 將下列程式碼新增至新專案中的 `Program.qs` 檔案：
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-41":::
 
 1. 若要定義我們要搜尋的清單，請建立新檔案 `Reflections.qs`，並貼到下列程式碼中：
 
@@ -53,64 +53,54 @@ ms.locfileid: "77906945"
 
 1. 接著，執行新的 Q# 程式以尋找 `ReflectAboutMarked` 所標示的項目。
 
-    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[使用 Visual Studio Code 或命令列的 Python](#tab/tabid-python)
+### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>具有 Visual Studio 或 Visual Studio Code 的 Q# 命令列應用程式
 
-    若要從 Python 執行新的 Q# 程式，請將下列程式碼儲存為 `host.py`：
+視專案設定和命令列選項而定，可執行檔將會在模擬器或資源估計工具上執行標記為 `@EntryPoint()` 屬性的作業或函式。
 
-    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
+在 Visual Studio 中，只要按 Ctrl + F5 執行指令碼即可。
 
-    然後，您可以從命令列執行 Python 主機程式：
+在 VS Code 中，透過在終端機中輸入下列命令，以第一次建立 `Program.qs`：
 
-    ```bash
-    $ python host.py
-    Preparing Q# environment...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    [0, 1, 0, 1, 0]
-    ```
+```Command line
+dotnet build
+```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[使用 Visual Studio Code 或命令列的 C#](#tab/tabid-csharp)
+在後續的執行中，不需要重新建立。 若要執行，請輸入下列命令並按 Enter 鍵：
 
-    若要從 C# 執行新的 Q# 程式，請修改 `Driver.cs` 以納入下列 C# 程式碼：
+```Command line
+dotnet run --no-build
+```
 
-    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
+您應該會看到顯示在終端機中的下列訊息：
 
-    然後，您可以從命令列執行 C# 主機程式：
+```
+operations.qs:
+This operation applies Grover's algorithm to search all possible inputs to an operation to find a particular marked state.
+Usage:
+operations.qs [options] [command]
 
-    ```bash
-    $ dotnet run
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Result: [Zero,One,Zero,One,Zero]
+--n-qubits <n-qubits> (REQUIRED)
+-s, --simulator <simulator>         The name of the simulator to use.
+--version                           Show version information
+-?, -h, --help                      Show help and usage information
+Commands:
+```
 
-    Press any key to continue...
-    ```
+這是因為您未指定想要使用的 qubits 數目，所以終端機會告訴您可執行檔的命令。 如果我們想要使用 5 個 qubits，則我們應該輸入：
 
-    ### <a name="c-with-visual-studio-2019"></a>[使用 Visual Studio 2019 的 C#](#tab/tabid-vs2019)
+```Command line
+dotnet run --n-qubits 5
+```
 
-    若要從 Visual Studio 中的 C# 執行新的 Q# 程式，請修改 `Driver.cs` 以納入下列 C# 程式碼：
+按 Enter 後您應該會看見下列輸出：
 
-    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
-
-    然後按 F5 鍵，程式會開始執行，並跳出一個新視窗顯示下列結果： 
-
-    ```bash
-    $ dotnet run
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Result: [Zero,One,Zero,One,Zero]
-
-    Press any key to continue...
-    ```
-    ***
-
-    `ReflectAboutMarked` 作業僅呼叫了四次，但您的 Q# 程式就能從 $2^{5} = 32$ 個可能的輸入中找出 "01010" 輸入！
+```
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+[Zero,One,Zero,One,Zero]
+```
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -119,10 +109,11 @@ ms.locfileid: "77906945"
 - [回到 QDK 使用者入門指南](xref:microsoft.quantum.welcome)
 - 試用較一般的格羅弗搜尋演算法[範例](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)
 - [深入瞭解格羅弗搜尋與 Quantum Katas](xref:microsoft.quantum.overview.katas)
-- 深入瞭解[振幅放大](xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification)，格羅弗搜尋演算法背後的量子運算技術
+- 深入瞭解[振幅放大][amplitude-amplification]，格羅弗搜尋演算法背後的量子運算技術
 - [量子運算概念](xref:microsoft.quantum.concepts.intro)
 - [Quantum Development Kit 範例](https://docs.microsoft.com/samples/browse/?products=qdk)
 
 <!-- LINKS -->
 
 [install]: xref:microsoft.quantum.install
+[amplitude-amplification]: xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification
