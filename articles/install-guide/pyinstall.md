@@ -1,19 +1,19 @@
 ---
-title: 使用 Q# + Python 來開發
+title: '使用 Q # 和 Python 進行開發'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680153"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426371"
 ---
-# <a name="develop-with-q--python"></a>使用 Q# + Python 來開發
+# <a name="develop-with-q-and-python"></a>使用 Q # 和 Python 進行開發
 
 安裝 QDK 以開發 Python 主機程式，以呼叫 Q # 作業。
 
@@ -24,7 +24,7 @@ ms.locfileid: "82680153"
     - [.NET Core SDK 3.1 或更新版本](https://www.microsoft.com/net/download)
 
 
-1. 安裝`qsharp`套件，這是可在 Q # 和 Python 之間進行交互操作的 Python 套件。
+1. 安裝 `qsharp` 套件，這是可在 Q # 和 Python 之間進行交互操作的 Python 套件。
 
     ```bash
     pip install qsharp
@@ -83,6 +83,6 @@ ms.locfileid: "82680153"
 > [!NOTE]
 > * 您也可以使用 Python Jupyter 筆記本來撰寫傳統的 Python 程式，並從資料格呼叫 Q # 作業。 Python 程式碼只是一般的 Python 程式。
 
-## <a name="whats-next"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
-您已在慣用環境中安裝了 Quantum Development Kit，因此接下來可以編寫和執行[您的第一個量子程式](xref:microsoft.quantum.write-program)。
+您已在慣用環境中安裝了 Quantum Development Kit，因此接下來可以編寫和執行[您的第一個量子程式](xref:microsoft.quantum.quickstarts.qrng)。

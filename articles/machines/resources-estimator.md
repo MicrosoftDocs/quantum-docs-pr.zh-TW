@@ -6,23 +6,23 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320809"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426867"
 ---
-# <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator 目的電腦
+# <a name="the-resources-estimator-target-machine"></a>資源估計工具目的電腦
 
-正如其名，`ResourcesEstimator` 會估計在量子電腦上執行 Q # 作業的指定實例所需的資源。
+顧名思義，會 `ResourcesEstimator` 估計在量子電腦上執行 Q # 作業的指定實例所需的資源。
 它會執行量子作業，而不實際模擬量子電腦的狀態，來完成這項操作;基於這個理由，如果程式碼的傳統部分可以在合理的時間內執行，它可以估計使用數千個 qubits 的 Q # 作業資源。
 
-## <a name="usage"></a>使用量
+## <a name="usage"></a>使用方式
 
-`ResourcesEstimator` 只是另一種類型的目的電腦，因此可以用來執行任何 Q # 作業。 
+`ResourcesEstimator`只是另一種類型的目的電腦，因此可以用來執行任何 Q # 作業。 
 
-作為其他目的電腦，若要在C#主機程式上使用它，請建立實例，並將它當做作業 `Run` 方法的第一個參數來傳遞：
+作為其他目的電腦，若要在 c # 主機程式上使用它，請建立實例，並將它當做作業的方法的第一個參數來傳遞 `Run` ：
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-如範例所示，`ResourcesEstimator` 會提供 `ToTSV()` 的方法，以產生可儲存在檔案中或寫入主控台進行分析的索引標籤分隔值（TSV）的資料表。 上述程式的輸出看起來應該像這樣：
+如範例所示， `ResourcesEstimator` 會提供一個 `ToTSV()` 方法來產生一個資料表，其中包含可儲存至檔案或寫入主控台進行分析的索引標籤分隔值（TSV）。 上述程式的輸出看起來應該像這樣：
 
 ```Output
 Metric          Sum
@@ -57,15 +57,15 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> `ResourcesEstimator` 不會在每次執行時重設其計算，如果使用相同的實例來執行另一個作業，則會將匯總計數保留在現有的結果上方。
+> 不 `ResourcesEstimator` 會在每次執行時重設其計算，如果使用相同的實例來執行另一項作業，則會將匯總計數保留在現有的結果上方。
 > 如果您需要重設執行之間的計算，請在每次執行時建立新的實例。
 
 
 ## <a name="programmatically-retrieving-the-estimated-data"></a>以程式設計方式抓取估計的資料
 
-除了 TSV 資料表以外，您也可以透過 `ResourcesEstimator`的 `Data` 屬性，以程式設計方式抓取估計的資源。 `Data` 提供具有兩個數據行的 `System.DataTable` 實例： `Metric` 和 `Sum`，並根據計量名稱編制索引。
+除了 TSV 資料表以外，您也可以透過的屬性，以程式設計方式抓取估計的資源 `ResourcesEstimator` `Data` 。 `Data`提供 `System.DataTable` 具有兩個數據行的實例： `Metric` 和，並以 `Sum` 計量名稱編制索引。
 
-下列程式碼示範如何抓取和列印 Q # 作業所使用的 `QubitClifford`、`T` 和 `CNOT` 閘道總數：
+下列程式碼示範如何抓取和列印 `QubitClifford` Q # 作業所使用的、和閘道總數 `T` `CNOT` ：
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -91,7 +91,7 @@ namespace Quantum.MyProgram
 
 ## <a name="metrics-reported"></a>回報的計量
 
-以下是 `ResourcesEstimator`所估計的計量清單：
+以下是預估的計量清單 `ResourcesEstimator` ：
 
 * __Cnot-contains__：執行的 cnot-contains （也稱為受控制的 Pauli X 閘道）的計數。
 * __QubitClifford__：執行的任何單一 qubit Clifford 和 Pauli 閘道的計數。
@@ -105,7 +105,7 @@ namespace Quantum.MyProgram
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>提供測量結果的機率
 
-<xref:microsoft.quantum.intrinsic> 命名空間中的 <xref:microsoft.quantum.intrinsic.assertprob> 可用來提供測量預期機率的相關資訊，以協助驅動 Q # 程式的執行。 下列範例會加以說明：
+<xref:microsoft.quantum.intrinsic.assertprob>從 <xref:microsoft.quantum.intrinsic> 命名空間可以用來提供測量預期機率的相關資訊，以協助驅動 Q # 程式的執行。 下列範例會加以說明：
 
 ```qsharp
 operation Teleport(source : Qubit, target : Qubit) : Unit {
@@ -127,10 +127,10 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-當 `ResourcesEstimator` 遇到 `AssertProb` 會記錄在 `source` 上測量 `PauliZ`，而 `q` 應獲得 `Zero` 的結果，機率為0.5。 當它在稍後執行 `M` 時，會發現結果機率的記錄值，而 `M` 會傳回 `Zero` 或 `One`，機率為0.5。
+當遇到時， `ResourcesEstimator` `AssertProb` 它會將測量記錄 `PauliZ` 在上， `source` 且 `q` 應給予的結果為，機率為 `Zero` 0.5。 當稍後執行時 `M` ，它會尋找結果機率的已記錄值，而且 `M` 會傳回 `Zero` 或 `One` ，並出現機率0.5。
 
 
 ## <a name="see-also"></a>另請參閱
 
-`ResourcesEstimator` 是以「量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器」為基礎，可提供更豐富的計量集、在完整呼叫圖形上報告計量的能力，以及「[相異輸入檢查](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)」之類的功能，以協助找出問 # 程式上的錯誤。 如需詳細資訊，請參閱[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器檔。
+`ResourcesEstimator`建置於配量電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的最上層，可提供一組更豐富的計量、在完整的呼叫圖形上報告計量的能力，以及可協助您[distinct inputs checker](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)找出問 # 程式錯誤的功能。 如需詳細資訊，請參閱[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器檔。
 

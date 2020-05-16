@@ -1,19 +1,19 @@
 ---
-title: 使用 Q# + C# 來開發
+title: 使用 Q# 和 .NET 進行開發
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 155367dbb1373f00e2b0bd732a5319b32462c9f9
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680171"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426492"
 ---
-# <a name="using-q-with-c-and-f"></a>搭配 C\#和 F 使用 Q #\#
+# <a name="develop-with-q-and-net"></a>使用 Q# 和 .NET 進行開發
 
 問 # 的設計可與 .NET 語言（例如 c # 和 F #）搭配運作。
 在本指南中，我們將示範如何搭配以 .NET 語言撰寫的主機程式來使用 Q #。
@@ -29,17 +29,17 @@ ms.locfileid: "82680171"
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 - 建立新的 Q # 程式庫
-  - 移至**File** -> [檔案] [**新增** -> **專案**]
+  - 移至 **[** 檔案] [  ->  **新增**  ->  **專案**]
   - 在搜尋方塊中輸入 "Q #"
   - 選取 [ **Q # 程式庫**]
-  - 選取**下一步**
+  - 選取 [下一步] 
   - 選擇程式庫的名稱和位置
   - 請**確定未核**取 [將專案和方案放在相同的目錄]
   - 選取 [**建立**]
 - 建立新的 c # 或 F # 主機程式
   - 前往 [檔案 **] → [** **新增**] → [**專案**]
   - 針對 c # 或 F 選取 [主控台應用程式（.NET Core）]#
-  - 選取**下一步**
+  - 選取 [下一步] 
   - 在 [*方案*] 底下，選取 [新增至解決方案]
   - 選擇主機程式的名稱
   - 選取 [**建立**]
@@ -84,7 +84,7 @@ Q # 編譯器會針對每個 Q # 作業和函式建立 .NET 類別，讓您能�
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-若要從 .NET 在配量模擬器上呼叫這項作業，您`Run`可以使用由`RunAlgorithm` Q # 編譯器所產生之 .net 類別的方法：
+若要從 .NET 在配量模擬器上呼叫這項作業，您可以使用 `Run` `RunAlgorithm` 由 Q # 編譯器所產生之 .net 類別的方法：
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -96,6 +96,6 @@ Q # 編譯器會針對每個 Q # 作業和函式建立 .NET 類別，讓您能�
 
 ***
     
-## <a name="whats-next"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
-現在您已設定了適用于 Q # 命令列程式的配量開發工具組，而且為了與 .NET 互通，您可以撰寫並執行[您的第一個量副程式](xref:microsoft.quantum.write-program)。
+現在您已設定了適用于 Q # 命令列程式的配量開發工具組，而且為了與 .NET 互通，您可以撰寫並執行[您的第一個量副程式](xref:microsoft.quantum.quickstarts.qrng)。
