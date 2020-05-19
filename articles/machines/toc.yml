@@ -1,10 +1,10 @@
 - name: 概觀
   href: index.md
-- name: 量子模擬器
+- name: 完整狀態模擬器
   href: full-state-simulator.md
 - name: 資源估算工具
   href: resources-estimator.md
-- name: 量子電腦追蹤模擬器
+- name: 追蹤模擬器
   topicHref: qc-trace-simulator/index.md
   href: qc-trace-simulator/toc.yml
 - name: Toffoli 模擬器
