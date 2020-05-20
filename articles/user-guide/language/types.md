@@ -1,19 +1,19 @@
 ---
-title: Q 中的類型#
+title: Q# 中的類型
 description: '瞭解問答 # 程式設計語言中使用的不同類型。'
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 58370193bd62e306197a9e07c28f8611f043e55c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
+ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431133"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609136"
 ---
-# <a name="types-in-q"></a>Q 中的類型#
+# <a name="types-in-q"></a>Q# 中的類型
 
 此頁面會配置 Q # 類型模型，並描述用於指定和使用類型的語法。
 下一個頁面 [[類型運算式](xref:microsoft.quantum.guide.expressions)] 會詳細說明如何建立和操作這些類型的運算式。
@@ -35,7 +35,7 @@ Q # 語言提供了數種*基本類型*，可從中建造其他類型：
    型.
 - `Double`型別代表雙精確度浮點數，例如： `0.0` 、 `-1.3` 、 `4e-7` 。
 - 此 `Bool` 類型代表布林值，可以是 `true` 或 `false` 。
-- `Range`型別代表一連串的整數，以表示 `start..step..stop` 步驟是選項。 
+- `Range`型別代表一連串的整數，以表示 `start..step..stop` 步驟是選擇性的。 
    這會 `start .. stop` 對應至 `start..1..stop` ，例如 `1..2..7` 代表序列 $ \{ 1、3、5、7 \} $。
 - `String`類型是一系列的 Unicode 字元，不是使用者建立後的不透明。
   此類型是用來在發生錯誤或診斷事件時，將訊息報告給傳統主機。

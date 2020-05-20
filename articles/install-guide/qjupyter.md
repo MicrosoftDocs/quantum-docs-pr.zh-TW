@@ -1,19 +1,19 @@
 ---
-title: '使用 Q # Jupyter 筆記本進行開發'
+title: 使用 Q# Jupyter Notebooks 來開發
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 3302a9bd0652b2dea86b844058bf8303ee7a4a7f
-ms.sourcegitcommit: c85c1b439807ac576d3a11aadca307d57b059673
+ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551034"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660767"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>使用 Q # Jupyter 筆記本進行開發
+# <a name="develop-with-q-jupyter-notebooks"></a>使用 Q# Jupyter Notebooks 來開發
 
 安裝 QDK 以在 Q # Jupyter 筆記本上開發 Q # 作業。
 
@@ -45,9 +45,9 @@ IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SD
         jupyter notebook
         ```
 
-    - 若要開啟 Jupyter 筆記本，請將命令列所提供的 URL 複製並貼到您的瀏覽器中。
+    - 若要開啟 Jupyter Notebook，請將命令列所提供的 URL 複製並貼到您的瀏覽器中。
 
-    - 使用 Q# 核心建立 Jupyter 筆記本，並將下列程式碼新增至第一個筆記本資料格：
+    - 使用 Q # 核心建立 Jupyter Notebook，並將下列程式碼新增至第一個筆記本資料格：
 
         ```qsharp
         operation SayHello () : Unit {
@@ -57,17 +57,21 @@ IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SD
 
     - 執行筆記本的此一資料格：
 
-        ![Jupyter 筆記本資料格搭配 Q# 程式碼](~/media/install-guide-jupyter.png)
+        ![使用 Q # 程式碼 Jupyter Notebook 儲存格](~/media/install-guide-jupyter.png)
 
-        您應該會在資料格的輸出中看到 `SayHello`。 在 Jupyter 筆記本中執行時，Q# 程式碼會進行編譯，筆記本則會輸出其找到的操作名稱。
+        您應該會在資料格的輸出中看到 `SayHello`。 在 Jupyter Notebook 中執行時，會編譯 Q # 程式碼，而筆記本會輸出找到的作業名稱。
 
 
     - 在新的資料格中，使用命令執行您剛才建立的作業（在模擬器中） `%simulate` ：
 
-        ![Jupyter 筆記本資料格搭配 %simulate magic](~/media/install-guide-jupyter-simulate.png)
+        ![具有% 模擬魔術的 Jupyter Notebook 資料格](~/media/install-guide-jupyter-simulate.png)
 
         您應該會看到訊息印在畫面上，以及您叫用之作業的結果（在這裡，我們會看到空白的元組，因為我們的作業只會傳回 `()` `Unit` 類型）。
 
 ## <a name="next-steps"></a>後續步驟
 
-您已在慣用環境中安裝了 Quantum Development Kit，因此接下來可以編寫和執行[您的第一個量子程式](xref:microsoft.quantum.quickstarts.qrng)。
+現在您已安裝了 Q # Jupyter 筆記本的 QDK，您可以撰寫並執行[您的第一個量副程式](xref:microsoft.quantum.quickstarts.qrng)，方法是直接在 Jupyter Notebook 環境中撰寫您的 Q # 程式碼。
+
+如需如何使用 Q # Jupyter 筆記本的更多範例，請參閱：
+- [問答 # 和 Jupyter Notebook 簡介](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/)。 您會在這裡找到一個 Q # Jupyter Notebook，說明如何在此環境中使用 Q #。
+- [量子 Katas](xref:microsoft.quantum.overview.katas)，這是一個開放原始碼集合，可自主教學課程和一組程式設計練習，以 Q # Jupyter 筆記本形式呈現。 [量子 Katas 教學課程筆記本](https://github.com/microsoft/QuantumKatas#tutorial-topics)是不錯的起點。 量子 Katas 的目標在於教您同時進行量子運算和 Q # 程式設計的要素。 這些是您可以使用 Q # Jupyter 筆記本建立之內容種類的絕佳範例。
