@@ -1,23 +1,25 @@
 ---
-title: 搭配 Q# 使用的量子基本知識
+title: 使用 Q# 探索纏結
 description: 了解如何以 Q# 撰寫量子程式。 使用 Quantum Development Kit (QDK) 開發貝爾狀態應用程式
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906724"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426834"
 ---
-# <a name="quantum-basics-with-q"></a>搭配 Q# 使用的量子基本知識
+# <a name="tutorial-explore-entanglement-with-q"></a>教學課程：使用 Q\# 探索糾纏
 
-在本快速入門中，我們會示範如何撰寫 Q# 程式來操控和測量量子位元，並示範疊加和纏結的效果，  從而引導您安裝 QDK、建立程式，並在量子模擬器上執行該程式。  
+在本教學課程中，我們會示範如何撰寫 Q# 程式來操控和測量量子位元，並示範疊加和糾纏的效果，
+從而引導您安裝 QDK、建立程式，並在量子模擬器上執行該程式。  
 
-您將會撰寫一個名為 Bell 的應用程式以示範量子纏結。  Bell 這個名稱取自「貝爾狀態」，是指兩個量子位元的特定狀態，用來代表疊加和量子纏結的最簡單範例。 
+您將會撰寫一個名為 Bell 的應用程式以示範量子纏結。
+Bell 這個名稱取自「貝爾狀態」，是指兩個量子位元的特定狀態，用來代表疊加和量子纏結的最簡單範例。
 
 ## <a name="pre-requisites"></a>必要條件
 
@@ -30,7 +32,7 @@ ms.locfileid: "77906724"
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>使用 Q# 示範量子位元行為
 
-回想一下我們簡單的[量子位元定義](xref:microsoft.quantum.overview.what#the-qubit)。  其中，古典位元會有單一二進位值，例如 0 或 1，而量子位元的狀態則可以同時是 0 和 1 的**疊加**。  在概念上，可以將量子位元想成空間中的方向 (又稱為向量)。  量子位元可以是任何可能方向的其中一個。 兩個**古典狀態**是兩個方向，分別代表 100% 測量到 0 的機率和 100% 測量到 1 的機率。  這種表示法也能以[布洛赫球體](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)更正式地視覺化。
+回想一下我們簡單的[量子位元定義](xref:microsoft.quantum.overview.understanding)。  其中，古典位元會有單一二進位值，例如 0 或 1，而量子位元的狀態則可以同時是 0 和 1 的**疊加**。  在概念上，可以將量子位元想成空間中的方向 (又稱為向量)。  量子位元可以是任何可能方向的其中一個。 兩個**古典狀態**是兩個方向，分別代表 100% 測量到 0 的機率和 100% 測量到 1 的機率。  這種表示法也能以[布洛赫球體](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)更正式地視覺化。
 
 
 測量動作會產生二進位結果，並變更量子位元狀態。 測量會產生一個二進位值，也就是 0 或 1。  量子位元會從疊加狀態 (任何方向) 變為兩個古典狀態的其中一個。  之後，在沒有任何干擾作業的情況下重複相同的測量，會產生相同的二進位結果。  
@@ -76,13 +78,13 @@ ms.locfileid: "77906724"
 1. 建立新專案
 
    * 開啟 Visual Studio
-   * 移至 [檔案]  功能表，然後選取 [新增]   -> [專案...] 
+   * 移至 [檔案] 功能表，然後選取 [新增] -> [專案...]
    * 在專案範本總管的搜尋欄位中輸入 `Q#`，然後選取 `Q# Application` 範本
    * 將您的專案命名為 `Bell`
 
 1. 重新命名 Q# 檔案
 
-   * 瀏覽至 [方案總管] 
+   * 瀏覽至 [方案總管]
    * 以滑鼠右鍵按一下 `Operations.qs` 檔案
    * 將其重新命名為 `Bell.qs`
 
@@ -351,7 +353,7 @@ Init:One  0s=522  1s=478
 
 ## <a name="prepare-entanglement"></a>準備糾纏
 
-**概觀：** 現在讓我們來看一下 Q# 如何表示量子位元纏結。  首先，我們將第一個量子位元設定為初始狀態，然後使用 `H` 作業將它置於疊加狀態。  然後，在測量第一個量子位元之前，我們使用新的作業 (`CNOT`)，代表 Controlled-Not。  對兩個量子位元執行這項作業的結果是：如果第一個量子位元是 `One` 就會翻轉第二個量子位元。  現在，這兩個量子位元相互纏結。  第一個量子位元的統計資料並未變更 (測量後 `Zero` 或 `One` 的機率各半)，但現在當我們測量第二個量子位元時，其量值「一律」  會與第一個量子位元的相同。 我們的 `CNOT` 讓這兩個量子位元相互糾纏，因此其中一個量子位元發生的情況，也會出現在另一個量子位元上。 如果您反轉測量 (先執行第二個量子位元，再執行第一個)，也會發生相同的情況。 第一個測量是隨機的，第二個測量則會根據第一個測量所發現的結果，以鎖定步驟執行。
+**概觀：** 現在讓我們來看一下 Q# 如何表示量子位元纏結。  首先，我們將第一個量子位元設定為初始狀態，然後使用 `H` 作業將它置於疊加狀態。  然後，在測量第一個量子位元之前，我們使用新的作業 (`CNOT`)，代表 Controlled-Not。  對兩個量子位元執行這項作業的結果是：如果第一個量子位元是 `One` 就會翻轉第二個量子位元。  現在，這兩個量子位元相互纏結。  第一個量子位元的統計資料並未變更 (測量後 `Zero` 或 `One` 的機率各半)，但現在當我們測量第二個量子位元時，其量值「一律」會與第一個量子位元的相同。 我們的 `CNOT` 讓這兩個量子位元相互糾纏，因此其中一個量子位元發生的情況，也會出現在另一個量子位元上。 如果您反轉測量 (先執行第二個量子位元，再執行第一個)，也會發生相同的情況。 第一個測量是隨機的，第二個測量則會根據第一個測量所發現的結果，以鎖定步驟執行。
 
 首先我們必須做的是配置 2 個量子位元，而不是 `TestBellState` 中的一個：
 
@@ -498,7 +500,7 @@ Init:One  0s=490  1s=510  agree=1000
 
 ## <a name="whats-next"></a>下一步
 
-「[格羅弗搜尋](xref:microsoft.quantum.quickstarts.search)」快速入門示範如何建立和執行格羅弗搜尋 (最受歡迎的量子運算演算法之一)，並提供 Q# 程式的絕佳範例，可用來解決量子運算的實際問題。  
+[格羅弗搜尋](xref:microsoft.quantum.quickstarts.search)教學課程會示範如何建立和執行格羅弗搜尋 (最受歡迎的量子運算演算法之一)，並提供 Q# 程式的絕佳範例，可用來解決量子運算的實際問題。  
 
 [開始使用量子開發工具組](xref:microsoft.quantum.welcome)中建議更多學習 Q# 和量子程式設計的方式。
 

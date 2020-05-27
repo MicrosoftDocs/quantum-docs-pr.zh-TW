@@ -6,16 +6,16 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: c67ccd16957ceef694552bdd9c073ba5a35d8aaf
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 9562e1937a2cac49d682cc0524d8fb29e276d95c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82686833"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426798"
 ---
-# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>快速入門：以 Q\# 執行格羅弗搜尋演算法
+# <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>教學課程：以 Q\# 執行格羅弗搜尋演算法
 
-在本快速入門中，您可以瞭解如何建立及執行格羅弗搜尋，以加速搜尋非結構化資料。  格羅弗搜尋是最受歡迎的量子運算演算法之一，而這個相對小型的 Q# 實作，可讓您使用高階的 Q# 量子程式設計語言來表達量子運算法，瞭解量子解決方案程式設計的一些優點。  在本指南最後，您會看到模擬輸出示範了如何在有序項目清單中成功地搜尋特定字串，且花費的時間比古典電腦搜尋所需的少了許多。
+在本教學課程中，您可以了解如何建立及執行格羅弗搜尋，以加速搜尋非結構化資料。  格羅弗搜尋是最受歡迎的量子運算演算法之一，而這個相對小型的 Q# 實作，可讓您使用高階的 Q# 量子程式設計語言來表達量子運算法，瞭解量子解決方案程式設計的一些優點。  在本指南最後，您會看到模擬輸出示範了如何在有序項目清單中成功地搜尋特定字串，且花費的時間比古典電腦搜尋所需的少了許多。
 
 格羅弗演算法會搜尋特定項目的非結構化資料清單。 例如，它可以回答問題：從一副牌中抽出的這張牌是紅心 A 嗎？ 為特定項目的加上標籤，稱為_標記輸入_。
 
@@ -104,7 +104,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>後續步驟
 
-如果您喜歡本快速入門，請參閱下列一些資源，以深入了解如何使用 Q# 撰寫您自己的量子應用程式：
+如果您喜歡本教學課程，請參閱下列一些資源，以深入了解如何使用 Q# 撰寫您自己的量子應用程式：
 
 - [回到 QDK 使用者入門指南](xref:microsoft.quantum.welcome)
 - 試用較一般的格羅弗搜尋演算法[範例](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)
