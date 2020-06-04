@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: 針對陣列的元素所定義的陣列和述詞，會傳回包含符合述詞之元素的陣列。
 - uid: microsoft.quantum.arrays.fold
-  summary: '`f`透過陣列`array`逐一查看函式，傳回`f(f(f(initialState, array[0]), array[1]), ...)`。'
+  summary: '`f`透過陣列逐一查看函式 `array` ，傳回 `f(f(f(initialState, array[0]), array[1]), ...)` 。'
 - uid: microsoft.quantum.arrays.head
   summary: 傳回陣列的第一個元素。
 - uid: microsoft.quantum.arrays.indexof
@@ -29,6 +29,8 @@ functions:
   summary: 指定陣列時，會傳回該陣列索引的範圍，適合用於 for 迴圈。
 - uid: microsoft.quantum.arrays.isempty
   summary: 只有在陣列是空的時，才會傳回 true。
+- uid: microsoft.quantum.arrays.ispermutation
+  summary: 只有在指定的陣列代表排列時，才會輸出 true。
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: 指定陣列時，會傳回函式，此函式會傳回該陣列的元素。
 - uid: microsoft.quantum.arrays.mapped
@@ -69,9 +71,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: 針對陣列的元素所定義的陣列和作業，會傳回新的陣列，其中包含作業下原始陣列的影像。
 metadata:
-  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673399"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326705"

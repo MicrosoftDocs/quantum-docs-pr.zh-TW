@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.ispermutation
+name: IsPermutation
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: >-
+  只有在指定的陣列代表排列時，才會輸出 true。
+
+
+  指定 `array` 長度的陣列 `n` 時，只有在的每個整數只出現一次時，才會傳回 true， `0` 這樣就可以將其視為 `n - 1` `array` `array` 元素的排列 `n` 。
+remarks: 長度為零的陣列會完整排列。
+examples: >-
+  下列 Q 號碼程式碼會列印「所有診斷已順利完成」訊息：
+
+
+  ```Q#
+
+  Fact(IsPermutation([2, 0, 1], "");
+
+  Contradiction(IsPermutation([5, 0, 1], "[5, 0, 1] isn't a permutation");
+
+  Message("All diagnostics completed successfully.");
+
+  ```
+syntax: 'function IsPermutation (permuation : Int[]) : Bool'
+input:
+  content: '(permuation : Int[])'
+  types:
+  - name: permuation
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - isPrimitive: true
+    uid: Bool
+metadata:
+  ms.openlocfilehash: 259c7a073a02b8cae196853e66cd30d7fe3a9436
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84328403"
