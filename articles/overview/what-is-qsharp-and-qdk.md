@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: 55ac946aa935d3748b36ac99096a89d0db686835
-ms.sourcegitcommit: a03d79ca3f0774161a9f86a15528d36e1291acce
+ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83433022"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327694"
 ---
 # <a name="what-are-the-q-programming-language-and-qdk"></a>Q# 程式設計語言和 QDK 是什麼？
 
@@ -71,5 +71,4 @@ Q# 是一種可用來開發量子程式的開放原始碼程式設計語言。 �
 
 ## <a name="next-steps"></a>後續步驟
 
-> [!div class="nextstepaction"]
-> [量子運算的線性代數](xref:microsoft.quantum.overview.algebra)
+[量子運算的線性代數](xref:microsoft.quantum.overview.algebra)
