@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
-ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
+ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609136"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327283"
 ---
 # <a name="types-in-q"></a>Q# 中的類型
 
@@ -63,7 +63,8 @@ Q # 語言提供了數種*基本類型*，可從中建造其他類型：
 問 # 不提供對矩形多維陣列的支援。
 
 您可以使用方括弧括住陣列的元素，將陣列值寫入至 Q # 原始程式碼中，如中所示 `[PauliI, PauliX, PauliY, PauliZ]` 。
-陣列常值的類型取決於陣列中所有專案的通用基底類型。 
+陣列常值的類型取決於陣列中所有專案的通用基底類型。 因此，嘗試使用沒有通用基底類型的元素來建立陣列，將會引發錯誤。  
+如需這個的範例，請參閱[callables 的陣列](xref:microsoft.quantum.guide.expressions#arrays-of-callables)。
 
 > [!WARNING]
 > 建立陣列之後，就無法變更陣列的元素。
@@ -291,7 +292,8 @@ newtype TypeC = (TypeA, Range);
 
 問 # 並未提供機制來限制可能會替代類型參數的可能類型。
 
-## <a name="whats-next"></a>下一步
+## <a name="next-steps"></a>下一步
+
 既然您已瞭解組成 Q # 語言的所有類型，您可以前往[q # 中的類型運算式](xref:microsoft.quantum.guide.expressions)，以瞭解如何建立和操作這些各種類型的運算式。
 
 

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: e89b9ccfe2a0796e01eedfc99f7ce71038d85f38
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430929"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327538"
 ---
 # <a name="working-with-qubits"></a>使用量子位元
 
@@ -221,5 +221,6 @@ is Adj + Ctl {
 
 比較這段程式碼與另一個 canon 函式是有意義的，它會 `MultiControlledXClean` 達到相同的目標來執行乘以控制的作業 `X` ，不過，它使用了使用機制的幾個乾淨 qubits `using` 。 
 
-## <a name="whats-next"></a>下一步
+## <a name="next-steps"></a>下一步
+
 瞭解 Q # 中的[控制流程](xref:microsoft.quantum.guide.controlflow)。

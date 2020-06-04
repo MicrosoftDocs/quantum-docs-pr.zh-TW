@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: bc9695b85b68807801225ccbc903a4622b450768
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431065"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327793"
 ---
 # <a name="operations-and-functions-in-q"></a>Q 中的作業和函數#
 
@@ -670,5 +670,6 @@ Q # callables 允許直接或間接遞迴。
 - 在實際的量子裝置上執行時，堆疊空間可能會受到限制，因此深度遞迴可能會導致執行階段錯誤。
   特別是，Q # 編譯器和執行時間不會識別並優化尾遞迴。
 
-## <a name="whats-next"></a>下一步
+## <a name="next-steps"></a>下一步
+
 瞭解 Q # 中的[變數](xref:microsoft.quantum.guide.variables)。

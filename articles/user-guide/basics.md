@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: fd0ea47f00b1456ec460808ef7d451c8427677cd
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: e77b52d1a6eb7e2f62ab12dedd75d00ac8fec4be
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431150"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327317"
 ---
 # <a name="q-basics"></a>問 # 基本概念
 
@@ -106,8 +106,7 @@ for (qubit in qubits) {
 幾乎所有的 Q # 程式層面都是使用語句來建立的，因此沒有任何單一頁面可以包含與它們相關的所有資訊。
 不過，其詞法結構和格式會在 [ [q # 檔案結構](xref:microsoft.quantum.guide.filestructure)] 頁面、[符號系結指派] 和 [q [# 中的變數](xref:microsoft.quantum.guide.variables)範圍] 和 [控制流程] 迴圈（例如 `for` [q # 中的控制流程](xref:microsoft.quantum.guide.controlflow)）中說明。
 
-
-## <a name="whats-next"></a>下一步
+## <a name="next-steps"></a>下一步
 在本指南的其餘部分中，我們將示範如何使用 Q #，透過作業、函式和類型的基本構件來建立複雜的配量程式。
 
 若要開始使用，您可以開始瞭解[問 # 中的類型](xref:microsoft.quantum.guide.types)。

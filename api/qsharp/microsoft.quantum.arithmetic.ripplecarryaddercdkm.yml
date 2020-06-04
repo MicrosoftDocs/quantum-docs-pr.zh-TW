@@ -7,8 +7,8 @@ summary: >-
   可還原的就地 ripple-加入兩個整數。
 
 
-  假設在 LittleEndian 中編碼的兩個 $n $ bit `xs`整數`ys`會註冊和，而 qubit 包含，則作業會計算兩個整數的總和，其中會保留結果的 $n $ 最低位， `ys`而執行位則是進行 xor 至 qubit `carry`。
-remarks: 這項作業的功能與 RippleCarryAdderD 相同，但只會使用一個 ancilla qubit，而不是 $n $。
+  假設在 LittleEndian 中編碼的兩個 $n $ bit `xs` 整數 `ys` 會註冊和，而 qubit 包含，則作業會計算兩個整數的總和，其中會保留結果的 $n $ 最低位， `ys` 而執行位則是進行 xor 至 qubit `carry` 。
+remarks: 這項作業與 RippleCarryAdderD 具有相同的功能，但只會使用一個輔助 qubit，而不是 $n $。
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
   - Steven Cuccaro、Thomas g. Draper、Samuel A. Kutin、David Petrie Moulton：「新的量子 ripple-攜帶加法電路」，2004。
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d75313cbc70643bc9cb96967c1b2eb928296f8d7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a72b9fe01846bbdb0b3cb6079a681104904747df
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675141"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326491"

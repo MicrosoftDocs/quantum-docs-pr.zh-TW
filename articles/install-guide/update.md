@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 53f72f1d49ae32a5a8572a1cf68a66a1d9b45e4a
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 3245f587493ce12cfec15c8f932fd092d85f688e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426916"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327558"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>更新 Microsoft Quantum Development Kit （QDK）
 
@@ -21,8 +21,8 @@ ms.locfileid: "83426916"
 本文假設您已安裝 QDK。 如果您是第一次安裝，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 我們建議您隨時掌握最新的 QDK 版本。 遵循此更新指南以升級至最新的 QDK 版本。 此套裝程式含兩個部分：
-1. 更新您現有的 Q # 檔案和專案，以將您的程式碼與任何更新的語法對齊
-2. 為您選擇的開發環境更新 QDK 本身 
+1. 更新您現有的 Q # 檔案和專案，以將您的程式碼與任何更新的語法對齊。
+2. 為您選擇的開發環境更新 QDK 本身。
 
 ## <a name="updating-q-projects"></a>更新 Q # 專案 
 
@@ -38,9 +38,9 @@ ms.locfileid: "83426916"
 
 ### <a name="update-q-projects-in-visual-studio"></a>更新 Visual Studio 中的 Q # 專案
  
-1. 更新至最新版本的 Visual Studio 2019，如需指示，請參閱[這裡](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019)
-2. 在 Visual Studio 中開啟您的方案
-3. 從功能表中，選取 [**組建**] [  ->  **清除解決方案**]
+1. 更新至最新版本的 Visual Studio 2019，如需指示，請參閱[這裡](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019)。
+2. 在 Visual Studio 中開啟方案。
+3. 從功能表中，選取 [**組建**] [  ->  **清除方案**]。
 4. 在您的 .csproj 檔案中，將目標 framework 更新為 `netcoreapp3.1` （或者， `netstandard2.1` 如果它是程式庫專案）。
     也就是，編輯表單的行：
 
@@ -49,52 +49,96 @@ ms.locfileid: "83426916"
     ```
 
     您可以在[這裡](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)找到有關指定目標 framework 的詳細資訊。
-5. 儲存並關閉方案中的所有檔案
-6. 選取**工具**  ->  **命令列**  ->  **開發人員命令提示字元**
-7. 針對方案中的每個專案，執行下列命令：
 
-    ```dotnetcli
-    dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+5. 在每個 .csproj 檔案中，將 SDK 設定為 `Microsoft.Quantum.Sdk` ，如下行所示。 請注意，版本號碼應該是最新可用，而且您可以藉由查看[版本](https://docs.microsoft.com/quantum/relnotes/)資訊來加以判斷。
+
+    ```xml
+    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
     ```
 
-   如果您的專案使用任何其他的 Microsoft 量子套件（例如，Microsoft 量子. 數值），請執行下列命令。
-8. 關閉命令提示字元，然後選取 [**組建**  ->  **組建方案**] （請勿選取 [重建方案]） *not*
+6. 儲存並關閉方案中的所有檔案。
+
+7. 選取 [**工具**] [  ->  **命令列**]  ->  **開發人員命令提示字元**。 或者，您也可以在 Visual Studio 中使用套件管理主控台。
+
+8. 針對方案中的每個專案，執行下列命令以**移除**此套件：
+
+    ```dotnetcli
+    dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
+    ```
+
+   如果您的專案使用任何其他的 Microsoft 量子或 Microsoft 量子套件（例如，Microsoft 量子），請針對這些封裝執行 [**新增**] 命令，以更新所使用的版本。
+
+    ```dotnetcli
+    dotnet add [project_name].csproj package [package_name]
+    ```
+
+9. 關閉命令提示字元，然後選取 [**組建**]  ->  [ *not*組建**方案**] （請勿選取 [重建方案]）。
 
 您現在可以直接跳至[更新您的 VISUAL STUDIO QDK 延伸](#update-visual-studio-qdk-extension)模組。
 
 
 ### <a name="update-q-projects-in-visual-studio-code"></a>更新 Visual Studio Code 中的 Q # 專案
 
-1. 在 Visual Studio Code 中，開啟包含要更新之專案的資料夾
-2. 選取 [**終端**機]  ->  **新終端**機
-3. 遵循使用命令列進行更新的指示（如下所示）
+1. 在 Visual Studio Code 中，開啟包含要更新之專案的資料夾。
+2. 選取 [**終端**機] [  ->  **新終端**機]。
+3. 請遵循使用命令列進行更新的指示（直接如下所示）。
 
 ### <a name="update-q-projects-using-the-command-line"></a>使用命令列更新 Q # 專案
 
-1. 流覽至包含您專案檔的資料夾
+1. 流覽至包含主要專案檔的資料夾。
+
 2. 執行以下命令：
 
     ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
-3. 在您的 .csproj 檔案中，將目標 framework 更新為 `netcoreapp3.1` （或者， `netstandard2.1` 如果它是程式庫專案）。
-    也就是，編輯表單的行：
+3. 判斷 QDK 的目前版本。 若要尋找它，您可以參閱[版本](https://docs.microsoft.com/quantum/relnotes/)資訊。 版本會採用類似的格式 `0.11.2006.207` 。
 
-    ```xml
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    ```
+4. 在您的每個檔案中 `.csproj` ，執行下列步驟：
 
-    您可以在[這裡](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)找到有關指定目標 framework 的詳細資訊。
-4. 執行以下命令：
+    - 將目標 framework 更新為 `netcoreapp3.1` （ `netstandard2.1` 如果它是程式庫專案，則為）。 也就是，編輯表單的行：
 
-    ```dotnetcli
-    dotnet add package Microsoft.Quantum.Development.Kit
-    ```
+        ```xml
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        ```
 
-    如果您的專案使用任何其他的 Microsoft 量子套件（例如，Microsoft 量子. 數值），請同時執行命令。
-5. 儲存並關閉所有檔案。
-6. 針對每個專案相依性重複1-4，然後流覽回到包含主要專案的資料夾，並執行：
+        您可以在[這裡](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)找到有關指定目標 framework 的詳細資訊。
+
+    - 在專案定義中取代 SDK 的參考。 請確定版本號碼對應至**步驟 3**中所判斷的值。
+
+        ```xml
+        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        ```
+
+    - 移除封裝的參考 `Microsoft.Quantum.Development.Kit` （如果有的話），其將在下列專案中指定：
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.10.1910.3107" />
+        ```
+
+    - 將所有 Microsoft 量子套件的版本更新為最新發行的 QDK 版本（在**步驟 3**中判斷）。 這些套件會使用下列模式來命名：
+
+        ```
+        Microsoft.Quantum.*
+        Microsoft.Azure.Quantum.*
+        ```
+    
+        封裝的參考具有下列格式：
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        ```
+
+    - 儲存更新的檔案。
+
+    - 執行下列動作來還原專案的相依性：
+
+        ```dotnetcli
+        dotnet restore [project_name].csproj
+        ```
+
+4. 流覽回到包含主要專案的資料夾，然後執行：
 
     ```dotnetcli
     dotnet build [project_name].csproj

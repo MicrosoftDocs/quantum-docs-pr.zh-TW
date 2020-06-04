@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: cbc473eb14d8afd255a7072475dc054e18b98e3e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426711"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327606"
 ---
 # <a name="quantum-computing-glossary"></a>量子運算詞彙
 
@@ -55,7 +55,7 @@ Q # 語言[中的作業或](xref:microsoft.quantum.glossary#operation)[函數](x
 
 向量，其方向不會由指定的轉換變更，且其大小會由對應于該向量之[eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)的因數來改變。 假設有一個 $M $ 和一個 eigenvalue $c $ 的正方形矩陣，然後 $Mv = cv $，其中 $v $ 是矩陣的 eigenvector，而且可以是任何引數的複數。 如需詳細資訊，請參閱[Advanced matrix 概念](xref:microsoft.quantum.concepts.matrix-advanced)。
 
-## <a name="entanglement"></a>會任何牽連
+## <a name="entanglement"></a>糾纏
 
 配量粒子（例如[qubits](xref:microsoft.quantum.glossary#qubit)）可以連接或*光子*，使其無法彼此獨立地進行描述。 它們的測量結果會相互關聯，即使它們的距離是無限的。 會任何牽連是[測量](xref:microsoft.quantum.glossary#measurement)qubit[狀態](xref:microsoft.quantum.glossary#quantum-state)時不可或缺的。  如需詳細資訊，請參閱[Advanced matrix 概念](xref:microsoft.quantum.concepts.matrix-advanced)。
 
@@ -98,7 +98,7 @@ Hadamard 作業（也稱為 Hadamard 閘道或轉換）會在單一[qubit](xref:
 
 相關名稱集合的標籤（亦即[作業](xref:microsoft.quantum.glossary#operation) [、函式和](xref:microsoft.quantum.glossary#function)[使用者定義類型](xref:microsoft.quantum.glossary#user-defined-type)）。 例如，命名空間 [ [Microsoft 量子. 準備](xref:microsoft.quantum.preparation)標籤] 會標示標準程式庫中定義的所有符號，以協助準備初始狀態。
 
-## <a name="operation"></a>作業
+## <a name="operation"></a>操作
 
 Q # 中的基本量子執行單位。 它大致等同于 C、c + + 或 Python 中的函式，或是 c # 或 JAVA 中的靜態方法。 如需詳細資訊，請參閱[作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。
 
@@ -120,7 +120,11 @@ Q # 中的基本量子執行單位。 它大致等同于 C、c + + 或 Python �
 
 ## <a name="quantum-circuit-diagram"></a>量子線路圖
 
-以圖形方式呈現簡單量副程式之[作業](xref:microsoft.quantum.glossary#operation)（或網[關](xref:microsoft.quantum.glossary#gate)）順序的方法，例如 ![ 範例電路圖 ](~/media/qpe.png) 。 如需詳細資訊，請參閱[量子線路](xref:microsoft.quantum.concepts.circuits)。
+以圖形方式表示簡單量副程式之[作業](xref:microsoft.quantum.glossary#operation)（或網[關](xref:microsoft.quantum.glossary#gate)）順序的方法，例如 
+
+![範例電路圖表](~/media/qpe.png). 
+
+如需詳細資訊，請參閱[量子線路](xref:microsoft.quantum.concepts.circuits)。
 
 ## <a name="quantum-libraries"></a>量子程式庫
 
@@ -144,7 +148,7 @@ Q # 中的基本量子執行單位。 它大致等同于 C、c + + 或 Python �
 
 ## <a name="superposition"></a>重迭
 
-量子計算中的概念是， [qubit](xref:microsoft.quantum.glossary#qubit)是兩個狀態的線性組合，$ \ket{\0} $ 和 $ \ket{\1} $，直到[測量](xref:microsoft.quantum.glossary#measurement)為止。  如需詳細資訊，請參閱瞭解配量[計算](xref:microsoft.quantum.overview.understanding)。
+量子計算中的概念是， [qubit](xref:microsoft.quantum.glossary#qubit)是兩個狀態的線性組合，$ \ket {0} $ 和 $ \ket {1} $，直到[測量](xref:microsoft.quantum.glossary#measurement)為止。  如需詳細資訊，請參閱瞭解配量[計算](xref:microsoft.quantum.overview.understanding)。
 
 ## <a name="target-machine"></a>目的電腦
 

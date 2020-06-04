@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: 15e63ced6223759a332ce22a43c133a7899f482a
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909954"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327657"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>載入和分類您自己的資料集
 
@@ -25,7 +25,7 @@ ms.locfileid: "77909954"
 
 假設我們有一個訓練資料集 $ （x，y） $ 的大小 $N = $2，其中每個實例 $x _i $ of $x $ 有三個功能： $x _ {i1} $、$x _ {i2} $ 和 $x _ {i3} $。
 驗證資料集具有相同的結構。
-這些 datsets 可以使用類似下列的 `data.json` 檔案來表示：
+這些 datsets 可以使用 `data.json` 類似下列的檔案來表示：
 
 ```json
 {
@@ -84,10 +84,10 @@ ms.locfileid: "77909954"
 程序如下：
 
 - 首先，我們需要將資料集分隔成定型和驗證。 在此情況下，我們可以只接受前三個範例來進行定型，並使用其餘的範例進行驗證。 一般而言，若要在定型資料中隨機取樣定型和驗證資料集，以避免不必要的偏差，這是很好的作法。
-- 其次，我們必須將數值標籤指派給每個類別。 請注意，在此時間點，QML 程式庫只會 dynamicexpression 二元分類問題。 因此，我們會將標籤0指派給類別 `Dog`，並將數位1指派給類別 `Cat`。
+- 其次，我們必須將數值標籤指派給每個類別。 請注意，在此時間點，QML 程式庫只會 dynamicexpression 二元分類問題。 因此，我們會將標籤0指派給類別 `Dog` ，並將數位1指派給類別 `Cat` 。
 - 最後，我們會使用來自資料集的資料來填滿範本。 請注意，對於大型資料集，您應該建立一個小型的腳本，以從您的特定資料集自動產生範本。 此腳本將取決於資料集的原始格式。
 
-針對我們的資料集，`data.json` 檔案為：
+針對我們的資料集，檔案 `data.json` 為：
 
 ```json
 {
@@ -143,18 +143,18 @@ ms.locfileid: "77909954"
 
 ### <a name="python"></a>[Python](#tab/tabid-python)
 
-Python 提供[內建的 `json` 套件](https://docs.python.org/3.7/library/json.html)，用於處理 JSON 序列化的資料：
+Python 提供用於處理 JSON 序列化資料的[內建 `json` 套件](https://docs.python.org/3.7/library/json.html)：
 
 :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="4-5,20-22":::
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-.NET Core 平臺提供使用 JSON 序列化資料的[`System.Text.Json` 套件](https://www.nuget.org/packages/System.Text.Json)：
+.NET Core 平臺提供[ `System.Text.Json` 封裝](https://www.nuget.org/packages/System.Text.Json)以使用 JSON 序列化的資料：
 
 :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="10,64-82":::
 
 ***
 
-## <a name="whats-next"></a>下一步
+## <a name="next-steps"></a>下一步
 
 現在您已準備好使用自己的資料集開始執行自己的實驗。 請嘗試不同的分類器和資料集，並參與分享您結果的社區！

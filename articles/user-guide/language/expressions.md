@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431201"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327300"
 ---
 # <a name="type-expressions-in-q"></a>Q 中的類型運算式#
 
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 陣列常值是一系列的一或多個元素運算式，並以逗號分隔， `[` 並包含在和中 `]` 。
 所有元素都必須與相同的型別相容。
 
-
 假設有兩個相同類型的陣列，則可以 `+` 使用二元運算子來形成新陣列，這是兩個數組的串連。
 例如， `[1,2,3] + [4,5,6]` 是 `[1,2,3,4,5,6]` 。
 
@@ -229,6 +228,9 @@ let g = Foo(arg)!;      // Syntax error
 
 假設有型別和 `Int` 運算式， `new` 運算子可用來配置指定大小的新陣列。
 例如， `new Int[i + 1]` 會使用元素配置新的 `Int` 陣列 `i + 1` 。
+
+不允許空的陣列常值 `[]` 。
+相反 `new ★[0]` 地，使用，其中 `★` 是適合類型的預留位置，可讓建立所需長度為零的陣列。
 
 新陣列的元素會初始化為與類型相關的預設值。
 在大部分情況下，這會是零的部分變化。
@@ -373,8 +375,7 @@ for (i in 1..N) {
 - `[Op1, Op3]`是作業的陣列 `(Qubit[] => Unit is Adj)` 。
 - `[Op2, Op3]`是作業的陣列 `(Qubit[] => Unit is Ctl)` 。
 
-不允許空的陣列常值 `[]` 。
-相反 `new ★[0]` 地，使用，其中 `★` 是適合類型的預留位置，可讓建立所需長度為零的陣列。
+不過，雖然 `(Qubit[] => Unit is Adj)` 和 `(Qubit[] => Unit is Ctl)` 作業具有的通用基底類型 `(Qubit[] => Unit)` ，但請注意，這些運算子*的*陣列並不會共用通用基底類型。 例如， `[[Op1], [Op2]]` 目前會引發錯誤，因為它正嘗試建立不相容陣列類型和的陣列 `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` 。
 
 
 ## <a name="conditional-expressions"></a>條件運算式
@@ -473,7 +474,7 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 依優先順序排列的運算子，從最高到最低：
 
-運算子 | Arity | 描述 | 運算元類型
+運算子 | Arity | Description | 運算元類型
 ---------|----------|---------|---------------
  句號`!` | 一元 (Unary) | 解除包裝 | 任何使用者定義型別
  `-`, `~~~`, `not` | 一元 (Unary) | 數值負數、位補數、邏輯否定 | `Int`、 `BigInt` 或 `Double` 為 `-` ， `Int` 或 `BigInt` `~~~` 代表 `Bool``not`
@@ -492,5 +493,6 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
  `?` `|` | 三元 | 條件式 | `Bool`左側的
 `w/` `<-` | 三元 | 複製和更新 | 請參閱[複製和更新運算式](#copy-and-update-expressions)
 
-## <a name="whats-next"></a>下一步
+## <a name="next-steps"></a>下一步
+
 現在您可以使用 Q # 中的運算式，您可以前往[q # 中的作業和](xref:microsoft.quantum.guide.operationsfunctions)函式，以瞭解如何定義和呼叫作業和函數。

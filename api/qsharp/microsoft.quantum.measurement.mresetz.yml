@@ -3,7 +3,11 @@ uid: microsoft.quantum.measurement.mresetz
 name: MResetZ
 type: operation
 namespace: Microsoft.Quantum.Measurement
-summary: 測量單一 qubit 的`Z`基礎，並在測量之後，將它重設為標準的基礎狀態 | 0 〉。
+summary: >-
+  以 Z 為單位測量單一 qubit，並將它重設為測量之後的固定初始狀態。
+
+
+  以 $Z $-基礎執行單一 qubit 測量，並確保 qubit 會在測量之後傳回 $ \ket {0} $。
 syntax: 'operation MResetZ (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'
@@ -15,13 +19,13 @@ input:
 output:
   content: Result
   types:
-  - summary: 以 Pauli $Z $ `target`為單位測量的結果。
+  - summary: '`target`以 Pauli $Z $ 為單位測量的結果。'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 28b0de7e447156d327e165f4db01bdf625e984d6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 02f9e22522e9562068c9e0aea9293c93fc5d4644
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681394"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84327385"
