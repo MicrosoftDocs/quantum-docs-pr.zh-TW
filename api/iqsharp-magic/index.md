@@ -2,6 +2,7 @@
 
 | 魔術命令 | 摘要 |
 |---------------|---------|
+| [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata) | 檢查單一 kata 測試的參考實作。 |
 | [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge) | 從指定的 .yaml 檔案載入並傳回 Broombridge 的電子結構問題表示法。 |
 | [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode) | 將 fermion Hamiltonian 編碼成 Q # 可使用的格式。 |
 | [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms) | 將字詞新增至 fermion Hamiltonian。 |
@@ -9,6 +10,7 @@
 | [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | 載入 Broombridge 電子結構問題，並傳回選取的輸入狀態。 |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | 允許設定或查詢設定選項。 |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | 在 ResourcesEstimator 目標電腦上執行指定的函式或作業。 |
+| [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | 執行單一測試。 |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | 傳回所有目前可用的魔術命令清單。 |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | 提供載入 Nuget 封裝的功能。 套件必須可在 nuget 來源清單中取得，這通常包括 nuget.org |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | 報告此核心的目前效能計量。 |

@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: ec5b3b26102df6ecc19d89b41c7fd8938b34e761
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426772"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327759"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -20,6 +20,19 @@ ms.locfileid: "83426772"
 如需安裝指示，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
+
+## <a name="version-0112006207"></a>版本 0.11.2006.207
+
+*發行日期：2020 年 6 月 3 日*
+
+此版本包含下列項目：
+
+- 當問 Q# 進入點存在時，Q# 筆記本和 Python 主機程式將不會再失敗
+- 更新[標準程式庫](xref:microsoft.quantum.libraries.standard.intro)以使用存取修飾詞
+- 編譯器現在允許在內建重寫步驟之間進行重寫步驟的外掛程式
+- 已遵循我們的 [API 原則](xref:microsoft.quantum.contributing.api-design)中所述的排程，移除數個已遭取代的函式和作業。 在版本 0.11.2004.2825 中建立不含警告的 Q# 程式和程式庫，將會繼續以未修改的方式工作。
+
+請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、[IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 和 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
 
 ## <a name="version-01120042825"></a>0\.11.2004.2825 版
 
@@ -34,7 +47,6 @@ ms.locfileid: "83426772"
 > [!NOTE]
 > 使用新 [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) 屬性的 Q # 命令列應用程式目前無法從 Python 或 .NET 主機程式呼叫。
 > 如需詳細資訊，請參閱 [Python](xref:microsoft.quantum.install.python) 和 [.NET 互通性](xref:microsoft.quantum.install.cs) 指南。
-
 
 ## <a name="version-01120033107"></a>0\.11.2003.3107 版
 

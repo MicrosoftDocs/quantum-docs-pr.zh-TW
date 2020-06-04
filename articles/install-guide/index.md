@@ -7,12 +7,12 @@ ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 2041b90ba021b7640615d73c35841cc21f025ac0
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: a5230f506bce02c331d22d6a428b3bd92052bbd4
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426462"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327557"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>安裝 Microsoft Quantum Development Kit (QDK)
 
@@ -29,10 +29,10 @@ Q# 程式可以使用 Visual Studio Code、Visual Studio 或透過具有 IQ # Ju
 
 QDK 適用於多個開發環境。 從下方選取您慣用的設定：
 
-[**使用 Q# 命令列應用程式開發**](xref:microsoft.quantum.install.standalone) - 選擇此方法以從命令列使用 Q #。 這不需要像下列選項的驅動程式或主機程式。
+[使用 Q# 命令列應用程式開發](xref:microsoft.quantum.install.standalone) - 選擇此方法以從命令列使用 Q #。 這不需要像下列選項的驅動程式或主機程式。
 
-[**使用 Jupyter Notebook 開發**](xref:microsoft.quantum.install.jupyter) - 選取此環境，以內嵌文字的儲存格執行 Q# 程式碼，或建立量子計算互動式教學課程。 
+[使用 Jupyter Notebook 開發](xref:microsoft.quantum.install.jupyter) - 選取此環境，以內嵌文字的儲存格執行 Q# 程式碼，或建立量子計算互動式教學課程。 
 
-[**使用 Q# 和 Python 開發**](xref:microsoft.quantum.install.python) - 讓您結合 Python 和 Q# 來建立可呼叫 Q# 作業的 Python 主機程式。
+[使用 Q# 和 Python 開發](xref:microsoft.quantum.install.python) - 讓您結合 Python 和 Q# 來建立可呼叫 Q# 作業的 Python 主機程式。
 
-[**使用 Q # 和 .NET 開發**](xref:microsoft.quantum.install.cs) - 將 C#、F# 或 VB.NET 與 Q# 結合，以建立呼叫 Q# 作業的 .NET 主機程式。
+[使用 Q # 和 .NET 開發](xref:microsoft.quantum.install.cs) - 將 C#、F# 或 VB.NET 與 Q# 結合，以建立呼叫 Q# 作業的 .NET 主機程式。
