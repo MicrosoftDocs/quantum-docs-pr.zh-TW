@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
-ms.openlocfilehash: 04f90e9f88cf17259f96532617ef6f092b56b859
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 2f5345504ba31211c97493e78af1563d575881e4
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430742"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327742"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>量子電腦和量子模擬器
 
@@ -70,5 +70,4 @@ Microsoft 與量子硬體製造商 IonQ、Honeywell 和 QCI 合作，以便讓�
 
 ## <a name="next-steps"></a>後續步驟
 
-> [!div class="nextstepaction"]
-> [Q# 程式設計語言和 QDK 是什麼？](xref:microsoft.quantum.overview.q-sharp)
+[Q# 程式設計語言和 QDK 是什麼？](xref:microsoft.quantum.overview.q-sharp)

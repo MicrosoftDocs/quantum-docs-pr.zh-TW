@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 9f156a3cc092e295317061dda5e8aa29e9d5ca1e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430844"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327589"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>量子計算的線性代數
 
@@ -67,7 +67,7 @@ $$
 
 所得結果是一個四維矩陣，每個元素各自代表一個概率。 例如，$ac$ 是塌縮為 0 和 0 的兩個量子位元所具有的概率，$ad$ 則是 0 和 1 的概率，依此類推。 
 
-單一量子位元狀態 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 必須符合 $|a|^2 + |b|^2 = 1$ 的要求才能表示量子狀態，同樣地，雙量子位元的狀態 $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ 也必須符合 $|a|^2 + |b|^2 + |c|^2+ |d|^2 = 1$ 的要求。
+單一量子位元狀態 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 必須符合 $|a|^2 + |b|^2 = 1$ 的要求才能表示量子狀態，同樣地，雙量子位元的狀態 $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ 也必須符合 $|ac|^2 + |ad|^2 + |bc|^2+ |bd|^2 = 1$ 的要求。
 
 ## <a name="summary"></a>摘要
 
@@ -75,5 +75,4 @@ $$
 
 ## <a name="next-steps"></a>後續步驟
 
-> [!div class="nextstepaction"]
-> [安裝 QDK](xref:microsoft.quantum.install)
+[安裝 QDK](xref:microsoft.quantum.install)

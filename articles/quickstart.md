@@ -3,15 +3,15 @@ title: 使用 Q# 探索纏結
 description: 了解如何以 Q# 撰寫量子程式。 使用 Quantum Development Kit (QDK) 開發貝爾狀態應用程式
 author: natke
 ms.author: nakersha
-ms.date: 10/07/2019
+ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 989080e7d9979bb87d14b2580d28732bb1092eb1
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426834"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327368"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>教學課程：使用 Q\# 探索糾纏
 
@@ -25,28 +25,27 @@ Bell 這個名稱取自「貝爾狀態」，是指兩個量子位元的特定狀
 
 如果您已準備好要開始撰寫程式碼，請先遵循下列步驟再繼續進行： 
 
-* 使用您慣用的語言和開發環境[安裝](xref:microsoft.quantum.install) Quantum Development Kit
+* 安裝適用於 [Python](xref:microsoft.quantum.install.python) 或 [.NET](xref:microsoft.quantum.install.cs) 的 Quantum 開發套件。
 * 如果您已安裝 QDK，請確定您已[更新](xref:microsoft.quantum.update)為最新版本
 
 您也可以在不安裝 QDK 的情況下繼續閱讀本文內容，以了解 Q# 程式設計語言和量子運算的首要概念。
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>使用 Q# 示範量子位元行為
 
-回想一下我們簡單的[量子位元定義](xref:microsoft.quantum.overview.understanding)。  其中，古典位元會有單一二進位值，例如 0 或 1，而量子位元的狀態則可以同時是 0 和 1 的**疊加**。  在概念上，可以將量子位元想成空間中的方向 (又稱為向量)。  量子位元可以是任何可能方向的其中一個。 兩個**古典狀態**是兩個方向，分別代表 100% 測量到 0 的機率和 100% 測量到 1 的機率。  這種表示法也能以[布洛赫球體](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)更正式地視覺化。
-
+回想一下我們簡單的[量子位元定義](xref:microsoft.quantum.overview.understanding)。  其中，古典位元會有單一二進位值，例如 0 或 1，而[量子位元](xref:microsoft.quantum.glossary#qubit)的狀態則可以是 0 和 1 的**疊加**。  在概念上，可以將量子位元想成空間中的方向 (又稱為向量)。  量子位元可以是任何可能方向的其中一個。 兩個**古典狀態**是兩個方向，分別代表 100% 測量到 0 的機率和 100% 測量到 1 的機率。  這種表示法也能以[布洛赫球體](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)更正式地視覺化。
 
 測量動作會產生二進位結果，並變更量子位元狀態。 測量會產生一個二進位值，也就是 0 或 1。  量子位元會從疊加狀態 (任何方向) 變為兩個古典狀態的其中一個。  之後，在沒有任何干擾作業的情況下重複相同的測量，會產生相同的二進位結果。  
 
-多個量子位元可以**纏結**。 當我們測量一個纏結的量子位元時，對其他量子位元狀態的了解也會隨之更新。
+多個量子位元可以[**纏結**](xref:microsoft.quantum.glossary#entanglement)。 當我們測量一個纏結的量子位元時，對其他量子位元狀態的了解也會隨之更新。
 
 現在，我們已準備好要來示範如何用 Q# 表示此行為。  您將從最簡單的程式著手建置，以示範量子疊加和量子纏結。
 
 ## <a name="setup"></a>安裝程式
 
-以 Microsoft 的 Quantum Development Kit 開發的應用程式會包含兩個部分：
+本教學課程使用主機程式，並由兩個部分組成：
 
-1. 一或多個量子演算法，使用 Q# 量子程式設計語言來實作。
-1. 一個主機程式，以作為主要進入點，並叫用 Q# 作業以執行量子演算法的程式設計語言來實作，例如 Python 或 C#。
+1. 一系列的量子演算法，使用 Q# 量子程式設計語言來實作。
+1. 一個主機程式，以作為主要進入點，並叫用 Q# 作業以執行量子演算法來實作，例如 Python 或 C#。
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
@@ -498,9 +497,8 @@ Init:One  0s=490  1s=510  agree=1000
 
 恭喜，您已撰寫了第一個量子程式！
 
-## <a name="whats-next"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
 [格羅弗搜尋](xref:microsoft.quantum.quickstarts.search)教學課程會示範如何建立和執行格羅弗搜尋 (最受歡迎的量子運算演算法之一)，並提供 Q# 程式的絕佳範例，可用來解決量子運算的實際問題。  
 
 [開始使用量子開發工具組](xref:microsoft.quantum.welcome)中建議更多學習 Q# 和量子程式設計的方式。
-

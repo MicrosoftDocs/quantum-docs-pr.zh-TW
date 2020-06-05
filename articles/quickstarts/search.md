@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9562e1937a2cac49d682cc0524d8fb29e276d95c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426798"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327402"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>教學課程：以 Q\# 執行格羅弗搜尋演算法
 
@@ -23,7 +23,7 @@ ms.locfileid: "83426798"
 
 只要幾行程式碼，您就可以建置格羅弗搜尋演算法。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - Microsoft [Quantum Development Kit][install]。
 
@@ -39,7 +39,7 @@ ms.locfileid: "83426798"
 
 ## <a name="write-the-code"></a>撰寫程式碼
 
-1. 使用 Quantum Development Kit，在您選擇的開發環境中[建立新的 Q# 專案](xref:microsoft.quantum.howto.createproject) (名為 `Grover`)。
+1. 使用 Quantum 開發套件，[為命令列應用程式建立新的 Q# 專案](xref:microsoft.quantum.install.standalone)。 將專案標題命名為 `Grover`。
 
 1. 將下列程式碼新增至新專案中的 `Program.qs` 檔案：
 
