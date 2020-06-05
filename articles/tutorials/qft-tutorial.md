@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328590"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422235"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>教學課程：在 Q 中撰寫和模擬 qubit 層級程式\#
 
@@ -29,7 +29,7 @@ ms.locfileid: "84328590"
 <br/>
 <img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 * 使用您慣用的語言和開發環境來[安裝](xref:microsoft.quantum.install)配量開發工具組。
 * 如果您已安裝 QDK，請確定您已[更新](xref:microsoft.quantum.update)為最新版本
@@ -386,7 +386,7 @@ Qubit 是「 `2` 最重要」的意思，就是在基礎狀態向量 $ \ket{i} $
 * **`    ---`**：振幅階段的圖形表示。
 * **`[ 0.0000 rad ]`**：階段的數值（以弧度為單位）。
 
-大小和階段都會以圖形標記法顯示。 量值的表示方式很簡單：它會顯示的橫條 `*` ，而機率越高，橫條就越大。 針對階段，請參閱[這裡](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions)的 DumpMachine 一節，以瞭解根據角度範圍的可能符號標記法。
+大小和階段都會以圖形標記法顯示。 量值的表示方式很簡單：它會顯示的橫條 `*` ，而機率越高，橫條就越大。 針對階段，請參閱[測試和偵錯工具：](xref:microsoft.quantum.guide.testingdebugging#dump-functions)根據角度範圍的可能符號表示傾印函式。
 
 
 因此，列印的輸出會說明我們的程式設計閘道已將我們的狀態轉換為

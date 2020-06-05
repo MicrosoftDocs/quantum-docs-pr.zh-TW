@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327640"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422167"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>基本分類：使用 QDK 將資料分類
 
@@ -86,9 +86,9 @@ ms.locfileid: "84327640"
 上述程式碼中所定義的最重要函式和作業如下：
 
 - `ClassifierStructure() : ControlledRotation[]`：在此函式中，我們會藉由新增我們所考慮之受控制閘道的層級，來設定線路模型的結構。 此步驟類似于連續深度學習模型中的神經層級宣告。
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`：此作業是程式碼的核心部分，會定義定型。 在這裡，我們會從程式庫中包含的資料集載入範例，我們會設定定型的超參數和初始參數，並藉由呼叫程式庫中包含的作業來開始定型 `TrainSequentialClassifier` 。 它會輸出參數和判斷分類器的偏差。
+- `TrainHalfMoonModel() : (Double[], Double)`：此作業是程式碼的核心部分，會定義定型。 在這裡，我們會從程式庫中包含的資料集載入範例，我們會設定定型的超參數和初始參數，並藉由呼叫程式庫中包含的作業來開始定型 `TrainSequentialClassifier` 。 它會輸出參數和判斷分類器的偏差。
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`：此作業會定義用來評估模型的驗證程式。 在這裡，我們會載入用於驗證的範例、每個樣本的度量數目和容錯。 它會輸出所選樣本批次的 misclassifications 數目以進行驗證。
 
-## <a name="next-steps"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
 首先，您可以使用程式碼，並嘗試變更某些參數，以查看它對定型的影響。 接著，在下一個教學課程中，[設計您自己的分類器](xref:microsoft.quantum.libraries.machine-learning.design)，您將學習如何定義分類器的結構。
