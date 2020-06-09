@@ -7,270 +7,270 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 3245f587493ce12cfec15c8f932fd092d85f688e
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 89db1a671767b0cc083a251918bbeeed2b39b883
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327558"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578176"
 ---
-# <a name="update-the-microsoft-quantum-development-kit-qdk"></a><span data-ttu-id="d7fd7-103">更新 Microsoft Quantum Development Kit （QDK）</span><span class="sxs-lookup"><span data-stu-id="d7fd7-103">Update the Microsoft Quantum Development Kit (QDK)</span></span>
+# <a name="update-the-microsoft-quantum-development-kit-qdk"></a><span data-ttu-id="24045-103">更新 Microsoft Quantum Development Kit （QDK）</span><span class="sxs-lookup"><span data-stu-id="24045-103">Update the Microsoft Quantum Development Kit (QDK)</span></span>
 
-<span data-ttu-id="d7fd7-104">瞭解如何將 Microsoft Quantum Development Kit （QDK）更新為最新版本。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-104">Learn how to update the Microsoft Quantum Development Kit (QDK) to the latest version.</span></span>
+<span data-ttu-id="24045-104">瞭解如何將 Microsoft Quantum Development Kit （QDK）更新為最新版本。</span><span class="sxs-lookup"><span data-stu-id="24045-104">Learn how to update the Microsoft Quantum Development Kit (QDK) to the latest version.</span></span>
 
-<span data-ttu-id="d7fd7-105">本文假設您已安裝 QDK。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-105">This article assumes that you already have the QDK installed.</span></span> <span data-ttu-id="d7fd7-106">如果您是第一次安裝，請參閱[安裝指南](xref:microsoft.quantum.install)。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-106">If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install).</span></span>
+<span data-ttu-id="24045-105">本文假設您已安裝 QDK。</span><span class="sxs-lookup"><span data-stu-id="24045-105">This article assumes that you already have the QDK installed.</span></span> <span data-ttu-id="24045-106">如果您是第一次安裝，請參閱[安裝指南](xref:microsoft.quantum.install)。</span><span class="sxs-lookup"><span data-stu-id="24045-106">If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install).</span></span>
 
-<span data-ttu-id="d7fd7-107">我們建議您隨時掌握最新的 QDK 版本。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-107">We recommend keeping up to date with the latest QDK release.</span></span> <span data-ttu-id="d7fd7-108">遵循此更新指南以升級至最新的 QDK 版本。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-108">Follow this update guide to upgrade to the most recent QDK version.</span></span> <span data-ttu-id="d7fd7-109">此套裝程式含兩個部分：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-109">The process consists of two parts:</span></span>
-1. <span data-ttu-id="d7fd7-110">更新您現有的 Q # 檔案和專案，以將您的程式碼與任何更新的語法對齊。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-110">Updating your existing Q# files and projects to align your code with any updated syntax.</span></span>
-2. <span data-ttu-id="d7fd7-111">為您選擇的開發環境更新 QDK 本身。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-111">Updating the QDK itself for your chosen development environment.</span></span>
+<span data-ttu-id="24045-107">我們建議您隨時掌握最新的 QDK 版本。</span><span class="sxs-lookup"><span data-stu-id="24045-107">We recommend keeping up to date with the latest QDK release.</span></span> <span data-ttu-id="24045-108">遵循此更新指南以升級至最新的 QDK 版本。</span><span class="sxs-lookup"><span data-stu-id="24045-108">Follow this update guide to upgrade to the most recent QDK version.</span></span> <span data-ttu-id="24045-109">此套裝程式含兩個部分：</span><span class="sxs-lookup"><span data-stu-id="24045-109">The process consists of two parts:</span></span>
+1. <span data-ttu-id="24045-110">更新您現有的 Q # 檔案和專案，以將您的程式碼與任何更新的語法對齊。</span><span class="sxs-lookup"><span data-stu-id="24045-110">Updating your existing Q# files and projects to align your code with any updated syntax.</span></span>
+2. <span data-ttu-id="24045-111">為您選擇的開發環境更新 QDK 本身。</span><span class="sxs-lookup"><span data-stu-id="24045-111">Updating the QDK itself for your chosen development environment.</span></span>
 
-## <a name="updating-q-projects"></a><span data-ttu-id="d7fd7-112">更新 Q # 專案</span><span class="sxs-lookup"><span data-stu-id="d7fd7-112">Updating Q# Projects</span></span> 
+## <a name="updating-q-projects"></a><span data-ttu-id="24045-112">更新 Q # 專案</span><span class="sxs-lookup"><span data-stu-id="24045-112">Updating Q# Projects</span></span> 
 
-<span data-ttu-id="d7fd7-113">無論您使用的是 c # 或 Python 來裝載 Q # 作業，請遵循這些指示來更新您的 Q # 專案。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-113">Regardless of whether you are using C# or Python to host Q# operations, follow these instructions to update your Q# projects.</span></span>
+<span data-ttu-id="24045-113">無論您使用的是 c # 或 Python 來裝載 Q # 作業，請遵循這些指示來更新您的 Q # 專案。</span><span class="sxs-lookup"><span data-stu-id="24045-113">Regardless of whether you are using C# or Python to host Q# operations, follow these instructions to update your Q# projects.</span></span>
 
-1. <span data-ttu-id="d7fd7-114">首先，檢查您是否有最新版本的[.NET Core SDK 3.1](https://dotnet.microsoft.com/download)。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-114">First, check that you have the latest version of the [.NET Core SDK 3.1](https://dotnet.microsoft.com/download).</span></span> <span data-ttu-id="d7fd7-115">在命令提示字元中執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-115">Run the following command in the command prompt:</span></span>
+1. <span data-ttu-id="24045-114">首先，檢查您是否有最新版本的[.NET Core SDK 3.1](https://dotnet.microsoft.com/download)。</span><span class="sxs-lookup"><span data-stu-id="24045-114">First, check that you have the latest version of the [.NET Core SDK 3.1](https://dotnet.microsoft.com/download).</span></span> <span data-ttu-id="24045-115">在命令提示字元中執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="24045-115">Run the following command in the command prompt:</span></span>
 
     ```dotnetcli
     dotnet --version
     ```
 
-    <span data-ttu-id="d7fd7-116">確認輸出為 `3.1.100` 或更高。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-116">Verify the output is `3.1.100` or higher.</span></span> <span data-ttu-id="d7fd7-117">如果不是，請安裝[最新版本](https://dotnet.microsoft.com/download)，然後再檢查一次。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-117">If not, install the [latest version](https://dotnet.microsoft.com/download) and check again.</span></span> <span data-ttu-id="d7fd7-118">然後根據您的設定（Visual Studio、Visual Studio Code 或直接命令列）遵循下列指示。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-118">Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).</span></span>
+    <span data-ttu-id="24045-116">確認輸出為 `3.1.100` 或更高。</span><span class="sxs-lookup"><span data-stu-id="24045-116">Verify the output is `3.1.100` or higher.</span></span> <span data-ttu-id="24045-117">如果不是，請安裝[最新版本](https://dotnet.microsoft.com/download)，然後再檢查一次。</span><span class="sxs-lookup"><span data-stu-id="24045-117">If not, install the [latest version](https://dotnet.microsoft.com/download) and check again.</span></span> <span data-ttu-id="24045-118">然後根據您的設定（Visual Studio、Visual Studio Code 或直接命令列）遵循下列指示。</span><span class="sxs-lookup"><span data-stu-id="24045-118">Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).</span></span>
 
-### <a name="update-q-projects-in-visual-studio"></a><span data-ttu-id="d7fd7-119">更新 Visual Studio 中的 Q # 專案</span><span class="sxs-lookup"><span data-stu-id="d7fd7-119">Update Q# projects in Visual Studio</span></span>
+### <a name="update-q-projects-in-visual-studio"></a><span data-ttu-id="24045-119">更新 Visual Studio 中的 Q # 專案</span><span class="sxs-lookup"><span data-stu-id="24045-119">Update Q# projects in Visual Studio</span></span>
  
-1. <span data-ttu-id="d7fd7-120">更新至最新版本的 Visual Studio 2019，如需指示，請參閱[這裡](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019)。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-120">Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions.</span></span>
-2. <span data-ttu-id="d7fd7-121">在 Visual Studio 中開啟方案。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-121">Open your solution in Visual Studio.</span></span>
-3. <span data-ttu-id="d7fd7-122">從功能表中，選取 [**組建**] [  ->  **清除方案**]。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-122">From the menu, select **Build** -> **Clean Solution**.</span></span>
-4. <span data-ttu-id="d7fd7-123">在您的 .csproj 檔案中，將目標 framework 更新為 `netcoreapp3.1` （或者， `netstandard2.1` 如果它是程式庫專案）。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-123">In each of your .csproj files, update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).</span></span>
-    <span data-ttu-id="d7fd7-124">也就是，編輯表單的行：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-124">That is, edit lines of the form:</span></span>
+1. <span data-ttu-id="24045-120">更新至最新版本的 Visual Studio 2019，如需指示，請參閱[這裡](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019)。</span><span class="sxs-lookup"><span data-stu-id="24045-120">Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions.</span></span>
+2. <span data-ttu-id="24045-121">在 Visual Studio 中開啟方案。</span><span class="sxs-lookup"><span data-stu-id="24045-121">Open your solution in Visual Studio.</span></span>
+3. <span data-ttu-id="24045-122">從功能表中，選取 [**組建**] [  ->  **清除方案**]。</span><span class="sxs-lookup"><span data-stu-id="24045-122">From the menu, select **Build** -> **Clean Solution**.</span></span>
+4. <span data-ttu-id="24045-123">在您的 .csproj 檔案中，將目標 framework 更新為 `netcoreapp3.1` （或者， `netstandard2.1` 如果它是程式庫專案）。</span><span class="sxs-lookup"><span data-stu-id="24045-123">In each of your .csproj files, update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).</span></span>
+    <span data-ttu-id="24045-124">也就是，編輯表單的行：</span><span class="sxs-lookup"><span data-stu-id="24045-124">That is, edit lines of the form:</span></span>
 
     ```xml
     <TargetFramework>netcoreapp3.1</TargetFramework>
     ```
 
-    <span data-ttu-id="d7fd7-125">您可以在[這裡](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)找到有關指定目標 framework 的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-125">You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).</span></span>
+    <span data-ttu-id="24045-125">您可以在[這裡](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)找到有關指定目標 framework 的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="24045-125">You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).</span></span>
 
-5. <span data-ttu-id="d7fd7-126">在每個 .csproj 檔案中，將 SDK 設定為 `Microsoft.Quantum.Sdk` ，如下行所示。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-126">In each of the .csproj files, set the SDK to `Microsoft.Quantum.Sdk`, as indicated in the line below.</span></span> <span data-ttu-id="d7fd7-127">請注意，版本號碼應該是最新可用，而且您可以藉由查看[版本](https://docs.microsoft.com/quantum/relnotes/)資訊來加以判斷。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-127">Please notice that the version number should be the latest available, and you can determine it by reviewing the [release notes](https://docs.microsoft.com/quantum/relnotes/).</span></span>
+5. <span data-ttu-id="24045-126">在每個 .csproj 檔案中，將 SDK 設定為 `Microsoft.Quantum.Sdk` ，如下行所示。</span><span class="sxs-lookup"><span data-stu-id="24045-126">In each of the .csproj files, set the SDK to `Microsoft.Quantum.Sdk`, as indicated in the line below.</span></span> <span data-ttu-id="24045-127">請注意，版本號碼應該是最新可用，而且您可以藉由查看[版本](https://docs.microsoft.com/quantum/relnotes/)資訊來加以判斷。</span><span class="sxs-lookup"><span data-stu-id="24045-127">Please notice that the version number should be the latest available, and you can determine it by reviewing the [release notes](https://docs.microsoft.com/quantum/relnotes/).</span></span>
 
     ```xml
     <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
     ```
 
-6. <span data-ttu-id="d7fd7-128">儲存並關閉方案中的所有檔案。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-128">Save and close all files in your solution.</span></span>
+6. <span data-ttu-id="24045-128">儲存並關閉方案中的所有檔案。</span><span class="sxs-lookup"><span data-stu-id="24045-128">Save and close all files in your solution.</span></span>
 
-7. <span data-ttu-id="d7fd7-129">選取 [**工具**] [  ->  **命令列**]  ->  **開發人員命令提示字元**。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-129">Select **Tools** -> **Command Line** -> **Developer Command Prompt**.</span></span> <span data-ttu-id="d7fd7-130">或者，您也可以在 Visual Studio 中使用套件管理主控台。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-130">Alternatively, you can use the package management console in Visual Studio.</span></span>
+7. <span data-ttu-id="24045-129">選取 [**工具**] [  ->  **命令列**]  ->  **開發人員命令提示字元**。</span><span class="sxs-lookup"><span data-stu-id="24045-129">Select **Tools** -> **Command Line** -> **Developer Command Prompt**.</span></span> <span data-ttu-id="24045-130">或者，您也可以在 Visual Studio 中使用套件管理主控台。</span><span class="sxs-lookup"><span data-stu-id="24045-130">Alternatively, you can use the package management console in Visual Studio.</span></span>
 
-8. <span data-ttu-id="d7fd7-131">針對方案中的每個專案，執行下列命令以**移除**此套件：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-131">For each project in the solution, run the following command to **remove** this package:</span></span>
+8. <span data-ttu-id="24045-131">針對方案中的每個專案，執行下列命令以**移除**此套件：</span><span class="sxs-lookup"><span data-stu-id="24045-131">For each project in the solution, run the following command to **remove** this package:</span></span>
 
     ```dotnetcli
     dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
     ```
 
-   <span data-ttu-id="d7fd7-132">如果您的專案使用任何其他的 Microsoft 量子或 Microsoft 量子套件（例如，Microsoft 量子），請針對這些封裝執行 [**新增**] 命令，以更新所使用的版本。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-132">If your projects use any other Microsoft.Quantum or Microsoft.Azure.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the **add** command for these to update the version used.</span></span>
+   <span data-ttu-id="24045-132">如果您的專案使用任何其他的 Microsoft 量子或 Microsoft 量子套件（例如，Microsoft 量子），請針對這些封裝執行 [**新增**] 命令，以更新所使用的版本。</span><span class="sxs-lookup"><span data-stu-id="24045-132">If your projects use any other Microsoft.Quantum or Microsoft.Azure.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the **add** command for these to update the version used.</span></span>
 
     ```dotnetcli
     dotnet add [project_name].csproj package [package_name]
     ```
 
-9. <span data-ttu-id="d7fd7-133">關閉命令提示字元，然後選取 [**組建**]  ->  [ *not*組建**方案**] （請勿選取 [重建方案]）。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-133">Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution).</span></span>
+9. <span data-ttu-id="24045-133">關閉命令提示字元，然後選取 [**組建**]  ->  [ *not*組建**方案**] （請勿選取 [重建方案]）。</span><span class="sxs-lookup"><span data-stu-id="24045-133">Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution).</span></span>
 
-<span data-ttu-id="d7fd7-134">您現在可以直接跳至[更新您的 VISUAL STUDIO QDK 延伸](#update-visual-studio-qdk-extension)模組。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-134">You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).</span></span>
+<span data-ttu-id="24045-134">您現在可以直接跳至[更新您的 VISUAL STUDIO QDK 延伸](#update-visual-studio-qdk-extension)模組。</span><span class="sxs-lookup"><span data-stu-id="24045-134">You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).</span></span>
 
 
-### <a name="update-q-projects-in-visual-studio-code"></a><span data-ttu-id="d7fd7-135">更新 Visual Studio Code 中的 Q # 專案</span><span class="sxs-lookup"><span data-stu-id="d7fd7-135">Update Q# projects in Visual Studio Code</span></span>
+### <a name="update-q-projects-in-visual-studio-code"></a><span data-ttu-id="24045-135">更新 Visual Studio Code 中的 Q # 專案</span><span class="sxs-lookup"><span data-stu-id="24045-135">Update Q# projects in Visual Studio Code</span></span>
 
-1. <span data-ttu-id="d7fd7-136">在 Visual Studio Code 中，開啟包含要更新之專案的資料夾。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-136">In Visual Studio Code, open the folder containing the project to update.</span></span>
-2. <span data-ttu-id="d7fd7-137">選取 [**終端**機] [  ->  **新終端**機]。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-137">Select **Terminal** -> **New Terminal**.</span></span>
-3. <span data-ttu-id="d7fd7-138">請遵循使用命令列進行更新的指示（直接如下所示）。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-138">Follow the instructions for updating using the command line (directly below).</span></span>
+1. <span data-ttu-id="24045-136">在 Visual Studio Code 中，開啟包含要更新之專案的資料夾。</span><span class="sxs-lookup"><span data-stu-id="24045-136">In Visual Studio Code, open the folder containing the project to update.</span></span>
+2. <span data-ttu-id="24045-137">選取 [**終端**機] [  ->  **新終端**機]。</span><span class="sxs-lookup"><span data-stu-id="24045-137">Select **Terminal** -> **New Terminal**.</span></span>
+3. <span data-ttu-id="24045-138">請遵循使用命令列進行更新的指示（直接如下所示）。</span><span class="sxs-lookup"><span data-stu-id="24045-138">Follow the instructions for updating using the command line (directly below).</span></span>
 
-### <a name="update-q-projects-using-the-command-line"></a><span data-ttu-id="d7fd7-139">使用命令列更新 Q # 專案</span><span class="sxs-lookup"><span data-stu-id="d7fd7-139">Update Q# projects using the command line</span></span>
+### <a name="update-q-projects-using-the-command-line"></a><span data-ttu-id="24045-139">使用命令列更新 Q # 專案</span><span class="sxs-lookup"><span data-stu-id="24045-139">Update Q# projects using the command line</span></span>
 
-1. <span data-ttu-id="d7fd7-140">流覽至包含主要專案檔的資料夾。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-140">Navigate to the folder containing your main project file.</span></span>
+1. <span data-ttu-id="24045-140">流覽至包含主要專案檔的資料夾。</span><span class="sxs-lookup"><span data-stu-id="24045-140">Navigate to the folder containing your main project file.</span></span>
 
-2. <span data-ttu-id="d7fd7-141">執行以下命令：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-141">Run the following command:</span></span>
+2. <span data-ttu-id="24045-141">執行以下命令：</span><span class="sxs-lookup"><span data-stu-id="24045-141">Run the following command:</span></span>
 
     ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
-3. <span data-ttu-id="d7fd7-142">判斷 QDK 的目前版本。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-142">Determine the current version of the QDK.</span></span> <span data-ttu-id="d7fd7-143">若要尋找它，您可以參閱[版本](https://docs.microsoft.com/quantum/relnotes/)資訊。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-143">To find it, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/).</span></span> <span data-ttu-id="d7fd7-144">版本會採用類似的格式 `0.11.2006.207` 。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-144">The version will be in a format similar to `0.11.2006.207`.</span></span>
+3. <span data-ttu-id="24045-142">判斷 QDK 的目前版本。</span><span class="sxs-lookup"><span data-stu-id="24045-142">Determine the current version of the QDK.</span></span> <span data-ttu-id="24045-143">若要尋找它，您可以參閱[版本](https://docs.microsoft.com/quantum/relnotes/)資訊。</span><span class="sxs-lookup"><span data-stu-id="24045-143">To find it, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/).</span></span> <span data-ttu-id="24045-144">版本會採用類似的格式 `0.11.2006.207` 。</span><span class="sxs-lookup"><span data-stu-id="24045-144">The version will be in a format similar to `0.11.2006.207`.</span></span>
 
-4. <span data-ttu-id="d7fd7-145">在您的每個檔案中 `.csproj` ，執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-145">In each of your `.csproj` files, go through the following steps:</span></span>
+4. <span data-ttu-id="24045-145">在您的每個檔案中 `.csproj` ，執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="24045-145">In each of your `.csproj` files, go through the following steps:</span></span>
 
-    - <span data-ttu-id="d7fd7-146">將目標 framework 更新為 `netcoreapp3.1` （ `netstandard2.1` 如果它是程式庫專案，則為）。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-146">Update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).</span></span> <span data-ttu-id="d7fd7-147">也就是，編輯表單的行：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-147">That is, edit lines of the form:</span></span>
+    - <span data-ttu-id="24045-146">將目標 framework 更新為 `netcoreapp3.1` （ `netstandard2.1` 如果它是程式庫專案，則為）。</span><span class="sxs-lookup"><span data-stu-id="24045-146">Update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).</span></span> <span data-ttu-id="24045-147">也就是，編輯表單的行：</span><span class="sxs-lookup"><span data-stu-id="24045-147">That is, edit lines of the form:</span></span>
 
         ```xml
         <TargetFramework>netcoreapp3.1</TargetFramework>
         ```
 
-        <span data-ttu-id="d7fd7-148">您可以在[這裡](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)找到有關指定目標 framework 的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-148">You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).</span></span>
+        <span data-ttu-id="24045-148">您可以在[這裡](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)找到有關指定目標 framework 的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="24045-148">You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).</span></span>
 
-    - <span data-ttu-id="d7fd7-149">在專案定義中取代 SDK 的參考。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-149">Replace the reference to the SDK in the project definition.</span></span> <span data-ttu-id="d7fd7-150">請確定版本號碼對應至**步驟 3**中所判斷的值。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-150">Make sure that the version number corresponds to the value determined in **step 3**.</span></span>
+    - <span data-ttu-id="24045-149">在專案定義中取代 SDK 的參考。</span><span class="sxs-lookup"><span data-stu-id="24045-149">Replace the reference to the SDK in the project definition.</span></span> <span data-ttu-id="24045-150">請確定版本號碼對應至**步驟 3**中所判斷的值。</span><span class="sxs-lookup"><span data-stu-id="24045-150">Make sure that the version number corresponds to the value determined in **step 3**.</span></span>
 
         ```xml
         <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
         ```
 
-    - <span data-ttu-id="d7fd7-151">移除封裝的參考 `Microsoft.Quantum.Development.Kit` （如果有的話），其將在下列專案中指定：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-151">Remove the reference to package `Microsoft.Quantum.Development.Kit` if present, which will be specified in the following entry:</span></span>
+    - <span data-ttu-id="24045-151">移除封裝的參考 `Microsoft.Quantum.Development.Kit` （如果有的話），其將在下列專案中指定：</span><span class="sxs-lookup"><span data-stu-id="24045-151">Remove the reference to package `Microsoft.Quantum.Development.Kit` if present, which will be specified in the following entry:</span></span>
 
         ```xml
         <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.10.1910.3107" />
         ```
 
-    - <span data-ttu-id="d7fd7-152">將所有 Microsoft 量子套件的版本更新為最新發行的 QDK 版本（在**步驟 3**中判斷）。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-152">Update the version of the all the Microsoft Quantum packages to the most recently released version of the QDK (determined in **step 3**).</span></span> <span data-ttu-id="d7fd7-153">這些套件會使用下列模式來命名：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-153">Those packages are named with the following patterns:</span></span>
+    - <span data-ttu-id="24045-152">將所有 Microsoft 量子套件的版本更新為最新發行的 QDK 版本（在**步驟 3**中判斷）。</span><span class="sxs-lookup"><span data-stu-id="24045-152">Update the version of the all the Microsoft Quantum packages to the most recently released version of the QDK (determined in **step 3**).</span></span> <span data-ttu-id="24045-153">這些套件會使用下列模式來命名：</span><span class="sxs-lookup"><span data-stu-id="24045-153">Those packages are named with the following patterns:</span></span>
 
         ```
         Microsoft.Quantum.*
         Microsoft.Azure.Quantum.*
         ```
     
-        <span data-ttu-id="d7fd7-154">封裝的參考具有下列格式：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-154">References to packages have the following format:</span></span>
+        <span data-ttu-id="24045-154">封裝的參考具有下列格式：</span><span class="sxs-lookup"><span data-stu-id="24045-154">References to packages have the following format:</span></span>
 
         ```xml
         <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
         ```
 
-    - <span data-ttu-id="d7fd7-155">儲存更新的檔案。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-155">Save the updated file.</span></span>
+    - <span data-ttu-id="24045-155">儲存更新的檔案。</span><span class="sxs-lookup"><span data-stu-id="24045-155">Save the updated file.</span></span>
 
-    - <span data-ttu-id="d7fd7-156">執行下列動作來還原專案的相依性：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-156">Restore the dependencies of the project, by doing the following:</span></span>
+    - <span data-ttu-id="24045-156">執行下列動作來還原專案的相依性：</span><span class="sxs-lookup"><span data-stu-id="24045-156">Restore the dependencies of the project, by doing the following:</span></span>
 
         ```dotnetcli
         dotnet restore [project_name].csproj
         ```
 
-4. <span data-ttu-id="d7fd7-157">流覽回到包含主要專案的資料夾，然後執行：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-157">Navigate back to the folder containing your main project and run:</span></span>
+4. <span data-ttu-id="24045-157">流覽回到包含主要專案的資料夾，然後執行：</span><span class="sxs-lookup"><span data-stu-id="24045-157">Navigate back to the folder containing your main project and run:</span></span>
 
     ```dotnetcli
     dotnet build [project_name].csproj
     ```
 
-<span data-ttu-id="d7fd7-158">現在您已更新您的 Q # 專案，請遵循下列指示來更新 QDK 本身。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-158">With your Q# projects now updated, follow the instructions below to update the QDK itself.</span></span>
+<span data-ttu-id="24045-158">現在您已更新您的 Q # 專案，請遵循下列指示來更新 QDK 本身。</span><span class="sxs-lookup"><span data-stu-id="24045-158">With your Q# projects now updated, follow the instructions below to update the QDK itself.</span></span>
 
-## <a name="updating-the-qdk"></a><span data-ttu-id="d7fd7-159">更新 QDK</span><span class="sxs-lookup"><span data-stu-id="d7fd7-159">Updating the QDK</span></span>
+## <a name="updating-the-qdk"></a><span data-ttu-id="24045-159">更新 QDK</span><span class="sxs-lookup"><span data-stu-id="24045-159">Updating the QDK</span></span>
 
-<span data-ttu-id="d7fd7-160">更新 QDK 的程式會根據您的開發語言和環境而有所不同。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-160">The process to update the QDK varies depending on your development language and environment.</span></span>
-<span data-ttu-id="d7fd7-161">請在下方選取您的開發環境。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-161">Select your development environment below.</span></span>
+<span data-ttu-id="24045-160">更新 QDK 的程式會根據您的開發語言和環境而有所不同。</span><span class="sxs-lookup"><span data-stu-id="24045-160">The process to update the QDK varies depending on your development language and environment.</span></span>
+<span data-ttu-id="24045-161">請在下方選取您的開發環境。</span><span class="sxs-lookup"><span data-stu-id="24045-161">Select your development environment below.</span></span>
 
-* [<span data-ttu-id="d7fd7-162">Python：更新 IQ # 擴充功能</span><span class="sxs-lookup"><span data-stu-id="d7fd7-162">Python: update the IQ# extension</span></span>](#update-iq-for-python)
-* [<span data-ttu-id="d7fd7-163">Jupyter 筆記本：更新 IQ # 擴充功能</span><span class="sxs-lookup"><span data-stu-id="d7fd7-163">Jupyter Notebooks: update the IQ# extension</span></span>](#update-iq-for-jupyter-notebooks)
-* [<span data-ttu-id="d7fd7-164">Visual Studio：更新 QDK 擴充功能</span><span class="sxs-lookup"><span data-stu-id="d7fd7-164">Visual Studio: update the QDK extension</span></span>](#update-visual-studio-qdk-extension)
-* [<span data-ttu-id="d7fd7-165">VS Code：更新 QDK 擴充功能</span><span class="sxs-lookup"><span data-stu-id="d7fd7-165">VS Code: update the QDK extension</span></span>](#update-vs-code-qdk-extension)
-* [<span data-ttu-id="d7fd7-166">命令列和 c #：更新專案範本</span><span class="sxs-lookup"><span data-stu-id="d7fd7-166">Command-line and C#: update project templates</span></span>](#c-using-the-dotnet-command-line-tool)
+* [<span data-ttu-id="24045-162">Python：更新 IQ # 擴充功能</span><span class="sxs-lookup"><span data-stu-id="24045-162">Python: update the IQ# extension</span></span>](#update-iq-for-python)
+* [<span data-ttu-id="24045-163">Jupyter 筆記本：更新 IQ # 擴充功能</span><span class="sxs-lookup"><span data-stu-id="24045-163">Jupyter Notebooks: update the IQ# extension</span></span>](#update-iq-for-jupyter-notebooks)
+* [<span data-ttu-id="24045-164">Visual Studio：更新 QDK 擴充功能</span><span class="sxs-lookup"><span data-stu-id="24045-164">Visual Studio: update the QDK extension</span></span>](#update-visual-studio-qdk-extension)
+* [<span data-ttu-id="24045-165">VS Code：更新 QDK 擴充功能</span><span class="sxs-lookup"><span data-stu-id="24045-165">VS Code: update the QDK extension</span></span>](#update-vs-code-qdk-extension)
+* [<span data-ttu-id="24045-166">命令列和 c #：更新專案範本</span><span class="sxs-lookup"><span data-stu-id="24045-166">Command-line and C#: update project templates</span></span>](#c-using-the-dotnet-command-line-tool)
 
 
-### <a name="update-iq-for-python"></a><span data-ttu-id="d7fd7-167">更新適用于 Python 的 IQ #</span><span class="sxs-lookup"><span data-stu-id="d7fd7-167">Update IQ# for Python</span></span>
+### <a name="update-iq-for-python"></a><span data-ttu-id="24045-167">更新適用于 Python 的 IQ #</span><span class="sxs-lookup"><span data-stu-id="24045-167">Update IQ# for Python</span></span>
 
-1. <span data-ttu-id="d7fd7-168">更新 `iqsharp` 核心</span><span class="sxs-lookup"><span data-stu-id="d7fd7-168">Update the `iqsharp` kernel</span></span> 
+1. <span data-ttu-id="24045-168">更新 `iqsharp` 核心</span><span class="sxs-lookup"><span data-stu-id="24045-168">Update the `iqsharp` kernel</span></span> 
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-2. <span data-ttu-id="d7fd7-169">驗證 `iqsharp` 版本</span><span class="sxs-lookup"><span data-stu-id="d7fd7-169">Verify the `iqsharp` version</span></span>
+2. <span data-ttu-id="24045-169">驗證 `iqsharp` 版本</span><span class="sxs-lookup"><span data-stu-id="24045-169">Verify the `iqsharp` version</span></span>
 
     ```dotnetcli
     dotnet iqsharp --version
     ```
 
-    <span data-ttu-id="d7fd7-170">您應該會看見下列輸出：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-170">You should see the following output:</span></span>
+    <span data-ttu-id="24045-170">您應該會看見下列輸出：</span><span class="sxs-lookup"><span data-stu-id="24045-170">You should see the following output:</span></span>
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
 
-    <span data-ttu-id="d7fd7-171">如果您的 `iqsharp` 版本較高，請不要擔心，它應該符合[最新版本](xref:microsoft.quantum.relnotes)。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-171">Don't worry if your `iqsharp` version is higher, it should match the [latest release](xref:microsoft.quantum.relnotes).</span></span>
+    <span data-ttu-id="24045-171">如果您的 `iqsharp` 版本較高，請不要擔心，它應該符合[最新版本](xref:microsoft.quantum.relnotes)。</span><span class="sxs-lookup"><span data-stu-id="24045-171">Don't worry if your `iqsharp` version is higher, it should match the [latest release](xref:microsoft.quantum.relnotes).</span></span>
 
-3. <span data-ttu-id="d7fd7-172">更新 `qsharp` 套件</span><span class="sxs-lookup"><span data-stu-id="d7fd7-172">Update the `qsharp` package</span></span>
+3. <span data-ttu-id="24045-172">更新 `qsharp` 套件</span><span class="sxs-lookup"><span data-stu-id="24045-172">Update the `qsharp` package</span></span>
 
-    ```bash
+    ```
     pip install qsharp --upgrade
     ```
 
-4. <span data-ttu-id="d7fd7-173">驗證 `qsharp` 版本</span><span class="sxs-lookup"><span data-stu-id="d7fd7-173">Verify the `qsharp` version</span></span>
+4. <span data-ttu-id="24045-173">驗證 `qsharp` 版本</span><span class="sxs-lookup"><span data-stu-id="24045-173">Verify the `qsharp` version</span></span>
 
-    ```bash
+    ```
     pip show qsharp
     ```
 
-    <span data-ttu-id="d7fd7-174">您應該會看見下列輸出：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-174">You should see the following output:</span></span>
+    <span data-ttu-id="24045-174">您應該會看見下列輸出：</span><span class="sxs-lookup"><span data-stu-id="24045-174">You should see the following output:</span></span>
 
-    ```bash
+    ```
     Name: qsharp
     Version: 0.10.1912.501
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
 
-5. <span data-ttu-id="d7fd7-175">從檔案的位置執行下列命令 `.qs`</span><span class="sxs-lookup"><span data-stu-id="d7fd7-175">Run the following command from the location of your `.qs` files</span></span>
+5. <span data-ttu-id="24045-175">從檔案的位置執行下列命令 `.qs`</span><span class="sxs-lookup"><span data-stu-id="24045-175">Run the following command from the location of your `.qs` files</span></span>
 
-    ```bash
+    ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
-6. <span data-ttu-id="d7fd7-176">您現在可以使用更新的 QDK 版本來執行現有的量副程式。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-176">You can now use the updated QDK version to run your existing quantum programs.</span></span>
+6. <span data-ttu-id="24045-176">您現在可以使用更新的 QDK 版本來執行現有的量副程式。</span><span class="sxs-lookup"><span data-stu-id="24045-176">You can now use the updated QDK version to run your existing quantum programs.</span></span>
 
-### <a name="update-iq-for-jupyter-notebooks"></a><span data-ttu-id="d7fd7-177">更新 Jupyter 筆記本的 IQ #</span><span class="sxs-lookup"><span data-stu-id="d7fd7-177">Update IQ# for Jupyter Notebooks</span></span>
+### <a name="update-iq-for-jupyter-notebooks"></a><span data-ttu-id="24045-177">更新 Jupyter 筆記本的 IQ #</span><span class="sxs-lookup"><span data-stu-id="24045-177">Update IQ# for Jupyter Notebooks</span></span>
 
-1. <span data-ttu-id="d7fd7-178">更新 `iqsharp` 核心</span><span class="sxs-lookup"><span data-stu-id="d7fd7-178">Update the `iqsharp` kernel</span></span>
+1. <span data-ttu-id="24045-178">更新 `iqsharp` 核心</span><span class="sxs-lookup"><span data-stu-id="24045-178">Update the `iqsharp` kernel</span></span>
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-2. <span data-ttu-id="d7fd7-179">驗證 `iqsharp` 版本</span><span class="sxs-lookup"><span data-stu-id="d7fd7-179">Verify the `iqsharp` version</span></span>
+2. <span data-ttu-id="24045-179">驗證 `iqsharp` 版本</span><span class="sxs-lookup"><span data-stu-id="24045-179">Verify the `iqsharp` version</span></span>
 
     ```dotnetcli
     dotnet iqsharp --version
     ```
 
-    <span data-ttu-id="d7fd7-180">您的輸出應該類似如下範例：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-180">Your output should be similar to the following:</span></span>
+    <span data-ttu-id="24045-180">您的輸出應該類似如下範例：</span><span class="sxs-lookup"><span data-stu-id="24045-180">Your output should be similar to the following:</span></span>
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
 
-    <span data-ttu-id="d7fd7-181">如果您的 `iqsharp` 版本較高，請不要擔心，它應該符合[最新版本](xref:microsoft.quantum.relnotes)。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-181">Don't worry if your `iqsharp` version is higher, it should match the [latest release](xref:microsoft.quantum.relnotes).</span></span>
+    <span data-ttu-id="24045-181">如果您的 `iqsharp` 版本較高，請不要擔心，它應該符合[最新版本](xref:microsoft.quantum.relnotes)。</span><span class="sxs-lookup"><span data-stu-id="24045-181">Don't worry if your `iqsharp` version is higher, it should match the [latest release](xref:microsoft.quantum.relnotes).</span></span>
 
-3. <span data-ttu-id="d7fd7-182">從您 Jupyter Notebook 中的儲存格執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-182">Run the following command from a cell in your Jupyter Notebook:</span></span>
+3. <span data-ttu-id="24045-182">從您 Jupyter Notebook 中的儲存格執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="24045-182">Run the following command from a cell in your Jupyter Notebook:</span></span>
 
     ```
     %workspace reload
     ```
 
-4. <span data-ttu-id="d7fd7-183">您現在可以開啟現有的 Jupyter 筆記本，並使用更新的 QDK 加以執行。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-183">You can now open an existing Jupyter notebook and run it with the updated QDK.</span></span>
+4. <span data-ttu-id="24045-183">您現在可以開啟現有的 Jupyter 筆記本，並使用更新的 QDK 加以執行。</span><span class="sxs-lookup"><span data-stu-id="24045-183">You can now open an existing Jupyter notebook and run it with the updated QDK.</span></span>
 
-### <a name="update-visual-studio-qdk-extension"></a><span data-ttu-id="d7fd7-184">更新 Visual Studio QDK 延伸模組</span><span class="sxs-lookup"><span data-stu-id="d7fd7-184">Update Visual Studio QDK extension</span></span>
+### <a name="update-visual-studio-qdk-extension"></a><span data-ttu-id="24045-184">更新 Visual Studio QDK 延伸模組</span><span class="sxs-lookup"><span data-stu-id="24045-184">Update Visual Studio QDK extension</span></span>
 
-1. <span data-ttu-id="d7fd7-185">更新 Q # Visual Studio 延伸模組</span><span class="sxs-lookup"><span data-stu-id="d7fd7-185">Update the Q# Visual Studio extension</span></span>
+1. <span data-ttu-id="24045-185">更新 Q # Visual Studio 延伸模組</span><span class="sxs-lookup"><span data-stu-id="24045-185">Update the Q# Visual Studio extension</span></span>
 
-    - <span data-ttu-id="d7fd7-186">Visual Studio 會提示您接受[Visual Studio 延伸](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)模組的更新</span><span class="sxs-lookup"><span data-stu-id="d7fd7-186">Visual Studio prompts you to accept updates to the [Quantum Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)</span></span>
-    - <span data-ttu-id="d7fd7-187">接受更新</span><span class="sxs-lookup"><span data-stu-id="d7fd7-187">Accept the update</span></span>
+    - <span data-ttu-id="24045-186">Visual Studio 會提示您接受[Visual Studio 延伸](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)模組的更新</span><span class="sxs-lookup"><span data-stu-id="24045-186">Visual Studio prompts you to accept updates to the [Quantum Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)</span></span>
+    - <span data-ttu-id="24045-187">接受更新</span><span class="sxs-lookup"><span data-stu-id="24045-187">Accept the update</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="d7fd7-188">專案範本會以擴充功能更新。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-188">The project templates are updated with the extension.</span></span> <span data-ttu-id="d7fd7-189">更新的範本僅適用于新建立的專案。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-189">The updated templates apply to newly created projects only.</span></span> <span data-ttu-id="d7fd7-190">更新延伸模組時，不會更新現有專案的程式碼。</span><span class="sxs-lookup"><span data-stu-id="d7fd7-190">The code for your existing projects is not updated when the extension is updated.</span></span>
+    > <span data-ttu-id="24045-188">專案範本會以擴充功能更新。</span><span class="sxs-lookup"><span data-stu-id="24045-188">The project templates are updated with the extension.</span></span> <span data-ttu-id="24045-189">更新的範本僅適用于新建立的專案。</span><span class="sxs-lookup"><span data-stu-id="24045-189">The updated templates apply to newly created projects only.</span></span> <span data-ttu-id="24045-190">更新延伸模組時，不會更新現有專案的程式碼。</span><span class="sxs-lookup"><span data-stu-id="24045-190">The code for your existing projects is not updated when the extension is updated.</span></span>
 
-### <a name="update-vs-code-qdk-extension"></a><span data-ttu-id="d7fd7-191">更新 VS Code QDK 延伸模組</span><span class="sxs-lookup"><span data-stu-id="d7fd7-191">Update VS Code QDK extension</span></span>
+### <a name="update-vs-code-qdk-extension"></a><span data-ttu-id="24045-191">更新 VS Code QDK 延伸模組</span><span class="sxs-lookup"><span data-stu-id="24045-191">Update VS Code QDK extension</span></span>
 
-1. <span data-ttu-id="d7fd7-192">更新 VS Code 延伸模組的量子</span><span class="sxs-lookup"><span data-stu-id="d7fd7-192">Update the Quantum VS Code extension</span></span>
+1. <span data-ttu-id="24045-192">更新 VS Code 延伸模組的量子</span><span class="sxs-lookup"><span data-stu-id="24045-192">Update the Quantum VS Code extension</span></span>
 
-    - <span data-ttu-id="d7fd7-193">重新開機 VS Code</span><span class="sxs-lookup"><span data-stu-id="d7fd7-193">Restart VS Code</span></span>
-    - <span data-ttu-id="d7fd7-194">流覽至 [**擴充**功能] 索引標籤</span><span class="sxs-lookup"><span data-stu-id="d7fd7-194">Navigate to the **Extensions** tab</span></span>
-    - <span data-ttu-id="d7fd7-195">選取 Visual Studio Code 延伸模組的**Microsoft Quantum Development Kit**</span><span class="sxs-lookup"><span data-stu-id="d7fd7-195">Select the **Microsoft Quantum Development Kit for Visual Studio Code** extension</span></span>
-    - <span data-ttu-id="d7fd7-196">重載擴充功能</span><span class="sxs-lookup"><span data-stu-id="d7fd7-196">Reload the extension</span></span>
+    - <span data-ttu-id="24045-193">重新開機 VS Code</span><span class="sxs-lookup"><span data-stu-id="24045-193">Restart VS Code</span></span>
+    - <span data-ttu-id="24045-194">流覽至 [**擴充**功能] 索引標籤</span><span class="sxs-lookup"><span data-stu-id="24045-194">Navigate to the **Extensions** tab</span></span>
+    - <span data-ttu-id="24045-195">選取 Visual Studio Code 延伸模組的**Microsoft Quantum Development Kit**</span><span class="sxs-lookup"><span data-stu-id="24045-195">Select the **Microsoft Quantum Development Kit for Visual Studio Code** extension</span></span>
+    - <span data-ttu-id="24045-196">重載擴充功能</span><span class="sxs-lookup"><span data-stu-id="24045-196">Reload the extension</span></span>
 
-2. <span data-ttu-id="d7fd7-197">更新 [量子] 專案範本：</span><span class="sxs-lookup"><span data-stu-id="d7fd7-197">Update the Quantum project templates:</span></span>
+2. <span data-ttu-id="24045-197">更新 [量子] 專案範本：</span><span class="sxs-lookup"><span data-stu-id="24045-197">Update the Quantum project templates:</span></span>
 
-   - <span data-ttu-id="d7fd7-198">移至**View**  ->  **命令**選擇區</span><span class="sxs-lookup"><span data-stu-id="d7fd7-198">Go to **View** -> **Command Palette**</span></span>
-   - <span data-ttu-id="d7fd7-199">選取 [ **Q #：安裝專案範本**]</span><span class="sxs-lookup"><span data-stu-id="d7fd7-199">Select **Q#: Install project templates**</span></span>
-   - <span data-ttu-id="d7fd7-200">幾秒鐘之後，您應該會看到快顯確認「專案範本安裝成功」的快顯視窗</span><span class="sxs-lookup"><span data-stu-id="d7fd7-200">After a few seconds you should get a popup confirming "project templates installed successfully"</span></span>
+   - <span data-ttu-id="24045-198">移至**View**  ->  **命令**選擇區</span><span class="sxs-lookup"><span data-stu-id="24045-198">Go to **View** -> **Command Palette**</span></span>
+   - <span data-ttu-id="24045-199">選取 [ **Q #：安裝專案範本**]</span><span class="sxs-lookup"><span data-stu-id="24045-199">Select **Q#: Install project templates**</span></span>
+   - <span data-ttu-id="24045-200">幾秒鐘之後，您應該會看到快顯確認「專案範本安裝成功」的快顯視窗</span><span class="sxs-lookup"><span data-stu-id="24045-200">After a few seconds you should get a popup confirming "project templates installed successfully"</span></span>
 
-### <a name="c-using-the-dotnet-command-line-tool"></a><span data-ttu-id="d7fd7-201">C #，使用 `dotnet` 命令列工具</span><span class="sxs-lookup"><span data-stu-id="d7fd7-201">C#, using the `dotnet` command-line tool</span></span>
+### <a name="c-using-the-dotnet-command-line-tool"></a><span data-ttu-id="24045-201">C #，使用 `dotnet` 命令列工具</span><span class="sxs-lookup"><span data-stu-id="24045-201">C#, using the `dotnet` command-line tool</span></span>
 
-1. <span data-ttu-id="d7fd7-202">更新 .NET 的量子專案範本</span><span class="sxs-lookup"><span data-stu-id="d7fd7-202">Update the Quantum project templates for .NET</span></span>
+1. <span data-ttu-id="24045-202">更新 .NET 的量子專案範本</span><span class="sxs-lookup"><span data-stu-id="24045-202">Update the Quantum project templates for .NET</span></span>
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
