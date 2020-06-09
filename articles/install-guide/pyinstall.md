@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 35499daae0cd0ae329e39b43b0d8dd5a00183871
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660738"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578159"
 ---
 # <a name="develop-with-q-and-python"></a>使用 Q # 和 Python 進行開發
 
@@ -26,13 +26,13 @@ ms.locfileid: "83660738"
 
 1. 安裝 `qsharp` 套件，這是可在 Q # 和 Python 之間進行交互操作的 Python 套件。
 
-    ```bash
+    ```
     pip install qsharp
     ```
 
 1. 安裝 IQ #，這是 Jupyter 和 Python 所使用的核心，可提供用來編譯和執行 Q # 作業的核心功能。
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -69,15 +69,15 @@ ms.locfileid: "83660738"
 
     - 執行程式：
 
-        ```bash
+        ```
         python hello_world.py
         ```
 
     - 驗證輸出。 您的程式應該會輸出下列幾行：
 
-        ```bash
+        ```
         Hello from quantum world!
-       ```
+        ```
 
 
 > [!NOTE]

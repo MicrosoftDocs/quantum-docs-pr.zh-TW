@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660767"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577815"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>使用 Q# Jupyter Notebooks 來開發
 
@@ -32,7 +32,7 @@ IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SD
 
 1. 安裝 `iqsharp` 套件
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -41,7 +41,7 @@ IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SD
 
     - 執行下列命令以啟動筆記本伺服器：
 
-        ```bash
+        ```
         jupyter notebook
         ```
 
