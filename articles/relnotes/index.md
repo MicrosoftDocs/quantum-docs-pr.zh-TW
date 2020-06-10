@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
-ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
+ms.openlocfilehash: 6b24ebe9f0b5fd3318e8adfe1a62bafaf9d1961e
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84422218"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578129"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -25,6 +25,12 @@ ms.locfileid: "84422218"
 
 *發行日期：2020 年 6 月 4 日*
 
+這個版本會修正影響 Q # 專案編譯的錯誤。
+
+## <a name="version-0112006207"></a>版本 0.11.2006.207
+
+*發行日期：2020 年 6 月 3 日*
+
 此版本包含下列項目：
 
 - 當問 Q# 進入點存在時，Q# 筆記本和 Python 主機程式將不會再失敗
@@ -33,6 +39,9 @@ ms.locfileid: "84422218"
 - 已遵循我們的 [API 原則](xref:microsoft.quantum.contributing.api-design)中所述的排程，移除數個已遭取代的函式和作業。 在版本 0.11.2004.2825 中建立不含警告的 Q# 程式和程式庫，將會繼續以未修改的方式工作。
 
 請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、[IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 和 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
+
+> [!NOTE]
+> 此版本包含影響 Q # 專案編譯的錯誤。 我們建議您升級至較新的版本。
 
 ## <a name="version-01120042825"></a>0\.11.2004.2825 版
 
