@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: b80d95a160b5f46c1132d3428ba32ad6dcd5656e
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84577815"
+ms.locfileid: "84630340"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>使用 Q# Jupyter Notebooks 來開發
 
@@ -36,6 +36,15 @@ IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SD
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > 如果您在步驟中收到錯誤 `dotnet iqsharp install` ，請開啟新的終端機視窗，然後再試一次。
+    > 如果仍然無法運作，請嘗試尋找已安裝的 `dotnet-iqsharp` 工具（在 Windows 上 `dotnet-iqsharp.exe` ），並執行：
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > 其中， `/path/to/dotnet-iqsharp` 應取代為 `dotnet-iqsharp` 檔案系統中工具的絕對路徑。
+    > 這通常會在 `.dotnet/tools` 您的使用者設定檔資料夾中。
 
 1. 建立 `Hello World` 應用程式來驗證安裝
 

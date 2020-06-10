@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: 374ac42255ab6b2c5eff8ab7879b3a5103181f7f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: dd6c7ae8a016423f26c37f3eedf0ae9c1d126b78
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630036"
 ---
 # <a name="testing-and-debugging"></a>測試和偵錯
 
@@ -218,7 +218,7 @@ using (register = Qubit())
 
 * **`∣0❭:`** 此資料列對應于 `0` 計算基礎狀態
 * **`0.707107 +  0.000000 i`**：笛卡爾格式的機率幅度。
-* **` == `**： `equal` 正負號 seperates 兩個對等的標記法。
+* **` == `**： `equal` 符號會分隔兩個對等的標記法。
 * **`**********  `**：大小的圖形表示，的數目與 `*` 測量此狀態向量的機率成正比。
 * **`[ 0.500000 ]`**：量值的數值
 * **`    ---`**：振幅階段的圖形標記法（請參閱下文）。

@@ -6,18 +6,89 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 745f0570bf62c5d98c2896cdc893ec385abd7115
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426617"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630399"
 ---
 # <a name="quantum-circuits"></a>量子線路
-請思考一下單一轉換 $ \text{CNOT-CONTAINS} _ {01} （H\otimes 1） $。
+請思考一下單一轉換 $ \text { cnot-contains} _ {01 } （H \otimes 1） $。
 此閘道序列對量子運算的基本重要性，因為它會建立最常光子二 qubit 的狀態：
 
-$ $ \mathrm{CNOT}_ {01} （H\otimes 1） \ket {00} = \frac {1} {\sqrt {2} } \left （\ket {00} + \ket {11} \right），$ $
+$ $ \mathrm{CNOT}_{01 } （H \otimes 1） \ket{00 } = \frac{1 } {\sqrt{2 } } \left （\ket{00 } + \ket{11 } \right），$ $
 
 具有此或更大複雜度的作業在配量演算法和量子錯誤更正中是普遍的，因此，它應該是一個簡單的視覺效果方法，稱為配量*線路圖*。
 準備此最常光子量子狀態的線路圖表如下：
@@ -31,7 +102,7 @@ $ $ \mathrm{CNOT}_ {01} （H\otimes 1） \ket {00} = \frac {1} {\sqrt {2} } \lef
 我們會在下面探討這些慣例。
 
 在電路圖中，每一條實線描述一個 qubit 或更普遍的 qubit 暫存器。
-依照慣例，最上方的行會是 qubit register $0 $，其餘部分則會依序標示。 上述的範例電路會在兩個 qubits （或兩個由一個 qubit 組成的暫存器）上描述為作用。
+依照慣例，最上方的行會是 qubit register $0 $ ，其餘部分則會以順序標示。 上述的範例電路會在兩個 qubits （或兩個由一個 qubit 組成的暫存器）上描述為作用。
 以一個或多個 qubit 暫存器為作用的閘道會以方塊表示。
 例如，符號
 
@@ -49,7 +120,7 @@ $ $ \mathrm{CNOT}_ {01} （H\otimes 1） \ket {00} = \frac {1} {\sqrt {2} } \lef
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![由左至右套用的量子閘道圖](~/media/3.svg)
 
-是單一矩陣 $CBA $。
+這是單一矩陣 $CBA $ 。
 矩陣乘法遵守相反的慣例：第一次套用最右邊的矩陣。 不過，在配量電路圖中，會先套用最左邊的閘道。
 這項差異有時可能會造成混淆，因此請務必注意線性代數標記法與配量電路圖之間的顯著差異。
 
@@ -61,7 +132,7 @@ $ $ \mathrm{CNOT}_ {01} （H\otimes 1） \ket {00} = \frac {1} {\sqrt {2} } \lef
 基於這個理由，在電路圖中繪製的任何方塊都必須有相同數目的線路進入結束。
 
 多 qubit 的電路圖表會遵循類似的慣例來進行單一 qubit。
-做為說明範例，我們可以定義兩個 qubit 的單一作業 $B $ 設為 $ （H S\otimes X） $，並以相同的方式表達電路
+做為說明範例，我們可以定義兩個 qubit 的單一作業 $B $ 為 $ （H S \otimes X） $，並以相同的方式表達線路
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -72,16 +143,16 @@ $ $ \mathrm{CNOT}_ {01} （H\otimes 1） \ket {00} = \frac {1} {\sqrt {2} } \lef
 
 ## <a name="controlled-gates"></a>控制的閘道
 另一個內建于多 qubit 配量電路圖的結構是 control。
-配量單一控制閘道（表示 $ \Lambda （G） $）的動作，其中單一 qubit 的值可控制 $G $ 的應用程式，您可以查看下列產品狀態輸入 $ \Lambda （G）（\Alpha \ket {0} + \Beta \ket {1} ） \ket{\psi} = \Alpha \ket {0} \ket{\psi} + \Beta \ket {1} G\ket {\ psi} $ 的範例來瞭解。
-也就是說，只有在控制項 qubit 接受值 $1 $ 時，受控制的閘道才會將 $G $ 套用至包含 $ \psi $ 的暫存器。
+配量單一控制閘道（表示 $ \Lambda （G） $）的動作，其中單一 qubit 的值控制 $G 的應用程式 $ ，可透過查看下列產品狀態輸入 $ \Lambda （g）（\Alpha \ket{0 } + \Beta \ket{1 } ） \ket { \psi } = \Alpha \ket{0 } \ket { \psi } + \Beta \ket{1 } G \ket { \psi } $ 的範例來瞭解。
+也就是說， $ $ 只有在控制項 qubit 接受值 $1 時，受控制的閘道才會套用 $G 至包含 $ \psi 的暫存器 $ 。
 一般來說，我們會在電路圖中描述這類受控制的作業，如下所示：
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![單向控制閘道的路線圖](~/media/5.svg)
 
-在這裡，黑色圓圈代表控制閘道的配量位，而垂直線代表當控制項 qubit 接受值 $1 $ 時所套用的單一。
-針對 $G = X $ 且 $G = Z $ 的特殊情況，我們引進了下列標記法來描述控制的閘道版本（請注意，受控制的 X 閘道是[$CNOT $](xref:microsoft.quantum.intrinsic.cnot)閘道）：
+在這裡，黑色圓圈代表控制閘道的配量位，而垂直線代表當控制項 qubit 接受值 $1 時所套用的單一 $ 。
+在 $G = X 和 $G = Z 的特殊情況下， $ $ 我們引進了下列標記法來描述控制的閘道版本（請注意，控制的 X 閘道是[$CNOT 網 $ 關](xref:microsoft.quantum.intrinsic.cnot)）：
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -115,7 +186,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![代表受控制作業的線路圖表](~/media/8.svg)
 
-提供受傳統方式控制的閘道，其中 $G $ 會套用至傳統控制位的值 $1 $。
+提供受傳統方式控制的閘道，其中 $G 套用 $ 在傳統控制位上，以實值 $1 $ 。
 
 ## <a name="teleportation-circuit-diagram"></a>Teleportation 線路圖表
 量子 teleportation 可能是用來說明這些元件的最佳量子演算法。

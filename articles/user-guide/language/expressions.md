@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327300"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84629987"
 ---
 # <a name="type-expressions-in-q"></a>Q 中的類型運算式#
 
@@ -201,7 +201,7 @@ String 插補的 Q # 語法是 c # 語法的子集，但我們在此摘要說明
 在 Q # 中，解除包裝運算子是尾端驚嘆號 `!` 。
 例如，如果 `IntPair` 是具有基礎類型的使用者定義型別 `(Int, Int)` ，而是 `s` 具有值的變數 `IntPair(2, 3)` ，則會 `s!` 是 `(2, 3)` 。
 
-針對其他使用者定義型別所定義的使用者自訂類型。 解除包裝運算子可以重複;例如， `s!!` 表示的雙重解除包裝值 `s` 。
+針對其他使用者定義型別所定義的使用者定義型別，可能會重複執行解除包裝運算子;例如， `s!!` 表示的雙重解除包裝值 `s` 。
 因此，如果 `WrappedPair` 是具有基礎類型的使用者定義型別 `IntPair` ，而 `t` 是具有值的變數 `WrappedPair(IntPair(1,2))` ，則會 `t!!` 是 `(1,2)` 。
 
 除了 `!` 陣列索引和切割以外，運算子的優先順序高於其他所有運算子 `[]` 。
@@ -474,7 +474,7 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 依優先順序排列的運算子，從最高到最低：
 
-運算子 | Arity | Description | 運算元類型
+運算子 | Arity | 描述 | 運算元類型
 ---------|----------|---------|---------------
  句號`!` | 一元 (Unary) | 解除包裝 | 任何使用者定義型別
  `-`, `~~~`, `not` | 一元 (Unary) | 數值負數、位補數、邏輯否定 | `Int`、 `BigInt` 或 `Double` 為 `-` ， `Int` 或 `BigInt` `~~~` 代表 `Bool``not`
@@ -493,6 +493,6 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
  `?` `|` | 三元 | 條件式 | `Bool`左側的
 `w/` `<-` | 三元 | 複製和更新 | 請參閱[複製和更新運算式](#copy-and-update-expressions)
 
-## <a name="next-steps"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
 現在您可以使用 Q # 中的運算式，您可以前往[q # 中的作業和](xref:microsoft.quantum.guide.operationsfunctions)函式，以瞭解如何定義和呼叫作業和函數。

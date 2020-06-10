@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: dfb2b1779e3ddc77fc74697bc4dc2904b1a0c70f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 948b385948f0b362e7c12500662132883959a798
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426917"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630241"
 ---
 # <a name="q-style-guide"></a>問 # 樣式指南 #
 ## <a name="general-conventions"></a>一般慣例 ##
@@ -280,7 +280,7 @@ While we must maintain the history and intellectual provenance of concepts in qu
 
 ***
 
-### <a name="user-defined-type-named-items"></a>使用者定義型別名稱專案 ###
+### <a name="user-defined-type-named-items"></a>名為 Items 的使用者定義型別 ###
 
 使用者定義類型中的命名專案應該命名為 `CamelCase` ，即使在 UDT 的輸入中也一樣。
 這有助於在使用存取子標記法（例如： `callable::Apply` ）或複製和更新標記法（）時，清楚地將命名的專案與本機範圍變數的參考區隔開 `set arr w/= Data <- newData` 。

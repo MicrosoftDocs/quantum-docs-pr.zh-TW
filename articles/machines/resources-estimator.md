@@ -6,19 +6,19 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426867"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630124"
 ---
 # <a name="the-resources-estimator-target-machine"></a>資源估計工具目的電腦
 
 顧名思義，會 `ResourcesEstimator` 估計在量子電腦上執行 Q # 作業的指定實例所需的資源。
 它會執行量子作業，而不實際模擬量子電腦的狀態，來完成這項操作;基於這個理由，如果程式碼的傳統部分可以在合理的時間內執行，它可以估計使用數千個 qubits 的 Q # 作業資源。
 
-## <a name="usage"></a>使用方式
+## <a name="usage"></a>使用量
 
 `ResourcesEstimator`只是另一種類型的目的電腦，因此可以用來執行任何 Q # 作業。 
 
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-如範例所示， `ResourcesEstimator` 會提供一個 `ToTSV()` 方法來產生一個資料表，其中包含可儲存至檔案或寫入主控台進行分析的索引標籤分隔值（TSV）。 上述程式的輸出看起來應該像這樣：
+如範例所示， `ResourcesEstimator` 會提供一個 `ToTSV()` 方法來產生資料表，其中包含定位字元分隔值（TSV），可儲存至檔案或寫入主控台進行分析。 上述程式的輸出看起來應該像這樣：
 
 ```Output
 Metric          Sum
@@ -130,7 +130,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 當遇到時， `ResourcesEstimator` `AssertProb` 它會將測量記錄 `PauliZ` 在上， `source` 且 `q` 應給予的結果為，機率為 `Zero` 0.5。 當稍後執行時 `M` ，它會尋找結果機率的已記錄值，而且 `M` 會傳回 `Zero` 或 `One` ，並出現機率0.5。
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 `ResourcesEstimator`建置於配量電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的最上層，可提供一組更豐富的計量、在完整的呼叫圖形上報告計量的能力，以及可協助您[distinct inputs checker](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)找出問 # 程式錯誤的功能。 如需詳細資訊，請參閱[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器檔。
 

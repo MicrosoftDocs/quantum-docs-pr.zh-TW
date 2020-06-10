@@ -6,18 +6,89 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 2a3b1fe480b9886d0c11255bb1b1e01402dce4f7
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327606"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630097"
 ---
 # <a name="quantum-computing-glossary"></a>量子運算詞彙
 
 ## <a name="adjoint"></a>Adjoint
 
-[運算](xref:microsoft.quantum.glossary#operation)的複雜共軛轉置。 針對實作為[單一](xref:microsoft.quantum.glossary#unitary-operator)運算子的作業，adjoint 是運算的反向，並以 dagger 符號表示。 例如，如果作業 `U` 表示 $U $ 的單一運算子，則 `Adjoint U` 表示 $U ^ \dagger $。 如需詳細資訊，請參閱[Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)。
+[運算](xref:microsoft.quantum.glossary#operation)的複雜共軛轉置。 針對實作為[單一](xref:microsoft.quantum.glossary#unitary-operator)運算子的作業，adjoint 是運算的反向，並以 dagger 符號表示。 例如，如果作業 `U` 表示 $U 的單一運算子 $ ，則 `Adjoint U` 表示 $U ^ \dagger $ 。 如需詳細資訊，請參閱[Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)。
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -25,7 +96,7 @@ ms.locfileid: "84327606"
 
 ## <a name="bell-state"></a>鐘州
 
-兩個 qubits 的四個特定最常[光子](xref:microsoft.quantum.glossary#entanglement)配量[狀態](xref:microsoft.quantum.glossary#quantum-state)之一。 四個狀態會定義 $ \ket{\ Beta_ {ij}} = （\mathbb{I} \otimes X ^ iZ ^ j）（\ket {00} + \ket {11} ）/\sqrt {2} $。 鐘狀態也稱為[EPR 配對](xref:microsoft.quantum.glossary#epr-pair)。
+兩個 qubits 的四個特定最常[光子](xref:microsoft.quantum.glossary#entanglement)配量[狀態](xref:microsoft.quantum.glossary#quantum-state)之一。 四個狀態定義為 $ \ket { \ Beta_ {ij } } = （\Mathbb{I } \Otimes X ^ iZ ^ j）（\ket{00 } + \ket{11 } ）/\sqrt{2 } $。 鐘狀態也稱為[EPR 配對](xref:microsoft.quantum.glossary#epr-pair)。
 
 ## <a name="bloch-sphere"></a>Bloch 球體
 
@@ -37,7 +108,7 @@ Q # 語言[中的作業或](xref:microsoft.quantum.glossary#operation)[函數](x
 
 ## <a name="clifford-group"></a>Clifford 群組
 
-這組作業會佔用[Bloch 球體](xref:microsoft.quantum.glossary#bloch-sphere)的 octants，以及[Pauli 運算子](xref:microsoft.quantum.glossary#pauli-operators)的效果排列。 其中包括作業[$X $](xref:microsoft.quantum.intrinsic.x)、 [$Y $](xref:microsoft.quantum.intrinsic.y)、 [$Z $](xref:microsoft.quantum.intrinsic.z)、 [$H $](xref:microsoft.quantum.intrinsic.h)和[$S $](xref:microsoft.quantum.intrinsic.s)。
+這組作業會佔用[Bloch 球體](xref:microsoft.quantum.glossary#bloch-sphere)的 octants，以及[Pauli 運算子](xref:microsoft.quantum.glossary#pauli-operators)的效果排列。 其中包括[$X $ ](xref:microsoft.quantum.intrinsic.x)、 [$Y $ ](xref:microsoft.quantum.intrinsic.y)、 [$Z $ ](xref:microsoft.quantum.intrinsic.z)、 [$H $ ](xref:microsoft.quantum.intrinsic.h)和[$S $ ](xref:microsoft.quantum.intrinsic.s)的作業。
 
 ## <a name="controlled"></a>管理
 
@@ -45,15 +116,15 @@ Q # 語言[中的作業或](xref:microsoft.quantum.glossary#operation)[函數](x
 
 ## <a name="dirac-notation"></a>Dirac 標記法
 
-符號速記，可簡化[量子狀態](xref:microsoft.quantum.glossary#quantum-state)的標記法，亦稱為*bra-ket* notation。  *Bra*部分代表一個資料列向量，例如 $ \bra{A} = \begin{bmatrix} a {_1} & {_2} \end{bmatrix} $，而*ket*部分代表一個資料行向量，$ \ket{B} = \begin{bmatrix} B {_1} \\ \\ B {_2} \end{bmatrix} $。 如需詳細資訊，請參閱[Dirac 標記法](xref:microsoft.quantum.concepts.dirac)。
+符號速記，可簡化[量子狀態](xref:microsoft.quantum.glossary#quantum-state)的標記法，亦稱為*bra-ket* notation。  *Bra*部分代表一個資料列向量，例如 $ \bra{A } = \begin{ bmatrix } a {_1 } & a {_2 } \end{ bmatrix } $，而*ket*部分代表一個資料行向量，$ \ket{B } = \begin{ bmatrix } B {_1 } \\ \\ B {_2 } \end{ bmatrix } $。 如需詳細資訊，請參閱[Dirac 標記法](xref:microsoft.quantum.concepts.dirac)。
 
 ## <a name="eigenvalue"></a>Eigenvalue
 
-轉換的應用程式變更指定轉換的[eigenvector](xref:microsoft.quantum.glossary#eigenvector)大小的因數。  假設有一個 $M $ 和一個 eigenvector $v $ 的正方形矩陣，然後 $Mv = cv $，其中 $c $ 是 eigenvalue，而且可以是任何引數的複數。 如需詳細資訊，請參閱[Advanced matrix 概念](xref:microsoft.quantum.concepts.matrix-advanced)。
+轉換的應用程式變更指定轉換的[eigenvector](xref:microsoft.quantum.glossary#eigenvector)大小的因數。  假設有一個方形矩陣 $M $ 和一個 eigenvector $v $ ，然後 $Mv = cv $ ，其中 $c $ 是 eigenvalue，而且可以是任何引數的複數。 如需詳細資訊，請參閱[Advanced matrix 概念](xref:microsoft.quantum.concepts.matrix-advanced)。
 
 ## <a name="eigenvector"></a>Eigenvector
 
-向量，其方向不會由指定的轉換變更，且其大小會由對應于該向量之[eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)的因數來改變。 假設有一個 $M $ 和一個 eigenvalue $c $ 的正方形矩陣，然後 $Mv = cv $，其中 $v $ 是矩陣的 eigenvector，而且可以是任何引數的複數。 如需詳細資訊，請參閱[Advanced matrix 概念](xref:microsoft.quantum.concepts.matrix-advanced)。
+向量，其方向不會由指定的轉換變更，且其大小會由對應于該向量之[eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)的因數來改變。 假設有一個方形矩陣 $M $ 和一個 eigenvalue $c $ ，然後 $Mv = cv $ ，其中 $v $ 是矩陣的 eigenvector，而且可以是任何引數的複數。 如需詳細資訊，請參閱[Advanced matrix 概念](xref:microsoft.quantum.concepts.matrix-advanced)。
 
 ## <a name="entanglement"></a>糾纏
 
@@ -61,7 +132,7 @@ Q # 語言[中的作業或](xref:microsoft.quantum.glossary#operation)[函數](x
 
 ## <a name="epr-pair"></a>EPR 配對
 
-兩個[qubits](xref:microsoft.quantum.glossary#qubit)的四個特定最常光子配量[狀態](xref:microsoft.quantum.glossary#quantum-state)之一。 四個狀態會定義 $ \ket{\ Beta_ {ij}} = （\mathbb {1} \Otimes X ^ iZ ^ j）（\ket {00} + \ket {11} ）/\sqrt {2} $。 EPR 配對也稱為「[鐘」狀態](xref:microsoft.quantum.glossary#bell-state)
+兩個[qubits](xref:microsoft.quantum.glossary#qubit)的四個特定最常光子配量[狀態](xref:microsoft.quantum.glossary#quantum-state)之一。 四個狀態定義為 $ \ket { \ Beta_ {ij } } = （\Mathbb{1 } \Otimes X ^ iZ ^ j）（\ket{00 } + \ket{11 } ）/\sqrt{2 } $。 EPR 配對也稱為「[鐘」狀態](xref:microsoft.quantum.glossary#bell-state)
 
 ## <a name="evolution"></a>改革
 
@@ -76,11 +147,11 @@ Q # 語言中純粹為傳統（非配量）的副程式類型。 雖然在配量
 
 ## <a name="global-phase"></a>全域階段
 
-當兩個[狀態](xref:microsoft.quantum.glossary#quantum-state)的最大值與 $e ^ {i\phi} $ 的複數多個相同時，就會被視為不同于全域階段。 與本機階段不同的是，全域階段無法透過任何[測量](xref:microsoft.quantum.glossary#measurement)觀察到。 如需詳細資訊，請參閱[Qubit](xref:microsoft.quantum.concepts.qubit)。
+當兩個[狀態](xref:microsoft.quantum.glossary#quantum-state)與複數 $e ^ {i $ 之間的倍數相同時 \phi } ，就表示它們的最大值與全域階段不同。 與本機階段不同的是，全域階段無法透過任何[測量](xref:microsoft.quantum.glossary#measurement)觀察到。 如需詳細資訊，請參閱[Qubit](xref:microsoft.quantum.concepts.qubit)。
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard 作業（也稱為 Hadamard 閘道或轉換）會在單一[qubit](xref:microsoft.quantum.glossary#qubit)上運作，並將它放在 $ \ket $ 或 $ \ket $ 的偶數[重迭](xref:microsoft.quantum.glossary#superposition)中（ {0} {1} 如果 qubit 一開始是在 $ \ket {0} $ 狀態中）。 在 Q # 中，這項作業是由預先定義的作業所套用 [`H`](xref:microsoft.quantum.intrinsic.h) 。
+Hadamard 作業（也稱為 Hadamard 閘道或轉換）會在單一[qubit](xref:microsoft.quantum.glossary#qubit)上運作，並將它放在 $ \ket{0 $ 或 $ \ket{1 $ 的偶數[重迭](xref:microsoft.quantum.glossary#superposition)中（ } } 如果 qubit 一開始是在 $ \ket{0 } $ 狀態中）。 在 Q # 中，這項作業是由預先定義的作業所套用 [`H`](xref:microsoft.quantum.intrinsic.h) 。
 
 ## <a name="immutable"></a>固定
 
@@ -116,7 +187,7 @@ Q # 中的基本量子執行單位。 它大致等同于 C、c + + 或 Python �
 
 ## <a name="pauli-operators"></a>Pauli 運算子
 
-一組三個 2 x 2 個單一矩陣，稱為 `X` `Y` 和 `Z` 量子作業。 識別矩陣（$I $）通常也會包含在集合中。  $I = \begin{bmatrix} 1 & 0 \\ \\ 0 & 1 \end{bmatrix} $，$X = \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix} $，$Y = \begin{bmatrix} 0 &-i \\ \\ i & 0 \end{bmatrix} $，$Z = \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix} $。   如需詳細資訊，請參閱[單一 qubit 作業](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)。
+一組三個 2 x 2 個單一矩陣，稱為 `X` `Y` 和 `Z` 量子作業。 「身分識別矩陣」（$I $ ）通常也會包含在集合中。  $I = \begin{ bmatrix } 1 & 0 \\ \\ 0 & 1 \end{ bmatrix } $，$X = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } $，$Y = \begin{ bmatrix } 0 &-i \\ \\ i & 0 \end{ bmatrix } $，$Z = \begin{ bmatrix } 1 & 0 \\ \\ 0 &-1 \end{ bmatrix } $。   如需詳細資訊，請參閱[單一 qubit 作業](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)。
 
 ## <a name="quantum-circuit-diagram"></a>量子線路圖
 
@@ -148,7 +219,7 @@ Q # 中的基本量子執行單位。 它大致等同于 C、c + + 或 Python �
 
 ## <a name="superposition"></a>重迭
 
-量子計算中的概念是， [qubit](xref:microsoft.quantum.glossary#qubit)是兩個狀態的線性組合，$ \ket {0} $ 和 $ \ket {1} $，直到[測量](xref:microsoft.quantum.glossary#measurement)為止。  如需詳細資訊，請參閱瞭解配量[計算](xref:microsoft.quantum.overview.understanding)。
+量子計算中的概念是， [qubit](xref:microsoft.quantum.glossary#qubit)是兩個狀態的線性組合，$ \ket{0 } $ 和 $ \ket{1 } $，直到[測量](xref:microsoft.quantum.glossary#measurement)為止。  如需詳細資訊，請參閱瞭解配量[計算](xref:microsoft.quantum.overview.understanding)。
 
 ## <a name="target-machine"></a>目的電腦
 
@@ -164,7 +235,7 @@ Q # 中的基本量子執行單位。 它大致等同于 C、c + + 或 Python �
 
 ## <a name="unitary-operator"></a>單一運算子
 
-其反向等於其[adjoint](xref:microsoft.quantum.glossary#adjoint)的運算子，亦即 $UU ^ {\dagger} = \id $。
+其反向等於其[adjoint](xref:microsoft.quantum.glossary#adjoint)的運算子，亦即 $UU ^ {\dagger } = \id $ 。
 
 ## <a name="user-defined-type"></a>使用者定義型別
 

@@ -6,18 +6,18 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: e829862521951c50cb42eebf261c803071a95275
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426429"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630265"
 ---
 # <a name="develop-with-q-command-line-applications"></a>使用 Q # 命令列應用程式進行開發
 
 問 # 程式可以自己執行，而不需要像 c #、F # 或 Python 等主機語言的驅動程式。
 
-## <a name="pre-requisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件
 
 - [.NET Core SDK 3.1 或更新版本](https://www.microsoft.com/net/download)
 
