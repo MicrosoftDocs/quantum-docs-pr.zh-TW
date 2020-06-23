@@ -1,0 +1,9 @@
+- name: 詞彙
+  href: glossary.md
+- name: 參與 QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: QDK 版本資訊
+  href: relnotes.md
+- name: 深入閱讀
+  href: further-reading.md
