@@ -10,12 +10,12 @@ metadata:
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 5/10/2020
-  ms.openlocfilehash: e36a289f17d56a4a8edae71b9a3194a144767dd4
-  ms.sourcegitcommit: 4da99168479f96f408b984279a5a7eabcda752db
+  ms.openlocfilehash: 313ee49f4e6ad25e57c47a9d95a1617326af3bec
+  ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/20/2020
-  ms.locfileid: "83708696"
+  ms.lasthandoff: 06/23/2020
+  ms.locfileid: "85269519"
 landingContent:
 - title: 量子運算
   linkLists:
@@ -40,13 +40,13 @@ landingContent:
   - linkListType: get-started
     links:
     - text: Quantum Development Kit
-      url: welcome.md
+      url: quickstarts/get-started.md
   - linkListType: download
     links:
     - text: 安裝 QDK
-      url: install-guide/index.md
+      url: quickstarts/index.md
     - text: 更新 QDK
-      url: install-guide/update.md
+      url: quickstarts/update.md
 - title: Q# 程式設計語言
   linkLists:
   - linkListType: how-to-guide
@@ -54,19 +54,19 @@ landingContent:
     - text: Q# 使用者指南
       url: user-guide/index.md
     - text: 量子模擬器和主應用程式
-      url: machines/index.md
+      url: user-guide/machines/index.md
   - linkListType: tutorial
     links:
     - text: 建置量子隨機數字產生器
-      url: quickstarts/qrng.md
+      url: tutorials/quantum-random-number-generator.md
     - text: 使用 Q# 探索纏結
-      url: quickstart.md
+      url: tutorials/explore-entanglement.md
     - text: 量子加速：格羅弗搜尋演算法
-      url: quickstarts/search.md
+      url: tutorials/search.md
   - linkListType: learn
     links:
     - text: 使用 Quantum Katas 來學習
-      url: intro-to-katas.md
+      url: tutorials/intro-to-katas.md
     - text: '瀏覽 Q # 程式碼範例'
       url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 - title: 社群和貢獻
@@ -74,7 +74,7 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: 參與 QDK
-      url: contributing/index.md
+      url: resources/contributing/index.md
     - text: 閱讀 Microsoft Quantum 部落格
       url: https://cloudblogs.microsoft.com/quantum
 - title: Q# 程式庫
@@ -82,10 +82,10 @@ landingContent:
   - linkListType: reference
     links:
     - text: 標準程式庫
-      url: libraries/standard/index.md
+      url: user-guide/libraries/standard/index.md
     - text: 化學程式庫
-      url: libraries/chemistry/index.md
+      url: user-guide/libraries/chemistry/index.md
     - text: 機器學習程式庫
-      url: libraries/machine-learning/index.md
+      url: user-guide/libraries/machine-learning/index.md
     - text: 數值程式庫
-      url: libraries/numerics/index.md
+      url: user-guide/libraries/numerics/index.md

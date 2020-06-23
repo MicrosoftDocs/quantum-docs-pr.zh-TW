@@ -1,0 +1,20 @@
+expanded: true
+items:
+  - name: 開始使用 QDK
+    href: get-started.md
+  - name: 安裝 QDK
+    items:
+      - name: 安裝概觀
+        href: index.md
+      - name: 'Q # 命令列應用程式'
+        href: install-command-line.md
+      - name: Q# Jupyter Notebook
+        href: install-jupyter.md
+      - name: 其他語言的 Q#
+        items:
+          - name: 使用 Python 的 Q#
+            href: install-python.md
+          - name: 使用 .NET 的 Q#
+            href: install-cs.md
+  - name: 更新 QDK
+    href: update.md
