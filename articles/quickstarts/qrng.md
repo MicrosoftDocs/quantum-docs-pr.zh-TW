@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 8fafbccfe2a94a824353221b5e7eb8bac16c42f2
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327351"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630118"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>教學課程：在 Q\# 中實作量子亂數產生器
 
@@ -38,7 +38,7 @@ ms.locfileid: "84327351"
 
 藉由將 `Qubit` 置於疊加並加以測量，每次叫用程式碼時，結果就會是不同的值。
 
-解除配置 `Qubit` 時，必須將它明確設定回 `Zero` 狀態，否則模擬器將會報告執行階段錯誤。 叫用 `Reset` 是達成此動作的簡單做法。
+解除配置 `Qubit` 時，必須將其明確設定回 `Zero` 狀態，否則模擬器將會報告執行階段錯誤。 叫用 `Reset` 是達成此動作的簡單做法。
 
 ### <a name="visualizing-the-code-with-the-bloch-sphere"></a>使用布洛赫球體將程式碼視覺化
 
