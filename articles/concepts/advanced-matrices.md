@@ -9,6 +9,13 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
+- $$
+- $$
+- $$
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +84,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 8d3c646715f13c454e51b9295cbfdabf6a236ffc
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 71923247121eae6a1d4e26d2664d8e547370ba3a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630141"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269451"
 ---
 # <a name="advanced-matrix-concepts"></a>Advanced Matrix 概念 #
 
@@ -104,7 +114,7 @@ $$
 
 向量
 
-$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } ，\begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end { bmatrix } and \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1 \end {bmatrix}$$
+$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } 、\begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end{bmatrix} 和 \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1\end{bmatrix}$$
 
 這是此矩陣的特徵向量，分別具有特徵值 $d _1 $ 、$d _2 $ 和 $d _3 $ 。 如果 $d _1 $ 、$d _2 $ 和 $d _3 $ 是相異數位，則這些向量（及其倍數）是矩陣 $D 的唯一特徵向量 $ 。 一般而言，如果是對角矩陣，就很容易閱讀特徵值和特徵向量。 特徵值是顯示在對角線上的所有數位，其各自的特徵向量是一個專案等於 $1 的單位向量 $ ，而其餘專案則等於 $0 $ 。
 
