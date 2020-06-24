@@ -1,8 +1,0 @@
-- name: 取得能階估計值
-  href: molecular-hydrogen.md
-- name: 從檔案載入 Hamiltonian
-  href: loading-from-file.md
-- name: 取得資源計數
-  href: resource-counts.md
-- name: 端對端使用 NWChem
-  href: end-to-end.md
