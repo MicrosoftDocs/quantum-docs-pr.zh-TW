@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274567"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415248"
 ---
 # <a name="the-resources-estimator-target-machine"></a>資源估計工具目的電腦
 
@@ -98,8 +98,8 @@ namespace Quantum.MyProgram
 * __Measure__：任何已執行之測量的計數。
 * __R__：任何執行的單一 qubit 輪替計數，不包括 T、Clifford 和 Pauli 閘道。
 * __T__： t 閘道和其 conjugates 的計數，包括 t 閘道、T_x = .h 和 T_y = Hy Hy、執行。
-* __深度__： Q # 作業所執行的量子線路深度。 根據預設，只有 T 閘道會在深度中計算，請參閱[深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)以取得詳細資料。
-* __寬度__：在 Q # 作業執行期間配置的最大 qubits 數目。
+* __深度__： Q # 作業所執行的配量線路深度下限。 根據預設，只有 T 閘道會在深度中計算，請參閱[深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)以取得詳細資料。
+* __寬度__：在 Q # 作業執行期間配置的最大 qubits 數目下限。 不可能同時達到__深度__和__寬度__的下限。
 * __BorrowedWidth__：在 Q # 作業內借用的 qubits 數目上限。
 
 

@@ -6,43 +6,41 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 0cf62a128170bd0c28ff77f00fc23414567b1ea4
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84326535"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415298"
 ---
 # <a name="control-flow-in-q"></a>Q 中的控制流程#
 
-在作業或函式內，每個語句會依序執行，類似于最常見的命令式傳統語言。
-不過，您可以透過三種不同的方式修改這個控制流程：
+在作業或函式中，每個語句會依序執行，類似于其他常見的命令式傳統語言。
+不過，您可以用三種不同的方式修改控制流程：
 
-- `if`報表
-- `for`環回
-- `repeat`-`until`環回
+* `if`報表
+* `for`環回
+* `repeat-until-success`環回
 
-我們會延遲對後者的討論，[如下所示](#repeat-until-success-loop)。
-`if` `for` 不過，和控制流程結構的處理方式，對大部分的傳統程式設計語言而言都很熟悉。
+`if`和 `for` 控制流程結構會以熟悉的方式進行大部分的傳統程式設計語言。 [`Repeat-until-success`](#repeat-until-success-loop)本文稍後會討論迴圈。
 
-重要的 `for` 是，迴圈和 `if` 語句甚至可以用於自動產生特殊化的作業。 在此情況下，迴圈的 adjoint `for` 會反轉方向，並接受每個反復專案的 adjoint。
-這會遵循「鞋與 socks」原則：如果您想要復原並加上「鞋」，您必須先復原鞋，然後再復原「socks」。
-如果您還在戴鞋，也能讓您更輕鬆地嘗試並將您的 socks 轉成由於！
+重要的 `for` 是，迴圈和 `if` 語句可以用於自動產生[特殊化](xref:microsoft.quantum.guide.operationsfunctions)的作業。 在該案例中，迴圈的 adjoint `for` 會反轉方向，並接受每個反復專案的 adjoint。
+此動作會遵循「鞋與 socks」原則：如果您想要復原並加上「鞋」，您必須先復原鞋，然後再復原「socks」。 
 
 ## <a name="if-else-if-else"></a>如果為，則為，否則為。
 
 `if`語句支援條件式執行。
-其中包含關鍵字 `if` 、左括弧 `(` 、布林運算式、右括弧 `)` 和語句區塊（ _then_區塊）。
-這後面可能接著任意數目的 else if 子句，其中每個都包含關鍵字 `elif` 、左括弧 `(` 、布林運算式、右括弧 `)` 和語句區塊（ _else-if_區塊）。
-最後，語句可能會選擇性地以 else 子句完成，其中包含關鍵字， `else` 後面接著另一個語句區塊（ _else_區塊）。
+其中包含關鍵字 `if` 、以括弧括住的布林運算式，以及語句區塊（ _then_區塊）。
+或者，任何數目的 else if 子句可以跟著遵循，其中每一個都包含關鍵字 `elif` 、括弧中的布林運算式，以及語句區塊（ _else-if_區塊）。
+最後，語句可以選擇性地完成 else 子句，其中包含關鍵字， `else` 後面接著另一個語句區塊（ _else_區塊）。
 
-`if`條件會進行評估，如果為 true，則會執行 then 區塊。
-如果條件為 false，則會評估第一個 else if 條件;如果是 true，則為，否則為。
-否則，會先測試第二個 [if] 區塊，然後再進行第三個，直到出現具有 true 條件的子句，或沒有其他的 if 子句為止。
-如果原始 if 條件和所有 else if 子句評估為 false，則會執行 else 區塊（如果有提供的話）。
+`if`條件會進行評估，如果為*true*，則會執行*then*區塊。
+如果條件為*false*，則會評估第一個 else if 條件;如果為 true，則會執行*else-if*區塊。
+否則，第二個 [if] 區塊會評估，然後是第三個，直到出現具有 true 條件的子句，或沒有其他的 if 子句為止。
+如果原始*if*條件和所有 else if 子句評估為*false*，則會執行*else*區塊（如果有提供的話）。
 
-請注意，執行的任何區塊會在其本身的範圍中執行。
-在、或區塊內所做的系 `if` 結，在 `elif` `else` 其結尾之後不會顯示。
+請注意，不論是哪一種區塊執行，它都會在自己的範圍內執行。
+`if` `elif` `else` 區塊結束之後，不會顯示在、或區塊內所做的系結。
 
 例如，
 
@@ -70,17 +68,17 @@ if (i == 1) {
 ## <a name="for-loop"></a>For 迴圈
 
 `for`語句支援在整數範圍或陣列上反覆運算。
-語句包含關鍵字 `for` 、左括弧 `(` ，後面接著符號或符號元組、關鍵字 `in` 、型別 `Range` 或陣列的運算式、右括弧 `)` 和語句區塊。
+語句包含關鍵字 `for` ，後面接著符號或符號元組、關鍵字 `in` ，以及類型 `Range` 或陣列的運算式、全部在括弧中，以及語句區塊。
 
-語句區塊（迴圈的主體）會重複執行，其中已定義的符號（迴圈變數）會系結至範圍或陣列中的每個值。
-請注意，如果範圍運算式評估為空的範圍或陣列，則完全不會執行主體。
+語句區塊（迴圈的主體）會重複執行，並將定義的符號（迴圈變數）系結至範圍或陣列中的每個值。
+請注意，如果範圍運算式評估為空白範圍或陣列，則不會執行主體。
 在進入迴圈之前，會完整評估運算式，而且在執行迴圈時不會變更。
 
 迴圈變數會系結至迴圈主體的每個進入，並在主體結尾處解除系結。
-特別是，在 for 迴圈完成之後，迴圈變數不會系結。
-宣告之符號的系結是不可變的，並遵循與其他變數系結相同的規則。 
+在 for 迴圈完成之後，迴圈變數不會系結。
+迴圈變數的系結是不可變的，並遵循與其他變數系結相同的規則。 
 
-在某些範例中，假設是 qubits 的暫存器 `qubits` （即類型的 `Qubit[]` ）， 
+在這些範例中，是 qubits 的暫存器 `qubits` （即類型的 `Qubit[]` ）， 
 
 ```qsharp
 // ...
@@ -101,15 +99,15 @@ for ((index, measured) in results) { // iterates over the tuple values in result
     }
 }
 ```
-請注意，我們在結尾使用了算術左移的二元運算子， `<<<` 以及可以在[數值運算式](xref:microsoft.quantum.guide.expressions#numeric-expressions)中找到的詳細資料。
 
+請注意，我們在結尾使用了算術左移的二元運算子 `<<<` 。 如需詳細資訊，請參閱[數值運算式](xref:microsoft.quantum.guide.expressions#numeric-expressions)。
 
 ## <a name="repeat-until-success-loop"></a>重複直到-成功迴圈
 
 Q # 語言可讓傳統控制流程相依于測量 qubits 的結果。
 這項功能可讓您執行功能強大的概率小工具，以降低執行 unitaries 的計算成本。
-例如，在 Q # 中執行所謂的*重複-成功*（ru）模式是很容易的。
-這些 ru 模式是概率的程式，在基本閘道方面具有*預期*的低成本，但真正的成本取決於實際執行，以及各種可能分支的實際交錯。
+這是 Q # 中的*重複-成功*（ru）模式的範例。
+這些 ru 模式是概率的程式，在基本閘道方面具有*預期*的低成本;產生的成本取決於實際執行，以及多個可能分支的交錯。
 
 為了協助重複執行-成功（ru）模式，Q # 支援結構
 
@@ -124,33 +122,35 @@ fixup {
 ```
 
 其中 `expression` 是評估為類型值的任何有效運算式 `Bool` 。
-執行迴圈主體，然後評估條件。
-如果條件為 true，則表示語句已完成;否則，會執行修復，並從迴圈主體開始重新執行語句。
+迴圈主體會執行，然後評估條件。
+如果條件為 true，則表示語句已完成;否則，會執行修復，而且語句會從迴圈主體開始再次執行。
 
-重複/結束迴圈的全部三個部分（主體、測試和修復）都會被視為*每個重複*的單一範圍，因此本文中系結的符號會在測試和修復中提供。
+Ru 迴圈的全部三個部分（內文、測試和修復）都會被視為*每個重複*的單一範圍，因此在測試和修復中都可以使用主體中系結的符號。
 不過，完成修復的執行會結束語句的範圍，因此在本文或修復期間所做的符號系結，無法用於後續的重複。
 
 此外，此 `fixup` 語句通常很有用，但不一定是必要的。
 在不需要的情況下，結構
+
 ```qsharp
 repeat {
     // do stuff
 }
 until (expression);
 ```
+
 也是有效的 ru 模式。
 
-在此頁面底部，我們會提供一些 ru[迴圈的範例](#repeat-until-success-examples)。
+如需更多範例和詳細資料，請參閱本文中的[重複執行-成功範例](#repeat-until-success-examples)。
 
 > [!TIP]   
-> 避免在函式內使用重複-成功迴圈。 對應的功能是由函式中的迴圈所提供。 
+> 避免在函式內使用重複-成功迴圈。 使用*while*迴圈來提供函式內的對應功能。 
 
 ## <a name="while-loop"></a>While 迴圈
 
-重複直到-成功模式具有非常量子特定的含意。 它們廣泛用於特定的量子演算法類別中，因此是 Q # 中的專用語言結構。 不過，根據條件中斷的迴圈，在編譯時期，其執行長度會是未知的，需要在量子執行時間中特別小心處理。 另一方面，它們在函式中的用法是 unproblematic，因為這些只包含將在傳統（非量子）硬體上執行的程式碼。 
+重複直到-成功模式具有非常量子特定的含意。 它們廣泛用於特定的量子演算法類別中，因此是 Q # 中的專用語言結構。 不過，根據條件中斷的迴圈，在編譯時期，其執行長度會是未知的，會在量子執行時間中特別小心處理。 不過，它們在函式中的用法是 unproblematic 的，因為這些迴圈只包含在傳統（非量子）硬體上執行的程式碼。 
 
-問 # 因此僅支援在函式內使用 while 迴圈。 `while`語句是由關鍵字 `while` 、左括弧 `(` 、條件（亦即布林運算式）、右括弧 `)` 和語句區塊所組成。
-只要條件評估為，就會執行語句區塊（迴圈的主體） `true` 。
+因此，Q # 僅支援在函式內使用 while 迴圈。 `while`語句包含關鍵字 `while` 、括弧中的布林運算式，以及語句區塊。
+只要條件評估為，語句區塊（迴圈的主體）就會執行 `true` 。
 
 ```qsharp
 // ...
@@ -161,18 +161,10 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
-
 ## <a name="return-statement"></a>Return 陳述式
 
-Return 語句會結束執行作業或函數，並將值傳回給呼叫者。
+Return 語句會結束作業或函數的執行，並將值傳回給呼叫者。
 其中包含關鍵字 `return` ，後面接著適當類型的運算式和結束分號。
-
-可呼叫的會傳回空的元組，不 `()` 需要 return 語句。
-如果需要提早結束， `return ()` 可以在此案例中使用。
-傳回任何其他類型的 Callables 都需要最終傳回語句。
-
-作業中沒有 return 語句的最大數目。
-如果語句在區塊內遵循 return 語句，則編譯器可能會發出警告。
 
 例如，
 ```qsharp
@@ -180,23 +172,27 @@ return 1;
 ```
 或
 ```qsharp
-return ();
-```
-或
-```qsharp
 return (results, qubits);
 ```
 
+* 可呼叫的會傳回空的元組，不 `()` 需要 return 語句。
+* 若要指定從作業或函式提早結束，請使用 `return ();` 。
+傳回任何其他類型的 Callables 都需要最終傳回語句。
+* 作業中沒有 return 語句的最大數目。
+如果語句在區塊內遵循 return 語句，則編譯器可能會發出警告。
+
+   
 ## <a name="fail-statement"></a>Fail 語句
 
-Fail 語句會結束執行作業，並將錯誤值傳回給呼叫者。
+Fail 語句會結束作業的執行，並將錯誤值傳回給呼叫者。
 其中包含關鍵字 `fail` ，後面接著字串和結尾的分號。
-字串會傳回給傳統驅動程式，做為錯誤訊息。
+語句會將字串傳回給傳統驅動程式，做為錯誤訊息。
 
 作業內的 fail 語句數目沒有任何限制。
 如果語句在區塊內遵循 fail 語句，則編譯器可能會發出警告。
 
 例如，
+
 ```qsharp
 fail $"Impossible state reached";
 ```
@@ -209,7 +205,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>適用于無理軸之單一 qubit 旋轉的 ru 模式 
 
-在典型的使用案例中，下列 Q # 作業會在 Bloch 球體上，針對 $ （I + 2i Z）/\sqrt $ 的無理軸執行旋轉 {5} 。 這是使用已知的 ru 模式來完成：
+在典型的使用案例中，下列 Q # 作業會在 Bloch 球體上，針對 $ （I + 2i Z）/\sqrt $ 的無理軸執行旋轉 {5} 。 此實作為使用已知的 ru 模式：
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -232,7 +228,7 @@ operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
 }
 ```
 
-### <a name="rus-loop-with-mutable-variable-in-scope"></a>範圍內具有可變變數的 ru 迴圈
+### <a name="rus-loop-with-a-mutable-variable-in-scope"></a>具有範圍內可變變數的 ru 迴圈
 
 這個範例示範如何使用可變動的變數， `finished` 這是在整個重複執行-修復迴圈的範圍內，而且會在迴圈之前初始化，並在修復步驟中更新。
 
@@ -251,7 +247,7 @@ fixup {
 
 ### <a name="rus-without-fixup"></a>不含的 ru`fixup`
 
-例如，下列程式碼是使用和閘道 $V _3 = （\boldone + 2 i Z）/\sqrt $ 執行重要旋轉閘道的概率電路 {5} `H` `T` 。
+此範例顯示不含修復步驟的 ru 迴圈。 此程式碼是使用和閘道執行重要旋轉閘道 $V _3 = （\boldone + 2 i Z）/\sqrt $ 的概率電路 {5} `H` `T` 。
 迴圈會平均終止于 $ \frac {8} {5} $ 重複。
 如需詳細資訊，請參閱[*重複直到成功：單一 qubit unitaries 的非決定性分解*](https://arxiv.org/abs/1311.1074)（Paetznick 和 Svore，2014）。
 
@@ -277,8 +273,14 @@ using (qubit = Qubit()) {
 
 ### <a name="rus-to-prepare-a-quantum-state"></a>用來準備量子狀態的 ru
 
-最後，我們會顯示一個 ru 模式範例，以準備量子 state $ \frac {1} {\sqrt {3} } \left （\sqrt {2} \ket {0} + \ket {1} \right） $ （從 $ \ket{+} $ 狀態開始）。
-另請參閱[標準程式庫所提供的單元測試範例](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)：
+最後，以下是 {1} {3} {2} {0} {1} 從 $ \ket +} $ 狀態開始準備量子狀態 $ \frac {\sqrt} \left （\sqrt \ket + \right \ket{） $ 的 ru 模式範例。
+
+這項作業所顯示的重要程式設計功能包括：
+
+* `fixup`迴圈中更複雜的部分，牽涉到量子作業。 
+* 使用 `AssertProb` 語句來確定在程式中特定點測量量子狀態的機率。
+
+如需和作業的詳細資訊 [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) ，請參閱[測試和調試](xref:microsoft.quantum.guide.testingdebugging)程式。
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -325,10 +327,8 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-這項作業中所顯示的重要程式設計功能，是迴圈中更複雜 `fixup` 的部分，其中牽涉到配量作業，並使用 `AssertProb` 語句來確定在程式中特定點測量量子狀態的機率。
-如需和作業的詳細資訊，另請參閱[測試和調試](xref:microsoft.quantum.guide.testingdebugging)程式 [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) 。
+如需詳細資訊，請參閱[標準程式庫提供的單元測試範例](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)：
 
-
-## <a name="next-steps"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
 瞭解如何在 Q # 中進行[測試和調試](xref:microsoft.quantum.guide.testingdebugging)。
