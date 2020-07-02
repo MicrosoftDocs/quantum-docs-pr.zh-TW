@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 4cf6cce870c7661a7fffc21dcb60dd53cf281ddd
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327589"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415434"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>量子計算的線性代數
 
@@ -62,8 +62,7 @@ $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 
 
 請記住，每個量子位元都是一個向量空間，因此不能直接相乘。 相反地，您必須使用**張量積**，這是一種相關運算，會從個別向量空間建立新的向量空間，並以 $\otimes $ 符號表示。 例如，兩個量子位元狀態 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 和 $\begin{bmatrix} c \\\\  d \end{bmatrix}$ 的張量積計算如下
 
-$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}。
-$$
+$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}。 $$
 
 所得結果是一個四維矩陣，每個元素各自代表一個概率。 例如，$ac$ 是塌縮為 0 和 0 的兩個量子位元所具有的概率，$ad$ 則是 0 和 1 的概率，依此類推。 
 
