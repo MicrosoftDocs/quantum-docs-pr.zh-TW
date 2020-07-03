@@ -1,0 +1,68 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applypermutationusingdecomposition
+name: ApplyPermutationUsingDecomposition
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  使用以分解為基礎的合成，以在配量狀態中 Permutes amplitudes。
+
+
+  此程式會實行以分解為基礎的合成方法。  輸入是排列 $ \pi $ over $ 2 ^ n $ elements $ \{ 0，\dots ..，2 ^ n-1 \} $，代表 $n $-可變的可還原布耳函數。
+
+  此演算法會針對每個變數索引反復執行下列步驟 $i $：
+
+
+  1. Compute $ （（\ pi_l，\ pi_r），\pi '） $ 讓 $ \ pi_l $ 和 $ \ pi_r $ 的影像不會變更其元素中 $ \pi ' $ 以外的索引中的位，且不會變更其元素中的位 $i $。
+
+  2. 設定 $ \pi \leftarrow \pi ' $，並根據非固定點的元素，從 $ \ pi_l $ 和 $ \ pi_r $ 衍生事實資料表。
+
+
+  針對所有變數索引套用這些步驟之後，剩餘的排列 $ \pi $ 將會是識別，而且會根據所收集的事實資料表和索引，使用作業來套用事實資料表控制的 @"microsoft.quantum.intrinsic.x" 作業 @"microsoft.quantum.synthesis.applyxcontrolledontruthtable" 。
+
+
+  變數順序為 $0、\dots ..、n-$1。  您可以在作業中指定自訂變數順序 @"microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder" 。
+examples: >-
+  若要合成作業 `SWAP` ：
+
+
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+    ApplyPermutationUsingDecomposition([0, 2, 1, 3], LittleEndian(qubits));
+  }
+
+  ```
+syntax: 'operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: >-
+  - [*Alexis De Vos*， *Yvan Van Rentergem*，進階. 以數學計算。通訊。2（2），2008，pp 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
+
+  - [*Mathias Soeken*，*劉娜 Tague*， *Gerhard W Dueck*， *Rolf Drechsler*，符號計算73（2016），pp. 1--26 的日誌](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)
+input:
+  content: '(perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: perm
+    summary: 從0開始，$ 2 ^ n $ 元素的排列。
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: 套用排列的 $n $ qubits 清單。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
+- microsoft.quantum.synthesis.applypermutationusingtransformation
+metadata:
+  ms.openlocfilehash: 2394b1260a848e590bea911e5b52d0e37d8c1bac
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886180"

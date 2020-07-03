@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertmeasurement
+name: AssertMeasurement
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: 以給定的 Pauli 為基礎測量給定 qubits 的判斷提示，一律會有指定的結果。
+remarks: 請注意，此作業的 Adjoint 和受控制版本將不會檢查條件。
+syntax: 'operation AssertMeasurement (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
+  types:
+  - name: bases
+    summary: 用來判斷機率的測量效果，以多 qubit 的 Pauli 運算子表示。
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: 要在其上進行判斷提示的暫存器。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: 的預期結果 `Measure(bases, qubits)` 。
+    isPrimitive: true
+    uid: Result
+  - name: msg
+    summary: 判斷提示失敗時要報告的訊息。
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.diagnostics.assertmeasurementprobability
+metadata:
+  ms.openlocfilehash: e8c74cdeb9ba196b337b56ec377a1158cd331ac7
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886228"

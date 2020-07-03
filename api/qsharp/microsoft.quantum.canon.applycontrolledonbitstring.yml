@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycontrolledonbitstring
+name: ApplyControlledOnBitString
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 在目標暫存器上套用單一作業，並以指定位元遮罩所指定的狀態進行控制。
+remarks: >-
+  提供的模式 `bits` 可能會短于 `controlRegister` ，在此情況下會忽略其他控制項 qubits （也就是不會在 $ \ket {0} $ 或 $ \ket {1} $ 上控制）。
+
+  如果 `bits` 的長度超過 `controlRegister` ，就會引發錯誤。
+
+
+  例如， `bits = [0,1,0,0,1]` 表示 `oracle` 只有 `controlRegister` 在是狀態 $ \ket {0} \ket {1} \ket {0} \ket {0} \ket {1} $ 時，才會套用。
+syntax: "operation ApplyControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
+input:
+  content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
+  types:
+  - name: bits
+    summary: 要在其上控制指定之單一運算的位字串。
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: oracle
+    summary: 要在目標暫存器上套用的單一作業。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: controlRegister
+    summary: 控制應用程式的量子註冊 `oracle` 。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetRegister
+    summary: 要當做輸入傳遞至的目標暫存器 `oracle` 。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: cb0aaffb9710f98a3ed22d7a7c97828b05f6ae2c
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886212"

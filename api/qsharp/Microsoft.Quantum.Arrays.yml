@@ -1,7 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含用來建立和運算元據陣列的函式。"
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: 針對陣列的元素定義陣列和述詞，並檢查陣列的所有元素是否符合述詞。
@@ -67,13 +66,16 @@ functions:
   summary: 假設有三個數組，則會傳回3個元組的新陣列，讓每個3元組都包含每個原始陣列中的元素。
 - uid: microsoft.quantum.arrays.zip4
   summary: 假設有四個數組，會傳回4個元組的新陣列，讓每個4元組都包含每個原始陣列中的元素。
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含用來建立和運算元據陣列的函式。"
 operations:
+- uid: microsoft.quantum.arrays.drawmany
+  summary: 針對給定的樣本數重複作業，並在陣列中收集其輸出。
 - uid: microsoft.quantum.arrays.foreach
   summary: 針對陣列的元素所定義的陣列和作業，會傳回新的陣列，其中包含作業下原始陣列的影像。
 metadata:
-  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 32aeecb419739a89792bdf1e9761e3821abcf380
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326705"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884698"

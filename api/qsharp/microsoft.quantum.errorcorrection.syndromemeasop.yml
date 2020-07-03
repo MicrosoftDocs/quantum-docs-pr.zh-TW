@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: 表示用來測量錯誤更正程式碼區塊之症狀的作業。
 remarks: >-
-  簽章`(LogicalRegister => Syndrome)`代表的作業會與中`LogicalRegister`的 qubits 共同運作，而一些輔助的 qubits，後面接著輔助 qubits 的測量，以`Syndrome`解壓縮代表這些`Result[]`測量之的值。
+  簽章 `(LogicalRegister => Syndrome)` 代表的作業會與中的 qubits 共同運作 `LogicalRegister` ，而某些輔助 qubits 接著會加上輔助 qubits 的測量，以解壓縮 `Syndrome` 代表 `Result[]` 這些測量之的值。
 
 
   ### <a name="examples"></a>範例
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: aa324e8e149ba9418082145ed982236c473c1a4d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e4c011bcbe4200fe894962e0432f4c5c358d0295
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684819"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885759"

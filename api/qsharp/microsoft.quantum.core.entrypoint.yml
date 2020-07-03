@@ -3,12 +3,12 @@ uid: microsoft.quantum.core.entrypoint
 name: EntryPoint
 type: newtype
 namespace: Microsoft.Quantum.Core
-summary: 編譯器可識別的屬性，用來標示可執行檔的進入點。
+summary: 編譯器辨識的屬性，用來標記可執行檔的進入點。
 syntax: newtype EntryPoint = Unit;
 metadata:
-  ms.openlocfilehash: e049fff21ee94e6ba02774274fbc83704bd0950c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 82abb7cee1ee120334495da55b1bd096218a4a0e
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82658055"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885321"

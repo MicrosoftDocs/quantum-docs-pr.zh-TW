@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 指定陣列時，會傳回新的陣列，其中包含原始陣列的專案以及每個專案的索引。
 examples: >-
-  下列`for`迴圈是相等的：
+  下列 `for` 迴圈是相等的：
 
 
   ```Q#
@@ -30,7 +30,7 @@ input:
 output:
   content: (Int, 'TElement)[]
   types:
-  - summary: 新的陣列，包含原始陣列的自其中元素以及其索引。
+  - summary: 新陣列，包含原始陣列的專案以及其索引。
     isArray: true
     types:
     - isPrimitive: true
@@ -41,9 +41,9 @@ typeParameters:
 - uid: "'TElement"
   summary: 陣列元素的類型。
 metadata:
-  ms.openlocfilehash: 9cfb5a48974128f865ada49df3aa3152bf0f33ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a8b0a9abeb378c863d228268315950f32c5247c0
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676520"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884646"

@@ -3,12 +3,12 @@ uid: microsoft.quantum.diagnostics.test
 name: Test
 type: newtype
 namespace: Microsoft.Quantum.Diagnostics
-summary: 編譯器可識別的屬性，用來標示單元測試。
+summary: 編譯器可辨識的屬性，用來標示單元測試。
 syntax: newtype Test = String;
 metadata:
-  ms.openlocfilehash: 3fc7b25d8d01ee2687ca6af33ca02c059f01d69f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c859042b4c27b6b11c6aab51232939bd45a9db91
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682421"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884537"
