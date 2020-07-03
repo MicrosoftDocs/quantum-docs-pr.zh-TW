@@ -6,12 +6,12 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: bcc26f66a4ba3e861800ceca122b38b8d3ef6ad5
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274505"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884148"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>更多量子運算學習資源
 
@@ -24,6 +24,14 @@ ms.locfileid: "85274505"
 + Kitaev、A. Y.、Shen、& Vyalyi、M. N。 （2002）。 傳統和量子計算（Vol. 47）。 提供：美國數學協會。
 + Kaye，P.，Laflamme，R.，& Mosca，M. （2007）。 量子運算簡介。 Oxford 大學請按。
 + Rieffel，E. G.，& Polak，W.x.y.z. H。 (2011). 量子運算：一種非常溫和的介紹。 MIT Press.
++ Sarah c. Kaiser and Christopher E. Granade （Manning 早期存取計畫于2019年4月發行出版的2020）。 [瞭解使用 Python 和 Q # 的量子運算-實際操作方法](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp)。
+
+## <a name="online-courses"></a>線上課程 ##
+
++ [MS 學習量子計算模組](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r)。 量子運算概念和實務的 ste 教學課程。 
++ [量子運算-卓越的課程](https://brilliant.org/courses/quantum-computing/)。 瞭解如何從頭開始建立配量演算法，以及在瀏覽器中模擬的量子電腦。
++ [量子運算簡介-LinkedIn Learning](https://www.linkedin.com/learning/introduction-to-quantum-computing)。 1h25m 影片簡介。 
++ [透過漫畫的量子計算](https://hackaday.io/project/168554-introduction-to-quantum-computing)。 星期日每週實際操作社區類別。 
 
 ## <a name="elementary-techniques-for-building-controlled-gates"></a>建立受控制閘道的基本技術 ##
 

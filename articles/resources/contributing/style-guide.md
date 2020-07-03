@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: f8e398b5c9932a5079222fed7ad20e54de814eb8
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274508"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884203"
 ---
 # <a name="q-style-guide"></a>問 # 樣式指南 #
 ## <a name="general-conventions"></a>一般慣例 ##
@@ -93,7 +93,7 @@ ms.locfileid: "85274508"
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | 名稱 | 描述 |
+|   | 名稱 | 說明 |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | 清除使用動詞（「反映」）來表示作業的效果。 |
 | ☒ | <s>`operation XRotation`</s> | 使用名詞片語建議函式，而不是運算。 |
@@ -105,6 +105,31 @@ ms.locfileid: "85274508"
 | ☑ | `newtype GeneratorTerm` | 使用名詞片語清楚地指的是呼叫 UDT 函數的結果。 |
 | ☒ | <s>`@Attribute() newtype RunOnce()`</s> | 使用動詞命令時，建議 UDT 的函數是作業。 |
 | ☑ | `@Attribute() newtype Deprecated(Reason : String)` | 使用名詞片語會傳達屬性的使用。 |
+
+***
+
+### <a name="entry-points"></a>進入點
+
+在 Q # 程式中定義進入點時，Q # 編譯器會辨識[ `@EntryPoint()` 屬性](xref:microsoft.quantum.core.entrypoint)，而不需要具有特定名稱的進入點（例如： `main` 、 `Main` 或 `__main__` ）。
+也就是說，從問 # 開發人員的觀點來看，進入點是以標注的一般作業 `@EntryPoint()` 。
+此外，Q # 進入點可能是整個應用程式的進入點（也就是：在 Q # 獨立可執行檔中），或可能是 Q # 程式與應用程式的主機程式之間的介面（也就是在使用 Q # 搭配 Python 或 .NET 時），因此在套用至 Q # 進入點時，名稱 "main" 可能會有誤導。
+
+我們建議使用命名進入點，以使用 `@EntryPoint()` 上述命名作業的一般建議來反映屬性的用法。
+
+
+# <a name="guidance"></a>[指引](#tab/guidance)
+
+我們建議：
+
+- 請勿將進入點作業命名為「主要」。
+- 將進入點作業命名為一般作業。
+
+# <a name="examples"></a>[範例](#tab/examples)
+
+|   | 名稱 | 說明 |
+|---|------|-------------|
+| ☑ | `@EntryPoint() operation RunSimulation` | 清楚地透過作業名稱來溝通進入點的目的。 |
+| ☒ | <s>`@EntryPoint() operation Main`</s> | 使用 `Main` 不會清楚地傳達進入點的用途，而且會與 `@EntryPoint()` 屬性重複。 |
 
 ***
 
@@ -143,7 +168,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | 名稱 | 描述 |
+|   | 名稱 | 說明 |
 |---|------|-------------|
 | ☑ | `X` | 適用于「套用 $X $ 轉換」的清楚縮寫 |
 | ☑ | `CNOT` | 「受控制-不」的易懂速記 |
@@ -200,7 +225,7 @@ While we must maintain the history and intellectual provenance of concepts in qu
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | 名稱 | 描述 |
+|   | 名稱 | 說明 |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 介係詞 "to" 會產生動詞片語，表示作業，而不是函數。 |
 | ☒ | <s>`AsDouble`</s> | 輸入類型不會從函式名稱中清除。 |
@@ -223,7 +248,7 @@ While we must maintain the history and intellectual provenance of concepts in qu
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | 名稱 | 描述 |
+|   | 名稱 | 說明 |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | 請勿使用底線 `_` 來表示此作業僅供內部使用。 |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`開頭的關鍵字清楚地表示此作業僅供內部使用。 |
@@ -295,7 +320,7 @@ While we must maintain the history and intellectual provenance of concepts in qu
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | 程式碼片段 | 描述 |
+|   | 程式碼片段 | 說明 |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | 名稱 `Apply` 是格式的 `CamelCase` 動詞片語，表示已命名的專案是一項作業。 |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | 命名專案的開頭必須是初始大寫字母。 |
@@ -452,7 +477,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | 程式碼片段 | 描述 |
+|   | 程式碼片段 | 說明 |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | 在二元運算子前後使用空格。 |
 | ☒ | <s>`target:Qubit`</s> | 在類型批註冒號前後使用空格。 |

@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415446"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885040"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -20,6 +20,27 @@ ms.locfileid: "85415446"
 如需安裝指示，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
+
+## <a name="version-01220070124"></a>版本0.12.20070124
+
+*發行日期：2020年7月2日*
+
+此版本包含下列項目：
+
+- `qdk-chem`將舊版電子結構問題序列化格式（例如： FCIDUMP）轉換成[Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)的新工具
+- [ `Microsoft.Quantum.Synthesis` 命名空間](xref:microsoft.quantum.synthesis)中的新函式和作業，可用於 coherently 使用轉換和分解式合成演算法來套用傳統 oracles。
+- IQ # 現在允許 `%simulate` 、 `%estimate` 和其他魔術命令的引數。 如需詳細資訊，請參閱[ `%simulate` 魔術命令參考](xref:microsoft.quantum.iqsharp.magic-ref.simulate)。
+- IQ # 中的新階段顯示選項。 如需詳細資訊，請參閱[ `%config` 魔術命令參考](xref:microsoft.quantum.iqsharp.magic-ref.config)。
+- `qsharp`現在透過 conda 套件（[qsharp](https://anaconda.org/quantum-engineering/qsharp)和[iqsharp](https://anaconda.org/quantum-engineering/iqsharp)）提供 IQ # 和 Python 套件，以簡化 Q # Jupyter 和 python 功能在 conda 環境中的本機安裝。 如需詳細資訊，請參閱[Q # Jupyter 筆記本](xref:microsoft.quantum.install.jupyter)和[包含 Python 的 q #](xref:microsoft.quantum.install.python)安裝指南。
+- 使用模擬器時，qubits 在發行時不再需要處於 | 0 ⟩狀態，但如果在釋放之前立即測量，則可以自動重設。
+- 更新可讓 IQ # 使用者更輕鬆地使用具有不同 QDK 版本的程式庫套件，只需要主要 & 次要版本號碼相符，而不是完全相同的版本
+- 已移除取代的 `Microsoft.Quantum.Primitive.*` 命名空間
+- 移動的作業：
+  - `Microsoft.Quantum.Intrinsic.Assert` 現在為 `Microsoft.Quantum.Diagnostics.AssertMeasurement`
+  - `Microsoft.Quantum.Intrinsic.AssertProb` 現在為 `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
+- 錯誤修正 
+
+請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、[IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 和 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
 
 ## <a name="version-0112006403"></a>版本 0.11.2006.403
 
@@ -425,7 +446,7 @@ ms.locfileid: "85415446"
 
 *發行日期：2018 年 6 月 22 日*
 
-此版本包含幾項社群貢獻，以及有所改善的偵錯體驗和增進的效能。  具體來說：
+此版本包含幾項社群貢獻，以及有所改善的偵錯體驗和增進的效能。  明確說來：
 
 * QuantumSimulator 目標電腦的小型和大型模擬的效能改進。
 * 改良的偵錯功能。
