@@ -25,7 +25,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: controlQubit
-    summary: 輔助的 qubit，用來控制給定 oracle 的應用程式。
+    summary: 用來控制給定 oracle 之應用程式的輔助 qubit。
     isPrimitive: true
     uid: Qubit
 output:
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 111f40d91365d24228b657ab3f2533e2fb4d7133
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2551bbd6a48c0d1b6b9f5b56d44b834989a8d13c
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677750"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885350"

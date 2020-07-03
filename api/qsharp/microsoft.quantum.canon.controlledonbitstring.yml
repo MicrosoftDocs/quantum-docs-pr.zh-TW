@@ -7,22 +7,24 @@ summary: >-
   傳回在目標暫存器上套用 oracle 的單一作業（如果控制項註冊狀態對應至指定的位元遮罩）。
 
 
-  此函式的輸出是可由單一轉換 $U $ 表示的作業，因此 \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\psi} & \textrm{if} （b_0 b_1 \cdots b_ {n-1}） = \texttt{bits} \\ \\ \ket{\psi} & \textrm{otherwise} \end{cases}，\end{align}，其中 $V $ 是代表作業動作`oracle`的單一轉換。
+  此函式的輸出是可由單一轉換 $U $ 表示的作業，因此 \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{cases} V \ket{\psi} & \textrm{if} （b_0 b_1 \cdots b_ {n-1}） = \texttt{bits} \\ \\ \ket{\psi} & \textrm{otherwise} \end{cases}，\end{align}，其中 $V $ 是代表作業動作的單一轉換 `oracle` 。
 remarks: >-
-  `bits`和`controlRegister`的長度必須相等。
+  提供的模式 `bits` 可能會短于 `controlRegister` ，在此情況下會忽略其他控制項 qubits （也就是不會在 $ \ket {0} $ 或 $ \ket {1} $ 上控制）。
+
+  如果 `bits` 的長度超過 `controlRegister` ，就會引發錯誤。
 
 
-  假設有一個布林`bits`陣列和一個單一`oracle`作業，此函式的輸出就是執行下列步驟的作業：
+  假設有一個布林陣列 `bits` 和一個單一作業 `oracle` ，此函式的輸出就是執行下列步驟的作業：
 
 
-  * `X`將作業套用至控制項暫存器的每個 qubit，其`false`對應于的`bits`元素。
+  * 將作業套用至控制項暫存器的 `X` 每個 qubit，其對應于 `false` 的元素 `bits` 。
 
-  * 適用`Controlled oracle`于控制項和目標暫存器;
+  * 適用于 `Controlled oracle` 控制項和目標暫存器;
 
-  * 將作業套用至控制項暫存器的每個 qubit，該`false`暫存器會`bits`再次對應至的專案，以將控制項暫存器傳回原始狀態。 `X`
+  * 將作業套用至控制項暫存器的 `X` 每個 qubit，該暫存器會再次對應至的專案，以將控制項暫存器傳回 `false` `bits` 原始狀態。
 
 
-  `Controlled`仿函數的輸出是的特殊案例， `ControlledOnBitString`其中`bits`等於`[true, ..., true]`。
+  仿函數的輸出 `Controlled` 是的特殊案例， `ControlledOnBitString` 其中 `bits` 等於 `[true, ..., true]` 。
 examples: >-
   下列程式碼片段是相等的：
 
@@ -34,7 +36,7 @@ examples: >-
   ```
 
 
-  和
+  及
 
 
   ```qsharp
@@ -48,7 +50,7 @@ examples: >-
   ```
 
 
-  下列程式碼會準備狀態 $ \frac{1}{2}（\ket{00} -\ket{01} + \ket{10} + \ket{11}） $：
+  下列程式碼會準備狀態 $ \frac {1} {2} （\ket {00} -\ket {01} + \ket {10} + \ket {11} ） $：
 
 
   ```qsharp
@@ -85,7 +87,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: 當控制項暫存器狀態`oracle`對應到位元遮罩`bits`時，在目標暫存器上套用的單一作業。
+  - summary: '`oracle`當控制項暫存器狀態對應到位元遮罩時，在目標暫存器上套用的單一作業 `bits` 。'
     isOperation: true
     input:
       types:
@@ -102,9 +104,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98bb8a9d5770e34257cd2fbc5456bcf70139af07
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680346"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885514"

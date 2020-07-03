@@ -7,7 +7,7 @@ summary: >-
   根據 oracle 的給定狀態來建立反映。
 
 
-  假設 determinstic 狀態準備是由單一矩陣 $O $ 所表示，則此函式的結果會是 oracle，它會針對 oracle $O $ 所準備的 state $ \ket{\psi} $ 套用反映：也就是 state $ \ket{\psi} $，使其 $O \ket{0} = \ket{\psi} $。
+  假設有一個由單一矩陣 $O $ 所表示的決定性狀態準備，此函式的結果會是 oracle，它會針對 oracle $O $ 所準備的 state $ \ket{\psi} $ 套用反映：也就是 state $ \ket{\psi} $，使其 $O \ket {0} = \ket{\psi} $。
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
@@ -24,9 +24,9 @@ seeAlso:
 - microsoft.quantum.oracles.deterministicstateoracle
 - microsoft.quantum.oracles.reflectionoracle
 metadata:
-  ms.openlocfilehash: ecd14c8fbf54c6ba224693ea02f469379f66d1bc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 580e4f0a38888faf0fbea99f680c82a5172f82a4
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673506"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884505"

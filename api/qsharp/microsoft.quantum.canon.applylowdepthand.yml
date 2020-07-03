@@ -7,7 +7,7 @@ summary: >-
   只有在兩個控制項 qubits 都處於1狀態時，才反轉指定的目標 qubit，而 T-深度1則使用測量來執行 adjoint 作業。
 
 
-  只有`target`當兩個控制項都是1，但假設`target`處於狀態0時，才會反轉。  作業具有 T 計數4，T-深度1，而且需要一個 helper qubit，因此，如果`target`已知為0，則最好是 CCNOT 作業。  這項作業的 adjoint 是以度量為基礎，不需要任何 T 閘道，也沒有 helper qubit。
+  `target`只有當兩個控制項都是1，但假設處於狀態0時，才會反轉 `target` 。  作業具有 T 計數4，T-深度1，而且需要一個 helper qubit，因此，如果已知為0，則最好是 CCNOT 作業 `target` 。  這項作業的 adjoint 是以度量為基礎，不需要任何 T 閘道，也沒有 helper qubit。
 syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody： "Novel Toffoli 閘道的結構"，Phys。87，022328，2013 [arXiv： 1212.5069](https://arxiv.org/abs/1212.5069) doi： 10.1103/PhysRevA. 87.022328
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 14f70cf11cad542f137cee99d5d2a62cedeb4e72
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7c0858443420741968865298e6179c81b8d23ef4
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672557"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885818"

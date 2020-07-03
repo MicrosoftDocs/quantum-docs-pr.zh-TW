@@ -3,42 +3,26 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: 在特定的 Pauli 基礎中測量給定 qubits 的判斷提示，會在某些容錯範圍內具有給定機率的指定結果。
-remarks: 請注意，此作業的 Adjoint 和受控制版本將不會檢查條件。
-examples: >-
-  ```qsharp
-
-  using (register = Qubit()) {
-      H(register);
-      AssertProb([PauliZ], [register], One, 0.5,
-          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
-  }
-
-  ```
+summary: AssertProb 已被取代。 請改用 @"microsoft.quantum.diagnostics.assertmeasurementprobability"。
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: 用來判斷機率的測量效果，以多 qubit 的 Pauli 運算子表示。
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: 要在其上進行判斷提示的暫存器。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: 的預期結果`Measure(bases, qubits)`。
     isPrimitive: true
     uid: Result
   - name: prob
-    summary: 預期的結果所需的機率。
     isPrimitive: true
     uid: Double
   - name: msg
-    summary: 判斷提示失敗時要報告的訊息。
     isPrimitive: true
     uid: String
   - name: tol
@@ -52,12 +36,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assert
 metadata:
-  ms.openlocfilehash: 6317476e89feb3a5fecac15afd52541859fc2f21
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: db29d52b79b1e7b5a980f3e3196c5b2547132103
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674168"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885715"

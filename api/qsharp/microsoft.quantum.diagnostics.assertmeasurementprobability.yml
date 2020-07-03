@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+name: AssertMeasurementProbability
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: 在特定的 Pauli 基礎中測量給定 qubits 的判斷提示，會在某些容錯範圍內具有給定機率的指定結果。
+remarks: 請注意，此作業的 Adjoint 和受控制版本將不會檢查條件。
+examples: >-
+  ```qsharp
+
+  using (register = Qubit()) {
+      H(register);
+      AssertProb([PauliZ], [register], One, 0.5,
+          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
+  }
+
+  ```
+syntax: 'operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
+  types:
+  - name: bases
+    summary: 用來判斷機率的測量效果，以多 qubit 的 Pauli 運算子表示。
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: 要在其上進行判斷提示的暫存器。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: 的預期結果 `Measure(bases, qubits)` 。
+    isPrimitive: true
+    uid: Result
+  - name: prob
+    summary: 預期的結果所需的機率。
+    isPrimitive: true
+    uid: Double
+  - name: msg
+    summary: 判斷提示失敗時要報告的訊息。
+    isPrimitive: true
+    uid: String
+  - name: tol
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.diagnostics.assertmeasurement
+metadata:
+  ms.openlocfilehash: 6663722ae72cc8dd984e6422029db5a0bfad5d39
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886542"

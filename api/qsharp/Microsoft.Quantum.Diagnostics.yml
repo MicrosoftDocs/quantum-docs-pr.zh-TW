@@ -39,6 +39,10 @@ operations:
   summary: 指定 qubits 的判斷提示全都處於 $ \ket {0} $ 狀態。
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: 判斷指定的 qubits 全都在 $ \ket {0} $ 狀態中，直到指定的容錯為止。
+- uid: microsoft.quantum.diagnostics.assertmeasurement
+  summary: 以給定的 Pauli 為基礎測量給定 qubits 的判斷提示，一律會有指定的結果。
+- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+  summary: 在特定的 Pauli 基礎中測量給定 qubits 的判斷提示，會在某些容錯範圍內具有給定機率的指定結果。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     假設有兩個作業，則判斷提示其對所有輸入狀態的行為都相同。
@@ -79,14 +83,14 @@ operations:
   summary: 判斷 qubit `q` 是在 Pauli Z 運算子的預期 eigenstate 中，直到指定的容錯為止。
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
-  summary: 編譯器已辨識的屬性，可以在載入類型或可呼叫作為測試用途時，用來定義替代名稱。
+  summary: 編譯器可辨識的屬性，您可以透過它來定義替代名稱，以便在載入類型時使用，或針對測試目的進行呼叫。
 - uid: microsoft.quantum.diagnostics.test
-  summary: 編譯器可識別的屬性，用來標示單元測試。
+  summary: 編譯器可辨識的屬性，用來標示單元測試。
 summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含適用于診斷用途的函數和作業，包括 assert 作業和宣告函式。"
 metadata:
-  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326586"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884572"

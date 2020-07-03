@@ -7,17 +7,17 @@ summary: >-
   只有在兩個控制項 qubits 都處於1狀態時，才反轉指定的目標 qubit，並使用測量來執行 adjoint 作業。
 
 
-  只有`target`當兩個控制項都是1，但假設`target`處於狀態0時，才會反轉。  作業具有 T 計數4，T-深度2，而且不需要協助程式 qubit，因此，如果`target`已知為0，則最好是 CCNOT 作業。  此作業的 adjoint 是以度量為基礎，而且不需要任何 T 閘道。
+  `target`只有當兩個控制項都是1，但假設處於狀態0時，才會反轉 `target` 。  作業具有 T 計數4，T-深度2，而且不需要協助程式 qubit，因此，如果已知為0，則最好是 CCNOT 作業 `target` 。  此作業的 adjoint 是以度量為基礎，而且不需要任何 T 閘道。
 
 
-  此作業受控制的應用程式不需要 helper qubit `2^c` `Rz` 、閘道，也不會針對深度`c`優化，其中是整體控制項 qubits 的數目，包括作業中`ApplyAnd`的兩個控制項。  受 adjoint 控制的應用`2^c - 1` `Rz`程式需要閘道（具有兩倍的非 adjoint 作業大小）、沒有 helper qubit，而且未針對深度優化。
+  此作業受控制的應用程式不需要 helper qubit、閘道，也 `2^c` `Rz` 不會針對深度優化，其中 `c` 是整體控制項 qubits 的數目，包括作業中的兩個控制項 `ApplyAnd` 。  受 adjoint 控制的應用程式需要 `2^c - 1` `Rz` 閘道（具有兩倍的非 adjoint 作業大小）、沒有 helper qubit，而且未針對深度優化。
 syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody： "Novel Toffoli 閘道的結構"，Phys。87，022328，2013 [arXiv： 1212.5069](https://arxiv.org/abs/1212.5069) doi： 10.1103/PhysRevA. 87.022328
 
   - Craig Gidney： "減半量子加法的成本"，量子2，page 74，2018 [arXiv： 1709.06648](https://arxiv.org/abs/1709.06648) doi： 10.1103/PhysRevA. 85.044302
 
-  - Mathias Soeken：「量子 Oracle 線路和聖誕樹狀結構模式」，[來自 Decemer 19，2019的 Blog 文章](https://msoeken.github.io/blog_qac.html)（注意：說明多個受控制的結構）
+  - Mathias Soeken：「量子 Oracle 線路和聖誕樹狀結構模式」， [2019 年12月19日的 Blog 文章](https://msoeken.github.io/blog_qac.html)（注意：說明多個受控制的結構）
 input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 973f7f618154720396be0bb4a01b52d763ccdd1c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2f040fd932236547baecaba241d44a8b9842bbe2
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680549"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884587"

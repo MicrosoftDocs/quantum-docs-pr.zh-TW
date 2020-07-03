@@ -3,13 +3,13 @@ uid: microsoft.quantum.machinelearning.sequentialmodel
 name: SequentialModel
 type: newtype
 namespace: Microsoft.Quantum.MachineLearning
-summary: 描述配量分類器模型，其中包含一連串的參數化和控制旋轉、旋轉角度的指派，以及模型所辨識的兩個類別之間的偏差。
+summary: 描述配量分類器模型，由一連串的參數化和受控制旋轉、旋轉角度的指派，以及模型所辨識的兩個類別之間的偏差所組成。
 syntax: newtype SequentialModel = (Microsoft.Quantum.MachineLearning.ControlledRotation[], Double[], Double);
 references: '- [arXiv:1804.00633](https://arxiv.org/abs/1804.00633)'
 metadata:
-  ms.openlocfilehash: f653687ef29ac55704e6a7a8746de9e964bf5947
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 21b3dee50b6c9ce85ec796d1462d1f9ce53a0435
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684359"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884513"

@@ -11,7 +11,7 @@ summary: >-
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
-remarks: '`coefficients`如果指定了少於 $ 2 ^ n $，將會以 identity 元素填補。 此實作為使用 $n-$1 輔助 qubits。'
+remarks: '`coefficients`如果指定了少於 $ 2 ^ n $，將會以 identity 元素填補。 此執行會使用 $n-$1 輔助 qubits。'
 syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 references: '- 朝第一個配量的量子模擬加速 Andrew M. Childs、Dmitri Maslov、Yunseong 名、Neil J. Ross、中國人民幣 Suhttps://arxiv.org/abs/1711.10980'
 input:
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 97ecc07d8d6b9f7c9cdfa5dbe02b354d3d0a7aee
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8cb4744c27da953a997f01b26aac6b952998cc78
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678827"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885378"
