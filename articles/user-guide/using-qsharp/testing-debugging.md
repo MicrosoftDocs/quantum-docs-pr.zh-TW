@@ -3,39 +3,38 @@ title: 測試和偵錯
 description: 瞭解如何使用單元測試、事實和判斷提示，以及傾印函式來測試和偵測量副程式。
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: dd6c7ae8a016423f26c37f3eedf0ae9c1d126b78
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+ms.openlocfilehash: cd619607af9e2b601f3bec1304c5729d84312f35
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630036"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884082"
 ---
-# <a name="testing-and-debugging"></a><span data-ttu-id="935b5-103">測試和偵錯</span><span class="sxs-lookup"><span data-stu-id="935b5-103">Testing and debugging</span></span>
+# <a name="testing-and-debugging"></a><span data-ttu-id="428eb-103">測試和偵錯</span><span class="sxs-lookup"><span data-stu-id="428eb-103">Testing and debugging</span></span>
 
-<span data-ttu-id="935b5-104">就像傳統程式設計一樣，要能夠檢查配量程式是否符合預期，以及能夠診斷出不正確的量副程式，是很重要的。</span><span class="sxs-lookup"><span data-stu-id="935b5-104">As with classical programming, it is essential to be able to check that quantum programs act as intended, and to be able to diagnose a quantum program that is incorrect.</span></span>
-<span data-ttu-id="935b5-105">在本節中，我們將討論 Q # 提供的工具，以測試和偵測量副程式。</span><span class="sxs-lookup"><span data-stu-id="935b5-105">In this section, we cover the tools offered by Q# for testing and debugging quantum programs.</span></span>
+<span data-ttu-id="428eb-104">就像傳統程式設計一樣，要能夠檢查配量程式是否符合預期，以及能夠診斷不正確的行為，是不可或缺的。</span><span class="sxs-lookup"><span data-stu-id="428eb-104">As with classical programming, it is essential to be able to check that quantum programs act as intended, and to be able to diagnose incorrect behavior.</span></span>
+<span data-ttu-id="428eb-105">在本節中，我們將討論 Q # 提供的工具，以測試和偵測量副程式。</span><span class="sxs-lookup"><span data-stu-id="428eb-105">In this section, we cover the tools offered by Q# for testing and debugging quantum programs.</span></span>
 
-## <a name="unit-tests"></a><span data-ttu-id="935b5-106">單元測試</span><span class="sxs-lookup"><span data-stu-id="935b5-106">Unit Tests</span></span>
+## <a name="unit-tests"></a><span data-ttu-id="428eb-106">單元測試</span><span class="sxs-lookup"><span data-stu-id="428eb-106">Unit Tests</span></span>
 
-<span data-ttu-id="935b5-107">測試傳統程式的一個常見方法是撰寫稱為「*單元測試*」的小型程式，以在程式庫中執行程式碼，並將其輸出與某些預期的輸出做比較。</span><span class="sxs-lookup"><span data-stu-id="935b5-107">One common approach to testing classical programs is to write small programs called *unit tests* which run code in a library and compare its output to some expected output.</span></span>
-<span data-ttu-id="935b5-108">例如，我們可能會想要確保傳回 `Square(2)` `4` ，因為我們知道 $ 2 ^ 2 = $4 的*先驗*。</span><span class="sxs-lookup"><span data-stu-id="935b5-108">For instance, we may want to ensure that `Square(2)` returns `4`, since we know *a priori* that $2^2 = 4$.</span></span>
+<span data-ttu-id="428eb-107">測試傳統程式的一個常見方法是撰寫稱為「*單元測試*」的小型程式，這會在程式庫中執行程式碼，並將其輸出與某些預期的輸出做比較。</span><span class="sxs-lookup"><span data-stu-id="428eb-107">One common approach to testing classical programs is to write small programs called *unit tests*, which run code in a library and compare its output to some expected output.</span></span>
+<span data-ttu-id="428eb-108">例如，您可以確保傳回， `Square(2)` `4` 因為您知道 $ 2 ^ 2 = $4 的*先驗*。</span><span class="sxs-lookup"><span data-stu-id="428eb-108">For example, you can ensure that `Square(2)` returns `4` since you know *a priori* that $2^2 = 4$.</span></span>
 
-<span data-ttu-id="935b5-109">問 # 支援針對量副程式建立單元測試，並可在[xUnit](https://xunit.github.io/)單元測試架構中做為測試執行。</span><span class="sxs-lookup"><span data-stu-id="935b5-109">Q# supports creating unit tests for quantum programs, and which can be executed as tests within the [xUnit](https://xunit.github.io/) unit testing framework.</span></span>
+<span data-ttu-id="428eb-109">問 # 支援針對量副程式建立單元測試，並可在[xUnit](https://xunit.github.io/)單元測試架構中作為測試執行。</span><span class="sxs-lookup"><span data-stu-id="428eb-109">Q# supports creating unit tests for quantum programs, and which can run as tests within the [xUnit](https://xunit.github.io/) unit testing framework.</span></span>
 
-### <a name="creating-a-test-project"></a><span data-ttu-id="935b5-110">建立測試專案</span><span class="sxs-lookup"><span data-stu-id="935b5-110">Creating a Test Project</span></span>
+### <a name="creating-a-test-project"></a><span data-ttu-id="428eb-110">建立測試專案</span><span class="sxs-lookup"><span data-stu-id="428eb-110">Creating a Test Project</span></span>
 
-#### <a name="visual-studio-2019"></a>[<span data-ttu-id="935b5-111">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="935b5-111">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[<span data-ttu-id="428eb-111">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="428eb-111">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
-<span data-ttu-id="935b5-112">開啟 Visual Studio 2019。</span><span class="sxs-lookup"><span data-stu-id="935b5-112">Open Visual Studio 2019.</span></span> <span data-ttu-id="935b5-113">移至 `File` 功能表，然後選取 [] `New`  >  `Project...` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-113">Go to the `File` menu and select `New` > `Project...`.</span></span>
-<span data-ttu-id="935b5-114">在右上角搜尋 `Q#` ，然後選取 `Q# Test Project` 範本。</span><span class="sxs-lookup"><span data-stu-id="935b5-114">In the upper right corner, search for `Q#`, and select the `Q# Test Project` template.</span></span>
+<span data-ttu-id="428eb-112">開啟 Visual Studio 2019。</span><span class="sxs-lookup"><span data-stu-id="428eb-112">Open Visual Studio 2019.</span></span> <span data-ttu-id="428eb-113">移**至 [檔案] 功能表，然後**選取 [新增] **> 專案**...]。在右上角搜尋 `Q#` ，然後選取 [ **Q # 測試] 專案**範本。</span><span class="sxs-lookup"><span data-stu-id="428eb-113">Go to the **File** menu and select **New > Project...**. In the upper right corner, search for `Q#`, and select the **Q# Test Project** template.</span></span>
 
-#### <a name="command-line--visual-studio-code"></a>[<span data-ttu-id="935b5-115">命令列/Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="935b5-115">Command Line / Visual Studio Code</span></span>](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[<span data-ttu-id="428eb-114">命令列/Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="428eb-114">Command Line / Visual Studio Code</span></span>](#tab/tabid-vscode)
 
-<span data-ttu-id="935b5-116">從您最愛的命令列中，執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="935b5-116">From your favorite command line, run the following command:</span></span>
-```bash
+<span data-ttu-id="428eb-115">從您最愛的命令列中，執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="428eb-115">From your favorite command line, run the following command:</span></span>
+```dotnetcli
 $ dotnet new xunit -lang Q# -o Tests
 $ cd Tests
 $ code . # To open in Visual Studio Code
@@ -43,8 +42,8 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-<span data-ttu-id="935b5-117">您的新專案將會有一個檔案 `Tests.qs` ，可提供一個方便的位置來定義新的 Q # 單元測試。</span><span class="sxs-lookup"><span data-stu-id="935b5-117">Your new project will have a single file `Tests.qs`, which provides a convenient place to define new Q# unit tests.</span></span>
-<span data-ttu-id="935b5-118">一開始此檔案包含一個範例單元測試， `AllocateQubit` 它會檢查新配置的 qubit 是否處於 $ \ket {0} $ 狀態，並列印一則訊息：</span><span class="sxs-lookup"><span data-stu-id="935b5-118">Initially this file contains one sample unit test `AllocateQubit` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:</span></span>
+<span data-ttu-id="428eb-116">您的新專案具有單一檔案 `Tests.qs` ，可提供方便的位置來定義新的 Q # 單元測試。</span><span class="sxs-lookup"><span data-stu-id="428eb-116">Your new project has a single file `Tests.qs`, which provides a convenient place to define new Q# unit tests.</span></span>
+<span data-ttu-id="428eb-117">一開始，這個檔案包含一個範例單元測試， `AllocateQubit` 它會檢查新配置的 qubit 是否處於 $ \ket {0} $ 狀態，並列印一則訊息：</span><span class="sxs-lookup"><span data-stu-id="428eb-117">Initially, this file contains one sample unit test `AllocateQubit` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:</span></span>
 
 ```qsharp
     @Test("QuantumSimulator")
@@ -58,39 +57,39 @@ $ code . # To open in Visual Studio Code
     }
 ```
 
-<span data-ttu-id="935b5-119">：新增：接受類型的引數並傳回的任何 Q # 作業或函式，都 `Unit` `Unit` 可以透過屬性標示為單元測試 `@Test("...")` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-119">:new: Any Q# operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute.</span></span> <span data-ttu-id="935b5-120">上述屬性的引數 `"QuantumSimulator"` 會指定要在其上執行測試的目標。</span><span class="sxs-lookup"><span data-stu-id="935b5-120">The argument to that attribute, `"QuantumSimulator"` above, specifies the target on which the test is executed.</span></span> <span data-ttu-id="935b5-121">單一測試可以在多個目標上執行。</span><span class="sxs-lookup"><span data-stu-id="935b5-121">A single test can be executed on multiple targets.</span></span> <span data-ttu-id="935b5-122">例如，新增上述的屬性 `@Test("ResourcesEstimator")` `AllocateQubit` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-122">For example, add an attribute `@Test("ResourcesEstimator")` above `AllocateQubit`.</span></span> 
+<span data-ttu-id="428eb-118">任何接受型別和傳回之引數的 Q # 作業或函式，都 `Unit` `Unit` 可以透過屬性標示為單元測試 `@Test("...")` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-118">Any Q# operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute.</span></span> <span data-ttu-id="428eb-119">在上述範例中，該屬性（attribute）的引數（ `"QuantumSimulator"` ）會指定測試執行所在的目標。</span><span class="sxs-lookup"><span data-stu-id="428eb-119">In the previous example, the argument to that attribute, `"QuantumSimulator"`, specifies the target on which the test runs.</span></span> <span data-ttu-id="428eb-120">單一測試可以在多個目標上執行。</span><span class="sxs-lookup"><span data-stu-id="428eb-120">A single test can run on multiple targets.</span></span> <span data-ttu-id="428eb-121">例如，在之前加入屬性 `@Test("ResourcesEstimator")` `AllocateQubit` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-121">For example, add an attribute `@Test("ResourcesEstimator")` before `AllocateQubit`.</span></span> 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
     operation AllocateQubit () : Unit {
         ...
 ```
-<span data-ttu-id="935b5-123">儲存檔案並執行所有測試。</span><span class="sxs-lookup"><span data-stu-id="935b5-123">Save the file and execute all tests.</span></span> <span data-ttu-id="935b5-124">現在應該有兩個單元測試，一個在 QuantumSimulator 上執行 AllocateQubit，另一個在 ResourceEstimator 中執行。</span><span class="sxs-lookup"><span data-stu-id="935b5-124">There should now be two unit tests, one where AllocateQubit is executed on the QuantumSimulator, and one where it is executed in the ResourceEstimator.</span></span> 
+<span data-ttu-id="428eb-122">儲存檔案並執行所有測試。</span><span class="sxs-lookup"><span data-stu-id="428eb-122">Save the file and run all tests.</span></span> <span data-ttu-id="428eb-123">現在應該有兩個單元測試，一個在 `AllocateQubit` 上執行，一個在上 `QuantumSimulator` 執行 `ResourcesEstimator` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-123">There should now be two unit tests, one where `AllocateQubit` runs on the `QuantumSimulator`, and one where it runs in the `ResourcesEstimator`.</span></span> 
 
-<span data-ttu-id="935b5-125">Q # 編譯器會將內建目標 "QuantumSimulator"、"ToffoliSimulator" 和 "ResourcesEstimator" 辨識為適用于單元測試的有效執行目標。</span><span class="sxs-lookup"><span data-stu-id="935b5-125">The Q# compiler recognizes the built-in targets "QuantumSimulator", "ToffoliSimulator", and "ResourcesEstimator" as valid execution targets for unit tests.</span></span> <span data-ttu-id="935b5-126">也可以指定任何完整名稱，以定義自訂的執行目標。</span><span class="sxs-lookup"><span data-stu-id="935b5-126">It is also possible to specify any fully qualified name to define a custom execution target.</span></span> 
+<span data-ttu-id="428eb-124">Q # 編譯器會將內建目標 `"QuantumSimulator"` 、和辨識 `"ToffoliSimulator"` `"ResourcesEstimator"` 為適用于單元測試的有效執行目標。</span><span class="sxs-lookup"><span data-stu-id="428eb-124">The Q# compiler recognizes the built-in targets `"QuantumSimulator"`, `"ToffoliSimulator"`, and `"ResourcesEstimator"` as valid execution targets for unit tests.</span></span> <span data-ttu-id="428eb-125">也可以指定任何完整名稱，以定義自訂的執行目標。</span><span class="sxs-lookup"><span data-stu-id="428eb-125">It is also possible to specify any fully qualified name to define a custom execution target.</span></span> 
 
-### <a name="running-q-unit-tests"></a><span data-ttu-id="935b5-127">執行 Q # 單元測試</span><span class="sxs-lookup"><span data-stu-id="935b5-127">Running Q# Unit Tests</span></span>
+### <a name="running-q-unit-tests"></a><span data-ttu-id="428eb-126">執行 Q # 單元測試</span><span class="sxs-lookup"><span data-stu-id="428eb-126">Running Q# Unit Tests</span></span>
 
-#### <a name="visual-studio-2019"></a>[<span data-ttu-id="935b5-128">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="935b5-128">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[<span data-ttu-id="428eb-127">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="428eb-127">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
-<span data-ttu-id="935b5-129">針對每個解決方案的一次設定，移至 `Test` 功能表並選取 `Test Settings`  >  `Default Processor Architecture`  >  `X64` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-129">As a one-time per-solution setup, go to `Test` menu and select `Test Settings` > `Default Processor Architecture` > `X64`.</span></span>
+<span data-ttu-id="428eb-128">在 [一次] [個別解決方案設定] 中，移至 [**測試**] 功能表，然後選取 [**測試設定] > 預設的處理器架構 > X64**]。</span><span class="sxs-lookup"><span data-stu-id="428eb-128">As a one-time per-solution setup, go to the **Test** menu and select **Test Settings > Default Processor Architecture > X64**.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="935b5-130">Visual Studio 的預設處理器架構設定會儲存在每個解決方案的解決方案選項（）檔案中 `.suo` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-130">The default processor architecture setting for Visual Studio is stored in the solution options (`.suo`) file for each solution.</span></span>
-> <span data-ttu-id="935b5-131">如果您刪除此檔案，就必須 `X64` 再次選取作為您的處理器架構。</span><span class="sxs-lookup"><span data-stu-id="935b5-131">If you delete this file, then you will need to select `X64` as your processor architecture again.</span></span>
+> <span data-ttu-id="428eb-129">Visual Studio 的預設處理器架構設定會儲存在每個解決方案的解決方案選項（）檔案中 `.suo` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-129">The default processor architecture setting for Visual Studio is stored in the solution options (`.suo`) file for each solution.</span></span>
+> <span data-ttu-id="428eb-130">如果您刪除此檔案，則需要再次選取 [ **X64** ] 做為您的處理器架構。</span><span class="sxs-lookup"><span data-stu-id="428eb-130">If you delete this file, then you need to select **X64** as your processor architecture again.</span></span>
 
-<span data-ttu-id="935b5-132">建立專案，移至 `Test` 功能表並選取 `Windows`  >  `Test Explorer` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-132">Build the project, go to the `Test` menu and select `Windows` > `Test Explorer`.</span></span> <span data-ttu-id="935b5-133">`AllocateQubit`會顯示在群組中的測試清單中 `Not Run Tests` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-133">`AllocateQubit` will show up in the list of tests in the `Not Run Tests` group.</span></span> <span data-ttu-id="935b5-134">選取 `Run All` 或執行此個別測試，它應該會通過！</span><span class="sxs-lookup"><span data-stu-id="935b5-134">Select `Run All` or run this individual test, and it should pass!</span></span>
+<span data-ttu-id="428eb-131">建立專案，開啟 [**測試**] 功能表，然後選取 [ **Windows > test Explorer**]。</span><span class="sxs-lookup"><span data-stu-id="428eb-131">Build the project, open the **Test** menu, and select **Windows > Test Explorer**.</span></span> <span data-ttu-id="428eb-132">**AllocateQubit**會顯示在 [**未執行的測試**] 群組中的測試清單中。</span><span class="sxs-lookup"><span data-stu-id="428eb-132">**AllocateQubit** displays in the list of tests in the **Not Run Tests** group.</span></span> <span data-ttu-id="428eb-133">選取 [**全部執行**] 或 [執行此個別測試]。</span><span class="sxs-lookup"><span data-stu-id="428eb-133">Select **Run All** or run this individual test.</span></span>
 
-#### <a name="command-line--visual-studio-code"></a>[<span data-ttu-id="935b5-135">命令列/Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="935b5-135">Command Line / Visual Studio Code</span></span>](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[<span data-ttu-id="428eb-134">命令列/Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="428eb-134">Command Line / Visual Studio Code</span></span>](#tab/tabid-vscode)
 
-<span data-ttu-id="935b5-136">若要執行測試，請流覽至專案資料夾（包含的資料夾 `Tests.csproj` ），然後執行命令：</span><span class="sxs-lookup"><span data-stu-id="935b5-136">To run tests, navigate to the project folder (the folder which contains `Tests.csproj`), and execute the command:</span></span>
+<span data-ttu-id="428eb-135">若要執行測試，請流覽至專案資料夾（包含的資料夾 `Tests.csproj` ），然後執行命令：</span><span class="sxs-lookup"><span data-stu-id="428eb-135">To run tests, navigate to the project folder (the folder which contains `Tests.csproj`), and run the command:</span></span>
 
 ```bash
 $ dotnet restore
 $ dotnet test
 ```
 
-<span data-ttu-id="935b5-137">您應該會看到類似以下的輸出：</span><span class="sxs-lookup"><span data-stu-id="935b5-137">You should get output similar to the following:</span></span>
+<span data-ttu-id="428eb-136">您應該會看到類似以下的輸出：</span><span class="sxs-lookup"><span data-stu-id="428eb-136">You should get output similar to the following:</span></span>
 
 ```
 Build started, please wait...
@@ -111,7 +110,7 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
-<span data-ttu-id="935b5-138">單元測試可以根據其名稱和/或執行目標來進行篩選：</span><span class="sxs-lookup"><span data-stu-id="935b5-138">Unit tests can be filtered according to their name and/or the execution target:</span></span>
+<span data-ttu-id="428eb-137">單元測試可以根據其名稱或執行目標來進行篩選：</span><span class="sxs-lookup"><span data-stu-id="428eb-137">Unit tests can be filtered according to their name or the execution target:</span></span>
 
 ```bash 
 $ dotnet test --filter "Target=QuantumSimulator"
@@ -121,28 +120,28 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ***
 
-<span data-ttu-id="935b5-139">內建函式的 <xref:microsoft.quantum.intrinsic.message> 類型為 `(String -> Unit)` ，可讓您建立診斷訊息。</span><span class="sxs-lookup"><span data-stu-id="935b5-139">The intrinsic function <xref:microsoft.quantum.intrinsic.message> has type `(String -> Unit)` and enables the creation of diagnostic messages.</span></span>
+<span data-ttu-id="428eb-138">內建函式的 <xref:microsoft.quantum.intrinsic.message> 類型為 `(String -> Unit)` ，可讓您建立診斷訊息。</span><span class="sxs-lookup"><span data-stu-id="428eb-138">The intrinsic function <xref:microsoft.quantum.intrinsic.message> has type `(String -> Unit)` and enables the creation of diagnostic messages.</span></span>
 
-#### <a name="visual-studio-2019"></a>[<span data-ttu-id="935b5-140">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="935b5-140">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[<span data-ttu-id="428eb-139">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="428eb-139">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
-<span data-ttu-id="935b5-141">在測試瀏覽器中執行測試並按一下測試之後，會出現一個面板，其中包含測試執行的相關資訊：通過/失敗狀態、經過時間和「輸出」連結。</span><span class="sxs-lookup"><span data-stu-id="935b5-141">After you execute a test in Test Explorer and click on the test, a panel will appear with information about test execution: Passed/Failed status, elapsed time and an "Output" link.</span></span> <span data-ttu-id="935b5-142">如果您按一下 [輸出] 連結，測試輸出將會在新視窗中開啟。</span><span class="sxs-lookup"><span data-stu-id="935b5-142">If you click the "Output" link, test output will open in a new window.</span></span>
+<span data-ttu-id="428eb-140">在測試瀏覽器中執行測試並按一下測試之後，會顯示一個面板，其中包含測試執行的相關資訊：通過/失敗狀態、經過時間，以及輸出的連結。</span><span class="sxs-lookup"><span data-stu-id="428eb-140">After you run a test in Test Explorer and click on the test, a panel displays with information about test execution: Pass/fail status, elapsed time, and a link to the output.</span></span> <span data-ttu-id="428eb-141">按一下 [**輸出**]，在新視窗中開啟測試輸出。</span><span class="sxs-lookup"><span data-stu-id="428eb-141">Click **Output** to open the test output in a new window.</span></span>
 
 ![測試輸出](~/media/unit-test-output.png)
 
-#### <a name="command-line--visual-studio-code"></a>[<span data-ttu-id="935b5-144">命令列/Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="935b5-144">Command Line / Visual Studio Code</span></span>](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[<span data-ttu-id="428eb-143">命令列/Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="428eb-143">Command Line / Visual Studio Code</span></span>](#tab/tabid-vscode)
 
-<span data-ttu-id="935b5-145">每項測試的通過/失敗狀態會由列印到主控台 `dotnet test` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-145">The pass/fail status for each test is printed to the console by `dotnet test`.</span></span>
-<span data-ttu-id="935b5-146">對於失敗的測試，輸出也會列印到主控台，以協助診斷失敗。</span><span class="sxs-lookup"><span data-stu-id="935b5-146">For failing tests, the outputs are also printed to the console to help diagnose the failure.</span></span>
+<span data-ttu-id="428eb-144">每項測試的通過/失敗狀態會由列印到主控台 `dotnet test` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-144">The pass/fail status for each test is printed to the console by `dotnet test`.</span></span>
+<span data-ttu-id="428eb-145">對於失敗的測試，輸出也會列印到主控台，以協助診斷失敗。</span><span class="sxs-lookup"><span data-stu-id="428eb-145">For failing tests, the outputs are also printed to the console to help diagnose the failure.</span></span>
 
 ***
 
-## <a name="facts-and-assertions"></a><span data-ttu-id="935b5-147">事實和判斷提示</span><span class="sxs-lookup"><span data-stu-id="935b5-147">Facts and Assertions</span></span>
+## <a name="facts-and-assertions"></a><span data-ttu-id="428eb-146">事實和判斷提示</span><span class="sxs-lookup"><span data-stu-id="428eb-146">Facts and Assertions</span></span>
 
-<span data-ttu-id="935b5-148">因為 Q # 中的函式沒有任何_邏輯_副作用，所以執行其輸出類型為空元組之函式的任何_其他類型_， `()` 永遠不會從 Q # 程式中觀察到。</span><span class="sxs-lookup"><span data-stu-id="935b5-148">Because functions in Q# have no _logical_ side effects, any _other kinds_ of effects of executing a function whose output type is the empty tuple `()` can never be observed from within a Q# program.</span></span>
-<span data-ttu-id="935b5-149">也就是說，目的電腦可以選擇不執行任何會傳回的函式， `()` 並保證此省略不會修改任何下列 Q 號碼程式碼的行為。</span><span class="sxs-lookup"><span data-stu-id="935b5-149">That is, a target machine can choose not to execute any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.</span></span>
-<span data-ttu-id="935b5-150">這會讓函式傳回（也就 `()` `Unit` 是）一個有用的工具，將判斷提示和偵錯工具內嵌到 Q # 程式中。</span><span class="sxs-lookup"><span data-stu-id="935b5-150">This makes functions returning `()` (i.e. `Unit`) a useful tool for embedding assertions and debugging logic into Q# programs.</span></span> 
+<span data-ttu-id="428eb-147">因為 Q # 中的函式沒有_邏輯_副作用，所以您永遠不會觀察到來自于 q # 程式中的任何其他類型的效果，以執行其輸出類型為空元組的函式 `()` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-147">Because functions in Q# have no _logical_ side effects, you can never observe, from within a Q# program, any other kinds of effects from running a function whose output type is the empty tuple `()`.</span></span>
+<span data-ttu-id="428eb-148">也就是說，目的電腦可以選擇不執行任何會傳回的函式， `()` 並保證此省略不會修改任何下列 Q 號碼程式碼的行為。</span><span class="sxs-lookup"><span data-stu-id="428eb-148">That is, a target machine can choose not to run any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.</span></span>
+<span data-ttu-id="428eb-149">此行為可讓函式傳回 `()` （例如 `Unit` ）實用的工具，將判斷提示和偵錯工具內嵌到 Q # 程式中。</span><span class="sxs-lookup"><span data-stu-id="428eb-149">This behavior makes functions returning `()` (such as `Unit`) a useful tool for embedding assertions and debugging logic into Q# programs.</span></span> 
 
-<span data-ttu-id="935b5-151">讓我們來看一個簡單的範例：</span><span class="sxs-lookup"><span data-stu-id="935b5-151">Let's consider a simple example:</span></span>
+<span data-ttu-id="428eb-150">讓我們來看一個簡單的範例：</span><span class="sxs-lookup"><span data-stu-id="428eb-150">Let's consider a simple example:</span></span>
 
 ```qsharp
 function PositivityFact(value : Double) : Unit 
@@ -154,18 +153,18 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-<span data-ttu-id="935b5-152">在這裡，關鍵字 `fail` 指出計算不應繼續，並在執行 Q # 程式的目的電腦中引發例外狀況。</span><span class="sxs-lookup"><span data-stu-id="935b5-152">Here, the keyword `fail` indicates that the computation should not proceed, raising an exception in the target machine running the Q# program.</span></span>
-<span data-ttu-id="935b5-153">根據定義，無法從 Q # 中觀察到這種失敗，因為在到達語句之後，不會再執行任何其他的 Q # 程式碼 `fail` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-153">By definition, a failure of this kind cannot be observed from within Q#, as no further Q# code is run after a `fail` statement is reached.</span></span>
-<span data-ttu-id="935b5-154">因此，如果我們繼續呼叫 `PositivityFact` ，我們可以確保其輸入是正數。</span><span class="sxs-lookup"><span data-stu-id="935b5-154">Thus, if we proceed past a call to `PositivityFact`, we can be assured by that its input was positive.</span></span>
+<span data-ttu-id="428eb-151">在這裡，關鍵字 `fail` 指出計算不應繼續，並會在執行 Q # 程式的目的電腦中引發例外狀況。</span><span class="sxs-lookup"><span data-stu-id="428eb-151">Here, the keyword `fail` indicates that the computation should not proceed, and raises an exception in the target machine running the Q# program.</span></span>
+<span data-ttu-id="428eb-152">根據定義，無法從 Q # 中觀察到這種失敗，因為目的電腦在到達語句之後，不會再執行 Q # 程式碼 `fail` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-152">By definition, a failure of this kind cannot be observed from within Q#, as the target machine no longer runs the Q# code after reaching a `fail` statement.</span></span>
+<span data-ttu-id="428eb-153">因此，如果我們繼續呼叫 `PositivityFact` ，我們可以確保其輸入是正數。</span><span class="sxs-lookup"><span data-stu-id="428eb-153">Thus, if we proceed past a call to `PositivityFact`, we can be assured that its input was positive.</span></span>
 
-<span data-ttu-id="935b5-155">請注意，我們可以 `PositivityFact` 使用 [`Fact`](xref:microsoft.quantum.diagnostics.fact) 命名空間中的函式，來執行與相同的行為 <xref:microsoft.quantum.diagnostics> ：</span><span class="sxs-lookup"><span data-stu-id="935b5-155">Note that we can implement the same behavior as `PositivityFact` using the [`Fact`](xref:microsoft.quantum.diagnostics.fact) function from the <xref:microsoft.quantum.diagnostics> namespace:</span></span>
+<span data-ttu-id="428eb-154">請注意，我們可以 `PositivityFact` 使用 [`Fact`](xref:microsoft.quantum.diagnostics.fact) 命名空間中的函式，來執行與相同的行為 <xref:microsoft.quantum.diagnostics> ：</span><span class="sxs-lookup"><span data-stu-id="428eb-154">Note that we can implement the same behavior as `PositivityFact` using the [`Fact`](xref:microsoft.quantum.diagnostics.fact) function from the <xref:microsoft.quantum.diagnostics> namespace:</span></span>
 
 ```qsharp
-    Fact(value <= 0, "Expected a positive number.");
+    Fact(value > 0, "Expected a positive number.");
 ```
 
-<span data-ttu-id="935b5-156">另一方面，*判斷*提示的使用方式類似于事實，但可能相依于目的電腦的狀態。</span><span class="sxs-lookup"><span data-stu-id="935b5-156">*Assertions*, on the other hand, are used similarly to facts, but may be dependent on the state of the target machine.</span></span> <span data-ttu-id="935b5-157">同樣地，它們會定義為作業，而事實會定義為函數（如上所示）。</span><span class="sxs-lookup"><span data-stu-id="935b5-157">Correspondingly, they are defined as operations, whereas facts are defined as functions (as above).</span></span>
-<span data-ttu-id="935b5-158">若要瞭解差異，請考慮下列在判斷提示內的事實用法：</span><span class="sxs-lookup"><span data-stu-id="935b5-158">To understand the distinction, consider the following use of a fact within an assertion:</span></span>
+<span data-ttu-id="428eb-155">另一方面，*判斷*提示的使用方式類似于事實，但可能取決於目的電腦的狀態。</span><span class="sxs-lookup"><span data-stu-id="428eb-155">*Assertions*, on the other hand, are used similarly to facts but may depend on the state of the target machine.</span></span> <span data-ttu-id="428eb-156">同樣地，它們會定義為作業，而事實會定義為函式（如上述範例所示）。</span><span class="sxs-lookup"><span data-stu-id="428eb-156">Correspondingly, they are defined as operations, whereas facts are defined as functions (as in the previous example).</span></span>
+<span data-ttu-id="428eb-157">若要瞭解差異，請考慮下列在判斷提示內的事實用法：</span><span class="sxs-lookup"><span data-stu-id="428eb-157">To understand the distinction, consider the following use of a fact within an assertion:</span></span>
 
 ```qsharp
 operation AssertQubitsAreAvailable() : Unit
@@ -174,13 +173,13 @@ operation AssertQubitsAreAvailable() : Unit
 }
 ```
 
-<span data-ttu-id="935b5-159">在這裡，我們會使用作業 <xref:microsoft.quantum.environment.getqubitsavailabletouse> 來傳回可供使用的 qubits 數目。</span><span class="sxs-lookup"><span data-stu-id="935b5-159">Here, we are using the operation <xref:microsoft.quantum.environment.getqubitsavailabletouse> to return the number of qubits available to use.</span></span>
-<span data-ttu-id="935b5-160">這顯然取決於程式及其執行環境的全域狀態，因此的定義 `AssertQubitsAreAvailable` 也必須是一項作業。</span><span class="sxs-lookup"><span data-stu-id="935b5-160">As this clearly depends on the global state of the program and its execution environment, our definition of  `AssertQubitsAreAvailable` must be an operation as well.</span></span>
-<span data-ttu-id="935b5-161">不過，我們可以使用該全域狀態來產生簡單的 `Bool` 值做為函數的輸入 `Fact` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-161">However, we can use that global state to yield a simple `Bool` value as input to the `Fact` function.</span></span>
+<span data-ttu-id="428eb-158">在這裡，我們會使用作業 <xref:microsoft.quantum.environment.getqubitsavailabletouse> 來傳回可供使用的 qubits 數目。</span><span class="sxs-lookup"><span data-stu-id="428eb-158">Here, we are using the operation <xref:microsoft.quantum.environment.getqubitsavailabletouse> to return the number of qubits available to use.</span></span>
+<span data-ttu-id="428eb-159">因為這取決於程式及其執行環境的全域狀態，所以的定義 `AssertQubitsAreAvailable` 也必須是作業。</span><span class="sxs-lookup"><span data-stu-id="428eb-159">As this depends on the global state of the program and its execution environment, our definition of `AssertQubitsAreAvailable` must be an operation as well.</span></span>
+<span data-ttu-id="428eb-160">不過，我們可以使用該全域狀態來產生簡單的 `Bool` 值做為函數的輸入 `Fact` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-160">However, we can use that global state to yield a simple `Bool` value as input to the `Fact` function.</span></span>
 
-<span data-ttu-id="935b5-162">根據這些想法，[序言](xref:microsoft.quantum.libraries.standard.prelude)提供兩個特別有用的判斷提示， <xref:microsoft.quantum.intrinsic.assert> 並將 <xref:microsoft.quantum.intrinsic.assertprob> 模型化為作業 `()` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-162">Building on these ideas, [the prelude](xref:microsoft.quantum.libraries.standard.prelude) offers two especially useful assertions, <xref:microsoft.quantum.intrinsic.assert> and <xref:microsoft.quantum.intrinsic.assertprob> both modeled as operations onto `()`.</span></span> <span data-ttu-id="935b5-163">這些判斷提示各自採用 Pauli 運算子來描述特定測量量、要執行測量的量子暫存器，以及假設結果。</span><span class="sxs-lookup"><span data-stu-id="935b5-163">These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.</span></span>
-<span data-ttu-id="935b5-164">在模擬使用的目的機器上，我們不會受限於「[無複製定理](https://en.wikipedia.org/wiki/No-cloning_theorem)，而且可以執行這類測量，而不會干擾傳遞至這類判斷提示的暫存器。</span><span class="sxs-lookup"><span data-stu-id="935b5-164">On target machines which work by simulation, we are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register passed to such assertions.</span></span>
-<span data-ttu-id="935b5-165">模擬器可以接著類似于上述的函式 `PositivityFact` ，如果不會觀察到假設結果，則中止計算：</span><span class="sxs-lookup"><span data-stu-id="935b5-165">A simulator can then, similar to the `PositivityFact` function above, abort computation if the hypothetical outcome would not be observed in practice:</span></span>
+<span data-ttu-id="428eb-161">根據這些想法來建立[的序言](xref:microsoft.quantum.libraries.standard.prelude)，提供了兩個特別有用的判斷提示， <xref:microsoft.quantum.intrinsic.assert> 並將 <xref:microsoft.quantum.intrinsic.assertprob> 模型化為作業 `()` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-161">[The prelude](xref:microsoft.quantum.libraries.standard.prelude), building on these ideas, offers two especially useful assertions, <xref:microsoft.quantum.intrinsic.assert> and <xref:microsoft.quantum.intrinsic.assertprob> both modeled as operations onto `()`.</span></span> <span data-ttu-id="428eb-162">這些判斷提示各自採用 Pauli 運算子來描述特定量測測量、執行測量的量子暫存器，以及假設結果。</span><span class="sxs-lookup"><span data-stu-id="428eb-162">These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is performed, and a hypothetical outcome.</span></span>
+<span data-ttu-id="428eb-163">模擬使用的目的機器不是由「[無複製定理](https://en.wikipedia.org/wiki/No-cloning_theorem)」所系結，而且可以執行這類測量，而不會干擾傳遞至這類判斷提示的暫存器。</span><span class="sxs-lookup"><span data-stu-id="428eb-163">Target machines which work by simulation are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register that passes to such assertions.</span></span>
+<span data-ttu-id="428eb-164">模擬器之後就可以與先前的函式類似 `PositivityFact` ，如果未在實務中觀察到假設結果，就停止計算：</span><span class="sxs-lookup"><span data-stu-id="428eb-164">A simulator can then, similar to the `PositivityFact` function previous, stop computation if the hypothetical outcome is not observed in practice:</span></span>
 
 ```qsharp
 using (register = Qubit()) 
@@ -193,17 +192,17 @@ using (register = Qubit())
 }
 ```
 
-<span data-ttu-id="935b5-166">在實體量子硬體上，如果沒有複製定理可防止檢查配量狀態，和作業只會傳回，而 `Assert` `AssertProb` 不會 `()` 有其他效果。</span><span class="sxs-lookup"><span data-stu-id="935b5-166">On physical quantum hardware, where the no-cloning theorem prevents examination of quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.</span></span>
+<span data-ttu-id="428eb-165">在實體量子硬體上，如果沒有複製定理可防止檢查配量狀態，和作業只會傳回，而 `Assert` `AssertProb` 不會 `()` 有其他效果。</span><span class="sxs-lookup"><span data-stu-id="428eb-165">On physical quantum hardware, where the no-cloning theorem prevents examination of a quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.</span></span>
 
-<span data-ttu-id="935b5-167">命名空間提供多個系列函式，可 <xref:microsoft.quantum.diagnostics> `Assert` 讓我們檢查更先進的條件。</span><span class="sxs-lookup"><span data-stu-id="935b5-167">The <xref:microsoft.quantum.diagnostics> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions.</span></span> 
+<span data-ttu-id="428eb-166"><xref:microsoft.quantum.diagnostics>命名空間提供更多的系列函式 `Assert` ，您可以用它來檢查更先進的條件。</span><span class="sxs-lookup"><span data-stu-id="428eb-166">The <xref:microsoft.quantum.diagnostics> namespace provides several more functions of the `Assert` family, with which you can check more advanced conditions.</span></span> 
 
-## <a name="dump-functions"></a><span data-ttu-id="935b5-168">傾印函式</span><span class="sxs-lookup"><span data-stu-id="935b5-168">Dump Functions</span></span>
+## <a name="dump-functions"></a><span data-ttu-id="428eb-167">傾印函式</span><span class="sxs-lookup"><span data-stu-id="428eb-167">Dump Functions</span></span>
 
-<span data-ttu-id="935b5-169">為協助針對量副程式進行疑難排解， <xref:microsoft.quantum.diagnostics> 命名空間提供兩個函式，可將目的電腦的目前狀態傾印到檔案中： <xref:microsoft.quantum.diagnostics.dumpmachine> 和 <xref:microsoft.quantum.diagnostics.dumpregister> 。</span><span class="sxs-lookup"><span data-stu-id="935b5-169">To help troubleshooting quantum programs, the <xref:microsoft.quantum.diagnostics> namespace offers two functions that can dump into a file the current status of the target machine: <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister>.</span></span> <span data-ttu-id="935b5-170">產生的每個輸出都取決於目的電腦。</span><span class="sxs-lookup"><span data-stu-id="935b5-170">The generated output of each depends on the target machine.</span></span>
+<span data-ttu-id="428eb-168">為協助針對量副程式進行疑難排解， <xref:microsoft.quantum.diagnostics> 命名空間提供兩個函式，可將目的電腦的目前狀態傾印到檔案中： <xref:microsoft.quantum.diagnostics.dumpmachine> 和 <xref:microsoft.quantum.diagnostics.dumpregister> 。</span><span class="sxs-lookup"><span data-stu-id="428eb-168">To help troubleshooting quantum programs, the <xref:microsoft.quantum.diagnostics> namespace offers two functions that can dump into a file the current status of the target machine: <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister>.</span></span> <span data-ttu-id="428eb-169">產生的每個輸出都取決於目的電腦。</span><span class="sxs-lookup"><span data-stu-id="428eb-169">The generated output of each depends on the target machine.</span></span>
 
-### <a name="dumpmachine"></a><span data-ttu-id="935b5-171">DumpMachine</span><span class="sxs-lookup"><span data-stu-id="935b5-171">DumpMachine</span></span>
+### <a name="dumpmachine"></a><span data-ttu-id="428eb-170">DumpMachine</span><span class="sxs-lookup"><span data-stu-id="428eb-170">DumpMachine</span></span>
 
-<span data-ttu-id="935b5-172">散發為量子開發工具組一部分的全狀態配量模擬器會以一維複數陣列的形式，將整個量子系統的[wave 函數](https://en.wikipedia.org/wiki/Wave_function)寫入檔案中，其中每個專案都代表測量計算基礎狀態 $ \ket{n} $ 的機率幅度，其中 $ \ket{n} = \ket{b_ {n-1} .。。bits $ b_i $ b_1b_0} \{ $ \} 。</span><span class="sxs-lookup"><span data-stu-id="935b5-172">The full-state quantum simulator distributed as part of the Quantum Development Kit writes into the file the [wave function](https://en.wikipedia.org/wiki/Wave_function) of the entire quantum system, as a one-dimensional array of complex numbers, in which each element represents the amplitude of the probability of measuring the computational basis state $\ket{n}$, where $\ket{n} = \ket{b_{n-1}...b_1b_0}$ for bits $\{b_i\}$.</span></span> <span data-ttu-id="935b5-173">例如，在只配置兩個 qubits 且在量子狀態 $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{（1 + i）} \ket 的電腦上 {2} ， {10} \end{align} $ $ 呼叫會 <xref:microsoft.quantum.diagnostics.dumpmachine> 產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="935b5-173">For example, on a machine with only two qubits allocated and in the quantum state $$ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10}, \end{align} $$ calling <xref:microsoft.quantum.diagnostics.dumpmachine> generates this output:</span></span>
+<span data-ttu-id="428eb-171">散發為量子開發工具組一部分的全狀態配量模擬器會以一維複數陣列的形式，將整個量子系統的[wave 函數](https://en.wikipedia.org/wiki/Wave_function)寫入檔案中，其中每個專案都代表測量計算基礎狀態 $ \ket{n} $ 的機率幅度，其中 $ \ket{n} = \ket{b_ {n-1} .。。bits $ b_i $ b_1b_0} \{ $ \} 。</span><span class="sxs-lookup"><span data-stu-id="428eb-171">The full-state quantum simulator distributed as part of the Quantum Development Kit writes into the file the [wave function](https://en.wikipedia.org/wiki/Wave_function) of the entire quantum system, as a one-dimensional array of complex numbers, in which each element represents the amplitude of the probability of measuring the computational basis state $\ket{n}$, where $\ket{n} = \ket{b_{n-1}...b_1b_0}$ for bits $\{b_i\}$.</span></span> <span data-ttu-id="428eb-172">例如，在只配置兩個 qubits 且在量子狀態 $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{（1 + i）} \ket 的電腦上 {2} ， {10} \end{align} $ $ 呼叫會 <xref:microsoft.quantum.diagnostics.dumpmachine> 產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="428eb-172">For example, on a machine with only two qubits allocated and in the quantum state $$ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10}, \end{align} $$ calling <xref:microsoft.quantum.diagnostics.dumpmachine> generates this output:</span></span>
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -213,18 +212,18 @@ using (register = Qubit())
 ∣3❭:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 ```
 
-<span data-ttu-id="935b5-174">第一個資料列會以其重大順序提供批註，其中包含對應 qubits 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="935b5-174">The first row provides a comment with the IDs of the corresponding qubits in their significant order.</span></span>
-<span data-ttu-id="935b5-175">其餘的資料列會以笛卡和極座標格式來描述測量基礎狀態向量 $ \ket{n} $ 的機率幅度。</span><span class="sxs-lookup"><span data-stu-id="935b5-175">The rest of the rows describe the probability amplitude of measuring the basis state vector $\ket{n}$ in both Cartesian and polar formats.</span></span> <span data-ttu-id="935b5-176">第一列的詳細資料：</span><span class="sxs-lookup"><span data-stu-id="935b5-176">In detail for the first row:</span></span>
+<span data-ttu-id="428eb-173">第一個資料列會以其重大順序提供批註，其中包含對應 qubits 的識別碼。</span><span class="sxs-lookup"><span data-stu-id="428eb-173">The first row provides a comment with the ids of the corresponding qubits in their significant order.</span></span>
+<span data-ttu-id="428eb-174">其餘的資料列會以笛卡和極座標格式來描述測量基礎狀態向量 $ \ket{n} $ 的機率幅度。</span><span class="sxs-lookup"><span data-stu-id="428eb-174">The rest of the rows describe the probability amplitude of measuring the basis state vector $\ket{n}$ in both Cartesian and polar formats.</span></span> <span data-ttu-id="428eb-175">第一列的詳細資料：</span><span class="sxs-lookup"><span data-stu-id="428eb-175">In detail for the first row:</span></span>
 
-* <span data-ttu-id="935b5-177">**`∣0❭:`** 此資料列對應于 `0` 計算基礎狀態</span><span class="sxs-lookup"><span data-stu-id="935b5-177">**`∣0❭:`** this row corresponds to the `0` computational basis state</span></span>
-* <span data-ttu-id="935b5-178">**`0.707107 +  0.000000 i`**：笛卡爾格式的機率幅度。</span><span class="sxs-lookup"><span data-stu-id="935b5-178">**`0.707107 +  0.000000 i`**: the probability amplitude in Cartesian format.</span></span>
-* <span data-ttu-id="935b5-179">**` == `**： `equal` 符號會分隔兩個對等的標記法。</span><span class="sxs-lookup"><span data-stu-id="935b5-179">**` == `**: the `equal` sign separates both equivalent representations.</span></span>
-* <span data-ttu-id="935b5-180">**`**********  `**：大小的圖形表示，的數目與 `*` 測量此狀態向量的機率成正比。</span><span class="sxs-lookup"><span data-stu-id="935b5-180">**`**********  `**: A graphical representation of the magnitude, the number of `*` is proportionate to the probability of measuring this state vector.</span></span>
-* <span data-ttu-id="935b5-181">**`[ 0.500000 ]`**：量值的數值</span><span class="sxs-lookup"><span data-stu-id="935b5-181">**`[ 0.500000 ]`**: the numeric value of the magnitude</span></span>
-* <span data-ttu-id="935b5-182">**`    ---`**：振幅階段的圖形標記法（請參閱下文）。</span><span class="sxs-lookup"><span data-stu-id="935b5-182">**`    ---`**: A graphical representation of the amplitude's phase (see below).</span></span>
-* <span data-ttu-id="935b5-183">**`[ 0.0000 rad ]`**：階段的數值（以弧度為單位）。</span><span class="sxs-lookup"><span data-stu-id="935b5-183">**`[ 0.0000 rad ]`**: the numeric value of the phase (in radians).</span></span>
+* <span data-ttu-id="428eb-176">**`∣0❭:`** 此資料列對應于 `0` 計算基礎狀態</span><span class="sxs-lookup"><span data-stu-id="428eb-176">**`∣0❭:`** this row corresponds to the `0` computational basis state</span></span>
+* <span data-ttu-id="428eb-177">**`0.707107 +  0.000000 i`**：笛卡爾格式的機率幅度。</span><span class="sxs-lookup"><span data-stu-id="428eb-177">**`0.707107 +  0.000000 i`**: the probability amplitude in Cartesian format.</span></span>
+* <span data-ttu-id="428eb-178">**` == `**： `equal` 符號會分隔兩個對等的標記法。</span><span class="sxs-lookup"><span data-stu-id="428eb-178">**` == `**: the `equal` sign separates both equivalent representations.</span></span>
+* <span data-ttu-id="428eb-179">**`**********  `**：大小的圖形表示，的數目與 `*` 測量此狀態向量的機率成正比。</span><span class="sxs-lookup"><span data-stu-id="428eb-179">**`**********  `**: A graphical representation of the magnitude, the number of `*` is proportionate to the probability of measuring this state vector.</span></span>
+* <span data-ttu-id="428eb-180">**`[ 0.500000 ]`**：量值的數值</span><span class="sxs-lookup"><span data-stu-id="428eb-180">**`[ 0.500000 ]`**: the numeric value of the magnitude</span></span>
+* <span data-ttu-id="428eb-181">**`    ---`**：振幅階段的圖形標記法（請參閱下列輸出）。</span><span class="sxs-lookup"><span data-stu-id="428eb-181">**`    ---`**: A graphical representation of the amplitude's phase (see the following output).</span></span>
+* <span data-ttu-id="428eb-182">**`[ 0.0000 rad ]`**：階段的數值（以弧度為單位）。</span><span class="sxs-lookup"><span data-stu-id="428eb-182">**`[ 0.0000 rad ]`**: the numeric value of the phase (in radians).</span></span>
 
-<span data-ttu-id="935b5-184">大小和階段都會以圖形標記法顯示。</span><span class="sxs-lookup"><span data-stu-id="935b5-184">Both the magnitude and the phase are displayed with a graphical representation.</span></span> <span data-ttu-id="935b5-185">量值的表示方式很簡單：它會顯示的長條，長條的機率愈大 `*` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-185">The magnitude representation is straight-forward: it shows a bar of `*`, the bigger the probability the bigger the bar will be.</span></span> <span data-ttu-id="935b5-186">在階段中，我們會根據範圍顯示下列符號來表示角度：</span><span class="sxs-lookup"><span data-stu-id="935b5-186">For the phase, we show the following symbols to represent the angle based on ranges:</span></span>
+<span data-ttu-id="428eb-183">大小和階段都會以圖形標記法顯示。</span><span class="sxs-lookup"><span data-stu-id="428eb-183">Both the magnitude and the phase are displayed with a graphical representation.</span></span> <span data-ttu-id="428eb-184">量值的表示方式很簡單：它會顯示的長條，長條的機率愈大 `*` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-184">The magnitude representation is straight-forward: it shows a bar of `*`, the bigger the probability the bigger the bar will be.</span></span> <span data-ttu-id="428eb-185">在階段中，我們會根據範圍顯示下列符號來表示角度：</span><span class="sxs-lookup"><span data-stu-id="428eb-185">For the phase, we show the following symbols to represent the angle based on ranges:</span></span>
 
 ```
 [ -π/16,   π/16)       ---
@@ -246,7 +245,7 @@ using (register = Qubit())
 [31π/16,   π/16)       ---
 ```
 
-<span data-ttu-id="935b5-187">下列範例會顯示 `DumpMachine` 一些常見的狀態：</span><span class="sxs-lookup"><span data-stu-id="935b5-187">The following examples show `DumpMachine` for some common states:</span></span>
+<span data-ttu-id="428eb-186">下列範例會顯示 `DumpMachine` 一些常見的狀態：</span><span class="sxs-lookup"><span data-stu-id="428eb-186">The following examples show `DumpMachine` for some common states:</span></span>
 
 ### `∣0❭`
 
@@ -282,37 +281,37 @@ using (register = Qubit())
 
 
   > [!NOTE]
-  > <span data-ttu-id="935b5-188">Qubit 的識別碼會在執行時間指派，而且不一定會與 qubit 的配置順序或其在 qubit 暫存器內的位置對齊。</span><span class="sxs-lookup"><span data-stu-id="935b5-188">The id of a qubit is assigned at runtime and it's not necessarily aligned with the order in which the qubit was allocated or its position within a qubit register.</span></span>
+  > <span data-ttu-id="428eb-187">Qubit 的識別碼是在執行時間指派，而且不一定會與 qubit 的配置順序或其在 qubit 暫存器內的位置對齊。</span><span class="sxs-lookup"><span data-stu-id="428eb-187">The id of a qubit is assigned at runtime and is not necessarily aligned with the order in which the qubit was allocated or its position within a qubit register.</span></span>
 
 
-#### <a name="visual-studio-2019"></a>[<span data-ttu-id="935b5-189">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="935b5-189">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[<span data-ttu-id="428eb-188">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="428eb-188">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
   > [!TIP]
-  > <span data-ttu-id="935b5-190">您可以在程式碼中放入中斷點，並檢查 qubit 變數的值，藉以找出 Visual Studio 中的 qubit 識別碼，例如：</span><span class="sxs-lookup"><span data-stu-id="935b5-190">You can figure out a qubit id in Visual Studio by putting a breakpoint in your code and inspecting the value of a qubit variable, for example:</span></span>
+  > <span data-ttu-id="428eb-189">您可以在程式碼中放入中斷點，並檢查 qubit 變數的值，以在 Visual Studio 中尋找 qubit 識別碼，例如：</span><span class="sxs-lookup"><span data-stu-id="428eb-189">You can locate a qubit id in Visual Studio by putting a breakpoint in your code and inspecting the value of a qubit variable, for example:</span></span>
   > 
   > ![在 Visual Studio 中顯示 qubit 識別碼](~/media/qubit_id.png)
   >
-  > <span data-ttu-id="935b5-192">索引 on 的 qubit `0` `register2` 具有識別碼 = `3` ，索引的 qubit 具有 `1` 識別碼 = `2` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-192">the qubit with index `0` on `register2` has id=`3`, the qubit with index `1` has id=`2`.</span></span>
+  > <span data-ttu-id="428eb-191">索引 on 的 qubit `0` `register2` 具有識別碼 = `3` ，索引的 qubit 具有 `1` 識別碼 = `2` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-191">the qubit with index `0` on `register2` has id=`3`, the qubit with index `1` has id=`2`.</span></span>
 
-#### <a name="command-line--visual-studio-code"></a>[<span data-ttu-id="935b5-193">命令列/Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="935b5-193">Command Line / Visual Studio Code</span></span>](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[<span data-ttu-id="428eb-192">命令列/Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="428eb-192">Command Line / Visual Studio Code</span></span>](#tab/tabid-vscode)
 
   > [!TIP]
-  > <span data-ttu-id="935b5-194">您可以使用函式 <xref:microsoft.quantum.intrinsic.message> 並傳遞訊息中的 qubit 變數，來找出 qubit 識別碼，例如：</span><span class="sxs-lookup"><span data-stu-id="935b5-194">You can figure out a qubit id by using the <xref:microsoft.quantum.intrinsic.message> function and passing the qubit variable in the message, for example:</span></span>
+  > <span data-ttu-id="428eb-193">您可以使用函式來尋找 qubit 識別碼 <xref:microsoft.quantum.intrinsic.message> ，並在訊息中傳遞 qubit 變數，例如：</span><span class="sxs-lookup"><span data-stu-id="428eb-193">You can locate a qubit id by using the <xref:microsoft.quantum.intrinsic.message> function and passing the qubit variable in the message, for example:</span></span>
   >
   > ```qsharp
   > Message($"0={register2[0]}; 1={register2[1]}");
   > ```
   > 
-  > <span data-ttu-id="935b5-195">這可能會產生此輸出：</span><span class="sxs-lookup"><span data-stu-id="935b5-195">which could generate this output:</span></span>
+  > <span data-ttu-id="428eb-194">這可能會產生此輸出：</span><span class="sxs-lookup"><span data-stu-id="428eb-194">which could generate this output:</span></span>
   >```
   > 0=q:3; 1=q:2
   >```
-  > <span data-ttu-id="935b5-196">這表示索引 on 的 qubit `0` `register2` 具有識別碼 = `3` ，索引的 qubit 具有 `1` 識別碼 = `2` 。</span><span class="sxs-lookup"><span data-stu-id="935b5-196">which means that the qubit with index `0` on `register2` has id=`3`, the qubit with index `1` has id=`2`.</span></span>
+  > <span data-ttu-id="428eb-195">這表示索引 on 的 qubit `0` `register2` 具有識別碼 = `3` ，索引的 qubit 具有 `1` 識別碼 = `2` 。</span><span class="sxs-lookup"><span data-stu-id="428eb-195">which means that the qubit with index `0` on `register2` has id=`3`, the qubit with index `1` has id=`2`.</span></span>
 
 
 ***
 
-<span data-ttu-id="935b5-197"><xref:microsoft.quantum.diagnostics.dumpmachine>是 <xref:microsoft.quantum.diagnostics> 命名空間的一部分，因此若要使用它，您必須加入 `open` 語句：</span><span class="sxs-lookup"><span data-stu-id="935b5-197"><xref:microsoft.quantum.diagnostics.dumpmachine> is part of the  <xref:microsoft.quantum.diagnostics> namespace, so in order to use it you must add an `open` statement:</span></span>
+<span data-ttu-id="428eb-196">由於 <xref:microsoft.quantum.diagnostics.dumpmachine> 屬於 <xref:microsoft.quantum.diagnostics> 命名空間的一部分，因此您必須加入 `open` 語句來存取它：</span><span class="sxs-lookup"><span data-stu-id="428eb-196">Since <xref:microsoft.quantum.diagnostics.dumpmachine> is part of the  <xref:microsoft.quantum.diagnostics> namespace, you must add an `open` statement to access it:</span></span>
 
 ```qsharp
 namespace Samples {
@@ -329,11 +328,11 @@ namespace Samples {
 ```
 
 
-### <a name="dumpregister"></a><span data-ttu-id="935b5-198">DumpRegister</span><span class="sxs-lookup"><span data-stu-id="935b5-198">DumpRegister</span></span>
+### <a name="dumpregister"></a><span data-ttu-id="428eb-197">DumpRegister</span><span class="sxs-lookup"><span data-stu-id="428eb-197">DumpRegister</span></span>
 
-<span data-ttu-id="935b5-199"><xref:microsoft.quantum.diagnostics.dumpregister>的運作方式類似 <xref:microsoft.quantum.diagnostics.dumpmachine> ，但它也會採用 qubits 陣列，將資訊數量限制為僅與對應的 qubits 相關。</span><span class="sxs-lookup"><span data-stu-id="935b5-199"><xref:microsoft.quantum.diagnostics.dumpregister> works like <xref:microsoft.quantum.diagnostics.dumpmachine>, except it also takes an array of qubits to limit the amount of information to only that relevant to the corresponding qubits.</span></span>
+<span data-ttu-id="428eb-198"><xref:microsoft.quantum.diagnostics.dumpregister>的運作方式類似 <xref:microsoft.quantum.diagnostics.dumpmachine> ，不同之處在于它也會採用 qubits 陣列，將資訊數量限制為僅與對應的 qubits 相關。</span><span class="sxs-lookup"><span data-stu-id="428eb-198"><xref:microsoft.quantum.diagnostics.dumpregister> works like <xref:microsoft.quantum.diagnostics.dumpmachine>, except that it also takes an array of qubits to limit the amount of information to only that relevant to the corresponding qubits.</span></span>
 
-<span data-ttu-id="935b5-200">如同 <xref:microsoft.quantum.diagnostics.dumpmachine> ，所產生的資訊 <xref:microsoft.quantum.diagnostics.dumpregister> 取決於目的電腦。</span><span class="sxs-lookup"><span data-stu-id="935b5-200">As with <xref:microsoft.quantum.diagnostics.dumpmachine>, the information generated by <xref:microsoft.quantum.diagnostics.dumpregister> depends on the target machine.</span></span> <span data-ttu-id="935b5-201">對於全狀態的配量模擬器，它會將 wave 函式寫入檔案中，並以與相同格式，由提供的 qubits 所產生之量子子系統的全域階段 <xref:microsoft.quantum.diagnostics.dumpmachine> 。</span><span class="sxs-lookup"><span data-stu-id="935b5-201">For the full-state quantum simulator it writes into the file the wave function up to a global phase of the quantum sub-system generated by the provided qubits in the same format as <xref:microsoft.quantum.diagnostics.dumpmachine>.</span></span>  <span data-ttu-id="935b5-202">例如，再次使用已配置兩個 qubits 的機器，並在量子 state $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{（1 + i）} {2} \ket {10} =-e ^ {-i \ pi/4} （（\frac {1} {\sqrt {2} } \ket {0} -\frac{（1 + i）} \ket） {2} {1} \otimes \frac{-（1 + i）} {\sqrt {2} } \ket {0} ）、\end{align} $ $ 對的呼叫會產生下列 <xref:microsoft.quantum.diagnostics.dumpregister> `qubit[0]` 輸出：</span><span class="sxs-lookup"><span data-stu-id="935b5-202">For example, take again a machine with only two qubits allocated and in the quantum state $$ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10} = - e^{-i\pi/4} ( (\frac{1}{\sqrt{2}} \ket{0} - \frac{(1 + i)}{2} \ket{1} ) \otimes \frac{-(1 + i)}{\sqrt{2}} \ket{0} ) , \end{align} $$ calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[0]` generates this output:</span></span>
+<span data-ttu-id="428eb-199">如同 <xref:microsoft.quantum.diagnostics.dumpmachine> ，所產生的資訊 <xref:microsoft.quantum.diagnostics.dumpregister> 取決於目的電腦。</span><span class="sxs-lookup"><span data-stu-id="428eb-199">As with <xref:microsoft.quantum.diagnostics.dumpmachine>, the information generated by <xref:microsoft.quantum.diagnostics.dumpregister> depends on the target machine.</span></span> <span data-ttu-id="428eb-200">對於全狀態的配量模擬器，它會將 wave 函式寫入檔案中，並以與相同格式，由提供的 qubits 所產生之量子子系統的全域階段 <xref:microsoft.quantum.diagnostics.dumpmachine> 。</span><span class="sxs-lookup"><span data-stu-id="428eb-200">For the full-state quantum simulator it writes into the file the wave function up to a global phase of the quantum sub-system generated by the provided qubits in the same format as <xref:microsoft.quantum.diagnostics.dumpmachine>.</span></span>  <span data-ttu-id="428eb-201">例如，再次使用已配置兩個 qubits 的機器，並在量子 state $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{（1 + i）} {2} \ket {10} =-e ^ {-i \ pi/4} （（\frac {1} {\sqrt {2} } \ket {0} -\frac{（1 + i）} \ket） {2} {1} \otimes \frac{-（1 + i）} {\sqrt {2} } \ket {0} ）、\end{align} $ $ 對的呼叫會產生下列 <xref:microsoft.quantum.diagnostics.dumpregister> `qubit[0]` 輸出：</span><span class="sxs-lookup"><span data-stu-id="428eb-201">For example, take again a machine with only two qubits allocated and in the quantum state $$ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10} = - e^{-i\pi/4} ( (\frac{1}{\sqrt{2}} \ket{0} - \frac{(1 + i)}{2} \ket{1} ) \otimes \frac{-(1 + i)}{\sqrt{2}} \ket{0} ) , \end{align} $$ calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[0]` generates this output:</span></span>
 
 ```
 # wave function for qubits with ids (least to most significant): 0
@@ -341,7 +340,7 @@ namespace Samples {
 ∣1❭:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 ```
 
-<span data-ttu-id="935b5-203"><xref:microsoft.quantum.diagnostics.dumpregister>對的呼叫會 `qubit[1]` 產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="935b5-203">and calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[1]` generates this output:</span></span>
+<span data-ttu-id="428eb-202"><xref:microsoft.quantum.diagnostics.dumpregister>對的呼叫會 `qubit[1]` 產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="428eb-202">and calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[1]` generates this output:</span></span>
 
 ```
 # wave function for qubits with ids (least to most significant): 1
@@ -349,13 +348,13 @@ namespace Samples {
 ∣1❭:    -0.500000 + -0.500000 i  ==     ***********          [ 0.500000 ]  /      [ -2.35619 rad ]
 ```
 
-<span data-ttu-id="935b5-204">一般來說，與另一個暫存器光子的暫存器的狀態是混合狀態，而不是純狀態。</span><span class="sxs-lookup"><span data-stu-id="935b5-204">In general, the state of a register that is entangled with another register is a mixed state rather than a pure state.</span></span> <span data-ttu-id="935b5-205">在此情況下，會 <xref:microsoft.quantum.diagnostics.dumpregister> 輸出下列訊息：</span><span class="sxs-lookup"><span data-stu-id="935b5-205">In this case, <xref:microsoft.quantum.diagnostics.dumpregister> outputs the following message:</span></span>
+<span data-ttu-id="428eb-203">一般來說，與另一個暫存器光子的暫存器的狀態是混合狀態，而不是純狀態。</span><span class="sxs-lookup"><span data-stu-id="428eb-203">In general, the state of a register that is entangled with another register is a mixed state rather than a pure state.</span></span> <span data-ttu-id="428eb-204">在此情況下，會 <xref:microsoft.quantum.diagnostics.dumpregister> 輸出下列訊息：</span><span class="sxs-lookup"><span data-stu-id="428eb-204">In this case, <xref:microsoft.quantum.diagnostics.dumpregister> outputs the following message:</span></span>
 
 ```
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-<span data-ttu-id="935b5-206">下列範例會示範如何 <xref:microsoft.quantum.diagnostics.dumpregister> <xref:microsoft.quantum.diagnostics.dumpmachine> 在您的 Q # 程式碼中使用和：</span><span class="sxs-lookup"><span data-stu-id="935b5-206">The following example shows you how you can use both <xref:microsoft.quantum.diagnostics.dumpregister> and <xref:microsoft.quantum.diagnostics.dumpmachine> in your Q# code:</span></span>
+<span data-ttu-id="428eb-205">下列範例會示範如何 <xref:microsoft.quantum.diagnostics.dumpregister> <xref:microsoft.quantum.diagnostics.dumpmachine> 在您的 Q # 程式碼中使用和：</span><span class="sxs-lookup"><span data-stu-id="428eb-205">The following example shows you how you can use both <xref:microsoft.quantum.diagnostics.dumpregister> and <xref:microsoft.quantum.diagnostics.dumpmachine> in your Q# code:</span></span>
 
 ```qsharp
 namespace app
@@ -380,8 +379,8 @@ namespace app
 }
 ```
 
-## <a name="debugging"></a><span data-ttu-id="935b5-207">偵錯</span><span class="sxs-lookup"><span data-stu-id="935b5-207">Debugging</span></span>
+## <a name="debugging"></a><span data-ttu-id="428eb-206">偵錯</span><span class="sxs-lookup"><span data-stu-id="428eb-206">Debugging</span></span>
 
-<span data-ttu-id="935b5-208">在和函 `Assert` 式 `Dump` 和作業的頂端，Q # 支援標準 Visual Studio 偵錯工具的子集：[設定行中斷點](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、[使用 F10 逐步執行程式碼](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)及[檢查傳統變數的值](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)，都可以在模擬器的程式碼執行期間進行。</span><span class="sxs-lookup"><span data-stu-id="935b5-208">On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible during code execution on the simulator.</span></span>
+<span data-ttu-id="428eb-207">在和函 `Assert` 式 `Dump` 和作業之上，Q # 支援標準 Visual Studio 偵錯工具的子集：[設定行中斷點](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、[逐步執行使用 F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)的程式碼，以及[檢查傳統變數的值](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)在模擬器的程式碼執行期間都可以。</span><span class="sxs-lookup"><span data-stu-id="428eb-207">On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible during code execution on the simulator.</span></span>
 
-<span data-ttu-id="935b5-209">在 Visual Studio Code 中的偵錯工具會利用 c # 提供的偵錯工具功能，以供 OmniSharp 所支援的 Visual Studio Code 延伸模組，而且需要安裝[最新版本](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。</span><span class="sxs-lookup"><span data-stu-id="935b5-209">Debugging in Visual Studio Code leverages the debugging capabilities provided by the C# for Visual Studio Code extension powered by OmniSharp and requires installing the [latest version](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).</span></span> 
+<span data-ttu-id="428eb-208">在 Visual Studio Code 中的偵錯工具會利用 c # 提供的偵錯工具功能，以供 OmniSharp 所支援的 Visual Studio Code 延伸模組，而且需要安裝[最新版本](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。</span><span class="sxs-lookup"><span data-stu-id="428eb-208">Debugging in Visual Studio Code leverages the debugging capabilities provided by the C# for Visual Studio Code extension powered by OmniSharp and requires installing the [latest version](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).</span></span> 
