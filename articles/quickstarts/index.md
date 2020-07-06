@@ -7,12 +7,12 @@ ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 6a52eb0a9cdf699e8bb37578ffa3d73fe96a990e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ee8d210d67a20cfea3bdc36162efc47f021a6dc6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273238"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885463"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>安裝 Microsoft Quantum Development Kit (QDK)
 
@@ -24,10 +24,11 @@ ms.locfileid: "85273238"
 - 用來協助您進行開發的工具
 
 Q# 程式可以使用 Visual Studio Code、Visual Studio 或透過具有 IQ # Jupyter 核心的 Jupyter Notebook，以獨立應用程式的形式執行。
-
 也可以與以 .NET 語言 (通常是 C#) 或 Python 撰寫的主機程式配對，讓您可以從傳統程式內部呼叫量子作業。
 
-QDK 適用於多個開發環境。 從下方選取您慣用的設定：
+在[執行 Q# 程式的方式](xref:microsoft.quantum.guide.host-programs)中有這些設定的工作流程描述和比較。
+
+若要繼續安裝 QDK 並建立 Q# 專案，請選取您偏好的設定：
 
 [使用 Q# 命令列應用程式開發](xref:microsoft.quantum.install.standalone) - 選擇此方法以從命令列使用 Q #。 這不需要像下列選項的驅動程式或主機程式。
 

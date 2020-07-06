@@ -7,12 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 8d39716c4d4c96ad87862b4b185895aab66cd210
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274028"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885145"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>更新 Microsoft Quantum Development Kit (QDK)
 
@@ -151,14 +151,32 @@ ms.locfileid: "85274028"
 更新 QDK 的流程會視開發語言和環境而有所不同。
 於下方選取您的開發環境。
 
-* [Python：更新 IQ# 擴充功能](#update-iq-for-python)
-* [Jupyter Notebook：更新 IQ# 擴充功能](#update-iq-for-jupyter-notebooks)
+* [Python：更新 `qsharp` 套件](#update-the-qsharp-python-package)
+* [Jupyter Notebook：更新 IQ# 核心](#update-the-iq-jupyter-kernel)
 * [Visual Studio：更新 QDK 擴充功能](#update-visual-studio-qdk-extension)
 * [VS Code：更新 QDK 擴充功能](#update-vs-code-qdk-extension)
 * [命令列和 C#：更新專案範本](#c-using-the-dotnet-command-line-tool)
 
 
-### <a name="update-iq-for-python"></a>更新 Python 的 IQ#
+### <a name="update-the-qsharp-python-package"></a>更新 `qsharp` Python 套件
+
+更新程式取決於您最初是使用 conda 或 .NET CLI 和 pip 進行安裝。
+
+#### <a name="update-using-conda-recommended"></a>[使用 conda 更新 (建議做法)](#tab/tabid-conda)
+
+1. 啟動您安裝 `qsharp` 套件的 conda 環境，然後執行此命令來更新：
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. 從 `.qs` 檔案的位置執行下列命令：
+
+    ```
+    python -c "import qsharp; qsharp.reload()"
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[使用 .NET CLI 和 pip 更新 (進階做法)](#tab/tabid-dotnetcli)
 
 1. 更新 `iqsharp` 核心 
 
@@ -167,7 +185,7 @@ ms.locfileid: "85274028"
     dotnet iqsharp install
     ```
 
-2. 確認 `iqsharp` 版本
+1. 確認 `iqsharp` 版本
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -176,19 +194,19 @@ ms.locfileid: "85274028"
     您應該會看見下列輸出：
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    如果您的 `iqsharp` 版本較新，不要擔心，它應該符合 [最新版本](xref:microsoft.quantum.relnotes)。
+    如果您的 `iqsharp` 版本較高，別擔心。 其應該符合[最新版本](xref:microsoft.quantum.relnotes)。
 
-3. 更新 `qsharp` 封裝
+1. 更新 `qsharp` 套件：
 
     ```
     pip install qsharp --upgrade
     ```
 
-4. 確認 `qsharp` 版本
+1. 確認 `qsharp` 的版本：
 
     ```
     pip show qsharp
@@ -198,29 +216,49 @@ ms.locfileid: "85274028"
 
     ```
     Name: qsharp
-    Version: 0.10.1912.501
+    Version: 0.12.20070124
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
 
-5. 從您 `.qs` 檔案的位置執行下列命令
+1. 從 `.qs` 檔案的位置執行下列命令：
 
     ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
-6. 現在您可以使用更新後的 QDK 版本來執行現有的配量程式。
+***
 
-### <a name="update-iq-for-jupyter-notebooks"></a>更新 Jupyter Notebook 的 IQ#
+現在您可以使用更新後的 `qsharp` Python 套件來執行現有的量子程式。
 
-1. 更新 `iqsharp` 核心
+### <a name="update-the-iq-jupyter-kernel"></a>更新 IQ# Jupyter 核心
+
+更新程式取決於您最初是使用 conda 或 .NET CLI 和 pip 進行安裝。
+
+#### <a name="update-using-conda-recommended"></a>[使用 conda 更新 (建議做法)](#tab/tabid-conda)
+
+1. 啟動您安裝 `qsharp` 套件的 conda 環境，然後執行此命令來更新：
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. 從您現有的每個 Q# Jupyter Notebook中的資料格執行下列命令：
+
+    ```
+    %workspace reload
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[使用 .NET CLI 和 pip 更新 (進階做法)](#tab/tabid-dotnetcli)
+
+1. 更新 `Microsoft.Quantum.IQSharp` 套件：
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-2. 確認 `iqsharp` 版本
+1. 確認 `iqsharp` 的版本：
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -229,19 +267,21 @@ ms.locfileid: "85274028"
     您的輸出應該類似如下範例：
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    如果您的 `iqsharp` 版本較新，不要擔心，它應該符合[最新版本](xref:microsoft.quantum.relnotes)。
+    如果您的 `iqsharp` 版本較高，別擔心。 其應該符合[最新版本](xref:microsoft.quantum.relnotes)。
 
-3. 從 Jupyter Notebook 中的資料格執行下列命令：
+1. 從您現有的每個 Q# Jupyter Notebook中的資料格執行下列命令：
 
     ```
     %workspace reload
     ```
 
-4. 您現在可以開啟現有的 Jupyter Notebook，並使用更新後的 QDK 加以執行。
+***
+
+您現在可以使用更新後的 IQ# 核心來執行現有的 Q# Jupyter Notebook。
 
 ### <a name="update-visual-studio-qdk-extension"></a>更新 Visual Studio QDK 擴充功能
 

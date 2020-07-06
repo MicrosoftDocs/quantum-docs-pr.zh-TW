@@ -6,17 +6,19 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 2b0b16bdd9fccc3b668036e6df2b20e11b32f8b6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274030"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885506"
 ---
 # <a name="develop-with-q-and-net"></a>使用 Q# 和 .NET 進行開發
 
 Q# 的建置目的是為了能夠與如 C# 和 F# 等 .NET 語法充分配合。
-在本指南中，我們會示範如何將 Q # 搭配以 .NET 語言撰寫的主機程式使用。
+我們在本指南中示範如何將 Q# 搭配以 .NET 語言撰寫的主機程式使用。
+
+首先，我們會建立 Q# 應用程式和 .NET 主機，然後示範如何從主機呼叫 Q#。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -26,23 +28,8 @@ Q# 的建置目的是為了能夠與如 C# 和 F# 等 .NET 語法充分配合。
 
 第一個步驟是為您的 Q # 程式庫建立專案，及為將呼叫 Q # 程式庫中所定義作業和函式的 .NET 主機建立專案。
 
-### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
-
-- 建立新 Q# 程式庫
-  - 移至 [檔案] -> [新增] -> [專案]
-  - 在搜尋方塊中鍵入 "Q#"。
-  - 選取 [Q# 程式庫]
-  - 選取 [**下一步**]
-  - 選擇程式庫的名稱和位置
-  - 請確定 [將專案和解決方案放在相同目錄中] 為**未勾選**
-  - 選取 [建立] 
-- 建立新的 C# 或 F# 主機程式
-  - 移至 [檔案] → [新增] → [專案]
-  - 為 C# 或 F# 選取 \[主控台應用程式 \(.NET Core\)\]
-  - 選取 [**下一步**]
-  - 在 [解決方案] 下方，選取 [新增至解決方案]
-  - 選擇主機程式的名稱
-  - 選取 [建立] 
+依照對應至您開發環境的索引標籤中的指示進行。
+如果您使用 Visual Studio 或 VS Code 以外的編輯器，只要遵循命令列步驟即可。
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code 或命令列](#tab/tabid-cmdline)
 
@@ -72,6 +59,24 @@ Q# 的建置目的是為了能夠與如 C# 和 F# 等 .NET 語法充分配合。
   dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
   dotnet sln quantum-dotnet.sln add ./host/host.csproj
   ```
+
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+
+- 建立新 Q# 程式庫
+  - 移至 [檔案] -> [新增] -> [專案]
+  - 在搜尋方塊中鍵入 "Q#"。
+  - 選取 [Q# 程式庫]
+  - 選取 [**下一步**]
+  - 選擇程式庫的名稱和位置
+  - 請確定 [將專案和解決方案放在相同目錄中] 為**未勾選**
+  - 選取 [建立] 
+- 建立新的 C# 或 F# 主機程式
+  - 移至 [檔案] → [新增] → [專案]
+  - 為 C# 或 F# 選取 \[主控台應用程式 \(.NET Core\)\]
+  - 選取 [**下一步**]
+  - 在 [解決方案] 下方，選取 [新增至解決方案]
+  - 選擇主機程式的名稱
+  - 選取 [建立] 
 
 ***
 
