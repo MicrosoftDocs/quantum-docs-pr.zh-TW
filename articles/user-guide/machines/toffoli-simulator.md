@@ -1,28 +1,33 @@
 ---
-title: 量子開發工具組 Toffoli 模擬器
+title: 量子 Toffoli 模擬器-量子開發工具組
 description: 深入瞭解 Microsoft QDK Toffoli 模擬器，這是一種特殊用途的量子模擬器，可與數百萬個 qubits 搭配使用。
 author: alan-geller
 ms.author: ageller@microsoft.com
-ms.date: 01/16/2019
+ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: 8a29caaa0fa058600a74e7d130e644374cbfa19c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: a6ceee592e628215511ec83475d9e25bf54674f7
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274680"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870612"
 ---
-# <a name="quantum-development-kit-toffoli-simulator"></a><span data-ttu-id="dfd99-103">量子開發工具組 Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="dfd99-103">Quantum Development Kit Toffoli Simulator</span></span>
+# <a name="quantum-development-kit-qdk-toffoli-simulator"></a><span data-ttu-id="f3fab-103">量子開發工具組（QDK） Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="f3fab-103">Quantum Development Kit (QDK) Toffoli simulator</span></span>
 
-<span data-ttu-id="dfd99-104">配量開發工具組提供 Toffoli 模擬器，這是一種特殊用途的模擬器，可以模擬僅限於 X、CNOT-CONTAINS 和多重控制 X 配量作業的配量演算法（所有傳統邏輯和計算皆可使用）。</span><span class="sxs-lookup"><span data-stu-id="dfd99-104">The Quantum Development Kit provides a Toffoli simulator, which is a special-purpose simulator that can simulate quantum algorithms that are limited to X, CNOT, and multi-controlled X quantum operations (all classical logic and computations are available).</span></span>
+<span data-ttu-id="f3fab-104">QDK Toffoli 模擬器是一個特殊用途的模擬器，具有有限的範圍，而且只支援 `X` 、 `CNOT` 和多個控制的 `X` 量子作業。</span><span class="sxs-lookup"><span data-stu-id="f3fab-104">The QDK Toffoli simulator is a special-purpose simulator with a limited scope and only supports `X`, `CNOT`, and multi-controlled `X` quantum operations.</span></span> <span data-ttu-id="f3fab-105">所有的傳統邏輯和計算都可供使用。</span><span class="sxs-lookup"><span data-stu-id="f3fab-105">All classical logic and computations are available.</span></span>
 
-<span data-ttu-id="dfd99-105">雖然 Toffoli 模擬器比[完整狀態](xref:microsoft.quantum.machines.full-state-simulator)模擬器更受限制，但它可以模擬遠較多的 qubits。</span><span class="sxs-lookup"><span data-stu-id="dfd99-105">While the Toffoli simulator is much more restricted in operation than the [full state simulator](xref:microsoft.quantum.machines.full-state-simulator), it can simulate far more qubits.</span></span>
-<span data-ttu-id="dfd99-106">Toffoli 模擬器可以與數百萬個 qubits 搭配使用，而完整狀態模擬器通常限制為大約30個。</span><span class="sxs-lookup"><span data-stu-id="dfd99-106">The Toffoli simulator can be used with millions of qubits, while the full state simulator is generally limited to about 30.</span></span>
-<span data-ttu-id="dfd99-107">它可以執行並在您的電腦上，以 Q # 撰寫一組有限的量子演算法，比方說，評估布耳函數的 oracles 可以使用這些閘道來執行，因此在上測試時，會使用此模擬器來改變大量的 qubits。</span><span class="sxs-lookup"><span data-stu-id="dfd99-107">It can execute and debug a limited set of quantum algorithms written in Q# on your computer; for instance, oracles that evaluate Boolean functions can be implemented using these gates and so tested on vary large numbers of qubits using this simulator.</span></span>
+<span data-ttu-id="f3fab-106">雖然 Toffoli 模擬器的功能比[完整狀態](xref:microsoft.quantum.machines.full-state-simulator)模擬器更受限制，但它的優點是能夠模擬更多 qubits。</span><span class="sxs-lookup"><span data-stu-id="f3fab-106">While the Toffoli simulator is more restricted in functionality than the [full state simulator](xref:microsoft.quantum.machines.full-state-simulator), it has the advantage of being able to simulate far more qubits.</span></span> <span data-ttu-id="f3fab-107">Toffoli 模擬器可以與數百萬個 qubits 搭配使用，而完整狀態模擬器則限制為大約 30 qubits。</span><span class="sxs-lookup"><span data-stu-id="f3fab-107">The Toffoli simulator can be used with millions of qubits, while the full state simulator is limited to about 30 qubits.</span></span> <span data-ttu-id="f3fab-108">例如，這對於評估布耳函數的 oracles 來說很有用-它們可以使用有限的支援演算法集來實行，並在大量的 qubits 上進行測試。</span><span class="sxs-lookup"><span data-stu-id="f3fab-108">This is useful, for example, with oracles that evaluate Boolean functions - they can be implemented using the limited set of supported algorithms and tested on a large number of qubits.</span></span>
 
-<span data-ttu-id="dfd99-108">此配量模擬器會透過 `ToffoliSimulator` 類別公開。</span><span class="sxs-lookup"><span data-stu-id="dfd99-108">This quantum simulator is exposed via the `ToffoliSimulator` class.</span></span>
-<span data-ttu-id="dfd99-109">若要使用模擬器，請直接建立此類別的實例，並將它傳遞給 `Run` 您想要執行的量子作業方法，以及其餘的參數：</span><span class="sxs-lookup"><span data-stu-id="dfd99-109">To use the simulator, simply create an instance of this class and pass it to the `Run` method of the quantum operation you want to execute along with the rest of the parameters:</span></span>
+## <a name="invoking-the-toffoli-simulator"></a><span data-ttu-id="f3fab-109">叫用 Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="f3fab-109">Invoking the Toffoli simulator</span></span>
+
+<span data-ttu-id="f3fab-110">您會透過類別公開 Toffoli 模擬器 `ToffoliSimulator` 。</span><span class="sxs-lookup"><span data-stu-id="f3fab-110">You expose the Toffoli simulator via the `ToffoliSimulator` class.</span></span> <span data-ttu-id="f3fab-111">如需其他詳細資訊，請參閱[執行 Q # 程式的方式](xref:microsoft.quantum.guide.host-programs)。</span><span class="sxs-lookup"><span data-stu-id="f3fab-111">For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
+
+### <a name="invoking-the-toffoli-simulator-from-c"></a><span data-ttu-id="f3fab-112">從 C 叫用 Toffoli 模擬器#</span><span class="sxs-lookup"><span data-stu-id="f3fab-112">Invoking the Toffoli simulator from C#</span></span>
+
+<span data-ttu-id="f3fab-113">如同其他目的電腦，您必須先建立類別的實例 `ToffoliSimulator` ，然後將它當做作業之方法的第一個參數來傳遞 `Run` 。</span><span class="sxs-lookup"><span data-stu-id="f3fab-113">As with other target machines, you first create an instance of the `ToffoliSimulator` class and then pass it as the first parameter of an operation's `Run` method.</span></span>
+
+<span data-ttu-id="f3fab-114">請注意，與類別不同的是， `QuantumSimulator` `ToffoliSimulator` 類別不會執行 <xref:System.IDisposable> 介面，因此您不需要將它放在 `using` 語句內。</span><span class="sxs-lookup"><span data-stu-id="f3fab-114">Note that, unlike the `QuantumSimulator` class, the `ToffoliSimulator` class does not implement the <xref:System.IDisposable> interface, and thus you do not need to enclose it within a `using` statement.</span></span>
 
 ```csharp
     var sim = new ToffoliSimulator();
@@ -30,25 +35,54 @@ ms.locfileid: "85274680"
     ///...
 ```
 
-## <a name="other-operations"></a><span data-ttu-id="dfd99-110">其他作業</span><span class="sxs-lookup"><span data-stu-id="dfd99-110">Other Operations</span></span>
+### <a name="invoking-the-toffoli-simulator-from-python"></a><span data-ttu-id="f3fab-115">從 Python 叫用 Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="f3fab-115">Invoking the Toffoli simulator from Python</span></span>
 
-<span data-ttu-id="dfd99-111">`ToffoliSimulator` `R` 當產生的作業 `Exp` 等於或到身分識別時，支援旋轉和 exponentiated Paulis （例如和） `X` 。</span><span class="sxs-lookup"><span data-stu-id="dfd99-111">The `ToffoliSimulator` supports rotations and exponentiated Paulis, such as `R` and `Exp`, when the resulting operation is equal to `X` or to the identity.</span></span>
+<span data-ttu-id="f3fab-116">使用來自 Python 程式庫的[toffoli_simulate （）](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable)方法，以及匯入的 Q # 操作：</span><span class="sxs-lookup"><span data-stu-id="f3fab-116">Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:</span></span>
 
-<span data-ttu-id="dfd99-112">測量和判斷提示受到支援，但只能以 Pauli 為 `Z` 基礎。</span><span class="sxs-lookup"><span data-stu-id="dfd99-112">Measurement and assert are supported, but only in the Pauli `Z` basis.</span></span>
-<span data-ttu-id="dfd99-113">請注意，某些測量的機率一律為0或 1;Toffoli 模擬器中沒有隨機性。</span><span class="sxs-lookup"><span data-stu-id="dfd99-113">Note that the probability of some measurement is always either 0 or 1; there is no randomness in the Toffoli simulator.</span></span>
+```python
+qubit_result = myOperation.toffoli_simulate()
+```
 
-<span data-ttu-id="dfd99-114">`DumpMachine``DumpRegister`支援和。</span><span class="sxs-lookup"><span data-stu-id="dfd99-114">`DumpMachine` and `DumpRegister` are supported.</span></span>
-<span data-ttu-id="dfd99-115">它們都會輸出 `Z` 每個 qubit 的目前基礎狀態，每行一個 qubit。</span><span class="sxs-lookup"><span data-stu-id="dfd99-115">They both output the current `Z`-basis state of each qubit, one qubit per line.</span></span>
+### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a><span data-ttu-id="f3fab-117">從命令列叫用 Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="f3fab-117">Invoking the Toffoli simulator from the command line</span></span>
 
-## <a name="qubitcount"></a><span data-ttu-id="dfd99-116">QubitCount</span><span class="sxs-lookup"><span data-stu-id="dfd99-116">QubitCount</span></span>
+<span data-ttu-id="f3fab-118">從命令列執行 Q # 程式時，請使用 **--** 模擬器（或 **-s**快捷方式）參數來指定 Toffoli 模擬器目的電腦。</span><span class="sxs-lookup"><span data-stu-id="f3fab-118">When running a Q# program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the Toffoli simulator target machine.</span></span> <span data-ttu-id="f3fab-119">下列命令會使用 [資源] 估計工具來執行程式：</span><span class="sxs-lookup"><span data-stu-id="f3fab-119">The following command runs a program using the resources estimator:</span></span> 
 
-<span data-ttu-id="dfd99-117">根據預設，會 `ToffoliSimulator` 為 65536 qubits 配置空間。</span><span class="sxs-lookup"><span data-stu-id="dfd99-117">By default, the `ToffoliSimulator` allocates space for 65,536 qubits.</span></span>
-<span data-ttu-id="dfd99-118">如果您的演算法需要的不只是這種情況，您可以將參數的值提供給函式，藉以變更 qubit 計數 `qubitCount` 。</span><span class="sxs-lookup"><span data-stu-id="dfd99-118">If your algorithm requires more than this, you can change the qubit count by providing a value for the `qubitCount` parameter to the constructor.</span></span>
-<span data-ttu-id="dfd99-119">每個額外的 qubit 都需要額外的記憶體位元組，因此高估您需要的 qubits 數目並不會有重大成本。</span><span class="sxs-lookup"><span data-stu-id="dfd99-119">Each additional qubit requires an additional byte of memory, so there is no significant cost to overestimating the number of qubits you'll need.</span></span>
+```dotnetcli
+dotnet run -s ToffoliSimulator
+```
 
-<span data-ttu-id="dfd99-120">例如：</span><span class="sxs-lookup"><span data-stu-id="dfd99-120">For example:</span></span>
+### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a><span data-ttu-id="f3fab-120">從 Juptyer 筆記本叫用 Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="f3fab-120">Invoking the Toffoli simulator from Juptyer Notebooks</span></span>
+
+<span data-ttu-id="f3fab-121">使用 IQ # 魔術命令[% toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli)來執行 Q # 作業。</span><span class="sxs-lookup"><span data-stu-id="f3fab-121">Use the IQ# magic command [%toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) to run the Q# operation.</span></span>
+
+```
+%toffoli myOperation
+```
+
+## <a name="supported-operations"></a><span data-ttu-id="f3fab-122">支援的作業</span><span class="sxs-lookup"><span data-stu-id="f3fab-122">Supported operations</span></span>
+
+<span data-ttu-id="f3fab-123">Toffoli 模擬器支援：</span><span class="sxs-lookup"><span data-stu-id="f3fab-123">The Toffoli simulator supports:</span></span>
+
+* <span data-ttu-id="f3fab-124">`R` `Exp` 當產生的作業等於或身分識別矩陣時，旋轉和 exponentiated Paulis （例如和） `X` 。</span><span class="sxs-lookup"><span data-stu-id="f3fab-124">Rotations and exponentiated Paulis, such as `R` and `Exp`, when the resulting operation equals `X` or the identity matrix.</span></span>
+* <span data-ttu-id="f3fab-125">測量和判斷[提示作業，](xref:microsoft.quantum.diagnostics.assertmeasurement)但僅以 Pauli 為 `Z` 基礎。</span><span class="sxs-lookup"><span data-stu-id="f3fab-125">Measurement and [assert](xref:microsoft.quantum.diagnostics.assertmeasurement) operations, but only in the Pauli `Z` basis.</span></span> <span data-ttu-id="f3fab-126">請注意，測量運算的機率一律為**0**或**1**。Toffoli 模擬器中沒有隨機性。</span><span class="sxs-lookup"><span data-stu-id="f3fab-126">Note that a measurement operation's probability is always either **0** or **1**; there is no randomness in the Toffoli simulator.</span></span>
+* <span data-ttu-id="f3fab-127">`DumpMachine`和 `DumpRegister` 函數。</span><span class="sxs-lookup"><span data-stu-id="f3fab-127">`DumpMachine` and `DumpRegister` functions.</span></span>
+<span data-ttu-id="f3fab-128">這兩個函式都會輸出 `Z` 每個 qubit 的目前基礎狀態，每行一個 qubit。</span><span class="sxs-lookup"><span data-stu-id="f3fab-128">Both functions output the current `Z`-basis state of each qubit, one qubit per line.</span></span>
+
+## <a name="specifying-the-number-of-qubits"></a><span data-ttu-id="f3fab-129">指定 qubits 的數目</span><span class="sxs-lookup"><span data-stu-id="f3fab-129">Specifying the number of qubits</span></span>
+
+<span data-ttu-id="f3fab-130">根據預設， `ToffoliSimulator` 實例會為 65536 qubits 配置空間。</span><span class="sxs-lookup"><span data-stu-id="f3fab-130">By default, a `ToffoliSimulator` instance allocates space for 65,536 qubits.</span></span>
+<span data-ttu-id="f3fab-131">如果您的演算法需要比這更多的 qubits，您可以將參數的值提供給函式，藉以指定 qubit 計數 `qubitCount` 。</span><span class="sxs-lookup"><span data-stu-id="f3fab-131">If your algorithm requires more qubits than this, you can specify the qubit count by providing a value for the `qubitCount` parameter to the constructor.</span></span>
+<span data-ttu-id="f3fab-132">每個額外的 qubit 只需要一個位元組的記憶體，因此高估您需要的 qubits 數目並不會有重大的成本。</span><span class="sxs-lookup"><span data-stu-id="f3fab-132">Each additional qubit requires only one byte of memory, so there is no significant cost to overestimating the number of qubits you'll need.</span></span>
+
+<span data-ttu-id="f3fab-133">例如：</span><span class="sxs-lookup"><span data-stu-id="f3fab-133">For example:</span></span>
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);
     var res = myLargeOperation.Run(sim).Result;
 ```
+
+## <a name="see-also"></a><span data-ttu-id="f3fab-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f3fab-134">See also</span></span>
+
+- [<span data-ttu-id="f3fab-135">量子資源估計工具</span><span class="sxs-lookup"><span data-stu-id="f3fab-135">Quantum Resources Estimator</span></span>](xref:microsoft.quantum.machines.resources-estimator)
+- [<span data-ttu-id="f3fab-136">量子追蹤模擬器</span><span class="sxs-lookup"><span data-stu-id="f3fab-136">Quantum Trace simulator</span></span>](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+- [<span data-ttu-id="f3fab-137">量子完整狀態模擬器</span><span class="sxs-lookup"><span data-stu-id="f3fab-137">Quantum Full State simulator</span></span>](xref:microsoft.quantum.machines.full-state-simulator) 

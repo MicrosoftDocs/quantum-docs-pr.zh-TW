@@ -3,20 +3,22 @@ title: 取得能階估計值
 description: '逐步解說範例 Q # 程式，以評估分子 hydrogen 的能源等級值。'
 author: guanghaolow
 ms.author: gulow
-ms.date: 10/23/2018
+ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 3242d8c6dc6fad2bd99055027dd7ce4ec3510ff4
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274687"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871561"
 ---
-# <a name="obtaining-energy-level-estimates"></a><span data-ttu-id="a4ecd-103">取得能階估計值</span><span class="sxs-lookup"><span data-stu-id="a4ecd-103">Obtaining energy level estimates</span></span>
-<span data-ttu-id="a4ecd-104">估計能源等級的值是量子化學的其中一個主要應用程式。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-104">Estimating the values of energy levels is one of the principal applications of quantum chemistry.</span></span> <span data-ttu-id="a4ecd-105">在這裡，我們將概述如何執行這項作業，以瞭解分子 Hydrogen 的標準範例。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-105">Here, we outline how this may be performed for the canonical example of molecular Hydrogen.</span></span> <span data-ttu-id="a4ecd-106">本節中所參考的範例位於 `MolecularHydrogen` 化學範例存放庫中。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-106">The sample referenced in this section is `MolecularHydrogen` in the chemistry samples repository.</span></span> <span data-ttu-id="a4ecd-107">繪製輸出的更多視覺效果範例就是 `MolecularHydrogenGUI` 示範。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-107">A more visual example that plots the output is the `MolecularHydrogenGUI` demo.</span></span>
+# <a name="obtaining-energy-level-estimates"></a><span data-ttu-id="e47fc-103">取得能階估計值</span><span class="sxs-lookup"><span data-stu-id="e47fc-103">Obtaining energy level estimates</span></span>
+<span data-ttu-id="e47fc-104">估計能源等級的值是量子化學的其中一個主要應用程式。</span><span class="sxs-lookup"><span data-stu-id="e47fc-104">Estimating the values of energy levels is one of the principal applications of quantum chemistry.</span></span> <span data-ttu-id="e47fc-105">本文概述如何執行這項操作，以取得分子 hydrogen 的標準範例。</span><span class="sxs-lookup"><span data-stu-id="e47fc-105">This article outlines how you can perform this for the canonical example of molecular hydrogen.</span></span> <span data-ttu-id="e47fc-106">本節中所參考的範例位於 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) 化學範例存放庫中。</span><span class="sxs-lookup"><span data-stu-id="e47fc-106">The sample referenced in this section is [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) in the chemistry samples repository.</span></span> <span data-ttu-id="e47fc-107">繪製輸出的更多視覺效果範例就是 [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) 示範。</span><span class="sxs-lookup"><span data-stu-id="e47fc-107">A more visual example that plots the output is the [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) demo.</span></span>
 
-<span data-ttu-id="a4ecd-108">我們的第一個步驟是建立代表分子 Hydrogen 的 Hamiltonian。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-108">Our first step is to construct the Hamiltonian representing molecular Hydrogen.</span></span> <span data-ttu-id="a4ecd-109">雖然這可以透過 NWChem 工具來建立，但我們會在此範例中手動新增 Hamiltonian 詞彙以求簡潔。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-109">Though this can be constructed through the NWChem tool, we manually add Hamiltonian terms for brevity in this sample.</span></span>
+## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a><span data-ttu-id="e47fc-108">估計分子 hydrogen 的能源值</span><span class="sxs-lookup"><span data-stu-id="e47fc-108">Estimating the energy values of molecular hydrogen</span></span>
+
+<span data-ttu-id="e47fc-109">第一個步驟是建立代表分子 hydrogen 的 Hamiltonian。</span><span class="sxs-lookup"><span data-stu-id="e47fc-109">The first step is to construct the Hamiltonian representing molecular hydrogen.</span></span> <span data-ttu-id="e47fc-110">雖然您可以使用 NWChem 工具來加以建立，但為了簡潔起見，此範例會手動新增 Hamiltonian 詞彙。</span><span class="sxs-lookup"><span data-stu-id="e47fc-110">Although you can construct this using the NWChem tool, for brevity, this sample adds the Hamiltonian terms manually.</span></span>
 
 ```csharp
     // These orbital integrals are represented using the OrbitalIntegral
@@ -35,11 +37,11 @@ ms.locfileid: "85274687"
         new OrbitalIntegral(new int[] { }, energyOffset)
     };
 
-    // We initialize a fermion Hamiltonian data structure and add terms to it.
+    // Initialize a fermion Hamiltonian data structure and add terms to it.
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-<span data-ttu-id="a4ecd-110">模擬 Hamiltonian 需要我們將 fermion 運算子轉換成 qubit 運算子。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-110">Simulating the Hamiltonian requires us to convert the fermion operators to qubit operators.</span></span> <span data-ttu-id="a4ecd-111">這種轉換是透過 Wigner 編碼方式執行，如下所示。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-111">This conversion is performed through the Jordan-Wigner encoding as follows.</span></span>
+<span data-ttu-id="e47fc-111">模擬 Hamiltonian 需要將 fermion 運算子轉換成 qubit 運算子。</span><span class="sxs-lookup"><span data-stu-id="e47fc-111">Simulating the Hamiltonian requires converting the fermion operators to qubit operators.</span></span> <span data-ttu-id="e47fc-112">這種轉換是透過 Wigner 編碼方式執行，如下所示：</span><span class="sxs-lookup"><span data-stu-id="e47fc-112">This conversion is performed through the Jordan-Wigner encoding as follows:</span></span>
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -49,8 +51,8 @@ ms.locfileid: "85274687"
     // computer.
     var jordanWignerEncoding = fermionHamiltonian.ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
 
-    // We also need to create an input quantum state to this Hamiltonian.
-    // Let us use the Hartree-Fock state.
+    // You also need to create an input quantum state to this Hamiltonian.
+    // Use the Hartree-Fock state.
     var fermionWavefunction = fermionHamiltonian.CreateHartreeFockState(nElectrons);
 
     // This Jordan-Wigner data structure also contains a representation 
@@ -60,7 +62,7 @@ ms.locfileid: "85274687"
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-<span data-ttu-id="a4ecd-112">我們現在會將 `qSharpData` 代表 Hamiltonian 的傳遞至 `TrotterStepOracle` [模擬 Hamiltonian dynamics](xref:microsoft.quantum.libraries.standard.algorithms)中的函式。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-112">We now pass the `qSharpData` representing the Hamiltonian to the `TrotterStepOracle` function in [Simulating Hamiltonian dynamics](xref:microsoft.quantum.libraries.standard.algorithms).</span></span> <span data-ttu-id="a4ecd-113">`TrotterStepOracle`傳回的量子運算會接近 Hamiltonian 的即時進化。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-113">`TrotterStepOracle` returns a quantum operation that approximates the real time-evolution of the Hamiltonian.</span></span>
+<span data-ttu-id="e47fc-113">接下來， `qSharpData` 將代表 Hamiltonian 的傳遞至函式 `TrotterStepOracle` 。</span><span class="sxs-lookup"><span data-stu-id="e47fc-113">Next, pass `qSharpData`, which represents the Hamiltonian, to the `TrotterStepOracle` function.</span></span> <span data-ttu-id="e47fc-114">`TrotterStepOracle`傳回接近 Hamiltonian 即時演進的量子運算。</span><span class="sxs-lookup"><span data-stu-id="e47fc-114">`TrotterStepOracle` returns a quantum operation that approximates the real-time evolution of the Hamiltonian.</span></span> <span data-ttu-id="e47fc-115">如需詳細資訊，請參閱[模擬 Hamiltonian dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms)。</span><span class="sxs-lookup"><span data-stu-id="e47fc-115">For more information, see [Simulating Hamiltonian dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).</span></span>
 
 ```qsharp
 // qSharpData passed from driver
@@ -74,13 +76,13 @@ let integratorOrder = 4;
 
 // `oracle` is an operation that applies a single time-step of evolution for duration `stepSize`.
 // `rescale` is just `1.0/stepSize` -- the number of steps required to simulate unit-time evolution.
-// `nQubits` is the number of qubits that must be allocated to run the `oracle` operatrion.
+// `nQubits` is the number of qubits that must be allocated to run the `oracle` operation.
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-<span data-ttu-id="a4ecd-114">我們現在可以使用標準程式庫的階段估計演算法，利用上述模擬來學習地面狀態能源。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-114">We can now use the standard library's phase estimation algorithms to learn the ground state energy using the above simulation.</span></span> <span data-ttu-id="a4ecd-115">這需要準備良好的量子地面狀態近似值。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-115">This requires preparing a good approximation to the quantum ground state.</span></span> <span data-ttu-id="a4ecd-116">架構中會提供這類近似值的建議 `Broombridge` ，但這些建議不存在，預設方法會將數個 `hamiltonian.NElectrons` electrons 新增至大量，以將對角線一 electron 的詞彙 energies 降到最低。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-116">Suggestions for such approximations are provided in the `Broombridge` schema, but absent these suggestions, the default approach adds a number of `hamiltonian.NElectrons` electrons to  greedily minimize the diagonal one-electron term energies.</span></span> <span data-ttu-id="a4ecd-117">階段估計函式和作業位於[Microsoft 量子命名空間](xref:microsoft.quantum.characterization in DocFX notation)中。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-117">The phase estimation functions and operations are located in the [Microsoft.Quantum.Characterization namespace](xref:microsoft.quantum.characterization in DocFX notation).</span></span>
+<span data-ttu-id="e47fc-116">此時，您可以使用標準程式庫的[階段估計演算法](xref:microsoft.quantum.libraries.characterization)，利用先前的模擬學習地面狀態能源。</span><span class="sxs-lookup"><span data-stu-id="e47fc-116">At this point, you can use the standard library's [phase estimation algorithms](xref:microsoft.quantum.libraries.characterization) to learn the ground state energy using the previous simulation.</span></span> <span data-ttu-id="e47fc-117">這需要準備良好的量子地面狀態近似值。</span><span class="sxs-lookup"><span data-stu-id="e47fc-117">This requires preparing a good approximation to the quantum ground state.</span></span> <span data-ttu-id="e47fc-118">架構中會提供這類近似值的建議 [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 。</span><span class="sxs-lookup"><span data-stu-id="e47fc-118">Suggestions for such approximations are provided in the [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema.</span></span> <span data-ttu-id="e47fc-119">不過，如果不存在這些建議，則預設方法會將數個 `hamiltonian.NElectrons` electrons 新增至大量，將 electron 詞彙 energies 的對角線降到最低。</span><span class="sxs-lookup"><span data-stu-id="e47fc-119">However, absent these suggestions, the default approach adds a number of `hamiltonian.NElectrons` electrons to greedily minimize the diagonal one-electron term energies.</span></span> <span data-ttu-id="e47fc-120">階段估計函式和作業是以 DocFX 標記法的形式在[Microsoft 量子](xref:microsoft.quantum.characterization)命名空間中提供。</span><span class="sxs-lookup"><span data-stu-id="e47fc-120">The phase estimation functions and operations are provided in DocFX notation in the [Microsoft.Quantum.Characterization](xref:microsoft.quantum.characterization) namespace.</span></span>
 
-<span data-ttu-id="a4ecd-118">下列程式碼片段顯示化學模擬程式庫的即時進化輸出如何與量子階段估計整合。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-118">The following snippet shows how the real time-evolution output by the chemistry simulation library may be integrated with quantum phase estimation.</span></span>
+<span data-ttu-id="e47fc-121">下列程式碼片段顯示化學模擬程式庫的即時進化輸出如何與量子階段估計整合。</span><span class="sxs-lookup"><span data-stu-id="e47fc-121">The following snippet shows how the real-time evolution output by the chemistry simulation library integrates with quantum phase estimation.</span></span>
 
 ```qsharp
 operation GetEnergyByTrotterization (
@@ -93,42 +95,42 @@ operation GetEnergyByTrotterization (
     // `qSharpData`
     let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = qSharpData!;
     
-    // We use a Product formula, also known as `Trotterization` to
+    // Using a Product formula, also known as `Trotterization`, to
     // simulate the Hamiltonian.
     let (nQubits, (rescaleFactor, oracle)) = 
         TrotterStepOracle(qSharpData, trotterStepSize, trotterOrder);
     
-    // The operation that creates the trial state is defined below.
+    // The operation that creates the trial state is defined here.
     // By default, greedy filling of spin-orbitals is used.
     let statePrep = PrepareTrialState(statePrepData, _);
     
-    // We use the Robust Phase Estimation algorithm
+    // Using the Robust Phase Estimation algorithm
     // of Kimmel, Low and Yoder.
     let phaseEstAlgorithm = RobustPhaseEstimation(nBitsPrecision, _, _);
     
     // This runs the quantum algorithm and returns a phase estimate.
     let estPhase = EstimateEnergy(nQubits, statePrep, oracle, phaseEstAlgorithm);
     
-    // We obtain the energy estimate by rescaling the phase estimate
+    // Now, obtain the energy estimate by rescaling the phase estimate
     // with the trotterStepSize. We also add the constant energy offset
     // to the estimated energy.
     let estEnergy = estPhase * rescaleFactor + energyOffset;
     
-    // We return both the estimated phase, and the estimated energy.
+    // Return both the estimated phase and the estimated energy.
     return (estPhase, estEnergy);
 }
 ```
 
-<span data-ttu-id="a4ecd-119">現在可以從驅動程式叫用此 Q # 代碼。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-119">This Q# code may now be invoke from the driver program.</span></span> <span data-ttu-id="a4ecd-120">在下列中，我們會建立一個完整狀態的模擬器並執行 `GetEnergyByTrotterization` ，以取得地面狀態的能源。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-120">In the following, we create a full-state simulator and run `GetEnergyByTrotterization` to obtain the ground state energy.</span></span>
+<span data-ttu-id="e47fc-122">您現在可以從主機程式叫用 Q # 程式碼。</span><span class="sxs-lookup"><span data-stu-id="e47fc-122">You can now invoke the Q# code from the host program.</span></span> <span data-ttu-id="e47fc-123">下列 c # 程式碼會建立一個完整狀態的模擬器，並執行 `GetEnergyByTrotterization` 以取得地面狀態的能源。</span><span class="sxs-lookup"><span data-stu-id="e47fc-123">The following C# code creates a full-state simulator and runs `GetEnergyByTrotterization` to obtain the ground state energy.</span></span>
 
 ```csharp
 using (var qsim = new QuantumSimulator())
 {
-    // We specify the bits of precision desired in the phase estimation 
+    // Specify the bits of precision desired in the phase estimation 
     // algorithm
     var bits = 7;
 
-    // We specify the step-size of the simulated time-evolution. This needs to
+    // Specify the step size of the simulated time evolution. The step size needs to
     // be small enough to avoid aliasing of phases, and also to control the
     // error of simulation.
     var trotterStep = 0.4;
@@ -136,10 +138,10 @@ using (var qsim = new QuantumSimulator())
     // Choose the Trotter integrator order
     Int64 trotterOrder = 1;
 
-    // As the quantum algorithm is probabilistic, let us run a few trials.
+    // As the quantum algorithm is probabilistic, run a few trials.
 
     // This may be compared to true value of
-    Console.WriteLine("Exact molecular Hydrogen ground state energy: -1.137260278.\n");
+    Console.WriteLine("Exact molecular hydrogen ground state energy: -1.137260278.\n");
     Console.WriteLine("----- Performing quantum energy estimation by Trotter simulation algorithm");
     for (int i = 0; i < 5; i++)
     {
@@ -149,4 +151,7 @@ using (var qsim = new QuantumSimulator())
 }
 ```
 
-<span data-ttu-id="a4ecd-121">請注意，會傳回兩個參數。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-121">Note that two parameters are returned.</span></span> <span data-ttu-id="a4ecd-122">`energyEst`是地面州能源的估計值，而且應該平均地解決 `-1.137` 。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-122">`energyEst` is the estimate of the ground state energy, and should be around `-1.137` on average.</span></span> <span data-ttu-id="a4ecd-123">`phaseEst`這是階段估計演算法所傳回的原始階段，對於因太大而發生別名的診斷很有用 `trotterStep` 。</span><span class="sxs-lookup"><span data-stu-id="a4ecd-123">`phaseEst` is the raw phase returned by the phase estimation algorithm, and is useful to diagnose when aliasing occurs due to a `trotterStep` that is too large.</span></span>
+<span data-ttu-id="e47fc-124">作業會傳回兩個參數：</span><span class="sxs-lookup"><span data-stu-id="e47fc-124">The operation returns two parameters:</span></span> 
+
+- <span data-ttu-id="e47fc-125">`energyEst`是地面州能源的估計值，而且應該接近 `-1.137` 平均。</span><span class="sxs-lookup"><span data-stu-id="e47fc-125">`energyEst` is the estimate of the ground state energy and should be close to `-1.137` on average.</span></span> 
+- <span data-ttu-id="e47fc-126">`phaseEst`這是階段估計演算法所傳回的原始階段。</span><span class="sxs-lookup"><span data-stu-id="e47fc-126">`phaseEst` is the raw phase returned by the phase estimation algorithm.</span></span> <span data-ttu-id="e47fc-127">這很適合用於診斷因為值太大而發生的別名 `trotterStep` 。</span><span class="sxs-lookup"><span data-stu-id="e47fc-127">This useful for diagnosing aliasing when it occurs due to a `trotterStep` value that is too large.</span></span>
