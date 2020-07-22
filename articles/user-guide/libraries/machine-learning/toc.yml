@@ -1,5 +1,5 @@
 - name: 量子機器學習簡介
-  href: introduction.md
+  href: intro.md
 - name: 基本分類
   href: basic-classification.md
 - name: 設計您自己的分類器
