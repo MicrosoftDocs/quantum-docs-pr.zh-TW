@@ -1,10 +1,10 @@
-- name: 深度計數器
-  href: depth-counter.md
 - name: 相異輸入檢查工具
   href: distinct-inputs-checker.md
 - name: 不正確的量子位元使用檢查工具
   href: invalidated-qubits-use-checker.md
 - name: 基本作業計數器
   href: primitive-operations-counter.md
+- name: 深度計數器
+  href: depth-counter.md
 - name: 寬度計數器
   href: width-counter.md
