@@ -1,21 +1,25 @@
 ---
-title: 相異的輸入檢查
-description: '深入瞭解 Microsoft QDK Distinct 輸入檢查工具，其會檢查您的 Q # 程式碼是否有與共享 qubits 的潛在衝突。'
+title: 相異輸入檢查程式-量子開發工具組
+description: 深入瞭解 Microsoft QDK distinct 輸入檢查工具，其會使用配量追蹤模擬器來檢查您的 Q 號碼程式碼是否有共用 qubits 的潛在衝突。
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 11a0573242c8afb12f242aa3be5f9cff18290452
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274584"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871139"
 ---
-# <a name="distinct-inputs-checker"></a>相異的輸入檢查
+# <a name="quantum-trace-simulator-distinct-inputs-checker"></a>量子追蹤模擬器：相異的輸入檢查
 
-`Distinct Inputs Checker`是量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的一部分。 其設計目的是要偵測程式碼中的潛在 bug。 請考慮下列 Q 號碼程式碼，以說明此套件所偵測到的問題：
+「相異輸入檢查」是「量子開發工具組」配量[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的一部分。 您可以使用它來偵測因與共享 qubits 衝突所造成的程式碼中的潛在 bug。 
+
+## <a name="conflicts-with-shared-qubits"></a>與共享 qubits 衝突
+
+請考慮下列的 Q # 程式碼，以說明相異輸入檢查所偵測到的問題：
 
 ```qsharp
 operation ApplyBoth(
@@ -29,7 +33,9 @@ operation ApplyBoth(
 }
 ```
 
-當使用者查看此程式時，會假設和呼叫的順序並 `op1` `op2` 不重要，因為 `q1` 和 `q2` 是不同的 qubits 和作業在不同的 qubits 向下。 現在讓我們來看一個範例，其中會使用此作業：
+當您查看這個程式時，您可以假設它所呼叫的順序並不 `op1` `op2` 重要，因為 `q1` 和 `q2` 是不同的 qubits 和作業在不同的 qubits 回撥。 
+
+現在，請考慮下列範例：
 
 ```qsharp
 operation ApplyWithNonDistinctInputs() : Unit {
@@ -41,11 +47,21 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-現在 `op1` 和 `op2` 都是使用部分應用程式取得，並共用 qubit。 當使用者在上述範例中呼叫時，作業的 `ApplyBoth` 結果將取決於和內部的順序 `op1` `op2` `ApplyBoth` 。 這絕對不是使用者預期會發生的情況。 `Distinct Inputs Checker`會在啟用和擲回時偵測到這類情況 `DistinctInputsCheckerException` 。 如需詳細資訊，請參閱[DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException)上的 API 檔。
+請注意， `op1` 和 `op2` 都是使用部分應用程式取得，並共用 qubit。 當您 `ApplyBoth` 在此範例中呼叫時，作業的結果取決於和內部的順序， `op1` 而 `op2` `ApplyBoth` 不是您預期會發生的情況。 當您啟用「相異輸入檢查程式」時，它會偵測這類情況並擲回 `DistinctInputsCheckerException` 。 如需詳細資訊，請參閱 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> Q # API 程式庫中的。
 
-## <a name="using-the-distinct-inputs-checker-in-your-c-program"></a>在 c # 程式中使用相異的輸入檢查
+## <a name="invoking-the-distinct-inputs-checker"></a>叫用相異的輸入檢查
 
-以下是使用配量電腦追蹤模擬器搭配啟用的 c # 驅動程式代碼範例 `Distinct Inputs Checker` ：
+若要使用相異的輸入檢查來執行配量追蹤模擬器，您必須建立 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 實例，將 `UseDistinctInputsChecker` 屬性設定為**true**，然後 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 使用 `QCTraceSimulatorConfiguration` 做為參數來建立新的實例。 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseDistinctInputsChecker = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-distinct-inputs-checker-in-a-c-host-program"></a>在 c # 主機程式中使用相異輸入檢查
+
+以下是 c # 主機程式的範例，它會使用配量追蹤模擬器並啟用相異輸入檢查器：
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -59,7 +75,7 @@ namespace Quantum.MyProgram
         static void Main(string[] args)
         {
             var traceSimCfg = new QCTraceSimulatorConfiguration();
-            traceSimCfg.useDistinctInputsChecker = true; //enables distinct inputs checker
+            traceSimCfg.UseDistinctInputsChecker = true; //enables distinct inputs checker
             QCTraceSimulator sim = new QCTraceSimulator(traceSimCfg);
             var res = MyQuantumProgram.Run().Result;
             System.Console.WriteLine("Press any key to continue...");
@@ -69,8 +85,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-此類別會 `QCTraceSimulatorConfiguration` 儲存量子電腦追蹤模擬器的設定，並可提供作為此函式的引數 `QCTraceSimulator` 。 當 `useDistinctInputsChecker` 設定為 true 時， `Distinct Inputs Checker` 就會啟用。 如需詳細資訊，請參閱[QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)和[QCTRACESIMULATORCONFIGURATION](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?)上的 API 檔。
+## <a name="see-also"></a>請參閱
 
-## <a name="see-also"></a>另請參閱
-
-- 量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。
+- 量子開發工具組配量[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 參考。
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API 參考。
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException>API 參考。

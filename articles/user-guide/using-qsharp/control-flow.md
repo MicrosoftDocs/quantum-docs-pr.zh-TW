@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: 0cf62a128170bd0c28ff77f00fc23414567b1ea4
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415298"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870986"
 ---
 # <a name="control-flow-in-q"></a>Q 中的控制流程#
 
@@ -42,7 +42,7 @@ ms.locfileid: "85415298"
 請注意，不論是哪一種區塊執行，它都會在自己的範圍內執行。
 `if` `elif` `else` 區塊結束之後，不會顯示在、或區塊內所做的系結。
 
-例如，
+例如
 
 ```qsharp
 if (result == One) {
@@ -166,7 +166,7 @@ while (index < Length(arr) && item < 0) {
 Return 語句會結束作業或函數的執行，並將值傳回給呼叫者。
 其中包含關鍵字 `return` ，後面接著適當類型的運算式和結束分號。
 
-例如，
+例如
 ```qsharp
 return 1;
 ```
@@ -191,7 +191,7 @@ Fail 語句會結束作業的執行，並將錯誤值傳回給呼叫者。
 作業內的 fail 語句數目沒有任何限制。
 如果語句在區塊內遵循 fail 語句，則編譯器可能會發出警告。
 
-例如，
+例如
 
 ```qsharp
 fail $"Impossible state reached";
@@ -278,9 +278,9 @@ using (qubit = Qubit()) {
 這項作業所顯示的重要程式設計功能包括：
 
 * `fixup`迴圈中更複雜的部分，牽涉到量子作業。 
-* 使用 `AssertProb` 語句來確定在程式中特定點測量量子狀態的機率。
+* 使用 `AssertMeasurementProbability` 語句來確定在程式中特定點測量量子狀態的機率。
 
-如需和作業的詳細資訊 [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) ，請參閱[測試和調試](xref:microsoft.quantum.guide.testingdebugging)程式。
+如需和作業的詳細資訊 [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) ，請參閱[測試和調試](xref:microsoft.quantum.guide.testingdebugging)程式。
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -289,10 +289,10 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
         repeat {
             // We expect the target and auxiliary qubits to each be in
             // the |+> state.
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [target], Zero, 1.0,
                 "target qubit should be in the |+> state", 1e-10 );
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [auxiliary], Zero, 1.0,
                 "auxiliary qubit should be in the |+> state", 1e-10 );
 
@@ -302,7 +302,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
             // The probability of measuring |+> state on the auxiliary qubit
             // is 3/4.
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [auxiliary], Zero, 3. / 4.,
                 "Error: the probability to measure |+> in the first
                 auxiliary must be 3/4",

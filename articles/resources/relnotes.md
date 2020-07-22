@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885040"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871547"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -21,6 +21,17 @@ ms.locfileid: "85885040"
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
 
+
+## <a name="version-01220072031"></a>版本0.12.20072031
+
+*發行日期：2020年7月21日*
+
+此版本包含下列項目：
+
+- 在 Q # 筆記本中開啟的命名空間現在可供未來所有的儲存格執行使用。 例如，這可讓命名空間在筆記本頂端的資料格中開啟一次，而不需要在每個程式碼單元中開啟相關的命名空間。 新的 `%lsopen` 魔術命令會顯示目前開啟之命名空間的清單。
+
+請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、[IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 和 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
+
 ## <a name="version-01220070124"></a>版本0.12.20070124
 
 *發行日期：2020年7月2日*
@@ -28,7 +39,7 @@ ms.locfileid: "85885040"
 此版本包含下列項目：
 
 - `qdk-chem`將舊版電子結構問題序列化格式（例如： FCIDUMP）轉換成[Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)的新工具
-- [ `Microsoft.Quantum.Synthesis` 命名空間](xref:microsoft.quantum.synthesis)中的新函式和作業，可用於 coherently 使用轉換和分解式合成演算法來套用傳統 oracles。
+- 命名空間中的新函式和作業，可 [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) 用於 coherently 使用轉換和分解式合成演算法來套用傳統 oracles。
 - IQ # 現在允許 `%simulate` 、 `%estimate` 和其他魔術命令的引數。 如需詳細資訊，請參閱[ `%simulate` 魔術命令參考](xref:microsoft.quantum.iqsharp.magic-ref.simulate)。
 - IQ # 中的新階段顯示選項。 如需詳細資訊，請參閱[ `%config` 魔術命令參考](xref:microsoft.quantum.iqsharp.magic-ref.config)。
 - `qsharp`現在透過 conda 套件（[qsharp](https://anaconda.org/quantum-engineering/qsharp)和[iqsharp](https://anaconda.org/quantum-engineering/iqsharp)）提供 IQ # 和 Python 套件，以簡化 Q # Jupyter 和 python 功能在 conda 環境中的本機安裝。 如需詳細資訊，請參閱[Q # Jupyter 筆記本](xref:microsoft.quantum.install.jupyter)和[包含 Python 的 q #](xref:microsoft.quantum.install.python)安裝指南。
@@ -446,7 +457,7 @@ ms.locfileid: "85885040"
 
 *發行日期：2018 年 6 月 22 日*
 
-此版本包含幾項社群貢獻，以及有所改善的偵錯體驗和增進的效能。  明確說來：
+此版本包含幾項社群貢獻，以及有所改善的偵錯體驗和增進的效能。  具體來說：
 
 * QuantumSimulator 目標電腦的小型和大型模擬的效能改進。
 * 改良的偵錯功能。

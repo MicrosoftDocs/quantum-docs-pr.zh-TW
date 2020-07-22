@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: fa5173f710dd9e0b0b2c110e45aa0bf019111aca
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274607"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870629"
 ---
 # <a name="diagnostics"></a>診斷 #
 
@@ -61,19 +61,19 @@ Q # 標準程式庫提供數個不同的函數來表示事實，包括：
 
 實際上，判斷提示會依賴傳統的量子機制模擬不需要遵守[無複製定理](https://arxiv.org/abs/quant-ph/9607018)的事實，因此我們可以在針對目的電腦使用模擬器時，做出 unphysical 測量和判斷提示。
 因此，我們可以先在傳統模擬器上測試個別作業，再于硬體上進行部署。
-在不允許評估判斷提示的目的電腦上， <xref:microsoft.quantum.intrinsic.assert> 可以放心忽略的呼叫。
+在不允許評估判斷提示的目的電腦上， <xref:microsoft.quantum.diagnostics.assertmeasurement> 可以放心忽略的呼叫。
 
-更常見的情況是，作業判斷提示 <xref:microsoft.quantum.intrinsic.assert> 在給定的 Pauli 基礎測量指定的 qubits 時，一定會有指定的結果。
+更常見的情況是，作業判斷提示 <xref:microsoft.quantum.diagnostics.assertmeasurement> 在給定的 Pauli 基礎測量指定的 qubits 時，一定會有指定的結果。
 如果判斷提示失敗，則會以指定的訊息呼叫來結束執行 `fail` 。
 根據預設，不會執行這項作業;可支援的模擬器應該提供執行執行時間檢查的執行。
-`Assert`具有簽章 `((Pauli[], Qubit[], Result, String) -> ())` 。
-由於 `Assert` 是具有空的元組做為其輸出類型的函式，因此在 `Assert` Q # 程式中不會有任何來自呼叫的效果可觀察。
+`AssertMeasurement`具有簽章 `((Pauli[], Qubit[], Result, String) -> ())` 。
+由於 `AssertMeasurement` 是具有空的元組做為其輸出類型的函式，因此在 `AssertMeasurement` Q # 程式中不會有任何來自呼叫的效果可觀察。
 
-在 <xref:microsoft.quantum.intrinsic.assertprob> 給定的 Pauli 基礎中測量給定 qubits 的運算函式，會在某些容錯範圍內具有給定機率的指定結果。
+在 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 給定的 Pauli 基礎中測量給定 qubits 的運算函式，會在某些容錯範圍內具有給定機率的指定結果。
 容錯為加法（例如 `abs(expected-actual) < tol` ）。
 如果判斷提示失敗，則會以指定的訊息呼叫來結束執行 `fail` 。
 根據預設，不會執行這項作業;可支援的模擬器應該提供執行執行時間檢查的執行。
-`AssertProb`具有簽章 `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` 。 第一個 `Double` 參數會提供所需的結果機率，第二個則是容錯。
+`AssertMeasurementProbability`具有簽章 `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` 。 第一個 `Double` 參數會提供所需的結果機率，第二個則是容錯。
 
 我們可以執行高於單一測量的宣告，使用模擬器用來代表 qubit 內部狀態的傳統資訊適合複製，因此我們不需要實際執行測量來測試判斷提示。
 特別是，這可讓我們瞭解在實際硬體上可能無法進行的*不相容*測量。
@@ -100,7 +100,7 @@ using (register = Qubit()) {
 ```
 
 不過，更常見的情況是，我們可能無法存取與 Pauli 運算子 eigenstates 不一致的狀態判斷提示。
-例如，$ \ket{\psi} = （\ket {0} + e ^ {i \pi/8} \ket {1} ）/\sqrt {2} $ 不是任何 eigenstate 運算子的 Pauli，因此我們無法使用 <xref:microsoft.quantum.intrinsic.assertprob> 來唯一判斷 state $ \ket{\psi '} $ 等於 $ \ket{\psi} $。
+例如，$ \ket{\psi} = （\ket {0} + e ^ {i \pi/8} \ket {1} ）/\sqrt {2} $ 不是任何 eigenstate 運算子的 Pauli，因此我們無法使用 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 來唯一判斷 state $ \ket{\psi '} $ 等於 $ \ket{\psi} $。
 相反地，我們必須將判斷提示 $ \ket{\psi '} = \ket{\psi} $ 分解成可使用模擬器支援的原始物件直接測試的假設。
 若要這麼做，請將 $ \ket{\psi} = \Alpha \ket {0} + \Beta \ket {1} $ 用於複數 $ \Alpha = \_ r + a \_ i $ 和 $ \Beta $。
 請注意，此運算式需要四個實數 $ \{ a \_ r、a \_ i、b \_ r、b \_ i \} $ 來指定，因為每個複數都可以表示為實數和虛數部分的總和。

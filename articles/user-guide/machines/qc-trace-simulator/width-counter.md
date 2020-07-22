@@ -1,22 +1,35 @@
 ---
-title: Width 計數器
-description: 深入瞭解 Microsoft QDK Width 計數器，其會計算量副程式中每項作業所配置和借用的 qubits 數目。
+title: 寬度計數器-量子開發工具組
+description: '深入瞭解 Microsoft QDK width 計數器，它會使用量子追蹤模擬器來計算 Q # 程式中由作業所配置和借用的 qubits 數目。'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274571"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871513"
 ---
-# <a name="width-counter"></a>Width 計數器
+# <a name="quantum-trace-simulator-width-counter"></a>量子追蹤模擬器： width 計數器
 
-會 `Width Counter` 計算每個作業所配置和借用的 qubits 數目。
-`Microsoft.Quantum.Intrinsic`命名空間中的所有作業都是以單一 qubit 旋轉、T 閘道、單一 Qubit Clifford 閘道、cnot-contains 閘道，以及多 Qubit Pauli 可預見值的度量來表示。 某些基本作業可以配置額外的 qubits。 例如，乘以受控制的網 `X` 關或控制 `T` 的閘道。 讓我們計算乘以控制閘道的執行所配置的額外 qubits 數目 `X` ：
+[寬度] 計數器是 [量子開發工具組] 配量[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的一部分。 您可以使用它來計算 Q # 程式中每個作業所配置和借用的 qubits 數目。 某些基本作業可以配置額外的 qubits，例如，將受控制的 `X` 作業或控制的 `T` 作業相乘。
+
+## <a name="invoking-the-width-counter"></a>叫用 width 計數器
+
+若要使用 width 計數器來執行配量追蹤模擬器，您必須建立 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 實例，將 `UseWidthCounter` 屬性設定為**true**，然後 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 使用做為參數來建立新的實例 `QCTraceSimulatorConfiguration` 。 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseWidthCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-width-counter-in-a-c-host-program"></a>在 c # 主機程式中使用 width 計數器
+
+本節後面的 c # 範例會 <xref:microsoft.quantum.intrinsic.x> 根據下列 Q # 範例程式碼，計算乘以控制作業的執行所配置的額外 qubits 數目：
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -28,13 +41,11 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-## <a name="using-width-counter-within-a-c-program"></a>在 c # 程式中使用 Width 計數器
-
-`X`對總計5個 qubits 進行控制的運算會配置2個輔助 qubits，而其輸入寬度會是5。 若要檢查是否為這種情況，我們可以使用下列 c # 程式：
+「乘以控制」作業的 <xref:microsoft.quantum.intrinsic.x> 作用總計為五個 qubits、配置兩個[輔助 qubits](xref:microsoft.quantum.glossary#ancilla)，且輸入寬度為**5**。 使用下列 c # 程式來驗證計數：
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
-config.useWidthCounter = true;
+config.UseWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
 var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
@@ -50,13 +61,16 @@ double inputWidth =
         functor: OperationFunctor.Controlled);
 ```
 
-程式的第一個部分會執行 `ApplyMultiControlledX` 。 在第二個部分中，我們會使用方法 `QCTraceSimulator.GetMetric` 來取得已配置的 qubits 數目，以及受控制 `X` 接收為輸入的 qubits 數目。 
+程式的第一個部分會執行此作業 `ApplyMultiControlledX` 。 第二個部分會使用 [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) 方法來抓取已配置的 qubits 數目，以及該作業 `Controlled X` 收到做為輸入的 qubits 數目。 
 
-最後，若要輸出由 width 計數器收集的所有統計資料（CSV 格式），我們可以使用下列內容：
+最後，您可以使用下列方式，輸出 width 計數器所收集的所有統計資料（CSV 格式）：
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>另請參閱 ##
+## <a name="see-also"></a>請參閱
 
-- 量子電腦[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。
+- 量子開發工具組配量[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 參考。
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API 參考。
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter>API 參考。

@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: cd619607af9e2b601f3bec1304c5729d84312f35
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884082"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870969"
 ---
 # <a name="testing-and-debugging"></a>測試和偵錯
 
@@ -50,7 +50,7 @@ $ code . # To open in Visual Studio Code
     operation AllocateQubit () : Unit {
 
         using (qubit = Qubit()) {
-            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+            AssertMeasurement([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -177,7 +177,7 @@ operation AssertQubitsAreAvailable() : Unit
 因為這取決於程式及其執行環境的全域狀態，所以的定義 `AssertQubitsAreAvailable` 也必須是作業。
 不過，我們可以使用該全域狀態來產生簡單的 `Bool` 值做為函數的輸入 `Fact` 。
 
-根據這些想法來建立[的序言](xref:microsoft.quantum.libraries.standard.prelude)，提供了兩個特別有用的判斷提示， <xref:microsoft.quantum.intrinsic.assert> 並將 <xref:microsoft.quantum.intrinsic.assertprob> 模型化為作業 `()` 。 這些判斷提示各自採用 Pauli 運算子來描述特定量測測量、執行測量的量子暫存器，以及假設結果。
+根據這些想法來建立[的序言](xref:microsoft.quantum.libraries.standard.prelude)，提供了兩個特別有用的判斷提示， <xref:microsoft.quantum.diagnostics.assertmeasurement> 並將 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 模型化為作業 `()` 。 這些判斷提示各自採用 Pauli 運算子來描述特定量測測量、執行測量的量子暫存器，以及假設結果。
 模擬使用的目的機器不是由「[無複製定理](https://en.wikipedia.org/wiki/No-cloning_theorem)」所系結，而且可以執行這類測量，而不會干擾傳遞至這類判斷提示的暫存器。
 模擬器之後就可以與先前的函式類似 `PositivityFact` ，如果未在實務中觀察到假設結果，就停止計算：
 
@@ -185,14 +185,14 @@ operation AssertQubitsAreAvailable() : Unit
 using (register = Qubit()) 
 {
     H(register);
-    Assert([PauliX], [register], Zero);
+    AssertMeasurement([PauliX], [register], Zero);
     // Even though we do not have access to states in Q#,
     // we know by the anthropic principle that the state
     // of register at this point is |+〉.
 }
 ```
 
-在實體量子硬體上，如果沒有複製定理可防止檢查配量狀態，和作業只會傳回，而 `Assert` `AssertProb` 不會 `()` 有其他效果。
+在實體量子硬體上，如果沒有複製定理可防止檢查配量狀態，和作業只會傳回，而 `AssertMeasurement` `AssertMeasurementProbability` 不會 `()` 有其他效果。
 
 <xref:microsoft.quantum.diagnostics>命名空間提供更多的系列函式 `Assert` ，您可以用它來檢查更先進的條件。 
 
