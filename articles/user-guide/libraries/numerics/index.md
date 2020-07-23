@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9552f3683e1df8cb10d19d0b3f85223df056f83d
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273397"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871343"
 ---
 # <a name="introduction-to-the-quantum-numerics-library"></a>量子數值程式庫簡介
 
@@ -33,9 +33,10 @@ ms.locfileid: "85273397"
 
 除了到目前為止所提到的整數算術以外，數值程式庫還提供：
 
- - 以一或兩個量子整數數字作為輸入的 (不) 帶正負號整數功能 (乘、平方、帶餘數除法、逆轉換等)
- - 以一或兩個量子固定點數字作為輸入的定點功能 (加 / 減、乘、評分、1/x、多項式求解)
+- 以一或兩個量子整數數字作為輸入的 (不) 帶正負號整數功能 (乘、平方、帶餘數除法、逆轉換等)
+- 以一或兩個量子固定點數字作為輸入的定點功能 (加 / 減、乘、評分、1/x、多項式求解)
 
 ## <a name="getting-started"></a>開始使用
 
-若要開始使用數值程式庫，請參閱[安裝指南](xref:microsoft.quantum.numerics.installation)以及[使用數值程式庫](xref:microsoft.quantum.numerics.usage)的詳細資訊。
+> [!div class="nextstepaction"]
+> [瞭解如何使用數值程式庫](xref:microsoft.quantum.numerics.usage)

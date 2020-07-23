@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273234"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871411"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>參與 Quantum Development Kit
 
@@ -61,10 +61,9 @@ Quantum Development Kit 包含許多不同的部分，在這些部分合作之�
 > [!NOTE]
 > 很遺憾地，我們目前無法接受 [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) 存放庫上的程式碼和文件參與，但我們還是非常感謝您提出錯誤報告。
 
-另外還有一些更特殊化的存放庫，著重在不同的事件或與 Quantum Development Kit 相關的輔助功能。
+另外還有一些更特殊化的存放庫，著重在與 Quantum 開發套件相關的輔助功能。
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty)：適用於 Q# 語法的 LaTeX 格式化支援。
-- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019)：適用於 Deutsch–Jozsa 教學課程的 IQ# Notebook，此教學課程是在 2019 年的實習研討會中提供的。
 
 ## <a name="next-steps"></a>後續步驟
 

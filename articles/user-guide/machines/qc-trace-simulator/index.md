@@ -1,53 +1,32 @@
 ---
-title: 量子電腦追蹤模擬器
-description: 了解如何使用 Microsoft 量子電腦追蹤模擬器來對傳統程式碼進行偵錯，以及評估量子程式的資源需求。
+title: 量子追蹤模擬器 - Quantum 開發套件
+description: 了解如何使用 Microsoft 量子電腦追蹤模擬器來對傳統程式碼進行偵錯，以及評估 Q# 程式的資源需求。
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 4cec688da35951271d87396d9b6a8fed744defc6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: c01f01973ea08153cbfa35d87a588a4eae46f1b7
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273245"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871105"
 ---
-# <a name="quantum-trace-simulator"></a>量子追蹤模擬器
+# <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum 開發套件 (QDK) 量子追蹤模擬器
 
-Microsoft 量子電腦追蹤模擬器會執行量子程式，而不會實際模擬量子電腦的狀態。  因此，追蹤模擬器可以執行使用數千個量子位元的量子程式。  追蹤模擬器適合用於兩種目的： 
+QDK <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 類別會執行量子程式，而不會實際模擬量子電腦的狀態。 因此，量子追蹤模擬器能夠執行使用數千個量子位元的量子程式。  追蹤模擬器適合用於兩種目的： 
 
 * 對屬於量子程式一部分的傳統程式碼進行偵錯。 
-* 估計要在量子電腦上執行指定的量子程式執行個體所需的資源。
+* 估計要在量子電腦上執行指定的量子程式執行個體所需的資源。 事實上，[資源估算器](xref:microsoft.quantum.machines.resources-estimator)是建立在追蹤模擬器上，且提供的計量較少。
 
-追蹤模擬器會仰賴使用者在必須執行測量時所提供的其他資訊。 如需這方面的詳細資訊，請參閱[提供測量結果的機率](#providing-the-probability-of-measurement-outcomes)一節。 
+## <a name="invoking-the-quantum-trace-simulator"></a>叫用量子追蹤模擬器
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>提供測量結果的機率
+您可以使用量子追蹤模擬器來執行任何 Q# 作業。
 
-量子演算法中會出現兩種測量。 第一種會扮演輔助角色，使用者通常知道結果的機率。 在此情況下，使用者可以從 <xref:microsoft.quantum.intrinsic> 命名空間撰寫 <xref:microsoft.quantum.intrinsic.assertprob>，以表達這項了解。 下列範例會加以說明：
+就像其他目標機器一樣，您必須先建立 `QCTraceSimulator` 類別的執行個體，然後將其當做作業中 `Run` 方法的第一個參數傳遞。
 
-```qsharp
-operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
-    using (qubit = Qubit()) {
-        H(qubit);
-        CNOT(qubit, target);
-        CNOT(source, qubit);
-        H(source);
-
-        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-
-        if (M(source) == One)  { Z(target); X(source); }
-        if (M(q) == One) { X(target); X(q); }
-    }
-}
-```
-
-追蹤模擬器在執行 `AssertProb` 時，會做出以下記錄：在 `source` 和 `q` 上測量 `PauliZ` 應該會有 0.5 的機率得到 `Zero` 的結果。 模擬器稍後執行 `M` 時，則會找到所記錄的結果機率值，而且 `M` 會有 0.5 的機率傳回 `Zero` 或 `One`。 對追蹤量子態的模擬器執行相同的程式碼時，這類模擬器會檢查 `AssertProb` 中提供的機率是否正確。
-
-## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>使用量子電腦追蹤模擬器來執行程式 
-
-您可以將量子電腦追蹤模擬器視為只是另一個目標機器。 用來使用模擬器的 C# 驅動程式非常類似於任何其他量子模擬器的驅動程式： 
+請注意，不同於 `QuantumSimulator` 類別，`QCTraceSimulator` 類別不會實作 <xref:System.IDisposable> 介面，因此您不需要將其放在 `using` 陳述式內。
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -69,18 +48,53 @@ namespace Quantum.MyProgram
 }
 ```
 
-請注意，如果有至少一個測量未使用 `AssertProb` 加以標註，則模擬器會從 `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` 命名空間擲回 `UnconstrainedMeasurementException`。 如需詳細資訊，請參閱關於 [UnconstrainedMeasurementException](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.UnconstrainedMeasurementException) 的 API 文件。
+## <a name="providing-the-probability-of-measurement-outcomes"></a>提供測量結果的機率
 
-除了執行量子程式外，追蹤模擬器還隨附五個元件，以偵測程式中的錯誤並執行量子程式資源估計： 
+因為量子追蹤模擬器不會模擬實際的量子狀態，所以無法計算作業內測量結果的機率。 
 
-* [相異輸入檢查工具](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)
-* [不正確的量子位元使用檢查工具](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)
-* [基元操作計數器](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)
-* [電路深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)
-* [電路寬度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)
+因此，如果作業包含測量，您就必須使用來自 <xref:microsoft.quantum.diagnostics> 命名空間中的 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 作業，明確地提供這些機率。 下列範例會加以說明：
 
-這些元件皆可透過在 `QCTraceSimulatorConfiguration` 中設定適當旗標來加以啟用。 對應的參考檔案中會提供有關使用這些元件的更多詳細資料。 如需特定詳細資料，請參閱關於 [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) 的 API 文件。
+```qsharp
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
+        H(source);
+
+        AssertMeasurementProbability([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertMeasurementProbability([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+
+        if (M(source) == One)  { Z(target); X(source); }
+        if (M(q) == One) { X(target); X(q); }
+    }
+}
+```
+
+當量子追蹤模擬器遇到 `AssertMeasurementProbability`，會記錄在 `source` 上測量的 `PauliZ`，然後 `q` 應該會產生 `Zero` 的結果，且機率為 **0.5**。 當模擬器稍後執行 `M` 作業時，會尋找記錄的結果機率值，而 `M` 會傳回 `Zero` 或 `One`，且機率為 **0.5**。 對追蹤量子狀態的模擬器執行相同的程式碼時，模擬器會檢查 `AssertMeasurementProbability` 中提供的機率是否正確。
+
+請注意，如果有至少一個測量作業未使用 `AssertMeasurementProbability` 加以標註，模擬器就會擲回 [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception)。
+
+## <a name="quantum-trace-simulator-tools"></a>量子追蹤模擬器工具
+
+QDK 有五個可搭配量子追蹤模擬器使用的工具，用來偵測程式中的錯誤，以及執行量子程式資源估計： 
+
+|工具 | 描述 |
+|-----| -----|
+|[相異輸入檢查工具](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |檢查共用的量子位元是否有潛在的衝突 |
+|[不正確的量子位元使用檢查工具](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |檢查程式是否將作業套用至已發行的量子位元 |
+|[基元操作計數器](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 計算在量子程式中叫用的每個作業所使用的基本執行次數  |
+|[深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |收集計數，此計數代表在量子程式中所叫用每個作業的深度下限   |
+|[寬度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |計算量子程式中每個作業所配置和借用的量子佔元數目 |
+
+這些工具的的啟用方式，都是要在 `QCTraceSimulatorConfiguration` 中設定適當的旗標，然後將設定傳遞給 `QCTraceSimulator` 宣告。 如需使用這些工具的詳細資訊，請參閱上方清單中的連結。 如需設定 `QCTraceSimulator` 的詳細資訊，請參閱 [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration)。
+
+## <a name="qctracesimulator-methods"></a>QCTraceSimulator 方法
+
+`QCTraceSimulator` 有數個內建方法，可擷取在量子作業期間追蹤的計量值。 在[基元操作計數器](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)、[深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)、[寬度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)文章中可以找到 [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) 和 [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) 方法的範例。 如需所有可用方法的詳細資訊，請參閱 Q# API 參考資料中的 [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)。  
 
 ## <a name="see-also"></a>另請參閱
-量子電腦[追蹤模擬器](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) C# 參考 
 
+- [量子資源估算器](xref:microsoft.quantum.machines.resources-estimator)
+- [量子 Toffoli 模擬器](xref:microsoft.quantum.machines.toffoli-simulator)
+- [量子完整狀態模擬器](xref:microsoft.quantum.machines.full-state-simulator) 
