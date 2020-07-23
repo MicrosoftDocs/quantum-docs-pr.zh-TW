@@ -1,161 +1,54 @@
 ---
-title: 量子模擬器和主應用程式 | Microsoft Docs
-description: 說明如何使用傳統運算的 .NET 語言 (通常是 C# 或 Q#) 來驅動量子模擬器。
+title: 量子模擬器和 Q# 程式
+description: 說明可做為 Q# 程式目標機器的量子模擬器。
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
-ms.date: 12/11/2017
+ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273254"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871156"
 ---
-# <a name="quantum-simulators-and-host-applications"></a><span data-ttu-id="86d31-103">量子模擬器和主應用程式</span><span class="sxs-lookup"><span data-stu-id="86d31-103">Quantum simulators and host applications</span></span>
+# <a name="quantum-simulators"></a><span data-ttu-id="562e0-103">量子模擬器</span><span class="sxs-lookup"><span data-stu-id="562e0-103">Quantum simulators</span></span>
 
-## <a name="what-youll-learn"></a><span data-ttu-id="86d31-104">您會學習到的知識</span><span class="sxs-lookup"><span data-stu-id="86d31-104">What You'll Learn</span></span>
-
-> [!div class="checklist"]
-> * <span data-ttu-id="86d31-105">執行量子演算法的方法</span><span class="sxs-lookup"><span data-stu-id="86d31-105">How quantum algorithms are executed</span></span>
-> * <span data-ttu-id="86d31-106">此版本包含哪些量子模擬器</span><span class="sxs-lookup"><span data-stu-id="86d31-106">What quantum simulators are included in this release</span></span>
-> * <span data-ttu-id="86d31-107">如何為量子演算法編寫 C# 驅動程式</span><span class="sxs-lookup"><span data-stu-id="86d31-107">How to write a C# driver for your quantum algorithm</span></span>
-
-## <a name="the-quantum-development-kit-execution-model"></a><span data-ttu-id="86d31-108">Quantum Development Kit 執行模型</span><span class="sxs-lookup"><span data-stu-id="86d31-108">The Quantum Development Kit Execution Model</span></span>
-
-<span data-ttu-id="86d31-109">在[編寫量子程式](xref:microsoft.quantum.write-program)中，我們藉由將 `QuantumSimulator` 物件傳遞給演算法類別的 `Run` 方法，執行了我們的量子演算法。</span><span class="sxs-lookup"><span data-stu-id="86d31-109">In [Writing a quantum program](xref:microsoft.quantum.write-program), we executed our quantum algorithm by passing a `QuantumSimulator` object to the algorithm class's `Run` method.</span></span>
-<span data-ttu-id="86d31-110">`QuantumSimulator` 類別會藉由完全模擬量子態向量來執行量子演算法，這種做法非常適合用來執行和測試 `Teleport`。</span><span class="sxs-lookup"><span data-stu-id="86d31-110">The `QuantumSimulator` class executes the quantum algorithm by fully simulating the quantum state vector, which is perfect for running and testing `Teleport`.</span></span>
-<span data-ttu-id="86d31-111">如需量子態向量的詳細資訊，請參閱[概念指南](xref:microsoft.quantum.concepts.intro)。</span><span class="sxs-lookup"><span data-stu-id="86d31-111">See the [Concepts guide](xref:microsoft.quantum.concepts.intro) for more on quantum state vectors.</span></span>
-
-<span data-ttu-id="86d31-112">其他目標機器也可用來執行量子演算法。</span><span class="sxs-lookup"><span data-stu-id="86d31-112">Other target machines may be used to run a quantum algorithm.</span></span>
-<span data-ttu-id="86d31-113">該機器會負責為演算法提供量子基元實作。</span><span class="sxs-lookup"><span data-stu-id="86d31-113">The machine is responsible for providing implementations of quantum primitives for the algorithm.</span></span>
-<span data-ttu-id="86d31-114">這包括基元操作，例如 H、CNOT 和 Measure，以及量子位元管理和追蹤。</span><span class="sxs-lookup"><span data-stu-id="86d31-114">This includes primitive operations such as H, CNOT, and Measure, as well as qubit management and tracking.</span></span>
-<span data-ttu-id="86d31-115">不同類別的量子機器代表相同量子演算法的不同執行模型。</span><span class="sxs-lookup"><span data-stu-id="86d31-115">Different classes of quantum machines represent different execution models for the same quantum algorithm.</span></span>
-
-<span data-ttu-id="86d31-116">每種量子機器都可以針對這些基元提供不同的實作。</span><span class="sxs-lookup"><span data-stu-id="86d31-116">Each type of quantum machine may provide different implementations of these primitives.</span></span>
-<span data-ttu-id="86d31-117">例如，Development Kit 中包含的量子電腦追蹤模擬器就完全不會進行任何模擬。</span><span class="sxs-lookup"><span data-stu-id="86d31-117">For instance, the quantum computer trace simulator included in the development kit doesn't do any simulation at all.</span></span>
-<span data-ttu-id="86d31-118">相反地，該模擬器會追蹤該演算法的量子閘、量子位元和其他資源使用狀況。</span><span class="sxs-lookup"><span data-stu-id="86d31-118">Rather, it tracks gate, qubit, and other resource usage for the algorithm.</span></span>
-
-### <a name="quantum-machines"></a><span data-ttu-id="86d31-119">量子機器</span><span class="sxs-lookup"><span data-stu-id="86d31-119">Quantum Machines</span></span>
-
-<span data-ttu-id="86d31-120">在未來，我們將定義其他量子機器類別，以支援其他類型的模擬，以及支援拓撲量子電腦上的執行作業。</span><span class="sxs-lookup"><span data-stu-id="86d31-120">In the future, we will define additional quantum machine classes to support other types of simulation and to support execution on topological quantum computers.</span></span>
-<span data-ttu-id="86d31-121">讓演算法可以在改變基礎機器實作的情況下保持不變，您就可以輕鬆地在模擬中測試演算法並進行偵錯，然後再於真正的硬體上執行，因為您知道演算法並未改變。</span><span class="sxs-lookup"><span data-stu-id="86d31-121">Allowing the algorithm to stay constant while varying the underlying machine implementation makes it easy to test and debug an algorithm in simulation and then run it on real hardware with confidence that the algorithm hasn't changed.</span></span>
-
-### <a name="whats-included-in-this-release"></a><span data-ttu-id="86d31-122">此版本包含的類別</span><span class="sxs-lookup"><span data-stu-id="86d31-122">What's Included in this Release</span></span>
-
-<span data-ttu-id="86d31-123">這一版的 Quantum Developer Kit 包含數個量子機器類別。</span><span class="sxs-lookup"><span data-stu-id="86d31-123">This release of the quantum developer kit includes several quantum machine classes.</span></span>
-<span data-ttu-id="86d31-124">這些類別全都定義在 `Microsoft.Quantum.Simulation.Simulators` 命名空間中。</span><span class="sxs-lookup"><span data-stu-id="86d31-124">All of them are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.</span></span>
-
-* <span data-ttu-id="86d31-125">[完整狀態向量模擬器](xref:microsoft.quantum.machines.full-state-simulator)，`QuantumSimulator` 類別。</span><span class="sxs-lookup"><span data-stu-id="86d31-125">A [full state vector simulator](xref:microsoft.quantum.machines.full-state-simulator), the `QuantumSimulator` class.</span></span>
-* <span data-ttu-id="86d31-126">[簡單的資源估算器](xref:microsoft.quantum.machines.resources-estimator)，`ResourcesEstimator` 類別，其可讓您對執行量子演算法所需的資源進行最上層的分析。</span><span class="sxs-lookup"><span data-stu-id="86d31-126">A [simple resources estimator](xref:microsoft.quantum.machines.resources-estimator), the `ResourcesEstimator` class, it allows a top level analysis of the resources needed to run a quantum algorithm.</span></span>
-* <span data-ttu-id="86d31-127">[追蹤型資源估算器](xref:microsoft.quantum.machines.qc-trace-simulator.intro)，`QCTraceSimulator` 類別，其可讓您針對演算法整個呼叫圖的資源耗用情形進行進階分析。</span><span class="sxs-lookup"><span data-stu-id="86d31-127">A [trace-based resource estimator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), the `QCTraceSimulator` class, it allows advanced analysis of resources consumptions for the algorithm's entire call-graph.</span></span>
-* <span data-ttu-id="86d31-128">[Toffoli 模擬器](xref:microsoft.quantum.machines.toffoli-simulator)，`ToffoliSimulator` 類別。</span><span class="sxs-lookup"><span data-stu-id="86d31-128">A [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator), the `ToffoliSimulator` class.</span></span>
-
-## <a name="writing-a-host-application"></a><span data-ttu-id="86d31-129">撰寫主應用程式</span><span class="sxs-lookup"><span data-stu-id="86d31-129">Writing a host application</span></span>
-
-<span data-ttu-id="86d31-130">在[撰寫量子程式](xref:microsoft.quantum.write-program)中，我們針對遙傳演算法編寫了簡單的 C# 驅動程式。</span><span class="sxs-lookup"><span data-stu-id="86d31-130">In [Writing a quantum program](xref:microsoft.quantum.write-program), we wrote a simple C# driver for our teleport algorithm.</span></span> <span data-ttu-id="86d31-131">C# 驅動程式有 4 個主要目的：</span><span class="sxs-lookup"><span data-stu-id="86d31-131">A C# driver has 4 main purposes:</span></span>
-
-* <span data-ttu-id="86d31-132">建構目標機器</span><span class="sxs-lookup"><span data-stu-id="86d31-132">Constructing the target machine</span></span>
-* <span data-ttu-id="86d31-133">計算量子演算法所需的任何引數</span><span class="sxs-lookup"><span data-stu-id="86d31-133">Computing any arguments required for the quantum algorithm</span></span>
-* <span data-ttu-id="86d31-134">使用模擬器執行量子演算法</span><span class="sxs-lookup"><span data-stu-id="86d31-134">Running the quantum algorithm using the simulator</span></span>
-* <span data-ttu-id="86d31-135">處理操作結果</span><span class="sxs-lookup"><span data-stu-id="86d31-135">Processing the result of the operation</span></span>
-
-<span data-ttu-id="86d31-136">在這裡，我們會更詳細地討論每個步驟。</span><span class="sxs-lookup"><span data-stu-id="86d31-136">Here we'll discuss each step in more detail.</span></span>
-
-### <a name="constructing-the-target-machine"></a><span data-ttu-id="86d31-137">建構目標機器</span><span class="sxs-lookup"><span data-stu-id="86d31-137">Constructing the Target Machine</span></span>
-
-<span data-ttu-id="86d31-138">量子機器是一般 .NET 類別的執行個體，因此可藉由叫用其建構函式來加以建立，就和任何 .NET 類別一樣。</span><span class="sxs-lookup"><span data-stu-id="86d31-138">Quantum machines are instances of normal .NET classes, so they are created by invoking their constructor, just like any .NET class.</span></span>
-<span data-ttu-id="86d31-139">某些模擬器 (包括 `QuantumSimulator`) 會實作 .NET <xref:System.IDisposable?displayProperty=nameWithType> 介面，因此應該包裝到 C# `using` 陳述式中。</span><span class="sxs-lookup"><span data-stu-id="86d31-139">Some simulators, including the `QuantumSimulator`, implement the .NET <xref:System.IDisposable?displayProperty=nameWithType> interface, and so should be wrapped in a C# `using` statement.</span></span>
-
-### <a name="computing-arguments-for-the-algorithm"></a><span data-ttu-id="86d31-140">計算演算法的引數</span><span class="sxs-lookup"><span data-stu-id="86d31-140">Computing Arguments for the Algorithm</span></span>
-
-<span data-ttu-id="86d31-141">在 `Teleport` 範例中，我們計算了一些相當不自然的引數，來傳遞至我們的量子演算法。</span><span class="sxs-lookup"><span data-stu-id="86d31-141">In our `Teleport` example, we computed some relatively artificial arguments to pass to our quantum algorithm.</span></span>
-<span data-ttu-id="86d31-142">不過，更常見的情況是，量子演算法需要大量資料，而從傳統驅動程式提供這些資料會最為簡單。</span><span class="sxs-lookup"><span data-stu-id="86d31-142">More typically, however, there is significant data required by the quantum algorithm, and it is easiest to provide it from the classical driver.</span></span>
-
-<span data-ttu-id="86d31-143">例如，在進行化學模擬時，量子演算法需要分子軌道相互作用積分法所形成的大型資料表。</span><span class="sxs-lookup"><span data-stu-id="86d31-143">For instance, when doing chemical simulations, the quantum algorithm requires a large table of molecular orbital interaction integrals.</span></span>
-<span data-ttu-id="86d31-144">一般而言，這些積分法會從執行演算法時所提供的檔案中讀取而來。</span><span class="sxs-lookup"><span data-stu-id="86d31-144">Generally these are read in from a file that is provided when running the algorithm.</span></span>
-<span data-ttu-id="86d31-145">由於 Q# 沒有存取檔案系統的機制，因此這類資料最好由傳統驅動程式收集，再傳遞給量子演算法的 `Run` 方法。</span><span class="sxs-lookup"><span data-stu-id="86d31-145">Since Q# does not have a mechanism for accessing the file system, this sort of data is best collected by the classical driver and then passed to the quantum algorithm's `Run` method.</span></span>
-
-<span data-ttu-id="86d31-146">傳統驅動程式會扮演重要角色的另一種情況是在變分方法中。</span><span class="sxs-lookup"><span data-stu-id="86d31-146">Another case where the classical driver plays a key role is in variational methods.</span></span>
-<span data-ttu-id="86d31-147">這個演算法類別會根據一些傳統參數來準備量子態，並用該量子態來計算一些感興趣的值。</span><span class="sxs-lookup"><span data-stu-id="86d31-147">In this class of algorithms, a quantum state is prepared based on some classical parameters, and that state is used to compute some value of interest.</span></span>
-<span data-ttu-id="86d31-148">這些參數會根據某種類型的爬山演算法或機器學習演算法進行調整，然後再重新執行量子演算法。</span><span class="sxs-lookup"><span data-stu-id="86d31-148">The parameters are adjusted based on some type of hill climbing or machine learning algorithm and the quantum algorithm run again.</span></span>
-<span data-ttu-id="86d31-149">對於這類演算法，爬山演算法本身最好實作為純粹的傳統函式以供傳統驅動程式呼叫；然後，再將爬山演算法的結果傳遞給量子演算法的下一次執行。</span><span class="sxs-lookup"><span data-stu-id="86d31-149">For such algorithms, the hill climbing algorithm itself is best implemented as a purely classical function that is called by the classical driver; the results of the hill climbing are then passed to the next execution of the quantum algorithm.</span></span>
-
-### <a name="running-the-quantum-algorithm"></a><span data-ttu-id="86d31-150">執行量子演算法</span><span class="sxs-lookup"><span data-stu-id="86d31-150">Running the Quantum Algorithm</span></span>
-
-<span data-ttu-id="86d31-151">這個部分通常非常簡單。</span><span class="sxs-lookup"><span data-stu-id="86d31-151">This part is generally very straightforward.</span></span>
-<span data-ttu-id="86d31-152">每個 Q# 操作都會編譯成可提供靜態 `Run` 方法的類別。</span><span class="sxs-lookup"><span data-stu-id="86d31-152">Each Q# operation is compiled into a class that provides a static `Run` method.</span></span>
-<span data-ttu-id="86d31-153">這個方法的引數是由操作本身的簡維引數元組所提供，再加上另外要在執行模擬器時搭配使用的第一個引數。</span><span class="sxs-lookup"><span data-stu-id="86d31-153">The arguments to this method are given by the flattened argument tuple of the operation itself, plus an additional first argument which is the simulator to execute with.</span></span> <span data-ttu-id="86d31-154">對於預期具名元組的類型為 `(a: String, (b: Double, c: Double))` 的操作，其簡維對應項的類型為 `(String a, Double b, Double c)`。</span><span class="sxs-lookup"><span data-stu-id="86d31-154">For an operation that expects the named tuple of type `(a: String, (b: Double, c: Double))` its flattened counterpart is of type `(String a, Double b, Double c)`.</span></span>
+<span data-ttu-id="562e0-104">量子模擬器是可在傳統電腦上執行的軟體程式，能做為 Q# 程式的「目標機器」，可讓您在會預測量子位元將如何回應不同運算的環境中執行和測試量子程式。</span><span class="sxs-lookup"><span data-stu-id="562e0-104">Quantum simulators are software programs that run on classical computers and act as the *target machine* for a Q# program, making it possible to run and test quantum programs in an environment that predicts how qubits will react to different operations.</span></span> <span data-ttu-id="562e0-105">本文說明 Quantum 開發套件 (QDK) 中包含哪些量子模擬器，以及將 Q# 程式傳遞至量子模擬器的不同方式，例如透過命令列或使用以傳統語言撰寫的驅動程式程式碼。</span><span class="sxs-lookup"><span data-stu-id="562e0-105">This article describes which quantum simulators are included with the Quantum Development Kit (QDK), and different ways that you can pass a Q# program to the quantum simulators, for example, via the command line or by using driver code written in a classical language.</span></span>  
 
 
-<span data-ttu-id="86d31-155">在將引數傳遞給 `Run` 方法時，會有一些微妙差異：</span><span class="sxs-lookup"><span data-stu-id="86d31-155">There are some subtleties when passing arguments to a `Run` method:</span></span>
 
-* <span data-ttu-id="86d31-156">陣列必須包裝在 `Microsoft.Quantum.Simulation.Core.QArray<T>` 物件中。</span><span class="sxs-lookup"><span data-stu-id="86d31-156">Arrays must be wrapped in a `Microsoft.Quantum.Simulation.Core.QArray<T>` object.</span></span>
-    <span data-ttu-id="86d31-157">`QArray` 類別所具有的建構函式可接受適當物件的任何已排序集合 (`IEnumerable<T>`)。</span><span class="sxs-lookup"><span data-stu-id="86d31-157">A `QArray` class has a constructor that can take any ordered collection (`IEnumerable<T>`) of appropriate objects.</span></span>
-* <span data-ttu-id="86d31-158">Q# 中的空白元組 `()` 在 C# 中會以 `QVoid.Instance` 表示。</span><span class="sxs-lookup"><span data-stu-id="86d31-158">The empty tuple, `()` in Q#, is represented by `QVoid.Instance` in C#.</span></span>
-* <span data-ttu-id="86d31-159">非空白元組則會表示為 .NET `ValueTuple` 執行個體。</span><span class="sxs-lookup"><span data-stu-id="86d31-159">Non-empty tuples are represented as .NET `ValueTuple` instances.</span></span>
-* <span data-ttu-id="86d31-160">Q# 的使用者定義型別會以其基底類型的形式來傳遞。</span><span class="sxs-lookup"><span data-stu-id="86d31-160">Q# user-defined types are passed as their base type.</span></span>
-* <span data-ttu-id="86d31-161">若要將操作或函式傳遞給 `Run` 方法，您必須使用模擬器的 `Get<>` 方法，取得操作或函式類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="86d31-161">To pass an operation or a function to a `Run` method, you have to obtain an   instance of the operation's or function's class, using the simulator's `Get<>` method.</span></span>
+## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a><span data-ttu-id="562e0-106">Quantum 開發套件 (QDK) 量子模擬器</span><span class="sxs-lookup"><span data-stu-id="562e0-106">The Quantum Development Kit (QDK) quantum simulators</span></span>
 
-### <a name="processing-the-results"></a><span data-ttu-id="86d31-162">處理結果</span><span class="sxs-lookup"><span data-stu-id="86d31-162">Processing the Results</span></span>
-
-<span data-ttu-id="86d31-163">量子演算法的結果會從 `Run` 方法傳回。</span><span class="sxs-lookup"><span data-stu-id="86d31-163">The results of the quantum algorithm are returned from the `Run` method.</span></span>
-<span data-ttu-id="86d31-164">`Run` 方法會以非同步方式執行，因此會傳回 <xref:System.Threading.Tasks.Task`1> 的執行個體。</span><span class="sxs-lookup"><span data-stu-id="86d31-164">The `Run` method executes asynchronously thus it returns an instance of <xref:System.Threading.Tasks.Task`1>.</span></span>
-<span data-ttu-id="86d31-165">有多種方式可取得實際操作的結果。</span><span class="sxs-lookup"><span data-stu-id="86d31-165">There are multiple ways to get the actual operation's results.</span></span> <span data-ttu-id="86d31-166">最簡單的方式是使用 `Task` 的 [`Result` 屬性](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1.result)：</span><span class="sxs-lookup"><span data-stu-id="86d31-166">The simplest is by using the `Task`'s [`Result` property](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1.result):</span></span>
-
-```csharp
-    var res = BellTest.Run(sim, 1000, initial).Result;
-```
-<span data-ttu-id="86d31-167">但使用其他技術 (如使用 [`Wait` 方法](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.wait) 或 C# [`await` 關鍵字](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await)) 也行。</span><span class="sxs-lookup"><span data-stu-id="86d31-167">but other techniques, like using the [`Wait` method](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.wait) or C# [`await` keyword](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) will also work.</span></span>
-
-<span data-ttu-id="86d31-168">如同引數，Q# 元組會表示為 `ValueTuple` 執行個體，而 Q# 陣列則會表示為 `QArray` 執行個體。</span><span class="sxs-lookup"><span data-stu-id="86d31-168">As with arguments, Q# tuples are represented as `ValueTuple` instances and Q# arrays are represented as `QArray` instances.</span></span>
-<span data-ttu-id="86d31-169">使用者定義型別會以其基底類型的形式來傳回。</span><span class="sxs-lookup"><span data-stu-id="86d31-169">User-defined types are returned as their base types.</span></span>
-<span data-ttu-id="86d31-170">空白元組 `()` 會以 `QVoid` 類別的執行個體形式來傳回。</span><span class="sxs-lookup"><span data-stu-id="86d31-170">The empty tuple, `()`, is returned as an instance of the `QVoid` class.</span></span>
-
-<span data-ttu-id="86d31-171">許多量子演算法都需要大量後期處理才能衍生出有用的答案。</span><span class="sxs-lookup"><span data-stu-id="86d31-171">Many quantum algorithms require substantial post-processing to derive useful answers.</span></span>
-<span data-ttu-id="86d31-172">例如，Shor 演算法的量子部分只是計算的開端，目的是要尋找某個數字的因數。</span><span class="sxs-lookup"><span data-stu-id="86d31-172">For instance, the quantum part of Shor's algorithm is just the beginning of a computation that finds the factors of a number.</span></span>
-
-<span data-ttu-id="86d31-173">大部分情況下，在傳統驅動程式中執行這類後期處理最為簡單容易。</span><span class="sxs-lookup"><span data-stu-id="86d31-173">In most cases, it is simplest and easiest to do this sort of post-processing in the classical driver.</span></span>
-<span data-ttu-id="86d31-174">只有傳統驅動程式可以向使用者報告結果，或將結果寫入到磁碟。</span><span class="sxs-lookup"><span data-stu-id="86d31-174">Only the classical driver can report results to the user or write them to disk.</span></span>
-<span data-ttu-id="86d31-175">傳統驅動程式將可存取分析程式庫，以及未在 Q# 中公開的其他數學函式。</span><span class="sxs-lookup"><span data-stu-id="86d31-175">The classical driver will have access to analytical libraries and other mathematical functions that are not exposed in Q#.</span></span>
+<span data-ttu-id="562e0-107">量子模擬器負責為演算法提供量子基元的實作。</span><span class="sxs-lookup"><span data-stu-id="562e0-107">The quantum simulator is responsible for providing implementations of quantum primitives for an algorithm.</span></span> <span data-ttu-id="562e0-108">這包括基元操作 (例如 `H`、`CNOT`、`Measure`) 以及量子位元的管理和追蹤。</span><span class="sxs-lookup"><span data-stu-id="562e0-108">This includes primitive operations such as `H`, `CNOT`, and `Measure`, as well as qubit management and tracking.</span></span> <span data-ttu-id="562e0-109">QDK 包含不同的量子模擬器類別，代表相同量子演算法的不同執行模型。</span><span class="sxs-lookup"><span data-stu-id="562e0-109">The QDK includes different classes of quantum simulators representing different execution models for the same quantum algorithm.</span></span> 
 
 
-## <a name="failures"></a><span data-ttu-id="86d31-176">失敗</span><span class="sxs-lookup"><span data-stu-id="86d31-176">Failures</span></span>
+<span data-ttu-id="562e0-110">每種量子模擬器都可以針對這些基元提供不同的實作。</span><span class="sxs-lookup"><span data-stu-id="562e0-110">Each type of quantum simulator can provide different implementations of these primitives.</span></span> <span data-ttu-id="562e0-111">例如，[完整狀態模擬器](xref:microsoft.quantum.machines.full-state-simulator)會藉由完全模擬[量子狀態向量](xref:microsoft.quantum.glossary#quantum-state)來執行量子演算法，而[量子電腦追蹤模擬器](xref:microsoft.quantum.machines.qc-trace-simulator.intro)根本不會考慮實際的量子狀態。</span><span class="sxs-lookup"><span data-stu-id="562e0-111">For example, the [full state simulator](xref:microsoft.quantum.machines.full-state-simulator) runs the quantum algorithm by fully simulating the [quantum state vector](xref:microsoft.quantum.glossary#quantum-state), whereas the [quantum computer trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) doesn't consider the actual quantum state at all.</span></span> <span data-ttu-id="562e0-112">相反地，該模擬器會追蹤該演算法的量子閘、量子位元和其他資源使用狀況。</span><span class="sxs-lookup"><span data-stu-id="562e0-112">Rather, it tracks gate, qubit, and other resource usage for the algorithm.</span></span>
 
-<span data-ttu-id="86d31-177">在執行操作期間到達 Q# `fail` 陳述式時，系統會擲回 `ExecutionFailException`。</span><span class="sxs-lookup"><span data-stu-id="86d31-177">When the Q# `fail` statement is reached during the execution of an operation, an `ExecutionFailException` is thrown.</span></span>
+### <a name="quantum-machine-classes"></a><span data-ttu-id="562e0-113">量子機器類別</span><span class="sxs-lookup"><span data-stu-id="562e0-113">Quantum machine classes</span></span>
 
-<span data-ttu-id="86d31-178">由於在 `Run` 方法中使用 `System.Task`，因此在到達 `fail` 陳述式時所擲回的例外狀況將會包裝到 `System.AggregateException` 中。</span><span class="sxs-lookup"><span data-stu-id="86d31-178">Due to the use of `System.Task` in the `Run` method, the exception thrown as a result of a `fail` statement will be wrapped into a `System.AggregateException`.</span></span>
-<span data-ttu-id="86d31-179">若要找出失敗的實際原因，您必須反覆執行到 `AggregateException` 
-`InnerExceptions`，例如：</span><span class="sxs-lookup"><span data-stu-id="86d31-179">To find the actual reason for the failure, you need to iterate into the `AggregateException` 
-`InnerExceptions`, for example:</span></span>
+<span data-ttu-id="562e0-114">在未來，QDK 將定義其他量子機器類別，以支援其他類型的模擬，以及支援在量子硬體上執行。</span><span class="sxs-lookup"><span data-stu-id="562e0-114">In the future, the QDK will define additional quantum machine classes to support other types of simulation and to support execution on quantum hardware.</span></span> <span data-ttu-id="562e0-115">讓演算法可以在改變基礎機器實作的情況下保持不變，您就可以輕鬆地在模擬中測試演算法並進行偵錯，然後再於真正的硬體上執行，因為您知道演算法並未改變。</span><span class="sxs-lookup"><span data-stu-id="562e0-115">Allowing the algorithm to stay constant while varying the underlying machine implementation makes it easy to test and debug an algorithm in simulation and then run it on real hardware with confidence that the algorithm hasn't changed.</span></span>
 
-```csharp
+<span data-ttu-id="562e0-116">QDK 包含數個量子機器類別，全都定義在 `Microsoft.Quantum.Simulation.Simulators` 命名空間中。</span><span class="sxs-lookup"><span data-stu-id="562e0-116">The QDK includes several quantum machine classes, all defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.</span></span>
 
-            try
-            {
-                using(var sim = new QuantumSimulator())
-                {
-                    /// call your operations here...
-                }
-            }
-            catch (AggregateException e)
-            {
-                // Unwrap AggregateException to get the message from Q# fail statement.
-                // Go through all inner exceptions.
-                foreach (Exception inner in e.InnerExceptions)
-                {
-                    // If the exception of type ExecutionFailException
-                    if (inner is ExecutionFailException failException)
-                    {
-                        // Print the message it contains
-                        Console.WriteLine($" {failException.Message}");
-                    }
-                }
-            }
-```
+|<span data-ttu-id="562e0-117">模擬器</span><span class="sxs-lookup"><span data-stu-id="562e0-117">Simulator</span></span> |<span data-ttu-id="562e0-118">類別</span><span class="sxs-lookup"><span data-stu-id="562e0-118">Class</span></span>|<span data-ttu-id="562e0-119">描述</span><span class="sxs-lookup"><span data-stu-id="562e0-119">Description</span></span>|
+|-----|------|---|
+|[<span data-ttu-id="562e0-120">完整狀態模擬器</span><span class="sxs-lookup"><span data-stu-id="562e0-120">Full state simulator</span></span>](xref:microsoft.quantum.machines.full-state-simulator)| `QuantumSimulator` | <span data-ttu-id="562e0-121">執行和偵錯量子演算法，而且限制為大約 30 個量子位元。</span><span class="sxs-lookup"><span data-stu-id="562e0-121">Runs and debugs quantum algorithms, and is limited to about 30 qubits.</span></span> |
+|[<span data-ttu-id="562e0-122">簡單資源估算器</span><span class="sxs-lookup"><span data-stu-id="562e0-122">Simple resources estimator</span></span>](xref:microsoft.quantum.machines.resources-estimator)| `ResourcesEstimator` | <span data-ttu-id="562e0-123">對執行量子演算法所需的資源執行最高層級的分析，可支援數千個量子位元。</span><span class="sxs-lookup"><span data-stu-id="562e0-123">Performs a top level analysis of the resources needed to run a quantum algorithm, and supports thousands of qubits.</span></span>|
+|[<span data-ttu-id="562e0-124">追蹤型資源估算器</span><span class="sxs-lookup"><span data-stu-id="562e0-124">Trace-based resource estimator</span></span>](xref:microsoft.quantum.machines.qc-trace-simulator.intro)|  `QCTraceSimulator` |<span data-ttu-id="562e0-125">針對演算法的整個呼叫圖執行資源耗用量的進階分析，可支援數千個量子位元。</span><span class="sxs-lookup"><span data-stu-id="562e0-125">Runs advanced analysis of resources consumptions for the algorithm's entire call-graph, and supports thousands of qubits.</span></span>|
+|[<span data-ttu-id="562e0-126">Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="562e0-126">Toffoli simulator</span></span>](xref:microsoft.quantum.machines.toffoli-simulator)| `ToffoliSimulator` |<span data-ttu-id="562e0-127">模擬的量子演算法僅限於 `X`、`CNOT`、多重控制 `X` 量子作業，可支援百萬個量子位元。</span><span class="sxs-lookup"><span data-stu-id="562e0-127">Simulates quantum algorithms that are limited to `X`, `CNOT`, and multi-controlled `X` quantum operations, and supports million of qubits.</span></span> |
 
-## <a name="other-classical-languages"></a><span data-ttu-id="86d31-180">其他傳統語言</span><span class="sxs-lookup"><span data-stu-id="86d31-180">Other Classical Languages</span></span>
+## <a name="invoking-the-quantum-simulator"></a><span data-ttu-id="562e0-128">叫用量子模擬器</span><span class="sxs-lookup"><span data-stu-id="562e0-128">Invoking the quantum simulator</span></span>
 
-<span data-ttu-id="86d31-181">雖然我們提供的範例採用的是 C#、F# 和 Python，但 Quantum Development Kit 也支援使用其他語言來編寫傳統的主機程式。</span><span class="sxs-lookup"><span data-stu-id="86d31-181">While the samples we have provided are in C#, F#, and Python, the Quantum Development Kit also supports writing classical host programs in other languages.</span></span>
-<span data-ttu-id="86d31-182">例如，如果您想要採用 Visual Basic 來編寫主機程式，[應該也不會有問題](https://github.com/tcNickolas/MiscQSharp/blob/master/Quantum_VBNet/README.md#using-q-with-visual-basic-net)。</span><span class="sxs-lookup"><span data-stu-id="86d31-182">For example, if you want to write a host program in Visual Basic, [it should work just fine](https://github.com/tcNickolas/MiscQSharp/blob/master/Quantum_VBNet/README.md#using-q-with-visual-basic-net).</span></span>
+<span data-ttu-id="562e0-129">在[執行 Q# 程式的方式](xref:microsoft.quantum.guide.host-programs)中，會示範三種將 Q# 程式碼傳遞至量子模擬器的方式：</span><span class="sxs-lookup"><span data-stu-id="562e0-129">In [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs), three ways of passing the Q# code to the quantum simulator are demonstrated:</span></span> 
+
+* <span data-ttu-id="562e0-130">使用命令列</span><span class="sxs-lookup"><span data-stu-id="562e0-130">Using the command line</span></span>
+* <span data-ttu-id="562e0-131">使用 Python 主機程式</span><span class="sxs-lookup"><span data-stu-id="562e0-131">Using a Python host program</span></span>
+* <span data-ttu-id="562e0-132">使用 C# 主機程式</span><span class="sxs-lookup"><span data-stu-id="562e0-132">Using a C# host program</span></span>
+
+<span data-ttu-id="562e0-133">量子機器是一般 .NET 類別的執行個體，因此可藉由叫用其建構函式來加以建立，就和任何 .NET 類別一樣。</span><span class="sxs-lookup"><span data-stu-id="562e0-133">Quantum machines are instances of normal .NET classes, so they are created by invoking their constructor, just like any .NET class.</span></span> <span data-ttu-id="562e0-134">執行此動作的方式取決於您執行 Q# 程式的方式。</span><span class="sxs-lookup"><span data-stu-id="562e0-134">How you do this depends on how you run the Q# program.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="562e0-135">後續步驟</span><span class="sxs-lookup"><span data-stu-id="562e0-135">Next steps</span></span>
+
+* <span data-ttu-id="562e0-136">如需如何在不同環境中的 Q# 程式叫用目標機器的詳細資訊，請參閱[執行 Q# 程式的方式](xref:microsoft.quantum.guide.host-programs)。</span><span class="sxs-lookup"><span data-stu-id="562e0-136">For details about how to invoke target machines for Q# programs in different environments, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
