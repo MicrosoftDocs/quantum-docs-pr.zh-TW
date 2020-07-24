@@ -6,12 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884279"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871428"
 ---
 # <a name="develop-with-q-command-line-applications"></a>以 Q# 命令列應用程式開發
 
@@ -23,7 +23,7 @@ Q# 程式可以自行執行，不需要如 C#、F# 或 Python 等主機語言中
 
 ## <a name="installation"></a>安裝
 
-雖然您可以在任何 IDE 中建立 Q # 命令列應用程式，但建議您為 Q # 應用程式使用 Visual Studio Code (VS Code) 或 Visual Studio IDE。 在這些環境中進行的開發將包含 QDK 擴充功能的豐富功能，其中包括警告、語法反白顯示、專案範本等等。
+雖然您可以在任何 IDE 中建立 Q # 命令列應用程式，但建議使用 Visual Studio Code (VS Code) 或 Visual Studio IDE 來在本機開發您的 Q # 應用程式。 若要透過網頁瀏覽器在雲端中進行開發，建議使用 Visual Studio Codespaces。 在這些環境中進行的開發將包含 QDK 擴充功能的豐富功能，其中包括警告、語法反白顯示、專案範本等等。 
 
 若要設定 VS Code：
 
@@ -34,6 +34,13 @@ Q# 程式可以自行執行，不需要如 C#、F# 或 Python 等主機語言中
 
 1. 下載並安裝 [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 或更新版本，並已啟用 .NET Core 跨平台間工作負載。
 2. 下載並安裝 [Microsoft Azure CLI](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)。
+
+設定 Visual Studio Codespaces：
+
+1. 建立 [Azure 帳戶](https://azure.microsoft.com/free/)。
+2. 建立 Codespaces 環境。 遵循[快速入門](https://docs.microsoft.com/visualstudio/online/quickstarts/browser)。 建立 Codespace 時，建議您在 [Git 存放庫] 欄位中輸入 `microsoft/Quantum`，以載入 QDK 特定的設定。
+3. 您現在可以啟動新的環境，並透過 [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)，在瀏覽器中開始進行開發。 或者，您也可以使用本機安裝的 VS Code，並使用 Codespaces 做為[遠端環境](https://docs.microsoft.com/visualstudio/online/how-to/vscode)。
+
 
 若要為其他環境安裝 QDK，請在命令列中輸入：
 
@@ -46,14 +53,6 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 遵循與您的環境對應的索引標籤中的指示。
 
 ### <a name="vs-code"></a>[VS 程式碼](#tab/tabid-vscode)
-
-安裝 Q# 專案範本：
-
-1. 開啟 VS Code。
-2. 按一下 [檢視] -> [命令選擇區]。
-3. 選取 [Q#:安裝專案範本]。
-
-當顯示 [已成功專案範本] 時，QDK 已準備好搭配您自己的應用程式與程式庫使用。
 
 若要建立新專案：
 
@@ -96,24 +95,30 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 
 透過建立 Q# `Hello World` 應用程式來確認您的安裝。
 
+1. 安裝專案範本。
+
+    ```dotnetcli
+    dotnet new -i Microsoft.Quantum.ProjectTemplates
+    ```
+
 1. 建立新的應用程式：
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
-2. 瀏覽至新的應用程式目錄：
+1. 瀏覽至新的應用程式目錄：
     ```dotnetcli
     cd runSayHello
     ```
 
     此目錄中應該有一個 `Program.qs` 檔案，這個 Q# 程式定義一個可將訊息列印至主控台的簡單作業。 您可以使用文字編輯器來修改此範本，使用自己的量子應用程式來覆寫它。 
 
-3. 執行程式：
+1. 執行程式：
     ```dotnetcli
     dotnet run
     ```
 
-4. 您應該會看到列印出下列文字：`Hello quantum world!`
+1. 您應該會看到列印出下列文字：`Hello quantum world!`
 
 ***
 
