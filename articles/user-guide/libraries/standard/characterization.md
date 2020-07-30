@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274620"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436526"
 ---
 # <a name="quantum-characterization-and-statistics"></a>量子特性和統計資料 #
 
@@ -96,7 +96,7 @@ ms.locfileid: "85274620"
 為了查看這種假設，我們想要瞭解 $ $x $ $n $ 位變數。
 先前的散發 $ \Pr （x） $ 可支援 $x $ 的 $ 2 ^ n $ 假設值。
 這表示，如果我們需要 $x $ 的高精確度估計，則貝氏階段估計可能需要記憶體和處理時間的承受度。
-對於某些應用程式（例如量子模擬），所需的 limitted 精確度並不會妨礙其他應用程式（例如快速鍵的演算法）無法在其階段估計步驟中使用精確的貝氏推斷。  基於這個理由，我們也提供大約貝氏方法的實作為，例如[隨機的逐步解說階段估計（RWPE）](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) ，以及非貝氏的方法，例如[健全的階段估計](xref:microsoft.quantum.characterization.robustphaseestimation)。
+對於某些應用程式（例如量子模擬），所需的 limitted 精確度並不會妨礙其他應用程式（例如快速鍵的演算法）無法在其階段估計步驟中使用精確的貝氏推斷。  基於這個理由，我們也提供大約貝氏方法的實作為，例如[隨機的逐步解說階段估計（RWPE）](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) ，以及非貝氏的方法，例如[健全的階段估計](xref:microsoft.quantum.characterization.robustphaseestimation)。
 
 ### <a name="robust-phase-estimation"></a>健全的階段估計 ###
 

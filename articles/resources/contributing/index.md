@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871411"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436559"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>參與 Quantum Development Kit
 
@@ -19,7 +19,7 @@ Quantum Development Kit 不僅僅是用來編寫量子程式的工具集合。
 它還是廣大社群的一部分，此社群裡面的人從事的是探索量子運算、執行量子演算法的研究、為量子裝置開發新的應用程式，以及致力於充分運用量子程式設計。
 作為該社群的一員，Quantum Development Kit 的目標是要為各種背景的量子開發人員提供其所需的功能。
 您對 Quantum Development Kit 的參與，將會因為改善其他量子開發人員所使用的工具、這些工具的記載方式、甚至是因為建立新的特性和功能來協助讓整個量子程式設計社群成為探索和創作的沃土，而實現此一目標。
-對於您的參與，以及有機會與您合作讓我們的社群成為最優秀的基地，我們非常感激。
+對於您的參與，以及有機會與您合作讓我們的社群成為最優秀的基地，我們非常感激。 
 
 在本指南中，我們會提供一些建議，讓您了解如何讓您的參與盡可能地對更廣泛的量子程式設計社群產生作用。
 
