@@ -1,17 +1,20 @@
 ---
-title: 'Microsoft Q # 化學程式庫安裝'
+title: Microsoft Q# 化學程式庫安裝
 description: 瞭解如何安裝 Microsoft 量子化學程式庫，並將它與 NWChem 計算化學平臺搭配使用。
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: 0e870bb3421dddb632375a2fc8633249954f8c8b
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5fe973d24ceffd413cdbd3c543013dcc7ee379c0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871526"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869336"
 ---
 # <a name="chemistry-library-installation"></a>化學程式庫安裝
 
@@ -19,7 +22,7 @@ ms.locfileid: "86871526"
 雖然這適用于小型範例，但大規模的量子化學需要 Hamiltonians 數百萬或數十億個詞彙。
 可調整的計算化學套件所產生的這類 Hamiltonians 太大，無法以手動方式匯入。
 
-適用于量子開發工具組的量子化學程式庫是設計來與計算化學套件搭配運作，最值得注意的是在太平洋西北部國家實驗室的環境分子科學實驗室（EMSL）所開發的[**NWChem**](http://www.nwchem-sw.org/)計算化學平臺。
+適用于配量開發工具組的量子化學程式庫是設計來與計算化學封裝搭配使用，最值得注意的是環境分子科學實驗室所開發的[**NWChem**](http://www.nwchem-sw.org/)計算化學平臺 (EMSL) 在太平洋西北部國家實驗室。
 特別是， [ **Microsoft 量子**套件](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry)提供的工具可用來載入[Broombridge 架構](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)中所呈現之量子化學模擬問題的實例，也支援由最新版本的 NWChem 匯出。
 
 量子開發工具組化學程式庫也提供命令列工具，可在 `qdk-chem` 舊版格式和[Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)之間進行轉換。
@@ -84,7 +87,7 @@ $NWCHEM_TOP/contrib/quasar/yaml_driver input.nw
 - [安裝適用於 Windows 的 Docker 10](https://docs.docker.com/docker-for-windows/install/)
 
 > [!TIP]
-> 如果您使用適用於 Windows 的 Docker，就必須使用 Docker daemon 來共用包含臨時目錄的磁片磁碟機（通常是 `C:\` 磁片磁碟機）。 如需詳細資訊，請參閱[Docker 檔](https://docs.docker.com/docker-for-windows/#shared-drives)。
+> 如果您使用適用於 Windows 的 Docker，就必須共用包含臨時目錄的磁片磁碟機 (這通常是 `C:\` Docker daemon 所) 的磁片磁碟機。 如需詳細資訊，請參閱[Docker 檔](https://docs.docker.com/docker-for-windows/#shared-drives)。
 
 安裝 Docker 之後，您可以使用配量開發工具組範例所提供的 PowerShell 模組來執行映射，或者您可以手動執行映射。
 我們會在這裡詳細說明如何使用 PowerShell;如果您想要手動使用 Docker 映射，請參閱[映射提供的檔](https://hub.docker.com/r/nwchemorg/nwchem-qc/)。

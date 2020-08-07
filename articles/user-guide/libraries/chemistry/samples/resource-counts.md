@@ -6,12 +6,15 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: 14d0a703a20a801dcee9678a113a33404859a1a9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 35c16e622a390b730ad7385efcc365c212e981fe
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274648"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869319"
 ---
 # <a name="obtaining-resource-counts"></a>取得資源計數
 
@@ -83,7 +86,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-我們現在會設定追蹤模擬器來追蹤我們感興趣的資源。 在此情況下，我們會將旗標設定為，以計算基本的量子作業 `usePrimitiveOperationsCounter` `true` 。 技術詳細資料 `throwOnUnconstraintMeasurement` 會設定為 `false` ，以避免在問 # 程式碼未正確判斷提示結果的機率（如果有）執行時的例外狀況。
+我們現在會設定追蹤模擬器來追蹤我們感興趣的資源。 在此情況下，我們會將旗標設定為，以計算基本的量子作業 `usePrimitiveOperationsCounter` `true` 。 技術詳細資料 `throwOnUnconstraintMeasurement` 會設定為 `false` ，以避免在程式 Q# 代碼未正確判斷提示結果的機率（如果有執行）時的例外狀況。
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()

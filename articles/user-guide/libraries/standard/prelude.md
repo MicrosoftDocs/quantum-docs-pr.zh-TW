@@ -6,16 +6,19 @@ uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 19674620475e68b41c855023807a5fd1f7945ec9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274596"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868435"
 ---
 # <a name="the-prelude"></a>序言 #
 
-包含在「配量開發工具組」中的 Q # 編譯器和目的電腦，會提供一組內建函式和作業，可在 Q # 中撰寫量副程式時使用。
+包含在配 Q# 量開發工具組中的編譯器和目的電腦，會提供一組內建函式和作業，可在中撰寫配量程式時使用 Q# 。
 
 ## <a name="intrinsic-operations-and-functions"></a>內部作業和函數 ##
 
@@ -27,11 +30,11 @@ ms.locfileid: "85274596"
 - 執行測量的作業。
 
 由於 Clifford + $T $ 閘道集是適用于配量運算的[通用](xref:microsoft.quantum.concepts.multiple-qubits)集合，因此這些作業已足以在 negligibly 小型錯誤中執行任何量子演算法。
-藉由提供旋轉，Q # 可讓程式設計人員在單一 qubit 單一和 CNOT-CONTAINS 閘道程式庫中工作。 此程式庫較容易考慮，因為它不需要程式設計人員直接表達 Clifford + $T $ 分解，而且因為有高效能的方法可將單一 qubit unitaries 編譯成 Clifford 和 $T $ 閘道（如需詳細資訊，請參閱[這裡](xref:microsoft.quantum.more-information)）。
+藉由提供旋轉功能，可讓程式設計人員在 Q# 單一 qubit 單一和 cnot-contains 閘道程式庫中工作。 此程式庫較容易考慮，因為它不需要程式設計人員直接表達 Clifford + $T $ 分解，而且因為有高效率的方法可以將單一 qubit unitaries 編譯成 Clifford 和 $T $ 閘道 (如需詳細資訊，請參閱[這裡](xref:microsoft.quantum.more-information)) 。
 
 可能的話，在序言中定義的作業（作用於 qubits）允許套用 `Controlled` variant，如此目的電腦就會執行適當的分解。
 
-在序言的這個部分中定義的許多函式和作業都在 @"microsoft.quantum.intrinsic" 命名空間中，因此大部分的 Q # 原始程式檔會 `open Microsoft.Quantum.Intrinsic;` 緊接在初始命名空間宣告之後的指示詞。
+在序言的這個部分中定義的許多函式和作業都在 @"microsoft.quantum.intrinsic" 命名空間中，因此大部分的 Q# 原始程式檔會 `open Microsoft.Quantum.Intrinsic;` 緊接在初始命名空間宣告之後的指示詞。
 <xref:microsoft.quantum.core>命名空間會自動開啟，如此一來，就 <xref:microsoft.quantum.core.length> 可以在沒有語句的情況下使用這類函數 `open` 。
 
 ### <a name="common-single-qubit-unitary-operations"></a>一般單一 Qubit 單一作業 ###
@@ -63,11 +66,11 @@ ms.locfileid: "85274596"
 \begin{equation} \begin{bmatrix} 1 & 0 \\ \\ % FIXME：這目前使用 quadwhack 的駭客攻擊。
 0 &-1 \end{bmatrix} \end{equation}
 
-以下是對應至[Bloch 球體](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)的轉換（每個案例中的旋轉軸會反白顯示為紅色）：
+在下方，我們會看到這些轉換對應至[Bloch 球體](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) (在每個案例中，旋轉軸會反白顯示為紅色) ：
 
 ![對應至 Bloch 球體的 Pauli 作業](~/media/prelude_pauliBloch.png)
 
-請務必注意，將相同的 Pauli 閘道套用到相同的 qubit 兩次會取消作業（因為您現在已在表面上執行完整的2π（360°）旋轉以 Bloch 球體，因而在起點處回傳）。 這會將我們帶入下列身分識別：
+請務必注意，將相同的 Pauli 閘道套用至相同的 qubit 會取消作業 (因為您現在已在表面上執行2π (360 °) 的完整旋轉，而不是 Bloch 球體的) 。 這會將我們帶入下列身分識別：
 
 $ $ X ^ 2 = Y ^ 2 = Z ^ 2 = \boldone $ $
 
@@ -78,13 +81,13 @@ $ $ X ^ 2 = Y ^ 2 = Z ^ 2 = \boldone $ $
 #### <a name="other-single-qubit-cliffords"></a>其他單一 Qubit Cliffords ####
 
 作業會執行 <xref:microsoft.quantum.intrinsic.h> Hadamard 閘道。
-這會交換目標 qubit 的 Pauli $X $ 和 $Z $ 軸，因此 $H \ket {0} = \ket{+} \mathrel{： =} （\ket {0} + \ket {1} ）/\sqrt {2} $ and $H \ket{+} = \ket {0} $。
+這會交換目標 qubit 的 Pauli $X $ 和 $Z $ 軸，因此 $H \ket {0} = \ket{+} \mathrel{： =} ( \ket {0} + \ket {1}) /\sqrt {2} $ and $H \ket{+} = \ket {0} $。
 它具有 `(Qubit => Unit is Adj + Ctl)` 簽章，並對應至單一 qubit 單一：
 
 \begin{equation} \frac {1} {\sqrt {2} } \begin{bmatrix} 1 & 1 \\ \\ % FIXME：這目前使用 quadwhack 的駭客攻擊。
 1 &-1 \end{bmatrix} \end{equation}
 
-Hadamard 閘道特別重要，因為它可以用來建立 $ \ket {0} $ 和 $ \ket {1} $ 狀態的重迭。 在 Bloch 球體標記法中，最簡單的方式是將此視為 X 軸繞 $ \pi $ 弧度（$ 180 ^ \circ $）旋轉的 $ \ket{\psi} $，後面接著以 $ \ pi/2 $ 弧度（$ 90 ^ \circ $）圍繞 y 軸的（順時針）旋轉：
+Hadamard 閘道特別重要，因為它可以用來建立 $ \ket {0} $ 和 $ \ket {1} $ 狀態的重迭。 在 Bloch 球體標記法中，最簡單的方式是將此視為圍繞 X 軸的 $ \ket{\psi} $ 旋轉 ($ 180 ^ \circ $) ，後面接著 (順時針) 繞著 $ \ pi/2 $ 弧度 ($ 90 ^ \circ $) 的 y 軸旋轉：
 
 ![對應至 Bloch 球體的 Hadamard 作業](~/media/prelude_hadamardBloch.png)
 
@@ -96,9 +99,9 @@ Hadamard 閘道特別重要，因為它可以用來建立 $ \ket {0} $ 和 $ \ke
 \begin{equation} \begin{bmatrix} 1 & 0 \\ \\ % FIXME：這目前使用 quadwhack 的駭客攻擊。
 0 & i \end{bmatrix} \end{equation}
 
-#### <a name="rotations"></a>旋轉 ####
+#### <a name="rotations"></a>輪替人員 ####
 
-除了上述的 Pauli 和 Clifford 作業，Q # 序言也提供各種表達旋轉的方式。
+除了上述的 Pauli 和 Clifford 作業以外， Q# 序言提供各種方式來表達旋轉。
 如[單一 qubit 作業](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)中所述，旋轉的功能對量子演算法而言非常重要。
 
 我們一開始先重新開機，我們可以使用 $H $ 和 $T $ 閘道來表示任何單一 qubit 作業，其中 $H $ 是 Hadamard 作業，其中 \begin{equation} T \mathrel{： =} \begin{bmatrix} 1 & 0 \\ \\ % FIXME：這目前使用的是四回摧毀的駭客攻擊。
@@ -106,8 +109,8 @@ Hadamard 閘道特別重要，因為它可以用來建立 $ \ket {0} $ 和 $ \ke
 $T $ 閘道接著會由作業執行 <xref:microsoft.quantum.intrinsic.t> ，並具有簽章 `(Qubit => Unit is Adj + Ctl)` ，表示它是單一 qubit 上的單一作業。
 
 雖然這是用來描述任何任意單一 qubit 作業的原則，但不同的目的電腦對於 Pauli 運算子的輪替可能會有更有效率的標記法，因此序言包含各種方式來 convienently 表達這類旋轉。
-其中最基本的作業是作業 <xref:microsoft.quantum.intrinsic.r> ，它會在指定的 Pauli 軸上執行旋轉、\Begin{equation} R （\sigma、\phi） \mathrel{： =} \exp （-i \phi \sigma/2）、\end{equation}，其中 $ \sigma $ 是 Pauli 運算子，$ \phi $ 是角度，其中 $ \exp $ 代表矩陣指數。
-它具有簽章 `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` ，其中輸入的前兩個部分代表要指定單一運算子 $R （\sigma，\phi） $ 所需的傳統引數 $ \sigma $ 和 $ \phi $。
+其中最基本的作業是作業 <xref:microsoft.quantum.intrinsic.r> ，它會在指定的 Pauli 軸上執行旋轉，\Begin{equation} R ( \sigma，\phi) \mathrel{： =} \exp (-i \phi \sigma/2) ，\end{equation} 其中 $ \sigma $ 是 Pauli 運算子，$ \phi $ 是一個角度，其中 $ \exp $ 代表矩陣指數。
+它具有簽章 `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` ，其中輸入的前兩個部分代表傳統引數 $ \sigma $ 和 $ \phi $ 所需，以指定單一運算子 $R ( \sigma，\phi) $。
 我們可以部分套用 $ \sigma $ 和 $ \phi $，以取得其類型為單一 qubit 單一的作業。
 例如， `R(PauliZ, PI() / 4, _)` 具有類型 `(Qubit => Unit is Adj + Ctl)` 。
 
@@ -124,7 +127,7 @@ $T $ 閘道接著會由作業執行 <xref:microsoft.quantum.intrinsic.t> ，並�
 作業會 <xref:microsoft.quantum.intrinsic.rfrac> 使用此慣例，在指定的 Pauli 軸周圍執行旋轉。
 其與不同之處在于， <xref:microsoft.quantum.intrinsic.r> 旋轉角度會指定為類型的兩個輸入，並以 `Int` dyadic 的分數來轉譯。
 因此， `RFrac` 有簽章 `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)` 。
-它會執行單一 qubit 的單一 $ \exp （i \pi k \sigma/2 ^ n） $，其中 $ \sigma $ 是對應至第一個引數的 Pauli 矩陣，$k $ 是第二個引數，而 $n $ 是第三個引數。
+它會執行單一 qubit 的單一 $ \exp (i \pi k \sigma/2 ^ n) $，其中 $ \sigma $ 是對應至第一個引數的 Pauli 矩陣，$k $ 是第二個引數，而 $n $ 是第三個引數。
 `RFrac(_,k,n,_)`與相同， `R(_,-πk/2^n,_)` 請注意角度是分數的*負值*。
 
 作業會 <xref:microsoft.quantum.intrinsic.rx> 執行圍繞 Pauli $X $ 軸的旋轉。
@@ -147,7 +150,7 @@ $T $ 閘道接著會由作業執行 <xref:microsoft.quantum.intrinsic.t> ，並�
 它具有簽章 `((Int,Int, Qubit) => Unit is Adj + Ctl)` 。
 `R1Frac(k,n,_)`與後面的相同 `RFrac(PauliZ,-k.n+1,_)` `RFrac(PauliI,k,n+1,_)` 。
 
-對應至 Bloch 球體的旋轉作業範例（在此實例中的 Pauli $Z $ 軸周圍）如下所示：
+ (圍繞 Pauli $Z $ 軸的旋轉作業範例，在此實例中，) 對應至 Bloch 球體如下所示：
 
 ![對應至 Bloch 球體的旋轉作業](~/media/prelude_rotationBloch.png)
 
@@ -176,7 +179,7 @@ $T $ 閘道接著會由作業執行 <xref:microsoft.quantum.intrinsic.t> ，並�
 > 受控制的交換閘道（也稱為 Fredkin 閘道）功能強大，足以包含所有的傳統計算。
 
 最後，序言會提供兩個作業來代表多 qubit Pauli 運算子的指數。
-作業會 <xref:microsoft.quantum.intrinsic.exp> 根據 Pauli 矩陣的張量產品來執行旋轉，如多 qubit 的單一 \Begin{equation} \operatorname{Exp} （\vec{\sigma}，\phi） \mathrel{： =} \exp\left （i \phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right）所表示，\end{equation} 其中 $ \vec{\sigma} = （\ sigma_0，\ sigma_1，\dots ..，\ sigma_n） $ 是一系列單一 Qubit Pauli 運算子，其中 $ \phi $ 是角度。
+作業會 <xref:microsoft.quantum.intrinsic.exp> 根據 Pauli 矩陣的張量產品來執行旋轉，如多 qubit 的單一 \Begin{equation} \operatorname{Exp} 所表示 ( \vec{\sigma}、\phi) \mathrel{： =} \exp\left (i \phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right) 、\end{equation}，其中 $ \vec{\sigma} = ( \ sigma_0、\ sigma_1、\dots ..、\ sigma_n) $ 是一系列的單一 Qubit Pauli 運算子，其中 $ \phi $ 是一個角度。
 `Exp`旋轉會將 $ \vec{\sigma} $ 表示為元素的陣列 `Pauli` ，使其具有簽章 `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)` 。
 
 作業會 <xref:microsoft.quantum.intrinsic.expfrac> 使用上述的 dyadic 分數標記法來執行相同的旋轉。
@@ -184,7 +187,7 @@ $T $ 閘道接著會由作業執行 <xref:microsoft.quantum.intrinsic.t> ，並�
 
 > [!WARNING]
 > Pauli 運算子的張量產品指數與指數運算子 Pauli 的張量產品不同。
-> 也就是說，$e ^ {i （Z \otimes Z） \phi} \ne e ^ {i Z \phi} \otimes e ^ {i Z \phi} $。
+> 也就是說，$e ^ {i (Z \otimes Z) \phi} \ne e ^ {i Z \phi} \otimes e ^ {i Z \phi} $。
 
 ### <a name="measurements"></a>量測 ###
 
@@ -193,7 +196,7 @@ $T $ 閘道接著會由作業執行 <xref:microsoft.quantum.intrinsic.t> ，並�
 > [!NOTE]
 > 雖然此慣例看似奇怪，但它有兩個非常好用的優點。
 > 首先，觀察結果 $ \ket {0} $ 會以 `Result` 值表示 `Zero` ，而觀察 $ \ket $ 則會 {1} 對應至 `One` 。
-> 其次，我們可以寫出 eigenvalue $ \lambda $ 的對應結果，$r $ is $ \lambda = （-1） ^ r $。
+> 其次，我們可以寫出 eigenvalue $ \lambda $ 的對應結果，$r $ is $ \lambda = (-1) ^ r $。
 
 量測作業不支援 `Adjoint` 或 `Controlled` 仿函數。
 
@@ -205,7 +208,7 @@ $T $ 閘道接著會由作業執行 <xref:microsoft.quantum.intrinsic.t> ，並�
 例如，請考慮 state $ \ket {11} = \ket {1} \otimes \Ket {1} = X\otimes X \ket {00} $。
 逐一測量 $Z _0 $ 和 $Z _1 $，我們得到 $r _0 = $1 和 $r _1 = $1 的結果。
 測量 $Z _0 Z_1 $，我們取得單一結果 $r _ {\textrm{joint}} = $0，代表 $ \ket $ 的 pairity {11} 是正數。
-以不同的方式放置 $ （-1） ^ {r_0 + r_1} = （-1） ^ r_ {\textrm{joint}}） $。
+以不同的方式放置 $ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{joint}} ) $。
 嚴重的是，因為我們*只*會從這項測量中學習同位檢查，所以會保留正則兩者的 2 2-qubit 狀態之間的重迭中所代表的任何配量資訊，$ \ket {00} $ 和 $ \ket {11} $。
 此屬性稍後會很重要，因為我們會討論錯誤修正。
 
@@ -215,7 +218,7 @@ $T $ 閘道接著會由作業執行 <xref:microsoft.quantum.intrinsic.t> ，並�
 `M(q)` 相當於 `Measure([PauliZ], [q])`。
 
 會在 <xref:microsoft.quantum.measurement.multim> 每個 qubits 陣列上*分別*測量 Pauli $Z $ 運算子，並傳回*array* `Result` 為每個 qubit 取得的值陣列。
-在某些情況下，可以將此優化。 它具有簽章（ `Qubit[] => Result[])` 。
+在某些情況下，可以將此優化。 它具有簽章 (`Qubit[] => Result[])` 。
 `MultiM(qs)`相當於：
 
 ```qsharp
@@ -229,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a>擴充功能和作業 ##
 
-此外，序言會在 .NET 層級定義一組豐富的數學和類型轉換函式，以便在 Q # 程式碼中使用。
+此外，序言會在 .NET 層級定義一組豐富的數學和類型轉換函式，以便在程式碼中使用 Q# 。
 例如， <xref:microsoft.quantum.math> 命名空間會定義有用的作業，例如 <xref:microsoft.quantum.math.sin> 和 <xref:microsoft.quantum.math.log> 。
 配量開發工具組所提供的實現會使用傳統 .NET 基類庫，因此可能牽涉到配量程式與其傳統驅動程式之間的額外通訊往返。
 雖然這不會對本機模擬器造成問題，但在使用遠端模擬器或實際硬體做為目的電腦時，這可能會造成效能問題。
@@ -238,7 +241,7 @@ return rs;
 ### <a name="math"></a>數學 ###
 
 <xref:microsoft.quantum.math>命名空間會從 .net 基類庫的[ `System.Math` 類別](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)提供許多有用的函式。
-這些函式的使用方式與其他任何 Q # 函數相同：
+這些函式的使用方式與其他任何 Q# 函數相同：
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -246,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-其中 .NET 靜態方法已根據其引數的型別多載，相對應的 Q # 函式會以後置詞標注，以指出其輸入的型別：
+其中 .NET 靜態方法已根據其引數的型別多載，對應的函式 Q# 會以後置詞標注，以指出其輸入的型別：
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

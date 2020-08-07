@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 1c4dfa5c47aa38935cd5936cd256e357b6605371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274723"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869676"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>透過 Quantum Katas 學習量子運算
 
-[Quantum Katas](https://github.com/Microsoft/QuantumKatas/) 是開放原始碼形式的自學型教學課程和程式設計練習，目標是要同時讓您學會量子運算和 Q# 程式設計的要素。
+配量[Katas](https://github.com/Microsoft/QuantumKatas/)是開放原始碼、自我進行的教學課程和程式設計練習，其目標在於同時講授量子運算和程式設計的元素 Q# 。
 
 ## <a name="learning-by-doing"></a>邊做邊學
 
@@ -42,15 +45,15 @@ ms.locfileid: "85274723"
 |[線性代數](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|線性代數是用來代表量子運算中的配量狀態和作業。 本教學課程涵蓋基本概念，包括矩陣和向量。|
 |[量子位元概念](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|深入了解量子位元，這是量子運算的其中一個核心概念。 |
 |[單一量子位元的量子閘](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|本教學課程介紹單一量子位元的量子閘，其可作為量子演算法的建構元素，並以各種方式轉換量子的量子位元狀態。|
-|[多 qubit 系統](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|本教學課程介紹多量子位元系統、其在數學標記法和 Q# 程式碼中的表示法，以及糾纏的概念。|
+|[多 qubit 系統](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|本教學課程介紹多 qubit 系統、其在數學標記法和程式碼中的呈現方式， Q# 以及會任何牽連的概念。|
 |[多量子位元的量子閘](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|本教學課程遵循[單一量子位元的量子閘](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)教學課程，並著重於將量子閘套用至多量子位元系統。|
 
 ### <a name="quantum-computing-fundamentals"></a>量子運算基本概念
 
 | Kata | 描述 |
 |:-----|-------------|
-|[辨識量子閘](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|一系列的練習旨在讓您熟悉 Q# 中的基本量子閘。 包括適用於基本單一量子位元和多量子位元量子閘的練習、伴隨和控制的量子閘，以及如何使用量子閘來修改量子位元的狀態。|
-|[建立量子疊加](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|您可以使用這些練習，熟悉如何在 Q# 中疊加和程式設計的概念。 包含 Q# 中基本單一量子位元和多量子位元的量子閘、疊加及流程控制和遞迴的練習。|
+|[辨識量子閘](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|一系列的練習，旨在讓您熟悉中的基本配管閘道 Q# 。 包括適用於基本單一量子位元和多量子位元量子閘的練習、伴隨和控制的量子閘，以及如何使用量子閘來修改量子位元的狀態。|
+|[建立量子疊加](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|您可以使用這些練習，熟悉中的重迭和程式設計概念 Q# 。 包含中的基本單一 qubit 和多 qubit 閘道、重迭和流量控制和遞迴的練習 Q# 。|
 |[使用測量來區別量子狀態](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|請解決這些練習，了解量子測量和正交與非正交狀態。 |
 |[聯結測量](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|了解聯合同位測量，以及如何使用[量值](xref:microsoft.quantum.intrinsic.measure)作業來區別量子狀態。|
 
@@ -72,7 +75,7 @@ ms.locfileid: "85274723"
 |:-----|-------------|
 |[用於量子索引碼散發的 BB84 通訊協定](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|深入了解並實作量子金鑰散佈通訊協定 [BB84](https://en.wikipedia.org/wiki/BB84)，使用量子位元來交換密碼編譯金鑰。 |
 |[位元翻轉糾錯碼](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|使用最簡單的量子量子錯誤修正 (QEC) 程式碼 (三個量子位元的位元翻轉程式碼) 來探索量子錯誤修正。|
-|[相位估算法](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|相位估計演算法是一些最基本的量子運算建構元素。 深入了解使用這些練習的相位估計，練習涵蓋了量子相位估計，以及如何在 Q# 中準備和執行相位估計常式。|
+|[相位估算法](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|相位估計演算法是一些最基本的量子運算建構元素。 深入瞭解使用這些練習的階段估計，其中涵蓋量子階段估計，以及如何在中準備和執行階段估計常式 Q# 。|
 |[量子算術：建立脈動進位加法器](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|探索量子電腦上[脈動進位](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder)加法的系列深入練習。 建立就地量子加法器、使用不同的演算法加以擴充，最後建立就地量子減法器。   |
 
 ### <a name="entanglement-games"></a>纏結遊戲

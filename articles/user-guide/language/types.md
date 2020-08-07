@@ -1,32 +1,36 @@
 ---
-title: Q# 中的類型
-description: '瞭解問答 # 程式設計語言中使用的不同類型。'
+title: 中的類型Q#
+description: 瞭解程式設計語言中使用的不同類型 Q# 。
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: e37ce6e3a2dfad5395cdecf06178d64ec51b79f1
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b034af0b1d3b967b5680403341813407e4412f93
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415279"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869591"
 ---
-# <a name="types-in-q"></a>Q# 中的類型
+# <a name="types-in-no-locq"></a>中的類型Q#
 
-本文說明 Q # 類型模型，以及用來指定和使用類型的語法。 如需如何建立和操作這些類型運算式的詳細資訊，請參閱[類型運算式](xref:microsoft.quantum.guide.expressions)。
+本文描述型別 Q# 模型和用來指定和使用型別的語法。 如需如何建立和操作這些類型運算式的詳細資訊，請參閱[類型運算式](xref:microsoft.quantum.guide.expressions)。
 
-我們注意到，Q # 是*強型*別語言，因此小心使用這些型別可協助編譯器在編譯時期提供有關 Q # 程式的強式保證。
-若要提供最強的保證，必須使用表達該轉換之函式的呼叫，以明確地進行 Q # 中類型之間的轉換。 問 # 提供各種功能，做為 <xref:microsoft.quantum.convert> 命名空間的一部分。
+我們注意 Q# 到，是*強型*別語言，因此謹慎使用這些型別可協助編譯器在編譯時期提供有關程式的強式保證 Q# 。
+為了盡可能提供最強的保證，中類型之間的轉換 Q# 必須使用表達該轉換的函式呼叫來明確地進行。 
+Q#提供各種功能作為 <xref:microsoft.quantum.convert> 命名空間的一部分。
 另一方面，Upcasts 到相容的型別，就會隱含地發生。 
 
-Q # 同時提供兩種基本類型：直接使用，以及從其他類型產生新類型的各種方式。
+Q#提供兩種基本類型，直接使用，以及從其他類型產生新類型的各種方式。
 我們會在本文的其餘部分說明每個專案。
 
 ## <a name="primitive-types"></a>基本類型
 
-Q # 語言提供下列*基本類型*，您可以直接在 Q # 程式中使用它們。 您也可以使用這些基本類型來建立新的類型。
+Q#語言提供下列*基本類型*，您可以直接在程式中使用它們 Q# 。 您也可以使用這些基本類型來建立新的類型。
 
 - `Int`類型代表64位帶正負號的整數，例如、、 `2` `107` `-5` 。
 - `BigInt`類型代表任意大小的帶正負號整數，例如、、 `2L` `107L` `-5L` 。
@@ -40,10 +44,10 @@ Q # 語言提供下列*基本類型*，您可以直接在 Q # 程式中使用它
 - `String`類型是一系列的 Unicode 字元，不是使用者建立後的不透明。
   在發生 `string` 錯誤或診斷事件的情況下，請使用類型向傳統主機報告訊息。
 - `Unit`類型只能有一個值 `()` 。 
-  使用此類型來表示 Q # 函數或作業不會傳回任何資訊。 
+  使用此類型來表示 Q# 函數或作業不會傳回任何資訊。 
 - `Qubit`型別代表量子位或 qubit。
-   `Qubit`s 對使用者而言是不透明的。 除了將它們傳遞至另一個作業以外，唯一可行的作業是測試身分識別（相等）。
-   最後，您會藉 `Qubit` 由呼叫量子處理器（或配量模擬器）上的內建指示，在上執行動作。
+   `Qubit`s 對使用者而言是不透明的。 除了將它們傳遞至另一個作業以外，唯一可行的作業是測試身分識別 (是否相等) 。
+   最後，您會藉 `Qubit` 由呼叫量子處理器 (或量子模擬器) 上的內建指示，在上執行動作。
 - `Pauli`類型代表四個單一 Qubit Pauli 運算子的其中一個。
    使用此類型來表示旋轉的基底作業，並指定要測量的可觀察。
    這是具有四個可能值的列舉類型： `PauliI` 、 `PauliX` 、 `PauliY` 和 `PauliZ` ，它們是類型的常數 `Pauli` 。
@@ -51,19 +55,19 @@ Q # 語言提供下列*基本類型*，您可以直接在 Q # 程式中使用它
    這是具有兩個可能值的列舉類型： `One` 和 `Zero` ，它們是類型的常數 `Result` 。
    `Zero`表示已測量 + 1 eigenvalue;`One`表示已測量-1 eigenvalue。
 
-常數 `true` 、、、、、、 `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` 和 `Zero` 都是 Q # 中的所有保留符號。
+常數、、、、、、 `true` `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` 和 `Zero` 都是中的所有保留符號 Q# 。
 
 ## <a name="array-types"></a>陣列類型
 
-* 針對任何有效的 Q # 類型，有一個類型代表該類型的值陣列。
+* 針對任何有效的 Q# 類型，有一個類型代表該類型的值陣列。
     例如， `Qubit[]` 和 `(Bool, Pauli)[]` 代表 `Qubit` 值和 `(Bool, Pauli)` 元組值的陣列。
 
 * 陣列陣列也是有效的。 在上一個範例中展開，陣列的陣列 `(Bool, Pauli)` 會以表示 `(Bool, Pauli)[][]` 。
 
 > [!NOTE] 
-> 這個範例 `(Bool, Pauli)[][]` 代表可能是陣列的不規則陣列，而不是矩形二維陣列。 Q # 不支援矩形多維陣列。
+> 這個範例 `(Bool, Pauli)[][]` 代表可能是陣列的不規則陣列，而不是矩形二維陣列。 Q#不支援矩形多維陣列。
 
-* 您可以使用方括弧括住陣列的元素，將陣列值寫入至 Q # 原始程式碼中，如中所示 `[PauliI, PauliX, PauliY, PauliZ]` 。
+* 您可以在 Q# 陣列的元素前後使用方括弧，以原始程式碼撰寫陣列值，如中所示 `[PauliI, PauliX, PauliY, PauliZ]` 。
 陣列中所有專案的通用基底類型會決定陣列常值的類型。 因此，使用沒有通用基底類型的元素來建立陣列會引發錯誤。  
 如需範例，請參閱[callables 的陣列](xref:microsoft.quantum.guide.expressions#arrays-of-callables)。
 
@@ -91,7 +95,7 @@ Q # 語言提供下列*基本類型*，您可以直接在 Q # 程式中使用它
 
 ## <a name="tuple-types"></a>元組類型
 
-元組是一種功能強大的概念，用於整個 Q #，將值一起收集成單一值，使其更容易傳遞。
+元組是一種強大的概念 Q# ，用來將值一起收集成單一值，讓您更輕鬆地將其傳遞。
 特別是，使用元組標記法時，您可以表示每個作業和可呼叫都只接受一個輸入，而且只會傳回一個輸出。
 
 * 假設有零或多個不同的類型 `T0` （ `T1` 、...）， `Tn` 您可以將新的*元組類型*表示為 `(T0, T1, ..., Tn)` 。
@@ -102,17 +106,17 @@ Q # 語言提供下列*基本類型*，您可以直接在 Q # 程式中使用它
 例如， `(3, false)` 是其類型為元組類型的元組 `(Int, Bool)` 。
 您可以建立元組的陣列、陣列的元組、子元組的元組等等。
 
-* 從 Q # 0.3， `Unit` 是空元組的*型*別名稱; `()` 會用於空的元組的*值*。
+* 從 Q# 0.3， `Unit` 是空元組的*類型*名稱; `()` 會用於空的元組的*值*。
 
 * 元組實例為不可變。
-問 # 未提供在建立後變更元組內容的機制。
+Q#不提供一種機制，可在建立元組之後變更其內容。
 
 
 
 ### <a name="singleton-tuple-equivalence"></a>單一元組等價
 
-您可以建立單一（單一元素）元組 `('T1)` ，例如 `(5)` 或 `([1,2,3])` 。
-不過，Q # 會將單一元組視為對應于已括住之類型的值。
+您可以建立單一 (單一元素) 元組 `('T1)` ，例如 `(5)` 或 `([1,2,3])` 。
+不過，會將 Q# 單一元組視為對等的類型值。
 也就是說，和之間沒有任何差異，或介於和之間 `5` `(5)` `5` `(((5)))` ，或介於 `(5, (6))` 和之間 `(5, 6)` 。
 它就如同寫入一樣有效， `(5)+3` `5+3` 這兩個運算式都會評估為 `8` 。
 
@@ -135,14 +139,14 @@ Q # 語言提供下列*基本類型*，您可以直接在 Q # 程式中使用它
 newtype PairOfInts = (Int, Int);
 ```
     
-* 每個 Q # 來源檔案都可以宣告任何數目的使用者定義類型。
+* 每個 Q# 來源檔案可能會宣告任何數目的使用者定義類型。
 * 類型名稱在命名空間中必須是唯一的，而且可能不會與作業和函式名稱衝突。
 * 使用者定義類型是相異的，即使基底類型相同也是一樣。
 特別是，兩個使用者自訂類型的值之間不會自動轉換，即使基礎類型相同也一樣。
 
 ### <a name="named-vs-anonymous-items"></a>名稱與匿名專案的比較
 
-Q # 檔案可能會定義新的命名類型，其中包含任何合法類型的單一值。
+檔案 Q# 可能會定義新的命名類型，其中包含任何合法類型的單一值。
 針對任何元組類型 `T` ，您可以使用語句來宣告新的使用者定義型別，這是的子類型 `T` `newtype` 。
 @"microsoft.quantum.math"例如，在命名空間中，複數會定義為使用者定義型別：
 
@@ -151,7 +155,7 @@ newtype Complex = (Double, Double);
 ```
 這個語句會建立具有兩個型別之匿名專案的新型別 `Double` 。   
 
-除了匿名專案以外，使用者定義型別也支援從 Q # 0.7 版或更高版本開始的*命名專案*。 例如，您可以 `Re` 針對代表複數實數部分的雙精度浮點數，將專案命名為，而 `Im` 針對虛部： 
+除了匿名專案以外，使用者定義型別也支援*named items* Q# 0.7 版或更高版本的命名專案。 例如，您可以 `Re` 針對代表複數實數部分的雙精度浮點數，將專案命名為，而 `Im` 針對虛部： 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -178,7 +182,7 @@ function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
 newtype Polar = (Radius : Double, Phase : Double);
 ```
 
-雖然 `Complex` 和兩者都 `Polar` 具有基礎類型，但這 `(Double, Double)` 兩個類型在 Q # 中完全不相容，因此不小心以極座標呼叫複雜數學函式的風險降至最低，反之亦然。
+雖然 `Complex` 和兩者都 `Polar` 具有基礎類型，但這 `(Double, Double)` 兩個類型在中完全不相容 Q# ，因此不小心以極座標呼叫複雜數學函式的風險降至最低，反之亦然。
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>使用解除包裝運算子來存取匿名專案
 
@@ -211,7 +215,7 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
-如需解除包裝運算子的詳細資訊，請參閱[Q # 中的類型運算式](xref:microsoft.quantum.guide.expressions)。
+如需解除包裝運算子的詳細資訊，請參閱[中 Q# 的類型運算式](xref:microsoft.quantum.guide.expressions)。
 
 ### <a name="creating-values-of-user-defined-types"></a>建立使用者自訂類型的值
 
@@ -260,7 +264,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 這些稱為可呼叫*的簽*章。
 
-* 所有 Q # callables 都會採用單一值做為輸入，並傳回單一值做為輸出。
+* 所有 Q# callables 都採用單一值做為輸入，並傳回單一值做為輸出。
 * 您可以針對輸入和輸出值使用元組。
 * 沒有結果的 Callables 會傳回 `Unit` 。
 * 沒有輸入的 Callables 會採用空的元組做為輸入。
@@ -273,10 +277,10 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 例如，如果作業的執行依賴其他 qubits 的狀態，則它應該支援 `Controlled` 仿函數; 如果作業具有反向運算，則應該支援 `Adjoint` 仿函數。
 
 > [!NOTE]
-> 本文只討論函子如何改變作業簽章。 如需函子和作業的詳細資訊，請參閱[Q # 中的作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。 
+> 本文只討論函子如何改變作業簽章。 如需函子和作業的詳細資訊，請參閱[中 Q# 的作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。 
 
 若要 `Controlled` 在作業類型中要求支援和/或 `Adjoint` 仿函數，您必須加入指出對應特性的注釋。
-注釋 `is Ctl` （例如 `(Qubit => Unit is Ctl)` ）表示作業是可控制的。 也就是說，它的執行會依賴另一個 qubit 或 qubits 的狀態。 同樣地，注釋會 `is Adj` 指出作業具有 adjoint，也就是說，它可以「反轉」，以便連續套用作業，然後將其 adjoint 狀態保留不變。 
+批註 `is Ctl` (例如， `(Qubit => Unit is Ctl)`) 表示作業是可控制的。 也就是說，它的執行會依賴另一個 qubit 或 qubits 的狀態。 同樣地，注釋會 `is Adj` 指出作業具有 adjoint，也就是說，它可以「反轉」，以便連續套用作業，然後將其 adjoint 狀態保留不變。 
 
 如果您想要要求該類型的作業同時支援 `Adjoint` 和 `Controlled` 仿函數，您可以將此表示為 `(Qubit => Unit is Adj + Ctl)` 。 例如，內建的 Pauli 作業 <xref:microsoft.quantum.intrinsic.x> 具有類型 `(Qubit => Unit is Adj + Ctl)` 。 
 
@@ -286,7 +290,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 可呼叫類型可能包含*型別參數*。
 使用前面加上單引號的符號來表示型別參數;例如， `'A` 是合法的型別參數。
-如需如何定義型別參數化 callables 的詳細資訊和詳細資料，請參閱[Q # 中的作業和函數](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)。
+如需如何定義型別參數化 callables 的詳細資訊和詳細資料，請參閱[中 Q# 的作業和函數](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)。
 
 類型參數在單一簽章中可能會出現一次以上。
 例如，函數會將另一個函式套用至陣列的每個元素，並傳回所收集的結果具有簽章 `(('A[], 'A->'A) -> 'A[])` 。
@@ -294,8 +298,8 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 當您叫用型別參數化可呼叫時，所有具有相同型別參數的引數都必須屬於相同的型別。
 
-問 # 並未提供機制來限制使用者可能用來取代類型參數的可能類型。
+Q#不會提供機制來限制使用者可能用來取代類型參數的可能類型。
 
 ## <a name="next-steps"></a>後續步驟
 
-既然您已瞭解組成 Q # 語言的所有類型，請參閱[q # 中的類型運算式](xref:microsoft.quantum.guide.expressions)，以瞭解如何建立和操作這些各種類型的運算式。
+既然您已瞭解組成語言的所有類型 Q# ，請參閱[中 Q# 的類型運算式](xref:microsoft.quantum.guide.expressions)，以瞭解如何建立和操作這些各種類型的運算式。

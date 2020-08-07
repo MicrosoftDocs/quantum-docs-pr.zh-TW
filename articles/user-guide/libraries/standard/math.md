@@ -1,20 +1,23 @@
 ---
-title: 'Q # 標準程式庫中的數學運算'
-description: '瞭解用於內建資料類型的 Q # 標準程式庫中的傳統數學函數。'
+title: 標準程式庫中的數學運算 Q#
+description: 瞭解 Q# 用於內建資料類型之標準程式庫中的傳統數學函數。
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: bec866472abc0d4327cdc570306341375395f492
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4a3747eaa2c91e482ded3af1279a0e40d922bfb3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274595"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868418"
 ---
 # <a name="classical-mathematical-functions"></a>傳統數學函式 #
 
-這些函式主要是用來處理 Q # 內建資料類型 `Int` 、 `Double` 和 `Range` 。
+這些函式主要是用來處理 Q# 內建的資料類型 `Int` 、 `Double` 和 `Range` 。
 
 作業 <xref:microsoft.quantum.intrinsic.random> 具有簽章 `(Double[] => Int)` 。
 它會採用 double 的陣列做為輸入，並將隨機選取的索引以形式傳回至陣列 `Int` 。

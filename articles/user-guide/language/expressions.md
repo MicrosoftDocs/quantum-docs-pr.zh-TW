@@ -1,29 +1,32 @@
 ---
-title: Q 中的類型運算式#
-description: '瞭解如何指定、參考和合併常數、變數、運算子、作業和函數，做為 Q # 中的運算式。'
+title: 中的運算式Q#
+description: 瞭解如何指定、參考和合併常數、變數、運算子、作業和函式，做為中的運算式 Q# 。
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415383"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869608"
 ---
-# <a name="type-expressions-in-q"></a>Q 中的類型運算式#
+# <a name="expressions-in-no-locq"></a>中的運算式Q#
 
 ## <a name="numeric-expressions"></a>數值運算式
 
 數值運算式是、或類型的運算式 `Int` `BigInt` `Double` 。
 也就是說，它們可以是整數或浮點數。
 
-`Int`Q # 中的常值會寫入為一連串的數位。
+`Int`中的常值 Q# 會寫入為一連串的數位。
 以和前置詞分別支援和寫入十六進位和二進位整數 `0x` `0b` 。
 
-`BigInt`Q # 中的常值具有尾端 `l` 或 `L` 尾碼。
+`BigInt`中的常值 Q# 具有尾端 `l` 或 `L` 尾碼。
 支援十六進位大整數，並以 "0x" 前置詞寫入。
 因此，下列是常值的所有有效用法 `BigInt` ：
 
@@ -33,8 +36,8 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`Q # 中的常值是使用十進位數撰寫的浮點數。
-它們可以使用或不含小數點、 `.` ，或以 ' e ' 或 ' e ' 表示的指數部分（之後只有可能的負號和十進位數有效）來撰寫。
+`Double`中的常 Q# 值是使用十進位數撰寫的浮點數。
+它們可以使用或不含小數點、 `.` 或以 ' e ' 或 ' e ' 表示的指數部分來撰寫， (之後只有可能的負號和十進位數是有效的) 。
 下列是有效的 `Double` 常值： `0.0` 、 `1.2e5` 、 `1e-5` 。
 
 假設有任何元素類型的陣列運算式，您可以使用內 `Int` 建函數來形成運算式 [`Length`](xref:microsoft.quantum.core.length) ，並以括弧括住陣列運算式。
@@ -44,16 +47,16 @@ let bigOne = bigZero + 1L;
 假設有兩個相同類型的數值運算式，則 `+` 可以使用二元運算子、、 `-` `*` 和 `/` 來形成新的數值運算式。
 新運算式的類型與組成運算式的類型相同。
 
-假設有兩個整數運算式，請使用二元運算子 `^` （乘冪）來形成新的整數運算式。
+假設有兩個整數運算式，請使用二元運算子 `^` (power) 以形成新的整數運算式。
 同樣地，您也可以使用搭配 `^` 兩個雙重運算式來形成新的 double 運算式。
 最後，您可以使用 `^` 左邊的大整數和右邊的整數來形成新的大整數運算式。
 在此情況下，第二個參數必須符合32位;如果不是，就會引發執行階段錯誤。
 
-假設有兩個整數或大整數運算式，請使用 `%` （模數）、 `&&&` （位 and）、 `|||` （位 or）或 `^^^` （位 XOR）運算子來形成新的整數或大整數運算式。
+假設有兩個整數或大整數運算式，請使用 `%` (模數) ， `&&&` (位 and) 、 `|||` (位 or) 或 `^^^` (位 XOR) 運算子，形成新的整數或大整數運算式。
 
-指定左邊的整數或大整數運算式，以及右邊的整數運算式時，請使用 `<<<` （算術左移位）或 `>>>` （算術右移）運算子，建立與左邊運算式類型相同的新運算式。
+指定左邊的整數或大整數運算式，以及右邊的整數運算式時，請使用 `<<<` (算術左移位) 或 `>>>` (算術向右移位) 運算子，以建立與左邊運算式相同類型的新運算式。
 
-轉換作業的第二個參數（移位量）必須大於或等於零;負位移金額的行為未定義。
+第二個參數 (移位量) 為移位運算的位移必須大於或等於零;負位移金額的行為未定義。
 任何移位作業的移位量也必須符合32位;如果不是，就會引發執行階段錯誤。
 如果移位的數位是整數，則會解讀位移量 `mod 64` ; 也就是說，1和位移65的位移會有相同的效果。
 
@@ -77,7 +80,7 @@ let bigOne = bigZero + 1L;
 假設有任何數值運算式，您可以使用一元運算子來形成新的運算式 `-` 。
 新的運算式與組成運算式的類型相同。
 
-假設有任何整數或大整數運算式，您可以使用 `~~~` （位補數）一元運算子來形成相同類型的新運算式。
+假設有任何整數或大整數運算式，您可以使用 `~~~` (位補數) 一元運算子來形成相同類型的新運算式。
 
 ## <a name="boolean-expressions"></a>布林運算式
 
@@ -86,7 +89,7 @@ let bigOne = bigZero + 1L;
 假設有兩個相同基本類型的運算式，則 `==` 和 `!=` 二元運算子可用來建立 `Bool` 運算式。
 如果兩個運算式相等，則運算式為 true，否則為 false。
 
-可能不會比較使用者定義類型的值，只可以比較其未包裝的值。 例如，使用「解除包裝」運算子（如需 `!` 詳細說明，請見[Q # 中的類型](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)）。
+可能不會比較使用者定義類型的值，只可以比較其未包裝的值。 例如，使用「解除包裝」運算子 `!` () 中的[類型 Q# ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)詳細說明。
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -110,12 +113,12 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a>字串運算式
 
-Q # 允許在 `fail` 語句（在[控制流程](xref:microsoft.quantum.guide.controlflow#fail-statement)中說明）和標準函式中使用字串 [`Message`](xref:microsoft.quantum.intrinsic.message) 。 後者的特定行為取決於所使用的模擬器，但通常會在問 # 程式期間呼叫時，將訊息寫入主機主控台。
+Q#允許在語句中使用字串， `fail` (在[控制流程](xref:microsoft.quantum.guide.controlflow#fail-statement)) 和標準函式中說明 [`Message`](xref:microsoft.quantum.intrinsic.message) 。 後者的特定行為取決於所使用的模擬器，但通常會在程式中呼叫時，將訊息寫入主機主控台 Q# 。
 
-Q # 中的字串可以是常值或字串插值。
+中的字串 Q# 可以是常值或字串插值。
 
 字串常值類似于大部分語言中的簡單字串常值：以雙引號括住的 Unicode 字元序列 `" "` 。
-在字串內，使用反斜線字元 `\` 來轉義雙引號字元（ `\"` ），或插入新行（ `\n` ）、回車（）或索引標籤 `\r` （ `\t` ）。
+在字串內，使用反斜線字元 `\` 來將雙引號字元 (`\"`) ，或插入新的 ( `\n` ) 、回車 () 或索引標籤 `\r` (`\t`) 。
 例如：
 
 ```qsharp
@@ -123,11 +126,11 @@ Q # 中的字串可以是常值或字串插值。
 ```
 ### <a name="interpolated-strings"></a>插入字串
 
-String 插補的 Q # 語法是 c # 語法的子集。 以下是與 Q # 相關的重點：
+Q#String 插補的語法是 c # 語法的子集。 以下是相關的重點 Q# ：
 
 * 若要將字串常值識別為插入字串，請在其前面加上 `$` 符號。 `$`開始字串常值的和之間不能有空白字元 `"` 。
 
-* 以下是使用 [`Message`](xref:microsoft.quantum.intrinsic.message) 函數將測量結果寫入主控台的基本範例，以及其他的 Q # 運算式。
+* 以下是使用函式 [`Message`](xref:microsoft.quantum.intrinsic.message) 將測量結果與其他運算式一起寫入主控台的基本範例 Q# 。
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ String 插補的 Q # 語法是 c # 語法的子集。 以下是與 Q # 相關的
     Message($"Number: {num}, Result: {res}");
 ```
 
-* 任何有效的 Q # 運算式可能會出現在字串插值中。
+* 任何有效 Q# 的運算式可能會出現在字串插值中。
 
-* 插補字串內的運算式遵循 Q # 語法，而不是 c # 語法。 最明顯的差異在於，Q # 不支援逐字（多行）字串插值。
+* 插補字串內的運算式 Q# 會遵循語法，而不是 c # 語法。 最明顯的差異在於不 Q# 支援逐字 (多行) 插入字串。
 
 如需 c # 語法的詳細資訊，請參閱[*字串插值*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)。
 
@@ -197,14 +200,14 @@ String 插補的 Q # 語法是 c # 語法的子集。 以下是與 Q # 相關的
 
 ## <a name="unwrap-expressions"></a>解除包裝運算式
 
-在 Q # 中，解除包裝運算子是尾端驚嘆號 `!` 。
+在中，解除包裝 Q# 運算子是尾端驚嘆號 `!` 。
 例如，如果 `IntPair` 是具有基礎類型的使用者定義型別， `(Int, Int)` 而且是值為的 `s` 變數，則 `IntPair(2, 3)` `s!` 為 `(2, 3)` 。
 
 針對其他使用者定義類型所定義的使用者定義型別，您可以重複解除包裝運算子。 例如， `s!!` 表示的雙重解除包裝值 `s` 。
 因此，如果 `WrappedPair` 是具有基礎類型的使用者定義型別 `IntPair` ，而 `t` 是具有值的變數 `WrappedPair(IntPair(1,2))` ，則 `t!!` 為 `(1,2)` 。
 
 除了 `!` 陣列索引和切割以外，運算子的優先順序高於其他所有運算子 `[]` 。
-`!`和系結 `[]` positionally; 也就是 `a[i]![3]` 讀取為 `((a[i])!)[3]` ：取得的 `i` 第個元素 `a` ，將它解除包裝，然後取得未包裝值的第3個元素（必須是陣列）。
+`!`和系結 `[]` positionally; 也就是 `a[i]![3]` 讀取為 `((a[i])!)[3]` ：取得的 `i` 第個元素 `a` ，將它解除包裝，然後取得未包裝值的第3個元素， (必須是陣列) 。
 
 運算子的優先順序 `!` 有一個可能不明顯的影響。
 如果函式或作業傳回值，因而解除包裝，則函式或作業呼叫必須以括弧括住，讓引數元組系結至呼叫，而不是系結。
@@ -270,7 +273,7 @@ let g = Foo(arg)!;      // Syntax error
 (a + b)[13]
 ```
 
-Q # 中的所有陣列都是以零為基底。
+中的所有陣列 Q# 都是以零為基底。
 也就是說，陣列的第一個元素 `a` 一定是 `a[0]` 。
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>複製和更新運算式
 
-由於所有 Q # 型別都是實值型別（qubits 採用有點特殊的角色），因此，當值系結至符號或符號重新系結時，就會建立「複製」。 也就是說，問 # 的行為與使用指派運算子建立複本時相同。 
+由於所有 Q# 類型都是 (的實值型別，而 qubits 採用有點特殊的角色) ，因此，當值系結至符號或符號重新系結時，就會建立「複製」。 也就是說，的行為與 Q# 使用指派運算子建立複本時相同。 
 
 當然，在實務上，只有相關的部分會在需要時重新建立。 這會影響您複製陣列的方式，因為不可能更新陣列專案。 若要修改現有的陣列，您必須利用*複製和更新*機制。
 
@@ -327,9 +330,9 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 * `expression1`必須是 `T[]` 某種類型的類型 `T` 。
 * `expression2`定義在中指定要修改之陣列中的哪些索引 `expression1` 。 `expression2`必須是類型 `Int` 或類型 `Range` 。
-* `expression3`這是 `expression1` 根據中指定的索引，用來更新中之元素的值 `expression2` 。 如果 `expression2` 是類型 `Int` ， `expression3` 必須是類型 `T` 。 如果 `expression2` 是類型 `Range` ， `expression3` 必須是類型 `T[]` 。
+* `expression3`這是 `expression1` 根據中指定的索引，用來更新中專案的 (s) 值 `expression2` 。 如果 `expression2` 是類型 `Int` ， `expression3` 必須是類型 `T` 。 如果 `expression2` 是類型 `Range` ， `expression3` 必須是類型 `T[]` 。
 
-例如，copy 和 update 運算式 `arr w/ idx <- value` 會建立新的陣列，並將所有專案設定為中的對應專案 `arr` ，但所指定的元素除外 `idx` ，其設定為中的值 `value` 。 
+例如，copy 和 update 運算式會 `arr w/ idx <- value` 建立新的陣列，並將所有專案設定為中的對應專案 `arr` ，但所指定的元素 (s) `idx` ，這會設定為中) 的 (值 `value` 。 
 
 指定 `arr` 的包含陣列 `[0,1,2,3]` ，然後 
 
@@ -381,7 +384,7 @@ for (i in 1..N) {
 
 例如， `[[Op1], [Op2]]` 目前會引發錯誤，因為它會嘗試建立兩個不相容陣列類型和的陣列 `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` 。
 
-如需 callables 的詳細資訊，請參閱此頁面上的可呼叫[運算式](#callable-expressions)或[Q # 中的作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。
+如需 callables 的詳細資訊，請參閱此頁面上的可呼叫[運算式](#callable-expressions)或[ Q# 中的作業和](xref:microsoft.quantum.guide.operationsfunctions)函式。
 
 ## <a name="conditional-expressions"></a>條件運算式
 
@@ -406,7 +409,7 @@ for (i in 1..N) {
 同樣地，如果作業支援 `Controlled` 仿函數，則 `Controlled op` 是作業運算式。
 如需這些運算式類型的詳細資訊，請參閱[呼叫](xref:microsoft.quantum.guide.operationsfunctions#calling-operation-specializations)作業特製化。
 
-除了解除 `Adjoint` `Controlled` 包裝運算子和使用的陣列索引以外，函子（和）系結比其他所有運算子更緊密 `!` `[ ]` 。
+除了解除 `Adjoint` `Controlled` 包裝運算子和使用的陣列索引以外，函子 (和) 系結比其他所有運算子更緊密 `!` `[ ]` 。
 因此，下列各項都是有效的，假設作業支援使用的函子：
 
 ```qsharp
@@ -431,7 +434,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 
 ## <a name="callable-invocation-expressions"></a>可呼叫的調用運算式
 
-假設有可呼叫的運算式（作業或函式）以及可呼叫的簽章之輸入類型的元組運算式，您可以將元組運算式附加至可呼叫的運算式，以形成*調用運算式*。
+假設有一個可呼叫的運算式 (作業或函式) 以及可呼叫的簽章之輸入類型的元組運算式，您就可以將元組運算式附加至可呼叫的運算式，以形成*調用運算式*。
 調用運算式的類型是可呼叫的簽章的輸出類型。
 
 例如，如果是具有簽章的作業 `Op` `((Int, Qubit) => Double)` ， `Op(3, qubit1)` 就是類型的運算式 `Double` 。
@@ -446,7 +449,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 叫用[型別參數化](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)可呼叫時，您可以在可呼叫運算式之後的角括弧內指定實際的型別參數 `< >` 。
-此動作通常不是必要的，因為 Q # 編譯器會推斷實際的類型。
+此動作通常不是必要的，因為 Q# 編譯器會推斷實際的類型。
 不過，如果未指定型別參數化引數，[部分應用程式](xref:microsoft.quantum.guide.operationsfunctions#partial-application)*就*需要此參數。
 將具有不同仿函數支援的作業傳遞給可呼叫的時，它也很有用。
 
@@ -469,7 +472,7 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 * 運算和函式呼叫的括弧也會系結在任何運算子之前，但是在陣列索引和函子之後。
 
-依優先順序排列的 Q # 運算子，從最高到最低：
+Q#依優先順序排列的運算子，從最高到最低：
 
 運算子 | Arity | 描述 | 運算元類型
 ---------|----------|---------|---------------
@@ -492,4 +495,4 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 ## <a name="next-steps"></a>後續步驟
 
-現在您可以使用 Q # 中的運算式，請移至[q # 中的作業和](xref:microsoft.quantum.guide.operationsfunctions)函式，以瞭解如何定義和呼叫作業和函數。
+現在您可以使用中的運算式 Q# ，請移至[中 Q# 的作業和](xref:microsoft.quantum.guide.operationsfunctions)函式，以瞭解如何定義和呼叫作業和函數。

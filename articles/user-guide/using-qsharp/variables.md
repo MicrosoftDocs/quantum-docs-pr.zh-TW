@@ -1,30 +1,33 @@
 ---
-title: Q 中的變數#
+title: 中的變數Q#
 description: 填滿描述
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885288"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867840"
 ---
-# <a name="variables-in-q"></a>Q 中的變數#
+# <a name="variables-in-no-locq"></a>中的變數Q#
 
-Q # 區分可變和不可變的符號，或已系結/指派給運算式的*變數*。
+Q#區分可變和不可變的符號，或系結/指派給運算式的*變數*。
 一般來說，我們鼓勵使用不可變的符號，因為它可讓編譯器執行更多的優化。
 
 系結的左邊是由符號元組和運算式的右邊所組成。
 
 ## <a name="immutable-variables"></a>不可變的變數
 
-您可以使用關鍵字，將 Q # 中任何類型的值指派給變數，以便在作業或函式內重複使用 `let` 。 
+您可以使用關鍵字，將中任何類型的值指派 Q# 給變數，以便在作業或函式內重複使用 `let` 。 
 
-不可變的系結包含關鍵字 `let` ，後面接著符號或符號元組、等號 `=` 、用來系結符號的運算式，以及終止的分號。
+不可變的系結包含關鍵字 `let` ，後面接著符號或符號元組、等號 `=` 、用來將符號 () s 系結至的運算式，以及終止的分號。
 
 例如：
 
@@ -32,7 +35,7 @@ Q # 區分可變和不可變的符號，或已系結/指派給運算式的*變�
 let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 ```
 
-這會將特定的 Pauli 運算子陣列指派給變數名稱（或「符號」） `measurementOperator` 。
+這會將特定的 Pauli 運算子陣列指派給變數名稱 (或 "symbol" ) `measurementOperator` 。
 
 > [!NOTE]
 > 在上述範例中，不需要明確指定新變數的型別，因為語句右邊的運算式 `let` 是明確的，而且編譯器會推斷正確的型別。 
@@ -49,13 +52,13 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 ### <a name="rebinding-of-mutable-symbols"></a>可變動符號的重新系結
 
 您可以使用語句來重新系結可變的變數 `set` 。
-這類重新系結包含關鍵字 `set` ，後面接著符號或符號元組、等號、將符號重新系結 `=` 至的運算式，以及終止的分號。
+這類重新系結包含關鍵字 `set` ，後面接著符號或符號元組、等號 `=` 、用來將符號 (s) 重新系結至的運算式，以及終止的分號。
 
 以下是一些重新系結語句技術的範例。
 
 #### <a name="apply-and-reassign-statements"></a>Apply-重新指派語句
 
-`set`如果右側包含二元運算子的應用程式，且結果會重新系結至運算子的左引數，則特定種類的語句（ *apply 和重新指派*語句）會提供便利的串連方式。 例如，
+`set`如果右側包含二元運算子的應用程式，且結果會重新系結至運算子的左引數，則特定種類的語句（ *apply 和重新指派*語句）會提供便利的串連方式。 例如
 
 ```qsharp
 mutable counter = 0;
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-在陣列的案例中， [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) 在 Q # 標準程式庫中，會針對許多常見的陣列初始化和操作需求提供必要的工具，因此可協助避免必須在一開始就更新陣列專案。 
+在陣列的案例中， [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) 標準連結 Q# 庫中提供了許多常見陣列初始化和操作需求所需的工具，因此可協助避免必須先更新陣列專案。 
 
 Update-重新指派語句會在需要時提供替代方法：
 
@@ -132,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-例如，針對中提供的陣列使用程式庫工具 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) ，您可以輕鬆地定義函式來傳回類型的陣列， `Pauli` 其中索引的元素 `i` 會接受指定的 `Pauli` 值，而所有其他專案則是身分識別（ `PauliI` ）。
+例如，針對中提供的陣列使用程式庫工具 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) ，您就可以輕鬆地定義函式來傳回類型的陣列， `Pauli` 其中索引的元素 `i` 會接受指定的 `Pauli` 值，而所有其他專案則是 () 的身分識別 `PauliI` 。
 
 以下是這類函式的兩個定義，第二個則利用我們的處置工具。
 
@@ -179,13 +182,13 @@ let (r1, r2) = MeasureTwice(q1, PauliX, q2, PauliY);
 這項規則有兩個例外狀況：
 
 - 迴圈之迴圈變數的系結 `for` 是在 for 迴圈主體的範圍內，而不是在迴圈結束之後。
-- 迴圈的全部三個部分 `repeat` / `until` （主體、測試和修復）都會當做單一範圍，因此在本文中系結的符號會在測試和修復中提供。
+- 迴圈的全部三個部分 `repeat` / `until` (主體、測試和修復) 做為單一範圍，因此本文中系結的符號會在測試和修復中提供。
 
 對於這兩種類型的迴圈，每次通過迴圈都會在其本身的範圍內執行，因此在之後的階段中，不會提供來自較早階段的系結。
 如需這些迴圈的詳細資訊，請參閱[控制流程](xref:microsoft.quantum.guide.controlflow)。
 
 內部區塊繼承外部區塊的符號系結。
-每個區塊只能系結一個符號;定義符號的名稱與範圍內的另一個符號（不是「遮蔽」）並不合法。
+每個區塊只能系結一個符號;定義符號的名稱與範圍內的另一個符號相同 (不會 ) 「遮蔽」，這是不合法的。
 下列順序是合法的：
 
 ```qsharp
@@ -234,6 +237,6 @@ if (a == b) {
 ...
 ```
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
-瞭解如何在 Q # 中使用[Qubits](xref:microsoft.quantum.guide.qubits) 。
+瞭解如何[Working With Qubits](xref:microsoft.quantum.guide.qubits)在中使用 Qubits Q# 。

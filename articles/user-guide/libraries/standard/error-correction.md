@@ -1,17 +1,20 @@
 ---
-title: '問答 # 標準程式庫中的錯誤修正'
-description: '瞭解如何在您的 Q # 程式中使用錯誤更正代碼，同時保護 qubits 的狀態。'
+title: 標準程式庫中的錯誤修正 Q#
+description: 瞭解如何在您的程式中使用錯誤更正代碼， Q# 同時保護 qubits 的狀態。
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274611"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868486"
 ---
 # <a name="error-correction"></a>錯誤修正 #
 
@@ -21,14 +24,14 @@ ms.locfileid: "85274611"
 比方說，let $ \overline {0} = $0 是資料位0的編碼方式，我們使用標籤0上方的一條線來表示它是0狀態中位的編碼方式。
 如果我們同樣地讓 $ \overline {1} = $111，則會有一個簡單的重複程式碼，可防止任何一位翻轉錯誤。
 也就是說，如果有三個位的任何一個翻轉，我們就可以採取多數投票來復原邏輯位的狀態。
-雖然傳統錯誤修正是此特定範例（建議不[起毛的編碼理論簡介](https://www.springer.com/us/book/9783540641339)）的更豐富主旨，但上述重複程式碼已指向保護配量資訊的可能問題。
+雖然傳統錯誤修正是此特定範例 (的更豐富主旨，但我們建議不[起毛的編碼理論) 簡介](https://www.springer.com/us/book/9783540641339)，上述重複程式碼已指向保護量子資訊的可能問題。
 換句話說，「[無複製定理](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem)」表示如果我們測量每個個別的 qubit，並使用上述的傳統程式碼來進行大部分的投票，我們就會遺失我們嘗試保護的精確資訊。
 
 在 [配量] 設定中，我們會看到度量有問題。 我們仍然可以執行上述編碼。
 這麼做有助於瞭解如何將錯誤更正一般化至量子案例。
 因此，let $ \ket{\overline {0} } = \ket {000} = \ket {0} \otimes \ket \otimes {0} \ket {0} $，而 let $ \ket{\overline {1} } = \ket {111} $。
-然後，藉由線性，我們為所有輸入定義了重複的程式碼;例如，$ \ket{\overline{+}} = （\ket{\overline {0} } + \ket{\overline {1} }）/\sqrt {2} = （\ket {000} + \ket {111} ）/\sqrt {2} $。
-特別是，在中間 qubit 上 $X _1 $ act 時，我們看到兩個分支中所需的更正都精確 $X _1 $： $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac {1} {\sqrt {2} } \left （X_1 \ket {000} + X_1 \ket {111} \right） \\ \\ & = \frac {1} {\sqrt {2} } \left （\ket {010} + \ket {101} \right）。
+然後，藉由線性，我們為所有輸入定義了重複的程式碼;例如，$ \ket{\overline{+}} = ( \ket{\overline {0} } + \ket{\overline {1} } ) /\sqrt {2} = ( \ket {000} + \ket {111}) /\sqrt {2} $。
+特別是，在中間 qubit 上 $X _1 $ act 時，我們會看到兩個分支中所需的更正精確 $X _1 $： $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac {1} {\sqrt {2} } \left ( X_1 \ket {000} + X_1 \ket {111} \right) \\ \\ & = \frac {1} {\sqrt {2} } \left ( \ket {010} + \ket {101} \right) 。
 \end{align} $ $
 
 若要瞭解如何找出這種情況，而不測量我們嘗試保護的非常狀態，請記下每個不同的位會翻轉錯誤對我們的邏輯狀態的意義：
@@ -48,7 +51,7 @@ ms.locfileid: "85274611"
 另一方面，$Z _0 Z_1 \ket {100} =-\ket {100} $ and $Z _0 Z_1 \ket {011} =-\ket {011} $，因此測量 $Z _0 Z_1 $ 的結果，會顯示有關發生錯誤的實用資訊。
 
 為了強調此情況，我們會重複上表，但在每個資料列上新增測量 $Z _0 Z_1 $ 和 $Z _1 Z_2 $ 的結果。
-我們會分別以觀察到的 eigenvalue 正負號（$ + $ 或 $-$）來表示每個測量的結果，分別對應至和的 Q # `Result` 值 `Zero` `One` 。
+我們會分別以觀察到的 eigenvalue 正負號（$ + $ 或 $-$）來表示每個測量的結果，分別對應至 Q# `Result` 和的值 `Zero` `One` 。
 
 | 錯誤 $E $ | $E \ket{\overline {0} } $ | $E \ket{\overline {1} } $ | $Z _0 Z_1 $ 的結果 | $Z _1 Z_2 $ 的結果 |
 | --- | --- | --- | --- | --- |
@@ -68,16 +71,16 @@ ms.locfileid: "85274611"
 > 一般來說，可以建立代碼來處理較大的錯誤數目，以及處理 $Z $ 錯誤以及 $X $ 錯誤。
 
 我們可以在對所有程式碼狀態採取相同方式的量子錯誤更正中描述度量的深入解析，就是穩定的*形式*的本質。
-Q # canon 提供了一個架構，可描述從穩定程式碼進行編碼和解碼，以及描述如何從錯誤中復原。
+Q#Canon 提供了一個架構，可描述從穩定程式碼進行的編碼和解碼，以及描述如何從錯誤中復原。
 在本節中，我們會將此架構及其應用程式描述為一些簡單的量子錯誤更正代碼。
 
 > [!TIP]
 > 完整的穩定形式簡介已超出本節的範圍。
 > 我們參考讀者有興趣深入瞭解[Gottesman 2009](https://arxiv.org/abs/0904.2557)。
 
-## <a name="representing-error-correcting-codes-in-q"></a>代表 Q 中的錯誤修正代碼# ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>表示中的錯誤修正碼Q# ##
 
-為了協助指定錯誤更正代碼，Q # canon 會提供數個不同的使用者定義類型：
+為了協助指定錯誤更正代碼， Q# canon 提供數個不同的使用者定義類型：
 
 - <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`：表示應將 qubits 的暫存器視為錯誤更正程式碼的程式碼區塊。
 - <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`：表示測量結果的陣列應解讀為在程式碼區塊上測量的症狀。
@@ -119,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 我們會在[位翻轉程式碼範例](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)中更詳細地探索此功能。
 
-除了比對程式碼之外，還提供了[五個 qubit 完美程式](https://arxiv.org/abs/quant-ph/9602019)代碼的 canon，以及[七 qubit 的程式碼](https://arxiv.org/abs/quant-ph/9705052)，兩者都可以更正任意的單一 qubit 錯誤。
+除了比對程式碼， Q# canon 還提供[五個 qubit 的完美程式](https://arxiv.org/abs/quant-ph/9602019)代碼，以及[七 qubit 的程式碼](https://arxiv.org/abs/quant-ph/9705052)，兩者都可以更正任意的單一 qubit 錯誤。

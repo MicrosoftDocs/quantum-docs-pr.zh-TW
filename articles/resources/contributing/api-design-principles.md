@@ -1,32 +1,35 @@
 ---
-title: '問 # API 設計原則'
-description: '問 # API 設計原則'
+title: Q#API 設計原則
+description: Q#API 設計原則
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274550"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866888"
 ---
-# <a name="q-api-design-principles"></a>問 # API 設計原則
+# <a name="no-locq-api-design-principles"></a>Q#API 設計原則
 
 ## <a name="introduction"></a>簡介
 
-問 # 是一種語言和平臺，可讓使用者撰寫、執行、瞭解及探索量子應用程式。
-為了加強使用者的能力，當我們設計問 # 程式庫時，我們會遵循一組 API 設計原則來引導我們的設計，並協助我們為「量子開發」社區提供可用的程式庫。
-本文將列出這些原則，並提供範例，以協助引導您在設計問 # Api 時如何套用它們。
+作為一種語言和平臺，讓 Q# 使用者能夠撰寫、執行、瞭解及探索量子應用程式。
+為了加強使用者的能力，當我們設計 Q# 程式庫時，我們會遵循一組 API 設計原則來引導我們的設計，並協助我們為「量子開發」社區提供可用的程式庫。
+本文會列出這些原則，並提供範例，以協助引導您在設計 api 時如何套用應用程式 Q# 。
 
 > [!TIP]
 > 這是相當詳細的檔，旨在協助引導媒體櫃開發和深入的程式庫投稿。
-> 如果您是在 Q # 中撰寫自己的程式庫，或在[問 #](https://github.com/microsoft/QuantumLibraries)程式庫中提供較大的功能，您可能會發現它最有用。
+> 如果您是在中撰寫自己的程式庫，或在程式庫存放庫中提供 Q# 較大的功能，您[ Q# ](https://github.com/microsoft/QuantumLibraries)可能會發現它最有用。
 >
 > 另一方面，如果您想要瞭解如何更廣泛地參與「量子開發工具組」，建議您從「[貢獻指南](xref:microsoft.quantum.contributing)」開始。
-> 如果您要尋找有關我們建議如何格式化問 # 程式碼的一般資訊，您可能會想要查看[樣式指南](xref:microsoft.quantum.contributing.style)。
+> 如果您要尋找有關如何建議您將程式碼格式化的一般資訊 Q# ，您可能會想要查看[樣式指南](xref:microsoft.quantum.contributing.style)。
 
 ## <a name="general-principles"></a>一般準則
 
@@ -81,13 +84,13 @@ ms.locfileid: "85274550"
 - ✅**執行**設計函式和作業，以便在相同的 API 和先前現有的程式庫中，與其他函式和作業共同撰寫。
 
   *範例：*
-  - 作業 @"microsoft.quantum.canon.delay" 會對其輸入做出最低的假設，因此可以用來延遲在 Q # 標準程式庫或由使用者定義的任一作業的應用程式。
+  - 作業 @"microsoft.quantum.canon.delay" 會對其輸入做出最低的假設，因此可以用來延遲跨 Q# 標準程式庫或由使用者定義的任一作業應用程式。
     <!-- TODO: define bad example. -->
 
 - ✅**確實**會將純粹具決定性的傳統邏輯公開為函式，而不是作業。
 
   *範例：*
-  - 會以決定性的方式寫入其浮點輸入的副程式，因此應該對使用者公開， `Squared : Double -> Double` 而不是做為作業 `Square : Double => Double` 。 這可讓您在多個位置呼叫副程式（例如：在其他函式中），並提供實用的優化資訊給編譯器，這可能會影響效能和優化。
+  - 會以決定性的方式寫入其浮點輸入的副程式，因此應該對使用者公開， `Squared : Double -> Double` 而不是做為作業 `Square : Double => Double` 。 這可讓您在多個位置呼叫副程式 (例如：在其他函式) 內，並為編譯器提供有用的優化資訊，而這可能會影響效能和優化。
   - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`與 `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` 確定性方面的保證不同，這兩者在不同的情況下都很有用。
   - 轉換配量作業應用程式的 API 常式通常會以決定性的方式執行，因此可做為函式（例如）來使用 `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` 。
 
@@ -115,7 +118,7 @@ ms.locfileid: "85274550"
 
 **主要原則：** 設計函式和作業，使其適用于 Q \# 語言功能，例如部分應用程式。
 
-- ✅**請**在輸入元組中執行排序專案，讓最常套用的輸入先發生（也就是：讓部分應用程式的行為類似 currying）。
+- ✅**請**在輸入元組中執行 order 專案，讓最常套用的輸入先發生 (也就是：如此，部分應用程式的運作方式類似于 currying) 。
 
   *範例：*
   - 使用 `ApplyRotation` 浮點數和 qubit 做為輸入的作業，通常會先與浮點輸入部分一起套用，以搭配預期輸入類型的運算使用 `Qubit => Unit` 。 因此，簽章`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
@@ -137,7 +140,7 @@ ms.locfileid: "85274550"
   *範例：*
   - 應該特別解讀為將傳統資料編碼成量子暫存器的作業，可能適用于具有使用者定義類型的標籤 `newtype InputEncoder = (Apply : (Qubit[] => Unit))` 。
 
-- ✅**請**使用命名專案引進新的使用者定義型別，以允許未來的擴充性（例如：未來可能會包含其他命名專案的結果結構）。
+- ✅**請確實**使用命名專案引進新的使用者定義型別，以允許未來的擴充性 (例如：未來) 中可能包含其他名稱專案的結果結構。
 
   *範例：*
   - 當作業 `TrainModel` 公開大量設定選項時，將這些選項公開為新的 `TrainingOptions` UDT 並提供新的函式， `DefaultTrainingOptions : Unit -> TrainingOptions` 可讓使用者覆寫 TrainingOptions UDT 值中的特定已命名專案，同時仍然允許程式庫開發人員視需要加入新的 UDT 專案。
@@ -149,7 +152,7 @@ ms.locfileid: "85274550"
 
 **主要原則：** 使用使用者定義型別，方法是減少認知負載，而不需要使用者學習其他概念和命名法。
 
-- ⛔️**不**會引進使用者定義的型別，要求使用者經常使用解除包裝運算子（ `!` ），或通常需要多個解除包裝的層級。 可能的緩和策略包括：
+- ⛔️**不**會引進使用者定義型別，要求使用者經常使用解除包裝運算子 (`!`) ，或通常需要多個解除包裝的層級。 可能的緩和策略包括：
 
   - 以單一專案公開使用者定義的型別時，請考慮定義該專案的名稱。 例如，請考慮 `newtype Encoder = (Apply : (Qubit[] => Unit is Adj + Ctl))` 將偏好設定為 `newtype Encoder = (Qubit[] => Unit is Adj + Ctl)` 。
 
@@ -190,7 +193,7 @@ ms.locfileid: "85274550"
 
 **主要原則：** 將命名空間和存取修飾詞一起使用，以刻意瞭解對使用者公開的 API 介面，並隱藏與 Api 的執行和測試相關的內部詳細資料。
 
-- ✅在合理的情況下，請將將 API 實作為所實作為 API 的相同命名空間，將所需的所有函式和作業**都放入**，但以 "private" 或 "internal" 關鍵字標示，表示它們不是程式庫公用 API 介面的一部分。 使用開頭為底線（）的名稱 `_` ，以視覺方式區分私用和內部作業和公用 callables 的函式。
+- ✅在合理的情況下，請將將 API 實作為所實作為 API 的相同命名空間，將所需的所有函式和作業**都放入**，但以 "private" 或 "internal" 關鍵字標示，表示它們不是程式庫公用 API 介面的一部分。 使用開頭為底線 () 的名稱 `_` ，以視覺化方式區分公用 callables 的私用和內部作業和函式。
 
   *範例：*
   - 作業名稱 `_Features` 會指出特定命名空間和元件的私用函式，而且應該伴隨 `internal` 關鍵字。
@@ -229,7 +232,7 @@ ms.locfileid: "85274550"
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **準備**：將配量作業或作業順序套用至一或多個假設以特定初始狀態啟動的 qubits （通常是 $ \ket{00\cdots 0} $），這會導致這些 qubits 的狀態演變成所需的結束狀態。 一般來說，在指定的啟動狀態以外的狀態下，**可能會**產生未定義的單一轉換，但仍**應**保留作業及其 adjoint 的「取消」並套用非 op。
+    - **準備**：將配量操作或作業順序套用至一個或多個 qubits，假設要以特定初始狀態啟動 (通常是 $ \ket{00\cdots 0} $) ，導致這些 qubits 的狀態演變為所需的結束狀態。 一般來說，在指定的啟動狀態以外的狀態下，**可能會**產生未定義的單一轉換，但仍**應**保留作業及其 adjoint 的「取消」並套用非 op。
 
       *範例：*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
@@ -258,14 +261,14 @@ ms.locfileid: "85274550"
 
   - **形容詞**：
 
-    - ⛔️ **New**：**不應**使用此形容詞，以避免在許多程式設計語言中將其使用方式與動詞（例如： c + +、c #、JAVA、TypeScript、PowerShell）混淆。
+    - ⛔️ **New**：**不應**使用此形容詞，以避免在許多程式設計語言中將其使用方式與動詞混淆 (例如 c + +、c #、JAVA、TypeScript、PowerShell) 。
 
   - **介係詞：** 在某些情況下，介係詞可以用來進一步區分或澄清函數和作業名稱中名詞和動詞的角色。 不過，請務必謹慎且一致地採取此動作。
 
     - **As：** 表示函式的輸入和輸出代表相同的資訊，但輸出會將該資訊表示**為** *X* ，而不是其原始標記法。 這對於型別轉換函式而言特別常見。
 
       *範例：*
-      - `IntAsDouble(2)`表示輸入（ `2` ）和輸出（ `2.0` ）都代表品質相同的資訊，但使用不同的 Q \# 資料類型來執行這項操作。
+      - `IntAsDouble(2)`指出輸入 (`2`) 和輸出 (`2.0`) 表示品質相同的資訊，但使用不同的 Q \# 資料類型來執行這項操作。
 
     - **來源：** 若要確保一致性，此介係詞**不應該**用來表示類型轉換函式，或任何其他**適合的情況**。
 

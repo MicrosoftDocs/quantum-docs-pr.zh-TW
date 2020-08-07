@@ -1,21 +1,24 @@
 ---
 title: 正在載入傳統資料
-description: 瞭解如何載入您自己的資料集，以 Microsoft Quantum Development Kit （QDK）來定型分類器模型。
+description: 瞭解如何載入您自己的資料集，以使用 Microsoft Quantum Development Kit (QDK) 來定型分類器模型。
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 26ba7411c9ade1d6c4b606e8c12c10ade18fc584
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274704"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868826"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>載入和分類您自己的資料集
 
-在這個簡短的教學課程中，我們將學習如何載入您自己的資料集，以使用量子開發工具組（QDK）來定型分類器模型。
+在這個簡短的教學課程中，我們將學習如何載入您自己的資料集，以使用 (QDK) 的量子開發工具組來定型分類器模型。
 
 我們強烈建議使用標準化的序列化格式，例如[JSON](https://en.wikipedia.org/wiki/JSON)檔案來儲存您的資料。
 這種格式會提供與不同架構（例如 Python 和 .NET 生態系統）的高度相容性。
@@ -23,7 +26,7 @@ ms.locfileid: "85274704"
 
 ## <a name="template-for-loading-your-datasets"></a>用於載入資料集的範本
 
-假設我們有一個訓練資料集 $ （x，y） $ 的大小 $N = $2，其中每個實例 $x _i $ of $x $ 有三個功能： $x _ {i1} $、$x _ {i2} $ 和 $x _ {i3} $。
+假設我們有一個訓練資料集 $ (x，y) $ 大小 $N = $2，其中每個實例 $x _i $ of $x $ 都有三個功能： $x _ {i1} $、$x _ {i2} $ 和 $x _ {i3} $。
 驗證資料集具有相同的結構。
 這些 datsets 可以使用 `data.json` 類似下列的檔案來表示：
 
@@ -72,7 +75,7 @@ ms.locfileid: "85274704"
 
 假設我們有一個具有不同貓和狗之高度和加權的小型資料集。 此資料集非常小，可將模型定型，但足以顯示載入資料集的程式。
 
-| 高度（m） | 權數（公斤） | 動物 |
+| 高度 (m)  | 權數 (公斤)  | 動物 |
 |-----------|------------|--------|
 | 0.54      | 30         | 狗    |
 | 0.30      | 8          | Cat    |

@@ -1,28 +1,31 @@
 ---
 title: 使用配量 Machine Learning 程式庫的基本分類
-description: '瞭解如何使用 Microsoft QDK 的量子 Machine Learning 程式庫，執行以 Q # 撰寫的量子順序分類器。'
+description: 瞭解如何 Q# 使用 MICROSOFT QDK 的量子 Machine Learning 程式庫來執行以撰寫的量子順序分類器。
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274627"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868962"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>基本分類：使用 QDK 將資料分類
 
-在本快速入門中，您將瞭解如何使用 QDK 的量子 Machine Learning 程式庫，執行以 Q # 撰寫的量子順序分類器。 
+在本快速入門中，您將瞭解如何 Q# 使用 QDK 的量子 Machine Learning 程式庫，執行以撰寫的量子順序分類器。 
 
-在本指南中，我們將使用在 Q # 中定義的分類器結構來使用半月球資料集。
+在本指南中，我們將使用中定義的分類器結構來使用半月球資料集 Q# 。
 
 ## <a name="prerequisites"></a>必要條件
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)。
-- 建立適用于[Python 主機程式](xref:microsoft.quantum.install.python)或[c # 主機程式](xref:microsoft.quantum.install.cs)的 Q # 專案。
+- Q#為[Python 主機程式](xref:microsoft.quantum.install.python)或[c # 主機程式](xref:microsoft.quantum.install.cs)建立專案。
 
 ## <a name="host-program"></a>主機程式
 
@@ -34,7 +37,7 @@ ms.locfileid: "85274627"
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[使用 Visual Studio Code 或命令列的 Python](#tab/tabid-python)
 
-    若要執行，您是來自 Python 的 Q # 分類器，請將下列程式碼儲存為 `host.py` 。 請記住，您也需要在 `Training.qs` 本教學課程稍後說明的 Q # 檔案。
+    若要執行，您是 Q# Python 的分類器，請將下列程式碼儲存為 `host.py` 。 請記住，您也需要 Q# `Training.qs` 此檔案，本教學課程稍後會有說明。
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +52,7 @@ ms.locfileid: "85274627"
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[使用 Visual Studio Code 或命令列的 C#](#tab/tabid-csharp)
 
-    若要執行，您是 c # 的 Q # 分類器，請將下列程式碼儲存為 `Host.cs` 。 請記住，您也需要在 `Training.qs` 本教學課程稍後說明的 Q # 檔案。
+    若要執行，您是 Q# c # 的分類器，請將下列程式碼儲存為 `Host.cs` 。 請記住，您也需要 Q# `Training.qs` 此檔案，本教學課程稍後會有說明。
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +66,7 @@ ms.locfileid: "85274627"
 
     ### <a name="c-with-visual-studio-2019"></a>[使用 Visual Studio 2019 的 C#](#tab/tabid-vs2019)
 
-    若要從 Visual Studio 中的 c # 執行新的 Q # 程式，請修改 `Host.cs` 以包含下列 c # 程式碼。 請記住，您也需要在 `Training.qs` 本教學課程稍後說明的 Q # 檔案。
+    若要 Q# 從 Visual Studio 中的 c # 執行新程式，請修改 `Host.cs` 以包含下列 c # 程式碼。 請記住，您也需要 Q# `Training.qs` 此檔案，本教學課程稍後會有說明。
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -78,7 +81,7 @@ ms.locfileid: "85274627"
 
 ## <a name="q-classifier-code"></a>Q \# 分類器程式碼
 
-現在讓我們來看看如何在 Q # 中定義主機程式所叫用的作業。
+現在讓我們來瞭解如何在中定義主機程式所叫用的作業 Q# 。
 我們會將下列程式碼儲存在名為的檔案中 `Training.qs` 。
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::

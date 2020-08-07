@@ -1,22 +1,25 @@
 ---
-title: 'Q # 標準 libararies 中的流程式控制件'
-description: '瞭解 Microsoft Q # 標準程式庫中的流程式控制製作業和功能。'
+title: 標準 libararies 中的流程式控制制 Q#
+description: 深入瞭解 Microsoft 標準程式庫中的流程式控制製作業和功能 Q# 。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274619"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868571"
 ---
 # <a name="higher-order-control-flow"></a>較高順序的控制流程 #
 
 標準程式庫的主要角色之一，是為了讓高階演算法概念更容易表達為[量副程式](https://en.wikipedia.org/wiki/Quantum_programming)。
-因此，Q # canon 會提供各種不同的流程式控制制結構，每個都是使用部分應用於函式和作業來執行。
+因此， Q# canon 會提供各種不同的流程式控制制結構，每個都是使用部分應用於函式和作業來執行。
 立即跳入範例，請考慮要在暫存器上建立「CNOT-CONTAINS 階梯」的情況：
 
 ```qsharp
@@ -47,7 +50,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 Canon 所提供的其中一個主要抽象概念是反復專案的其中一個。
 例如，假設有一個表單 $U \otimes U \otimes \cdots \otimes U $ 適用于單一 qubit 單一 $U $。
-在 Q # 中，我們可能會使用 <xref:microsoft.quantum.arrays.indexrange> 將此表示為在 `for` 註冊上的迴圈：
+在中 Q# ，我們可能會使用將此表示為在暫存器 <xref:microsoft.quantum.arrays.indexrange> `for` 上的迴圈：
 
 ```qsharp
 /// # Summary
@@ -88,8 +91,8 @@ ApplyToEachCA(Adjoint U, register);
 > 然後 `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` 會個別將錯誤更正程式碼 `code` 和修復功能套用 `recoveryFn` 至每個區塊。
 > 這甚至適用于傳統輸入： `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` 會套用 $ \pi/$2 的旋轉，$X $，後面接著 $Y $ 的 $pi/$3 旋轉。
 
-問 # canon 也提供功能程式設計熟悉的傳統列舉模式的支援。
-例如，會執行 <xref:microsoft.quantum.arrays.fold> 模式 $f （f （f （s \_ {\text{initial}}，x \_ 0），x \_ 1），\dots ..） $ 來減少清單上的函式。
+Q#Canon 也提供功能程式設計熟悉的傳統列舉模式的支援。
+例如，會執行 <xref:microsoft.quantum.arrays.fold> 模式 $f (f (f (s \_ {\text{initial}}，x \_ 0) ，x \_ 1) ，\dots ..) $ 來減少清單上的函式。
 此模式可以用來執行 sum、products、minima、maxima 和其他這類函數：
 
 ```qsharp
@@ -100,19 +103,19 @@ function Sum(xs : Int[]) {
 }
 ```
 
-同樣地，和之類的函式 <xref:microsoft.quantum.arrays.mapped> <xref:microsoft.quantum.arrays.mappedbyindex> 可以用來表示 Q # 中的功能程式設計概念。
+同樣地，和之類的函式 <xref:microsoft.quantum.arrays.mapped> <xref:microsoft.quantum.arrays.mappedbyindex> 可以用來表示中的功能程式設計概念 Q# 。
 
 ## <a name="composing-operations-and-functions"></a>撰寫作業和函數 ##
 
 Canon 所提供的控制流程結構會採用作業和函式做為其輸入，因此能夠將數個作業或函式組成單一可呼叫，是很有説明的。
 比方說，模式 $UVU ^ {\dagger} $ 在量副程式設計中非常常見，因此 canon 會提供 <xref:microsoft.quantum.canon.applywith> 此作業做為此模式的抽象概念。
 此抽象層也可讓您更有效率地 compliation 到線路，因為 `Controlled` 順序不 `U(qubit); V(qubit); Adjoint U(qubit);` 需要對每個進行動作 `U` 。
-若要查看此情況，請讓 $c （U） $ 是代表的單一， `Controlled U([control], target)` 並讓 $c （V） $ 以相同的方式定義。
-然後針對任意 state $ \ket{\psi} $、\begin{align} c （U） c （V） c （U） ^ \dagger \ket {1} \otimes \ket{\psi} & = \ket {1} \OTIMES （UVU ^ {\dagger} \ket{\psi}） \\ \\ & = （\boldone \otimes u）（c （V））（\boldone \otimes u ^ \dagger） \ket {1} \otimes \ket{\psi}。
+若要查看此情況，請讓 $c (U) $ 是代表的單一， `Controlled U([control], target)` 並讓 $c (V) $ 以相同的方式定義。
+然後，針對任意狀態 $ \ket{\psi} $、\begin{align} c (U) c (V) c (U) ^ \dagger \ket {1} \otimes \ket{\psi} & = \ket {1} \OTIMES (UVU ^ {\dagger} \ket{\psi} ) & \\ \\ = ( \boldone \otimes U)  (c (V) # A13 ( \boldone \otimes U ^ \dagger) \ket \otimes {1} \ket{\psi}。
 由的定義 \end{align} `Controlled` 。
-另一方面，\begin{align} c （U） c （V） c （U） ^ \dagger \ket {0} \otimes \ket{\psi} & = \ket {0} \otimes \ket{\psi} \\ \\ & = \ket {0} \otimes （UU ^ \dagger \ket{\psi}） \\ \\ & = （\Boldone \otimes u）（c （V））（\boldone \otimes u ^ \dagger） \ket {0} \otimes \ket{\psi}。
+另一方面，\begin{align} c (U) c (V) c (U) ^ \dagger \ket {0} \otimes \ket{\psi} & = \ket {0} \otimes \ket{\psi} \\ \\ & = \ket {0} \otimes (UU ^ \dagger \ket{\psi} ) \\ \\ & = ( \Boldone \otimes U)  (c (V) # A13 {0} ( \boldone \otimes \dagger
 藉由線性 \end{align}，我們可以讓我們以這種方式將所有輸入狀態的 $U $ out 納入考慮。
-也就是 $c （UVU ^ \dagger） = U c （V） U ^ \dagger $。
+也就是說，$c (UVU ^ \dagger) = U c (V) U ^ \dagger $。
 由於控制作業通常會耗用大量資源，因此使用和之類的控制變異 `WithC` `WithCA` 有助於減少需要套用的控制項函子數目。
 
 > [!NOTE]
@@ -146,7 +149,7 @@ ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 
 更複雜的範例是[Trotter – plat'home co. 擴充](https://arxiv.org/abs/math-ph/0506007v1)。
 如[資料結構](xref:microsoft.quantum.libraries.data-structures)的 Dynamical 產生器表示一節中所述，Trotter – plat'home co. 擴充提供特別有用的方式來表達矩陣指數。
-例如，以最低順序套用擴充，會產生適用于任何運算子 $A $ 和 $B $，因此 $A = A ^ \dagger $ 和 $B = B ^ \dagger $，\begin{align} \tag{★} \label{eq： trotter-plat'home co.-0} \exp （i [A + B] t） = \ lim_ {n\to\infty} \left （\exp （i A t/n） \exp （i B t/n） \right） ^ n。
+例如，以最低順序套用擴充，會產生適用于任何運算子 $A $ 和 $B $，因此 $A = A ^ \dagger $ 和 $B = B ^ \dagger $，\begin{align} \tag{★} \label{eq： trotter-plat'home co.-0} \exp (i [A + B] t) = \ lim_ {n\to\infty} \left ( \exp (我 A t/n) \exp (i B t/n) \right) ^ n。
 \end{align} 堆疊，這表示我們可以在 $A $ 和 $B $ 獨立的情況下，在 $A + B $ 之下，進一步演變狀態。
 如果我們以 `A : (Double, Qubit[]) => Unit` 適用于 $e ^ {i t} $ 的作業來表示 $A $ 之下的演進，則 Trotter – plat'home co. 擴充在重新排列呼叫序列方面的標記法會變得很清楚。
 具體而言，在給定的作業中， `U : ((Int, Double, Qubit[]) => Unit is Adj + Ctl` `A = U(0, _, _)` `B = U(1, _, _)` 我們可以藉由產生格式的順序，定義代表 `U` 時間 $t $ 之整數的新運算
@@ -170,14 +173,14 @@ U(1, time / Float(nSteps), target);
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-的簽章 `DecomposeIntoTimeStepsCA` 遵循 Q # 中常見的模式，其中的集合可能會由陣列所支援，或由其上的運算專案以元組（其第一個專案是 `Int` 表示其長度的值）來加以計算。
+的簽章 `DecomposeIntoTimeStepsCA` 遵循中常見的模式 Q# ，其中的集合可能會由陣列所支援，或由其上的計算元素，由其第一個專案為值的元組代表 `Int` 其長度。
 
 ## <a name="putting-it-together-controlling-operations"></a>將它放在一起：控制作業 ##
 
 最後，canon 會藉 `Controlled` 由提供其他方式來進行條件配量作業，以在仿函數上建立。
 通常是在量子算術中，對 $ \ket{0\cdots 0} $ 以外的計算基礎狀態進行條件運算。
 使用上述的控制作業和函式，我們可以在單一語句中進行更一般的配量條件。
-讓我們來看看它的運作方式 <xref:microsoft.quantum.canon.controlledonbitstring> （sans 型別參數），然後逐一細分各部分。
+讓我們來看看 <xref:microsoft.quantum.canon.controlledonbitstring> 它如何 (san 類型參數) ，然後逐一細分各部分。
 我們要做的第一件事，就是定義一項作業，此作業實際上會在任意計算基礎狀態上執行大量的控制項。
 不過，我們不會直接呼叫這項作業，因此我們會新增 `_` 至名稱的開頭，以指出它是其他位置的另一個結構。
 
@@ -215,7 +218,7 @@ operation _ControlledOnBitString(
 
 此時，我們可以完成，但有一點回答，我們的新作業不會像套用仿函數一樣「感覺」 `Controlled` 。
 因此，我們會撰寫一個函式，此函式會接受 oracle 的控制，並傳回新的作業，藉此定義新的控制流程概念。
-如此一來，新函式的外觀和感覺非常類似 `Controlled` ，說明我們可以使用 Q # 和 canon，輕鬆地定義強大的新控制流程結構：
+如此一來，新函式的外觀和感覺非常類似 `Controlled` ，說明我們可以使用和 canon，輕鬆地定義強大的新控制流程結構 Q# ：
 
 ```qsharp
 function ControlledOnBitString(

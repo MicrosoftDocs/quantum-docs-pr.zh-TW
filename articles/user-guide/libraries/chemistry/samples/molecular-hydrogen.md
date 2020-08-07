@@ -1,17 +1,20 @@
 ---
 title: 取得能階估計值
-description: '逐步解說範例 Q # 程式，以評估分子 hydrogen 的能源等級值。'
+description: 逐步解說 Q# 評估分子 hydrogen 能源等級值的範例程式。
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871561"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869200"
 ---
 # <a name="obtaining-energy-level-estimates"></a>取得能階估計值
 估計能源等級的值是量子化學的其中一個主要應用程式。 本文概述如何執行這項操作，以取得分子 hydrogen 的標準範例。 本節中所參考的範例位於 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) 化學範例存放庫中。 繪製輸出的更多視覺效果範例就是 [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) 示範。
@@ -121,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-您現在可以從主機程式叫用 Q # 程式碼。 下列 c # 程式碼會建立一個完整狀態的模擬器，並執行 `GetEnergyByTrotterization` 以取得地面狀態的能源。
+您現在可以叫 Q# 用主機程式中的程式碼。 下列 c # 程式碼會建立一個完整狀態的模擬器，並執行 `GetEnergyByTrotterization` 以取得地面狀態的能源。
 
 ```csharp
 using (var qsim = new QuantumSimulator())

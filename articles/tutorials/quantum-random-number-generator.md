@@ -1,30 +1,33 @@
 ---
 title: 建立量子亂數產生器
-description: 建置一個 Q# 專案，透過建立量子亂數產生器來示範基本的量子概念，例如疊加。
+description: 建立一個 Q# 專案，以透過建立量子亂數產生器來示範基本的量子概念，例如重迭。
 author: bromeg
 ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274349"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869761"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>教學課程：在 Q\# 中實作量子亂數產生器
 
-量子亂數產生器是以 Q # 撰寫量子演算法的一個簡單範例。 此演算法利用量子機制的本質來產生亂數。
+在中寫入的一個簡單的量子演算法範例 Q# 是量子亂數產生器。 此演算法利用量子機制的本質來產生亂數。
 
 ## <a name="prerequisites"></a>必要條件
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)。
-- [從命令列使用 Q#](xref:microsoft.quantum.install.standalone)，或使用 [Python 主機程式](xref:microsoft.quantum.install.python) 或 [C# 主機程式](xref:microsoft.quantum.install.cs)，建立 Q# 專案。
+- 您 Q# 可以[ Q# 從命令列使用](xref:microsoft.quantum.install.standalone)，或使用[Python 主機程式](xref:microsoft.quantum.install.python)或[c # 主機程式](xref:microsoft.quantum.install.cs)，來建立專案。
 
-## <a name="write-a-q-operation"></a>撰寫 Q# 作業
+## <a name="write-a-no-locq-operation"></a>撰寫作業 Q#
 
-### <a name="q-operation-code"></a>Q# 作業程式碼
+### <a name="no-locq-operation-code"></a>Q#作業程式碼
 
 1. 使用下列程式碼取代 Program.qs 檔案的內容：
 
@@ -32,7 +35,7 @@ ms.locfileid: "85274349"
 
 如[了解量子運算](xref:microsoft.quantum.overview.understanding)一文所述，量子位元是一種可疊加的量子資訊單位。 測量時，量子位元只能是 0 或 1。 不過在執行期間，量子位元的狀態代表著測量讀數為 0 或 1 的機率。 這個概率性的狀態稱為疊加。 我們可以使用此機率來產生亂數。
 
-在我們的 Q# 作業中，我們引進 Q# 原生的 `Qubit` 資料類型。 我們只能使用 `using` 陳述式來配置 `Qubit`。 當量子位元獲得配置時，一定會處於 `Zero` 狀態。 
+在我們的作業中 Q# ，我們引進了「 `Qubit` 原生」資料類型 Q# 。 我們只能使用 `using` 陳述式來配置 `Qubit`。 當量子位元獲得配置時，一定會處於 `Zero` 狀態。 
 
 使用 `H` 作業，我們可以將 `Qubit` 置於疊加狀態。 若要測量量子位元並讀取其值，請使用 `M` 內建作業。
 
@@ -61,13 +64,13 @@ ms.locfileid: "85274349"
 
 ## <a name="creating-a-complete-random-number-generator"></a>建立完整的亂數產生器
 
-既然我們已經有產生隨機位元的 Q # 作業，我們可以用來建立完整的量子亂數產生器。 我們可以使用 Q # 命令列應用程式或使用主機程式。
+既然我們已經有可 Q# 產生隨機位的作業，我們可以用它來建立完整的量子亂數產生器。 我們可以使用 Q# 命令列應用程式或使用主機程式。
 
 
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[具有 Visual Studio 或 Visual Studio Code 的 Q # 命令列應用程式](#tab/tabid-qsharp)
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#具有 Visual Studio 或 Visual Studio Code 的命令列應用程式](#tab/tabid-qsharp)
 
-若要建立完整的 Q # 命令列應用程式，請將下列進入點新增至您的 Q # 程式： 
+若要建立完整的 Q# 命令列應用程式，請將下列進入點新增至您的 Q# 程式： 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -91,7 +94,7 @@ dotnet run --no-build
 
 ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[使用 Visual Studio Code 或命令列的 Python](#tab/tabid-python)
 
-若要從 Python 執行新的 Q# 程式，請將下列程式碼儲存為 `host.py`：
+若要從 Python 執行您的新 Q# 程式，請將下列程式碼儲存為 `host.py` ：
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
@@ -105,7 +108,7 @@ Preparing Q# environment...
 
 ### <a name="c-with-visual-studio-code-or-visual-studio"></a>[擁有 Visual Studio Code 或 Visual Studio 的 C#](#tab/tabid-csharp)
 
-若要從 C# 執行新的 Q# 程式，請修改 `Driver.cs` 以納入下列 C# 程式碼：
+若要從 c # 執行您的新 Q# 程式，請修改 `Driver.cs` 以包含下列 c # 程式碼：
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 

@@ -1,17 +1,20 @@
 ---
-title: Broombridge 架構規格（0.1 版）
+title: 'Broombridge 架構規格 (ver 0.1) '
 description: 詳細說明 Microsoft 量子化學程式庫之 Broombridge 量子化學架構 v 0.1 的規格。
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
-ms.openlocfilehash: 618892b6cb01855d17522b06e47f72f68595ab38
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: abbc63b8801c774e6ba06cff99b7382d64424b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274684"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869132"
 ---
 # <a name="broombridge-specification-v01"></a>Broombridge 規格 v 0。1 #
 
@@ -126,7 +129,7 @@ Broombridge 物件必須有一個屬性 `integral_sets` ，其值為 JSON 陣列
 在本節的其餘部分，「整數集合物件」一詞會參考 Broombridge 物件的屬性值中的專案 `integral_sets` 。
 
 每個整數集物件都必須有一個屬性 `metadata` ，其值為 JSON 物件。
-的值 `metadata` 可以是空的 JSON 物件（也就是 `{}` ），或可能包含實作項所定義的其他屬性。
+的值 `metadata` 可以是空的 JSON 物件 (也就是、 `{}`) ，或可能包含實作項所定義的其他屬性。
 
 ### <a name="hamiltonian-section"></a>Hamiltonian 區段 ###
 
@@ -139,15 +142,15 @@ Broombridge 物件必須有一個屬性 `integral_sets` ，其值為 JSON 陣列
 
 $ $ H = \sum \_ \{ i，j \} \sum \_ {\sigma\in \\ {\uparrow，\downarrow \\ }} H \_ \{ ij \} a ^ \{ \dagger \} \_ {i，\sigma} a \_ {j，\sigma} + \frac {1} {2} \sum \_ \{ i，j，k，l \} \sum \_ {\sigma，\rho\in \\ {\uparrow，\downarrow \\ }} H \_ {ijkl} a ^ \dagger \_ {i，\sigma} a ^ \dagger \_ {k，\rho} a \_ {l，\rho} a \_ {j，\sigma}，$ $
 
-這裡 $h _ {ijkl} = （ij | kl） $ in Mulliken 慣例。
+這裡 $h _ {ijkl} = (ij | kl) $ in Mulliken 慣例。
 
 為了清楚起見，electron 一詞是
 
-$ $ h_ {ij} = \int {\mathrm d} x \psi ^ * \_ i （x） \left （\frac {1} {2} \nabla ^ 2 + \sum \_ {A} \frac{Z \_ A} {| x-x \_ a |} \right） \psi \_ j （x），$ $
+$ $ h_ {ij} = \int {\mathrm d} x \psi ^ * \_ i (x) \left ( \frac {1} {2} \nabla ^ 2 + \sum \_ {A} \frac{Z \_ A} {| x-x \_ A |} \right) \psi \_ j (x) ，$ $
 
 而這兩個 electron 的詞彙是
 
-$ $ h \_ \{ ijkl \} = \iint \{ \mathrm d \} x ^ 2 \psi ^ \{ \* \} \_ i （x \_ 1） \psi \_ j （x \_ 1） \frac \{ 1 \} \{ \| x \_ 1-x \_ 2 \| \} \psi \_ k ^ \{ \* \} （x \_ 2） \psi \_ l （x \_ 2）。
+$ $ h \_ \{ ijkl \} = \iint \{ \mathrm d \} x ^ 2 \psi ^ \{ \* \} \_ i (x \_ 1) \psi \_ j (x \_ 1) \frac \{ 1 \} \{ \| x \_ 1-x \_ 2 \| \} \psi \_ k ^ \{ \* \} (x \_ 2) \psi \_ l (x \_ 2) 。
 $$
 
 如我們在屬性的每個專案的[ `basis_set` 屬性](#basis-set-object)說明中所述 `integral_sets` ，我們會進一步明確假設使用的基礎函數是實際值。
@@ -180,7 +183,7 @@ Hamiltonian 物件也可能有屬性 `particle_hole_representation` 。
 
 這一節有資訊。
 
-下列 sparse 陣列數量代表 Hamiltonian $ $ H = \left （-5.0 （a ^ \{ \dagger \} \_ {1，\uparrow} a \_ {1，\uparrow} + a ^ \{ \dagger \} \_ {1，\downarrow} a \_ {1，\downarrow}） + 0.17 （a ^ \{ \dagger \} \_ {2，\uparrow} a \_ {1，\uparrow} + a ^ \{ \dagger \} \_ {1，\uparrow} a \_ {2，\uparrow} + a ^ \{ \dagger \} \_ {2，\downarrow} a \_ {1，\downarrow} + a ^ \{ \dagger \} \_ {1，\downarrow} a \_ {2，\downarrow}） \right） \\ ，\mathrm{Ha}。
+下列 sparse 陣列數量代表 Hamiltonian $ $ H = \left (-5.0 (^ \{ \dagger \} \_ {1，\uparrow} a \_ {1，\uparrow} + a ^ \{ \dagger \} \_ {1，\downarrow} a \_ {1，\downarrow} ) + 0.17 (^ \{ \dagger \} \_ {2，\uparrow} a \_ {1，\uparrow} + a ^ \{ \dagger \} \_ {1，\uparrow} a \_ {2，\uparrow} + a ^ \{ \dagger \} \_ {2，\downarrow} a { \_ 1，\downarrow} + a ^ \{ \dagger \} \_ {1，\downarrow} a \_ {2，\downarrow} ) \right) \\ ，\mathrm{Ha}。
 $$
 
 ```yaml
@@ -233,7 +236,7 @@ one_electron_integrals:     # required
 
 下列物件會指定 Hamiltonian
 
-$ $ H = \frac12 \sum \_ {\sigma，\rho\in \\ {\uparrow，\downarrow \\ }} \Biggr （1.6 a ^ {\dagger} \_ {1，\sigma} a ^ {\dagger} \_ {1，\rho} a \_ {1，\rho} a \_ {1，\sigma}-0.1 a ^ {\dagger} \_ {6，\sigma} a ^ {\dagger} \_ {1，\rho} a \_ {3，\rho} a \_ {2，\sigma}-0.1 a ^ {\dagger} { \_ 6，\sigma} a ^ {\dagger} { \_ 1，\rho} a { \_ 2，\rho} a {3，\sigma}-a ^ {\dagger} {1，\sigma} a \_ \_ ^ {\dagger} { \_ 6，0.1 \rho} \_ {3，\rho} a \_ {2，\sigma}-0.1 a ^ {\dagger} \_ {1，\sigma} a ^ {\dagger} \_ {6，\rho} a \_ {2，\rho} a \_ {3，\sigma} $ $ $ $-0.1 a ^ {\dagger} { \_ 3，\sigma} a ^ {\dagger} \_ {2，\rho} a \_ {6，\rho} a \_ {1，\sigma}-0.1 a ^ {\dagger} \_ {3，\sigma} a ^ {\dagger} \_ {2，\rho} a \_ {1，\rho} a \_ {6，\sigma}-0.1 a ^ {\dagger} \_ {2，\sigma} a ^ {\dagger} \_ {3，\rho} a \_ {6，\rho} a \_ {1，\sigma}-0.1 a ^ {\dagger} \_ {2，\sigma} a ^ {\dagger} \_ {3，\rho} a \_ {1，\Rho} a \_ {6，\sigma}\Biggr） \\ ，\textrm{Ha}。
+$ $ H = \frac12 \sum \_ {\sigma，\rho\in \\ {\uparrow，\downarrow \\ }} \Biggr ( 1.6 a ^ {\dagger} \_ {1，\sigma} a ^ {\dagger} \_ {1，\rho} a \_ {1，\rho} a \_ {1，\sigma}-0.1 a ^ {\dagger} \_ {6，\sigma} a ^ {\dagger} \_ {1，\rho} a \_ {3，\rho} a \_ {2，\sigma}-0.1 a ^ {\dagger} { \_ 6，\sigma} a ^ {\dagger} { \_ 1，\rho} a { \_ 2，\rho} a {3，\sigma}-a ^ {\dagger} {1，\sigma} a \_ \_ ^ {\dagger} { \_ 6，0.1 \rho} \_ {3，\rho} a \_ {2，\sigma}-0.1 a ^ {\dagger} \_ {1，\sigma} a ^ {\dagger} \_ {6，\rho} a \_ {2，\rho} a \_ {3，\sigma} $ $ $ $-0.1 a ^ {\dagger} { \_ 3，\sigma} a ^ {\dagger} \_ {2，\rho} a \_ {6，\rho} a \_ {1，\sigma}-0.1 a ^ {\dagger} \_ {3，\sigma} a ^ {\dagger} \_ {2，\rho} a \_ {1，\rho} a \_ {6，\sigma}-0.1 a ^ {\dagger} \_ {2，\sigma} a ^ {\dagger} \_ {3，\rho} a \_ {6，\rho} a \_ {1，\sigma}-0.1 a ^ {\dagger} \_ {2，\sigma} a ^ {\dagger} \_ {3，\rho} a \_ {1，\Rho} a \_ {6，\sigma}\Biggr) \\ ，\textrm{Ha}。
 $$
 
 ```yaml
@@ -270,7 +273,7 @@ Initial_state_suggestion 物件會指定所指定 Hamiltonian 的相關初始配
 
 每個狀態都代表已佔用的 orbitals 的重迭。 每個狀態物件都必須有 `label` 包含字串的屬性。 每個狀態物件都必須有一個 `superposition` 屬性，其中包含基礎狀態陣列及其未標準化的 amplitudes。
 
-例如，初始狀態 $ $ \ket{G0} = \ket{G1} = \ket{G2} = （a ^ {\dagger} \_ {1，\uparrow}a ^ {\dagger} \_ {2，\uparrow}a ^ {\dagger} \_ {2，\downarrow}） \ket {0} $ $ $ $ \ket{E} = \frac{0.1 （a ^ {\dagger} \_ {1，\uparrow}a ^ {\dagger} \_ {2，\uparrow}a ^ {\dagger} \_ {2，\downarrow}） + 0.2 （^ {\dagger} \_ {1，\uparrow}a ^ {\dagger} \_ {3，\uparrow}a ^ {\dagger} \_ {2，\downarrow}）} {\sqrt{| 0.1 | ^ 2 + | 0.2 | ^ 2}} \ket {0} $ $ 的表示方式
+例如，初始狀態 $ $ \ket{G0} = \ket{G1} = \ket{G2} = (^ {\dagger} \_ {1，\uparrow}a ^ {\dagger} \_ {2，\uparrow}a ^ {\dagger} \_ {2，\downarrow} ) \ket {0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger} \_ {1，\uparrow}a ^ {\dagger} \_ {2，\uparrow}a ^ {\dagger} \_ {2，\downarrow} ) + 0.2 (^ {\dagger} \_ {1，\uparrow}a ^ {\dagger} \_ {3，\uparrow}a ^ {\dagger} \_ {2，\downarrow} ) } {\sqrt{| 0.1 | ^ 2 + | 0.2 | ^ 2}} \ket {0} $ $ 的表示方式
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
     - state:

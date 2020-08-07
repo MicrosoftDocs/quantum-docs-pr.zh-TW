@@ -1,17 +1,20 @@
 ---
 title: 對 Microsoft QDK 貢獻程式碼
-description: 瞭解如何將範例和程式庫程式碼提供給 Microsoft Quantum Development Kit （QDK）。
+description: 瞭解如何將範例和程式庫程式碼提供給 Microsoft Quantum Development Kit (QDK) 。
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274547"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866904"
 ---
 # <a name="contributing-code"></a>提供程式碼
 
@@ -28,10 +31,10 @@ ms.locfileid: "85274547"
 
 ### <a name="unit-tests"></a>單元測試
 
-組成程式庫（例如 canon）的 Q # 函數、作業和使用者定義類型，會在[**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)存放庫的開發過程中自動進行測試。
+Q#組成程式庫（例如 canon）的函式、作業和使用者定義類型，會在[**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)存放庫的開發過程中自動進行測試。
 例如，當新的提取要求開啟時，我們的[Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/)設定會檢查提取要求中的變更是否不會中斷任何與量副程式設計人員所相依的現有功能。
 
-使用最新的 Q # 版本，單元測試是使用屬性來定義 `@Test("QuantumSimulator")` 。 引數可以是 "QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator"，或指定執行目標的任何完整限定名稱。 定義不同執行目標的數個屬性可能會附加至相同的可呼叫。 我們的一些測試仍會使用已被取代的[Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/)套件，它會公開所有的 Q # 函式和所有以 `Test` [Xunit](https://xunit.github.io/) framework 結尾的作業。 定義單元測試不再需要此封裝。 
+使用最新 Q# 版本時，會使用屬性來定義單元測試 `@Test("QuantumSimulator")` 。 引數可以是 "QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator"，或指定執行目標的任何完整限定名稱。 定義不同執行目標的數個屬性可能會附加至相同的可呼叫。 有些測試仍使用已被取代的[Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/)套件，它會公開所有以 Xunit framework 結尾的函式 Q# 和作業 `Test` 。 [xUnit](https://xunit.github.io/) 定義單元測試不再需要此封裝。 
 
 下列函數是用來確保和函式 <xref:microsoft.quantum.canon.fst> <xref:microsoft.quantum.canon.snd> 都在代表性範例中傳回正確的輸出。
 如果或的輸出 `Fst` `Snd` 不正確，則會 `fail` 使用語句來使測試失敗。
@@ -92,7 +95,7 @@ operation TestApplyWith() : Unit {
 這可能是另一種將功能當做協力廠商程式庫發行的情況，可能會有很大的意義。
 或者，我們可能會要求您協助修改某項功能，使其更符合我們的藍圖，讓我們可以執行最佳的工作。
 
-如果提取要求有更多的檔或單元測試可協助我們使用它，或者它的樣式與問 # 程式庫的其餘部分有足夠的風格，讓使用者更難以找到您的功能，我們也會要求您變更要求。
+如果提取要求有更多的檔或單元測試可協助我們使用它，或如果它的樣式與其他程式庫的樣式不同，讓 Q# 使用者更難以找到您的功能，我們也會要求您變更此要求。
 在這些情況下，我們會嘗試在程式碼審查中提供一些建議，告訴您可以新增或變更哪些專案，讓我們更容易納入您的貢獻。
 
 最後，我們無法接受造成損害「量子計算」的貢獻，如[Microsoft 開放原始碼](https://opensource.microsoft.com/codeofconduct/)管理辦法中所述。
@@ -102,10 +105,10 @@ operation TestApplyWith() : Unit {
 ## <a name="next-steps"></a>後續步驟
 
 感謝您協助讓量子開發工具組成為整個量副程式設計小組的絕佳資源！
-若要深入瞭解，請繼續進行 Q # 樣式的下列指南。
+若要深入瞭解，請繼續進行下列樣式指南 Q# 。
 
 > [!div class="nextstepaction"]
-> [瞭解問 # 樣式指導方針](xref:microsoft.quantum.contributing.style)
+> [瞭解 Q# 樣式指導方針](xref:microsoft.quantum.contributing.style)
 
 根據您所貢獻的程式碼類型而定，您可能需要記住其他事項，以協助您讓您的貢獻盡可能符合社區的最大目的。
 

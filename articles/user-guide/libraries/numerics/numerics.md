@@ -1,17 +1,20 @@
 ---
-title: '使用 Microsoft Q # 數值程式庫'
+title: 使用 Microsoft Q# 數值程式庫
 description: 瞭解 Microsoft 量子數值程式庫中可用的類型和作業。
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274700"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868792"
 ---
 # <a name="using-the-numerics-library"></a>使用數值程式庫
 
@@ -28,7 +31,7 @@ ms.locfileid: "85274700"
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>類型
+## <a name="types"></a>型別
 
 數值程式庫支援下列類型
 
@@ -43,32 +46,32 @@ open Microsoft.Quantum.Arithmetic;
 1. **`LittleEndian`**
     - 加法
     - 比較
-    - 乘法
+    - 乘
     - 求
-    - 除法（含餘數）
+    - 餘數) 的除法 (
 
 1. **`SignedLittleEndian`**
     - 加法
     - 比較
     - 反轉模數2補數
-    - 乘法
+    - 乘
     - 求
 
 1. **`FixedPoint`**
     - 準備/初始化為傳統值
-    - 加法（傳統常數或其他配量固定點）
+    - 加法 (傳統常數或其他配量固定點) 
     - 比較
-    - 乘法
+    - 乘
     - 求
     - 對偶數和奇數函式的特製化進行多項式評估
-    - 倒數（1/x）
-    - 測量（傳統雙精度浮點數）
+    - 倒數 (1/x) 
+    -  (傳統 Double) 的測量
 
-如需每一項作業的詳細資訊和詳細檔，請參閱 Q # 程式庫參考檔，網址為[docs.microsoft.com](https://docs.microsoft.com/quantum)
+如需每一項作業的詳細資訊和詳細檔，請參閱 Q# [docs.microsoft.com](https://docs.microsoft.com/quantum)的程式庫參考檔。
 
 ## <a name="sample-integer-addition"></a>範例：整數加法
 
-作為基本範例，請考慮 operation $ $ \ket x\ket y\mapsto \ket x\ket {x + y} $ $，也就是採用 n-qubit 整數的作業，$x $ 和 n 或（n + 1）-qubit 暫存器 $y $ 做為輸入，後者會對應到 sum $ （x + y） $。 請注意，如果 $y $ 儲存在 $n $ bit 暫存器中，則總和為計算的模數 $ 2 ^ n $。
+作為基本範例，請考慮 operation $ $ \ket x\ket y\mapsto \ket x\ket {x + y} $ $，也就是採用 n-qubit 整數的作業，$x $ 和 n-或 (n + 1) -qubit register $y $ 做為輸入，後者會對應到 sum $ (x + y) $。 請注意，如果 $y $ 儲存在 $n $ bit 暫存器中，則總和為計算的模數 $ 2 ^ n $。
 
 使用配量開發工具組時，可以套用此作業，如下所示：
 ```qsharp
@@ -90,24 +93,24 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 ## <a name="sample-evaluating-smooth-functions"></a>範例：評估平滑功能
 
-若要在量子電腦上評估如 $ \sin （x） $ 之類的平滑功能，其中 $x $ 是配 `FixedPoint` 量編號，則「量子開發工具組數值程式庫」會提供作業 `EvaluatePolynomialFxP` 和 `Evaluate[Even/Odd]PolynomialFxP` 。
+若要在量子電腦上評估如 $ \sin (x) $ 之類的平滑功能，其中 $x $ 是一個配 `FixedPoint` 量編號，則量子開發工具組數值程式庫會提供作業 `EvaluatePolynomialFxP` 和 `Evaluate[Even/Odd]PolynomialFxP` 。
 
-第一個是，可 `EvaluatePolynomialFxP` 讓評估格式為 $ $ P （x） = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d，$ $ 的多項式，其中 $d $ 代表該*程度*。 若要這麼做，只需要多項式係數 `[a_0,..., a_d]` （類型為 `Double[]` ）、輸入 `x : FixedPoint` 和輸出 `y : FixedPoint` （一開始為零）：
+第一個是，可 `EvaluatePolynomialFxP` 讓評估格式為 $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d，$ $ 的多項式，其中 $d $ 代表該*程度*。 若要這麼做，只需要) 類型的多項式係數 `[a_0,..., a_d]` (`Double[]` 、輸入 `x : FixedPoint` 和輸出 `y : FixedPoint` (一開始為零) ：
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
-$P （x） = 1 + 2x $ 的結果將會儲存在中 `yFxP` 。
+$P (x) = 1 + 2x $ 的結果將會儲存在中 `yFxP` 。
 
-第二個、 `EvaluateEvenPolynomialFxP` 和第三個 `EvaluateOddPolynomialFxP` 分別是偶數和奇數函式的特製化。 也就是說，若是偶數/奇數函數 $f （x） $ 和 $ $ P_ {偶數} （x） = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2d}，$ $ $f （x） $ 可 $P _ {偶數} （x） $ 或 $P _ {奇數} （x）： = x\cdot P_ {偶數} （x） $ 分別為近似值。
-在 Q # 中，這兩個案例可以依照下列方式處理：
+第二個、 `EvaluateEvenPolynomialFxP` 和第三個 `EvaluateOddPolynomialFxP` 分別是偶數和奇數函式的特製化。 也就是說，若是偶數/奇數函數 $f (x) $ 和 $ $ P_ {偶數} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2d}，$ $ $f (x) $ 的近似方式是 $P _ {偶數} (x) $ 或 $P _ {奇數} (x) ： = x\cdot P_ {偶數} (x) $。
+在中 Q# ，這兩個案例可以依照下列方式處理：
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
-這會評估 $P _ {偶數} （x） = 1 + 2x ^ 2 $，以及
+這會評估 $P _ {偶數} (x) = 1 + 2x ^ 2 $，以及
 ```qsharp
 EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
-這會評估 $P _ {奇數} （x） = x + 2x ^ 3 $。
+這會評估 $P _ {奇數} (x) = x + 2x ^ 3 $。
 
 ## <a name="more-samples"></a>其他範例
 

@@ -1,6 +1,8 @@
 ---
 標題：配量計算的向量和矩陣描述：瞭解如何使用向量和矩陣的基本概念。
 author： QuantumWriter uid： microsoft 量子.. m. i m. nawiebe@microsoft.com 日期：12/11/2017 毫秒。主題：文章不存在：
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -87,7 +89,7 @@ author： QuantumWriter uid： microsoft 量子.. m. i m. nawiebe@microsoft.com 
 
 資料行向量 (或單純的[*向量*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ 的維度 (或大小) $ n $ 是 n 複數的集合， $ $ $ (v_1，v_2，\ldots，v_n) $ 排列為資料行：
 
-$$&=\begin{bmatrix}
+$$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
@@ -215,7 +217,7 @@ $$
     =\begin{bmatrix}a c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\ 是\end{bmatrix}
 $$
 
-和
+及
 
 $$
     \begin{bmatrix}
@@ -242,7 +244,7 @@ $$
     cg \ ch \ dg \ dh \end{bmatrix} 。
 $$
 
-張量產品的最後一個有用的標記慣例是，對於任何向量 $ v $ 或矩陣 $ M 而言， $ $ v ^ { \otimes n } $ 或 $ M ^ { \otimes n } $ 是針對 $ n $ 折重複張量產品的短期。  例如︰
+張量產品的最後一個有用的標記慣例是，對於任何向量 $ v $ 或矩陣 $ M 而言， $ $ v ^ { \otimes n } $ 或 $ M ^ { \otimes n } $ 是針對 $ n $ 折重複張量產品的短期。  例如：
 
 \begin{align}
 &\begin{bmatrix}1 \\\\ 0 \end{bmatrix} ^ { \otimes 1 } = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ， \qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} ， \qquad \begin{bmatrix} 1 \\\\ -1 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1- \\\\ 1 \\\\ -1 \\\\ 1 \end{bmatrix} ，\\\\

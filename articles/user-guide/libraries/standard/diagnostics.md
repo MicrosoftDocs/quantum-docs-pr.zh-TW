@@ -1,21 +1,24 @@
 ---
-title: 'Q # 標準程式庫中的診斷'
-description: '瞭解用於在量副程式中攔截錯誤或錯誤的 Q # 標準程式庫中的診斷功能和作業。'
+title: 標準程式庫中的診斷 Q#
+description: 瞭解 Q# 用來攔截量副程式中錯誤或錯誤的標準程式庫中的診斷功能和作業。
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870629"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868537"
 ---
 # <a name="diagnostics"></a>診斷 #
 
 與傳統開發一樣，要能夠診斷量副程式中的錯誤和錯誤是很重要的。
-問 # 標準程式庫提供各種不同的方式來確保量副程式的正確性，如中所述 <xref:microsoft.quantum.guide.testingdebugging> 。
+Q#標準程式庫提供各種不同的方式來確保量副程式的正確性，如中所述 <xref:microsoft.quantum.guide.testingdebugging> 。
 大致上來說，這項支援是以函式和作業的形式提供，以指示目的電腦向主機程式或開發人員提供額外的診斷資訊，或是強制執行由函數或作業呼叫所表示的條件和非變異性的正確性。
 
 ## <a name="machine-diagnostics"></a>機器診斷 ##
@@ -30,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`具有簽章 `(String -> Unit)` ，再次表示無法從 Q # 中觀察發出的偵錯工具記錄訊息。
+> `Message`具有簽章 `(String -> Unit)` ，再次表示無法在中觀察發出的偵錯工具記錄訊息 Q# 。
 
 <xref:microsoft.quantum.diagnostics.dumpmachine>和 <xref:microsoft.quantum.diagnostics.dumpregister> callables 會指示目的電腦提供有關目前已配置之所有 qubits 的診斷資訊，或分別針對特定的 qubits 註冊。
 每一部目的電腦都會因回應傾印指令所提供的診斷資訊而有所不同。
@@ -49,7 +52,7 @@ Message($"About to rotate by an angle of {angle}...");
 例如， `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` 代表 $1 + 1 = $2 的數學事實，而則 `AssertQubit(One, qubit)` 表示測量 `qubit` 會傳回 `One` 具有確定性的條件。
 在先前的案例中，我們可以檢查只指定其值的條件是否正確，而在後者中，我們必須知道 qubit 狀態的相關資訊，才能評估判斷提示。
 
-Q # 標準程式庫提供數個不同的函數來表示事實，包括：
+Q#標準程式庫提供數個不同的函數來表示事實，包括：
 
 - <xref:microsoft.quantum.diagnostics.fact>
 - <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
@@ -67,10 +70,10 @@ Q # 標準程式庫提供數個不同的函數來表示事實，包括：
 如果判斷提示失敗，則會以指定的訊息呼叫來結束執行 `fail` 。
 根據預設，不會執行這項作業;可支援的模擬器應該提供執行執行時間檢查的執行。
 `AssertMeasurement`具有簽章 `((Pauli[], Qubit[], Result, String) -> ())` 。
-由於 `AssertMeasurement` 是具有空的元組做為其輸出類型的函式，因此在 `AssertMeasurement` Q # 程式中不會有任何來自呼叫的效果可觀察。
+由於 `AssertMeasurement` 是具有空的元組作為其輸出類型的函式，因此在程式內不會有任何來自 `AssertMeasurement` 所呼叫的效果 Q# 。
 
 在 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 給定的 Pauli 基礎中測量給定 qubits 的運算函式，會在某些容錯範圍內具有給定機率的指定結果。
-容錯為加法（例如 `abs(expected-actual) < tol` ）。
+容錯是加法 (例如 `abs(expected-actual) < tol`) 。
 如果判斷提示失敗，則會以指定的訊息呼叫來結束執行 `fail` 。
 根據預設，不會執行這項作業;可支援的模擬器應該提供執行執行時間檢查的執行。
 `AssertMeasurementProbability`具有簽章 `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` 。 第一個 `Double` 參數會提供所需的結果機率，第二個則是容錯。
@@ -100,7 +103,7 @@ using (register = Qubit()) {
 ```
 
 不過，更常見的情況是，我們可能無法存取與 Pauli 運算子 eigenstates 不一致的狀態判斷提示。
-例如，$ \ket{\psi} = （\ket {0} + e ^ {i \pi/8} \ket {1} ）/\sqrt {2} $ 不是任何 eigenstate 運算子的 Pauli，因此我們無法使用 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 來唯一判斷 state $ \ket{\psi '} $ 等於 $ \ket{\psi} $。
+例如，$ \ket{\psi} = ( \ket {0} + e ^ {i \pi/8} \ket {1}) /\sqrt {2} $ 不是任何 eigenstate 運算子的 Pauli，因此我們無法使用 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 來唯一判斷 state $ \ket{\psi '} $ 等於 $ \ket{\psi} $。
 相反地，我們必須將判斷提示 $ \ket{\psi '} = \ket{\psi} $ 分解成可使用模擬器支援的原始物件直接測試的假設。
 若要這麼做，請將 $ \ket{\psi} = \Alpha \ket {0} + \Beta \ket {1} $ 用於複數 $ \Alpha = \_ r + a \_ i $ 和 $ \Beta $。
 請注意，此運算式需要四個實數 $ \{ a \_ r、a \_ i、b \_ r、b \_ i \} $ 來指定，因為每個複數都可以表示為實數和虛數部分的總和。
@@ -109,7 +112,7 @@ using (register = Qubit()) {
 因此，我們需要指定三個彼此獨立的判斷提示，以便判斷提示所預期的狀態。
 我們會藉由找 `Zero` 出每個 Pauli 測量的機率，以提供 $ \Alpha $ 和 $ \Beta $，並個別進行判斷提示。
 讓 $x $、$y $ 和 $z $ 分別是 `Result` Pauli $X $、$Y $ 和 $Z $ 度量的值。
-然後，使用量測的可能性函式，\begin{align} \Pr （x = \texttt{Zero} | \Alpha，\Beta） & = \frac12 + a \_ r b \_ r + a \_ i b \_ i \\ \\ \Pr （y = \texttt{Zero} | \Alpha，\Beta） & = \frac12 + a \_ r b \_ i-a \_ i b \_ r \\ \\ \Pr （z = \texttt{Zero} | \Alpha，\Beta） & = \frac12\left （1 + a \_ r ^ 2 + a \_ i ^ 2 + b \_ r ^ 2 + b \_ i ^ 2 \right）。
+然後，使用量子測量的可能性函數，\begin{align} \Pr (x = \texttt{Zero} |\Alpha、\Beta) & = \frac12 + a \_ r b \_ r + a \_ i b \_ i \\ \\ \Pr (y = \texttt{Zero} | \Alpha、\Beta) & = \frac12 + a \_ r b \_ i-a \_ i b \_ r \\ \\ \Pr (z = \texttt{Zero} | \Alpha，\Beta) & = \frac12\left ( 1 + r \_ ^ 2 + a \_ i ^ 2 + b \_ r ^ 2 + b \_ i ^ 2 \right) 。
 \end{align}
 
 作業會 <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> 以類型的值，將指定的 $ \Alpha $ 和 $ \Beta $ 標記法實作為這些判斷提示 <xref:microsoft.quantum.math.complex> 。
@@ -119,8 +122,8 @@ using (register = Qubit()) {
 
 到目前為止，我們都擔心要準備特定狀態的測試作業。
 不過，通常我們會對任意輸入（而不是單一固定輸入）的操作方式感興趣。
-例如，假設我們已實作為 `U : ((Double, Qubit[]) => () : Adjoint)` 一個對應于一系列單一運算子 $U （t） $ 的作業，並提供明確的 `adjoint` 區塊，而不是使用 `adjoint auto` 。
-如果 $t $ 代表進化時間，我們可能會想要判斷提示 $U ^ \dagger （t） = U （-t） $ （如預期）。
+例如，假設我們已執行 `U : ((Double, Qubit[]) => () : Adjoint)` 對應至單一運算子系列的作業，$U (t) $，並已提供明確的區塊， `adjoint` 而不是使用 `adjoint auto` 。
+我們可能會想要判斷提示 $U ^ \dagger (t) = U (-t) $，如預期 $t $ 代表進化時間。
 
 大致來說，我們可以遵循兩個不同的策略，讓判斷提示中的兩個作業 `U` 和 `V` 動作都相同。
 首先，我們可以檢查 `U(target); (Adjoint V)(target);` 以指定的方式來保留每個狀態。
@@ -129,7 +132,7 @@ using (register = Qubit()) {
 
 > [!NOTE]
 > 上述所討論的參考判斷提示適用于[Choi – Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality)，這是一種數學架構，其會將 $n $ qubits 上的作業與 $ 2n $ 光子上的 qubits 狀態相關聯。
-> 特別是，$n $ qubits 上的身分識別作業是由光子 state $ \ket{\ Beta_ {00} } \mathrel{： =} （\ket {00} + \ket {11} ）/\sqrt $ 的 $n $ 複本所表示 {2} 。
+> 特別是 $n $ qubits 上的身分識別作業，是由光子 state $ \ket{\ Beta_ {00} } \mathrel{： =} ( \ket {00} + \ket {11}) /\sqrt $ 的 $n $ 複本所表示 {2} 。
 > 作業 <xref:microsoft.quantum.preparation.preparechoistate> 會執行此 isomorphism，並準備代表給定作業的狀態。
 
 大致上，這些策略會以時間-空間取捨來區分。

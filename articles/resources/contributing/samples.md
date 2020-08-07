@@ -1,17 +1,20 @@
 ---
 title: 參與 Microsoft QDK 的範例
-description: 瞭解如何將範例程式碼提供給 Microsoft Quantum Development Kit （QDK）。
+description: 瞭解如何將範例程式碼提供給 Microsoft Quantum Development Kit (QDK) 。
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.samples
-ms.openlocfilehash: 3bd0de04a448c74eea6c3e8e3a15dcbb19f9d705
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274514"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867501"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>對量子開發工具組貢獻範例
 
@@ -47,13 +50,13 @@ microsoft/Quantum
 
 | 檔案              | 描述                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | 用來以 .NET Core SDK 建立範例的 Q # 專案 |
-| `Game.qs`         | 範例的 Q # 作業和函式                 |
+| `CHSHGame.csproj` | Q#用來以 .NET Core SDK 建立範例的專案 |
+| `Game.qs`         | Q#範例的作業和函式                 |
 | `Host.cs`         | 用來執行範例的 c # 主機程式                     |
 | `host.py`         | 用來執行範例的 Python 主機程式                 |
 | `README.md`       | 範例用途和使用方式的相關檔    |
 
-並非所有範例都會有完全相同的檔案集合（例如：有些範例可能僅限 c #，有些則可能不會有 Python 主機，或有些範例可能需要輔助的資料檔案才能正常執行）。
+並非所有樣本都具有完全相同的檔案集合 (例如：有些範例可能僅限 c #，有些則可能沒有 Python 主機，或某些範例可能需要輔助的資料檔案才能) 。
 
 ## <a name="anatomy-of-a-helpful-readme-file"></a>有用的讀我檔案剖析
 
@@ -64,7 +67,7 @@ microsoft/Quantum
 > [!div class="nextstepaction"]
 > [瞭解如何呈現 chsh 遊戲範例](https://docs.microsoft.com/samples/microsoft/quantum/validating-quantum-mechanics/)
 
-此中繼資料會以[YAML 標頭](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#yaml-header)的形式提供，指出您的範例所涵蓋的語言（通常是 `qsharp` 、 `csharp` 和 `python` ），以及您的範例所涵蓋的產品（通常是 `qdk` ）。
+此中繼資料會以[YAML 標頭](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#yaml-header)的形式提供，以指出您的範例所涵蓋的語言 (一般，這會是 `qsharp` 、 `csharp` 和 `python`) ，而您的範例所涵蓋的產品 (通常只會 `qdk`) 。
 
 :::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="1-11":::
 
@@ -76,7 +79,7 @@ microsoft/Quantum
 
 :::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="13-21":::
 
-您的範例使用者也會知道他們需要執行的作業（例如：使用者是否只需要量子開發工具組本身，或是否需要其他軟體，例如 node.js？）：
+您的範例使用者也會知道他們需要哪些專案才能執行 (例如：使用者是否只需要量子開發工具組本身，或是否需要其他軟體，例如 node.js？ ) ：
 
 :::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="23-25":::
 

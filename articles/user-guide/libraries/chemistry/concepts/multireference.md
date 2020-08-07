@@ -6,12 +6,15 @@ ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
-ms.openlocfilehash: 005ef86382ca72969b06a4206cab01f3845718e2
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0066d676205901d4f2d41538684f9ba57407eb82
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274655"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869557"
 ---
 # <a name="correlated-wavefunctions"></a>關聯波函數
 
@@ -26,7 +29,7 @@ Dynamical 相互關聯是從 electrons 的趨勢引發，例如因為 interelect
 ## <a name="sparse-multi-reference-wavefunction"></a>稀疏多重參考 wavefunction
 可以將多重參考狀態 $ \ket{\ psi_ {\rm {MCSCF}}} $ 明確指定為 $N $-electron Slater determininants 的線性組合。
 \begin{align} \ket{\ psi_ {\rm {MCSCF}}} \propto \ sum_ {i_1 < i_2 < \cdots < i_N} \ lambda_ {i_1，i_2，\cdots，i_N} a ^ \ dagger_ {i_1} \cdots a ^ \ dagger_ {i_2} \ket {0} 。
-\end{align} 例如，state $ \propto （0.1 a ^ \ dagger_1a ^ \ dagger_2a ^ \ dagger_6-0.2 a ^ \ dagger_2a ^ \ dagger_1a ^ \ dagger_5） \ket {0} $ 可以在化學程式庫中指定，如下所示。
+\end{align} 例如，state $ \propto (0.1 a ^ \ dagger_1a ^ \ dagger_2a ^ \ dagger_6-0.2 a ^ \ dagger_2a ^ \ dagger_1a ^ \ dagger_5) \ket {0} $ 可以在化學程式庫中指定，如下所示。
 ```csharp
 // Create a list of tuples where the first item of each 
 // tuple are indices to the creation operators acting on the
@@ -46,12 +49,12 @@ var wavefunction = new FermionWavefunction<int>(superposition);
 這個單一運算子通常會寫成 $e ^ {T-T ^ \dagger} $，其中 $T-T ^ \dagger $ 是反 Hermitian 叢集運算子。 因此，\begin{align} \ket{\ psi_ {\rm {UCC}}} = e ^ {T-T ^ \dagger}\ket{\ psi_ {\rm{SCF}}}。
 \end{align}
 
-將叢集運算子 $T = T_1 + T_2 + \cdots $ 分割成部分也很常見，其中每個部分 $T _j $ 包含 $j $ body 詞彙。 在一般化的結合叢集理論中，單一主體叢集運算子（單一）的格式為 \begin{align} T_1 = \ sum_ {pq} T ^ {p} _ {q} a ^ \ dagger_p a_q，\end{align}
+將叢集運算子 $T = T_1 + T_2 + \cdots $ 分割成部分也很常見，其中每個部分 $T _j $ 包含 $j $ body 詞彙。 在一般化的結合叢集理論中， (單一) 的單一主體叢集運算子的格式為 \begin{align} T_1 = \ sum_ {pq} T ^ {p} _ {q} a ^ \ dagger_p a_q，\end{align}
 
-和兩個主體叢集運算子（雙精度浮點數）的形式為 \begin{align} T_2 = \ sum_ {pqrs} T ^ {pq} _ {rs} a ^ \ dagger_p a ^ \ dagger_q a_r a_s。
+和兩個主體叢集運算子 (雙精度) 的形式為 \begin{align} T_2 = \ sum_ {pqrs} T ^ {pq} _ {rs} a ^ \ dagger_p dagger_q a_r a_s。
 \end{align}
 
-較高順序的詞彙（三、時等等）是可行的，但目前不受化學程式庫支援。
+較高順序的詞彙 (三、時等等，) 是可行的，但目前不受化學程式庫支援。
 
 例如，let $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_1 ^ \ dagger_2 \ket {0} $，並讓 $T = 0.123 a ^ \ dagger_0 a_1 + 0.456 a ^ \ dagger_0a ^ \ dagger_3 a_1 a_2-0.789 a ^ \ dagger_3a ^ \ dagger_2 a_1 a_0 $。 然後，此狀態會在化學程式庫中具現化，如下所示。
 ```csharp

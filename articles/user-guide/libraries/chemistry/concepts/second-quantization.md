@@ -6,25 +6,28 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
-ms.openlocfilehash: e17c97767b05395af46a82c4035337406c7e3218
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ba77c499d6830b1f78bba39e20b15c4ebe9433fc
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274699"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869455"
 ---
 # <a name="second-quantization"></a>第二個量化
 
 第二個量化會透過不同的透鏡來查看電子結構的問題。
-第二個量化不會將每個 $N _e $ electrons 指派給特定狀態（或 orbital），而是會追蹤每個 orbital 並儲存每個的，並且同時自動確保對應 wave 函數的對稱屬性。
-這很重要，因為它允許指定量子化學模型，而不需要擔心 symmetrizing 輸入狀態（如 fermions 所需），同時也因為第二個量化允許使用小型的量子電腦來模擬這類模型。
+第二個量化不會將每個 $N _e $ electrons 指派給特定狀態 (或 orbital) ，而是會追蹤每個 orbital 並儲存每個的，並且同時自動確保對應 wave 函數的對稱屬性。
+這很重要，因為它允許指定量子化學模型，而不需要擔心 symmetrizing 輸入狀態 (fermions) 所需，同時也因為第二個量化允許使用小型的量子電腦來模擬這類模型。
 
 作為第二個量化的範例，讓我們假設 $ \ psi_0 \cdots \ psi_ {N-1} $ 是一組 orthonormal 的空間 orbitals。
 系統會選擇這些 orbitals，盡可能在視為有限的基礎集內正確地表示系統。
 這類 orbitals 的常見範例是不可部分完成的 orbitals，它會形成 hydrogen atom 的 eigenbasis。
 因為 electrons 有兩個旋轉狀態，所以可以將兩個 electrons crammed 到每個這類的空間 orbital 中。
 也就是說，有效的基礎狀態的格式為 $ \ psi_ {0，\uparrow}，\ldots，\ psi_ {N-1，\uparrow}，\ psi_ {0，\downarrow}，\ldots，\ psi_ {N-1，\downarrow} $，其中 $ \uparrow $ 和 $ \downarrow $ 是指定旋轉自由度的兩個 eigenstates 的標籤。
-$ （J，\sigma） $ for $ \sigma \in \{ \uparrow，\downarrow $ 的這個結合索引 \} 稱為「微調-orbital」，因為它會同時儲存空間和微調的自由度程度。
+這個結合的 $ (j、\sigma) $ for $ \sigma \in \{ \uparrow、\downarrow $ 的索引 \} 稱為「微調-orbital」，因為它會同時儲存空間和微調的自由度程度。
 在化學程式庫中，orbitals 會儲存在 `SpinOrbital` 資料結構中，並依照下列方式建立。
 
 ```csharp
@@ -49,9 +52,9 @@ $ （J，\sigma） $ for $ \sigma \in \{ \uparrow，\downarrow $ 的這個結合
     SpinOrbital spinOrbital1 = tuple;
 ```
 
-這表示我們可以正式地將 wave 函數的微調和空間部分的基礎視為 $ \ psi_ {0} \cdots \ psi_ {2n-1} $，其中每個索引現在都是 $ （j，\sigma） $ 的列舉。
-其中一個可能的列舉是 $g （j，\sigma） = j + N\sigma ' $。
-另一個可能的列舉是 $h （j，\sigma） = 2 * j + \sigma $。
+這表示我們可以正式地將 wave 函式的微調和空間部分的基礎視為 $ \ psi_ {0} \cdots \ psi_ {2n-1} $，其中每個索引現在是 $ (j，\sigma) $ 的列舉。
+其中一個可能的列舉 $g (j，\sigma) = j + N\sigma ' $。
+另一個可能的列舉 $h (j，\sigma) = 2 * j + \sigma $。
 量子化學程式庫可以使用這些慣例，而這類編碼中的微調 orbitals 可以具現化，如下所示。
 
 ```csharp
@@ -144,7 +147,7 @@ $ $ 這一系列的運算子會使用 c # 程式碼，在 Hamiltonian 模擬程�
     var fermionTerm = new FermionTerm(ladderSequences);
 ```
 
-對於 $k $ Fermions 的系統，在第二個量化中，建立運算子 $a ^ \ dagger_i $ 的動作是由 $ $ a ^ \ dagger_i \ket{n_1、n_2、\ldots、0_i、\ldots、n_k} = （-1） ^ {S_i} \ket{n_1、n_2、\ldots、1_i、\ldots、n_k}、$ $ 和 $ $ a ^ \ dagger_i \ket{n_1、n_2、\ldots、1_i、\ldots、n_k} = 0、$ $ where $S _i = \ sum_ {j<i} a ^ \ dagger_j a_j $ 測量單一物件狀態中的 Fermions 總數，且索引 $j < i $。
+對於 $k $ Fermions 的系統，在第二個量化中，建立運算子 $a ^ \ dagger_i $ 的動作是由 $ $ a ^ \ dagger_i \ket{n_1、n_2、\ldots、0_i、\ldots、n_k} = (-1) ^ {S_i} \ket{n_1、n_2、\ldots、1_i、\ldots、n_k}、$ $ 和 $ $ a ^ \ dagger_i \ket{n_1、n_2、\ldots、1_i、\ldots、n_k} = 0、$ $ where $S _i = \ sum_ {j<i} a ^ \ dagger_j a_j $ 測量單一物件狀態中的 Fermions 總數，且索引 $j < i $。
 
 第三個運算子也經常用於第二個量化標記法。
 這個運算子稱為「數位」運算子，是由 \begin{equation} n_i = a ^ \ dagger_i a_i 所定義。
@@ -167,7 +170,7 @@ n_i \ket {1} _i &= \ket {1} _i。
 不過，在 fermionic 系統中使用建立或 annihilation 運算子時，會發生奧妙。
 我們需要所有有效的配量狀態在標籤的交換下都是反對稱的。
 這表示 $ $ a ^ \ dagger_2 ^ \ dagger_1 \ket {0} =-a ^ \ dagger_1 ^ \ dagger_2 \ket {0} 。
-$ $ 這類運算子稱為「反運算」，一般而言，在任何 $i 中，j $ 我們 \begin{align} 了 ^ \ dagger_i ^ \ dagger_j =-（1-\ delta_ {i，j}） ^ \ dagger_j ^ \ dagger_i，\quad ^ \ dagger_i a_j = \ delta_ {i，j}-a_j ^ \ dagger_i。
+$ $ 這類運算子稱為「反運算」，一般而言，在任何 $i 中，j $ 我們 \begin{align} 了 ^ \ dagger_i ^ \ dagger_j =- (1-\ delta_ {i，j} ) ^ \ dagger_j ^ \ dagger_i，\quad a ^ \ dagger_i a_j = \ delta_ {i，j}-a_j ^ \ dagger_i。
 \end{align}，因此會將下列兩個 <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderSequence`1> 實例視為 inequivalent
 ```csharp
     // Let us initialize an array of tuples representing the
@@ -213,13 +216,13 @@ $ $ 這類運算子稱為「反運算」，一般而言，在任何 $i 中，j $
 這可能會 unsurprising[電子系統的量子模型](xref:microsoft.quantum.chemistry.concepts.quantummodels)中的 Hamiltonian，可以根據建立和 annihilation 運算子來撰寫。
 特別是，如果 $ \psi \_ j $ 是構成基礎的微調 orbitals，則
 
-\begin{equation} \hat{H} = \sum \_ {pq} H \_ {pq} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} H \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ Ra \_ s + H \_ {\textrm nuc}，\label{eq： totalHam} \end{equation}，其中 $h \_ {\textrm nuc} $ 是指的是的
+\begin{equation} \hat{H} = \sum \_ {pq} H \_ {pq} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} H \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ Ra \_ s + H \_ {\textrm nuc}，\label{eq： totalHam} \end{equation}，其中 $h \_ {\textrm nuc} $ 是 (的近似值) 的一種常數，
 
-\begin{align} h \_ {pq} &= \int \_ {-\infty} ^ \infty \psi ^ \* \_ p （x \_ 1） \left （-\Frac{\nabla ^ 2} {2} + V （x \_ 1） \right） \psi \_ q （x \_ 1） \mathrm{d} ^ 3 倍 \_ 1，\end{align}
+\begin{align} h \_ {pq} &= \int \_ {-\infty} ^ \infty \psi ^ \* \_ p (x \_ 1) \left (-\Frac{\nabla ^ 2} {2} + V (x \_ 1) \right) \psi \_ q (x 1 \_) \mathrm{d} ^ 3 倍 \_ 1，\end{align}
 
-其中 $V （x） $ 是 mean 欄位的潛能，而
+其中 $V (x) $ 是 mean 欄位的潛能，而
 
-\begin{align} h \_ {pqrs} &= \int \_ {-\infty} ^ \infty \int \_ {-\infty} ^ \infty\psi \_ p ^ \* （x \_ 1） \psi \_ q ^ \* （x \_ 2） \left （\frac {1} {| x_1-x_2 |} \right） \psi \_ r （x \_ 2） \psi \_ s （x \_ 1） \mathrm{d} ^ 3 倍 \_ \_ 2. \ 標籤 {eq：積分} mathrm
+\begin{align} h \_ {pqrs} &= \int \_ {-\infty} ^ \infty \int \_ {-\infty} ^ \infty\psi \_ p ^ \* (x \_ 1) \psi \_ q ^ \* (x \_ 2) \left ( \frac {1} {| x_1-x_2 |} \right) \psi \_ r (x \_ 2) \psi \_ s (x \_ 1) \mathrm{d} ^ 3 倍 \_ \_ 。 \ 標籤 {eq：積分} mathrm
 
 $H \_ {pq} $ 的詞彙稱為一 electron 的積分，因為所有這類詞彙都只牽涉到單一 electrons，同樣地 $h \_ {pqrs} $ 是兩個 electron 的積分。
 它們稱為「積分」，因為計算這些係數的值需要整數。
@@ -228,7 +231,7 @@ $H \_ {pq} $ 的詞彙稱為一 electron 的積分，因為所有這類詞彙都
 
 這些詞彙所代表之意義的直覺，可以從組成每一個的建立和 annihilation 運算子中以往累積所有。
 例如，$h _ {pq} a ^ \ dagger_p a_q $ 描述從微調 orbital $q $ 到微調 orbital $p $ 的 electron 跳躍。
-同樣地，$h _ {pqrs} a ^ \ dagger_p ^ \ dagger_q a_r a_s $ （適用于相異 $p、q、r、s $）一詞描述了微調 orbitals 中的兩個 electrons $r $，而 $s $ 散佈于彼此之間，最後再以微調 orbitals $p $ 和 $q $ 為結尾。
+同樣地，$h _ {pqrs} 一詞 ^ \ dagger_p ^ \ dagger_q a_r a_s $ (針對相異 $p、q、r、s $) 描述微調 orbitals 中的兩個 electrons $r $ 和 $s $ 散佈彼此之間，最後再結束微調 orbitals $p $ 和 $q $。
 如果 $r = q $ and $p = s $，則 $h _ {prrp} a ^ \ dagger_p a ^ \ dagger_r a_r a_p = h_ {prrp} n_p n_r $ 會提供與兩個 electrons 相關聯的能源損失，但不會描述 dynamical 進程。
 
 我們可能會使用 `FermionHamiltonian` 類別來代表這類 Hamiltonians，這基本上是包含所有所需 `FermionTerm` 實例的清單。
@@ -309,14 +312,14 @@ $ $ \begin{align} H = \sum \_ {pq} h \_ {pq} a ^ \dagger \_ {p} a \_ {q} + \frac
 例如，在 $p、q、r、s $ 是相異的索引，我們可以使用反 commutation 規則顯示： $ $ a ^ \dagger \_ {p} a ^ \dagger \_ {q} a \_ {r} a \_ {s} =-a ^ \dagger \_ {q} a ^ \dagger \_ {p} a \_ {r} a \_ {s} =-a ^ \dagger \_ {p} a ^ \dagger \_ {q} a { \_ s} a { \_ r} = a ^ \dagger \_ {q} a ^ \dagger \_ {p} a \_ {s} a \_ {r}。
 $$
 
-此外，當 $H $ Hermitian 時，每個非 Hermitian fermionic 運算子（假設 $h \_ {pqrs} a ^ \dagger \_ {p} a ^ \dagger \_ {q} a \_ {r} a \_ {s} $）都有 Hermitian 共軛，也可以在 $H $ 中找到。 若要以唯一的方式為這些 symmetries 所特性的詞彙群組編制索引，我們會定義標準排序，針對 $ （i \_ 1，\cdots，i \_ n，j \_ 1，\cdots，j \_ m） $ （任何 $n + m $ fermionic 運算子序列 $a ^ \dagger \_ {i \_ 1} \cdots a ^ \dagger \_ {i \_ n} a \_ {j \_ 1} \cdots a \_ {j \_ m} $as 如下所示：
+此外，當 $H $ Hermitian 時，每個非 Hermitian fermionic 運算子（假設 $h \_ {pqrs} a ^ \dagger \_ {p} a ^ \dagger \_ {q} a \_ {r} a \_ {s} $）都有 Hermitian 共軛，也可以在 $H $ 中找到。 若要以唯一的方式為這些 symmetries 所特性的詞彙群組編制索引，我們定義了標準的排序方式，針對 $ (i \_ 1、\cdots、i \_ n、j \_ 1、\cdots、j \_ m) $ of 任何 $n + m $ fermionic 運算子序列 $a ^ \dagger \_ {i \_ 1} \cdots a ^ \dagger \_ {i \_ n} a \_ {j \_ 1} \cdots a \_ {j \_ m} $as：
 -   所有建立運算子 $a ^ \dagger \_ {i \_ \cdot} $ 都放在所有 annihilation 運算子 $a \_ {j \_ \cdot} $ 之前。
 -   所有建立運算子索引都是以遞增順序排序，也就是 $i \_ 1< i \_ 2< \cdots < i \_ n $。
 -   所有的 annihilation 運算子索引都是以遞減順序排序，也就是 $j \_ 1> j \_ 2 \cdots > j \_ m $。
 -   最左邊的索引小於或等於最右邊的索引，也就是 $i \_ 1 \ le j \_ m $。
 
-讓我們將這組以標準方式排序索引識別為 $ $ \begin{align} （i \_ 1，\cdots，i \_ n，j \_ 1，\cdots，j \_ m） \in S \_ {n，m}。
+讓我們將這組以標準方式排序索引識別為 $ $ \begin{align} (i \_ 1、\cdots、i \_ n、j \_ 1、\cdots、j \_ m) \in S \_ {n，m}。
 \end{align} $ $
 
-使用此標準順序時，fermionic Hamiltonian 可能會以 $ $ \begin{align} H = \sum \_ {（p，q） \In S \_ {1,1} } H ' \_ {pq} \frac{a ^ \dagger \_ {p} a \_ {q} + a ^ \dagger { \_ q} a \_ {p}} {2} + \sum \_ {（p，q，r，s） \in S \_ {2,2} } H ' \_ {pqrs} \frac{a ^ \dagger \_ {p} a ^ \dagger \_ {q} a \_ {r} a \_ {S} + a ^ \dagger \_ {s} a ^ \dagger \_ {r} a \_ {q} a \_ {p}} {2} ，\end{align} $ $ 搭配適當調整的一和雙 electron 積分，分別 $h ' \_ {pq} $ 和 $h ' \_ {pqrs} $。
+使用此標準順序時，fermionic Hamiltonian 可能會以 $ $ \begin{align} H = \sum \_ { (p、q) \In S \_ {1,1} } H ' \_ {pq} \frac{a ^ \dagger \_ {p} a \_ {q} + a ^ \dagger { \_ q} a \_ {p}} {2} + \sum { \_ (p、q、r、s) \in S \_ {2,2} } H ' \_ {pqrs} \frac{a ^ \dagger \_ {p} a ^ \dagger \_ {q} a \_ {r} a \_ {s} + a ^ \dagger \_ {S} a ^ \dagger \_ {r} a \_ {q} a \_ {p}} {2} ，\end{align} $ $ 搭配適當調整的一和雙 electron 積分，分別 $h ' \_ {pq} $ 和 $h ' \_ {pqrs} $。
 

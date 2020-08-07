@@ -1,25 +1,28 @@
 ---
 title: 完整狀態量子模擬器-量子開發工具組
-description: '瞭解如何在 Microsoft Quantum Development Kit 完整狀態模擬器上執行您的 Q # 程式。'
+description: 瞭解如何 Q# 在 Microsoft Quantum Development Kit 的完整狀態模擬器上執行程式。
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871173"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868333"
 ---
-# <a name="quantum-development-kit-qdk-full-state-simulator"></a>量子開發工具組（QDK）完整狀態模擬器
+# <a name="quantum-development-kit-qdk-full-state-simulator"></a> (QDK) 完整狀態模擬器的量子開發工具組
 
-QDK 提供的完整狀態模擬器會模擬您本機電腦上的量子機器。 您可以使用完整狀態模擬器來執行和調試以 Q # 撰寫的配量演算法，最多可達 30 qubits。 完整狀態模擬器類似于 Microsoft Research 的[LIQ $ Ui | \rangle $](http://stationq.github.io/Liquid/) platform 中使用的量子模擬器。
+QDK 提供的完整狀態模擬器會模擬您本機電腦上的量子機器。 您可以使用「完整狀態模擬器」來執行和「偵測」中所撰寫的配量演算法 Q# ，最多可利用 30 qubits。 完整狀態模擬器類似于 Microsoft Research 的[LIQ $ Ui | \rangle $](http://stationq.github.io/Liquid/) platform 中使用的量子模擬器。
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>叫用和執行完整狀態模擬器
 
-您可以透過類別公開完整狀態模擬器 `QuantumSimulator` 。 如需其他詳細資訊，請參閱[執行 Q # 程式的方式](xref:microsoft.quantum.guide.host-programs)。
+您可以透過類別公開完整狀態模擬器 `QuantumSimulator` 。 如需其他詳細資訊，請參閱[執行 Q# 程式的方式](xref:microsoft.quantum.guide.host-programs)。
 
 ### <a name="invoking-the-simulator-from-c"></a>從 C 叫用模擬器#
 
@@ -36,7 +39,7 @@ QDK 提供的完整狀態模擬器會模擬您本機電腦上的量子機器。 
 
 ### <a name="invoking-the-simulator-from-python"></a>從 Python 叫用模擬器
 
-使用來自 Q # Python 程式庫的[模擬（）](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable)方法，以及匯入的 Q # 操作：
+從 Python 程式庫使用 [[模擬 ( # B1](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) ] 方法 Q# 和匯入的作業 Q# ：
 
 ```python
 qubit_result = myOperation.simulate()
@@ -44,7 +47,7 @@ qubit_result = myOperation.simulate()
 
 ### <a name="invoking-the-simulator-from-the-command-line"></a>從命令列叫用模擬器
 
-從命令列執行 Q # 程式時，完整狀態模擬器是預設的目的電腦。 （選擇性）您可以使用 **--** 模擬器（或 **-s**快捷方式）參數來指定所需的目的電腦。 下列兩個命令都會使用完整狀態模擬器來執行程式。 
+Q#從命令列執行程式時，完整狀態模擬器是預設的目的電腦。 （選擇性）您可以使用 **--** 模擬器 (或 **-s**快捷方式) 參數來指定所需的目的電腦。 下列兩個命令都會使用完整狀態模擬器來執行程式。 
 
 ```dotnetcli
 dotnet run
@@ -53,7 +56,7 @@ dotnet run -s QuantumSimulator
 
 ### <a name="invoking-the-simulator-from-juptyer-notebooks"></a>從 Juptyer 筆記本叫用模擬器
 
-使用 IQ # 魔術命令[% 模擬](xref:microsoft.quantum.iqsharp.magic-ref.simulate)來執行 Q # 作業。
+使用 I Q# 魔術命令[% 模擬](xref:microsoft.quantum.iqsharp.magic-ref.simulate)來執行作業 Q# 。
 
 ```
 %simulate myOperation
@@ -74,8 +77,8 @@ dotnet run -s QuantumSimulator
 
 完整狀態模擬器會使用[OpenMP](http://www.openmp.org/)來平行處理所需的線性代數。 根據預設，OpenMP 會使用所有可用的硬體執行緒，這表示具有少量 qubits 的程式通常會執行緩慢，因為所需的協調會 dwarfs 實際的工作。 您可以藉由將環境變數設定 `OMP_NUM_THREADS` 為較小的數位來修正此問題。 根據經驗法則，將一個執行緒設定為最多四個 qubits，然後針對每個 qubit 設定一個額外的執行緒。 視您的演算法而定，您可能需要調整變數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [量子資源估計工具](xref:microsoft.quantum.machines.resources-estimator)
+- [量子資源估算器](xref:microsoft.quantum.machines.resources-estimator)
 - [量子 Toffoli 模擬器](xref:microsoft.quantum.machines.toffoli-simulator)
 - [量子追蹤模擬器](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

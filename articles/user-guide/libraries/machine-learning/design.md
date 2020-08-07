@@ -6,12 +6,15 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
-ms.openlocfilehash: b304b9d1a15f164f4dfe758aaed31b7b2369b18c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274683"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868930"
 ---
 # <a name="design-your-own-classifier"></a>設計您自己的分類器
 
@@ -47,6 +50,8 @@ ms.locfileid: "85274683"
 我們在這裡定義的是一個函式，它會傳回 `ControlledRotation` 元素陣列，並搭配參數陣列和偏差來定義我們的 [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) 。 此類型是配量 Machine Learning 程式庫中的基礎，而且會定義分類器。 上述函數中定義的線路是分類器的一部分，其中資料集的每個範例都包含兩個功能。 因此，我們只需要兩個 qubits。 線路的圖形表示如下：
 
  ![線路模型範例](~/media/circuit_model_1.PNG)
+
+請注意，根據預設，配量 Machine Learning 程式庫的作業會測量註冊的最後一個 qubit，以估計分類機率。 在設計線路時，您應該記住這一點。
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>使用程式庫函式來撰寫閘道的層級
 

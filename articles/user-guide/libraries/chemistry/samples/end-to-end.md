@@ -5,12 +5,15 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274346"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869302"
 ---
 # <a name="end-to-end-with-nwchem"></a>端對端使用 NWChem #
 
@@ -100,7 +103,7 @@ cd nwchem/QA/chem_library_tests/H4
 Get-Content h4_sto6g_0.000.nw
 ```
 
-有問題的分子是4個 hydrogen 原子的系統，其相片順序是根據某個角度的特定幾何， `alpha` 如組名中所指出的參數 `h4_sto6g_alpha.nw` 。 H4 是自1970年起，適用于計算化學的已知[分子基準測試](https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.560180511)。 參數表示 `sto6g` 該牌堆會根據 Slater 類型的 orbital 來實作為標記法，具體來說，就是與具有6個高斯基礎函式的[停止 nG 設定](https://en.wikipedia.org/wiki/STO-nG_basis_sets)相關的標記法。 此輸入組還包含數個 NWChem 張量縮減 Engine （TCE）指示，引導 NWChem 產生與量子開發工具組互通所需的資訊：
+有問題的分子是4個 hydrogen 原子的系統，其相片順序是根據某個角度的特定幾何， `alpha` 如組名中所指出的參數 `h4_sto6g_alpha.nw` 。 H4 是自1970年起，適用于計算化學的已知[分子基準測試](https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.560180511)。 參數表示 `sto6g` 該牌堆會根據 Slater 類型的 orbital 來實作為標記法，具體來說，就是與具有6個高斯基礎函式的[停止 nG 設定](https://en.wikipedia.org/wiki/STO-nG_basis_sets)相關的標記法。 此輸入組也包含 NWChem 張量縮減 Engine 的幾個指示， (TCE) 直接 NWChem 產生與量子開發工具組交互操作所需的資訊：
 
 ```
 ...
@@ -165,8 +168,8 @@ ElapsedMilliseconds : 721
 - 嘗試直接編輯 NWChem 投影片來修改投影片，例如，探索 `STO-nG` 各種 n 選項的模型， 
 - 嘗試其他預先定義的 NWChem 輸入卡座，其位於 `nwchem/qa/chem_library_tests` 、
 - 試用從 NWChem 產生的一組預先定義的 Broombridge YAML 基準測試，並以[Microsoft/量子存放庫](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)的一部分提供。 這些基準測試包括： 
-    - 小型分子驅使分子，例如分子 hydrogen （H2）、Beryllium （是）、鋰鎳氫（LiH）、
-    - 較大的分子驅使分子，例如 ozone （O3）、搶鮮版（Beta） carotene、cytosine 等等。 
+    - 小型分子驅使分子，例如分子 hydrogen (H2) 、Beryllium () 、鋰鎳氫 (LiH) 、
+    - 較大的分子驅使分子，例如 ozone (O3) 、搶鮮版（Beta） carotene、cytosine 等等。 
 - 試試看具有 Microsoft Quantum Development Kit 介面的圖形化前端[EMSL 箭](https://arrows.emsl.pnnl.gov/api/qsharp_chem)號。 
 
 
@@ -200,7 +203,7 @@ qsharp_chem.yaml-2018-10-23-14:37:42 (download)
 ...
 ```
 
-按一下 [開啟] ``download`` ，以使用唯一的檔案名（例如）來儲存本機複本 ``qsharp_chem48443.yaml`` （每次執行時，特定名稱會不同）。 然後，您可以使用上述程式進一步處理此檔案，例如 
+按一下 [開啟] ``download`` ，這會使用唯一的檔案名來儲存本機複本，例如 ``qsharp_chem48443.yaml`` (每次執行) 的特定名稱都不同。 然後，您可以使用上述程式進一步處理此檔案，例如 
 ```powershell
 Get-GateCount -Format YAML qsharp_chem48443.yaml
 ```

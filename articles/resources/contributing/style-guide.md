@@ -1,24 +1,27 @@
 ---
-title: 'Microsoft 問 # 樣式指南'
-description: '瞭解 Q # 程式和程式庫的命名、輸入、檔和格式設定慣例。'
+title: Microsoft Q# 樣式指南
+description: 瞭解程式和程式庫的命名、輸入、檔和格式設定慣例 Q# 。
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871377"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867584"
 ---
-# <a name="q-style-guide"></a>問 # 樣式指南 #
+# <a name="no-locq-style-guide"></a>Q#樣式指南 #
 ## <a name="general-conventions"></a>一般慣例 ##
 
-本指南中所建議的慣例旨在協助您更容易閱讀和瞭解以 Q # 撰寫的程式和程式庫。
+本指南中所建議的慣例旨在協助您 Q# 更容易閱讀和瞭解撰寫程式和程式庫。
 
-## <a name="guidance"></a>指引
+## <a name="guidance"></a>指導方針
 
 我們建議：
 
@@ -29,13 +32,13 @@ ms.locfileid: "86871377"
 在提供配量開發工具組的同時，我們致力於功能和作業名稱，協助量子開發人員撰寫容易閱讀的程式，並將驚訝降到最低。
 其中一個重要的部分是，當我們選擇函式、作業和類型的名稱時，我們會建立程式設計人員用來表達量子概念的*詞彙*;透過我們的選擇，我們可以協助或妨礙他們的工作，以清楚溝通。
 這會讓我們負責確保引進的名稱提供清楚明瞭，而不是隱匿。
-在本節中，我們將詳細說明如何根據明確指引來達成此義務，以協助我們發揮問 # 開發小組的最佳效能。
+在本節中，我們會詳細說明如何根據明確指引來達成此義務，以協助我們進行開發小組的最佳做法 Q# 。
 
 ### <a name="operations-and-functions"></a>作業和函式 ###
 
 名稱應該建立的第一件事，就是指定的符號是否代表函式或作業。
 函式和作業之間的差異，對於瞭解程式碼區塊的行為非常重要。
-若要將函式和作業之間的區別傳達給使用者，我們需要使用副作用來處理該問答模組的配量作業。
+為了將函式與作業之間的區別傳達給使用者，我們依賴該模型，透過副作用來進行配 Q# 量作業。
 也就是說，作業*會執行*某些動作。
 
 相反地，函數會描述資料之間的數學關聯性。
@@ -69,7 +72,7 @@ ms.locfileid: "86871377"
 | 準備 | Qubits 的給定暫存器會初始化為特定狀態 |
 | 範例 | 從某個分佈隨機傳回的傳統值 |
 
-針對函式，我們建議避免使用動詞來取代常用名詞（請參閱以下有關名詞的指引）或形容詞：
+針對函式，建議您避免使用動詞，而改用一般名詞 (請參閱下面有關) 或形容詞的適當名詞指引：
 
 - `ConstantArray`
 - `Head`
@@ -80,7 +83,7 @@ ms.locfileid: "86871377"
 這個名稱有額外的好處，可以比對內建仿函數的語義 `Controlled` ，如下所述。
 同樣地，_代理程式名詞_也可以用來從作業名稱中建立函式和 UDT 名稱，就像 `Encoder` 是與強式相關聯的 UDT 名稱的情況一樣 `Encode` 。
 
-# <a name="guidance"></a>[指引](#tab/guidance)
+# <a name="guidance"></a>[指導方針](#tab/guidance)
 
 我們建議：
 
@@ -93,15 +96,15 @@ ms.locfileid: "86871377"
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | Name | 描述 |
+|   | 名稱 | 描述 |
 |---|------|-------------|
-| ☑ | `operation ReflectAboutStart` | 清除使用動詞（「反映」）來表示作業的效果。 |
+| ☑ | `operation ReflectAboutStart` | 清除使用動詞 ( 「反映」 ) 以指出作業的效果。 |
 | ☒ | <s>`operation XRotation`</s> | 使用名詞片語建議函式，而不是運算。 |
-| ☒ | <s>`operation search_oracle`</s> | 使用 `snake_case` Contravenes Q # 標記法。 |
-| ☒ | <s>`operation Search_Oracle`</s> | 使用底線 internal to operation name contravenes Q # 標記法。 |
+| ☒ | <s>`operation search_oracle`</s> | 使用 `snake_case` contravenes Q# 標記法。 |
+| ☒ | <s>`operation Search_Oracle`</s> | 使用底線內部的運算名稱 contravenes Q# 標記法。 |
 | ☑ | `function StatePreparationOracle` | 使用名詞片語會建議函式傳回作業。 |
-| ☑ | `function EqualityFact` | 清除使用名詞（"事實"）來表示這是函式，而是形容詞。 |
-| ☒ | <s>`function GetRotationAngles`</s> | 使用動詞（"get"）表示這是一項作業。 |
+| ☑ | `function EqualityFact` | 清除名詞 ( 「事實」 ) 的用法，表示這是函式，而形容詞。 |
+| ☒ | <s>`function GetRotationAngles`</s> | 使用動詞 ( 「get」 ) 會建議這是作業。 |
 | ☑ | `newtype GeneratorTerm` | 使用名詞片語清楚地指的是呼叫 UDT 函數的結果。 |
 | ☒ | <s>`@Attribute() newtype RunOnce()`</s> | 使用動詞命令時，建議 UDT 的函數是作業。 |
 | ☑ | `@Attribute() newtype Deprecated(Reason : String)` | 使用名詞片語會傳達屬性的使用。 |
@@ -110,14 +113,14 @@ ms.locfileid: "86871377"
 
 ### <a name="entry-points"></a>進入點
 
-在 Q # 程式中定義進入點時，Q # 編譯器會辨識[ `@EntryPoint()` 屬性](xref:microsoft.quantum.core.entrypoint)，而不需要具有特定名稱的進入點（例如： `main` 、 `Main` 或 `__main__` ）。
-也就是說，從問 # 開發人員的觀點來看，進入點是以標注的一般作業 `@EntryPoint()` 。
-此外，Q # 進入點可能是整個應用程式的進入點（也就是：在 Q # 獨立可執行檔中），或可能是 Q # 程式與應用程式的主機程式之間的介面（也就是在使用 Q # 搭配 Python 或 .NET 時），因此在套用至 Q # 進入點時，名稱 "main" 可能會有誤導。
+在程式中定義進入點時 Q# ， Q# 編譯器會辨識[ `@EntryPoint()` 屬性](xref:microsoft.quantum.core.entrypoint)，而不需要該進入點具有特定名稱 (例如： `main` 、 `Main` 或 `__main__`) 。
+也就是說，從開發人員的觀點來看 Q# ，進入點是以標注的一般作業 `@EntryPoint()` 。
+此外， Q# 進入點也可能是整個應用程式的進入點 (也就是：在 Q# 獨立可執行檔) 中，或可能是 Q# 應用程式的程式與主機程式之間的介面 (例如：使用搭配 Q# Python 或 .net) 時，在套用到進入點時，名稱 "main" 可能會有誤導 Q# 。
 
 我們建議使用命名進入點，以使用 `@EntryPoint()` 上述命名作業的一般建議來反映屬性的用法。
 
 
-# <a name="guidance"></a>[指引](#tab/guidance)
+# <a name="guidance"></a>[指導方針](#tab/guidance)
 
 我們建議：
 
@@ -126,7 +129,7 @@ ms.locfileid: "86871377"
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | Name | 描述 |
+|   | 名稱 | 描述 |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | 清楚地透過作業名稱來溝通進入點的目的。 |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | 使用 `Main` 不會清楚地傳達進入點的用途，而且會與 `@EntryPoint()` 屬性重複。 |
@@ -138,13 +141,13 @@ ms.locfileid: "86871377"
 前述的建議是，有許多形式的速記，會看到在量子運算中常見且普遍使用的用法。
 我們建議您在存在的現有和通用速記位置使用它，特別是針對目的電腦作業內建的作業。
 例如，我們選擇名稱 `X` ，而不是 `ApplyX` ，而 `Rz` 不是 `RotateAboutZ` 。
-使用這類速記時，作業名稱應全部大寫（例如： `MAJ` ）。
+使用這類速記時，作業名稱應全部大寫， (例如： `MAJ`) 。
 
 在常用的縮寫和前列縮寫定義（例如 "QFT" 用於「量子傅立葉轉換」）中套用此慣例時，一定要特別注意。
 我們建議遵循一般的 .NET 慣例，以使用完整名稱中的縮寫和前列縮寫定義，這規定：
 
-- 兩個字母的縮寫和前列縮寫定義會以大寫（例如： `BE` "big endian"）命名，
-- 所有較長的縮略字和前列縮寫定義都是在中命名 `CamelCase` （例如 `Qft` ，針對「量子傅立葉轉換」）
+- 兩個字母的縮寫和前列縮寫定義是以大寫 (命名，例如： `BE` "big endian" ) 、
+- 所有較長的縮略字和前列縮寫定義都是以 (的方式命名， `CamelCase` 例如「 `Qft` 量子傅立葉轉換」 ) 
 
 因此，執行 QFT 的作業可以稱為 `QFT` 速記，或寫出為 `ApplyQft` 。
 
@@ -157,18 +160,18 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidance"></a>[指引](#tab/guidance)
+# <a name="guidance"></a>[指導方針](#tab/guidance)
 
 我們建議：
 
 - 適當時，請考慮常用的已接受和廣泛使用的簡短名稱。
 - 針對速記使用大寫。
-- 使用大寫表示簡短（兩個字母）的縮寫和前列縮寫定義。
-- 使用 `CamelCase` 更長（三個或更多個字母）的縮寫和前列縮寫定義。
+- 請使用大寫的 short (兩個字母) 縮寫和前列縮寫定義。
+- 使用 `CamelCase` (三或多個字母) 首字母縮寫和前列縮寫定義。
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | Name | 描述 |
+|   | 名稱 | 描述 |
 |---|------|-------------|
 | ☑ | `X` | 適用于「套用 $X $ 轉換」的清楚縮寫 |
 | ☑ | `CNOT` | 「受控制-不」的易懂速記 |
@@ -190,14 +193,14 @@ Especially in a field such as quantum computing that is rich with domain experti
 In naming code symbols, one way that this cognizance expresses itself is as an awareness of the convention from physics of adopting as the names of algorithms and operations the names of their original publishers.
 While we must maintain the history and intellectual provenance of concepts in quantum computing, demanding that all users be versed in this history to use even the most basic of functions and operations places a barrier to entry that is in most cases severe enough to even present an ethical compromise. -->
 因此，我們建議在任何合理的情況下，將描述概念的一般名詞都採用強式喜好設定，以適當的名詞描述概念的發行歷程記錄。
-在特定的範例中，單向控制的交換和雙向控制的非作業通常稱為學術文獻中的「Fredkin」和「Toffoli」作業，但是在 Q # 中識別的主要是 `CSWAP` 和 `CCNOT` 。
+在特定的範例中，單獨控制的交換和雙向控制的非作業通常稱為學術文獻中的「Fredkin」和「Toffoli」作業，但在 Q# 主要是以 `CSWAP` 和識別 `CCNOT` 。
 在這兩種情況下，API 檔批註都會根據適當名詞和所有適當的引文來提供同義字名稱。
 
-這項喜好設定特別重要，因為一定要有一些適當名詞的使用方式，問 # 會遵循許多傳統語言所設定的傳統，並 `Bool` 參考布林邏輯參照中的型別，而這些類型在 George Boole 中會被命名為。
-類似的一些量子概念會以類似的方式命名，包括 `Pauli` 問答 # 語言內建的類型。
+這個喜好設定特別重要，因為一定要有一些適當名詞的使用方式，這會 Q# 遵循許多傳統語言所設定的傳統語言，例如，並 `Bool` 參考布林邏輯參照中的型別，而這又稱為 George Boole。
+類似的一些量子概念會以類似的方式命名，包括 `Pauli` 語言的內建類型 Q# 。
 藉由將適當名詞的使用方式降到最低，這種用法並不重要，我們會降低無法合理地避免適當名詞的影響。
 
-# <a name="guidance"></a>[指引](#tab/guidance) 
+# <a name="guidance"></a>[指導方針](#tab/guidance) 
 
 我們建議：
 
@@ -209,15 +212,15 @@ While we must maintain the history and intellectual provenance of concepts in qu
 
 ### <a name="type-conversions"></a>類型轉換 ###
 
-由於 Q # 是強式和 staticly 型別語言，因此一種類型的值只能使用類型轉換函式的明確呼叫，當做另一個類型的值使用。
-這與允許以隱含方式變更類型的語言（例如：類型升階）或透過轉換而成。
-因此，型別轉換函式在 Q # 程式庫開發中扮演著重要的角色，並包含其中一個常見的命名相關決策。
+由於 Q# 是強式和 staticly 類型的語言，因此只能使用類型轉換函式的明確呼叫，將一個類型的值當做另一個類型的值使用。
+這與可讓值以隱含方式變更類型的語言相反 (例如：型別提升) 或透過轉型。
+因此，型別轉換函式在程式庫開發中扮演重要的角色 Q# ，並包含其中一個常見的命名相關決策。
 不過，我們會注意到，因為型別轉換一律是_決定性_的，所以它們可以撰寫為函式，因此會落在上述建議之下。
-特別的是，我們建議類型轉換函式絕不能命名為動詞（例如： `ConvertToX` ）或副詞介係詞片語（ `ToX` ），但應該命名為形容詞介係詞片語，以指出來源和目的地類型（ `XAsY` ）。
+特別的是，我們建議不要將類型轉換函式命名為動詞 (例如： `ConvertToX`) 或副詞介係詞片語 (`ToX`) ，但應命名為形容詞介係詞片語，以指出 () 的來源和目的地類型 `XAsY` 。
 在類型轉換函式名稱中列出陣列類型時，我們建議速記 `Arr` 。
 避免發生例外狀況時，我們建議使用來命名所有類型轉換函式， `As` 以便快速識別這些函數。
 
-# <a name="guidance"></a>[指引](#tab/guidance)
+# <a name="guidance"></a>[指導方針](#tab/guidance)
 
 我們建議：
 
@@ -225,7 +228,7 @@ While we must maintain the history and intellectual provenance of concepts in qu
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | Name | 描述 |
+|   | 名稱 | 描述 |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 介係詞 "to" 會產生動詞片語，表示作業，而不是函數。 |
 | ☒ | <s>`AsDouble`</s> | 輸入類型不會從函式名稱中清除。 |
@@ -240,15 +243,15 @@ While we must maintain the history and intellectual provenance of concepts in qu
 明確指出在命名函式和作業時，這是很有説明的，讓僅限內部程式碼的意外相依性變得顯而易見。
 如果作業或函式不適合直接使用，而是應由部分應用程式所使用的相符可呼叫來使用，請考慮使用以關鍵字開頭的名稱， `internal` 以取得部分套用的可呼叫。
 
-# <a name="guidance"></a>[指引](#tab/guidance)
+# <a name="guidance"></a>[指導方針](#tab/guidance)
 
 我們建議：
 
-- 當函式、作業或使用者定義型別不屬於 Q # 程式庫或程式的公用 API 時，請在、或宣告前面放置關鍵字，以確定它已標記為內部 `internal` `function` `operation` `newtype` 。
+- 當函式、作業或使用者定義型別不屬於程式庫或程式的公用 API 時，請在 Q# 、或宣告前面放置關鍵字，以確定它已標記為內部 `internal` `function` `operation` `newtype` 。
 
 # <a name="examples"></a>[範例](#tab/examples)
 
-|   | Name | 描述 |
+|   | 名稱 | 描述 |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | 請勿使用底線 `_` 來表示此作業僅供內部使用。 |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`開頭的關鍵字清楚地表示此作業僅供內部使用。 |
@@ -256,7 +259,7 @@ While we must maintain the history and intellectual provenance of concepts in qu
 ***
 ### <a name="variants"></a>變異 ###
 
-雖然這項限制可能不會在未來的 Q # 版本中持續存在，但目前還是通常會有一組相關的作業或函式，這些群組會根據其輸入支援的函子，或其引數的具體類型來區分。
+雖然這項限制可能不會在未來的版本中持續存在 Q# ，但目前還是通常會有一組相關的作業或函式，這些群組是由其輸入支援的函子或其引數的具體類型所區分。
 這些群組可以使用相同的根名稱，後面接著一或兩個表示其 variant 的字母來加以區別。
 
 | 後置詞 | 意義 |
@@ -268,7 +271,7 @@ While we must maintain the history and intellectual provenance of concepts in qu
 | `D` | 輸入或輸入的類型為`Double` |
 | `L` | 輸入或輸入的類型為`BigInt` |
 
-# <a name="guidance"></a>[指引](#tab/guidance)
+# <a name="guidance"></a>[指導方針](#tab/guidance)
 
 我們建議：
 
@@ -281,24 +284,24 @@ While we must maintain the history and intellectual provenance of concepts in qu
 
 ### <a name="arguments-and-variables"></a>引數和變數 ###
 
-函式或作業的 Q # 程式碼的主要目標，是為了方便閱讀和瞭解。
+函式或作業的程式碼主要目標 Q# ，是為了方便閱讀和理解。
 同樣地，輸入和類型引數的名稱應該會傳達函式或引數在提供後的使用方式。
 
 
-# <a name="guidance"></a>[指引](#tab/guidance)
+# <a name="guidance"></a>[指導方針](#tab/guidance)
 
 我們建議：
 
 - 針對所有變數和輸入名稱，請 `pascalCase` 在強式喜好設定中使用 `CamelCase` 、 `snake_case` 或 `ANGRY_CASE` 。
 - 輸入名稱應該是描述性的;盡可能避免一或兩個字母名稱。
 - 只接受一個型別引數的作業和函式應該會 `T` 在其角色很明顯時，表示該型別引數。
-- 如果函式或作業接受多個類型引數，或如果單一類型引數的角色不明顯，請考慮針對每個類型使用前面加上的簡短大寫字組 `T` （例如： `TOutput` ）。
+- 如果函式或作業接受多個型別引數，或如果單一型別引數的角色不明顯，請考慮使用前面加上的簡短大寫字， `T` 例如 `TOutput` 每個類型的 (：) 。
 - 不包含引數和變數名稱中的類型名稱;這項資訊可以和應該由您的開發環境提供。
-- 依其常值名稱（ `flagQubit` ）和陣列類型（以複數（））表示純量類型 `measResults` 。
+- 依據其常值名稱來表示純量類型 (`flagQubit`) ，並依據複數 () 來進行陣列類型 `measResults` 。
   特別是針對 qubits 的陣列，請考慮以某種方式來表示這類類型，其 `Register` 名稱參照的 qubits 順序是密切相關的。
-- 當做陣列索引使用的變數應該以為開頭 `idx` ，且應為單數（例如： `things[idxThing]` ）。
+- 當做陣列索引使用的變數應該以開頭 `idx` ，而且應該是單數 (例如： `things[idxThing]`) 。
   特別是，強烈避免使用單字母變數名稱做為索引;請考慮 `idx` 至少使用。
-- 用來保存陣列長度的變數應該以開頭 `n` ，而且應該是複數化（例如： `nThings` ）。
+- 用來保存陣列長度的變數應該以開頭 `n` ，而且應該是複數化 (例如： `nThings`) 。
 
 # <a name="examples"></a>[範例](#tab/examples)
 
@@ -307,9 +310,9 @@ While we must maintain the history and intellectual provenance of concepts in qu
 ### <a name="user-defined-type-named-items"></a>名為 Items 的使用者定義型別 ###
 
 使用者定義類型中的命名專案應該命名為 `CamelCase` ，即使在 UDT 的輸入中也一樣。
-這有助於在使用存取子標記法（例如： `callable::Apply` ）或複製和更新標記法（）時，清楚地將命名的專案與本機範圍變數的參考區隔開 `set arr w/= Data <- newData` 。
+當使用存取子標記法 (例如： `callable::Apply`) 或 () 的複製和更新標記法時，這有助於清楚地將命名的專案與本機範圍變數的參考區隔開 `set arr w/= Data <- newData` 。
 
-# <a name="guidance"></a>[指引](#tab/guidance)
+# <a name="guidance"></a>[指導方針](#tab/guidance)
 
 我們建議：
 
@@ -337,12 +340,12 @@ While we must maintain the history and intellectual provenance of concepts in qu
 可能的話，減少作業或函式所預期的輸入數目會很有説明，因此，每個輸入的角色對於呼叫該作業或函式的開發人員，以及稍後閱讀該程式碼的開發人員而言，會更容易察覺。
 特別是當您無法或合理地減少作業或函式的引數數目時，一定要具有一致的順序，以將使用者在預測輸入順序時所面臨的驚訝降到最低。
 
-我們建議輸入排序慣例，其主要衍生自將部分應用程式視為 currying f （x，y）≡ f （x）（y）的一般化。
+我們建議輸入排序慣例，其主要衍生自將部分應用程式視為 currying f (x，y) ≡ f (x) # B4 y) 的一般化。
 因此，部分套用第一個引數應該會產生可呼叫的，這在合理的情況下會非常有用。
 遵循此原則，請考慮使用下列引數順序：
 
 - 傳統不可呼叫的引數，例如角度、冪向量等等。
-- 可呼叫的引數（函數和引數）。
+- 可呼叫的引數 (函式和引數) 。
   如果函式和作業都做為引數，請考慮將作業放在函數之後。
 - 由可呼叫引數處理的集合，其方式與 `Map` 、 `Iter` 、和相同 `Enumerate` `Fold` 。
 - 當做控制項使用的 Qubit 引數。
@@ -366,7 +369,7 @@ operation ApplyPhaseEstimationIteration(
 例如， `ControlledOnInt<'T>` 具有 `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)` 類似仿函數的類型， `ControlledOnInt<Qubit[]>(5, _)` `Controlled` 但在控制項暫存器代表 state $ \ket {5} = \ket $ 的條件上 {101} 。
 因此，開發人員預期會將可 `ControlledOnInt` 呼叫的輸入放在最後進行轉換，而且產生的作業會採用與仿函數輸出相同的順序做為其輸入 `(Qubit[], 'T)` --- `Controlled` 。
 
-# <a name="guidance"></a>[指引](#tab/guidance)
+# <a name="guidance"></a>[指導方針](#tab/guidance)
 
 我們建議：
 
@@ -380,10 +383,10 @@ operation ApplyPhaseEstimationIteration(
 
 ## <a name="documentation-conventions"></a>文件集慣例 ##
 
-Q # 語言可讓您透過使用特殊格式的檔批註，將檔附加至作業、函式和使用者定義類型。
-以三斜線（）表示 `///` ，這些檔批註是小型的[DocFX-flavored Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)檔，可用來描述每個作業、函式和使用者定義類型的用途、每個所需的輸入等等。
+此 Q# 語言可讓您透過使用特殊格式的檔批註，將檔附加至作業、函式和使用者定義類型。
+以三斜線 () 表示 `///` ，這些檔批註是小型[DocFX-flavored Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)檔，可用來描述每個作業、函式和使用者定義類型的用途、每個預期的輸入為何等等。
 配量開發工具組所提供的編譯器會將這些批註解壓縮，並使用它們來協助排版類似于的檔 https://docs.microsoft.com/quantum 。
-同樣地，隨配量開發工具組提供的語言伺服器會使用這些批註，在使用者將滑鼠停留在其 Q # 程式碼的符號上方時提供協助。
+同樣地，隨配量開發工具組提供的語言伺服器會使用這些批註，在使用者將滑鼠停留在其程式碼中的符號上時提供協助 Q# 。
 藉由使用檔批註，可以讓使用者瞭解程式碼，方法是提供有用的參考，以取得使用本檔中的其他慣例無法輕鬆表示的詳細資料。
 
 > [!div class="nextstepaction"]
@@ -391,25 +394,25 @@ Q # 語言可讓您透過使用特殊格式的檔批註，將檔附加至作業�
 
 若要有效地使用此功能來協助使用者，建議您在撰寫檔批註時記住一些事項。
 
-# <a name="guidance"></a>[指引](#tab/guidance)
+# <a name="guidance"></a>[指導方針](#tab/guidance)
 
 我們建議：
 
 - 每個公用函式、作業和使用者定義型別都應該緊接在檔批註前面。
 - 每個檔批註至少應該包含下列區段：
-    - 總結
+    - 摘要
     - 輸入
-    - 輸出（如果適用）
+    - 輸出 (（如果適用）) 
 - 請確定所有摘要都是兩個句子或更少。 如果需要更多空間，請 `# Description` `# Summary` 以完整的詳細資料提供緊接在後面的區段。
-- 在合理的情況下，請勿在摘要中包含數學運算，因為並非所有用戶端都支援摘要中的 TeX 標記法。 請注意，撰寫 prose 檔（例如 TeX 或 Markdown）時，最好使用較長的行長度。
+- 在合理的情況下，請勿在摘要中包含數學運算，因為並非所有用戶端都支援摘要中的 TeX 標記法。 請注意，撰寫 prose 檔時 (例如 TeX 或 Markdown) ，最好是使用較長的行長度。
 - 在區段中提供所有相關的數學運算式 `# Description` 。
 - 在描述輸入時，請勿重複每個輸入的類型，因為它們可以由編譯器推斷，而風險會造成不一致的情況。
 - 提供適當的範例，每個都在自己的 `# Example` 區段中。
 - 在列出程式碼之前，請先簡短地描述每個範例。
-- 在一節中提及所有相關的學術刊物（例如：論文、訴訟、blog 文章和替代的執行方式），並以點 `# References` 符的連結清單來說明。
-- 請確定在可能的情況下，所有引文連結都是永久和固定識別碼（DOIs 或已建立版本的 arXiv 號碼）。
+- 提及所有相關的學術刊物， (例如：論文、訴訟、blog 文章和替代的建立專案，) 區段中的 `# References` 連結清單。
+- 請確定在可能的情況下，所有引文連結都是永久和固定的識別碼， (DOIs 或已建立版本的 arXiv 數位) 。
 - 當作業或函式透過仿函數變體與其他作業或函數相關時，請在區段中，將其他變體列出為專案符號 `# See Also` 。
-- 在層級1（）區段之間保留空白的批註行 `/// #` ，但不要在層級2（）區段之間留下空白的一行 `/// ##` 。
+- 在層級 1 () 區段之間保留空白的批註行 `/// #` ，但不要在層級 2 () 區段之間留白一行 `/// ##` 。
 
 # <a name="examples"></a>[範例](#tab/examples)
 
@@ -454,10 +457,10 @@ is Adj + Ctl {
 
 除了上述的建議之外，也有助於讓程式碼盡可能清楚，以使用一致的格式化規則。
 根據本質，這類格式規則通常是任意的，而且相當於個人美學。
-儘管如此，我們建議您在共同作業者群組中維護一組一致的格式設定慣例，特別是針對大型 Q # 專案（例如，量子開發工具組本身）。
-這些規則可以使用與 Q # 編譯器整合的格式工具自動套用。
+儘管如此，我們建議您在共同作業者群組中維護一組一致的格式設定慣例，特別是針對大型 Q# 專案（例如，量子開發工具組本身）。
+這些規則可以使用與編譯器整合的格式工具自動套用 Q# 。
 
-# <a name="guidance"></a>[指引](#tab/guidance) 
+# <a name="guidance"></a>[指導方針](#tab/guidance) 
 
 我們建議：
 
@@ -470,7 +473,7 @@ is Adj + Ctl {
 - 行在合理的79個字元。
 - 在二元運算子前後使用空格。
 - 在用於類型注釋的冒號兩邊使用空格。
-- 在陣列和元組常值中使用逗號後面加上一個空格（例如，在函數和作業的輸入中）。
+- 在陣列和元組常值中使用逗號後面的一個空格 (例如： in 函式和作業的輸入) 。
 - 在函數、作業或 UDT 名稱之後，或在屬性宣告中的後面，請勿使用空格 `@` 。
 - 每個屬性宣告都應該在自己的行上。
 

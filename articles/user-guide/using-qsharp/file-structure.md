@@ -1,21 +1,24 @@
 ---
-title: 'Q # 檔案結構'
-description: '說明 Q # 檔案的結構和語法。'
+title: Q#檔案結構
+description: 描述檔案的結構和語法 Q# 。
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: 54efc2b9d6b7f1956cdf9a335c88620b29f7729d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884170"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867925"
 ---
-# <a name="q-file-structure"></a>Q # 檔案結構
+# <a name="no-locq-file-structure"></a>Q#檔案結構
 
-Q # 檔案是由一系列的*命名空間*宣告所組成。
+檔案是 Q# 由一系列的*命名空間*宣告所組成。
 每個命名空間宣告都包含使用者定義型別、作業和函式的宣告，而且可以包含每個宣告類型的任意數目和任何順序。
 如需命名空間內宣告的詳細資訊，請參閱[使用者定義類型](xref:microsoft.quantum.guide.types#user-defined-types)、[作業](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)和[函數](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions)。
 
@@ -24,10 +27,10 @@ Q # 檔案是由一系列的*命名空間*宣告所組成。
 
 ## <a name="namespace-declarations"></a>命名空間宣告
 
-問 # 檔案通常只會有一個命名空間宣告，但可以有 none （而且也可以是空的或只包含批註）或包含多個命名空間。
+檔案 Q# 通常只會有一個命名空間宣告，但可能會有 [無] (並空白或只包含批註) 或可能包含多個命名空間。
 命名空間宣告不能嵌套。
 
-只要沒有任何類型、作業或具有相同名稱的函式宣告，您就可以在一起編譯的多個 Q # 檔案中宣告相同的命名空間。
+Q#只要沒有任何類型、作業或具有相同名稱的函式宣告，您就可以在一起編譯的多個檔案中宣告相同的命名空間。
 特別是，在多個檔案的相同命名空間中定義相同的型別是不正確，即使宣告相同也是一樣。
 
 命名空間宣告包含關鍵字 `namespace` ，後面接著命名空間的名稱，以及包含在以大括弧括住之命名空間中的宣告 `{ }` 。
@@ -61,7 +64,7 @@ namespace NS {
 不過，若要從呼叫特定函式 `Fn` `Microsoft.Quantum.Math` ，您必須使用呼叫它 `Math.Fn` 。
 
 指示詞 `open` 適用于檔案內的整個命名空間區塊。
-因此，如果您在與先前相同的問答 # 檔案中定義其他命名空間，則在 `NS` 第二個命名空間中定義的任何作業/函式/類型，都將無法存取來自或的任何專案， `Microsoft.Quantum.Intrinsic` `Microsoft.Quantum.Math` 除非您重複其中的 open 指示詞。 
+因此，如果您在與先前相同的檔案中定義其他命名空間，則在 Q# `NS` 第二個命名空間中定義的任何作業/函式/類型，都不會存取來自或的任何專案， `Microsoft.Quantum.Intrinsic` `Microsoft.Quantum.Math` 除非您重複其中的 open 指示詞。 
 
 若要參考在目前命名空間中*未*開啟的另一個命名空間中定義的類型或可呼叫，您必須以其完整名稱來參考它。
 例如，指定 `Op` 命名空間中的作業 `X.Y` ：
@@ -73,14 +76,14 @@ namespace NS {
 通常最好是使用指示詞來加入命名空間 `open` 。
 如果兩個命名空間定義具有相同名稱的結構，而且目前來源使用兩者的結構，則必須使用完整名稱。
 
-問 # 遵循與其他 .NET 語言相同的命名規則。
-不過，Q # 不支援命名空間的相對參考。
+Q#遵循與其他 .NET 語言相同的命名規則。
+不過，不 Q# 支援命名空間的相對參考。
 例如，如果命名空間是開啟的，則名為之作業 `a.b` 的參考不 `c.d` 會解析為具有完整名稱*not*的作業 `a.b.c.d` 。
 
 ## <a name="formatting"></a>格式化
 
-大部分的 Q # 語句和指示詞的結尾都是終止的分號 `;` 。
-語句和宣告（如 `for` 和 `operation` ），其結尾為語句區塊（請參閱下一節），不需要終止分號。
+大部分的語句和指示詞的 Q# 結尾都是終止分號 `;` 。
+語句和宣告（例如 `for` 和） `operation` 會以語句區塊結束 (請參閱下一節) 不需要終止分號。
 每個語句描述都會說明結尾分號是否為必要。
 
 語句（例如運算式、宣告和指示詞）可以細分成多行。
@@ -88,14 +91,14 @@ namespace NS {
 
 ## <a name="statement-blocks"></a>語句區塊
 
-Q # 語句會分組成語句區塊，其包含以大括弧括住 `{ }` 。 語句區塊會以開頭開頭 `{` ，並以結尾結束 `}` 。
+Q#語句會分組成語句區塊，其包含以大括弧括住 `{ }` 。 語句區塊會以開頭開頭 `{` ，並以結尾結束 `}` 。
 
 在另一個區塊中以詞法括住的語句區塊，會被視為包含區塊的子區塊;包含和子區塊也稱為外部和內部區塊。
 
 ## <a name="comments"></a>註解
 
 批註會以兩個正斜線開頭， `//` 並繼續直到行尾為止。
-批註可以出現在 Q # 來源檔案中的任何位置。
+批註可以出現在原始檔中的任何位置 Q# 。
 
 ## <a name="documentation-comments"></a>文件註解
 
@@ -103,7 +106,7 @@ Q # 語句會分組成語句區塊，其包含以大括弧括住 `{ }` 。 語�
 在此情況下，編譯器會將它們視為已定義之可呼叫或使用者定義類型的檔，與其他 .NET 語言相同。
 
 在 `///` 批註中，顯示為 API 檔一部分的文字會格式化為[Markdown](https://daringfireball.net/projects/markdown/syntax)，並以特殊命名的標頭指示不同的檔部分。
-在 Markdown 中，使用 [ `@"<ref target>"` Q #] 中的交互參考作業、函式和使用者定義類型的擴充功能。 取代 `<ref target>` 為所參考程式碼物件的完整名稱。
+在 Markdown 中，使用 `@"<ref target>"` 擴充功能來交互參考中的作業、函式和使用者定義類型 Q# 。 取代 `<ref target>` 為所參考程式碼物件的完整名稱。
 不同的檔引擎也可能支援額外的 Markdown 延伸模組。
 
 例如：
@@ -151,6 +154,6 @@ operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
 - **另請參閱**：表示相關函數、作業或使用者定義類型的完整名稱清單。
 - **參考**：已記載專案的參考和引文清單。
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
-瞭解 Q # 中的[作業和功能](xref:microsoft.quantum.guide.operationsfunctions)。
+瞭解中的[作業和功能](xref:microsoft.quantum.guide.operationsfunctions) Q# 。

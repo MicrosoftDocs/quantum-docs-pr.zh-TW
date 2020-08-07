@@ -6,30 +6,33 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870969"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867908"
 ---
 # <a name="testing-and-debugging"></a>測試和偵錯
 
 就像傳統程式設計一樣，要能夠檢查配量程式是否符合預期，以及能夠診斷不正確的行為，是不可或缺的。
-在本節中，我們將討論 Q # 提供的工具，以測試和偵測量副程式。
+在本節中，我們將討論 Q# 針對測試和偵測量副程式所提供的工具。
 
 ## <a name="unit-tests"></a>單元測試
 
 測試傳統程式的一個常見方法是撰寫稱為「*單元測試*」的小型程式，這會在程式庫中執行程式碼，並將其輸出與某些預期的輸出做比較。
 例如，您可以確保傳回， `Square(2)` `4` 因為您知道 $ 2 ^ 2 = $4 的*先驗*。
 
-問 # 支援針對量副程式建立單元測試，並可在[xUnit](https://xunit.github.io/)單元測試架構中作為測試執行。
+Q#支援針對量副程式建立單元測試，並可在[xUnit](https://xunit.github.io/)單元測試架構中作為測試執行。
 
 ### <a name="creating-a-test-project"></a>建立測試專案
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-開啟 Visual Studio 2019。 移**至 [檔案] 功能表，然後**選取 [新增] **> 專案**...]。在右上角搜尋 `Q#` ，然後選取 [ **Q # 測試] 專案**範本。
+開啟 Visual Studio 2019。 移**至 [檔案] 功能表，然後**選取 [新增] **> 專案**...]。在右上角，搜尋 `Q#` ，然後選取 [ ** Q# 測試專案**] 範本。
 
 #### <a name="command-line--visual-studio-code"></a>[命令列/Visual Studio Code](#tab/tabid-vscode)
 
@@ -42,7 +45,7 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-您的新專案具有單一檔案 `Tests.qs` ，可提供方便的位置來定義新的 Q # 單元測試。
+您的新專案有一個檔案 `Tests.qs` ，可提供方便的位置來定義新的 Q# 單元測試。
 一開始，這個檔案包含一個範例單元測試， `AllocateQubit` 它會檢查新配置的 qubit 是否處於 $ \ket {0} $ 狀態，並列印一則訊息：
 
 ```qsharp
@@ -57,7 +60,7 @@ $ code . # To open in Visual Studio Code
     }
 ```
 
-任何接受型別和傳回之引數的 Q # 作業或函式，都 `Unit` `Unit` 可以透過屬性標示為單元測試 `@Test("...")` 。 在上述範例中，該屬性（attribute）的引數（ `"QuantumSimulator"` ）會指定測試執行所在的目標。 單一測試可以在多個目標上執行。 例如，在之前加入屬性 `@Test("ResourcesEstimator")` `AllocateQubit` 。 
+任何 Q# 接受型別和傳回之引數的作業或函式，都 `Unit` `Unit` 可以透過屬性（attribute）標示為單元測試 `@Test("...")` 。 在上述範例中，該屬性（attribute）的引數（ `"QuantumSimulator"` ）會指定測試執行所在的目標。 單一測試可以在多個目標上執行。 例如，在之前加入屬性 `@Test("ResourcesEstimator")` `AllocateQubit` 。 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
@@ -66,23 +69,23 @@ $ code . # To open in Visual Studio Code
 ```
 儲存檔案並執行所有測試。 現在應該有兩個單元測試，一個在 `AllocateQubit` 上執行，一個在上 `QuantumSimulator` 執行 `ResourcesEstimator` 。 
 
-Q # 編譯器會將內建目標 `"QuantumSimulator"` 、和辨識 `"ToffoliSimulator"` `"ResourcesEstimator"` 為適用于單元測試的有效執行目標。 也可以指定任何完整名稱，以定義自訂的執行目標。 
+Q#編譯器會 `"QuantumSimulator"` 針對單元測試，將內建目標、和識別 `"ToffoliSimulator"` `"ResourcesEstimator"` 為有效的執行目標。 也可以指定任何完整名稱，以定義自訂的執行目標。 
 
-### <a name="running-q-unit-tests"></a>執行 Q # 單元測試
+### <a name="running-no-locq-unit-tests"></a>執行 Q# 單元測試
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 在 [一次] [個別解決方案設定] 中，移至 [**測試**] 功能表，然後選取 [**測試設定] > 預設的處理器架構 > X64**]。
 
 > [!TIP]
-> Visual Studio 的預設處理器架構設定會儲存在每個解決方案的解決方案選項（）檔案中 `.suo` 。
+> Visual Studio 的預設處理器架構設定會儲存在解決方案選項中， (`.suo` 每個解決方案的) 檔。
 > 如果您刪除此檔案，則需要再次選取 [ **X64** ] 做為您的處理器架構。
 
 建立專案，開啟 [**測試**] 功能表，然後選取 [ **Windows > test Explorer**]。 **AllocateQubit**會顯示在 [**未執行的測試**] 群組中的測試清單中。 選取 [**全部執行**] 或 [執行此個別測試]。
 
 #### <a name="command-line--visual-studio-code"></a>[命令列/Visual Studio Code](#tab/tabid-vscode)
 
-若要執行測試，請流覽至專案資料夾（包含的資料夾 `Tests.csproj` ），然後執行命令：
+若要執行測試，請流覽至包含) 的資料夾 (專案資料夾 `Tests.csproj` ，然後執行命令：
 
 ```bash
 $ dotnet restore
@@ -137,9 +140,9 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ## <a name="facts-and-assertions"></a>事實和判斷提示
 
-因為 Q # 中的函式沒有_邏輯_副作用，所以您永遠不會觀察到來自于 q # 程式中的任何其他類型的效果，以執行其輸出類型為空元組的函式 `()` 。
-也就是說，目的電腦可以選擇不執行任何會傳回的函式， `()` 並保證此省略不會修改任何下列 Q 號碼程式碼的行為。
-此行為可讓函式傳回 `()` （例如 `Unit` ）實用的工具，將判斷提示和偵錯工具內嵌到 Q # 程式中。 
+由於中的函式沒有 Q# _邏輯_副作用，因此您永遠無法觀察到從程式內執行 Q# 任何其他類型的效果，而不會執行其輸出類型為空白元組的函式 `()` 。
+也就是說，目的電腦可以選擇不執行任何會傳回的函式， `()` 並保證此省略不會修改任何下列程式碼的行為 Q# 。
+這種行為會使函式傳回 `()` (例如 `Unit`) 有用的工具，將判斷提示和偵錯工具內嵌到 Q# 程式中。 
 
 讓我們來看一個簡單的範例：
 
@@ -153,8 +156,8 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-在這裡，關鍵字 `fail` 指出計算不應繼續，並會在執行 Q # 程式的目的電腦中引發例外狀況。
-根據定義，無法從 Q # 中觀察到這種失敗，因為目的電腦在到達語句之後，不會再執行 Q # 程式碼 `fail` 。
+在這裡，關鍵字 `fail` 指出計算不應繼續，並會在執行程式的目的電腦中引發例外狀況 Q# 。
+根據定義，無法從中觀察到這種失敗 Q# ，因為目的電腦在到達語句之後，不再執行程式 Q# 代碼 `fail` 。
 因此，如果我們繼續呼叫 `PositivityFact` ，我們可以確保其輸入是正數。
 
 請注意，我們可以 `PositivityFact` 使用 [`Fact`](xref:microsoft.quantum.diagnostics.fact) 命名空間中的函式，來執行與相同的行為 <xref:microsoft.quantum.diagnostics> ：
@@ -163,7 +166,7 @@ function PositivityFact(value : Double) : Unit
     Fact(value > 0, "Expected a positive number.");
 ```
 
-另一方面，*判斷*提示的使用方式類似于事實，但可能取決於目的電腦的狀態。 同樣地，它們會定義為作業，而事實會定義為函式（如上述範例所示）。
+另一方面，*判斷*提示的使用方式類似于事實，但可能取決於目的電腦的狀態。 同樣地，它們會定義為作業，而事實會定義為如先前範例) 中 (的函式。
 若要瞭解差異，請考慮下列在判斷提示內的事實用法：
 
 ```qsharp
@@ -202,7 +205,7 @@ using (register = Qubit())
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-散發為量子開發工具組一部分的全狀態配量模擬器會以一維複數陣列的形式，將整個量子系統的[wave 函數](https://en.wikipedia.org/wiki/Wave_function)寫入檔案中，其中每個專案都代表測量計算基礎狀態 $ \ket{n} $ 的機率幅度，其中 $ \ket{n} = \ket{b_ {n-1} .。。bits $ b_i $ b_1b_0} \{ $ \} 。 例如，在只配置兩個 qubits 且在量子狀態 $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{（1 + i）} \ket 的電腦上 {2} ， {10} \end{align} $ $ 呼叫會 <xref:microsoft.quantum.diagnostics.dumpmachine> 產生下列輸出：
+散發為量子開發工具組一部分的全狀態配量模擬器會以一維複數陣列的形式，將整個量子系統的[wave 函數](https://en.wikipedia.org/wiki/Wave_function)寫入檔案中，其中每個專案都代表測量計算基礎狀態 $ \ket{n} $ 的機率幅度，其中 $ \ket{n} = \ket{b_ {n-1} .。。bits $ b_i $ b_1b_0} \{ $ \} 。 例如，在只配置兩個 qubits 且在量子狀態 $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{ (1 + i) } \ket 的電腦上 {2} {10} ，\end{align} $ $ 呼叫會 <xref:microsoft.quantum.diagnostics.dumpmachine> 產生下列輸出：
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -220,8 +223,8 @@ using (register = Qubit())
 * **` == `**： `equal` 符號會分隔兩個對等的標記法。
 * **`**********  `**：大小的圖形表示，的數目與 `*` 測量此狀態向量的機率成正比。
 * **`[ 0.500000 ]`**：量值的數值
-* **`    ---`**：振幅階段的圖形標記法（請參閱下列輸出）。
-* **`[ 0.0000 rad ]`**：階段的數值（以弧度為單位）。
+* **`    ---`**：振幅階段的圖形表示 (查看下列輸出) 。
+* **`[ 0.0000 rad ]`**：階段 (的數值（以弧度為單位）) 。
 
 大小和階段都會以圖形標記法顯示。 量值的表示方式很簡單：它會顯示的長條，長條的機率愈大 `*` 。 在階段中，我們會根據範圍顯示下列符號來表示角度：
 
@@ -332,7 +335,7 @@ namespace Samples {
 
 <xref:microsoft.quantum.diagnostics.dumpregister>的運作方式類似 <xref:microsoft.quantum.diagnostics.dumpmachine> ，不同之處在于它也會採用 qubits 陣列，將資訊數量限制為僅與對應的 qubits 相關。
 
-如同 <xref:microsoft.quantum.diagnostics.dumpmachine> ，所產生的資訊 <xref:microsoft.quantum.diagnostics.dumpregister> 取決於目的電腦。 對於全狀態的配量模擬器，它會將 wave 函式寫入檔案中，並以與相同格式，由提供的 qubits 所產生之量子子系統的全域階段 <xref:microsoft.quantum.diagnostics.dumpmachine> 。  例如，再次使用已配置兩個 qubits 的機器，並在量子 state $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{（1 + i）} {2} \ket {10} =-e ^ {-i \ pi/4} （（\frac {1} {\sqrt {2} } \ket {0} -\frac{（1 + i）} \ket） {2} {1} \otimes \frac{-（1 + i）} {\sqrt {2} } \ket {0} ）、\end{align} $ $ 對的呼叫會產生下列 <xref:microsoft.quantum.diagnostics.dumpregister> `qubit[0]` 輸出：
+如同 <xref:microsoft.quantum.diagnostics.dumpmachine> ，所產生的資訊 <xref:microsoft.quantum.diagnostics.dumpregister> 取決於目的電腦。 對於全狀態的配量模擬器，它會將 wave 函式寫入檔案中，並以與相同格式，由提供的 qubits 所產生之量子子系統的全域階段 <xref:microsoft.quantum.diagnostics.dumpmachine> 。  例如，再次使用已配置兩個 qubits 的機器，並在量子 state $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{ (1 + i) } {2} \ket {10} =-e ^ {-i \ pi/4} ( ( \frac {1} {\sqrt {2} } \ket {0} -\frac{ (1 + i) } {2} \ket {1} ) \otimes \frac{- (1 + i) } {\sqrt {2} } \ket {0} ) ，\end{align} $ $ 對的呼叫會產生下列 <xref:microsoft.quantum.diagnostics.dumpregister> `qubit[0]` 輸出：
 
 ```
 # wave function for qubits with ids (least to most significant): 0
@@ -354,7 +357,7 @@ namespace Samples {
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-下列範例會示範如何 <xref:microsoft.quantum.diagnostics.dumpregister> <xref:microsoft.quantum.diagnostics.dumpmachine> 在您的 Q # 程式碼中使用和：
+下列範例會示範如何 <xref:microsoft.quantum.diagnostics.dumpregister> <xref:microsoft.quantum.diagnostics.dumpmachine> 在您的程式碼中使用和 Q# ：
 
 ```qsharp
 namespace app
@@ -381,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>偵錯
 
-在和函 `Assert` 式 `Dump` 和作業之上，Q # 支援標準 Visual Studio 偵錯工具的子集：[設定行中斷點](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、[逐步執行使用 F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)的程式碼，以及[檢查傳統變數的值](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)在模擬器的程式碼執行期間都可以。
+在和函 `Assert` 式 `Dump` 和作業之上， Q# 支援標準 Visual Studio 偵錯工具的子集：[設定行中斷點](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、[逐步執行使用 F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)的程式碼，以及[檢查傳統變數的值](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)在模擬器的程式碼執行期間都可以。
 
 在 Visual Studio Code 中的偵錯工具會利用 c # 提供的偵錯工具功能，以供 OmniSharp 所支援的 Visual Studio Code 延伸模組，而且需要安裝[最新版本](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。 

@@ -6,18 +6,21 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885306"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867857"
 ---
 # <a name="working-with-qubits"></a>使用量子位元
 
 Qubits 是量子運算中資訊的基本物件。 如需 qubits 的一般簡介，請參閱瞭解配量[計算](xref:microsoft.quantum.overview.understanding)，若要深入瞭解其數學表示，請參閱[Qubit](xref:microsoft.quantum.concepts.qubit)。 
 
-本文將探討如何在 Q # 程式中使用和處理 qubits。 
+本文將探討如何在程式中使用和處理 qubits Q# 。 
 
 > [!IMPORTANT]
 >本文中所討論的語句都不是在函式主體內有效。 只有在作業內才有效。
@@ -25,7 +28,7 @@ Qubits 是量子運算中資訊的基本物件。 如需 qubits 的一般簡介�
 ## <a name="allocating-qubits"></a>配置 Qubits
 
 因為實體 qubits 在量子電腦中是寶貴的資源，所以編譯器作業的一部分是要確保它們能夠盡可能有效率地使用。
-因此，您需要指示 Q # 來*配置*qubits，以便在特定的語句區塊中使用。
+因此，您需要在特定的 Q# 語句區塊內，告訴*配置*qubits 以供使用。
 您可以將 qubits 配置為單一 qubit，或做為 qubits 的陣列（稱為暫存器 *）。* 
 
 ### <a name="clean-qubits"></a>清除 qubits
@@ -36,7 +39,7 @@ Qubits 是量子運算中資訊的基本物件。 如需 qubits 的一般簡介�
 系結遵循與語句相同的模式 `let` ：單一符號或符號的元組，後面接著等號 `=` ，以及單一值或相符的*初始化運算式*元組。
 
 初始化運算式適用于單一 qubit，表示為 `Qubit()` ，或 qubits 的陣列， `Qubit[n]` 其中 `n` 是 `Int` 運算式。
-例如，
+例如
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -65,7 +68,7 @@ using ((auxiliary, register) = (Qubit(), Qubit[5])) {
 這些通常稱為「已變更」 qubits，因為它們的狀態是未知的，甚至可以與量子電腦記憶體的其他部分光子。
 
 系結遵循與語句相同的模式和規則 `using` 。
-例如，
+例如
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -82,17 +85,17 @@ borrowing ((auxiliary, register) = (Qubit(), Qubit[5])) {
 如果沒有足夠的 qubits，則會配置新的 qubits 來完成要求。
 
 在已變更 qubits 的已知使用案例中，是多個受控制 CNOT-CONTAINS 閘道的實作為，只需要極少的 qubits 和 incrementers。
-如需如何在 Q # 中使用的範例，請參閱本文章中的[借用 Qubits 範例](#borrowing-qubits-example)，或[*使用具有以 Toffoli 為基礎之模組化乘法*](https://arxiv.org/abs/1611.07995)（Haner、Roetteler 和 Svore 2017）的 Qubits 的檔，以取得利用借用 Qubits 的演算法。
+如需在中使用的範例 Q# ，請參閱本文章中的「[借用 Qubits 範例](#borrowing-qubits-example)」，或[*使用具有 Toffoli 的模組化乘法*](https://arxiv.org/abs/1611.07995)的檔（Qubits），並針對利用借用 Roetteler 的演算法 (Haner、Svore 和 Qubits 2017) 。
 
 ## <a name="intrinsic-operations"></a>內部作業
 
 一旦配置之後，您就可以將 qubit 傳遞至函數和作業。
-在某種意義上，這就是問 # 程式可以使用 qubit 執行的動作，因為可以採取的動作全都定義為作業。
+在某種意義上，這就是 Q# 程式可以利用 qubit 來執行的動作，因為可以採取的動作全都定義為作業。
 
-本文討論幾個實用的 Q # 作業，可讓您用來與 qubits 互動。
+本文討論一些 Q# 您可以用來與 qubits 互動的實用作業。
 如需這些和其他專案的詳細資訊，請參閱[內部作業和函數](xref:microsoft.quantum.libraries.standard.prelude)。 
 
-首先，單一 qubit 的 Pauli 運算子 $X $、$Y $ 和 $Z $ 會由內部作業（和）以 Q # 表示，而 [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) 每一個都有類型 `(Qubit => Unit is Adj + Ctl)` 。
+首先，單一 qubit 的 Pauli 運算子 $X $、$Y $ 和 $Z $ 會由內部作業（和）中的表示，而 Q# [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) 每一個都有類型 `(Qubit => Unit is Adj + Ctl)` 。
 
 如[內部作業和](xref:microsoft.quantum.libraries.standard.prelude)函式中所述，請將 $X $，而 `X` 不是閘道。
 您可以使用作業 `X` 來準備 s_1 \dots .. s_n} $ 格式的 s_0 的狀態，以取得某些傳統位字串 $s $：
@@ -124,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > 稍後，您將會看到更精簡的方式來撰寫此作業，而不需要手動控制流程。
 
-您也可以使用 \Right 轉換 $H $ 來準備狀態，例如 $ \ket{+} = \left （\ket {0} + \ket {1} \sqrt）/\ket {2} $ 和 $ \left {-} = \ket （\ket {0} -\right {1} \sqrt）/Hadamard {2} $，方法是透過內建作業 [`H`](xref:microsoft.quantum.intrinsic.h) （也屬於類型（Qubit => 單位為形容詞 + Ctl））在 Q # 中表示）：
+您也可以使用 \Right 轉換 $H $ 來準備狀態，例如 $ \ket{+} = \left ( \ket {0} + \ket {1} \sqrt) /\ket {2} $ 和 $ \left {-} = \ket ( \ket {0} -\right {1} \sqrt) /Hadamard {2} $，方法是使用內建作業所表示 ($ （ (Q# [`H`](xref:microsoft.quantum.intrinsic.h) Qubit => Unit is 形容詞 + Ctl) ') ：
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -174,7 +177,7 @@ operation MeasureOneQubit() : Result {
 
 若要測量特定基底中一個或多個 qubits 的陣列，您可以使用作業 [`Measure`](xref:microsoft.quantum.intrinsic.measure) 。
 
-的輸入 `Measure` 是類型的陣列 `Pauli` （例如）， `[PauliX, PauliZ, PauliZ]` 以及 qubits 的陣列。
+的輸入 `Measure` 是類型的陣列 `Pauli` (例如， `[PauliX, PauliZ, PauliZ]`) 和 qubits 的陣列。
 
 下列作業會提供稍微較複雜的範例，如果類型的暫存器中的 `true` 所有 qubits 在以 `Qubit[]` 指定的 Pauli 為基礎進行測量時，則會傳回布林值，否則會傳回 `false` 。
 
@@ -240,6 +243,6 @@ is Adj + Ctl {
 
 比較這段程式碼與另一個 canon 函式是有意義的，它會 `MultiControlledXClean` 達到相同的目標來執行乘以控制的作業 `X` ，不過，它使用了使用機制的幾個乾淨 qubits `using` 。 
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
-瞭解 Q # 中的[控制流程](xref:microsoft.quantum.guide.controlflow)。
+瞭解中的[控制流程](xref:microsoft.quantum.guide.controlflow) Q# 。

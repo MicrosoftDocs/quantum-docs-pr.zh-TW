@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8e04e6502e0a6005dfdf0f93450bf3ffd5aaa672
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274544"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866922"
 ---
 # <a name="opening-pull-requests"></a>開啟提取要求 #
 
@@ -30,7 +33,7 @@ ms.locfileid: "85274544"
 > - [Visual Studio Code 中的版本控制](https://code.visualstudio.com/docs/editor/versioncontrol)：如何使用 Visual Studio Code 作為 Git GUI 的指南。
 > - [GitHub 學習實驗室](https://lab.github.com/)：一組使用 Git、GitHub 和相關技術的線上課程。
 > - [視覺化 git](https://git-school.github.io/visualizing-git/)：用來視覺化 git 命令如何變更存放庫狀態的互動式工具。
-> - [使用 git 進行版本控制（EPQIS 2016）](https://nbviewer.jupyter.org/github/QuinnPhys/PythonWorkshop-science/blob/master/lecture-1-scicomp-tools-part1.ipynb#Version-Control-with-Git-(50-Minutes))：以科學計算為導向的 git 教學課程。
+> - [使用 git 進行版本控制 (EPQIS 2016) ](https://nbviewer.jupyter.org/github/QuinnPhys/PythonWorkshop-science/blob/master/lecture-1-scicomp-tools-part1.ipynb#Version-Control-with-Git-(50-Minutes))： git 教學課程是面向科學計算。
 > - [瞭解 Git 分支](https://learngitbranching.js.org/)：一組互動式分支和重定基底的測驗，協助學習新的 Git 功能。
 
 ## <a name="what-is-a-pull-request"></a>什麼是提取要求？ ##

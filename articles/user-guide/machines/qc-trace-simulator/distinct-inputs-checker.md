@@ -1,17 +1,20 @@
 ---
 title: 相異輸入檢查程式-量子開發工具組
-description: 深入瞭解 Microsoft QDK distinct 輸入檢查工具，其會使用配量追蹤模擬器來檢查您的 Q 號碼程式碼是否有共用 qubits 的潛在衝突。
+description: 深入瞭解 Microsoft QDK distinct 輸入檢查工具，其使用配量追蹤模擬器來檢查您 Q# 的程式碼是否有與共享 qubits 的潛在衝突。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871139"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868265"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>量子追蹤模擬器：相異的輸入檢查
 
@@ -19,7 +22,7 @@ ms.locfileid: "86871139"
 
 ## <a name="conflicts-with-shared-qubits"></a>與共享 qubits 衝突
 
-請考慮下列的 Q # 程式碼，以說明相異輸入檢查所偵測到的問題：
+請考慮下列 Q# 程式碼片段，以說明相異輸入檢查所偵測到的問題：
 
 ```qsharp
 operation ApplyBoth(
@@ -47,7 +50,7 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-請注意， `op1` 和 `op2` 都是使用部分應用程式取得，並共用 qubit。 當您 `ApplyBoth` 在此範例中呼叫時，作業的結果取決於和內部的順序， `op1` 而 `op2` `ApplyBoth` 不是您預期會發生的情況。 當您啟用「相異輸入檢查程式」時，它會偵測這類情況並擲回 `DistinctInputsCheckerException` 。 如需詳細資訊，請參閱 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> Q # API 程式庫中的。
+請注意， `op1` 和 `op2` 都是使用部分應用程式取得，並共用 qubit。 當您 `ApplyBoth` 在此範例中呼叫時，作業的結果取決於和內部的順序， `op1` 而 `op2` `ApplyBoth` 不是您預期會發生的情況。 當您啟用「相異輸入檢查程式」時，它會偵測這類情況並擲回 `DistinctInputsCheckerException` 。 如需詳細資訊，請參閱 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API 程式庫中的 Q# 。
 
 ## <a name="invoking-the-distinct-inputs-checker"></a>叫用相異的輸入檢查
 
@@ -85,7 +88,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - 量子開發工具組配量[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 參考。

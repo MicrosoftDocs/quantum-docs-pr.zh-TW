@@ -1,17 +1,20 @@
 ---
 title: QDK 的開放原始碼授權
-description: '瞭解使用和參與 Microsoft Q # 標準程式庫（授權和參與）的授權。'
+description: 瞭解使用和參與 Microsoft 標準程式庫的授權 Q# -授權和貢獻。
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
-ms.openlocfilehash: 4bc0fb7fbeb4a71b891619218905d509e50911c9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f964d5f4a4c20c8d53ceb4375c869030cd53ff07
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274592"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868452"
 ---
 # <a name="licensing"></a>授權 #
 
