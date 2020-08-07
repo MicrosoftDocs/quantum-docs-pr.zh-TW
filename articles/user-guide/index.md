@@ -6,14 +6,17 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885008"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869625"
 ---
-# <a name="the-q-user-guide"></a>Q# 使用者指南
+# <a name="the-no-locq-user-guide"></a>Q# 使用者指南
 
 歡迎使用 Q# 使用者指南！ 
 
@@ -23,17 +26,17 @@ ms.locfileid: "85885008"
 
 - [Q# 基本概念](xref:microsoft.quantum.guide.basics)：Q# 程式設計語言的用途和功能概述。 
 
-- [執行 Q# 程式的方式](xref:microsoft.quantum.guide.host-programs)：說明如何執行 Q# 程式，並概述您可以呼叫程式的各種方法：從命令列、從 Q# Jupyter Notebook、或從以 Python 或 .NET 語言撰寫的傳統主機程式。
+- [執行 Q# 程式](xref:microsoft.quantum.guide.host-programs)的方式：說明如何執行 Q# 程式，並概述您可以呼叫程式的各種方法：從命令列、從 Q# Jupyter Notebook、或從以 Python 或 .NET 語言撰寫的傳統主機程式。
 
-### <a name="q-language"></a>Q# 語言
+### <a name="no-locq-language"></a>Q# 語言
 
-- [Q# 中的類型](xref:microsoft.quantum.guide.types)：配置 Q# 類型模型，並描述用於指定和使用類型的語法。
+- [Q#](xref:microsoft.quantum.guide.types)中的類型：配置 Q# 類型模型，並描述用於指定和使用類型的語法。
 
 - [類型運算式](xref:microsoft.quantum.guide.expressions)：詳細說明如何指定、參考、結合和操作 Q# 中每個類型的值。 
 
-### <a name="using-q"></a>使用 Q#
+### <a name="using-no-locq"></a>使用 Q#
 
-- [Q# 檔案結構](xref:microsoft.quantum.guide.filestructure)：描述 `*.qs` Q# 檔案的結構和語法。
+- [Q#檔案結構](xref:microsoft.quantum.guide.filestructure)：描述 `*.qs` Q# 檔案的結構和語法。
 
 - [作業和函式](xref:microsoft.quantum.guide.operationsfunctions)：詳細說明 Q# 語言的兩種可呼叫類型：「作業」包含量子位元暫存器上的動作，「函式」則嚴格地處理傳統資訊。 
     在這裡，您會了解如何定義和呼叫這些類型，包括伴隨 (adjoint) 和受控的量子作業版本。
@@ -64,4 +67,4 @@ ms.locfileid: "85885008"
 
 ### <a name="quick-reference-pages"></a>快速參考指南
 
-- [IQ# 魔術命令](xref:microsoft.quantum.guide.quickref.iqsharp)：Q# Jupyter Notebook 中的 IQ# 魔術命令快速參考頁面。
+- [IQ#Magic 命令](xref:microsoft.quantum.guide.quickref.iqsharp)：Q# Jupyter Notebook 中的 IQ# 魔術命令快速參考頁面。

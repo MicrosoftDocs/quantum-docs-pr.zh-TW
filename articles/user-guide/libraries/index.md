@@ -6,14 +6,17 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
-ms.openlocfilehash: 09fc723d27f2e026430b358c62b817c106c135c2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: d61fe459362fdb5f3550768a26b34656a8a538a7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871496"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869098"
 ---
-# <a name="overview-of-q-libraries"></a>Q# 程式庫概觀
+# <a name="overview-of-no-locq-libraries"></a>Q# 程式庫概觀
 Quantum Development Kit 提供了數個程式庫，讓您能夠更輕鬆地在 Q# 中開發量子應用程式。
 在文件的這一節中，我們將說明這些程式庫，以及如何在您的程式中加以使用。
 

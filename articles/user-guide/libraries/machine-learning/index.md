@@ -6,12 +6,15 @@ ms.author: alexeib@microsoft.com
 ms.date: 12/5/2019
 ms.topic: article
 uid: microsoft.quantum.machine-learning.concepts.intro
-ms.openlocfilehash: 7f22d5d3212890abc764f88693937b534466170f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2f8884fafd6370e4f70ec93e6fc8617c34c29431
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273414"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868843"
 ---
 # <a name="introduction-to-the-quantum-machine-learning-library"></a>量子機器學習程式庫簡介
 

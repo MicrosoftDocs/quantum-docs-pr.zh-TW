@@ -6,14 +6,17 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
-ms.openlocfilehash: ab069c496d89a57f979732da6ccdfbe673b79726
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4db227fcf159331f9f8456c474ce6d64111c21df
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870578"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868469"
 ---
-# <a name="introduction-to-the-q-standard-libraries"></a>Q# 標準程式庫簡介
+# <a name="introduction-to-the-no-locq-standard-libraries"></a>Q# 標準程式庫簡介
 
 Q# 是由各種包含 Q# *標準程式庫*的不同實用作業、函式和使用者定義的類型提供支援。
 在[安裝和驗證](xref:microsoft.quantum.install)期間安裝的 [`Microsoft.Quantum.Development.Kit` NuGet 套件](https://www.nuget.org/packages/microsoft.quantum.development.kit) 會提供 Q# 編譯器，以及由目標機器實作的標準程式庫組件。
