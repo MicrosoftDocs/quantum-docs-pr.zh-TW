@@ -6,34 +6,37 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885506"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867551"
 ---
-# <a name="develop-with-q-and-net"></a>使用 Q# 和 .NET 進行開發
+# <a name="develop-with-no-locq-and-net"></a>使用 Q# 和 .NET 進行開發
 
 Q# 的建置目的是為了能夠與如 C# 和 F# 等 .NET 語法充分配合。
-我們在本指南中示範如何將 Q# 搭配以 .NET 語言撰寫的主機程式使用。
+在本指南中，我們將示範如何搭配使用 Q# 與以 .NET 語言撰寫的主機程式。
 
 首先，我們會建立 Q# 應用程式和 .NET 主機，然後示範如何從主機呼叫 Q#。
 
 ## <a name="prerequisites"></a>必要條件
 
-- 安裝 Quantum Development Kit [以搭配 Q# 命令列專案使用](xref:microsoft.quantum.install.standalone)。
+- 安裝 Quantum 開發套件以[與 Q# 命令列專案搭配使用](xref:microsoft.quantum.install.standalone)。
 
-## <a name="creating-a-q-library-and-a-net-host"></a>建立 Q# 程式庫與 .NET 主機
+## <a name="creating-a-no-locq-library-and-a-net-host"></a>建立 Q# 程式庫和 .NET 主機
 
-第一個步驟是為您的 Q # 程式庫建立專案，及為將呼叫 Q # 程式庫中所定義作業和函式的 .NET 主機建立專案。
+第一個步驟是為您的 Q# 程式庫建立專案，以及為即將呼叫 Q# 程式庫中定義之作業和函式的 .NET 主機建立專案。
 
 依照對應至您開發環境的索引標籤中的指示進行。
 如果您使用 Visual Studio 或 VS Code 以外的編輯器，只要遵循命令列步驟即可。
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code 或命令列](#tab/tabid-cmdline)
 
-- 建立新 Q# 程式庫
+- 建立新的 Q# 程式庫
 
   ```dotnetcli
   dotnet new classlib -lang Q# -o quantum
@@ -62,9 +65,9 @@ Q# 的建置目的是為了能夠與如 C# 和 F# 等 .NET 語法充分配合。
 
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-- 建立新 Q# 程式庫
+- 建立新的 Q# 程式庫
   - 移至 [檔案] -> [新增] -> [專案]
-  - 在搜尋方塊中鍵入 "Q#"。
+  - 在搜尋方塊中鍵入 "Q#"
   - 選取 [Q# 程式庫]
   - 選取 [**下一步**]
   - 選擇程式庫的名稱和位置
@@ -80,16 +83,16 @@ Q# 的建置目的是為了能夠與如 C# 和 F# 等 .NET 語法充分配合。
 
 ***
 
-## <a name="calling-into-q-from-net"></a>從 .NET 呼叫 Q #
+## <a name="calling-into-no-locq-from-net"></a>從 .NET 呼叫 Q#
 
-依照上述指示設定好專案後，您便可以從 .NET 主控台應用程式呼叫 Q #。
-Q # 編譯器會針對每個 Q # 作業和函式建立 .NET 類別，讓您能夠在模擬器上執行配量程式。
+依照上述指示設定好專案後，您便可以從 .NET 主控台應用程式呼叫 Q#。
+Q# 編譯器會針對每個 Q# 作業和函式建立 .NET 類別，讓您能夠在模擬器上執行配量程式。
 
 例如，[.NET 互通性範例](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)包含 Q# 作業的下列範例：
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-若要在配量模擬器上從 .NET 呼叫此作業，您可以使用 Q # 編譯器所產生 `RunAlgorithm` .NET 類別的 `Run`方法：
+若要在配量模擬器上從 .NET 呼叫此作業，您可以使用 Q# 編譯器所產生之 `RunAlgorithm` .NET 類別的 `Run` 方法：
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -103,4 +106,4 @@ Q # 編譯器會針對每個 Q # 作業和函式建立 .NET 類別，讓您能�
     
 ## <a name="next-steps"></a>後續步驟
 
-您已經為 Q # 命令列程式及與 .NET 的互通性設定了 Quantum Development Kit，現在您可以撰寫並執行[您的第一個配量程式](xref:microsoft.quantum.quickstarts.qrng)。
+您已經為 Q# 命令列程式及與 .NET 的互通性設定了 Quantum 開發套件，現在您可以撰寫並執行[您的第一個配量程式](xref:microsoft.quantum.quickstarts.qrng)。

@@ -1,27 +1,30 @@
 ---
 title: Q# 程式設計語言和 QDK 是什麼？
-description: 了解 Microsoft Quantum 開發套件、Q# 程式設計語言，以及要如何建立量子程式。
+description: 了解 Microsoft Quantum 開發套件、Q# 程式設計語言，以及如何建立量子程式。
 author: bradben
 ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327694"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866939"
 ---
-# <a name="what-are-the-q-programming-language-and-qdk"></a>Q# 程式設計語言和 QDK 是什麼？
+# <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# 程式設計語言和 QDK 是什麼？
 
-Q# 是 Microsoft 的開放原始碼程式設計語言，可用來開發和執行量子演算法。 其屬於 Quantum 開發套件 (QDK) 的一部分，內含 [Q# 程式庫](xref:microsoft.quantum.libraries)、[量子模擬器](xref:microsoft.quantum.machines)、[適用於其他程式設計環境的擴充功能](xref:microsoft.quantum.install)和 [API 文件](xref:microsoft.quantum.standardlibsintro)。 除了標準的 Q# 程式庫之外，QDK 還包含化學、機器學習與數值程式庫。
+Q# 是 Microsoft 的開放原始碼程式設計語言，可用來開發和執行量子演算法。 其屬於 Quantum 開發套件 (QDK) 的一部分，內含 [Q# 程式庫](xref:microsoft.quantum.libraries)、[量子模擬器](xref:microsoft.quantum.machines)、[適用於其他程式設計環境的擴充功能](xref:microsoft.quantum.install)和 [API 文件](xref:microsoft.quantum.standardlibsintro)。 除了標準的 Q# 程式庫以外，QDK 還包含化學、機器學習與數值程式庫。
 
 作為程式設計語言，Q# 擷取了 Python、C# 和 F# 中的熟悉元素，並可支援使用迴圈、if/then 陳述式和常見資料類型來撰寫程式的基本程序模型。 其也引進了新的量子特有資料結構和運算。
 
 ## <a name="what-can-i-do-with-the-qdk"></a>QDK 有何用途？
 
-QDK 是適用於 Q# 的完整功能開發套件，您可與常用的工具和語言搭配使用以便開發可在各種環境中執行的量子應用程式。 Q# 程式可作為命令列應用程式來執行、透過 Jupyter Notebook 來執行，也可以使用 Python 或 .NET 主機程式來執行。
+QDK 是適用於 Q# 的完整功能開發套件，可與常用的工具和語言搭配使用，以開發可在多種不同環境中執行的量子應用程式。 Q# 程式可作為命令列應用程式來執行、透過 Jupyter Notebook 來執行，也可以使用 Python 或 .NET 主機程式來執行。
 
 ### <a name="develop-in-common-tools-and-environments"></a>在常見的工具和環境中進行開發
 
@@ -29,11 +32,11 @@ QDK 是適用於 Q# 的完整功能開發套件，您可與常用的工具和語
 
 ### <a name="try-quantum-operations-and-domain-specific-libraries"></a>嘗試量子運算和領域特有程式庫
 
-撰寫並測試量子演算法，以探索疊加、糾纏和其他量子運算。 Q# 程式庫可讓您執行複雜的量子運算，而不必設計低層級的運算序列。
+撰寫並測試量子演算法，以探索疊加、糾纏和其他量子運算。 Q# 程式庫可讓您執行複雜的量子運算，而無須設計低層級的運算序列。
 
 ### <a name="run-programs-in-simulators"></a>在模擬器中執行程式
 
-請在全狀態的量子模擬器 (範圍受限的 Toffoli 模擬器) 上執行您的量子程式，或在不同的資源估算器中測試您的 Q# 程式碼。 
+請在全狀態的量子模擬器、範圍受限的 Toffoli 模擬器上執行您的量子程式，或在不同的資源估算器中測試您的 Q# 程式碼。 
 
 ## <a name="where-can-i-learn-more"></a>哪裡可以深入了解？
 
@@ -43,7 +46,7 @@ QDK 是適用於 Q# 的完整功能開發套件，您可與常用的工具和語
 | **我想要深入了解 Q# 語言** | 在 [Q# 使用者指南](xref:microsoft.quantum.guide)中探索類型、運算式、變數和量子程式結構。|
 | **我想要直接開始撰寫量子程式** | 在[快速入門](xref:microsoft.quantum.install)中設定您的 Q# 環境並開始撰寫量子程式。|
 
-## <a name="how-does-q-work"></a>Q# 的運作方式為何？
+## <a name="how-does-no-locq-work"></a>Q# 的運作方式為何？
 
 Q# 程式可以編譯成獨立的命令列應用程式，或由以 Python 或 .NET 語言撰寫的主機程式加以呼叫。
 
@@ -55,15 +58,15 @@ Q# 程式可以編譯成獨立的命令列應用程式，或由以 Python 或 .N
 
 ## <a name="how-do-i-use-the-qdk"></a>要如何使用 QDK？
 
-為了撰寫和執行 Q# 程式所需的一切資源 (包括 Q# 編譯器、Q# 程式庫和量子模擬器) 都可以從本機電腦安裝及執行。 最終，您將能夠在實際的量子電腦上遠端執行 Q# 程式，但在這之前，QDK 所提供的量子模擬器會提供正確且可靠的結果。
+撰寫和執行 Q# 程式所需的一切資源 (包括 Q# 編譯器、Q# 程式庫和量子模擬器)，都可以從本機電腦安裝及執行。 最終，您將能夠在實際的量子電腦上遠端執行 Q# 程式，但在這之前，QDK 所提供的量子模擬器會提供正確且可靠的結果。
 
 - [從命令列執行 Q#](xref:microsoft.quantum.install.standalone) 是能夠最快開始使用的方式。
 
-- [使用 IQ# 執行獨立的 Jupyter Notebook](xref:microsoft.quantum.install.jupyter)，IQ# 是用來編譯和模擬 Q# 程式並將其視覺化的 Jupyter 擴充功能。
+- [使用 IQ# 執行獨立的 Jupyter Notebook](xref:microsoft.quantum.install.jupyter)，這是用來編譯和模擬 Q# 程式並將其視覺化的 Jupyter 擴充功能。
 
 - 如果您熟悉 [Python](xref:microsoft.quantum.install.python)，就可以用 Python 作為要開始使用的主機程式設計平台。 Python 不僅廣為開發人員使用，連科學家、研究人員和老師也都在使用。
 
-- 如果您已有 [C#、F# 或 VB.NET](xref:microsoft.quantum.install.cs) 的經驗，而且熟悉 Visual Studio 開發環境，則您需要將幾個擴充功能新增至 Visual Studio 以使其做好準備而能用於 Q#。  
+- 如果您已有 [C#、F# 或 VB.NET](xref:microsoft.quantum.install.cs) 的經驗，且熟悉 Visual Studio 開發環境，則您只需將幾個擴充功能新增至 Visual Studio，即可使其與 Q# 搭配使用。  
 
 ## <a name="summary"></a>摘要
 

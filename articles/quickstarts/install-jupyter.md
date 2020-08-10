@@ -1,30 +1,33 @@
 ---
-title: 使用 Q# Jupyter Notebook 開發
+title: 使用 Q# Jupyter Notebook 進行開發
 author: bradben
 ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871445"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866803"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>使用 Q# Jupyter Notebook 開發
+# <a name="develop-with-no-locq-jupyter-notebooks"></a>使用 Q# Jupyter Notebook 進行開發
 
 安裝 QDK 以在 Q# Jupyter Notebook 上開發 Q# 作業。
 
-Jupyter Notebook 允許就地執行指示、備註與其他內容旁的程式碼。 此環境適用於撰寫含內嵌說明或配量運算互動式教學課程的 Q# 程式碼。 以下是開始建立您自己的 Q# 筆記本所需的準備工作。
+Jupyter Notebook 允許就地執行指示、備註與其他內容旁的程式碼。 此環境很適合用來撰寫含內嵌說明或配量運算互動式教學課程的 Q# 程式碼。 以下是您開始建立自己的 Q# 筆記本時所需執行的動作。
 
 > [!NOTE]
-> * 在 Q# Jupyter Notebook 中，您只可以執行 Q# 程式碼，且無法從外部主機程式 (例如 Python 或 C# 檔案) 呼叫作業。 如果您的目標是將外部傳統主機程式與配量程式結合，則此環境不適合。
+> * 在 Q# Jupyter Notebook 中，您只能執行 Q# 程式碼，且無法從外部主機程式 (例如 Python 或 C# 檔案) 呼叫作業。 如果您的目標是將外部傳統主機程式與配量程式結合，則此環境不適合。
 
-## <a name="install-the-iq-jupyter-kernel"></a>安裝 IQ# Jupyter 核心
+## <a name="install-the-ino-locq-jupyter-kernel"></a>安裝 IQ# Jupyter 核心
 
-IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SDK 擴充功能，提供編譯和模擬 Q# 作業的核心功能。
+IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SDK 擴充功能，可提供編譯和模擬 Q# 作業的核心功能。
 
 ### <a name="install-using-conda-recommended"></a>[使用 conda 安裝 (建議做法)](#tab/tabid-conda)
 
@@ -70,9 +73,9 @@ IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SD
     
 ***
 
-就這麼簡單！ 您現在已有適用於 Jupyter 的 IQ# 核心，其可提供從 Q# Jupyter Notebook 編譯和執行 Q# 作業的核心功能。
+就這麼簡單！ 您現在已有適用於 Jupyter 的 IQ# 核心，可提供從 Q# Jupyter Notebook 編譯和執行 Q# 作業的核心功能。
 
-## <a name="create-your-first-q-notebook"></a>建立您的第一個 Q# 筆記本
+## <a name="create-your-first-no-locq-notebook"></a>建立您的第一個 Q# 筆記本
 
 現在您已準備好要藉由撰寫和執行簡單的 Q# 作業來驗證您的 Q# Jupyter Notebook 安裝。
 
@@ -84,7 +87,7 @@ IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SD
 
     - 如果 Jupyter Notebook 沒有在您的瀏覽器中自動開啟，請將命令列所提供的 URL 複製並貼到瀏覽器中。
 
-1. 選擇 [新增] → [Q#]，使用 Q# 核心建立 Jupyter Notebook，並將下列程式碼加入第一個筆記本資料格：
+1. 選擇 [新增] → [Q#]，使用 Q# 核心建立 Jupyter Notebook，並將下列程式碼新增至第一個筆記本資料格：
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
@@ -102,9 +105,9 @@ IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SD
 
 ## <a name="next-steps"></a>後續步驟
 
-您已安裝 Q# Jupyter Notebook 適用的 QDK，現在您可以撰寫並執行[第一個量子程式](xref:microsoft.quantum.quickstarts.qrng)，方法是直接在 Jupyter Notebook 環境中撰寫 Q# 程式碼。
+您已安裝 Q# Jupyter Notebook 適用的 QDK，現在您可以直接在 Jupyter Notebook 環境中撰寫 Q# 程式碼，以撰寫並執行[第一個量子程式](xref:microsoft.quantum.quickstarts.qrng)。
 
-如需更多如何使用 Q# Jupyter Notebook 的範例，請參閱：
+如需更多 Q# Jupyter Notebook 的使用範例，請參閱：
 
-- [Q# 與 Jupyter Notebook 簡介](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/) \(英文\)。 您會在這裡找到一個 Q# Jupyter Notebook，其中提供如何在 Jupyter 環境中使用 Q# 的詳細資訊。
-- [Quantum Katas](xref:microsoft.quantum.overview.katas)，這是一系列開放原始碼的自學型教學課程，含一組程式設計練習，以 Q# Jupyter Notebook 格式呈現。 [Quantum Katas 教學課程筆記本](https://github.com/microsoft/QuantumKatas#tutorial-topics)是很好的起點。 Quantum Katas 的目標是要同時讓您學會配量運算和 Q# 程式設計的要素。 這些要素是使用 Q# Jupyter Notebook 所能建立內容種類的絕佳範例。
+- [Q# 與 Jupyter Notebook 簡介](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/)。 您會在這裡找到一個 Q# Jupyter Notebook，其中提供如何在 Jupyter 環境中使用 Q# 的詳細資訊。
+- [Quantum Katas](xref:microsoft.quantum.overview.katas)，這是一系列開放原始碼的自學型教學課程，和一組以Q# Jupyter Notebook 格式呈現的程式設計練習。 [Quantum Katas 教學課程筆記本](https://github.com/microsoft/QuantumKatas#tutorial-topics)是很好的起點。 Quantum Katas 的目標是要同時讓您學會配量運算和 Q# 程式設計的要素。 這些要素可充分說明使用 Q# Jupyter Notebook 所能建立的內容種類。

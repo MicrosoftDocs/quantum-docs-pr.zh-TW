@@ -1,18 +1,21 @@
 ---
 title: 更新 Quantum Development Kit (QDK)
-description: '描述如何將您的 Q # 專案和 Microsoft Quantum Development Kit 更新為目前的版本。'
+description: 說明如何將您的 Q# 專案和 Microsoft Quantum 開發套件更新為目前的版本。
 author: bradben
 ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871394"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866752"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>更新 Microsoft Quantum Development Kit (QDK)
 
@@ -21,12 +24,12 @@ ms.locfileid: "86871394"
 本文假設您已經安裝 QDK。 如果您是第一次安裝，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 我們建議您保持最新的 QDK 版本。 請遵循此更新指南升級至最新的 QDK 版本。 此流程由兩個部分組成：
-1. 更新您現有的 Q # 檔案和專案，讓您的程式碼與任何更新後的語法一致。
+1. 更新您現有的 Q# 檔案和專案，讓您的程式碼與任何更新後的語法一致。
 2. 為您選擇的開發環境更新 QDK 本身。
 
-## <a name="updating-q-projects"></a>更新 Q# 專案 
+## <a name="updating-no-locq-projects"></a>更新 Q# 專案 
 
-無論您使用的是 C# 或 Python 來裝載 Q# 作業，請遵循下列指示來更新您的 Q# 專案。
+無論您使用 C# 或 Python 來裝載 Q# 作業，均應依照下列指示更新您的 Q# 專案。
 
 1. 首先，檢查您是否有最新版的 [.NET Core SDK 3.1](https://dotnet.microsoft.com/download)。 在命令提示字元中執行下列命令：
 
@@ -36,7 +39,7 @@ ms.locfileid: "86871394"
 
     確認輸出為 `3.1.100` 或更新版本。 如果不是，請安裝[最新版本](https://dotnet.microsoft.com/download)，然後再檢查一次。 接著，根據您的設定 (Visual Studio、Visual Studio Code 或直接使用命令列) 遵循下列指示進行。
 
-### <a name="update-q-projects-in-visual-studio"></a>更新 Visual Studio 中的 Q# 專案
+### <a name="update-no-locq-projects-in-visual-studio"></a>更新 Visual Studio 中的 Q# 專案
  
 1. 更新為最新版的 Visual Studio 2019，請參閱[此處](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019)以取得指示。
 2. 在 Visual Studio 中開啟方案。
@@ -77,13 +80,13 @@ ms.locfileid: "86871394"
 您現在可以直接跳到[更新 Visual Studio QDK 擴充功能](#update-visual-studio-qdk-extension)。
 
 
-### <a name="update-q-projects-in-visual-studio-code"></a>更新 Visual Studio Code 中的 Q# 專案
+### <a name="update-no-locq-projects-in-visual-studio-code"></a>更新 Visual Studio Code 中的 Q# 專案
 
 1. 在 Visual Studio Code 中，開啟包含所要更新專案的資料夾。
 2. 選取 [終端機] -> [新增終端機]。
 3. 請遵循下列指示 (正下方) 以使用命令列進行更新。
 
-### <a name="update-q-projects-using-the-command-line"></a>使用命令列更新 Q # 專案
+### <a name="update-no-locq-projects-using-the-command-line"></a>使用命令列更新 Q# 專案
 
 1. 瀏覽至包含您主要專案檔的資料夾。
 
@@ -144,7 +147,7 @@ ms.locfileid: "86871394"
     dotnet build [project_name].csproj
     ```
 
-現在您的 Q # 專案已更新，請遵循下列指示來更新 QDK 本身。
+現在您的 Q# 專案已更新，請依照下列指示更新 QDK 本身。
 
 ## <a name="updating-the-qdk"></a>更新 QDK
 
@@ -231,7 +234,7 @@ ms.locfileid: "86871394"
 
 現在您可以使用更新後的 `qsharp` Python 套件來執行現有的量子程式。
 
-### <a name="update-the-iq-jupyter-kernel"></a>更新 IQ# Jupyter 核心
+### <a name="update-the-ino-locq-jupyter-kernel"></a>更新 IQ# Jupyter 核心
 
 更新程式取決於您最初是使用 conda 或 .NET CLI 和 pip 進行安裝。
 
@@ -243,7 +246,7 @@ ms.locfileid: "86871394"
     conda update -c quantum-engineering qsharp
     ```
 
-1. 從您現有的每個 Q# Jupyter Notebook中的資料格執行下列命令：
+1. 從您現有的每個 Q# Jupyter Notebook 中的資料格執行下列命令：
 
     ```
     %workspace reload
@@ -273,7 +276,7 @@ ms.locfileid: "86871394"
 
     如果您的 `iqsharp` 版本較高，別擔心。 其應該符合[最新版本](xref:microsoft.quantum.relnotes)。
 
-1. 從您現有的每個 Q# Jupyter Notebook中的資料格執行下列命令：
+1. 從您現有的每個 Q# Jupyter Notebook 中的資料格執行下列命令：
 
     ```
     %workspace reload
@@ -316,5 +319,5 @@ ms.locfileid: "86871394"
 
    - [更新 QDK 擴充功能](#update-vs-code-qdk-extension)
    - 在 VS Code 中，前往 [檢視] -> [命令選擇區]
-   - 選取 Q#:**安裝命令列專案範本**
+   - 選取 **Q#：安裝命令列專案範本**
    - 幾秒鐘之後，您應該會看到一個快顯視窗確認「專案範本安裝成功」
