@@ -1,4 +1,4 @@
-- name: 'Q# 中的類型'
+- name: Q# 中的類型
   href: types.md
-- name: 類型表示方式
+- name: 運算式
   href: expressions.md
