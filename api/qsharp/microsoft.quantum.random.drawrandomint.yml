@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.drawrandomint
+name: DrawRandomInt
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: 在指定的內含範圍內繪製隨機整數。
+remarks: 如果為 `max <= min` ，則失敗。
+examples: >-
+  下列 Q # 程式碼片段會隨機擲出六側的骰子：
+
+
+  ```Q#
+
+  let roll = DrawRandomInt(1, 6);
+
+  ```
+syntax: 'operation DrawRandomInt (min : Int, max : Int) : Int'
+input:
+  content: '(min : Int, max : Int)'
+  types:
+  - name: min
+    summary: 要繪製的最小整數。
+    isPrimitive: true
+    uid: Int
+  - name: max
+    summary: 要繪製的最大整數。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: 中包含範圍內的整數， `min` `max` 具有統一機率。
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- microsoft.quantum.discreteuniformdistribution
+metadata:
+  ms.openlocfilehash: cb80cacff95dac9e4cecc5717124c20909a56ca0
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863958"

@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.standardnormaldistribution
+name: StandardNormalDistribution
+type: function
+namespace: Microsoft.Quantum.Random
+summary: 傳回具有 mean 0 和變異數1的一般分佈。
+examples: >-
+  下列範例會從標準一般分佈中繪製10個樣本：
+
+
+  ```Q#
+
+  let samples = DrawMany((StandardNormalDistribution())::Sample, 10, ());
+
+  ```
+syntax: 'function StandardNormalDistribution () : Microsoft.Quantum.Random.ContinuousDistribution'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.Random.ContinuousDistribution
+  types:
+  - uid: microsoft.quantum.random.continuousdistribution
+seeAlso:
+- microsoft.quantum.random.normaldistribution
+metadata:
+  ms.openlocfilehash: 5e51a76b1bf2d83fe62a77663aa3cc8dc0d5bacb
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863978"

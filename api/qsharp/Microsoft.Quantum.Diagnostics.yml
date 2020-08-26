@@ -1,96 +1,104 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含適用于診斷目的的函式和作業，包括 assert 作業和宣告函數。"
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: 判斷提示兩個布林值陣列是否相等。
 - uid: microsoft.quantum.diagnostics.allequalityfacti
-  summary: 判斷兩個整數值陣列是否相等。
+  summary: 判斷提示兩個整數值陣列是否相等。
 - uid: microsoft.quantum.diagnostics.contradiction
   summary: 宣告傳統條件為 false。
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: 傾印目前目的電腦的狀態。
 - uid: microsoft.quantum.diagnostics.dumpregister
-  summary: 傾印與指定 qubits 相關聯的目前目的機器狀態。
+  summary: 傾印目前目的電腦與指定量子位相關聯的狀態。
 - uid: microsoft.quantum.diagnostics.equalityfactb
-  summary: 判斷傳統的 Bool 變數具有預期的值。
+  summary: 判斷提示傳統 Bool 變數具有預期的值。
 - uid: microsoft.quantum.diagnostics.equalityfactc
-  summary: 判斷複數具有預期值的判斷提示。
+  summary: 判斷複數具有預期的值。
 - uid: microsoft.quantum.diagnostics.equalityfactcp
-  summary: 判斷複數具有預期值的判斷提示。
+  summary: 判斷複數具有預期的值。
 - uid: microsoft.quantum.diagnostics.equalityfacti
-  summary: 判斷傳統 Int 變數具有預期的值。
+  summary: 判斷提示傳統 Int 變數具有預期的值。
 - uid: microsoft.quantum.diagnostics.equalityfactl
-  summary: 判斷傳統 BigInt 變數具有預期的值。
+  summary: 判斷提示傳統 BigInt 變數具有預期的值。
 - uid: microsoft.quantum.diagnostics.equalityfactr
-  summary: 判斷傳統結果變數具有預期的值。
+  summary: 判斷提示傳統結果變數具有預期的值。
 - uid: microsoft.quantum.diagnostics.equalitywithintolerancefact
-  summary: 表示傳統浮點值具有預期值的宣告，最高可達指定的絕對容錯。
+  summary: 表示傳統浮點數值的預期值為指定絕對容錯值的宣告。
 - uid: microsoft.quantum.diagnostics.fact
   summary: 宣告傳統條件為 true。
 - uid: microsoft.quantum.diagnostics.nearequalityfactc
-  summary: 判斷傳統複數的值上限為 1e-10 的小容錯。
+  summary: 判斷值，傳統複數的預期值最高可達 1e-10 的小容錯。
 - uid: microsoft.quantum.diagnostics.nearequalityfactcp
-  summary: 判斷傳統複數的值上限為 1e-10 的小容錯。
+  summary: 判斷值，傳統複數的預期值最高可達 1e-10 的小容錯。
 - uid: microsoft.quantum.diagnostics.nearequalityfactd
-  summary: 判斷傳統浮點值的預期值，最高可達 1e-10 的小容錯。
+  summary: 判斷值，傳統浮點值的預期值最高可達 1e-10 的小容錯。
 operations:
+- uid: microsoft.quantum.diagnostics.allowatmostncallsca
+  summary: 在呼叫此作業和其 adjoint 之間，判斷指定的作業最多隻會呼叫一次特定的次數。
+- uid: microsoft.quantum.diagnostics.allowatmostnqubits
+  summary: 在呼叫此作業和其 adjoint 之間，判斷最多可使用語句來配置指定數目的其他量子位。
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: 指定 qubits 的判斷提示全都處於 $ \ket {0} $ 狀態。
+  summary: 判斷提示，指定的量子位全都在 $ \ket {0} $ 狀態中。
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: 判斷指定的 qubits 全都在 $ \ket {0} $ 狀態中，直到指定的容錯為止。
+  summary: 判斷提示，指定的量子位全都在 $ \ket {0} $ 狀態中，直到指定的容錯。
 - uid: microsoft.quantum.diagnostics.assertmeasurement
-  summary: 以給定的 Pauli 為基礎測量給定 qubits 的判斷提示，一律會有指定的結果。
+  summary: 以指定的 Pauli 為基礎測量指定量子位的判斷提示，一定會有指定的結果。
 - uid: microsoft.quantum.diagnostics.assertmeasurementprobability
-  summary: 在特定的 Pauli 基礎中測量給定 qubits 的判斷提示，會在某些容錯範圍內具有給定機率的指定結果。
+  summary: 以指定的 Pauli 為基礎來測量指定量子位的判斷提示，在部分容錯範圍內會有給定機率的指定結果。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
-    假設有兩個作業，則判斷提示其對所有輸入狀態的行為都相同。
+    假設有兩個作業，請判斷它們對所有輸入狀態的作用都相同。
 
 
-    此判斷提示的執行方式是檢查所有表單狀態的作業動作 $V _0 \otimes ... \otimes V_ {n-1} $，其中 $V _k $ 是其中一個狀態 $ \ket {0} $、$ \ket {1} $、$ \ket{+} $ 和 $ \ket{i} $ （eigenstate Y 運算子的 + 1 Pauli）。
+    此判斷提示是藉由檢查所有狀態的作業動作（$V _0 \otimes ... \otimes V_ {n-1} $）來執行，其中 $V _k $ 是其中一個狀態 $ \ket {0} $、$ \ket {1} $、$ \ket{+} $ 和 $ \ket{i} $ (+ 1 Eigenstate Of Pauli Y 運算子) 。
 
 
-    這個判斷提示會使用 $n $ qubits，而且需要比較多個呼叫作業。
+    此判斷提示會使用 $n $ 量子位，而且需要比較多個呼叫作業。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    檢查 `givenU` 作業是否等於 `expectedU` 指定輸入大小的運算，方法是只從計算基礎檢查向量上的作業動作。
+    檢查 `givenU` 作業是否等於 `expectedU` 指定之輸入大小的作業，方法是只根據計算來檢查向量的動作。
 
-    這是兩個 unitaries 相等的必要但不夠的條件。
+    這是兩個 unitaries 相等的必要但不足的條件。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
   summary: >-
-    假設有兩個作業，則判斷提示其對所有輸入狀態的行為都相同。
+    假設有兩個作業，請判斷它們對所有輸入狀態的作用都相同。
 
 
-    這個判斷提示是透過使用 Choi – Jamiłkowski isomorphism，將判斷提示縮小為兩個光子暫存器的其中一個 qubit 狀態判斷提示。
+    此判斷提示是藉由使用 Choi 對於– Jamiłkowski isomorphism 來執行，將判斷提示減少到兩個纏結暫存器上的其中一個量子位狀態判斷提示。
 
-    因此，此作業只需要對每個要測試的作業進行單一呼叫，但需要配置的兩倍 qubits。
+    因此，這項作業只需要對每個要測試的作業進行單一呼叫，但需要配置兩次的量子位。
 
-    例如，這個判斷提示可以用來確保作業的優化版本與它的完整執行完全相同，或是在非配量輸入範圍上運作的作業會與已知的案例相關。
+    您可以使用這個判斷提示來確保作業的優化版本與其全面的實作為相同，或在非量子輸入範圍中運作的作業會符合已知案例。
+- uid: microsoft.quantum.diagnostics.assertphase
+  summary: 判斷提示等於迭加狀態的階段具有預期的值。
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: 判斷提示 qubit `q` 在 Pauli Z 運算子的預期 eigenstate 中。
+  summary: 判斷提示量子位 `q` 是在 Pauli Z 運算子的預期 eigenstate 中。
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
-    判斷提示 qubit 處於預期狀態。
+    判斷提示量子位處於預期狀態。
 
 
-    `expected`表示複雜向量 $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $。
+    `expected` 表示複雜向量 $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $。
 
-    元組的第一個元素代表每個 $a $，$b $ 是複數的實數部分，而第二個是虛數部分。
+    元組的第一個專案代表每一個 $a $，$b $ 是複數的實數部分，而第二個元素則是虛數部分。
 
-    最後一個引數會定義判斷提示所使用的容錯。
+    最後一個引數定義了判斷提示的容錯。
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: 判斷 qubit `q` 是在 Pauli Z 運算子的預期 eigenstate 中，直到指定的容錯為止。
+  summary: 判斷提示量子位 `q` 是在預期的 Pauli Z 運算子 eigenstate 中，直到指定的容錯。
+- uid: microsoft.quantum.diagnostics.dumpoperation
+  summary: 在指定作業的情況下，會顯示目前執行目標所提供之作業的相關診斷資訊。
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
-  summary: 編譯器可辨識的屬性，您可以透過它來定義替代名稱，以便在載入類型時使用，或針對測試目的進行呼叫。
+  summary: 編譯器可辨識的屬性，可透過此屬性來定義替代名稱，以便在載入類型或可供測試時使用。
 - uid: microsoft.quantum.diagnostics.test
-  summary: 編譯器可辨識的屬性，用來標示單元測試。
-summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含適用于診斷用途的函數和作業，包括 assert 作業和宣告函式。"
+  summary: 編譯器可辨識的屬性，可用來標記單元測試。
 metadata:
-  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 16c457188160a3e0d2b4d04b40af0dabbbdc0f0a
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884572"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863055"

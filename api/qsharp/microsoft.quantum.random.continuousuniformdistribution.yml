@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.continuousuniformdistribution
+name: ContinuousUniformDistribution
+type: function
+namespace: Microsoft.Quantum.Random
+summary: 傳回指定的內含間隔的統一散發。
+remarks: 如果為 `max <= min` ，則失敗。
+examples: >-
+  下列 Q # 程式碼片段會在 $0 $ 和 $2 \pi $ 之間隨機繪製角度：
+
+
+  ```Q#
+
+  let angleDistribution = ContinuousUniformDistribution(0.0, 2.0 * PI());
+
+  let angle = angleDistribution::Sample();
+
+  ```
+syntax: 'function ContinuousUniformDistribution (min : Double, max : Double) : Microsoft.Quantum.Random.ContinuousDistribution'
+input:
+  content: '(min : Double, max : Double)'
+  types:
+  - name: min
+    summary: 要繪製的最小實數。
+    isPrimitive: true
+    uid: Double
+  - name: max
+    summary: 要繪製的最大實數數目。
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.Random.ContinuousDistribution
+  types:
+  - summary: 隨機 variates 的分佈，其隨機是的內含間隔中的實數（ `min` `max` 具有統一機率）。
+    uid: microsoft.quantum.random.continuousdistribution
+seeAlso:
+- microsoft.quantum.drawrandomdouble
+metadata:
+  ms.openlocfilehash: ac2f90f2793cf6a94fbb50bdac1d05f3790efa1e
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863990"

@@ -3,9 +3,9 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: 傳回類型複數的絕對值 `Complex` 。
+  summary: 傳回型別複數的絕對值 `Complex` 。
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: 傳回類型複數的絕對值 `ComplexPolar` 。
+  summary: 傳回型別複數的絕對值 `ComplexPolar` 。
 - uid: microsoft.quantum.math.absd
   summary: 傳回雙精確度浮點數的絕對值。
 - uid: microsoft.quantum.math.absi
@@ -13,17 +13,17 @@ functions:
 - uid: microsoft.quantum.math.absl
   summary: 傳回大整數的絕對值。
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: 傳回類型複數的平方絕對值 `Complex` 。
+  summary: 傳回復數類型的平方絕對值 `Complex` 。
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: 傳回類型複數的平方絕對值 `ComplexPolar` 。
+  summary: 傳回復數類型的平方絕對值 `ComplexPolar` 。
 - uid: microsoft.quantum.math.arccos
   summary: 傳回餘弦函數 (Cosine) 是指定數字的角。
 - uid: microsoft.quantum.math.arccosh
-  summary: 計算數位的反雙曲余弦值。
+  summary: 計算數位的反雙曲余弦。
 - uid: microsoft.quantum.math.arcsin
   summary: 傳回正弦函數 (Sine) 是指定數字的角。
 - uid: microsoft.quantum.math.arcsinh
-  summary: 計算數位的反雙曲正弦值。
+  summary: 計算數位的反雙曲正弦。
 - uid: microsoft.quantum.math.arctan
   summary: 傳回正切函數 (Tangent) 是指定數字的角。
 - uid: microsoft.quantum.math.arctan2
@@ -31,31 +31,31 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: 計算數位的反雙曲正切值。
 - uid: microsoft.quantum.math.argcomplex
-  summary: 傳回類型複數的階段 `Complex` 。
+  summary: 傳回型別複數的階段 `Complex` 。
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: 傳回類型複數的階段 `ComplexPolar` 。
+  summary: 傳回型別複數的階段 `ComplexPolar` 。
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    若為非負整數 `a` ，則傳回所需的位數來表示 `a` 。
+    若為非負整數，則會傳回 `a` 所需的位數來表示 `a` 。
 
 
-    也就是說，會傳回最小的 $n $，使 $a < 2 ^ n $。
+    也就是說，會傳回最小的 $n $，以 $a < 2 ^ n $。
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    若為非負整數 `a` ，則傳回所需的位數來表示 `a` 。
+    若為非負整數，則會傳回 `a` 所需的位數來表示 `a` 。
 
 
-    也就是說，會傳回最小的 $n $，使 $a < 2 ^ n $。
+    也就是說，會傳回最小的 $n $，以 $a < 2 ^ n $。
 - uid: microsoft.quantum.math.ceiling
   summary: 傳回大於或等於指定數字的最小整數。
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: 將複數的類型轉換 `Complex` 成複雜的類型數目 `ComplexPolar` 。
+  summary: 將複數類型的複數轉換 `Complex` 成類型的複數 `ComplexPolar` 。
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: 將複數的類型轉換 `ComplexPolar` 成複雜的類型數目 `Complex` 。
+  summary: 將複數類型的複數轉換 `ComplexPolar` 成類型的複數 `Complex` 。
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: 尋找最接近 `fraction` 分母小於或等於的聚合接續分數`denominatorBound`
+  summary: 找出最接近 `fraction` 分母小於或等於分母的接續分數 convergent `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: 尋找最接近 `fraction` 分母小於或等於的聚合接續分數`denominatorBound`
+  summary: 找出最接近 `fraction` 分母小於或等於分母的接續分數 convergent `denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: 傳回指定角的餘弦函數。
 - uid: microsoft.quantum.math.cosh
@@ -71,45 +71,45 @@ functions:
 - uid: microsoft.quantum.math.dividedbyl
   summary: 傳回兩個輸入的商。
 - uid: microsoft.quantum.math.divreml
-  summary: 將一個 BigInteger 值除以另一個，並傳回結果和餘數做為元組。
+  summary: 將一個 BigInteger 值除以另一個值，並以元組傳回結果和餘數。
 - uid: microsoft.quantum.math.e
   summary: 傳回自然對數基底 $e $。
 - uid: microsoft.quantum.math.expd
-  summary: 傳回指定之乘冪 $e $。
+  summary: 傳回 $e $，以指定的乘冪。
 - uid: microsoft.quantum.math.expmodi
-  summary: 針對給定的模數，傳回指定之乘冪的整數。
+  summary: 針對給定的模數，傳回引發至給定乘冪的整數。
 - uid: microsoft.quantum.math.expmodl
-  summary: 針對給定的模數，傳回指定之乘冪的整數。
+  summary: 針對給定的模數，傳回引發至給定乘冪的整數。
 - uid: microsoft.quantum.math.extendedgreatestcommondivisori
-  summary: 計算元組 $ （u，v） $，讓 $u \cdot a + v \cdot b = \operatorname{GCD} （a，b） $，其中 $ \operatorname{GCD} $ 是 $a $ 最大公 $a $ 和 $b $ 的除數。 GCD 一律為正數。
+  summary: 計算元組 $ (u，v) $，以 $u \cdot a + v \cdot b = \operatorname{GCD} (a，b) $，其中 $ \operatorname{GCD} $ 是 $a $ 和 $a $ $b $ 最大公因數。 GCD 一律為正數。
 - uid: microsoft.quantum.math.extendedgreatestcommondivisorl
-  summary: 計算元組 $ （u，v） $，讓 $u \cdot a + v \cdot b = \operatorname{GCD} （a，b） $，其中 $ \operatorname{GCD} $ 是 $a $ 最大公 $a $ 和 $b $ 的除數。 GCD 一律為正數。
+  summary: 計算元組 $ (u，v) $，以 $u \cdot a + v \cdot b = \operatorname{GCD} (a，b) $，其中 $ \operatorname{GCD} $ 是 $a $ 和 $a $ $b $ 最大公因數。 GCD 一律為正數。
 - uid: microsoft.quantum.math.floor
   summary: 傳回小於或等於指定數字的最大整數。
 - uid: microsoft.quantum.math.greatestcommondivisori
-  summary: 計算 $a $ 和 $b $ 的最大公除數。 GCD 一律為正數。
+  summary: 計算 $a $ 和 $b $ 的最大公因數。 GCD 一律為正數。
 - uid: microsoft.quantum.math.greatestcommondivisorl
-  summary: 計算 $a $ 和 $b $ 的最大公除數。 GCD 一律為正數。
+  summary: 計算 $a $ 和 $b $ 的最大公因數。 GCD 一律為正數。
 - uid: microsoft.quantum.math.ieeeremainder
   summary: 傳回指定數字除以另一個指定數字所得的餘數。
 - uid: microsoft.quantum.math.inversemodi
-  summary: 傳回 $b $，$a \cdot b = 1 （\operatorname{mod} \texttt{modulus}） $。
+  summary: 傳回 $b $，$a \cdot b = 1 ( \operatorname{mod} \texttt{modulus} ) $。
 - uid: microsoft.quantum.math.inversemodl
-  summary: 傳回 $b $，$a \cdot b = 1 （\operatorname{mod} \texttt{modulus}） $。
+  summary: 傳回 $b $，$a \cdot b = 1 ( \operatorname{mod} \texttt{modulus} ) $。
 - uid: microsoft.quantum.math.iscoprimei
-  summary: 如果 $a $ 和 $b $ 為共質數，則傳回 true，否則傳回 false。
+  summary: 如果 $a $ 和 $b $ 是共同質數，則傳回 true，否則傳回 false。
 - uid: microsoft.quantum.math.iscoprimel
-  summary: 如果 $a $ 和 $b $ 為共質數，則傳回 true，否則傳回 false。
+  summary: 如果 $a $ 和 $b $ 是共同質數，則傳回 true，否則傳回 false。
 - uid: microsoft.quantum.math.lg
   summary: 計算數位的以2為底數的對數。
 - uid: microsoft.quantum.math.log
-  summary: 傳回指定數位的自然（基底 $e $）對數。
+  summary: 傳回指定數位的自然 (基底 $e $) 對數。
 - uid: microsoft.quantum.math.log10
   summary: 傳回指定數字的以 10 為底數的對數。
 - uid: microsoft.quantum.math.logof2
   summary: 傳回2的自然對數。
 - uid: microsoft.quantum.math.max
-  summary: 假設有整數陣列，則會傳回最大的元素。
+  summary: 指定整數的陣列時，會傳回最大的元素。
 - uid: microsoft.quantum.math.maxd
   summary: 傳回兩個指定數字中較大的一個。
 - uid: microsoft.quantum.math.maxi
@@ -117,7 +117,7 @@ functions:
 - uid: microsoft.quantum.math.maxl
   summary: 傳回兩個指定數字中較大的一個。
 - uid: microsoft.quantum.math.min
-  summary: 假設有整數陣列，則會傳回最小的元素。
+  summary: 指定整數的陣列時，會傳回最小的元素。
 - uid: microsoft.quantum.math.mind
   summary: 傳回兩個指定數位中較小的一個。
 - uid: microsoft.quantum.math.mini
@@ -135,11 +135,11 @@ functions:
 - uid: microsoft.quantum.math.minusl
   summary: 傳回兩個輸入之間的差異。
 - uid: microsoft.quantum.math.modi
-  summary: 傳回相對於另一個數位的數位模數。
+  summary: 傳回與另一個數位相關之數位的模數。
 - uid: microsoft.quantum.math.modl
-  summary: 傳回相對於另一個數位的數位模數。
+  summary: 傳回與另一個數位相關之數位的模數。
 - uid: microsoft.quantum.math.modpowl
-  summary: 在數位上，對另一個數位的乘冪執行模組化除法。
+  summary: 在引發至另一個數位之數位的數位上執行模組化分割。
 - uid: microsoft.quantum.math.modulusi
   summary: 計算模數的標準 residue `value` `modulus` 。
 - uid: microsoft.quantum.math.modulusl
@@ -157,7 +157,7 @@ functions:
 - uid: microsoft.quantum.math.pi
   summary: 代表圓周率，由常數 π 指定。
 - uid: microsoft.quantum.math.plusa
-  summary: 傳回兩個輸入的總和（串連）。
+  summary: 傳回兩個輸入 (串連) 的總和。
 - uid: microsoft.quantum.math.plusc
   summary: 傳回兩個輸入的總和。
 - uid: microsoft.quantum.math.pluscp
@@ -170,16 +170,16 @@ functions:
   summary: 傳回兩個輸入的總和。
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    傳回的 `L(p)` 向量的標準 `Double` 。
+    傳回 `L(p)` 向量的標準 `Double` 。
 
 
-    也就是說，如果陣列 $x $ 的類型 `Double[]` ，這會傳回 $p $-標準 $ \| x \| \_ p = （\ sum_ {j} | x_j | ^ {p}） ^ {1/p} $。
+    亦即，假設陣列 $x $ 的型 `Double[]` 別，這會傳回 $p $-標準 $ \| x \| \_ p = ( \ sum_ {j} | x_j | ^ {p} ) ^ {1/p} $。
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    標準化 `Double` 在此標準中的向量 `L(p)` 。
+    標準化 `Double` 標準中的向量 `L(p)` 。
 
 
-    也就是說，如果陣列 $x $ 的類型 `Double[]` ，這會傳回陣列，其中所有元素都除以 $p $-標準 $ \| x \| _p $。
+    亦即，假設陣列 $x $ 的型別 `Double[]` ，則會傳回陣列，其中所有專案都除以 $p $-標準 $ \| x \| _p $。
 - uid: microsoft.quantum.math.powc
   summary: 傳回指定乘冪的數位。
 - uid: microsoft.quantum.math.powcp
@@ -193,7 +193,7 @@ functions:
 - uid: microsoft.quantum.math.realmod
   summary: 計算兩個實數之間的模數。
 - uid: microsoft.quantum.math.round
-  summary: 將值四捨五入為最接近的整數。
+  summary: 將值四捨五入到最接近的整數。
 - uid: microsoft.quantum.math.signd
   summary: 傳回整數，表示數字的正負號。
 - uid: microsoft.quantum.math.signi
@@ -207,7 +207,7 @@ functions:
 - uid: microsoft.quantum.math.sqrt
   summary: 傳回指定數字的平方根。
 - uid: microsoft.quantum.math.squarednorm
-  summary: 傳回向量的平方2標準。
+  summary: 傳回向量的平方二標準。
 - uid: microsoft.quantum.math.tan
   summary: 傳回指定角的正切函數。
 - uid: microsoft.quantum.math.tanh
@@ -226,34 +226,34 @@ functions:
   summary: 計算數字的整數部分。
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: 代表表單的有理數 `p/q` 。 Integer `p` 是元組的第一個元素，而 `q` 是元組的第二個元素。
+  summary: 表示表單的有理數 `p/q` 。 整數 `p` 是元組的第一個元素，而 `q` 是元組的第二個元素。
 - uid: microsoft.quantum.math.complex
   summary: >-
     以實數和虛陣列件表示複數。
 
-    元組的第一個元素是 real 元件，第二個是虛陣列件。
+    元組的第一個元素是真正的元件，第二個是虛構的元件。
 - uid: microsoft.quantum.math.complexpolar
   summary: >-
-    代表極座標形式的複數。
+    以極座標形式表示複數。
 
 
-    複數的極座標表示 $c = r e ^ {i t} $。
+    複數的極座標表示為 $c = r e ^ {i t} $。
 - uid: microsoft.quantum.math.fraction
-  summary: 代表表單的有理數 `p/q` 。 Integer `p` 是元組的第一個元素，而 `q` 是元組的第二個元素。
-summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含傳統數學函數和資料類型。"
+  summary: 表示表單的有理數 `p/q` 。 整數 `p` 是元組的第一個元素，而 `q` 是元組的第二個元素。
+summary: " # <a name=\"summary\"></a>摘要\n 此命名空間包含傳統數學函數和資料類型。"
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: 產生大於或等於零且小於所提供上限的已均勻取樣隨機整數。
+  summary: "\n> [!WARNING]\n> 已被取代\n\nRandomInt 已被取代。 請改用 @\"microsoft.quantum.random.drawrandomint\"。"
 - uid: microsoft.quantum.math.randomintpow2
-  summary: 產生從所有整數（可在指定的位數中表示）中統一取樣的隨機整數。
+  summary: "\n> [!WARNING]\n> 已被取代\n\nRandomIntPow2 已被取代。 請改用 @\"microsoft.quantum.random.drawrandomint\"。"
 - uid: microsoft.quantum.math.randomreal
-  summary: 傳回間隔中大於或等於零且小於一的隨機實數。
+  summary: "\n> [!WARNING]\n> 已被取代\n\nRandomReal 已被取代。 請改用 @\"microsoft.quantum.random.drawrandomdouble\"。"
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: 以隨機的的單一 qubit Pauli 運算子，傳回一個一致的。
+  summary: "\n> [!WARNING]\n> 已被取代\n\nRandomSingleQubitPauli 已被取代。 請改用 @\"microsoft.quantum.random.drawrandompauli\"。"
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326485"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863072"
