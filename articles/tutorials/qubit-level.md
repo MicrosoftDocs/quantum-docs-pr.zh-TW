@@ -1,6 +1,6 @@
 ---
-title: 在中撰寫和模擬 qubit 層級程式Q#
-description: 撰寫和模擬可在個別 qubit 層級運作之配量程式的逐步教學課程
+title: 撰寫和模擬中的量子位層級程式 Q#
+description: 撰寫和模擬在個別量子位層級運作之量副程式的逐步教學課程
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
@@ -9,65 +9,65 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869710"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863342"
 ---
-# <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>教學課程：在 Q 中撰寫和模擬 qubit 層級程式\#
+# <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>教學課程：在 Q 中撰寫和模擬量子位層級程式\#
 
-歡迎使用量子開發工具組教學課程，以撰寫和模擬可在個別 qubits 上運作的基本配量程式。 
+歡迎使用量子開發工具組教學課程，以撰寫和模擬在個別量子位上運作的基本量副程式。 
 
-雖然 Q# 主要是針對大規模的量副程式建立為高階程式設計語言，但它可以輕鬆地用來探索較低層級的量副程式：直接定址特定的 qubits。
-的彈性 Q# 可讓使用者從任何一種抽象層級處理量子系統，而在本教學課程中，我們會深入探討 qubits 本身。
-具體而言，我們將探討「[量子傅立葉」轉換](https://en.wikipedia.org/wiki/Quantum_Fourier_transform)的幕後，這是許多較大配量演算法不可或缺的副程式。
+雖然 Q# 主要是建立為大規模量副程式的高階程式設計語言，但它可以輕鬆地用來探索較低層級的量副程式：直接定址特定的量子位。
+的彈性 Q# 可讓使用者從任何這類抽象層處理量子系統，在本教學課程中，我們會深入探討量子位本身。
+具體而言，我們會看看 [量子傅立葉轉換](https://en.wikipedia.org/wiki/Quantum_Fourier_transform)的本質，這是許多較大型量子演算法不可或缺的副程式。
 
-請注意，此低層級的配量資訊處理方式通常是以「[量子線路](xref:microsoft.quantum.concepts.circuits)」來描述，這代表將閘道的順序應用到特定的系統 qubits。
+請注意，此量子資訊處理的低層級視圖通常是以「[量子線路](xref:microsoft.quantum.concepts.circuits)」來描述，這代表系統的特定量子位之閘道的順序應用。
 
-因此，我們依序套用的單一和多 qubit 作業可以在「電路圖」中輕鬆呈現。
-在我們的案例中，我們將定義一個作業 Q# 來執行完整的三 qubit 配量傅立葉轉換，其具有下列標記法做為電路：
+因此，我們順序套用的單一和多量子位作業，可以立即以「電路圖」表示。
+在我們的案例中，我們將定義一項作業 Q# 來執行完整的三量子位量子傅立葉轉換，其以下列標記法作為電路：
 
 <br/>
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-* 使用您慣用的語言和開發環境來[安裝](xref:microsoft.quantum.install)配量開發工具組。
+* 使用您慣用的語言和開發環境，[安裝](xref:microsoft.quantum.install)量子開發工具組。
 * 如果您已安裝 QDK，請確定您已[更新](xref:microsoft.quantum.update)為最新版本
 
 
 ## <a name="in-this-tutorial-youll-learn-how-to"></a>在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
-> * 定義中的量子作業Q#
-> * Q#直接從命令列或使用傳統主機程式呼叫作業
-> * 模擬從 qubit 配置到測量輸出的量子作業
-> * 觀察量子系統的模擬 wavefunction 在整個作業過程中的演變方式
+> * 定義中的量子作業 Q#
+> * Q#從命令提示字元或使用傳統主機程式直接呼叫作業
+> * 模擬從量子位配置到測量輸出的量子運算
+> * 觀察量子系統的模擬 wavefunction 如何在整個作業中演進
 
-使用 Microsoft 的量子開發工具組來執行量副程式，通常是由兩個部分組成：
-1. 程式本身，它是使用 Q# 量副程式設計語言來執行，然後叫用以在量子電腦或量子模擬器上執行。 其中包括 
-    - Q#作業：在量子暫存器上作用的副程式，以及 
-    - Q#函式：在量子演算法內使用的傳統副程式。
+使用 Microsoft 的量子開發工具組執行量副程式通常是由兩個部分所組成：
+1. 程式本身，它會使用 Q# 量副程式設計語言來執行，然後叫用以在量子電腦或量子模擬器上執行。 這些包含 
+    - Q# 作業：在量子暫存器上作用的副程式，以及 
+    - Q# 函數：量子演算法內使用的傳統副程式。
 2. 用來呼叫量副程式的進入點，並指定應該在其上執行的目的電腦。
-    這可以直接從命令列進行，或透過以傳統程式設計語言（例如 Python 或 c #）撰寫的主機程式來完成。
-    本教學課程包含您偏好的任何方法的指示。
+    這可以直接從命令提示字元執行，或透過以傳統程式設計語言（例如 Python 或 c #）撰寫的主機程式來完成。
+    本教學課程包含您偏好之任何方法的指示。
 
-## <a name="allocate-qubits-and-define-quantum-operations"></a>配置 qubits 並定義量子作業
+## <a name="allocate-qubits-and-define-quantum-operations"></a>配置量子位並定義量子作業
 
-本教學課程的第一個部分包含定義作業，此作業會 Q# `Perform3qubitQFT` 在三個 qubits 上執行量子傅立葉轉換。 
+本教學課程的第一個部分包含定義作業，此作業會 Q# `Perform3qubitQFT` 在三個量子位上執行量子傅立葉轉換。 
 
-此外，我們將使用函式 [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) 來觀察我們的三個 qubit 系統的模擬 wavefunction 如何在作業之間演變。
+此外，我們將使用函式 [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) 來觀察三個量子位系統的模擬 wavefunction 如何在整個作業中演進。
 
 第一個步驟是建立您的 Q# 專案和檔案。
-這項操作的步驟取決於您將用來呼叫程式的環境，您可以在個別的[安裝指南](xref:microsoft.quantum.install)中找到詳細資料。
+這項操作的步驟取決於您將用來呼叫程式的環境，而且您可以在個別的 [安裝指南](xref:microsoft.quantum.install)中找到詳細資料。
 
-我們會逐步引導您完成檔案的元件，但此程式碼也會以完整區塊的形式提供。
+我們會逐步引導您完成檔案的元件，但是程式碼也是以完整區塊的形式提供。
 
 ### <a name="namespaces-to-access-other-no-locq-operations"></a>存取其他作業的命名空間 Q#
-在檔案中，我們會先定義 `NamespaceQFT` 將由編譯器存取的命名空間。
-為了讓我們使用現有的 Q# 作業，我們會開啟相關的 `Microsoft.Quantum.<>` 命名空間。
+在檔案中，我們會先定義 `NamespaceQFT` 編譯器將存取的命名空間。
+為了讓我們的作業使用現有的 Q# 作業，我們開啟了相關的 `Microsoft.Quantum.<>` 命名空間。
 
 ```qsharp
 namespace NamespaceQFT {
@@ -80,7 +80,7 @@ namespace NamespaceQFT {
 }
 ```
 
-### <a name="define-operations-with-arguments-and-returns"></a>定義具有引數的作業並傳回
+### <a name="define-operations-with-arguments-and-returns"></a>使用引數和傳回來定義作業
 接下來，我們會定義作業 `Perform3qubitQFT` ：
 
 ```qsharp
@@ -89,11 +89,11 @@ namespace NamespaceQFT {
     }
 ```
 
-目前，此作業不會採用任何引數，也不會傳回任何---在此情況下，我們會寫出它傳回的 `Unit` 物件（在 c # 中類似于，而在 Python 中則是 `void` 空的元組） `Tuple[()]` 。
-稍後，我們會將它修改為傳回測量結果的陣列，此時將會 `Unit` 取代此位置 `Result[]` 。 
+目前，此作業不會採用任何引數，也不會傳回任何---在此案例中，我們會撰寫它 `Unit` 會傳回類似于 `void` c # 中的物件，或在 Python 中為空的元組 `Tuple[()]` 。
+稍後，我們會將它修改為傳回測量結果的陣列，此時將會 `Unit` 由取代 `Result[]` 。 
 
-### <a name="allocate-qubits-with-using"></a>使用配置 qubits`using`
-在我們的作業中 Q# ，我們會先使用語句來配置三個 qubits 的暫存器 `using` ：
+### <a name="allocate-qubits-with-using"></a>配置量子位 `using`
+在我們 Q# 的作業中，我們會先使用語句配置三個量子位的註冊 `using` ：
 
 ```qsharp
         using (qs = Qubit[3]) {
@@ -104,44 +104,44 @@ namespace NamespaceQFT {
         }
 ```
 
-使用 `using` ，qubits 會自動設定在 $ \ket {0} $ 狀態中。 我們可以使用和來驗證這一點 [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) ，這會將字串和系統的目前狀態列印到主控台。
+使用時 `using` ，量子位會自動以 $ \ket {0} $ 狀態進行配置。 我們可以使用和來確認這一點 [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) ，這會將字串和系統的目前狀態列印到主控台。
 
 > [!NOTE]
-> 和函式 `Message(<string>)` `DumpMachine()` (自 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) 和 [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) ，分別) 會直接列印到主控台。 就像真正的量子計算一樣，不 Q# 允許我們直接存取 qubit 狀態。
-> 不過， `DumpMachine` 如果列印目的電腦的目前狀態，它可以在與完整狀態模擬器搭配使用時，提供用於進行偵錯工具和學習的寶貴見解。
+> 和函式 `Message(<string>)` `DumpMachine()` (自 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) 和 [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) ，分別) 會直接列印到主控台。 就像實際的量子運算一樣， Q# 無法讓我們直接存取量子位狀態。
+> 不過，由於會 `DumpMachine` 列印目的電腦的目前狀態，它可以提供在搭配完整狀態模擬器使用時進行偵錯工具和學習的寶貴見解。
 
 
-### <a name="applying-single-qubit-and-controlled-gates"></a>套用單一 qubit 和受控制的閘道
+### <a name="applying-single-qubit-and-controlled-gates"></a>套用單一量子位和控制的閘道
 
 接下來，我們會套用組成作業本身的閘道。
-Q#已包含許多基本配量閘道做為 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) 命名空間中的作業，而這些不是例外狀況。 
+Q# 已包含許多基本量子閘道作為命名空間中的作業 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ，而且這些不是例外狀況。 
 
-在作業中 Q# ，將會以連續循序執行叫用 callables 的語句。
-因此，第一個要套用的閘道是 [`H`](xref:microsoft.quantum.intrinsic.h) 第一個 qubit 的 (Hadamard) ：
+在作業中 Q# ，執行 callables 的語句當然會依序執行。
+因此，第一個要套用的閘道是 [`H`](xref:microsoft.quantum.intrinsic.h) 第一個量子位的 (Hadamard) ：
 
 <br/>
 <img src="../media/qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" width="120">
 
-若要從暫存器將作業套用至特定 qubit (也就是 `Qubit` 陣列中的單一 `Qubit[]`) 我們使用標準索引標記法。
-因此，將 [`H`](xref:microsoft.quantum.intrinsic.h) 套用至我們的註冊的第一個 qubit `qs` 會採用下列格式：
+若要 (從登錄將作業套用至特定量子位，也就是 `Qubit` 從陣列中的單一 `Qubit[]`) 我們使用標準索引標記法。
+因此，將 [`H`](xref:microsoft.quantum.intrinsic.h) 套用至我們的註冊的第一個量子位 `qs` 會採用下列格式：
 
 ```qsharp
             H(qs[0]);
 ```
 
-除了將 `H` (Hadamard) 閘道套用至個別 qubits，QFT 電路主要是由控制的旋轉所組成 [`R1`](xref:microsoft.quantum.intrinsic.r1) 。
-一般作業會將 `R1(θ, <qubit>)` qubit 的 $ \ket {0} $ 元件保持不變，同時將 $e ^ {i\theta} $ 的旋轉套用至 $ \ket {1} $ 元件。
+除了將 `H` (Hadamard) 閘道套用至個別量子位，QFT 電路主要是由受控制的旋轉所組成 [`R1`](xref:microsoft.quantum.intrinsic.r1) 。
+一般作業會將 `R1(θ, <qubit>)` 量子位的 $ \ket {0} $ 元件保持不變，同時將 $e ^ {i\theta} $ 的旋轉套用至 $ \ket {1} $ 元件。
 
 #### <a name="controlled-operations"></a>控制的作業
 
-Q#使在一或多個控制項 qubits 上執行作業的條件變得非常容易。
-一般來說，我們只會在呼叫前面加 `Controlled` 上，而作業引數則會變更為：
+Q# 讓在一或多個控制項量子位上執行作業時非常容易。
+一般而言，我們只是在呼叫前面加 `Controlled` 上，而作業引數的變更如下：
 
- `Op(<normal args>)`$ \to $ `Controlled Op([<control qubits>], (<normal args>))` 。
+ `Op(<normal args>)` $ \to $ `Controlled Op([<control qubits>], (<normal args>))` 。
 
-請注意，控制項 qubits 必須當做陣列提供，即使它是單一 qubit 也是一樣。
+請注意，您必須以陣列形式提供控制項量子位，即使它是單一量子位也一樣。
 
-之後 `H` ，我們會看到下一個閘道是 `R1` 作為第一個 qubit (，並由第二個/第三個) 控制：
+之後 `H` ，我們會看到下一個閘道是 `R1` 在第一個量子位 (的閘道，並由第二個/第三個) 控制：
 
 <br/>
 <img src="../media/qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" width="310">
@@ -153,14 +153,14 @@ Q#使在一或多個控制項 qubits 上執行作業的條件變得非常容易�
             Controlled R1([qs[2]], (PI()/4.0, qs[0]));
 ```
 
-請注意，我們會使用命名空間中的函式 [`PI()`](xref:microsoft.quantum.math.pi) [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) ，以 pi 弧度來定義旋轉。
+請注意，我們會使用 [`PI()`](xref:microsoft.quantum.math.pi) 來自命名空間的函式 [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) ，以 pi 弧度來定義旋轉。
 此外，我們 `Double` 會除以 (例如) ， `2.0` 因為除以整數 `2` 會擲回類型錯誤。 
 
 > [!TIP]
-> `R1(π/2)`和 `R1(π/4)` 相當於 `S` 和 `T` 作業 (也在) 中 `Microsoft.Quantum.Intrinsic` 。
+> `R1(π/2)` 和 `R1(π/4)` 也相當於 `S` 和 `T` 作業 (也在 `Microsoft.Quantum.Intrinsic`) 中。
 
 
-將相關的 `H` 作業和受控制的旋轉套用至第二個和第三個 qubits 之後：
+將相關的 `H` 作業和控制的旋轉套用至第二個和第三個量子位之後：
 
 ```qsharp
             //second qubit:
@@ -171,24 +171,24 @@ Q#使在一或多個控制項 qubits 上執行作業的條件變得非常容易�
             H(qs[2]);
 ```
 
-我們只需要套用網 [`SWAP`](xref:microsoft.quantum.intrinsic.swap) 關來完成線路：
+我們只需要套用一個網 [`SWAP`](xref:microsoft.quantum.intrinsic.swap) 關來完成線路：
 
 ```qsharp
             SWAP(qs[2], qs[0]);
 ```
 
-這是必要的，因為配量傅立葉轉換的本質會以反向順序輸出 qubits，因此，交換可讓副程式緊密整合成較大的演算法。
+這是必要的，因為量子傅立葉轉換的本質會以反向順序輸出量子位，因此交換可讓副程式緊密整合到較大的演算法。
 
-因此，我們已完成將配量傅立葉轉換的 qubit 層級作業寫入我們的 Q# 操作中：
+因此，我們已完成將量子傅立葉轉換的量子位層級作業寫入我們的作業中 Q# ：
 
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-不過，我們還無法一天呼叫它。
-我們的 qubits 是在配置時處於 $ \ket $ 的狀態 {0} ，而在現實中， Q# 我們應該以相同的方式，讓我們發現 (或更棒的東西！ ) 。
+不過，我們還無法在一天之前呼叫它。
+當我們配置量子位時，我們的州/省是 $ \ket {0} $，很像在現實生活中， Q# 我們應該以與我們一樣的方式，將專案保留 (或更好！ ) 。
 
-### <a name="deallocate-qubits"></a>解除配置 qubits
+### <a name="deallocate-qubits"></a>解除配置量子位
 
-我們 [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) 再次呼叫以查看作業後的狀態，最後再套用至 qubit 暫存器， [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) 以在完成作業之前，將 qubits 重設為 $ \ket {0} $：
+我們 [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) 再次呼叫以查看作業後狀態，最後會套用至量子位暫存器， [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) 以在完成作業之前將量子位重設為 $ \ket {0} $：
 
 ```qsharp
             Message("After:");
@@ -197,9 +197,9 @@ Q#使在一或多個控制項 qubits 上執行作業的條件變得非常容易�
             ResetAll(qs);
 ```
 
-將所有已解除配置的 qubits 明確設定為 $ \ket {0} $ 是的基本功能 Q# ，因為它可讓其他作業在開始使用相同的 qubits 時，精確地得知其狀態， (稀有資源) 。
-此外，這可確保不會與系統中的任何其他 qubits 光子。
-如果重設不是在配置區塊的結尾執行 `using` ，則會擲回執行階段錯誤。
+要求所有已解除配置的量子位都明確設定為 $ \ket {0} $ 是的基本功能 Q# ，因為它可讓其他作業在開始使用這些相同的量子位 (稀有資源) 時，精確地知道其狀態。
+此外，這可確保它們不會與系統中的任何其他量子位纏結。
+如果未在配置區塊的結尾執行重設，則會擲回 `using` 執行階段錯誤。
 
 您的完整檔案 Q# 現在看起來應該像這樣：
 
@@ -242,20 +242,20 @@ namespace NamespaceQFT {
 ```
 
 
-完成檔案 Q# 和作業之後，我們就可以呼叫和模擬我們的量副程式。
+完成檔案 Q# 和作業之後，就可以呼叫和模擬我們的量副程式。
 
 ## <a name="execute-the-program"></a>執行程式
 
-在檔案中定義我們的作業之後 Q# `.qs` ，我們現在需要呼叫該作業，並觀察所有傳回的傳統資料。
-目前不會傳回任何專案 (回想，上述定義的作業會傳回 `Unit`) ，但當我們稍後修改作業 Q# 以傳回測量結果陣列 (`Result[]`) 時，我們會解決此情況。
+在檔案中定義我們的作業之後 Q# `.qs` ，我們現在需要呼叫該作業，並觀察任何傳回的傳統資料。
+目前，沒有任何傳回的 (回想，上述定義的作業會傳回 `Unit`) ，但是當我們稍後修改作業 Q# 以傳回測量結果陣列 (`Result[]`) 時，我們將會解決此情況。
 
-雖然 Q# 程式在用來呼叫它的環境中很普遍，但執行此動作的方式當然會有所不同。 因此，只要遵循與您的安裝程式相對應的索引標籤中的指示：從 Q# 命令列應用程式工作，或使用 Python 或 c # 中的主機程式。
+雖然 Q# 程式在用來呼叫它的環境中是普遍的，但這麼做的方式當然會有所不同。 因此，只要依照您的設定所對應的索引標籤中的指示操作：從 Q# 應用程式或使用 Python 或 c # 中的主機程式來運作。
 
-#### <a name="command-line"></a>[命令列](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[命令提示字元](#tab/tabid-cmdline)
 
-Q#從命令列執行程式只需要對檔案進行少許變更 Q# 。
+Q#從命令提示字元執行程式，只需要對檔案進行少許變更 Q# 。
 
-只要加 `@EntryPoint()` 到作業定義前面的一行：
+只要新增 `@EntryPoint()` 至作業定義前面的一行即可：
 
 ```qsharp
     @EntryPoint()
@@ -263,33 +263,33 @@ Q#從命令列執行程式只需要對檔案進行少許變更 Q# 。
         // ...
 ```
 
-若要執行程式，請開啟專案資料夾中的終端機，並輸入
+若要執行程式，請在專案的資料夾中開啟終端機，並輸入
 
 ```dotnetcli
 dotnet run
 ```
 
-執行時，您應該會 `Message` `DumpMachine` 在主控台中看到下列輸出。
+執行時，您應該會 `Message` `DumpMachine` 在主控台中看到下列輸出和輸出。
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
 建立 Python 主機檔案： `host.py` 。
 
-主機檔案的結構如下所示： 
-1. 首先，我們會匯入 `qsharp` 模組，以註冊模組載入器以進行 Q# 互通性。 
-    這可讓 Q# 命名空間 (例如我們 `NamespaceQFT` 在檔案中定義 Q#) 顯示為 Python 模組，我們可以從中匯入 Q# 作業。
-2. 然後，匯入 Q# 我們將直接叫用---的作業，在此案例中為 `Perform3qubitQFT` 。
-    我們只需要將進入點匯入到 Q# 程式中 (也就是_不_是像和之類的作業 `H` ，而 `R1` 是由其他作業呼叫， Q# 但傳統主機) 則不會。
-3. 在模擬 Q# 作業或函數時，請使用表單在 `<Q#callable>.simulate(<args>)` `QuantumSimulator()` 目的電腦上執行。 
+主機檔案的結構如下： 
+1. 首先，我們會匯入 `qsharp` 模組，該模組會註冊模組載入器以獲得 Q# 互通性。 
+    這可讓 Q# 命名空間 (例如， `NamespaceQFT` 我們在檔案中定義的 Q#) 會顯示為 Python 模組，我們可以從中匯入 Q# 作業。
+2. 然後，匯入 Q# 我們將在此案例中直接叫用---的作業 `Perform3qubitQFT` 。
+    我們只需要將進入點匯入程式中， Q# (也_not_就是不 `H` 是與等作業 `R1` ，由其他 Q# 作業呼叫，但傳統主機) 絕不會呼叫。
+3. 在模擬 Q# 作業或函式時，請使用表單在 `<Q#callable>.simulate(<args>)` `QuantumSimulator()` 目的電腦上執行。 
 
 > [!NOTE]
-> 如果我們想要在不同的電腦上呼叫作業，例如 `ResourceEstimator()` ，我們只會使用 `<Q#callable>.estimate_resources(<args>)` 。
-> 一般而言， Q# 作業與執行所在的機器無關，但某些功能（例如） `DumpMachine` 可能會有不同的行為。
+> 例如，如果我們想要在不同的電腦上呼叫此作業， `ResourceEstimator()` 我們只需要使用 `<Q#callable>.estimate_resources(<args>)` 。
+> 一般情況下， Q# 作業與執行所在的電腦無關，但某些功能（例如） `DumpMachine` 可能會有不同的行為。
 
-4. 執行模擬時，作業呼叫會傳回檔案中所定義的值 Q# 。
-    現在不會傳回任何內容，但稍後我們會看到指派和處理這些值的範例。
-    透過我們手中的結果資料，並以完全傳統的方式進行，我們就可以執行任何想要的動作。
+4. 執行模擬時，操作呼叫會傳回檔案中定義的值 Q# 。
+    現在沒有傳回任何內容，但稍後我們會看到指派和處理這些值的範例。
+    有了結果的資料，我們就可以用它來做任何想要的結果。
 
 您的完整檔案應如下所 `host.py` 示：
 
@@ -300,12 +300,12 @@ from NamespaceQFT import Perform3qubitQFT
 Perform3qubitQFT.simulate()
 ```
 
-執行 Python 檔案，並在您的主控台中列印，您應該會在 `Message` 下方看到和 `DumpMachine` 輸出。 
+執行 Python 檔案，並列印在主控台中，您應該會看到 `Message` `DumpMachine` 下列輸出。 
 
 
 #### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-遵循[安裝指南](xref:microsoft.quantum.install.cs)中的相同指示，建立 c # 主機檔案，並將它重新命名為 `host.cs` 。
+遵循《 [安裝指南》](xref:microsoft.quantum.install.cs)中的相同指示，建立 c # 主機檔案，然後將它重新命名為 `host.cs` 。
 
 C # 主機有四個部分：
 1. 建構量子模擬器。
@@ -316,9 +316,9 @@ C # 主機有四個部分：
     每個作業 Q# 都會產生具有相同名稱的 c # 類別。 
     此類別具有 `Run` 方法，會以**非同步方式**執行作業。
     執行是非同步的，因為實際硬體的執行將是非同步的。 
-    因為 `Run` 方法是非同步，所以我們會呼叫 `Wait()` 方法，這會封鎖執行直到工作完成，並以同步方式傳回結果。 
+    因為此 `Run` 方法是非同步，所以我們會呼叫 `Wait()` 方法; 這會封鎖執行，直到工作完成，並以同步方式傳回結果。 
 4. 處理傳回的作業結果。
-    目前，此作業不會傳回任何內容。
+    目前，作業不會傳回任何內容。
 
 
 ```csharp
@@ -345,7 +345,7 @@ namespace NamespaceQFT
 }
 
 ```
-執行應用程式，您的輸出應該會符合以下的結果。
+執行應用程式，您的輸出應該會符合下面的結果。
 當您按下按鍵後，程式就會結束。
 ***
 
@@ -372,47 +372,47 @@ After:
 |7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
 ```
 
-在完整狀態模擬器上呼叫時，會 `DumpMachine()` 提供量子狀態 wavefunction 的多個標記法。 $N $-qubit 系統的可能狀態可以用 $ 2 ^ n $ 計算基礎狀態表示，每一個都有對應的複雜係數 (只有波幅和一個階段) 。
-計算基礎狀態會對應到長度 $n $---的所有可能二進位字串，也就是 qubit 狀態 $ \ket {0} $ 和 $ \ket $ 的所有可能組合 {1} ，其中每個二進位數位都會對應至個別的 qubit。
+在完整狀態模擬器上呼叫時，會 `DumpMachine()` 提供這些量子狀態 wavefunction 的多重標記法。 $N $-量子位系統的可能狀態可以用 $ 2 ^ n $ 計算基礎狀態表示，每一個都有相對應的複數 (只是一個振幅和一個階段) 。
+計算基礎狀態會對應至長度 $n $---的所有可能二進位字串，也就是量子位狀態 $ \ket {0} $ 和 $ \ket $ 的所有可能組合 {1} ，其中每個二進位數都對應到個別量子位。
 
-第一個資料列會以其重大順序提供批註，其中包含對應 qubits 的識別碼。
-Qubit 是「 `2` 最重要」的意思，就是在基礎狀態向量 $ \ket{i} $ 的二進位標記法中，Qubit 的狀態會 `2` 對應到最左邊的數位。 例如，$ \ket {6} = \ket {110} $ 包含 qubits `2` ，以及 $ `1` \ket {1} $ 和 qubit `0` in $ \ket {0} $。
+第一個資料列會以其重大順序提供批註，內含對應量子位的識別碼。
+量子位是「 `2` 最重要的」，只是表示在基礎狀態向量 $ \ket{i} $ 的二進位標記法中，量子位的狀態 `2` 對應到最左邊的數位。 例如，$ \ket {6} = \ket {110} $ 的組成量子位 `2` ，以及 $ `1` \ket {1} $ 和量子位 `0` in $ \ket {0} $。
 
 
-其餘的資料列會以笛卡和極座標格式來描述測量基礎狀態向量 $ \ket{i} $ 的機率幅度。
-輸入狀態 $ \ket $ 的第一列詳細資料 {000} ：
-* **`|0>:`** 此資料列會對應到 `0` 計算基礎狀態 (假設我們的初始狀態是 $ \ket {000} $，我們預期這是唯一的狀態，也就是在此時間點) 的機率。
-* **`1.000000 +  0.000000 i`**：笛卡爾格式的機率幅度。
-* **` == `**： `equal` 符號會分隔兩個對等的標記法。
-* **`********************`**：大小的圖形表示，的數目與 `*` 測量此狀態向量的機率成正比。 
+其餘的資料列描述測量以笛卡兒和極座標形式測量基礎狀態向量 $ \ket{i} $ 的機率幅度。
+針對輸入狀態 $ \ket $ 的第一列詳細資料 {000} ：
+* **`|0>:`** 此資料列對應于 `0` 計算基礎狀態 (假設我們的初始狀態後置配置為 $ \ket {000} $，則會預期這是具有機率幅度的唯一狀態) 。
+* **`1.000000 +  0.000000 i`**：笛卡兒格式的機率幅度。
+* **` == `**： `equal` 符號會分隔兩個對等的表示。
+* **`********************`**：量值的圖形表示，的數目 `*` 會與測量這個狀態向量的機率成正比。 
 * **`[ 1.000000 ]`**：量值的數值
 * **`    ---`**：振幅階段的圖形表示。
-* **`[ 0.0000 rad ]`**：階段 (的數值（以弧度為單位）) 。
+* **`[ 0.0000 rad ]`**：階段的數值 (弧度) 。
 
-大小和階段都會以圖形標記法顯示。 量值的表示方式很簡單：它會顯示的橫條 `*` ，而機率越高，橫條就越大。 針對階段，請參閱[測試和偵錯工具：](xref:microsoft.quantum.guide.testingdebugging#dump-functions)根據角度範圍的可能符號表示傾印函式。
+大小和階段都會以圖形表示顯示。 量值的表示方式很簡單：它會顯示一個橫條 `*` ，而機率愈高，則會顯示較大的橫條。 針對階段，請參閱 [測試和偵測：](xref:microsoft.quantum.guide.testingdebugging#dump-functions) 根據角度範圍的可能符號表示傾印函數。
 
 
-因此，列印的輸出會說明我們的程式設計閘道已將我們的狀態轉換為
+因此，列印的輸出會說明我們的程式設計閘道將我們的狀態轉換為
 
-$ $ \ket{\psi} \_ {初始值} = \ket {000} $ $
+$ $ \ket{\psi} \_ {初始} = \ket {000} $ $
 
-to 
+至 
 
-$ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left ( \ket {000} + \ket {001} + \ket {010} + \ket {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}，\end{align} $ $
+$ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left ( \ket {000} + \ket {001} + \ket + \ket {010} {011} + \ket {100} + \ket {101} + \ket + \ket {110} {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}，\end{align} $ $
 
-這正是 qubit 傅立葉轉換的行為。 
+這是量子位傅立葉轉換的精確行為。 
 
-如果您想知道其他輸入狀態受到影響的方式，建議您在轉換之前，先套用 qubit 作業。
+如果您對其他輸入狀態的影響有好奇，建議您在轉換之前，先套用量子位作業。
 
-## <a name="adding-measurements"></a>新增測量
+## <a name="adding-measurements"></a>新增度量
 
-可惜的是，配量機制的基石告訴我們，實際的量子系統不能有這種 `DumpMachine` 功能。 相反地，我們會強制透過測量來解壓縮資訊，這通常不會使我們無法提供完整的量子狀態，而且也可以大幅改變系統本身。
-配量測量有許多種，但我們會將焦點放在單一 qubits 上最基本的： projective 測量。
-在特定基礎 (（例如計算基礎 $ \{ \ket {0} 、\ket {1} \} $) ）進行測量時，會將 qubit 狀態投射到測量的任何基礎狀態---因此會摧毀兩者之間的任何重迭。
+可惜的是，量子機制的基石告訴我們，真正的量子系統不能有這類 `DumpMachine` 功能。 相反地，我們會強制透過度量來解壓縮資訊，而這通常不僅無法提供我們完整的量子狀態，還能大幅改變系統本身。
+量子測量有許多種，但我們會將焦點放在單一量子位上最基本的： projective 測量。
+以給定的度量進行測量時 (例如，計算基礎 $ \{ \ket {0} 、\ket {1} \} $) 、量子位狀態會投射到任何測量的基礎狀態---因此會終結兩者之間的任何迭加。
 
-為了在程式內執行測量 Q# ，我們使用 `M` 從傳回類型的 `Microsoft.Quantum.Intrinsic`)  (作業 `Result` 。
+為了在程式內執行度量 Q# ，我們會使用 `M` 從) 傳回類型的作業 (`Microsoft.Quantum.Intrinsic` `Result` 。
 
-首先，我們會修改作業 `Perform3QubitQFT` 以傳回測量結果的陣列， `Result[]` 而不是 `Unit` 。
+首先，我們會修改作業 `Perform3QubitQFT` 來傳回測量結果的陣列， `Result[]` 而不是 `Unit` 。
 
 ```qsharp
     operation Perform3QubitQFT() : Result[] {
@@ -420,13 +420,13 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left ( \ket {
 
 #### <a name="define-and-initialize-result-array"></a>定義和初始化 `Result[]` 陣列
 
-在配置 qubits 之前 (也就是在 `using` 語句) 之前，我們宣告並系結此長度為3的陣列 (`Result` 每個 qubit 的) ： 
+在甚至是配置量子位之前 (也就是在 `using` 語句) 之前，我們會宣告並系結此長度3陣列 (`Result` 每個量子位) 各一個： 
 
 ```qsharp
         mutable resultArray = new Result[3];
 ```
 
-`mutable`關鍵字前面 `resultArray` 允許稍後在程式碼中重新系結變數---例如，新增測量結果時。
+`mutable`關鍵字接下來 `resultArray` 允許稍後在程式碼中重新綁定變數---例如，在新增測量結果時。
 
 #### <a name="perform-measurements-in-a-for-loop-and-add-results-to-array"></a>在迴圈中執行測量 `for` ，並將結果新增至陣列
 
@@ -437,28 +437,28 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left ( \ket {
                 set resultArray w/= i <- M(qs[i]);
             }
 ```
-[`IndexRange`](xref:microsoft.quantum.arrays.indexrange)在陣列上呼叫的函式 (例如我們的 qubits 陣列， `qs`) 會傳回陣列索引上的範圍。 在這裡，我們會在迴圈中使用它 `for` 來依序使用語句來測量每個 qubit `M(qs[i])` 。
-每個測量的 `Result` 型別 (`Zero` 或 `One`) 接著會 `resultArray` 使用 update 和-重新指派語句加入至中的對應索引位置。
+[`IndexRange`](xref:microsoft.quantum.arrays.indexrange)在陣列上呼叫的函式 (例如我們量子位的陣列， `qs`) 傳回陣列索引的範圍。 在這裡，我們會在迴圈中使用它， `for` 以依序使用語句來測量每個量子位 `M(qs[i])` 。
+每個測量的 `Result` 類型 (`Zero` 或 `One`) 接著會 `resultArray` 使用 update 和重新指派語句新增至中的對應索引位置。
 
 > [!NOTE]
-> 這個語句的語法對而言是唯一的 Q# ，但會對應到 `resultArray[i] <- M(qs[i])` 在其他語言（例如 F # 和 R）中所見到的類似變數重新指派。
+> 這個語句的語法對而言是唯一的 Q# ，但是會對應到 `resultArray[i] <- M(qs[i])` 其他語言（例如 F # 和 R）中所看到的類似變數重新指派。
 
 關鍵字 `set` 一律用來重新指派使用系結的變數 `mutable` 。
 
-#### <a name="return-resultarray"></a>退貨`resultArray`
+#### <a name="return-resultarray"></a>返回 `resultArray`
 
-所有三個 qubits 都經過測量並將結果新增至 `resultArray` 之後，我們就可以像之前一樣安全地重設和解除配置 qubits。
-在 `using` 區塊的關閉之後，插入
+所有三個量子位都經過測量，並將結果加入至 `resultArray` 之後，我們就可以安全地重設和解除配置量子位。
+在 `using` 區塊關閉之後，插入
 
 ```qsharp
         return resultArray;
 ```
-最後傳回作業的輸出。 
+最後會傳回作業的輸出。 
 
-### <a name="understanding-the-effects-of-measurement"></a>瞭解測量的效果
+### <a name="understanding-the-effects-of-measurement"></a>瞭解測量的影響
 
-讓我們變更函式的位置 `DumpMachine` ，以輸出測量前後的狀態。
-最後的作業程式碼看起來應該像這樣： 
+讓我們變更函式的位置， `DumpMachine` 以輸出度量前後的狀態。
+最終的作業程式碼看起來應該像這樣： 
 
 ```qsharp
     operation Perform3QubitQFT() : Result[] {
@@ -499,19 +499,19 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left ( \ket {
 }
 ```
 
-如果您是從命令列工作，傳回的陣列只會在執行結束時直接列印到主控台。
-否則，請更新您的主機程式，以處理傳回的陣列。
+如果您是從命令提示字元工作，傳回的陣列只會在執行結束時直接列印到主控台。
+否則，請更新您的主機程式以處理傳回的陣列。
 
-#### <a name="command-line"></a>[命令列](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[命令提示字元](#tab/tabid-cmdline)
 
-若要進一步瞭解將在主控台中列印的傳回陣列，我們可以 `Message` 在檔案中 Q# 的正上方加入另一個 `return` 語句：
+若要更瞭解將在主控台中列印的傳回陣列，我們可以 `Message` 在語句之前的檔案中加入另一個 Q# `return` ：
 
 ```qsharp
         Message("Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
         return resultArray;
 ```
 
-執行專案，您的輸出看起來應該像下面這樣：
+執行專案，您的輸出看起來應該會如下所示：
 
 ```Output
 Before measurement: 
@@ -541,7 +541,7 @@ Post-QFT measurement results [qubit0, qubit1, qubit2]:
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
-將您的 Python 程式更新為下列專案：
+將您的 Python 程式更新為下列內容：
 
 ```python
 import qsharp
@@ -560,7 +560,7 @@ print("Corresponding basis state in binary:")
 print("|" + binaryCompBasisState + ">")
 ```
 
-執行檔案，您的輸出看起來應該像下面這樣：
+執行檔案，您的輸出看起來應該會如下所示：
 
 ```Output
 Before measurement: 
@@ -593,7 +593,7 @@ Corresponding basis state in binary:
 
 #### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-現在，我們的作業會傳回結果，請將方法呼叫取代 `Wait()` 為提取 `Result` 屬性。 這仍然可以達成稍早所討論的相同同步性，而且我們可以直接將此值系結至變數 `measurementResult` 。
+現在，我們的作業會傳回結果，請 `Wait()` 以提取屬性取代方法呼叫 `Result` 。 這仍會完成先前討論過的相同同步性，我們可以直接將此值系結至變數 `measurementResult` 。
 
 ```csharp
 using System;
@@ -637,7 +637,7 @@ namespace NamespaceQFT
 }
 ```
 
-執行專案，您的輸出看起來應該像下面這樣：
+執行專案，您的輸出看起來應該會如下所示：
 
 ```Output
 Before measurement: 
@@ -671,54 +671,54 @@ Press any key to continue...
 ```
 ***
 
-此輸出說明一些不同的事項：
-1. 比較傳回的結果與預先測量 `DumpMachine` ，顯然不會說明 QFT _not_後重迭的基礎狀態。
-    測量只會傳回單一的基礎狀態，其機率取決於系統 wavefunction 中該狀態的振幅。
-2. 從後續測量開始 `DumpMachine` ，我們看到量值會_變更_狀態本身，並將其從初始重迭的基礎狀態投射到對應至測量值的單一基礎狀態。
+此輸出說明一些不同的專案：
+1. 將傳回的結果與預先度量比較 `DumpMachine` ，顯然不會說明_not_ QFT 後迭加的基礎狀態。
+    度量只會傳回單一基礎狀態，並在系統 wavefunction 中以該狀態的波幅決定機率。
+2. 從之後的測量結果 `DumpMachine` ，我們發現測量 _改變_ 了狀態本身，將其從初始迭加的基礎狀態投射到對應至測量值的單一基礎狀態。
 
-如果我們多次重複此作業，我們會看到結果統計資料開始說明 QFT 後狀態的平均加權重迭，讓每個快照的隨機結果增加。
-_不過_，除了效率不佳而且仍然完美，這只會重現基礎狀態的相對 amplitudes，而不是兩者之間的相對階段。
-在此範例中，後者不是問題，但如果 QFT 的輸入比 $ \ket $ 更複雜，我們會看到相對階段出現 {000} 。
+如果我們要重複執行這項作業多次，我們會看到結果統計資料開始說明 QFT 後狀態的平均加權迭加，這會導致每個快照的隨機結果。
+_但是_，除了效率不佳且仍然完美之外，這只會重現基礎狀態的相對 amplitudes，而不是兩者之間的相對階段。
+後者在此範例中並不是問題，但如果提供比 $ \ket $ 更複雜的 QFT 輸入，則會看到相對階段。 {000}
 
-#### <a name="partial-measurements"></a>部分測量 
-若要探索如何只測量暫存器的某些 qubits 可能會影響系統狀態，請嘗試在測量線之後將下列程式碼新增至 `for` 迴圈內：
+#### <a name="partial-measurements"></a>部分度量 
+若要探索如何只測量註冊的部分量子位可能會影響系統的狀態，請嘗試在 `for` 測量線之後，于迴圈內新增下列程式碼：
 ```qsharp
                 let iString = IntAsString(i);
                 Message("After measurement of qubit " + iString + ":");
                 DumpMachine();
 ```
 
-請注意，若要存取函式， `IntAsString` 您必須新增 
+請注意，若要存取函式， `IntAsString` 您將必須新增 
 ```qsharp
     open Microsoft.Quantum.Convert;
 ```
-加上命名空間語句的其餘部分 `open` 。
+以及命名空間語句的其餘部分 `open` 。
 
-在產生的輸出中，您會在測量每個 qubit 時，看到逐漸投射到 subspaces 中。
+在產生的輸出中，您會在測量每個量子位時看到逐步投射至 subspaces。
 
 
 ## <a name="use-the-no-locq-libraries"></a>使用連結 Q# 庫
-如同我們在簡介中所提到的，大部分的電源都可以 Q# 讓您抽象化處理個別 qubits 的擔心。
-事實上，如果您想要開發完整規模、適用的量副程式，請擔心作業是在 `H` 特定旋轉之前或之後才會變慢。 
+如同我們在簡介中所述，大部分的 Q# 功能都能讓您抽象化處理個別的量子位。
+事實上，如果您想要開發全方位、適用的量副程式，請擔心某項作業 `H` 在特定輪替之前或之後是否會變慢。 
 
-連結 Q# 庫包含[QFT](xref:microsoft.quantum.canon.qft)作業，您可以直接採用並申請任何數目的 qubits。
-若要試試看，請在您的檔案中定義 Q# 具有相同內容的新作業 `Perform3QubitQFT` ，但從第一個到的所有內容都是 `H` `SWAP` 由兩個簡單的程式程式碼所取代：
+連結 Q# 庫包含 [QFT](xref:microsoft.quantum.canon.qft) 作業，您可以直接採用並套用至任意數目的量子位。
+若要試試看，請在您的檔案中定義 Q# 具有相同內容的新作業 `Perform3QubitQFT` ，但是從第一個的所有專案，都是 `H` `SWAP` 由兩個簡單的程式碼所取代：
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
 ```
-第一行只 [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) 會建立 qubits 的已配置陣列運算式， `qs` 這就是[QFT](xref:microsoft.quantum.canon.qft)作業做為引數所採用的方式。
-這會對應到註冊中 qubits 的索引順序。
+第一行只 [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) 會建立已配置量子位陣列的運算式， `qs` 這是 [QFT](xref:microsoft.quantum.canon.qft) 作業做為引數所採用的運算式。
+這對應于註冊中量子位的索引順序。
 
-若要存取這些作業，請 `open` 在檔案開頭新增其個別命名空間的語句 Q# ：
+若要存取這些作業，請 `open` 在檔案的開頭新增其各自命名空間的語句 Q# ：
 ```qsharp
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Arithmetic;
 ```
 
-現在，請調整您的主機程式，以呼叫新作業的名稱 (例如 `PerformIntrinsicQFT`) ，並提供 whirl。
+現在，調整您的主機程式以呼叫新作業的名稱 (例如 `PerformIntrinsicQFT`) ，並為其提供 whirl。
 
-若要查看使用程式庫作業的實際優點 Q# ，請將 qubits 數目變更為以外的值 `3` ：
+若要瞭解使用程式庫作業的真正優點 Q# ，請將量子位數目變更為以下以外的值 `3` ：
 ```qsharp
         mutable resultArray = new Result[4]; 
 
@@ -726,9 +726,9 @@ _不過_，除了效率不佳而且仍然完美，這只會重現基礎狀態的
             //...
         }
 ```
-因此，您可以將適當的 QFT 套用到任何指定的 qubits 數目，而不必擔心新 `H` 作業和每個 qubit 的旋轉。
+因此，您可以針對任何指定的量子位數目套用適當的 QFT，而不需要擔心 `H` 每個量子位的新作業和旋轉。
 
-請注意，當您增加---qubits 數目時，配量模擬器會以指數方式執行較長的時間，因為我們會期待到真正的量子硬體。
+請注意，當您增加量子位數目時，量子模擬器會以指數方式執行一次以上的時間，---精確地查看真正的量子硬體！
 
 
 

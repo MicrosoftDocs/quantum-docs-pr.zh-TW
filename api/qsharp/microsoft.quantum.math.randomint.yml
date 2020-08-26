@@ -3,26 +3,23 @@ uid: microsoft.quantum.math.randomint
 name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: 產生大於或等於零且小於所提供上限的已均勻取樣隨機整數。
-remarks: 此函式<xref:microsoft.quantum.intrinsic.random>會呼叫，因此其隨機性取決於的`Random`執行。
+summary: RandomInt 已被取代。 請改用 @"microsoft.quantum.random.drawrandomint"。
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
   types:
   - name: maxInt
-    summary: 一個大於此作業要傳回之最大整數的整數。
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: 從指定的間隔中，隨機地以一致的整數 $x $;也就是，使用 $ \Pr （x） ={1}\Frac {\texttt{maxInt}} $。
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: aacaa92c47492e49544241bd7a47519ce8413fe8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682743"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863523"

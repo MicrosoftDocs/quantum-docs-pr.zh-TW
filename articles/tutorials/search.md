@@ -1,6 +1,6 @@
 ---
-title: 執行 Grover 的搜尋演算法 Q# -量子開發工具組
-description: 建立一個 Q# 專案，以示範 Grover 的演算法，其中一個標準的量子演算法。
+title: 在量子開發工具組中執行格羅弗的搜尋演算法 Q#
+description: 建立一個 Q# 專案，以示範格羅弗的演算法，也就是其中一個標準量子演算法。
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
@@ -9,16 +9,16 @@ uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869659"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863112"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>教學課程：以 Q\# 執行格羅弗搜尋演算法
 
-在本教學課程中，您可以了解如何建立及執行格羅弗搜尋，以加速搜尋非結構化資料。  Grover 的搜尋是其中一個最受歡迎的量子運算演算法，而這個相對較小的 Q# 執行方式可讓您瞭解程式設計配量解決方案的一些優點，並提供高階的 Q# 量副程式設計語言來表達量子演算法。  在本指南最後，您會看到模擬輸出示範了如何在有序項目清單中成功地搜尋特定字串，且花費的時間比古典電腦搜尋所需的少了許多。
+在本教學課程中，您可以了解如何建立及執行格羅弗搜尋，以加速搜尋非結構化資料。  格羅弗的搜尋是最受歡迎的量子運算演算法之一，而這種相對較小的 Q# 實，讓您瞭解使用高階 Q# 量副程式設計語言來表達量子演算法的程式設計量子解決方案的一些優點。  在本指南最後，您會看到模擬輸出示範了如何在有序項目清單中成功地搜尋特定字串，且花費的時間比古典電腦搜尋所需的少了許多。
 
 格羅弗演算法會搜尋特定項目的非結構化資料清單。 例如，它可以回答問題：從一副牌中抽出的這張牌是紅心 A 嗎？ 為特定項目的加上標籤，稱為_標記輸入_。
 
@@ -42,7 +42,7 @@ ms.locfileid: "87869659"
 
 ## <a name="write-the-code"></a>撰寫程式碼
 
-1. 使用量子開發工具組， [ Q# 為命令列應用程式建立新的專案](xref:microsoft.quantum.install.standalone)。 將專案標題命名為 `Grover`。
+1. 使用量子開發工具組， [ Q# 為應用程式建立新專案](xref:microsoft.quantum.install.standalone)。 將專案標題命名為 `Grover`。
 
 1. 將下列程式碼新增至新專案中的 `Program.qs` 檔案：
 
@@ -54,9 +54,9 @@ ms.locfileid: "87869659"
 
     `ReflectAboutMarked` 作業會定義您要搜尋的標記輸入：替代零和一的字串。 此範例會進行標記輸入的硬式編碼，並且可進行擴充以搜尋不同的輸入，或進行一般化以搜尋任何輸入。
 
-1. 接下來，執行您 Q# 的新程式以尋找標記為的專案 `ReflectAboutMarked` 。
+1. 接下來，執行您 Q# 的新程式來尋找標示為的專案 `ReflectAboutMarked` 。
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#具有 Visual Studio 或 Visual Studio Code 的命令列應用程式
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# Visual Studio 或 Visual Studio Code 的應用程式
 
 視專案設定和命令列選項而定，可執行檔將會在模擬器或資源估計工具上執行標記為 `@EntryPoint()` 屬性的作業或函式。
 
@@ -107,7 +107,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>後續步驟
 
-如果您喜歡本教學課程，請參閱下列一些資源，以深入瞭解如何使用 Q# 來撰寫您自己的量子應用程式：
+如果您喜歡本教學課程，請參閱下列資源以深入瞭解如何使用 Q# 來撰寫您自己的量子應用程式：
 
 - [回到 QDK 使用者入門指南](xref:microsoft.quantum.welcome)
 - 試用較一般的格羅弗搜尋演算法[範例](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)

@@ -1,5 +1,5 @@
 ---
-title: 量子機器學習程式庫
+title: 量子機器學習程式庫詞彙
 author: alexeib2
 ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
@@ -8,54 +8,54 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 068fc61d0d7c066df1270384679e13a3b3a8c878
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868894"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863035"
 ---
 # <a name="quantum-machine-learning-glossary"></a>量子 Machine Learning 詞彙
 
-以電路為中心的配量分類器的定型是一種程式，其中有許多移動元件需要相同的 (或稍微大一點的) 校正校準，而錯誤則是傳統分類器的定型。 我們將在此定義此訓練程式的主要概念和要素。
+以電路為中心的量子分類器定型是一種處理常式，其中包含許多需要相同 (或稍微放大) 數量的校正的程式，例如傳統分類器的定型。 我們在這裡定義了此訓練流程的主要概念和要素。
 
-## <a name="trainingtesting-schedules"></a>訓練/測試排程
+## <a name="trainingtesting-schedules"></a>定型/測試排程
 
-在分類器定型*排程*的內容中，會描述整體訓練或測試集中的資料樣本子集。 排程通常會定義為範例索引的集合。
+在分類器定型的內容中， *排程* 會描述整體定型或測試集中的一部分資料樣本。 排程通常定義為範例索引的集合。
 
 ## <a name="parameterbias-scores"></a>參數/偏差分數
 
-假設有候選參數向量和分類偏差，其*驗證分數*會相對於所選的驗證排程來測量，並以排程中所有樣本上的數個 misclassifications 表示。
+假設有一個候選參數向量和分類偏差，其 *驗證分數* 會相對於所選的驗證排程來測量，並以排程 s 中所有範例的情形計數來表示。
 
 ## <a name="hyperparameters"></a>超參數
 
-模型定型程式是由稱為*超參數*的特定預先設定值所控制：
+模型定型程式是由稱為 *超參數*的特定預先設定值所控制：
 
 ### <a name="learning-rate"></a>學習率
 
-它是其中一個重要的超參數。 它會定義目前的隨機漸層估計會對參數更新造成多少影響。 參數更新差異的大小與學習速率成正比。 較小的學習速率值會導致較慢的參數進化和較慢的聚合，但過度大的 LR 值可能會中斷聚合，因為梯度下降永遠不會認可到特定的本機最小數目。 雖然學習速率是由定型演算法在某種程度上進行自我調整調整，但為其選取一個良好的初始值非常重要。 學習速率的一般預設初始值為0.1。 選取最佳的學習速率值是一個不錯的 (，例如，Goodfellow et al 的第4.3 節，「深度學習」，MIT 按下 2017) 。
+這是其中一個關鍵超參數。 它會定義目前的隨機漸層估計影響參數更新的程度。 參數更新差異的大小與學習速率成正比。 較小的學習率值會導致參數演進速度變慢，且聚合速度較慢，但過度大的 LR 值可能會中斷聚合，因為梯度下降永遠不會認可到特定的本機最小值。 雖然定型演算法會以自我調整方式將學習速率調整為某個程度，但為此選取良好的初始值是很重要的。 學習速率的一般預設初始值為0.1。 選取最佳的學習速率值是一種精細的 (請參閱，例如，Goodfellow 的第4.3 節。」、「深度學習」、MIT 按 2017) 。
 
 ### <a name="minibatch-size"></a>迷你批次大小
 
-定義隨機漸層的單一估計使用多少資料樣本。 較大的迷你批次大小值通常會導致更強大且更單純的聚合，但可能會使定型程式變慢，因為任何一個漸層估計的成本會與 minimatch 大小成正比。 迷你批次大小的一般預設值是10。
+定義用於單一隨機漸層估計的資料樣本數。 迷你批次大小較大的值通常會導致更健全且更單純的聚合，但可能會減緩定型程式，因為任何一個漸層估計的成本與 minimatch 的大小成正比。 迷你批次大小的一般預設值為10。
 
 ### <a name="training-epochs-tolerance-gridlocks"></a>訓練 epoch、容錯、gridlocks
 
-「Epoch」表示一次完成排程的定型資料。
-每個定型執行緒的 epoch 數目上限 (見下面) 應為上限。 定型執行緒定義為在執行最大 epoch 數目時，終止具有最佳已知候選參數) 的 (。 不過，當驗證排程的分類誤判速率低於所選的容錯時，這類訓練會提早終止。 例如，假設分類誤判容錯為 0.01 (1% ) ;如果在2000樣本的驗證集上看到的 misclassifications 少於20個，則已達到容錯等級。 如果候選模型的驗證分數尚未顯示 (gridlock) 之數個連續 epoch 的任何改善，訓練執行緒也會提前終止。 Gridlock 終止的邏輯目前已硬式編碼。
+「Epoch」表示經過排程定型資料的一次完成。
+每個定型執行緒的 epoch 數目上限 (請參閱下面) 應該有上限。 定型執行緒的定義是使用最佳的已知候選參數來終止 (，) 在已執行 epoch 數目上限時。 不過，當驗證排程的分類誤判率低於選擇的容錯時，這類訓練會稍早終止。 例如，假設分類誤判容錯為 0.01 (1% ) ;如果在2000範例的驗證集上，我們看到的情形少於20個，則表示已達到容錯層級。 如果候選模型的驗證分數尚未在 gridlock) 的數個連續 (epoch 中顯示任何改進，則定型執行緒也會提前終止。 Gridlock 終止的邏輯目前已硬式編碼。
 
-### <a name="measurements-count"></a>測量計數
+### <a name="measurements-count"></a>度量計數
 
-在配量裝置數量上預估訓練/驗證分數和隨機漸層的元件，以估計需要多次測量適當可預見值的量子狀態重迭。 量值的數目應該調整為 $O (1/\ epsilon ^ 2) $，其中 $ \epsilon $ 是所需的估計錯誤。
-根據經驗法則，初始量測計可能大約是 $ 1/\ .mbox {容錯} ^ 2 $ (請參閱上一個段落) 中的容錯定義。 如果梯度下降變得太不穩定，而且收斂過於難以達成，則需要將測量計數向上修改。
+在量子裝置上估計定型/驗證分數和隨機漸層的元件，以預估需要適當可預見值的多個度量的量子狀態重迭。 度量的數目應調整為 $O (1/\ epsilon ^ 2) $，其中 $ \epsilon $ 是所需的估計錯誤。
+根據經驗法則，初始測量計數可能大約 $ 1/\ .mbox {容錯} ^ 2 $ (查看上一個段落中的容錯定義) 。 如果漸層下降出現太不穩定，而且聚合太難達成，則必須將測量計數向上修改一次。
 
 ### <a name="training-threads"></a>定型執行緒
 
-這是分類器定型公用程式的機率函數非常少使用，這表示它在參數空間中通常會有許多本機 optima，品質可能會有顯著的差異。 由於 SGD 程式只能收斂到一個特定的最佳方式，因此請務必探索多個起始參數向量。 機器學習服務中的常見做法是隨機初始化這類啟動向量。 Q#定型 API 接受這類啟動向量的任意陣列，但基礎程式碼會依序進行探索。 在多核心電腦上，或實際上是在任何平行運算架構上，建議您 Q# 在呼叫之間，使用不同的參數初始化來平行執行數個訓練 API 的呼叫。
+分類器定型公用程式的機率函數很少是凸出，這表示它在參數空間中通常會有許多本機 optima，可能會因為品質而大幅差異。 因為 SGD 程式只可融合到一個特定的最佳，所以請務必流覽多個起始參數向量。 機器學習中的常見作法是隨機初始化這類的起始向量。 Q#定型 API 接受這類起始向量的任意陣列，但基礎程式碼會依序探索它們。 在多核心電腦上，或事實上在任何平行運算架構上，建議您執行數個訓練 API 的呼叫，以 Q# 平行地在呼叫之間進行不同的參數初始化。
 
 #### <a name="how-to-modify-the-hyperparameters"></a>如何修改超參數
 
-在 QML 程式庫中，修改超參數的最佳方式是覆寫 UDT 的預設值 [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions) 。 若要這樣做，我們會使用函式來呼叫它 [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) ，並套用運算子 `w/` 來覆寫預設值。 例如，若要使用100000測量和0.01 的學習率：
+在 QML 程式庫中，修改超參數的最佳方式是覆寫 UDT 的預設值 [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions) 。 若要這樣做，我們會使用函式來呼叫它 [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) ，並套用運算子 `w/` 以覆寫預設值。 例如，若要使用100000測量和0.01 的學習率：
  ```qsharp
 let options = DefaultTrainingOptions()
 w/ LearningRate <- 0.01

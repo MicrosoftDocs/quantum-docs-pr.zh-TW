@@ -3,42 +3,18 @@ uid: microsoft.quantum.canon.assertphase
 name: AssertPhase
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  判斷等重迭狀態的階段具有預期的值。
-
-
-  具體而言，會判斷提示的階段 $ \phi $ 屬於可能以 $ \frac{e ^ {i t}} {\sqrt{2}} （e ^ {i\phi} \ ket{0} + e ^ {-i\phi} \ ket{1}） $ 表示的量子狀態，並具有預期的值。
-examples: >-
-  下列判斷提示成功： `qubit`狀態為 $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ ket{0}+ e ^ {i 0.5} \ sqrt {1/2} \ ket{1}$;
-
-
-  - `AssertPhase(0.0,qubit,10e-10);`
-
-
-  `qubit`處於 state $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ ket{0}+ e ^ {-i 0.5} \ sqrt {1/2} \ ket{1}$;
-
-
-  - `AssertPhase(0.5,qubit,10e-10);`
-
-
-  `qubit`處於 state $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \ ket{0}+ e ^ {i 0.2} \ sqrt {1/2} \ ket{1}$;
-
-
-  - `AssertPhase(-1.2,qubit,10e-10);`
+summary: AssertPhase 已被取代。 請改用 @"microsoft.quantum.diagnostics.assertphase"。
 syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Double, qubit : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: $ \Phi \in （-\pi，\pi] $ 的預期值。
     isPrimitive: true
     uid: Double
   - name: qubit
-    summary: 儲存預期狀態的 qubit。
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: 實際和預期的差異的絕對容錯。
     isPrimitive: true
     uid: Double
 output:
@@ -47,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 17fa383f5fd8e710f8c83920abe0727663506bfb
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674308"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863294"

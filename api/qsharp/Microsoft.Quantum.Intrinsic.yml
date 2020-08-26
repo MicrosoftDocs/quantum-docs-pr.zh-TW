@@ -10,128 +10,123 @@ operations:
 - uid: microsoft.quantum.intrinsic.assertprob
   summary: "\n> [!WARNING]\n> 已被取代\n\nAssertProb 已被取代。 請改用 @\"microsoft.quantum.diagnostics.assertmeasurementprobability\"。"
 - uid: microsoft.quantum.intrinsic.ccnot
-  summary: 將雙重控制– NOT （CCNOT）閘道套用至三個 qubits。
+  summary: 將雙向控制–不 (CCNOT) 閘道套用至三個量子位。
 - uid: microsoft.quantum.intrinsic.cnot
   summary: >-
-    將受控制的 NOT （CNOT-CONTAINS）閘道套用至一對 qubits。
+    將受控制-不 (CNOT) 閘道套用至一對量子位。
 
 
     \begin{align} \operatorname{CNOT} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}，\end{align}
 
 
-    其中，資料列和資料行的排序方式就像在「配量概念指南」中。
+    其中的資料列和資料行會依照量子概念指南中的順序排序。
 - uid: microsoft.quantum.intrinsic.exp
   summary: >-
-    套用多 qubit Pauli 運算子的指數。
+    套用多量子位 Pauli 運算子的指數。
 
 
-    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}，\end{align}，其中 $P _i $ 是的 $i $ th 元素 `paulis` ，其中 $N = $ `Length(paulis)` 。
+    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}，\end{align} where $P _i $ 是 $i $ th 的元素 `paulis` ，而 where $N = $ `Length(paulis)` 。
 - uid: microsoft.quantum.intrinsic.expfrac
   summary: >-
-    以 dyadic 分數所指定的引數，套用多 qubit Pauli 運算子的指數。
+    以 dyadic 分數指定的引數，套用多量子位 Pauli 運算子的指數。
 
 
-    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}，\end{align}，其中 $P _i $ 是的 $i $ th 元素 `paulis` ，其中 $N = $ `Length(paulis)` 。
+    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}，\end{align} where $P _i $ 是的 $i $ th 元素 `paulis` ，其中 $N = $ `Length(paulis)` 。
 - uid: microsoft.quantum.intrinsic.h
   summary: >-
-    將 Hadamard 轉換套用至單一 qubit。
+    將 Hadamard 轉換套用至單一量子位。
 
 
     \begin{align} H \mathrel{： =} \frac {1} {\sqrt {2} } \begin{bmatrix} 1 & 1 \\ \\ 1 &-1 \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.i
-  summary: 在單一 qubit 上執行身分識別作業（無 op）。
+  summary: 在單一量子位上執行 (無 op) 的身分識別作業。
 - uid: microsoft.quantum.intrinsic.m
   summary: >-
-    以 Pauli $Z $ 為單位，執行單一 qubit 的測量。
+    以 Pauli $Z $ 基礎來測量單一量子位。
 
 
-    輸出結果是由散發 \begin{align} \Pr （\texttt{Zero} | \ket{\psi}） = \braket{\psi | 0} \braket{0 | \psi}. 提供
+    輸出結果是由散發 \begin{align} \Pr ( \texttt{Zero} 所提供 |\ket{\psi} ) = \braket{\psi | 0} \braket{0 | \psi}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.measure
   summary: >-
-    在指定的 Pauli 基底中執行一或多個 qubits 的聯合測量。
+    在指定的 Pauli 基底中，執行一或多個量子位的聯合度量。
 
 
-    輸出結果是由散發所提供： \begin{align} \Pr （\texttt{Zero} | \ket{\psi}） = \frac12 \braket{\psi \mid | \left （\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right） \mid | \psi}、\end{align}，其中 $P _i $ 是的 $i $ th 元素 `bases` ，其中 $N = \texttt{Length} （\texttt{bases}） $。
+    輸出結果是由散發： \begin{align} \Pr ( \texttt{Zero} 所提供的：\ket{\psi} ) = \frac12 \braket{\psi \mid | \left ( \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1-1} \right) \mid | \psi}、\end{align}，其中 $P _i $ 是的 $i $ 第一個元素 `bases` ，其中 $N = \texttt{Length} ( \texttt{bases} ) $。
 
-    也就是說，測量結果會傳回 `Result` $d $，讓觀察到的測量效果的 eigenvalue 是 $ （-1） ^ d $。
+    也就是說，測量會傳回 `Result` $d $，讓觀察到的測量效果 eigenvalue 為 $ (-1) ^ d $。
 - uid: microsoft.quantum.intrinsic.r
   summary: >-
     針對指定的 Pauli 軸套用旋轉。
 
 
-    \begin{align} R_ {\mu} （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_ {\mu}/2}，\end{align}，其中 $ \mu \in \{ i，X，Y，Z \} $。
+    \begin{align} R_ {\mu} ( \theta) \mathrel{： =} e ^ {-i \theta \ sigma_ {\mu}/2}，\end{align} where $ \mu \in \{ i，X，Y，Z \} $。
 - uid: microsoft.quantum.intrinsic.r1
   summary: >-
-    依據指定的角度，套用關於 $ \ket {1} $ 狀態的旋轉。
+    根據指定的角度，套用大約 $ \ket {1} $ 狀態的旋轉。
 
 
-    \begin{align} R_1 （\theta） \mathrel{： =} \operatorname{diag} （1，e ^ {i\theta}）。
+    \begin{align} R_1 ( \theta) \mathrel{： =} \operatorname{diag} (1，e ^ {i\theta} ) 。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.r1frac
   summary: >-
-    以指定為 dyadic 分數的角度，套用關於 $ \ket {1} $ 狀態的旋轉。
+    {1}以指定為 dyadic 分數的角度，套用有關 $ \ket $ 狀態的旋轉。
 
 
-    \begin{align} R_1 （n，k） \mathrel{： =} \operatorname{diag} （1，e ^ {i \pi k/2 ^ n}）。
+    \begin{align} R_1 (n，k) \mathrel{： =} \operatorname{diag} (1，e ^ {i \pi k/2 ^ n} ) 。
 
     \end{align}
 
 
     > [!WARNING]
 
-    > 這項作業會使用中的**相反**正負號慣例 @"microsoft.quantum.intrinsic.r" ，而且不包含所包含之 $ 1/2 $ 的因素 @"microsoft.quantum.intrinsic.r1" 。
+    > 這項作業會使用與 **相反** 的正負號慣例 @"microsoft.quantum.intrinsic.r" ，而不包含包含的 $ 1/2 $ 的因素 @"microsoft.quantum.intrinsic.r1" 。
 - uid: microsoft.quantum.intrinsic.random
-  summary: >-
-    隨機作業會採用 double 的陣列做為輸入，並將隨機選取的索引以形式傳回至陣列 `Int` 。
-
-    選取特定索引的機率會與該索引的 array 元素值成正比。
-
-    會忽略等於零的陣列元素，而且永遠不會傳回其索引。 如果任何陣列元素小於零，或如果沒有陣列元素大於零，則作業會失敗。
+  summary: "\n> [!WARNING]\n> 已被取代\n\nRandom 已被取代。 請改用 @\"microsoft.quantum.random.drawcategorical\"。"
 - uid: microsoft.quantum.intrinsic.reset
-  summary: 提供單一 qubit，加以測量並確保其處於 | 0 ⟩狀態，讓它可以安全地發行。
+  summary: 假設有一個量子位，請加以測量，並確保其處於 | 0 ⟩狀態，讓它可以安全地發行。
 - uid: microsoft.quantum.intrinsic.resetall
-  summary: 假設有 qubits 陣列，請加以測量，並確保它們處於 | 0 ⟩狀態，讓它們可以安全地發行。
+  summary: 假設有量子位陣列，請加以測量，並確保它們處於 | 0 ⟩狀態，讓它們可以安全地發行。
 - uid: microsoft.quantum.intrinsic.rfrac
   summary: >-
-    以指定為 dyadic 分數的角度，對指定的 Pauli 軸套用旋轉。
+    使用指定為 dyadic 分數的角度，對指定的 Pauli 軸套用旋轉。
 
 
-    \begin{align} R_ {\mu} （n，k） \mathrel{： =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}，\end{align}，其中 $ \mu \in \{ i，X，Y，Z \} $。
+    \begin{align} R_ {\mu} (n，k) \mathrel{： =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}，\end{align} where $ \mu \in \{ i，X，Y，Z \} $。
 
 
     > [!WARNING]
 
-    > 這種作業會使用的**相反**正負號慣例 @"microsoft.quantum.intrinsic.r" 。
+    > 這種作業會使用與 **相反** 的正負號慣例 @"microsoft.quantum.intrinsic.r" 。
 - uid: microsoft.quantum.intrinsic.rx
-  summary: "依據指定的角度，套用關於 $x $ 軸的旋轉。\n\n\\begin{align} R_x （\\theta） \\mathrel{： =} e ^ {-i \\theta \\ sigma_x/2} = \\begin{bmatrix} \\cos \\frac{\\theta} {2} &-i\\sin \\frac{\\theta} {2} \\\\ \\\\ -i\\sin \\frac{\\theta} {2} & \\cos \\frac{\\theta} {2} \\end{bmatrix}。  \n\\end{align}"
+  summary: "依指定的角度套用 $x $ 軸的旋轉。\n\n\\begin{align} R_x ( \\theta) \\mathrel{： =} e ^ {-i \\theta \\ sigma_x/2} = \\begin{bmatrix} \\cos \\frac{\\theta} {2} &-i\\sin \\frac{\\theta} {2} \\\\ \\\\ -i\\sin \\frac{\\theta} {2} & \\cos \\frac{\\theta} {2} \\end{bmatrix}。  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.ry
-  summary: "依據指定的角度，套用關於 $y $ 軸的旋轉。\n\n\\begin{align} R_y （\\theta） \\mathrel{： =} e ^ {-i \\theta \\ sigma_y/2} = \\begin{bmatrix} \\cos \\frac{\\theta} {2} &-\\sin \\frac{\\theta} {2} \\\\ \\\\ \\sin \\frac{\\theta} {2} & \\cos \\frac{\\theta} {2} \\end{bmatrix}。  \n\\end{align}"
+  summary: "依指定的角度套用 $y $ 軸的旋轉。\n\n\\begin{align} R_y ( \\theta) \\mathrel{： =} e ^ {-i \\theta \\ sigma_y/2} = \\begin{bmatrix} \\cos \\frac{\\theta} {2} &-\\sin \\frac{\\theta} {2} \\\\ \\\\ \\sin \\frac{\\theta} {2} & \\cos \\frac{\\theta} {2} \\end{bmatrix}。  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.rz
   summary: >-
-    依據指定的角度，套用關於 $z $ 軸的旋轉。
+    依指定的角度套用 $z $ 軸的旋轉。
 
 
-    \begin{align} R_z （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \theta/2} \end{bmatrix}。
+    \begin{align} R_z ( \theta) \mathrel{： =} e ^ {-i \theta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \theta/2} \end{bmatrix}。
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.s
-  summary: 將 S 閘道套用至單一 qubit。
+  summary: 將 S 閘道套用至單一量子位。
 - uid: microsoft.quantum.intrinsic.swap
   summary: >-
-    將交換閘道套用至一對 qubits。
+    將交換閘道套用至一對量子位。
 
 
-    \begin{align} \operatorname{SWAP} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 0 & 0 & 1 & 0 0 & \\ \\ \\ \\ 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}，\end{align}
+    \begin{align} \operatorname{SWAP} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}，\end{align}
 
 
-    其中，資料列和資料行的排序方式就像在「配量概念指南」中。
+    其中的資料列和資料行會依照量子概念指南中的順序排序。
 - uid: microsoft.quantum.intrinsic.t
-  summary: 將 T 閘道套用至單一 qubit。
+  summary: 將 T 閘道套用至單一量子位。
 - uid: microsoft.quantum.intrinsic.x
   summary: >-
     套用 Pauli $X $ 閘道。
@@ -157,9 +152,9 @@ operations:
 
     \end{align}
 metadata:
-  ms.openlocfilehash: c0be1da035393f32fa2949214d79ecb8a4c5ccb3
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 87002c73fd66a4b05e690daec1bed37d09708118
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885240"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862715"
