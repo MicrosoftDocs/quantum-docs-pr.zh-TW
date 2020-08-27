@@ -3,14 +3,14 @@ title: 'IQ # 魔術命令'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.topic: article
-ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: d6bf8407e40be092689b38cf90514c88f798cc2f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870697"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862955"
 ---
 # <a name="iq-magic-commands"></a>IQ # 魔術命令
 | 魔術命令 | 摘要 |
@@ -35,7 +35,9 @@ ms.locfileid: "86870697"
 | [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | 列出目前開啟的命名空間及其別名。 |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | 提供載入 NuGet 套件的功能。 |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | 報告此核心的目前效能計量。 |
+| [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project) | 提供可檢視或新增 Q # 專案參考的功能。 |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | 在 QuantumSimulator 目標電腦上執行指定的函式或作業。 |
 | [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | 在 ToffoliSimulator 目標電腦上執行指定的函式或作業。 |
+| [`%trace`](xref:microsoft.quantum.iqsharp.magic-ref.trace) | 視覺化指定作業的執行路徑。 |
 | [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | 列出目前工作階段中可使用的 Q# 作業。 |
 | [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | 提供與目前工作區相關的動作。 |
