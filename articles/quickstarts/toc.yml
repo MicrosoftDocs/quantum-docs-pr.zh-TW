@@ -6,7 +6,7 @@ items:
     items:
       - name: 安裝概觀
         href: index.md
-      - name: 'Q # 命令列應用程式'
+      - name: Q# 應用程式
         href: install-command-line.md
       - name: Q# Jupyter Notebook
         href: install-jupyter.md
