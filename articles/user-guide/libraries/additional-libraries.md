@@ -9,18 +9,18 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 39bf7dc52f4670a6e4536efc437d001c96f9584a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863076"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992134"
 ---
 # <a name="using-additional-no-locq-libraries"></a>使用其他連結 Q# 庫
 
 量子開發工具組透過可新增至專案的 _NuGet 套件_ ，提供額外的網域特定功能 Q# 。
 
-| Q# 圖書館  | Nuget 套件 | 備註 |
+| Q# 圖書館  | Nuget 套件 | 注意 |
 |---------|---------|--------|
 | [Q# 標準程式庫](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft 量子. 標準**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | 預設包含 |
 | [量子化學程式庫](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
@@ -83,7 +83,7 @@ Install-Package Microsoft.Quantum.Numerics
 ## <a name="python-interoperability"></a>[Python 互通性](#tab/tabid-python)
 
 
-您可以使用方法，將其他套件提供給 Python 主機程式使用 [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages) 。
+您可以使用方法，將其他套件提供給 Python 主機程式使用 [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages) 。
 例如，若要新增要在我的筆記本中 [**使用的 node.js 套件**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) Q# ，請執行下列 Python 程式碼：
 
 ```python

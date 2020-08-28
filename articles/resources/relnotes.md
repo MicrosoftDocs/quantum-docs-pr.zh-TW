@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f94c20281c5a242aac6a731a5091264dc2847712
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863757"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992253"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -32,7 +32,7 @@ ms.locfileid: "88863757"
 
 - 新的 [Microsoft 量子命名空間](xref:microsoft.quantum.random)，提供更方便的方式，從程式內取樣隨機值 Q# 。  ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311)， [qsharp-runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328)) 
 - 改進了[具有新作業的 `DumpOperation` ](xref:microsoft.quantum.diagnostics.dumpoperation) [Microsoft 量子. 診斷命名空間](xref:microsoft.quantum.diagnostics)，以及限制量子位配置和 oracle 呼叫的新作業。  ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302)) 
-- Python 中的新[ `%project` 魔術命令](xref:microsoft.quantum.iqsharp.magic-ref.project) Q# 和 Python 中的[ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) ，可支援對 Q# 目前工作區資料夾以外專案的參考。 如需這項功能目前的限制，請參閱 [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) 。 
+- Python 中的新[ `%project` 魔術命令](xref:microsoft.quantum.iqsharp.magic-ref.project) Q# 和 Python 中的[ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) ，可支援對 Q# 目前工作區資料夾以外專案的參考。 如需這項功能目前的限制，請參閱 [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) 。 
 - 支援自動載入 `.csproj` /Python 主機的檔案 Q# ，可讓您在初始化時載入外部專案或封裝參考。 如需詳細資訊，請參閱使用[ Q# Python 和 Jupyter 筆記本](xref:microsoft.quantum.guide.host-programs)的指南。
 - 新增了 ErrorCorrection 的症狀範例。
 - 已將可調式的結合新增至 SimpleIsing。
