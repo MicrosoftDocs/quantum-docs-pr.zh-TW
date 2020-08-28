@@ -6,12 +6,12 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+ms.openlocfilehash: e6ae75ef66a82dd1d0c0b07f52694974e86b4406
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79022521"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992270"
 ---
 # <a name="q-api-reference"></a>Q# API 參考 #
 
@@ -19,6 +19,6 @@ ms.locfileid: "79022521"
 
 - [Q# 程式庫](xref:microsoft.quantum.qsharplibintro)
 - [.NET 程式庫](xref:microsoft.quantum.dotnetlibsintro)
-- [Python 程式庫](https://docs.microsoft.com/python/qsharp)
+- [Python 程式庫](https://docs.microsoft.com/python/qsharp-core/qsharp)
 
 如需 Q# 程式庫的詳細資訊，請參閱 <xref:microsoft.quantum.libraries>。
