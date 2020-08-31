@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867505"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863746"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>開始使用 Quantum Development Kit (QDK)
 
@@ -36,7 +36,7 @@ Quantum 開發套件提供許多方式讓您了解如何使用 Q# 開發量子�
 * [使用 Q# 探索糾纏](xref:microsoft.quantum.write-program) - 此教學課程會引導您撰寫 Q# 程式來示範一些關於量子程式設計的基本概念。
     如果您尚未準備好開始撰寫程式碼，仍可在不安裝 QDK 的情況下繼續，同時大致了解 Q# 程式設計語言和量子運算的首要概念。
 * [格羅弗搜尋演算法](xref:microsoft.quantum.quickstarts.search) - 探索這個 Q# 程式範例，以摘要示範低階量子運算的方式，讓您了解 Q# 在表示量子演算法方面的能力。
-    本教學課程會引導您使用 Visual Studio 或 Visual Studio Code，開發 Q# 命令列應用程式形式的程式。
+    本教學課程會引導您使用 Visual Studio 或 Visual Studio Code，開發 Q# 應用程式形式的程式。
 
 ### <a name="learning-further"></a>進一步了解
 * [適用於量子運算的 Microsoft Learn 模組](https://docs.microsoft.com/learn/browse/?term=quantum)會配合您的速度和排程，傳授您主要的核心概念。 您可以透過我們的[第一個模組](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/)，來了解如何使用 QDK 建立量子程式的基本知識。

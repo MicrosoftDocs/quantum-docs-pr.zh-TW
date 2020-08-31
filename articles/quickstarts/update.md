@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866752"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863650"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>更新 Microsoft Quantum Development Kit (QDK)
 
@@ -37,7 +37,7 @@ ms.locfileid: "87866752"
     dotnet --version
     ```
 
-    確認輸出為 `3.1.100` 或更新版本。 如果不是，請安裝[最新版本](https://dotnet.microsoft.com/download)，然後再檢查一次。 接著，根據您的設定 (Visual Studio、Visual Studio Code 或直接使用命令列) 遵循下列指示進行。
+    確認輸出為 `3.1.100` 或更新版本。 如果不是，請安裝[最新版本](https://dotnet.microsoft.com/download)，然後再檢查一次。 接著，根據您的設定 (Visual Studio、Visual Studio Code 或直接從命令提示字元) 遵循下列指示進行。
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>更新 Visual Studio 中的 Q# 專案
  
@@ -84,9 +84,9 @@ ms.locfileid: "87866752"
 
 1. 在 Visual Studio Code 中，開啟包含所要更新專案的資料夾。
 2. 選取 [終端機] -> [新增終端機]。
-3. 請遵循下列指示 (正下方) 以使用命令列進行更新。
+3. 請遵循下列指示 (正下方) 以使用命令提示字元進行更新。
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>使用命令列更新 Q# 專案
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>使用命令提示字元更新 Q# 專案
 
 1. 瀏覽至包含您主要專案檔的資料夾。
 
@@ -309,7 +309,7 @@ ms.locfileid: "87866752"
 
 1. 更新適用於 .NET 的 Quantum 專案範本
 
-    從命令列：
+    從命令提示字元：
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates

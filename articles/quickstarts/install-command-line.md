@@ -1,5 +1,5 @@
 ---
-title: 使用 Q# 命令列應用程式進行開發
+title: 使用 Q# 應用程式進行開發
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867602"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863653"
 ---
-# <a name="develop-with-no-locq-command-line-applications"></a>使用 Q# 命令列應用程式進行開發
+# <a name="develop-with-no-locq-applications"></a>使用 Q# 應用程式進行開發
 
 Q# 程式可以自行執行，不需要如 C#、F# 或 Python 等主機語言中的驅動程式。
 
@@ -26,7 +26,7 @@ Q# 程式可以自行執行，不需要如 C#、F# 或 Python 等主機語言中
 
 ## <a name="installation"></a>安裝
 
-雖然您可以在任何 IDE 中建立 Q# 命令列應用程式，但建議使用 Visual Studio Code (VS Code) 或 Visual Studio IDE 在本機開發您的 Q# 應用程式。 若要透過網頁瀏覽器在雲端中進行開發，建議使用 Visual Studio Codespaces。 在這些環境中進行的開發將包含 QDK 擴充功能的豐富功能，其中包括警告、語法反白顯示、專案範本等等。 
+雖然您可以在任何 IDE 中建立 Q# 應用程式，但建議使用 Visual Studio Code (VS Code) 或 Visual Studio IDE 在本機開發您的 Q# 應用程式。 若要透過網頁瀏覽器在雲端中進行開發，建議使用 Visual Studio Codespaces。 在這些環境中進行的開發將包含 QDK 擴充功能的豐富功能，其中包括警告、語法反白顯示、專案範本等等。 
 
 若要設定 VS Code：
 
@@ -45,7 +45,7 @@ Q# 程式可以自行執行，不需要如 C#、F# 或 Python 等主機語言中
 3. 您現在可以啟動新的環境，並透過 [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)，在瀏覽器中開始進行開發。 或者，您也可以使用本機安裝的 VS Code，並使用 Codespaces 做為[遠端環境](https://docs.microsoft.com/visualstudio/online/how-to/vscode)。
 
 
-若要為其他環境安裝 QDK，請在命令列中輸入：
+若要為其他環境安裝 QDK，請在命令提示字元中輸入：
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -94,7 +94,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 > [!NOTE]
 > 如果您在一個 Visual Studio 解決方案內放入了多個專案，則解決方案中包含的所有專案必須位於與解決方案相同的資料夾中，或解決方案的其中一個子資料夾中。  
 
-### <a name="other-editors-with-the-command-line"></a>[其他有命令列的編輯器](#tab/tabid-cmdline)
+### <a name="other-editors-with-the-command-prompt"></a>[其他有命令提示字元的編輯器](#tab/tabid-cmdline)
 
 藉由建立 Q# `Hello World` 應用程式來確認您的安裝。
 

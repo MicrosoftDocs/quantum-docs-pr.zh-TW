@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867551"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863681"
 ---
 # <a name="develop-with-no-locq-and-net"></a>使用 Q# 和 .NET 進行開發
 
@@ -25,16 +25,16 @@ Q# 的建置目的是為了能夠與如 C# 和 F# 等 .NET 語法充分配合。
 
 ## <a name="prerequisites"></a>必要條件
 
-- 安裝 Quantum 開發套件以[與 Q# 命令列專案搭配使用](xref:microsoft.quantum.install.standalone)。
+- 安裝 Quantum 開發套件以[與 Q#專案](xref:microsoft.quantum.install.standalone)搭配使用。
 
 ## <a name="creating-a-no-locq-library-and-a-net-host"></a>建立 Q# 程式庫和 .NET 主機
 
 第一個步驟是為您的 Q# 程式庫建立專案，以及為即將呼叫 Q# 程式庫中定義之作業和函式的 .NET 主機建立專案。
 
 依照對應至您開發環境的索引標籤中的指示進行。
-如果您使用 Visual Studio 或 VS Code 以外的編輯器，只要遵循命令列步驟即可。
+如果您使用 Visual Studio 或 VS Code 以外的編輯器，只要遵循命令提示字元步驟即可。
 
-### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code 或命令列](#tab/tabid-cmdline)
+### <a name="visual-studio-code-or-command-prompt"></a>[Visual Studio Code 或命令提示字元](#tab/tabid-cmdline)
 
 - 建立新的 Q# 程式庫
 
@@ -106,4 +106,4 @@ Q# 編譯器會針對每個 Q# 作業和函式建立 .NET 類別，讓您能夠�
     
 ## <a name="next-steps"></a>後續步驟
 
-您已經為 Q# 命令列程式及與 .NET 的互通性設定了 Quantum 開發套件，現在您可以撰寫並執行[您的第一個配量程式](xref:microsoft.quantum.quickstarts.qrng)。
+您已經為 Q# 應用程式和與 .NET 的互通性設定了 Quantum 開發套件，現在您可以撰寫並執行[您的第一個配量程式](xref:microsoft.quantum.quickstarts.qrng)。

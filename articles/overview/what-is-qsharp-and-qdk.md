@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866939"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863783"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# 程式設計語言和 QDK 是什麼？
 
@@ -24,7 +24,7 @@ Q# 是 Microsoft 的開放原始碼程式設計語言，可用來開發和執行
 
 ## <a name="what-can-i-do-with-the-qdk"></a>QDK 有何用途？
 
-QDK 是適用於 Q# 的完整功能開發套件，可與常用的工具和語言搭配使用，以開發可在多種不同環境中執行的量子應用程式。 Q# 程式可作為命令列應用程式來執行、透過 Jupyter Notebook 來執行，也可以使用 Python 或 .NET 主機程式來執行。
+QDK 是適用於 Q# 的完整功能開發套件，可與常用的工具和語言搭配使用，以開發可在多種不同環境中執行的量子應用程式。 Q# 程式可作為主控台應用程式來執行、透過 Jupyter Notebook 來執行，也可以使用 Python 或 .NET 主機程式來執行。
 
 ### <a name="develop-in-common-tools-and-environments"></a>在常見的工具和環境中進行開發
 
@@ -48,7 +48,7 @@ QDK 是適用於 Q# 的完整功能開發套件，可與常用的工具和語言
 
 ## <a name="how-does-no-locq-work"></a>Q# 的運作方式為何？
 
-Q# 程式可以編譯成獨立的命令列應用程式，或由以 Python 或 .NET 語言撰寫的主機程式加以呼叫。
+Q# 程式可以編譯成獨立的應用程式，或由以 Python 或 .NET 語言撰寫的主機程式加以呼叫。
 
 當您編譯和執行程式時，程式會建立量子模擬器的執行個體，並於其中傳入 Q# 程式碼。 模擬器會使用 Q# 程式碼來建立量子位元(模擬量子粒子)，並套用轉換來修改其狀態。 然後，模擬器中的量子運算結果會傳回給程式。  
 
@@ -60,7 +60,7 @@ Q# 程式可以編譯成獨立的命令列應用程式，或由以 Python 或 .N
 
 撰寫和執行 Q# 程式所需的一切資源 (包括 Q# 編譯器、Q# 程式庫和量子模擬器)，都可以從本機電腦安裝及執行。 最終，您將能夠在實際的量子電腦上遠端執行 Q# 程式，但在這之前，QDK 所提供的量子模擬器會提供正確且可靠的結果。
 
-- [從命令列執行 Q#](xref:microsoft.quantum.install.standalone) 是能夠最快開始使用的方式。
+- 開發 [Q# 應用程式](xref:microsoft.quantum.install.standalone) 是開始使用的最快速方式。
 
 - [使用 IQ# 執行獨立的 Jupyter Notebook](xref:microsoft.quantum.install.jupyter)，這是用來編譯和模擬 Q# 程式並將其視覺化的 Jupyter 擴充功能。
 
