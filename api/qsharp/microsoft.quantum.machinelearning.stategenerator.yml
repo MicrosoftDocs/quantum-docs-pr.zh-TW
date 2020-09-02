@@ -2,13 +2,13 @@
 uid: microsoft.quantum.machinelearning.stategenerator
 name: StateGenerator
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
-summary: 描述準備指定的輸入至順序分類器的作業。
+namespace: microsoft.quantum.machinelearning
+summary: 描述準備指定輸入至連續分類器的作業。
 syntax: newtype StateGenerator = (Int, (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl));
 metadata:
-  ms.openlocfilehash: 35e822ecdd1a837058ed0a969be861a2bd0285b2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f5648863bfdda02e868c9163beb619782de353b4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684357"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335592"

@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.littleendian
 name: LittleEndian
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
-summary: 註冊會以位元組由小到大的順序編碼不帶正負號的整數。 具有索引`0`的 qubit 會編碼不帶正負號整數的最低位。
-remarks: 我們在`LittleEndian`檔`LE`中以縮寫。
+namespace: microsoft.quantum.arithmetic
+summary: 以位元組由小到大的順序註冊，將不帶正負號的整數編碼。 具有索引的量子位會 `0` 將不帶正負號整數的最低位編碼。
+remarks: 我們 `LittleEndian` `LE` 將在檔中縮寫。
 syntax: newtype LittleEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: de24c79091da80c2f5e9cbeecc8fe9e4bfb9cb89
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ac8833cad5eb3f8e9f6de66ebb499d33a1361a26
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676828"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342732"

@@ -2,35 +2,35 @@
 uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
 name: IncrementPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  以整數常數執行 qubit 暫存器的模組化增量。
+  以整數常數執行量子位暫存器的模組化增量。
 
 
-  藉由 $y `increment` $，讓我們`modulus`以`target` $a $，$N $ 和 integer 編碼來表示。
+  讓我們以 `increment` $a $）來表示， `modulus` $N $ 和以 $y $ 編碼的整數 `target` 。
 
-  然後，作業會執行下列轉換： \begin{align} \ket{y} \mapsto \ket{（y + a） \operatorname{mod} N} \end{align} 整數會以不限位元組格式的 QFT 為基礎來編碼。
+  然後，此作業會執行下列轉換： \begin{align} \ket{y} \mapsto \ket{ (y + a) \operatorname{mod} N} \end{align} 整數以為基礎的位元組由大到小的格式進行編碼。
 remarks: >-
-  假設`target`已將最高位設定為0。
+  假設 `target` 最大位設定為0。
 
-  也假設 target 的值小於 $N $。
+  也假設目標的值小於 $N $。
 
 
-  如需線路圖表和說明，請參閱[arXiv： quant-ph/0205095V3 第5頁的](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5)[圖 5]。
+  如需電路圖和說明，請參閱 [arXiv： quant-ph/0205095V3 第5頁](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5)上的圖5。
 syntax: 'operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
-    summary: 要加入至 $y $ $a $ 的整數增量。
+    summary: 要加入 $y $ 的整數遞增 $a $。
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: Mods $y + a $ 的整數 $N $。
+    summary: Mods > $y + a $ 的整數 $N $。
     isPrimitive: true
     uid: Int
   - name: target
-    summary: $A $ 新增至的`increment`階段編碼之位元組 $y $ 的整數。
+    summary: 整數 $y $ in 階段編碼的位元組由大到小的格式， `increment` $a $ 新增至。
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92c20afa6753d80a10a38d8c787efab3a295fc2b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676860"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342834"

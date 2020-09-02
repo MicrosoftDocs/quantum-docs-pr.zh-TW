@@ -2,31 +2,31 @@
 uid: microsoft.quantum.machinelearning.partialrotationslayer
 name: PartialRotationsLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: 傳回沿著指定軸的單一 qubit 旋轉陣列，由不同的模型參數參數化。
+namespace: microsoft.quantum.machinelearning
+summary: 傳回以相異模型參數參數化之指定軸的單一量子位旋轉陣列。
 syntax: 'function PartialRotationsLayer (idxsQubits : Int[], axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
 input:
   content: '(idxsQubits : Int[], axis : Pauli)'
   types:
   - name: idxsQubits
-    summary: Qubits 的索引，用來做為每個旋轉的目標。
+    summary: 要當做每個旋轉目標使用之量子位的索引。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: axis
-    summary: 指定圖層中每個旋轉的旋轉軸。
+    summary: 給定圖層中每個旋轉的旋轉軸。
     isPrimitive: true
     uid: Pauli
 output:
   content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
   types:
-  - summary: 關於指定軸的受控制旋轉陣列，每個`nQubits` qubits 各一個。
+  - summary: 特定軸的受控制旋轉陣列，每個量子位都有一個 `nQubits` 。
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: 1dd7b0309f257501119cd6039f16b3913e952950
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9264e2e76aecac2d49bd7e53098fcd19d58294d6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684427"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335779"

@@ -2,22 +2,22 @@
 uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
 name: EvaluateEvenPolynomialFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 以固定點標記法評估偶數多項式。
+namespace: microsoft.quantum.arithmetic
+summary: 在固定點標記法中評估偶數多項式。
 syntax: 'operation EvaluateEvenPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: 做為 double 陣列的「平均」多項式的係數，也就是，陣列 $ [a_0，a_1，...，a_k] $ 代表的是多項式 $P （x） = a_0 + a_1 x ^ 2 + \cdots + a_k x ^ {2k} $。
+    summary: 偶數多項式的係數，例如 double 陣列，也就是陣列 $ [a_0，a_1，...，a_k] $ 表示偶數多項式 $P (x) = a_0 + a_1 x ^ 2 + \cdots + a_k x ^ {2k} $。
     isArray: true
     isPrimitive: true
     uid: Double
   - name: fpx
-    summary: 要評估多項式的輸入固定點數位。
+    summary: 輸入要評估多項式的固定點數位。
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: 輸出固定點數位，將保留 $P （x） $。 一開始必須是 state ${0}\ket $。
+    summary: 輸出將保留 $P (x) $ 的固定點數位。 必須先處於 state $ \ket {0} $。
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: dca40d385ca3f63d40e68db4e5cc8b4031990b9a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2e7e690e50e8cd621d794e8461ebde49c33ee104
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679673"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342885"

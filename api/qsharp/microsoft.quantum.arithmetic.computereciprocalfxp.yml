@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.computereciprocalfxp
 name: ComputeReciprocalFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 針對固定點數位 $x $ 計算 $ 1/x $。
+namespace: microsoft.quantum.arithmetic
+summary: 計算固定點數位 $x $ 的 $ 1/x $。
 syntax: 'operation ComputeReciprocalFxP (x : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(x : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
@@ -12,7 +12,7 @@ input:
     summary: 要反轉的固定點數位。
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: 將保存結果的固定點數位。 必須初始化為 $ \ket{0.0} $。
+    summary: 將保留結果的固定點數位。 必須初始化為 $ \ket{0.0} $。
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -23,9 +23,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 0e83dd761908cf51d4d1a876cd6ca30256e1c1cb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cb49c6e8e0173c7fa601e15ef4052c111067e660
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679740"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342968"
