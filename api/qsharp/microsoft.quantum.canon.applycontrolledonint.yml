@@ -2,21 +2,21 @@
 uid: microsoft.quantum.canon.applycontrolledonint
 name: ApplyControlledOnInt
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 如果控制項暫存器狀態對應至指定的正整數，則在目標暫存器上套用單一作業。
+namespace: microsoft.quantum.canon
+summary: 如果控制項暫存器狀態對應到指定的正整數，則在目標暫存器上套用單一作業。
 remarks: >-
-  的值 `numberState` 是使用以位元組為小的編碼來進行轉譯。
+  的值 `numberState` 是使用位元組由大到小的編碼來解讀。
 
 
-  `numberState`最多必須是 $ 2 ^ \texttt{Length （controlRegister）}-$1。
+  `numberState` 最多隻能有 $ 2 ^ \texttt{Length (controlRegister) }-$1。
 
-  例如， `numberState = 537` 表示 `oracle` 只有 `controlRegister` 在的狀態為 $ \ket $ 時才會套用 {537} 。
+  例如， `numberState = 537` 表示 `oracle` 只有當 `controlRegister` 處於狀態 $ \ket $ 時，才適用 {537} 。
 syntax: "operation ApplyControlledOnInt (numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
 input:
   content: "(numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
   types:
   - name: numberState
-    summary: 應該控制運算的非負整數 `oracle` 。
+    summary: 應控制作業的非負整數 `oracle` 。
     isPrimitive: true
     uid: Int
   - name: oracle
@@ -34,12 +34,12 @@ input:
     - Adjoint
     - Controlled
   - name: controlRegister
-    summary: 控制應用程式的量子註冊 `oracle` 。
+    summary: 控制應用程式的量子暫存器 `oracle` 。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targetRegister
-    summary: 要套用的暫存器 `oracle` 。
+    summary: 要套用的註冊 `oracle` 。
     uid: "'T"
     isLocal: true
 output:
@@ -51,9 +51,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 468886684513035d24b3b4881944f2c18fa65e18
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 00c11c566e74233eeae39b0cefa53f4a8341fcf2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886207"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350756"

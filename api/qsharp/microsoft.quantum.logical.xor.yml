@@ -2,8 +2,8 @@
 uid: microsoft.quantum.logical.xor
 name: Xor
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: 傳回兩個值的布林互斥分離。
+namespace: microsoft.quantum.logical
+summary: 傳回兩個值的布林專屬分隔分離。
 syntax: 'function Xor (a : Bool, b : Bool) : Bool'
 input:
   content: '(a : Bool, b : Bool)'
@@ -19,13 +19,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`只有當`a`和`b`只有一個為時，才`true`為。'
+  - summary: '`true` 只有當和都只有一個時，才 `a` `b` 會 `true` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: de35d7427d3de31e27465319bf8fa96ba2fb9aed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 91046e184cc29b0a8605c61fe0267c6b91968ff0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682843"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345061"

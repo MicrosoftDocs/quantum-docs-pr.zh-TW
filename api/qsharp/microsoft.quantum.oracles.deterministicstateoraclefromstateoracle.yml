@@ -2,31 +2,31 @@
 uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
 name: DeterministicStateOracleFromStateOracle
 type: function
-namespace: Microsoft.Quantum.Oracles
-summary: 將類型`StateOracle`的 oracle 轉換成`DeterministicStateOracle`。
+namespace: microsoft.quantum.oracles
+summary: 將型別的 oracle 轉換 `StateOracle` 為 `DeterministicStateOracle` 。
 syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
 input:
   content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
   types:
   - name: idxFlagQubit
-    summary: '`stateOracle` $A $ 之旗標 qubit 的索引，其明確作用於兩個暫存器：旗標 $f $ 和 system $s $，例如 $A \ket{0}\_f\ket {\ psi}\_s $。'
+    summary: $A $ 之旗標量子位的索引 `stateOracle` ，它會明確地在兩個暫存器上執行：旗標 $f $ 和 system $s $，例如 $A \ket {0} \_ f\ket {\ psi} \_ s $。
     isPrimitive: true
     uid: Int
   - name: stateOracle
-    summary: 準備 oracle $A $ 類型`StateOracle`的狀態。
+    summary: 準備 oracle $A $ 類型的狀態 `StateOracle` 。
     uid: microsoft.quantum.oracles.stateoracle
 output:
   content: Microsoft.Quantum.Oracles.DeterministicStateOracle
   types:
-  - summary: 相同的狀態準備 oracle $A $，但現在屬於類型`DeterministicStateOracle`，因此它會在 $a、s $ 不再明確分隔的暫存器上運作，例如 $A \ket{0\psi}\_{as} $。
+  - summary: Oracle 的相同狀態準備 $A $，但現在的型別是 `DeterministicStateOracle` ，因此它是在 $a 不會再明確分隔的登錄上，例如 $A \ket{0\psi} \_ {as} $。
     uid: microsoft.quantum.oracles.deterministicstateoracle
 seeAlso:
 - microsoft.quantum.canon.stateoracle
 - microsoft.quantum.canon.deterministicstateoracle
 metadata:
-  ms.openlocfilehash: cf6ddc1f1baff27c986f36d944e67192958a0d3f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 20ce22cb90be3f7fd3c135e9dccce4482a3e3939
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681293"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332056"

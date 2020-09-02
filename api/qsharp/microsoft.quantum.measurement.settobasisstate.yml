@@ -2,19 +2,19 @@
 uid: microsoft.quantum.measurement.settobasisstate
 name: SetToBasisState
 type: operation
-namespace: Microsoft.Quantum.Measurement
-summary: 藉由測量 qubit 並視需要套用位翻轉，將 qubit 設定為給定的計算基礎狀態。
-remarks: 做為這項作業的不變數`M(q)` ，在`SetToBasisState(result, q)`之後立即`result`呼叫會傳回。
+namespace: microsoft.quantum.measurement
+summary: 藉由測量量子位並視需要套用位翻轉，將量子位設定為指定的計算基礎狀態。
+remarks: 這項作業的非變異， `M(q)` 會在之後立即呼叫 `SetToBasisState(result, q)` `result` 。
 syntax: 'operation SetToBasisState (desired : Result, target : Qubit) : Unit'
 input:
   content: '(desired : Result, target : Qubit)'
   types:
   - name: desired
-    summary: Qubit 應該設定為的基礎狀態。
+    summary: 應設定量子位的基礎狀態。
     isPrimitive: true
     uid: Result
   - name: target
-    summary: 要設定其狀態的 qubit。
+    summary: 要設定其狀態的量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 002ca4716f0aa57c0ddd4f33d421402c068ad244
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1bd8b8d83ff2bee3dfb1f4a696ddc3b493a2bb82
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681364"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332243"

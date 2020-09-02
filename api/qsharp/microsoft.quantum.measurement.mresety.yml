@@ -2,30 +2,30 @@
 uid: microsoft.quantum.measurement.mresety
 name: MResetY
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: >-
-  以 Y 為單位測量單一 qubit，並在測量之後將它重設為固定的初始狀態。
+  以 Y 為單位測量單一量子位，並將它重設為遵循測量的固定初始狀態。
 
 
-  以 $Y $-基礎執行單一 qubit 測量，並確保 qubit 會在測量之後傳回 $ \ket {0} $。
+  以 $Y $ 基礎執行單一量子位量測，並確保量子位會在測量之後傳回 $ \ket {0} $。
 syntax: 'operation MResetY (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'
   types:
   - name: target
-    summary: 要測量的單一 qubit。
+    summary: 要測量的單一量子位。
     isPrimitive: true
     uid: Qubit
 output:
   content: Result
   types:
-  - summary: '`target`以 Pauli $Y $ 為單位測量的結果。'
+  - summary: '`target`以 Pauli $Y $ 基礎測量的結果。'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 2c177d035a949e700023cf8a89ec0b5d25aac645
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: cb3444eb9857c30088bbbeafd59d8975763a06bc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84327419"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332362"

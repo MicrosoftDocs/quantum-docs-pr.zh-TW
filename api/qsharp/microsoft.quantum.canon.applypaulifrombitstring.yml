@@ -2,28 +2,28 @@
 uid: microsoft.quantum.canon.applypaulifrombitstring
 name: ApplyPauliFromBitString
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 如果布林陣列的對應位符合指定的輸入，則在陣列中的每個 qubit 上套用 Pauli 運算子。
+namespace: microsoft.quantum.canon
+summary: 如果布林值陣列的對應位符合指定的輸入，則在陣列中的每個量子位上套用 Pauli 運算子。
 remarks: 布林陣列和量子暫存器的長度必須相等。
 syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : Unit'
 input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
   types:
   - name: pauli
-    summary: 要套用至`qubits[idx]`其中的 Pauli 運算子`bitsApply == bits[idx]`
+    summary: 要套用至 `qubits[idx]` where 的 Pauli 運算子 `bitsApply == bits[idx]`
     isPrimitive: true
     uid: Pauli
   - name: bitApply
-    summary: 如果 bit 是此值，則套用 Pauli
+    summary: 如果位為此值，則套用 Pauli
     isPrimitive: true
     uid: Bool
   - name: bits
-    summary: 布林值暫存器，指定`qubits`應在其中操作的對應 qubit
+    summary: 布林值暫存器，指定應操作的對應量子位 `qubits`
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: qubits
-    summary: 要選擇性套用指定 Pauli 運算子的量子暫存器
+    summary: 要選擇性地套用指定 Pauli 操作員的量子暫存器
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5a65ec2aae17a1469e820e8cd14a0d50d0639015
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7efea4ea34ee1ae68695aa74142ebf6bce93d289
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672435"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357964"

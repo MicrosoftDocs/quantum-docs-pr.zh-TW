@@ -2,16 +2,16 @@
 uid: microsoft.quantum.canon.applyifa
 name: ApplyIfA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  套用對傳統位進行條件運算的 adjointable 作業。
+  套用以傳統位為條件的 adjointable 運算。
 
 
-  `op`給定作業`bit`和位值， `op` `target`如果`bit`為`true`，則適用于。 如果`false`為，則`target`不會發生任何動作。
+  指定作業 `op` 和位值時 `bit` ， `op` 如果是，則 `target` 會套用至 `bit` `true` 。 如果 `false` 為，則不會發生任何事 `target` 。
 
-  尾碼`A`表示要套用的作業是 adjointable。
+  尾碼 `A` 表示要套用的作業是 adjointable。
 examples: >-
-  以下會將 qubits 的暫存器準備成以指定為值陣列之`Bool`傳統位字串所代表的計算基礎狀態：
+  下列程式會將量子位登錄為計算基礎狀態，並以指定為值陣列的傳統位字串表示 `Bool` ：
 
 
   ```Q#
@@ -30,7 +30,7 @@ input:
   content: "(op : ('T => Unit is Adj), bit : Bool, target : 'T)"
   types:
   - name: op
-    summary: 要有條件地套用的作業。
+    summary: 有條件地套用的作業。
     isOperation: true
     input:
       types:
@@ -43,11 +43,11 @@ input:
     functors:
     - Adjoint
   - name: bit
-    summary: 控制是否套用 op 的布林值。
+    summary: 此為布林值，可控制是否要套用 op。
     isPrimitive: true
     uid: Bool
   - name: target
-    summary: 要對其套用作業的輸入。
+    summary: 要套用作業的輸入。
     uid: "'T"
     isLocal: true
 output:
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: fca10f4a39c8cdc3941d9a7d06e47e1c6dfefa74
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f020deb737a40a8a31284aded74a07b3e79469bf
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676345"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350535"

@@ -2,10 +2,10 @@
 uid: microsoft.quantum.bitwise.rightshiftedl
 name: RightShiftedL
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: 將數位的位表示右移指定的位數。
 remarks: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```Q#
@@ -20,23 +20,23 @@ input:
   content: '(value : BigInt, amount : Int)'
   types:
   - name: value
-    summary: 要向右移位之位表示的數位（較不重要）。
+    summary: 要向右移動位標記法的數位， (較不重要的) 。
     isPrimitive: true
     uid: BigInt
   - name: amount
-    summary: 要向右移位的位數`value` 。
+    summary: 要 `value` 向右移動的位數。
     isPrimitive: true
     uid: Int
 output:
   content: BigInt
   types:
-  - summary: 的值`value`，以`amount`位向右移位。
+  - summary: 的值 `value` ，以位向右移位 `amount` 。
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: c6a61d838141e86d831bb341a1e077927e580dcc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 191feb351e74e0c4cd96992ffb7c5ee499ec16f4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680595"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351096"

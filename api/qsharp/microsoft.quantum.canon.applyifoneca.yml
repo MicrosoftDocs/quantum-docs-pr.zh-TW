@@ -2,24 +2,24 @@
 uid: microsoft.quantum.canon.applyifoneca
 name: ApplyIfOneCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  套用以傳統結果值為一的單一運算。
+  針對傳統結果值套用條件為一的單一作業。
 
 
-  `op`給定作業`result`和結果值， `op` `target`如果`result`為`One`，則適用于。 如果`Zero`為，則`target`不會發生任何動作。
+  指定作業 `op` 和結果值時 `result` ， `op` 如果是，則 `target` 會套用至 `result` `One` 。 如果 `Zero` 為，則不會發生任何事 `target` 。
 
-  尾碼`CA`表示要套用的作業是單一的（可控制和 adjointable）。
+  尾碼 `CA` 表示要套用的作業是單一 (可控制和 adjointable) 。
 syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
   types:
   - name: result
-    summary: 控制是否要套用 op 的測量結果。
+    summary: 控制是否套用 op 的測量結果。
     isPrimitive: true
     uid: Result
   - name: op
-    summary: 要有條件地套用的作業。
+    summary: 有條件地套用的作業。
     isOperation: true
     input:
       types:
@@ -33,7 +33,7 @@ input:
     - Adjoint
     - Controlled
   - name: target
-    summary: 要對其套用作業的輸入。
+    summary: 要套用作業的輸入。
     uid: "'T"
     isLocal: true
 output:
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: f8837e549ec1fc70b76e8151a211c4bf9f71168e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1e4aa4a8b7d4947ee72b322aaccb0b360992f1f9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672640"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358202"

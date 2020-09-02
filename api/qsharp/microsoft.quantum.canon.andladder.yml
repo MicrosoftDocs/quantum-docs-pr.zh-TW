@@ -2,18 +2,18 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  在目標 qubits 的暫存器上執行受控制的「和階梯」。
+  在目標量子位的註冊上執行受控制的「和階梯」。
 
 
-  這項\_作業會套用下列計算基礎對應的轉換： $ $ \begin{align} \ket{x 1、\dots ..、x\_n} \ket{y\_1、\dots ..、y\_{n-1}} \mapsto \ket{x\_1、\dots ..、x\_n} \ket{y\_1 \oplus （x\_1 \land x\_2）、\dots ..，y\_{n-1} \oplus （x\_1 \land x\_2 \land \cdots \land x\_{n-1}}，\end{align} $ $，其中 $ \ket{x\_1，\dots ..，x\_n} $ 是指的計算基礎狀態`controls`，其中 $ \ket{y\_1，\dots ..，y\_{n-1}} $ 是指的計算基礎狀態。 `targets`
+  這項作業會套用依下列計算方式對應的轉換：計算基礎： $ $ \begin{align} \ket{x \_ 1、\dots ..、x \_ n} \ket{y \_ 1、\dots ..、y \_ {n-1}} \mapsto \ket{x \_ 1、\dots ..、x \_ n} \ket{y \_ 1 \oplus (x \_ 1 \land x \_ 2) \dots ..、y \_ {n-1} \oplus (x \_ 1 \land x \_ 2 \land \cdots \land x \_ {n-1}}、\end{align} $ $，其中 $ \ket{x \_ 1、\dots ..、x \_ n} $ 指的是的計算基礎狀態 `controls` ，其中 $ \ket{y \_ 1、\dots ..、y \_ {n-1}} $ 指的是的計算基礎狀態 `targets` 。
 remarks: >-
-  - 當做和<xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca>的一部分使用。
+  - 當做和的一部分使用 <xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca> 。
 
-  - 如需說明和路線圖表，請參閱圖4.10，Nielsen 中的第4.3 節，& Chuang。
+  - 如需說明和電路圖表，請參閱 Nielsen & Chuang 中的圖4.10，第4.3 節。
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
-references: '- [*Michael A. Nielsen、Isaac Chuang*、量子計算和量子資訊](http://doi.org/10.1017/CBO9780511976667)'
+references: '- [*Michael Nielsen、Isaac Chuang*、量子計算和量子資訊](http://doi.org/10.1017/CBO9780511976667)'
 input:
   content: '(ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
   types:
@@ -22,16 +22,16 @@ input:
     uid: microsoft.quantum.canon.ccnotop
   - name: controls
     summary: >-
-      Qubits 的暫存器，用來做為和階梯的控制項。
+      要當做和階梯控制項使用的量子位暫存器。
 
-      這項作業會保留非變異`controls`的計算基礎狀態。
+      這項作業會保留非變異的計算基礎狀態 `controls` 。
 
-      的長度`controls`必須至少為2，且必須等於1加上的長度`targets`。
+      的長度 `controls` 必須至少為2，而且必須等於1加上的長度 `targets` 。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: 的長度`targets`必須至少為1，且等於`controls`減一的長度。
+    summary: 的長度 `targets` 必須至少為1，且長度必須等於 `controls` 減號一。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 194e562588a7ea244b39795ea1c489a07a7fbfba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676401"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350875"
