@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applycnotchainwithtarget
 name: ApplyCNOTChainWithTarget
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  將 qubits 陣列的同位，計算為目標 qubit。
+  將量子位陣列的同位計算為目標量子位。
 
 
-  如果陣列一開始處於 state $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{target}}} $，則最後的狀態是由 $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{target}}} $。
+  如果陣列一開始是處於 state $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{target}}} $，則最終狀態是由 $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{target}}} $。
 remarks: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```qsharp
@@ -19,7 +19,7 @@ remarks: >-
   ```
 
 
-  和
+  及
 
 
   ```qsharp
@@ -32,12 +32,12 @@ input:
   content: '(qubits : Qubit[], targetQubit : Qubit)'
   types:
   - name: qubits
-    summary: 計算同位的 qubits 陣列。
+    summary: 計算同位的量子位陣列。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targetQubit
-    summary: "' Qubits ' 的同位檢查是進行 xor 的最終 qubit。"
+    summary: "' 量子位 ' 的同位檢查進行 xor 的最終量子位。"
     isPrimitive: true
     uid: Qubit
 output:
@@ -49,9 +49,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 631ef98fe43c0c3ca6b5e17ac67e9c9c717dc6d4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 156721c0e5f61dc9761e53d08342cbab3d815e75
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680500"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350790"

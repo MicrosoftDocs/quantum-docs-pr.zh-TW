@@ -2,30 +2,30 @@
 uid: microsoft.quantum.bitwise.zbits
 name: ZBits
 type: function
-namespace: Microsoft.Quantum.Bitwise
-summary: 傳回代表 Pauli 運算子陣列 Z 位的整數。
-remarks: 如果`paulis`陣列的長度大於63，則函式會擲回。
+namespace: microsoft.quantum.bitwise
+summary: 傳回整數，表示 Pauli 運算子陣列的 Z 位。
+remarks: 如果陣列的長度大於63，函數將會擲回 `paulis` 。
 syntax: 'function ZBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
   types:
   - name: paulis
-    summary: 要表示為整數的 Pauli 運算子陣列。
+    summary: Pauli 運算子的陣列，要以整數表示。
     isArray: true
     isPrimitive: true
     uid: Pauli
 output:
   content: Int
   types:
-  - summary: '{62} \,以 binary 表示 $ （p_{61}\,\,p_ \dots .. p_0） $ $x $ 的整數，其中 $p _i = $0 如果`paulis[i]`是`PauliI`或`PauliX` ，而如果`paulis[i]`為`PauliY`或`PauliZ`，則為 $p _i = $1。'
+  - summary: 整數 $x $ 具有二進位表示 $ (p_ {62} \, p_ {61} \, \dots .. \, p_0) $，其中 $p _i = $0，如果 `paulis[i]` 是 `PauliI` 或 `PauliX` ，則為 $p _i = $1 `paulis[i]` `PauliY` `PauliZ` 。
     isPrimitive: true
     uid: Int
 seeAlso:
 - xbits
 metadata:
-  ms.openlocfilehash: d7605a48451292792a97e9049125674c6716780f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 38515f1ad8e6f4a11161f4bea0604a21a61c7546
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676431"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350909"

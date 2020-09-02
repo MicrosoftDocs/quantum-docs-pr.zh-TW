@@ -2,13 +2,13 @@
 uid: microsoft.quantum.logical.or
 name: Or
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 傳回兩個值的布林分離。
 remarks: >-
-  不同于`or`運算子，此函式不會執行最少運算，因此這兩個輸入都會完全評估。
+  與運算子不同的 `or` 是，此函式不會進行較短的運算，因此會完全評估這兩個輸入。
 
 
-  最高的運算行為，以下是相同的：
+  最高的最小運算行為，如下所示：
 
 
   ```Q#
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`只有當`a`或`b`為時，才`true`為。'
+  - summary: '`true` 如果或為，則 `a` 為，否則 `b` 為 `true` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: fb3d62473ec3fd7c40b44bfa919b69d54c5d0218
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e95ecbda0b5a51b7380d77f514af76644689757c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683572"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345078"

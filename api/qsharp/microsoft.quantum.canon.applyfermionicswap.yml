@@ -2,17 +2,17 @@
 uid: microsoft.quantum.canon.applyfermionicswap
 name: ApplyFermionicSWAP
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   套用 Fermionic 交換。
 
 
-  如果兩個 qubits 都是1，則這基本上會交換 qubits，同時套用-1 的全域階段。 會保留 orbitals 的反 symmetrization。
+  這基本上會交換量子位，同時套用-1 的全域階段（如果兩個量子位都是1）。 保留 orbitals 的反 symmetrization。
 
   如需詳細資訊，請參閱。
 
 
-  這項作業\\ \\由單一運算子 \begin{align} f_ {swap} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 0 & 0 & 1 & \\ \\ 0 0 & 1 & \\ \\ 0 & 0 0 & 0 & 0 &-1 \\ \\ \end{bmatrix}。
+  這項作業是以單一運算子 \begin{align} f_ {swap} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 &-1 \\ \\ \end{bmatrix}。
 
   \end{align}
 syntax: 'operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit'
@@ -21,11 +21,11 @@ input:
   content: '(qubit1 : Qubit, qubit2 : Qubit)'
   types:
   - name: qubit1
-    summary: 要交換的第一個 qubit。
+    summary: 要交換的第一個量子位。
     isPrimitive: true
     uid: Qubit
   - name: qubit2
-    summary: 要交換的第二個 qubit。
+    summary: 要交換的第二個量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -39,9 +39,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.swap
 metadata:
-  ms.openlocfilehash: c5e9a825d29bab3fa6b7a89e67f4cf5e40fec6d8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 787fe0283d47c1bbfe1733d3a4ff15624a8c8370
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676372"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350569"

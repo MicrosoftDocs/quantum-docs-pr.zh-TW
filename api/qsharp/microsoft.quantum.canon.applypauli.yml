@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applypauli
 name: ApplyPauli
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 假設有多 qubit 的 Pauli 運算子，則會將對應的作業套用至暫存器。
+namespace: microsoft.quantum.canon
+summary: 假設有多量子位 Pauli 運算子，請將對應的作業套用至暫存器。
 examples: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```qsharp
@@ -15,7 +15,7 @@ examples: >-
   ```
 
 
-  和
+  及
 
 
   ```qsharp
@@ -32,7 +32,7 @@ input:
   content: '(pauli : Pauli[], target : Qubit[])'
   types:
   - name: pauli
-    summary: 以單一 qubit Pauli 運算子陣列表示的多 qubit Pauli 運算子。
+    summary: 多量子位的 Pauli 運算子，以單一量子位 Pauli 運算子的陣列表示。
     isArray: true
     isPrimitive: true
     uid: Pauli
@@ -50,9 +50,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9ea6fb02080e72aadc55111bb71f7031fd852212
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a12fa423f1eb7685581674323197f198827c936e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672453"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357998"

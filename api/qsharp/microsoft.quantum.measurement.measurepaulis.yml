@@ -2,26 +2,26 @@
 uid: microsoft.quantum.measurement.measurepaulis
 name: MeasurePaulis
 type: operation
-namespace: Microsoft.Quantum.Measurement
-summary: 假設有多個 qubit 的 Pauli 運算子陣列，則會使用指定的測量小工具來測量每一個，然後傳回結果的陣列。
+namespace: microsoft.quantum.measurement
+summary: 指定多量子位 Pauli 運算子的陣列時，會使用指定的測量小工具來測量每個運算子，然後傳回結果的陣列。
 syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result)) : Result[]'
 input:
   content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result))'
   types:
   - name: paulis
-    summary: 要測量的多 qubit Pauli 運算子陣列。
+    summary: 要測量的多量子位 Pauli 運算子的陣列。
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Pauli
   - name: target
-    summary: 註冊以測量指定的運算子。
+    summary: 註冊要測量指定運算子的。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: gadget
-    summary: 執行指定多 qubit 運算子測量的運算。
+    summary: 執行指定多量子位運算子測量的作業。
     isOperation: true
     input:
       types:
@@ -38,14 +38,14 @@ input:
 output:
   content: Result[]
   types:
-  - summary: 從測量上`paulis` `target`的每個元素所取得的結果陣列。
+  - summary: 從測量的每個專案所取得的結果 `paulis` 陣列 `target` 。
     isArray: true
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: de1f100a19cda847cfb253fe1dfa01079b9ba676
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 27bb4a6164f8db6a82c1beeb7de1107735870ef0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685184"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332464"

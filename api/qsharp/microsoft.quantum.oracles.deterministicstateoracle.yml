@@ -2,24 +2,24 @@
 uid: microsoft.quantum.oracles.deterministicstateoracle
 name: DeterministicStateOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
-  代表具決定性狀態準備的 oracle。
+  表示 oracle for 決定性狀態準備。
 
 
-  Oracle $O $ 的輸入是：
+  Oracle $O $ 的輸入為：
 
 
-  - 將儲存所需之量子狀態 $ \ket{\psi}\_s $ 的暫存器。
+  - 將儲存所需量子狀態 $ \ket{\psi} \_ s $ 的註冊。
 remarks: >-
-  這個由 $O \ket{0}= \ket{\psi} $ 所定義的 oracle 會在計算基礎狀態 $ \ket{0}$ 上採取行動，以建立 state $ \ket{\psi} $。
+  由 $O \ket = \ket{\psi} $ 定義的 oracle 會 {0} 在 on 計算基礎狀態 $ \ket $ 上採取動作 {0} ，以建立狀態 $ \ket{\psi} $。
 
-  第一個參數是 $ \ket{\psi} $ 的 qubit 暫存器。
+  第一個參數是 $ \ket{\psi} $ 的量子位暫存器。
 syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 35d4b0243fac954c483a81ae1cccb46b44759ca0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 49a8342a6e8a0fcae7a7cdae05967187c98ec34c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681299"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332090"

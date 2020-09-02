@@ -2,34 +2,34 @@
 uid: microsoft.quantum.math.extendedgreatestcommondivisori
 name: ExtendedGreatestCommonDivisorI
 type: function
-namespace: Microsoft.Quantum.Math
-summary: 計算元組 $ （u，v） $，讓 $u \cdot a + v \cdot b = \operatorname{GCD} （a，b） $，其中 $ \operatorname{GCD} $ 是 $a $ 最大公 $a $ 和 $b $ 的除數。 GCD 一律為正數。
+namespace: microsoft.quantum.math
+summary: 計算元組 $ (u，v) $，以 $u \cdot a + v \cdot b = \operatorname{GCD} (a，b) $，其中 $ \operatorname{GCD} $ 是 $a $ 和 $a $ $b $ 最大公因數。 GCD 一律為正數。
 syntax: 'function ExtendedGreatestCommonDivisorI (a : Int, b : Int) : (Int, Int)'
-references: '- 此實作為依據https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
+references: '- 這項實行是根據 https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
 input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    summary: 計算最大的一般除數的第一個數位
+    summary: 要計算的第一個擴充最大公除數
     isPrimitive: true
     uid: Int
   - name: b
-    summary: 計算最大的一般除數的第二個數字
+    summary: 計算最大最大公除數的第二個數字
     isPrimitive: true
     uid: Int
 output:
   content: (Int, Int)
   types:
-  - summary: 元組 $ （u，v） $ 與屬性 $u \cdot a + v \cdot b = \operatorname{GCD} （a，b） $。
+  - summary: 元組 $ (u、v) $ 和屬性 $u \cdot a + v \cdot b = \operatorname{GCD} (a，b) $。
     types:
     - isPrimitive: true
       uid: Int
     - isPrimitive: true
       uid: Int
 metadata:
-  ms.openlocfilehash: f14516b0dc0a6832250df5a9d107514f9345b6db
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3a82b1d99ecaeff6916f55caeb50fbe044539a53
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673851"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344109"

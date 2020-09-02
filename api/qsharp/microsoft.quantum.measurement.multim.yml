@@ -2,14 +2,14 @@
 uid: microsoft.quantum.measurement.multim
 name: MultiM
 type: operation
-namespace: Microsoft.Quantum.Measurement
-summary: 根據標準，測量給定陣列中的每個 qubit。
+namespace: microsoft.quantum.measurement
+summary: 以標準為單位測量指定陣列中的每個量子位。
 syntax: 'operation MultiM (targets : Qubit[]) : Result[]'
 input:
   content: '(targets : Qubit[])'
   types:
   - name: targets
-    summary: 要測量的 qubits 陣列。
+    summary: 要測量的量子位陣列。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -21,9 +21,9 @@ output:
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 97163553f76011a0f4693549c2ca52b0341a35db
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a548bf1a0710ff9729ed7725531e3105e1554339
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681367"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332328"

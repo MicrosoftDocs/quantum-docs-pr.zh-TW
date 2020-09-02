@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.notequalr
 name: NotEqualR
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 只有在兩個輸入不相等時，才會傳回 true。
 remarks: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```Q#
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`只有當`a`不等於時，才為`b`。'
+  - summary: '`true` 如果和 `a` 不等於，則為 `b` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 6316d7dba38c97c32e8e3750f43e46fb8cf0c5df
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 095bba980a64138613fef55ef77b16fe374cabe4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683600"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345146"
