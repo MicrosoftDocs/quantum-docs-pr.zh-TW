@@ -2,13 +2,13 @@
 uid: microsoft.quantum.canon.applytoeachca
 name: ApplyToEachCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  將單一 qubit 作業套用至暫存器中的每個元素。
+  對暫存器中的每個元素套用單一量子位作業。
 
-  修飾`CA`詞表示單一 qubit 作業可控制和 adjointable。
+  修飾詞 `CA` 表示單一量子位作業是可控制且 adjointable 的。
 examples: >-
-  準備三 qubit $ \ket{+} $ 狀態：
+  準備三量子位 $ \ket{+} $ 狀態：
 
 
   ```qsharp
@@ -23,7 +23,7 @@ input:
   content: "(singleElementOperation : ('T => Unit is Adj + Ctl), register : 'T[])"
   types:
   - name: singleElementOperation
-    summary: 要套用至每個 qubit 的作業。
+    summary: 要套用至每個量子位的作業。
     isOperation: true
     input:
       types:
@@ -37,7 +37,7 @@ input:
     - Adjoint
     - Controlled
   - name: register
-    summary: 要套用指定作業的 qubits 陣列。
+    summary: 要套用指定作業的量子位陣列。
     isArray: true
     uid: "'T"
     isLocal: true
@@ -48,16 +48,16 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 作業作用所在的目標。
+  summary: 作業運作的目標。
 functors:
 - Adjoint
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytoeach
 metadata:
-  ms.openlocfilehash: e646e3d27a555d46b7c4a7be41ba41f3d47fdecf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 05399f7d8562b95d9dd1321ee384f10c99d3256c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674884"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357709"

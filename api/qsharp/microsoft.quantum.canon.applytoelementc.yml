@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applytoelementc
 name: ApplyToElementC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   將作業套用至陣列的指定元素。
 
 
-  假設有一個`op`作業、一個`index`索引和一個目標`targets`陣列，就會`op(targets[index])`套用。
+  指定作業 `op` 、索引 `index` 和目標陣列時，就會 `targets` 套用 `op(targets[index])` 。
 syntax: "operation ApplyToElementC (op : ('T => Unit is Ctl), index : Int, targets : 'T[]) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), index : Int, targets : 'T[])"
@@ -48,9 +48,9 @@ seeAlso:
 - microsoft.quantum.canon.applytoelementa
 - microsoft.quantum.canon.applytoelementca
 metadata:
-  ms.openlocfilehash: 40d608d8dd7def5027ade690a7602c25bb287055
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bae0b68f5531da2f4109a8f46978365b88cc57a3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82670020"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357590"

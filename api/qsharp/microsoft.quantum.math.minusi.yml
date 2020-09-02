@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.minusi
 name: MinusI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回兩個輸入之間的差異。
 syntax: 'function MinusI (a : Int, b : Int) : Int'
 input:
@@ -13,19 +13,19 @@ input:
     isPrimitive: true
     uid: Int
   - name: b
-    summary: 要減去的第二個輸入 $b $。
+    summary: 第二個輸入 $b $ 來減去。
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: $A 的差異-b $。
+  - summary: 差異 $a-b $。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 969069896e7dc80aa2aafdb504f264eb9dc931ee
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb2fce992c4dbab19f2f5a083497af80914f7ef5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686722"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343480"

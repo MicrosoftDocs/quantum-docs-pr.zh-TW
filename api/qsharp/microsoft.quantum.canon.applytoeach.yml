@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applytoeach
 name: ApplyToEach
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 將單一 qubit 作業套用至暫存器中的每個元素。
+namespace: microsoft.quantum.canon
+summary: 對暫存器中的每個元素套用單一量子位作業。
 examples: >-
-  準備三 qubit $ \ket{+} $ 狀態：
+  準備三量子位 $ \ket{+} $ 狀態：
 
 
   ```qsharp
@@ -20,7 +20,7 @@ input:
   content: "(singleElementOperation : ('T => Unit), register : 'T[])"
   types:
   - name: singleElementOperation
-    summary: 要套用至每個 qubit 的作業。
+    summary: 要套用至每個量子位的作業。
     isOperation: true
     input:
       types:
@@ -31,7 +31,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: register
-    summary: 要套用指定作業的 qubits 陣列。
+    summary: 要套用指定作業的量子位陣列。
     isArray: true
     uid: "'T"
     isLocal: true
@@ -42,15 +42,15 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 作業作用所在的目標。
+  summary: 作業運作的目標。
 seeAlso:
 - microsoft.quantum.canon.applytoeachc
 - microsoft.quantum.canon.applytoeacha
 - microsoft.quantum.canon.applytoeachca
 metadata:
-  ms.openlocfilehash: 8d04e012f9ee1837b233a7127361027a5bfe7ccd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f3d4df2c31c6315e9b52c686e7800a3593eae4c0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82670819"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357811"

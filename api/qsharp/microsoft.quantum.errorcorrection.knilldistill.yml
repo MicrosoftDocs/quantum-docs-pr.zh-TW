@@ -2,38 +2,38 @@
 uid: microsoft.quantum.errorcorrection.knilldistill
 name: KnillDistill
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
-  執行 Knill 魔術 state 公司演算法。
+  實行 Knill 魔術 state 公司演算法。
 
 
-  針對神奇狀態 $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align} 的15個大約複本，$ $ 會產生一個較高品質的複本。
+  假設有15份魔術州 $ $ \begin{align} \cos\frac{\pi} {8} \ket {0} + \sin \frac{\pi} {8} \ket \end{align} 的複本 {1} ，$ $ 會產生一個較高品質的複本。
 remarks: >-
-  我們會遵循 Knill 的演算法。
+  我們遵循 Knill 演算法。
 
-  不過，目前的執行其實不是最佳的，因為它會使用太多 qubits。
+  不過，目前的執行方式不太理想，因為它使用太多量子位。
 
-  魔術狀態會插入此常式中，在此情況下會有較佳的通訊協定。
+  魔術狀態會插入此常式中，在此情況下會有更好的通訊協定。
 syntax: 'operation KnillDistill (roughMagic : Qubit[]) : Bool'
 references: '- [Knill](https://arxiv.org/abs/quant-ph/0402171)'
 input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: 包含神奇狀態大約複本的十五個 qubits 的暫存器。 遵循此公司程式的應用， `roughMagic[0]`會包含一個較高品質的複本，而註冊的其餘部分將會重設為 $ \ket{00\cdots 0} $ 狀態。
+    summary: 有十五個量子位的暫存器，其中包含魔術州的大約複本。 在此公司程式的應用程式中， `roughMagic[0]` 將會包含一個較高品質的複製，而且註冊程式的其餘部分將會重設為 $ \ket{00\cdots 0} $ 狀態。
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Bool
   types:
-  - summary: 如果`true`為，則程式成功，而且應該接受較高品質的複製。 如果`false`為，則程式會失敗，而且應該將暫存器的狀態視為未定義。
+  - summary: 如果為 `true` ，則程式會成功，且應接受較高品質的複製。 如果為 `false` ，則程式失敗，且暫存器的狀態應視為未定義。
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 979a318e036fbe1585809ce7ba0152b68b4a840e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682352"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350110"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.minuscp
 name: MinusCP
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回兩個輸入之間的差異。
 syntax: 'function MinusCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar'
 input:
@@ -12,17 +12,17 @@ input:
     summary: 要減去的第一個輸入 $a $。
     uid: microsoft.quantum.math.complexpolar
   - name: b
-    summary: 要減去的第二個輸入 $b $。
+    summary: 第二個輸入 $b $ 來減去。
     uid: microsoft.quantum.math.complexpolar
 output:
   content: Microsoft.Quantum.Math.ComplexPolar
   types:
-  - summary: $A 的差異-b $。
+  - summary: 差異 $a-b $。
     uid: microsoft.quantum.math.complexpolar
 metadata:
-  ms.openlocfilehash: 8f211dff61358cbeb3d56d6827523daae2e4315e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c41f1df6b619060a7a536b180eae7e162b4c113c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673582"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343514"

@@ -2,19 +2,19 @@
 uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
 name: BlockEncodingReflectionByLCU
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  將感關注的操作員編碼成`BlockEncodingReflection`。
+  將感興趣的運算子編碼為 `BlockEncodingReflection` 。
 
 
-  這會建立`BlockEncodingReflection`一個單一的 $U = P\cdot V\cdot P ^ \dagger $，將某些運算子編碼 $H = \ sum_ {j} | \ Alpha_j |Unitaries 是線性組合的重要 U_j $。 一般來說，$P $ 是單一狀態{0}\_準備，因此\|$P \ket \ sum_j \sqrt{\ Alpha_j/\vec\Alpha\|\_2} \ket{j}\_a $，以及 $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $。
-remarks: 這個`BlockEncoding`執行會為它提供的屬性`BlockEncodingReflection`。
+  這會建立 `BlockEncodingReflection` 單一 $U = P\cdot V\cdot P ^ \dagger $，以將某些運算子編碼 $H = \ sum_ {j} | \ Alpha_j |Unitaries 的線性組合 U_j $。 一般來說，$P $ 是單一狀態準備，因此 $P \ket {0} \_ a \ sum_j \sqrt{\ Alpha_j/ \| \vec\Alpha \| \_ 2} \ket{j} \_ a $ 和 $V = \ sum_ {j} \ket{j}\bra{j} \_ a\otimes U_j $。
+remarks: 這 `BlockEncoding` 項執行會提供它的屬性 `BlockEncodingReflection` 。
 syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 input:
   content: '(statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl))'
   types:
   - name: statePreparation
-    summary: 準備某些目標狀態的單一 $P $。
+    summary: 單一的 $P $，可準備某個目標狀態。
     isOperation: true
     input:
       types:
@@ -29,7 +29,7 @@ input:
     - Adjoint
     - Controlled
   - name: selector
-    summary: 用來編碼 $H $ 之元件 unitaries 的單一 $V $。
+    summary: 將 $H $ 的元件 unitaries 編碼的單一 $V $。
     isOperation: true
     input:
       types:
@@ -49,15 +49,15 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: 單一 $U $ `a` `s`會共同在暫存器上進行封鎖編碼 $H $，並滿足 $U ' ^{-1} = U $ 的作用。
+  - summary: 單一 $U $ 可共同處理暫存器 `a` ，並 `s` 以區塊編碼 $H $，並且滿足 $U ' ^ {-1} = U $。
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 8fe23d346a09e245d41f2a0c242462b5300561e1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de3a86598d62960d71fa205dc20507fa59cf9cf7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687106"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343395"

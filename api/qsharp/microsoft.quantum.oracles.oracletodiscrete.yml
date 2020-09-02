@@ -2,9 +2,9 @@
 uid: microsoft.quantum.oracles.oracletodiscrete
 name: OracleToDiscrete
 type: function
-namespace: Microsoft.Quantum.Oracles
-summary: 假設有一個代表「黑箱」 oracle 的作業，會傳回代表「黑箱」 oracle 重複多次的「獨立時間」 oracle。
-examples: '`OracleToDiscrete(U)(3, target)`相當於`U(target)`重複三次。'
+namespace: microsoft.quantum.oracles
+summary: 假設有一個代表「黑箱」 oracle 的作業，則會傳回代表「黑箱」 oracle 重複多次的獨立時間 oracle。
+examples: '`OracleToDiscrete(U)(3, target)` 相當於 `U(target)` 重複三次。'
 syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
 input:
   content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
@@ -27,12 +27,12 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.DiscreteOracle
   types:
-  - summary: 部分套用於「黑箱」 oracle 的作業，代表離散化 oracle
+  - summary: 部分套用於 "黑色 box" oracle 的作業，代表獨立時間的 oracle
     uid: microsoft.quantum.oracles.discreteoracle
 metadata:
-  ms.openlocfilehash: b7361693d14245fcb99be5fa36d20d2f332ded0a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3b9cd2ae2554f070e79701c409ad24bc9314e002
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681220"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331920"

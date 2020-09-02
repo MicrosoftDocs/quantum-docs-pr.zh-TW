@@ -2,26 +2,26 @@
 uid: microsoft.quantum.oracles.stateoracle
 name: StateOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
-  表示 oracle 以進行狀態準備。
+  代表 oracle 的狀態準備。
 
 
-  Oracle $O $ 的輸入如下：
+  Oracle $O $ 的輸入包括：
 
 
-  - 索引旗標 qubit $f $ 的整數。
+  - 將旗標量子位 $f $ 索引的整數。
 
-  - 系統會登錄 $s $，以儲存所需的量子狀態 $\_\ket{\psi} s $。
+  - 系統註冊 $s $，將會儲存所需的量子狀態 $ \ket{\psi} \_ s $。
 remarks: >-
-  此 oracle 由 $ ${0}\_O\ket {{0}\_f} \ket s = \lambda\ket{1}\_f\ket {\\_psi} s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，$ $ 作用於計算基礎狀態 $ \ket{0}\_{f} \ket{0}\_s $，以 $\_{1}\_\ket{\psi} f $ 標記的基礎來建立目標狀態 $ \lambda s $ with 波幅 $ \ket $。
+  此 oracle 由 $ $ O\ket {0} \_ {f} \ket {0} \_ s = \lambda\ket {1} \_ f\ket {\ psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket {0} \_ f\cdots 所定義，$ $ 作用於 on 計算基礎狀態 $ \ket {0} \_ {f} \ket {0} \_ s $，以 \_ $ \ket{\psi} {1} f $ 標示的基礎，以振幅 $ \lambda $ 來建立目標狀態 $ \ket s $ \_ 。
 
-  第一個參數是 $ \ket{0}\_f $ 的 qubit 暫存器的索引。 第二個參數同時包含這兩個暫存器。
+  第一個參數是 $ \ket f $ 的量子位暫存器的索引 {0} \_ 。 第二個參數包含這兩個暫存器。
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a303e51638a792fb31ee7cca58bd3662d86897b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673474"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331750"

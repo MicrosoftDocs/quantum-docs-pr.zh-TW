@@ -2,17 +2,17 @@
 uid: microsoft.quantum.canon.applytoeachindexc
 name: ApplyToEachIndexC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  將單一 qubit 作業套用至暫存器中的每個索引元素。
+  將單一量子位作業套用至暫存器中的每個索引元素。
 
-  修飾`C`詞表示單一 qubit 作業是可控制的。
+  修飾詞 `C` 表示單一量子位作業是可控制的。
 syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[])"
   types:
   - name: singleElementOperation
-    summary: 要套用至每個 qubit 的作業。
+    summary: 要套用至每個量子位的作業。
     isOperation: true
     input:
       types:
@@ -27,7 +27,7 @@ input:
     functors:
     - Controlled
   - name: register
-    summary: 要套用指定作業的 qubits 陣列。
+    summary: 要套用指定作業的量子位陣列。
     isArray: true
     uid: "'T"
     isLocal: true
@@ -44,9 +44,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
 metadata:
-  ms.openlocfilehash: 975cefaacf1e8f4fb6e80daf94ad4caecd7adb8d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c386a8d66baf681b85b6641044012c7a384d92a9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674822"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357641"
