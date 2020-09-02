@@ -2,10 +2,10 @@
 uid: microsoft.quantum.synthesis.applytransposition
 name: ApplyTransposition
 type: operation
-namespace: Microsoft.Quantum.Synthesis
-summary: 這項作業會將位於索引的振幅，交換為 `a` `b` 長度為 `register` $n $ 之給定狀態向量中的波幅。  如果 `a` 等於 `b` ，則不會變更狀態向量。
+namespace: microsoft.quantum.synthesis
+summary: 這項作業會以指定的 `a` `b` 狀態向量（長度為 $n $），將索引中的波幅交換至索引的波幅 `register` 。  如果 `a` 等於 `b` ，則不會變更狀態向量。
 examples: >-
-  準備數位狀態 $ | 1 \ rangle $、$ | 2 \ rangle $ 和 $ | 3 \ rangle $ on 2 qubits 的統一重迭。
+  在2量子位上準備數位狀態 $ | 1 \ rangle $、$ | 2 \ rangle $ 和 $ | 3 \ rangle $ 的統一迭加。
 
 
   ```Q#
@@ -22,15 +22,15 @@ input:
   content: '(a : Int, b : Int, qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: a
-    summary: 第一個索引（必須是介於0到 $ 2 ^ n-$1 的值）
+    summary: '第一個索引 (必須是介於0到 $ 2 ^ n-$1 之間的值) '
     isPrimitive: true
     uid: Int
   - name: b
-    summary: 第二個索引（必須是介於0到 $ 2 ^ n-$1 的值）
+    summary: '第二個索引 (必須是介於0到 $ 2 ^ n-$1 之間的值) '
     isPrimitive: true
     uid: Int
   - name: qubits
-    summary: 要對其套用調換的 $n $ qubits 清單。
+    summary: 要套用調換的 $n $ 量子位清單。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: de888c27a7d897492283c7285c6d2d828fe5821b
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: caffae137e4e1fa23ef087c4fbb30179a43dd8c0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886176"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327977"

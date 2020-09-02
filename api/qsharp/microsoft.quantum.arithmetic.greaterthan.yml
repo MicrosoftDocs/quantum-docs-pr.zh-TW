@@ -2,30 +2,30 @@
 uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  在編碼成 qubit 暫存器的兩個整數之間套用大於比較，並根據比較結果來翻轉目標 qubit。
+  在編碼為量子位暫存器的兩個整數之間套用大於比較，並根據比較結果來翻轉目標量子位。
 
 
-  會執行嚴格大於兩個整數 $x $ 和 $y $ 的比較，並在 qubit 中編碼 xs 和 y)。 如果 $x > y $，則結果 qubit 會翻轉，否則結果 qubit 會保留其狀態。
-remarks: 使用 $x-y = （x ' + y） ' $ 的訣竅，其中 ' 代表一個補數。
+  執行嚴格大於兩個整數 $x $ 和 $y $ 的比較，在量子位中編碼的是 xs 和 y) 。 如果 $x > y $，則結果量子位將會翻轉，否則結果量子位將會保留其狀態。
+remarks: 使用 $x-y = (x ' + y) ' $ 的訣竅，其中 ' 代表一補數。
 syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 references: >-
-  - Steven Cuccaro、Thomas g. Draper、Samuel A. Kutin、David Petrie Moulton：「新的量子 ripple-攜帶加法電路」，2004。
+  - Steven Cuccaro、Thomas g. Draper、Samuel A. Kutin、David Petrie Moulton：「新的量子 ripple-攜帶加法電路」、2004。
     https://arxiv.org/abs/quant-ph/0410184v1
 
-  - Thomas Haener，聖馬丁 Roetteler，Krysta M. Svore： "使用具有 Qubits 架構的模組化乘法的 2n + 2 Toffoli 進行分解"，2016https://arxiv.org/abs/1611.07995
+  - Thomas Haener，聖馬丁 Roetteler，Krysta M. Svore： "使用 2n + 2 量子位搭配 Toffoli 型模組化乘法進行分解"，2016 https://arxiv.org/abs/1611.07995
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
   types:
   - name: xs
-    summary: LittleEndian qubit register 會將第一個整數 $x $ 進行編碼。
+    summary: LittleEndian 量子位會將第一個整數的編碼編碼 $x $。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: LittleEndian qubit register 會將第二個整數 $y $ 進行編碼。
+    summary: LittleEndian 量子位會將第二個整數的編碼 $y $。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: 如果 $x > y $，將會翻轉的單一 qubit。
+    summary: 如果 $x > y $，將會翻轉的單一量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 64c96858ea4bf1449a5ddd18f0f7cca45d09fb17
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b6e2a3faab9db052cf77b987e5d7ba1578eb4081
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679604"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341933"

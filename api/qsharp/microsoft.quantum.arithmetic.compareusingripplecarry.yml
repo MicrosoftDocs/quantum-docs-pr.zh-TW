@@ -2,29 +2,29 @@
 uid: microsoft.quantum.arithmetic.compareusingripplecarry
 name: CompareUsingRippleCarry
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  這項作業會測試 qubits 的暫存器所代表的整數是否大於另一個整數，並將結果的 XOR 套用到輸出 qubit。
+  這項作業會測試量子位暫存器所代表的整數是否大於另一個整數，並將結果的 XOR 套用至輸出量子位。
 
 
-  假設有兩`x`個`y`整數，並儲存在大小相等的 qubit 暫存器中，此`x > y`作業會檢查它們是否符合。 如果為 true，則會將1進行 xor 到輸出 qubit。 否則，0會進行 xor 為輸出 qubit。
+  如果有兩個整數， `x` 並 `y` 儲存在大小相同的量子位暫存器中，此作業就會檢查它們是否符合 `x > y` 。 若為 true，則會將1進行 xor 成輸出量子位。 否則，會將0進行 xor 到輸出量子位中。
 
-  換句話說，這項作業可以由單一 $ $ \begin{align} U\ket {x} \ ket {y} \ ket {z} = \ket{x}\ket{y}\ket{z\oplus （x>y）} 表示。
+  換句話說，這項作業可以用單一 $ $ \begin{align} U\ket {x} \ ket {y} \ ket {z} = \ket{x}\ket{y}\ket{z\oplus (x>y) } 來表示。
 
   \end{align} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
-references: '- 新的量子 ripple-包含加法線路 Steven Cuccaro、Thomas g. Draper、Samuel A Kutin、David Petrie Moultonhttps://arxiv.org/abs/quant-ph/0410184'
+references: '- 新的量子 ripple-攜帶加法斷路 Steven A. Cuccaro、Thomas G. Draper、Samuel A. Kutin、David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
 input:
   content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
   types:
   - name: x
-    summary: 要在 qubit 暫存器中以`LittleEndian`格式儲存的第一個數位。
+    summary: 要在量子位暫存器中以格式儲存的第一個數位 `LittleEndian` 。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: y
-    summary: 要在 qubit 暫存器中以`LittleEndian`格式儲存的第二個數字。
+    summary: 要在量子位暫存器中以格式儲存的第二個數字 `LittleEndian` 。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: output
-    summary: Qubit 會將比較的結果儲存 $x>y $。
+    summary: 儲存比較 $x 結果>y $ 的量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 08cff4d874060fce0b461c7eeadfdcadf6fa1453
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 374b1611c7bf34f11ab8a8c3f11fad951e288565
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679766"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327364"

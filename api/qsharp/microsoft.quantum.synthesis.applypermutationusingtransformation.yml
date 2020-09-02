@@ -2,19 +2,19 @@
 uid: microsoft.quantum.synthesis.applypermutationusingtransformation
 name: ApplyPermutationUsingTransformation
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: >-
-  使用以轉換為基礎的合成，以配量狀態 Permutes amplitudes。
+  使用以轉換為基礎的合成排列，在量子狀態中 Permutes amplitudes。
 
 
-  此程式會執行單向轉換型合成方法。  輸入是排列 $ \pi $ over $ 2 ^ n $ 元素 $ \{ 0，\dots ..，2 ^ n-1 \} $，代表 $n $-可變的可還原布耳函數。
+  此程式會實行單向轉換型合成方法。  輸入是一個排列 $ \pi $ over $ 2 ^ n $ elements $ \{ 0，\dots ..，2 ^ n-1 \} $，代表 $n $-variable 可還原的布耳函數。
 
-  此演算法會反復執行下列步驟：
+  演算法會反復執行下列步驟：
 
 
-  1. 尋找最小的 $x $，$x \ne \pi （x） = y $。
+  1. 尋找最小的 $x $，$x \ne \pi (x) = y $。
 
-  2. 尋找多個控制的 Toffoli 作業，其套用至輸出會使 $ \pi （x） = x $，且不會變更所有 $x ' < x $ 的 $ \pi （x '） $
+  2. 尋找多個控制的 Toffoli 作業（套用至輸出）會將 $ \pi (x) = x $，而不會變更所有 $x ' < x $ 的 $ \pi (x ' ) $
 examples: >-
   若要合成作業 `SWAP` ：
 
@@ -28,19 +28,19 @@ examples: >-
   ```
 syntax: 'operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
-  - [*D. Michael 莎莎*、 *Dmitri Maslov*、 *GERHARD Dueck*、Proc、DAC 2003、IEEE、pp 318-323、2003](https://doi.org/10.1145/775832.775915)
+  - [*D. Michael 莎莎*、 *Dmitri Maslov*、 *GERHARD Dueck*、Proc. DAC 2003、IEEE、pp 318-323、2003](https://doi.org/10.1145/775832.775915)
 
-  - [*Mathias Soeken*， *Gerhard Dueck*， *d. MICHAEL 莎莎*，Proc. RC 2016，springer link，pp 307-321，2016](https://doi.org/10.1007/978-3-319-40578-0_22)
+  - [*Mathias Soeken*、 *Gerhard Dueck*、 *d. Michael 莎莎*、Proc 2016、springer link、pp 307-321、2016](https://doi.org/10.1007/978-3-319-40578-0_22)
 input:
   content: '(perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: perm
-    summary: 從0開始，$ 2 ^ n $ 元素的排列。
+    summary: 從0開始的 $ 2 ^ n $ 元素排列。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: qubits
-    summary: 套用排列的 $n $ qubits 清單。
+    summary: 套用排列之 $n $ 量子位的清單。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -53,9 +53,9 @@ functors:
 seeAlso:
 - microsoft.quantum.synthesis.applypermutationusingdecomposition
 metadata:
-  ms.openlocfilehash: e611197ba2fbfc0271c17664acc23b4de2c90ff6
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: e69a5924fc2f0ba46b3764d0cd7619dc78332bd6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886177"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328010"

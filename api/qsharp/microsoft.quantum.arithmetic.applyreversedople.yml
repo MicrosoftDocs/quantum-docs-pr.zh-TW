@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.applyreversedople
 name: ApplyReversedOpLE
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 套用一個作業，此作業會使用位元組由大到小的輸入來編碼不帶正負號整數的暫存器。
+namespace: microsoft.quantum.arithmetic
+summary: 使用位元組由大到小的格式，將採用位元組由小到大輸入的作業套用至暫存器編碼的不帶正負號的整數。
 syntax: 'operation ApplyReversedOpLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), register : Microsoft.Quantum.Arithmetic.BigEndian)'
   types:
   - name: op
-    summary: 作用於以小序暫存器為依據的運算。
+    summary: 以位元組由小到大的暫存器為運算的作業。
     isOperation: true
     input:
       types:
@@ -31,9 +31,9 @@ seeAlso:
 - applyreversedoplec
 - applyreversedopleca
 metadata:
-  ms.openlocfilehash: b4931d4f0b17be8511a0dace00ef11b9b790ddf7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 15f31689744f4ac5cc12466f0720032f981c83fd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679971"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327551"

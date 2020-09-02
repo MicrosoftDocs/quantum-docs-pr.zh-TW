@@ -2,28 +2,28 @@
 uid: microsoft.quantum.amplitudeamplification.standardamplitudeamplification
 name: StandardAmplitudeAmplification
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: 標準振幅放大演算法
-remarks: '`AmpAmpPhasesStandard`這是由假設 \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ text {target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，所計算之反映階段的選擇所取得的標準振幅放大演算法。 \end{align} 這項作業會在大部分{0}\_情況下準備狀態{0}\_\begin{align} \operatorname{AmpAmpByOracle}\ket {f} \ket s = \sin （（{-1}2n + 1） \sin{1}\_^ （\lambda）） \ket f\ket {\_\ text {{0}\_target}} s + \cdots\ket `flagQubit` f `auxiliaryRegister` \end{align}，並以 state $ \ket{0}\_f\ket{0}\_a $ 初始化。'
+remarks: '這是藉由 `AmpAmpPhasesStandard` 假設 \Begin{align} A\ket {0} \_ {f} \ket {0} \_ s = \lambda\ket {1} \_ f\ket {\ text {target}} s + \sqrt{1-| \lambda | ^ 2} \ket f\cdots，所計算的一系列反映階段所取得的標準幅度放大演算法 \_ {0} \_ \end{align} 這項作業會在大部分情況下準備狀態 \begin{align} \Operatorname{AmpAmpByOracle}\ket {0} \_ {f} \ket {0} \_ s = \Sin ( # B1 2n + 1) \sin ^ {-1} ( \lambda) # A5\ket {1} \_ f\ket {\ text {target}} \_ s + \cdots\ket {0} \_ f \end{align}， `flagQubit` 並且在 `auxiliaryRegister` 狀態 $ \ket {0} \_ f\ket {0} \_ a $ 中初始化。'
 syntax: 'function StandardAmplitudeAmplification (nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
-references: '- [*G. Brassard，Hoyer，Mosca，Tapp*](https://arxiv.org/abs/quant-ph/0005055)'
+references: '- [*G. Brassard、Hoyer、Mosca、Tapp*](https://arxiv.org/abs/quant-ph/0005055)'
 input:
   content: '(nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
   types:
   - name: nIterations
-    summary: $n $ 的次數放大的反復專案數
+    summary: $n $ of 振幅放大的反覆運算次數
     isPrimitive: true
     uid: Int
   - name: stateOracle
     uid: microsoft.quantum.oracles.stateoracle
   - name: idxFlagQubit
-    summary: Qubit 旗標的索引
+    summary: 索引至旗標量子位
     isPrimitive: true
     uid: Int
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: 執行標準振幅放大配量演算法的作業
+  - summary: 實作為標準振幅放大量子演算法的作業
     isOperation: true
     input:
       types:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 0fc7ceb390a64ce6224a084147207663d96c3b75
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f78b541045b309403387962128a3cfda3290cade
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676920"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341865"

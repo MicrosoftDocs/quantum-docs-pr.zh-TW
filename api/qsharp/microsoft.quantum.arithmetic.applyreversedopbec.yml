@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.applyreversedopbec
 name: ApplyReversedOpBEC
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 將接受以大到小的輸入的作業套用至暫存器，並使用位元組由小到大的格式來編碼不帶正負號的整數。
+namespace: microsoft.quantum.arithmetic
+summary: 使用位元組由大到小的格式，將採用位元組由小到大輸入的作業套用至暫存器編碼的不帶正負號的整數。
 syntax: 'operation ApplyReversedOpBEC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: op
-    summary: 在以大到小的暫存器上運作的作業。
+    summary: 在位元組由大到小的暫存器上運作的作業。
     isOperation: true
     input:
       types:
@@ -21,7 +21,7 @@ input:
     functors:
     - Controlled
   - name: register
-    summary: 要轉換的小序暫存器。
+    summary: 要轉換的位元組由大到小的暫存器。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -35,9 +35,9 @@ seeAlso:
 - applyreversedopbea
 - applyreversedopbeca
 metadata:
-  ms.openlocfilehash: 60a66cbd19c01611d2c751fbb606074ffaa3a4c0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b2cd2d53f3edc21e73c9d60c0f2fb5ec462369c5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675263"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327619"

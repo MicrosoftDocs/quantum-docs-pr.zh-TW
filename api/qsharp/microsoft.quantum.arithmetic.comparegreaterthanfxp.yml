@@ -2,21 +2,21 @@
 uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
 name: CompareGreaterThanFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: 比較儲存在量子暫存器中的兩個固定點數位，並控制結果的翻轉。
-remarks: 目前的執行需要兩個固定點數位具有相同的點位置和相同的 qubits 數目。
+remarks: 目前的執行需要兩個固定點數位具有相同的點位置和相同的量子位數目。
 syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit)'
   types:
   - name: fp1
-    summary: 要比較的第一個定點數位。
+    summary: 要比較的第一個固定點數位。
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: fp2
     summary: 要比較的第二個固定點數位。
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: 比較的結果。 如果`fp1 > fp2`為，則會翻轉。
+    summary: 比較的結果。 如果為，則會翻轉 `fp1 > fp2` 。
     isPrimitive: true
     uid: Qubit
 output:
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 851baa02ebf746966b5534a96f1c1bc285632bc2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 68b23de42a62a20d33cc713649df8714706dc592
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679807"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327401"
