@@ -1,31 +1,31 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
-summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含 Q # 核心函數和作業。\n\n # <a name=\"remarks\"></a>備註\n 這個命名空間會由 Q # 編譯器自動開啟，因此，此命名空間的所有元素一律可供使用。"
+summary: " # <a name=\"summary\"></a>摘要\n 此命名空間包含 Q # 核心函數和作業。\n\n # <a name=\"remarks\"></a>備註\n 此命名空間會由 Q # 編譯器自動開啟，因此，此命名空間的所有元素一律可供使用。"
 functions:
 - uid: microsoft.quantum.core.default
   summary: 傳回指定類型的預設實例。
 - uid: microsoft.quantum.core.length
   summary: 傳回陣列中的元素數目。
 - uid: microsoft.quantum.core.rangeend
-  summary: 傳回指定範圍的已定義結束值，這不一定是序列中的最後一個元素。
+  summary: 傳回指定範圍的定義結束值，這不一定是序列中的最後一個元素。
 - uid: microsoft.quantum.core.rangereverse
   summary: 傳回新的範圍，這是輸入範圍的反向。
 - uid: microsoft.quantum.core.rangestart
-  summary: 傳回指定範圍的已定義起始值。
+  summary: 傳回指定範圍的已定義開始值。
 - uid: microsoft.quantum.core.rangestep
-  summary: 傳回整數，指定如何計算範圍的下一個值。
+  summary: 傳回整數，這個整數會指定如何計算範圍的下一個值。
 newtypes:
 - uid: microsoft.quantum.core.attribute
-  summary: 編譯器可辨識的屬性，用來將使用者定義類型標記為屬性。
+  summary: 編譯器可辨識的屬性，可用來將使用者自訂類型標示為屬性。
 - uid: microsoft.quantum.core.deprecated
-  summary: 編譯器可辨識的屬性，用來將類型標記為已被取代。
+  summary: 編譯器可辨識的屬性，可用來將類型或可呼叫標記為已被取代。
 - uid: microsoft.quantum.core.entrypoint
-  summary: 編譯器辨識的屬性，用來標記可執行檔的進入點。
+  summary: 編譯器可辨識的屬性，可用來標記可執行檔的進入點。
 metadata:
-  ms.openlocfilehash: 7533708473cff8902745ed67c235244ea9b2234b
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 354a8e2c221007f27ff409dc4b75b0d5953d9f67
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885260"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341253"

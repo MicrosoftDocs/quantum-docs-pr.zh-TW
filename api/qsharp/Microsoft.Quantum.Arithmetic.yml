@@ -1,51 +1,51 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arithmetic
 name: Microsoft.Quantum.Arithmetic
-summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含用於 coherently 計算算術的函式和作業。"
+summary: " # <a name=\"summary\"></a>摘要\n 此命名空間包含用於時計算算術的函式和作業。"
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
-  summary: 藉 `BigEndian` `LittleEndian` 由反轉 qubit 順序，將 qubit 暫存器轉換成 qubit 暫存器。
+  summary: 藉 `BigEndian` `LittleEndian` 由反轉量子位順序，將量子位暫存器轉換成量子位暫存器。
 - uid: microsoft.quantum.arithmetic.identicalformatfactfxp
-  summary: 判斷所提供陣列中的所有固定點數位具有相同的點位置和 qubit 數位。
+  summary: 判斷提供的陣列中的所有固定點數位都有相同的點位置和量子位數位。
 - uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
-  summary: 判斷所提供陣列中的所有固定點數位在從最小有效位進行計數時，具有相同的點位置。 亦即，陣列中所有固定點數位的位數減去點位置的數目必須是常數。
+  summary: 判斷出所提供陣列中的所有固定點數位在從最小的位元數目時，都有相同的點位置。 亦即，陣列中所有固定點數位的位數減去點位置的位數必須是常數。
 - uid: microsoft.quantum.arithmetic.littleendianasbigendian
-  summary: 藉 `LittleEndian` `BigEndian` 由反轉 qubit 順序，將 qubit 暫存器轉換成 qubit 暫存器。
+  summary: 藉 `LittleEndian` `BigEndian` 由反轉量子位順序，將量子位暫存器轉換成量子位暫存器。
 - uid: microsoft.quantum.arithmetic.reversedopbe
-  summary: 假設有一個接受以大至小的輸入的作業，則會傳回接受以位元組為序輸入的新作業。
+  summary: 假設有一個使用位元組由大到小的輸入，則會傳回採用位元組由小到大輸入的新作業。
 - uid: microsoft.quantum.arithmetic.reversedopbea
-  summary: 假設有一個接受以大至小的輸入的作業，則會傳回接受以位元組為序輸入的新作業。
+  summary: 假設有一個使用位元組由大到小的輸入，則會傳回採用位元組由小到大輸入的新作業。
 - uid: microsoft.quantum.arithmetic.reversedopbec
-  summary: 假設有一個接受以大至小的輸入的作業，則會傳回接受以位元組為序輸入的新作業。
+  summary: 假設有一個使用位元組由大到小的輸入，則會傳回採用位元組由小到大輸入的新作業。
 - uid: microsoft.quantum.arithmetic.reversedopbeca
-  summary: 假設有一個接受以大至小的輸入的作業，則會傳回接受以位元組為序輸入的新作業。
+  summary: 假設有一個使用位元組由大到小的輸入，則會傳回採用位元組由小到大輸入的新作業。
 - uid: microsoft.quantum.arithmetic.reversedople
-  summary: 假設有一個接受以位元組由小到大的輸入的作業，則會傳回接受以大至小的輸入的新作業。
+  summary: 假設有一個作業採用位元組由小到大的輸入，則會傳回採用位元組由大到小的輸入的新作業。
 - uid: microsoft.quantum.arithmetic.reversedoplea
-  summary: 假設有一個接受以位元組由小到大的輸入的作業，則會傳回接受以大至小的輸入的新作業。
+  summary: 假設有一個作業採用位元組由小到大的輸入，則會傳回採用位元組由大到小的輸入的新作業。
 - uid: microsoft.quantum.arithmetic.reversedoplec
-  summary: 假設有一個接受以位元組由小到大的輸入的作業，則會傳回接受以大至小的輸入的新作業。
+  summary: 假設有一個作業採用位元組由小到大的輸入，則會傳回採用位元組由大到小的輸入的新作業。
 - uid: microsoft.quantum.arithmetic.reversedopleca
-  summary: 假設有一個接受以位元組由小到大的輸入的作業，則會傳回接受以大至小的輸入的新作業。
+  summary: 假設有一個作業採用位元組由小到大的輸入，則會傳回採用位元組由大到小的輸入的新作業。
 operations:
 - uid: microsoft.quantum.arithmetic.addconstantfxp
-  summary: 將傳統常數新增至量子固定點數位。
+  summary: 將傳統常數加入量子固定點數位。
 - uid: microsoft.quantum.arithmetic.addfxp
-  summary: 加入儲存在配量暫存器中的兩個固定點數位。
+  summary: 新增儲存在量子暫存器中的兩個固定點數位。
 - uid: microsoft.quantum.arithmetic.addi
-  summary: 視的暫存器大小而定，自動選擇 [包含] 和 [無] 的加法 `ys` 。
+  summary: 視的註冊大小而定，自動選擇 [包含] 或 [無] `ys` 。
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
-  summary: 在類型的目標暫存器上套用接受暫存器 <xref:microsoft.quantum.arithmetic.phaselittleendian> 做為輸入的作業 <xref:microsoft.quantum.arithmetic.littleendian> 。
+  summary: 在類型的目標暫存器 <xref:microsoft.quantum.arithmetic.phaselittleendian> 上套用接受註冊作為輸入的作業 <xref:microsoft.quantum.arithmetic.littleendian> 。
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
-  summary: 在類型的目標暫存器上套用接受暫存器 <xref:microsoft.quantum.arithmetic.phaselittleendian> 做為輸入的作業 <xref:microsoft.quantum.arithmetic.littleendian> 。
+  summary: 在類型的目標暫存器 <xref:microsoft.quantum.arithmetic.phaselittleendian> 上套用接受註冊作為輸入的作業 <xref:microsoft.quantum.arithmetic.littleendian> 。
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
-  summary: 在類型的目標暫存器上套用接受暫存器 <xref:microsoft.quantum.arithmetic.phaselittleendian> 做為輸入的作業 <xref:microsoft.quantum.arithmetic.littleendian> 。
+  summary: 在類型的目標暫存器 <xref:microsoft.quantum.arithmetic.phaselittleendian> 上套用接受註冊作為輸入的作業 <xref:microsoft.quantum.arithmetic.littleendian> 。
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
-  summary: 在類型的目標暫存器上套用接受暫存器 <xref:microsoft.quantum.arithmetic.phaselittleendian> 做為輸入的作業 <xref:microsoft.quantum.arithmetic.littleendian> 。
+  summary: 在類型的目標暫存器 <xref:microsoft.quantum.arithmetic.phaselittleendian> 上套用接受註冊作為輸入的作業 <xref:microsoft.quantum.arithmetic.littleendian> 。
 - uid: microsoft.quantum.arithmetic.applymajorityinplace
-  summary: 將三 qubit 多數作業放在 qubits 的暫存器上。
+  summary: 在量子位的註冊上就地套用三個量子位的多數作業。
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
-  summary: 在類型的目標暫存器上套用接受暫存器 <xref:microsoft.quantum.arithmetic.littleendian> 做為輸入的作業 <xref:microsoft.quantum.arithmetic.phaselittleendian> 。
+  summary: 在類型的目標暫存器 <xref:microsoft.quantum.arithmetic.littleendian> 上套用接受註冊作為輸入的作業 <xref:microsoft.quantum.arithmetic.phaselittleendian> 。
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
   summary: ''
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
@@ -53,33 +53,33 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonleca
   summary: ''
 - uid: microsoft.quantum.arithmetic.applyreversedopbe
-  summary: 將接受以大到小的輸入的作業套用至暫存器，並使用位元組由小到大的格式來編碼不帶正負號的整數。
+  summary: 使用位元組由大到小的格式，將採用位元組由小到大輸入的作業套用至暫存器編碼的不帶正負號的整數。
 - uid: microsoft.quantum.arithmetic.applyreversedopbea
-  summary: 將接受以大到小的輸入的作業套用至暫存器，並使用位元組由小到大的格式來編碼不帶正負號的整數。
+  summary: 使用位元組由大到小的格式，將採用位元組由小到大輸入的作業套用至暫存器編碼的不帶正負號的整數。
 - uid: microsoft.quantum.arithmetic.applyreversedopbec
-  summary: 將接受以大到小的輸入的作業套用至暫存器，並使用位元組由小到大的格式來編碼不帶正負號的整數。
+  summary: 使用位元組由大到小的格式，將採用位元組由小到大輸入的作業套用至暫存器編碼的不帶正負號的整數。
 - uid: microsoft.quantum.arithmetic.applyreversedopbeca
-  summary: 將接受以大到小的輸入的作業套用至暫存器，並使用位元組由小到大的格式來編碼不帶正負號的整數。
+  summary: 使用位元組由大到小的格式，將採用位元組由小到大輸入的作業套用至暫存器編碼的不帶正負號的整數。
 - uid: microsoft.quantum.arithmetic.applyreversedople
-  summary: 套用一個作業，此作業會使用位元組由大到小的輸入來編碼不帶正負號整數的暫存器。
+  summary: 使用位元組由大到小的格式，將採用位元組由小到大輸入的作業套用至暫存器編碼的不帶正負號的整數。
 - uid: microsoft.quantum.arithmetic.applyreversedoplea
-  summary: 套用一個作業，此作業會使用位元組由大到小的輸入來編碼不帶正負號整數的暫存器。
+  summary: 使用位元組由大到小的格式，將採用位元組由小到大輸入的作業套用至暫存器編碼的不帶正負號的整數。
 - uid: microsoft.quantum.arithmetic.applyreversedoplec
-  summary: 套用一個作業，此作業會使用位元組由大到小的輸入來編碼不帶正負號整數的暫存器。
+  summary: 使用位元組由大到小的格式，將採用位元組由小到大輸入的作業套用至暫存器編碼的不帶正負號的整數。
 - uid: microsoft.quantum.arithmetic.applyreversedopleca
-  summary: 套用一個作業，此作業會使用位元組由大到小的輸入來編碼不帶正負號整數的暫存器。
+  summary: 使用位元組由大到小的格式，將採用位元組由小到大輸入的作業套用至暫存器編碼的不帶正負號的整數。
 - uid: microsoft.quantum.arithmetic.applyxorinplace
-  summary: 在傳統整數與 qubits 的暫存器所代表的整數之間套用位 XOR 運算。
+  summary: 在傳統整數與量子位暫存器所代表的整數之間套用位 XOR 運算。
 - uid: microsoft.quantum.arithmetic.assertallzerofxp
-  summary: Helper 函式，用來判斷量子固定點數位已初始化為零，亦即，所有 qubits 都處於 state $ \ket {0} $。
+  summary: Helper 函式，用來判斷量子固定點數位會初始化為零，也就是所有的量子位都處於 state $ \ket {0} $。
 - uid: microsoft.quantum.arithmetic.assertmostsignificantbit
-  summary: 判斷代表不帶正負號整數的 qubit 暫存器最重要的 qubit 處於特定狀態。
+  summary: 判斷提示代表不帶正負號的整數之量子位暫存器最重要的量子位處於特定狀態。
 - uid: microsoft.quantum.arithmetic.assertphaselessthan
-  summary: '`number`在 PhaseLittleEndian 中編碼的判斷提示小於 `value` 。'
+  summary: 判斷提示 `number` 中編碼的 PhaseLittleEndian 小於 `value` 。
 - uid: microsoft.quantum.arithmetic.assertprobint
   summary: 判斷量子暫存器特定狀態的機率具有預期的值。
 - uid: microsoft.quantum.arithmetic.carry
-  summary: 會執行可還原的「包含」閘道。 假設在 qubit 中編碼的執行位 `carryIn` ，以及在和中編碼的兩個被加數位 `summand1` `summand2` ，會計算的位 xor `carryIn` ， `summand1` 而 `summand2` 在 qubit 中 `summand2` 的執行中則會進行 xor 至 qubit `carryOut` 。
+  summary: 會執行可還原的執行閘道。 給定量子位中編碼的執行位 `carryIn` 和在和中編碼的兩個被加數位 `summand1` `summand2` ，會計算中的位 xor `carryIn` ， `summand1` 而 `summand2` 在量子位中則 `summand2` 會進行 xor 至量子位 `carryOut` 。
 - uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
   summary: 比較儲存在量子暫存器中的兩個固定點數位，並控制結果的翻轉。
 - uid: microsoft.quantum.arithmetic.comparegti
@@ -87,96 +87,96 @@ operations:
 - uid: microsoft.quantum.arithmetic.comparegtsi
   summary: 帶正負號整數比較的包裝函式： `result = xs > ys` 。
 - uid: microsoft.quantum.arithmetic.compareusingripplecarry
-  summary: 這項作業會測試 qubits 的暫存器所代表的整數是否大於另一個整數，並將結果的 XOR 套用到輸出 qubit。
+  summary: 這項作業會測試量子位暫存器所代表的整數是否大於另一個整數，並將結果的 XOR 套用至輸出量子位。
 - uid: microsoft.quantum.arithmetic.computereciprocalfxp
-  summary: 針對固定點數位 $x $ 計算 $ 1/x $。
+  summary: 計算固定點數位 $x $ 的 $ 1/x $。
 - uid: microsoft.quantum.arithmetic.computereciprocali
-  summary: 使用整數除法計算不帶正負號整數 x 的倒數 1/x。 以整數形式轉譯的結果會是 `floor(2^(2*n-1) / x)` 。
+  summary: 使用整數除法計算不帶正負號整數 x 的倒數 1/x。 結果（以整數來解讀）將會是 `floor(2^(2*n-1) / x)` 。
 - uid: microsoft.quantum.arithmetic.copymostsignificantbit
-  summary: 將代表不帶正負號整數之 qubit 暫存器的最高有效位複製 `from` 到 qubit 中 `target` 。
+  summary: 將代表不帶正負號整數的量子位暫存器最重要的位複製 `from` 到量子位中 `target` 。
 - uid: microsoft.quantum.arithmetic.dividei
   summary: 將兩個量子整數相除。
 - uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
-  summary: 以固定點標記法評估偶數多項式。
+  summary: 在固定點標記法中評估偶數多項式。
 - uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
-  summary: 以固定點標記法評估奇多項式。
+  summary: 評估固定點標記法中的奇多項式。
 - uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
-  summary: 以固定點標記法評估多項式。
+  summary: 在固定點標記法中評估多項式。
 - uid: microsoft.quantum.arithmetic.greaterthan
-  summary: 在編碼成 qubit 暫存器的兩個整數之間套用大於比較，並根據比較結果來翻轉目標 qubit。
+  summary: 在編碼為量子位暫存器的兩個整數之間套用大於比較，並根據比較結果來翻轉目標量子位。
 - uid: microsoft.quantum.arithmetic.incrementbyinteger
-  summary: 使用階段旋轉，將不帶正負號的量子暫存器遞增為傳統整數。
+  summary: 使用階段旋轉，以傳統整數遞增未簽署的量子暫存器。
 - uid: microsoft.quantum.arithmetic.incrementbymodularinteger
-  summary: 以整數常數執行 qubit 暫存器的模組化增量。
+  summary: 以整數常數執行量子位暫存器的模組化增量。
 - uid: microsoft.quantum.arithmetic.incrementphasebyinteger
-  summary: 使用階段旋轉，將不帶正負號的量子暫存器遞增為傳統整數。
+  summary: 使用階段旋轉，以傳統整數遞增未簽署的量子暫存器。
 - uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
-  summary: 以整數常數執行 qubit 暫存器的模組化增量。
+  summary: 以整數常數執行量子位暫存器的模組化增量。
 - uid: microsoft.quantum.arithmetic.invert2ssi
-  summary: 反轉給定整數模數2的補數。
+  summary: 反轉指定的整數模數2的補數。
 - uid: microsoft.quantum.arithmetic.maj
-  summary: 這會將就地多數作業套用至 3 qubits。
+  summary: 這會將就地操作的大部分作業套用至3量子位。
 - uid: microsoft.quantum.arithmetic.measurefxp
-  summary: 測量固定點數位，以 Double 形式傳回其值，並將所有暫存器重設為零。
+  summary: 測量固定點數位、將其值以 Double 傳回，然後將所有的暫存器重設為零。
 - uid: microsoft.quantum.arithmetic.measureinteger
-  summary: 測量量子暫存器的內容，並將它轉換成整數。 測量是以標準計算為基礎來執行，亦即 eigenbasis `PauliZ` 。
+  summary: 測量量子暫存器的內容，並將它轉換成整數。 測量是以標準計算為基礎來執行，亦即，的 eigenbasis `PauliZ` 。
 - uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
-  summary: 在 qubit 暫存器上執行以整數常數進行模組化的乘法和 add。
+  summary: 在量子位暫存器上，以整數常數執行模組化乘法和 add。
 - uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
-  summary: 與 MultiplyAndAddByModularInteger 相同，但會假設被加數會以 QFT 為基礎來編碼整數。
+  summary: 與 MultiplyAndAddByModularInteger 相同，但假設被加數會以 QFT 為基礎來編碼整數。
 - uid: microsoft.quantum.arithmetic.multiplybymodularinteger
-  summary: 在 qubit 暫存器上以整數常數執行模組化乘法。
+  summary: 在量子位暫存器上以整數常數執行模組化乘法。
 - uid: microsoft.quantum.arithmetic.multiplyfxp
   summary: 將量子暫存器中的兩個固定點數位相乘。
 - uid: microsoft.quantum.arithmetic.multiplyi
-  summary: 將整數乘以 `xs` 整數 `ys` ，並將結果儲存在中 `result` ，其一開始必須為零。
+  summary: 將整數乘以 `xs` 整數 `ys` 並將結果儲存在中 `result` ，這一開始必須是零。
 - uid: microsoft.quantum.arithmetic.multiplysi
-  summary: 以帶正負號的整數將帶正負號的整數相乘， `xs` `ys` 並將結果儲存在中 `result` ，這必須是一開始。
+  summary: 將帶正負號的整數乘以 `xs` 帶正負號的整數 `ys` ，並將結果儲存在中 `result` ，這一開始必須是零。
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: 將量子固定點數位初始化為傳統常數。
 - uid: microsoft.quantum.arithmetic.reflectaboutinteger
   summary: 反映指定之傳統整數的量子暫存器。
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
-  summary: 可還原的就地 ripple-加入兩個整數。
+  summary: 可還原的就地 ripple-包含兩個整數的加法。
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
   summary: >-
-    可還原的就地 ripple-加入兩個整數。
+    可還原的就地 ripple-包含兩個整數的加法。
 
-    假設在 LittleEndian 中編碼的兩個 $n $ bit `xs` 整數 `ys` 會註冊和，而 qubit 包含，則作業會計算兩個整數的總和，其中會保留結果的 $n $ 最低位， `ys` 而執行位則是進行 xor 至 qubit `carry` 。
+    假設有兩個 $n $ bit 整數編碼在 LittleEndian 暫存器中 `xs` `ys` ，而且量子位包含，則作業會計算兩個整數的總和，其中會保留結果的 $n $ 最低有效位數 `ys` ，而執行時位會進行 xor 至量子位 `carry` 。
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
-  summary: 可還原的就地 ripple-在不執行的情況下加入兩個整數。
+  summary: 可反轉的就地 ripple-在不執行的情況下，加入兩個整數。
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: >-
-    可還原的就地 ripple-加入兩個整數。
+    可還原的就地 ripple-包含兩個整數的加法。
 
-    假設在 LittleEndian 中編碼的兩個 $n $ bit `xs` 整數 `ys` 會註冊和，而 qubit 包含，則作業會計算兩個整數的總和，其中會保留結果的 $n $ 最低位， `ys` 而執行位則是進行 xor 至 qubit `carry` 。
+    假設有兩個 $n $ bit 整數編碼在 LittleEndian 暫存器中 `xs` `ys` ，而且量子位包含，則作業會計算兩個整數的總和，其中會保留結果的 $n $ 最低有效位數 `ys` ，而執行時位會進行 xor 至量子位 `carry` 。
 - uid: microsoft.quantum.arithmetic.squarefxp
   summary: 將固定點數位的平方。
 - uid: microsoft.quantum.arithmetic.squarei
-  summary: 將整數的平方計算 `xs` 為 `result` ，其一開始必須為零。
+  summary: 將整數的平方計算 `xs` 為 `result` ，一開始必須為零。
 - uid: microsoft.quantum.arithmetic.squaresi
-  summary: 方形帶正負號的整數， `xs` 並將結果儲存在中 `result` ，其一開始必須為零。
+  summary: 以方形帶正負號 `xs` 的整數，並將結果儲存在中 `result` ，這一開始必須是零。
 - uid: microsoft.quantum.arithmetic.sum
-  summary: 執行可還原的總和閘道。 假設在 qubit 中編碼的執行位 `carryIn` ，以及在和中編碼的兩個被加數位 `summand1` ，會 `summand2` `carryIn` `summand1` `summand2` 在 qubit 中計算和的位 xor `summand2` 。
+  summary: 實行可還原的總和閘道。 給定量子位中編碼的執行位 `carryIn` 和在和中編碼的兩個被加數位時 `summand1` ，會 `summand2` `carryIn` `summand1` `summand2` 在量子位中計算的位 xor 和 `summand2` 。
 newtypes:
 - uid: microsoft.quantum.arithmetic.bigendian
-  summary: 註冊會以位元組由大到小的順序來編碼不帶正負號的整數。 具有索引的 qubit 會 `0` 將不帶正負號整數的最高位編碼。
+  summary: 以位元組由大到小的順序註冊，將不帶正負號的整數編碼。 具有索引的量子位會 `0` 將不帶正負號整數的最高位編碼。
 - uid: microsoft.quantum.arithmetic.fixedpoint
-  summary: 代表 qubits 編碼固定點數的暫存器。 包含一個整數，其等於二進位點左側的 qubits 數，也就是權數大於或等於1的 qubits，以及一個量子暫存器。
+  summary: 代表量子位編碼固定點數位的暫存器。 包含的整數等於二進位點左邊的量子位數目，也就是權數大於或等於1的量子位，以及量子暫存器。
 - uid: microsoft.quantum.arithmetic.littleendian
-  summary: 註冊會以位元組由小到大的順序編碼不帶正負號的整數。 具有索引的 qubit 會 `0` 編碼不帶正負號整數的最低位。
+  summary: 以位元組由小到大的順序註冊，將不帶正負號的整數編碼。 具有索引的量子位會 `0` 將不帶正負號整數的最低位編碼。
 - uid: microsoft.quantum.arithmetic.phaselittleendian
   summary: >-
-    以 QFT 為單位的位元組不帶正負號的整數。
+    以 QFT 為基礎的位元組由小到大不帶正負號的整數。
 
 
-    例如，如果 $ \ket{x} $ 是以計算為基礎的 $x 整數的位元組由小到大編碼，則 $ \operatorname{QFTLE} \ket{x} $ 就是 QFT 中 $x $ 的編碼方式。
+    例如，如果 $ \ket{x} $ 是整數 $x $ 的位元組由大到小編碼，則 $ \operatorname{QFTLE} \ket{x} $ 是 QFT 基礎中 $x $ 的編碼方式。
 - uid: microsoft.quantum.arithmetic.signedlittleendian
-  summary: 以小序儲存的帶正負號整數類型（請參閱 LittleEndian）。
+  summary: 以位元組由小到大儲存的帶正負號整數的類型 (參閱 LittleEndian) 。
 metadata:
-  ms.openlocfilehash: 6e43f31c738b48413ead40e16fbbfe4185b8a57d
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 57979033c298b9ff88153403c18f0e9698fb2523
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326722"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341287"

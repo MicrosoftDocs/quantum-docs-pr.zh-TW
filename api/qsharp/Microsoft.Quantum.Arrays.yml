@@ -3,79 +3,79 @@ uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
 functions:
 - uid: microsoft.quantum.arrays.all
-  summary: 針對陣列的元素定義陣列和述詞，並檢查陣列的所有元素是否符合述詞。
+  summary: 針對陣列的元素定義了陣列和述詞，並檢查陣列的所有元素是否滿足述詞。
 - uid: microsoft.quantum.arrays.any
   summary: 針對陣列的元素定義陣列和述詞，會檢查陣列中至少有一個元素是否滿足述詞。
 - uid: microsoft.quantum.arrays.chunks
-  summary: 將陣列分割成相等長度的多個部分。
+  summary: 將陣列分割為相等長度的多個部分。
 - uid: microsoft.quantum.arrays.constantarray
-  summary: 建立指定長度的陣列，其中所有元素都等於指定的值。
+  summary: 建立指定長度的陣列，其中所有元素等於指定的值。
 - uid: microsoft.quantum.arrays.enumerated
-  summary: 指定陣列時，會傳回新的陣列，其中包含原始陣列的專案以及每個專案的索引。
+  summary: 指定陣列時，會傳回新的陣列，其中包含原始陣列的元素以及每個專案的索引。
 - uid: microsoft.quantum.arrays.equala
-  summary: 假設有兩個相同類型的陣列，以及針對陣列的元素成對定義的述詞，則會檢查陣列是否相等。
+  summary: 如果有兩個相同類型的陣列和針對陣列的元素配對所定義的述詞，就會檢查陣列是否相等。
 - uid: microsoft.quantum.arrays.exclude
-  summary: 傳回陣列，其中包含另一個陣列的專案，但在指定的索引清單中不包括元素。
+  summary: 傳回陣列，其中包含另一個陣列的元素，但不包括指定之索引清單中的元素。
 - uid: microsoft.quantum.arrays.filtered
-  summary: 針對陣列的元素所定義的陣列和述詞，會傳回包含符合述詞之元素的陣列。
+  summary: 指定陣列和定義給陣列元素的述詞時，會傳回陣列，其中包含符合述詞的元素。
 - uid: microsoft.quantum.arrays.fold
   summary: '`f`透過陣列逐一查看函式 `array` ，傳回 `f(f(f(initialState, array[0]), array[1]), ...)` 。'
 - uid: microsoft.quantum.arrays.head
   summary: 傳回陣列的第一個元素。
 - uid: microsoft.quantum.arrays.indexof
-  summary: 傳回陣列中符合指定述詞之第一個元素的第一個索引。 如果沒有這類元素存在，則會傳回-1。
+  summary: 傳回陣列中第一個符合指定之述詞的第一個元素索引。 如果沒有這類元素，則傳回-1。
 - uid: microsoft.quantum.arrays.indexrange
-  summary: 指定陣列時，會傳回該陣列索引的範圍，適合用於 for 迴圈。
+  summary: 指定陣列時，會傳回該陣列的索引範圍，適用于 for 迴圈。
 - uid: microsoft.quantum.arrays.isempty
-  summary: 只有在陣列是空的時，才會傳回 true。
+  summary: 只有當陣列是空的時，才會傳回 true。
 - uid: microsoft.quantum.arrays.ispermutation
-  summary: 只有在指定的陣列代表排列時，才會輸出 true。
+  summary: 只有當指定的陣列表示排列時，才會輸出 true。
 - uid: microsoft.quantum.arrays.lookupfunction
-  summary: 指定陣列時，會傳回函式，此函式會傳回該陣列的元素。
+  summary: 指定陣列時，會傳回傳回該陣列元素的函式。
 - uid: microsoft.quantum.arrays.mapped
-  summary: 針對陣列的元素所定義的陣列和函式，會傳回新的陣列，其中包含函式下原始陣列的影像。
+  summary: 指定陣列和針對陣列元素定義的函式時，會傳回新的陣列，其中包含函式下原始陣列的影像。
 - uid: microsoft.quantum.arrays.mappedbyindex
-  summary: 針對陣列的索引元素所定義的陣列和函式，會傳回新的陣列，其中包含函式下原始陣列的影像。
+  summary: 如果陣列和函式是針對陣列的索引元素所定義，則會傳回新的陣列，此陣列是由函式下原始陣列的影像所組成。
 - uid: microsoft.quantum.arrays.most
-  summary: 建立等於輸入陣列的陣列，但不包括最後一個陣列元素。
+  summary: 建立等於輸入陣列的陣列，但最後一個陣列元素已卸載。
 - uid: microsoft.quantum.arrays.padded
-  summary: 傳回以指定的值（最多為指定的長度）填補的陣列。
+  summary: 傳回以指定的值填補的陣列（最多指定長度）。
 - uid: microsoft.quantum.arrays.partitioned
   summary: 將陣列分割成多個部分。
 - uid: microsoft.quantum.arrays.rest
-  summary: 建立等於輸入陣列的陣列，但不包括第一個陣列元素。
+  summary: 建立等於輸入陣列的陣列，但會卸載第一個陣列元素。
 - uid: microsoft.quantum.arrays.reversed
-  summary: 建立陣列，其中包含與輸入陣列相同的元素，但以相反的順序。
+  summary: 建立陣列，其中包含與輸入陣列相同的元素，但以反向順序表示。
 - uid: microsoft.quantum.arrays.sequencei
-  summary: 取得指定間隔中的整數陣列。
+  summary: 取得指定間隔內的整數陣列。
 - uid: microsoft.quantum.arrays.sequencel
-  summary: 取得指定間隔中的整數陣列。
+  summary: 取得指定間隔內的整數陣列。
 - uid: microsoft.quantum.arrays.subarray
-  summary: 採用陣列和位置清單，並從符合指定位置的原始陣列元素產生新陣列。
+  summary: 採用陣列和位置清單，並產生新的陣列，該陣列是從符合指定位置的原始陣列元素組成。
 - uid: microsoft.quantum.arrays.swapped
-  summary: 在陣列中套用兩個元素的交換。
+  summary: 針對陣列中的兩個元素套用交換。
 - uid: microsoft.quantum.arrays.tail
   summary: 傳回陣列的最後一個元素。
 - uid: microsoft.quantum.arrays.tuplearrayasnestedarray
-  summary: 將2個元組的清單變成一個嵌套陣列。
+  summary: 將2元組的清單轉換成嵌套陣列。
 - uid: microsoft.quantum.arrays.where
-  summary: 假設有一個述詞和一個陣列，會傳回該陣列的索引，其中的述詞為 true。
+  summary: 假設有述詞和陣列，則會傳回該陣列的索引，其述詞為 true。
 - uid: microsoft.quantum.arrays.zip
-  summary: 假設有兩個數組，會傳回新的成對陣列，讓每一組都包含每個原始陣列中的元素。
+  summary: 假設有兩個數組，會傳回一組新的陣列，讓每一組都包含每個原始陣列中的元素。
 - uid: microsoft.quantum.arrays.zip3
-  summary: 假設有三個數組，則會傳回3個元組的新陣列，讓每個3元組都包含每個原始陣列中的元素。
+  summary: 假設有三個數組，則會傳回3個元組的新陣列，讓每個3元組包含每個原始陣列的元素。
 - uid: microsoft.quantum.arrays.zip4
-  summary: 假設有四個數組，會傳回4個元組的新陣列，讓每個4元組都包含每個原始陣列中的元素。
+  summary: 假設有四個數組，會傳回4個元組的新陣列，讓每個4元組包含每個原始陣列的元素。
 summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含用來建立和運算元據陣列的函式。"
 operations:
 - uid: microsoft.quantum.arrays.drawmany
-  summary: 針對給定的樣本數重複作業，並在陣列中收集其輸出。
+  summary: 針對指定的樣本數重複作業，並在陣列中收集其輸出。
 - uid: microsoft.quantum.arrays.foreach
-  summary: 針對陣列的元素所定義的陣列和作業，會傳回新的陣列，其中包含作業下原始陣列的影像。
+  summary: 指定陣列和定義給陣列元素的作業時，會傳回新的陣列，其中包含作業下原始陣列的影像。
 metadata:
-  ms.openlocfilehash: 32aeecb419739a89792bdf1e9761e3821abcf380
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: f84118178b46d8c65fbffa00562bbb1b21099353
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884698"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341270"

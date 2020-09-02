@@ -2,11 +2,11 @@
 uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 name: EstimateRealOverlapBetweenStates
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: 針對每個準備狀態複本的兩項作業，會估計每項操作備妥的狀態之間的實際重迭部分。
-remarks: 這項作業會使用 Hadamard 測試來尋找 $ $ \begin{align} \braket{\psi 的 real 部分 |V ^ {\dagger} U |\psi} \end{align} $ $，其中 $ \ket{\psi} $ 是所準備的`commonPreparation`狀態，$U $ 是動作的`preparation1`單一表示，而 $V $ 會對應到`preparation2`其中。
+namespace: microsoft.quantum.characterization
+summary: 假設有兩個作業，每個作業都會準備狀態的複本，並估計每個作業所準備的狀態之間重迭的實際部分。
+remarks: 這項作業會使用 Hadamard 測試來尋找 $ $ \begin{align} \braket{\psi 的真實部分 |V ^ {\dagger} U |\psi} \end{align} $ $，其中 $ \ket{\psi} $ 是所準備的狀態 `commonPreparation` ，$U $ 是的動作的單一標記法 `preparation1` ，以及 $V $ 對應至的位置 `preparation2` 。
 syntax: 'operation EstimateRealOverlapBetweenStates (commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
-references: '- Aharonov *et* [quant-ph/0511096](https://arxiv.org/abs/quant-ph/0511096)。'
+references: '- Aharonov *et al.exe.* [quant-ph/0511096](https://arxiv.org/abs/quant-ph/0511096)。'
 input:
   content: '(commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int)'
   types:
@@ -25,7 +25,7 @@ input:
     functors:
     - Adjoint
   - name: preparation1
-    summary: 要比較的兩個狀態準備作業的第一個。
+    summary: 要比較的兩個狀態準備作業中的第一個。
     isOperation: true
     input:
       types:
@@ -55,11 +55,11 @@ input:
     - Adjoint
     - Controlled
   - name: nQubits
-    summary: '`commonPreparation`、 `preparation1`和`preparation2` all 作用的 qubits 數目。'
+    summary: '`commonPreparation`、 `preparation1` 和所有 act 的量子位數目 `preparation2` 。'
     isPrimitive: true
     uid: Int
   - name: nMeasurements
-    summary: 要用於估計重迭的測量數目。
+    summary: 用來估計重迭的度量數目。
     isPrimitive: true
     uid: Int
 output:
@@ -71,9 +71,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimateimagoverlapbetweenstates
 - microsoft.quantum.characterization.estimateoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: 425a9bde577f8c52b0e4fb5f4fe1cb1ecbe1a38d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5d1fab5e1bc6125db90c01002aac2f4c2e330af6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677672"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354462"

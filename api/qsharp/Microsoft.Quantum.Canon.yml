@@ -581,9 +581,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> 已被取代\n\nResultStack 已被取代。"
 metadata:
-  ms.openlocfilehash: 72e806d0a44fdcc372ab0d10edcaceb501713180
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: 969eec6767f3323e0470b0e968051bafb92d29ae
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88862938"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341559"

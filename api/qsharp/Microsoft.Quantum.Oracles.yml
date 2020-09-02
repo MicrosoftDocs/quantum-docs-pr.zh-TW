@@ -1,77 +1,77 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間會提供使用者定義型別，以根據其在配量演算法（例如階段估計和振幅放大）中的預期用途來裝飾各種 oracles 類型。"
+summary: " # <a name=\"summary\"></a>摘要\n 此命名空間可提供使用者定義型別，以根據其在量子演算法中的預定用途（例如階段估計和振幅放大）來裝飾各種類型的 oracle。"
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: 將類型`StateOracle`的 oracle 轉換成`DeterministicStateOracle`。
+  summary: 將型別的 oracle 轉換 `StateOracle` 為 `DeterministicStateOracle` 。
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: 結合 oracles `DeterministicStateOracle`和`ObliviousOracle`。
+  summary: 結合了 oracle `DeterministicStateOracle` 和 `ObliviousOracle` 。
 - uid: microsoft.quantum.oracles.oracletodiscrete
-  summary: 假設有一個代表「黑箱」 oracle 的作業，會傳回代表「黑箱」 oracle 重複多次的「獨立時間」 oracle。
+  summary: 假設有一個代表「黑箱」 oracle 的作業，則會傳回代表「黑箱」 oracle 重複多次的獨立時間 oracle。
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: 根據 oracle 的給定狀態來建立反映。
+  summary: 從 oracle 結構反映指定狀態的反映。
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: 將類型`DeterministicStateOracle`的 oracle 轉換成`StateOracle`。
+  summary: 將型別的 oracle 轉換 `DeterministicStateOracle` 為 `StateOracle` 。
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
     代表持續時間的 oracle。
 
 
-    這是 oracle，它會針對 $t $ 的所有時間，執行 $U （\delta t）： \ket{\psi （t）} \mapsto \ket{\psi （t + \delta t）} $，其中 $U $ 是固定的作業，其中 $ \delta t $ 是非負數的實數。
+    這是一種 oracle，可 $U ( \delta t) ： \ket{\psi (t) } \mapsto \ket{\psi (t + \delta t) } $ 的所有時間 $t $，其中 $U $ 是固定的作業，其中 $ \delta t $ 是非負實數。
 - uid: microsoft.quantum.oracles.deterministicstateoracle
   summary: >-
-    代表具決定性狀態準備的 oracle。
+    表示 oracle for 決定性狀態準備。
 
 
-    Oracle $O $ 的輸入是：
+    Oracle $O $ 的輸入為：
 
 
-    - 將儲存所需之量子狀態 $ \ket{\psi}\_s $ 的暫存器。
+    - 將儲存所需量子狀態 $ \ket{\psi} \_ s $ 的註冊。
 - uid: microsoft.quantum.oracles.discreteoracle
   summary: >-
-    表示離散化 oracle。
+    表示離散的 oracle。
 
 
-    這是 oracle，它會針對固定作業 $U $ 和非負整數 $m $ 來執行 $U ^ m $。
+    這是 oracle，可針對固定作業（$U $ 和非負整數 $m $）來實 $U ^ m $。
 - uid: microsoft.quantum.oracles.obliviousoracle
   summary: >-
-    表示 oracle for 遺忘式調幅放大。
+    表示 oracle for 無警示振幅放大。
 
 
-    Oracle $O $ 的輸入如下：
+    Oracle $O $ 的輸入包括：
 
 
-    - $O $ 的 ancilla 暫存器 $a $ 作用於。
+    - $O $ 作用的 ancilla 暫存器 $a $。
 
-    - 已選取要套用所需之單一 $U $ 的系統暫存器 $s $，請在註冊 $a $ \ket{t}\_a $ 中進行後選擇。
+    - 系統註冊 $s $ （要套用所需的單一 $U $），在 register $a $ \ket{t} a $ 的 post 選取 \_ 。
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
-    表示 oracle 的反映。
+    表示反映 oracle。
 
 
-    反映 oracle （$O $）具有輸入：
+    反映 oracle （$O $）有輸入：
 
 
-    - 要用來旋轉反映的子空間的階段 $ \phi $。
+    - 用來旋轉反映子空間的階段 $ \phi $。
 
-    - 要在其上執行給定反映的 qubit 暫存器。
+    - 要在其上執行給定反映的量子位註冊。
 - uid: microsoft.quantum.oracles.stateoracle
   summary: >-
-    表示 oracle 以進行狀態準備。
+    代表 oracle 的狀態準備。
 
 
-    Oracle $O $ 的輸入如下：
+    Oracle $O $ 的輸入包括：
 
 
-    - 索引旗標 qubit $f $ 的整數。
+    - 將旗標量子位 $f $ 索引的整數。
 
-    - 系統會登錄 $s $，以儲存所需的量子狀態 $\_\ket{\psi} s $。
+    - 系統註冊 $s $，將會儲存所需的量子狀態 $ \ket{\psi} \_ s $。
 metadata:
-  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 100ea34895b343c8b24ef4f584bbf534acd9d6ff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673115"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340947"

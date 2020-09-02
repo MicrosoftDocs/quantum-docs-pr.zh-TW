@@ -2,22 +2,22 @@
 uid: microsoft.quantum.characterization.quantumphaseestimation
 name: QuantumPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: 針對給定的 oracle `U`和，執行配量階段估計`targetState`演算法，並將階段讀入以大至小的量子暫存器。
+namespace: microsoft.quantum.characterization
+summary: 針對給定的 oracle 執行量子階段估計演算法 `U` ，並將 `targetState` 該階段讀入位元組由大到小的量子暫存器中。
 syntax: 'operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian)'
   types:
   - name: oracle
-    summary: 針對指定的整數，將 $U ^ m $ 的作業實作為運算的冪 m。
+    summary: 為指定的整數執行 $U ^ m $ 的作業 m。
     uid: microsoft.quantum.oracles.discreteoracle
   - name: targetState
-    summary: 表示由 $U $ 所處理之狀態 $ \ket{\phi} $ 的量子暫存器。 如果 $ \ket{\phi} $ 是 $U $ 的 eigenstate，$U \ket{\phi} = e ^ {i\phi} \ket{\phi} $ for $ \phi \in [0，2 \ pi） $ 未知的階段。
+    summary: 量子暫存器，代表 $U $ 所採取的狀態 $ \ket{\phi} $。 如果 $ \ket{\phi} $ 是 $U $ 的 eigenstate，$U \ket{\phi} = e ^ {i\phi} \ket{\phi} $ 表示 $ \phi \in [0，2 \ pi) $ 未知的階段。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: controlRegister
-    summary: 可用於控制提供的 oracle 的位元組由大到小的整數暫存器，而且將會在此作業的應用程式之後包含 $ \phi $ 的標記法。 假設 controlRegister 是在初始狀態 $ \ket{00\cdots 0} $ 中啟動，其中暫存器的長度會指出所需的精確度。
+    summary: 以位元組由大到小的整數暫存器，可用來控制提供的 oracle，並在應用程式執行此作業後，包含 $ \phi $ 的標記法。 ControlRegister 假設是在初始狀態 $ \ket{00\cdots 0} $ 中啟動，而暫存器的長度表示所要的精確度。
     uid: microsoft.quantum.arithmetic.bigendian
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: adbaf8af437a7067e8d2e6076b1a48c9000be3eb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6e6168df8419f7219e9165592fc37ba293f34231
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677621"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354275"

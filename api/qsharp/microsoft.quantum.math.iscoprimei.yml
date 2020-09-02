@@ -2,14 +2,14 @@
 uid: microsoft.quantum.math.iscoprimei
 name: IsCoprimeI
 type: function
-namespace: Microsoft.Quantum.Math
-summary: 如果 $a $ 和 $b $ 為共質數，則傳回 true，否則傳回 false。
+namespace: microsoft.quantum.math
+summary: 如果 $a $ 和 $b $ 是共同質數，則傳回 true，否則傳回 false。
 syntax: 'function IsCoprimeI (a : Int, b : Int) : Bool'
 input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    summary: 測試 primality 的第一個數位
+    summary: 正在測試之共同 primality 的第一個數目
     isPrimitive: true
     uid: Int
   - name: b
@@ -19,13 +19,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: 若 $a $ 和 $b $ 為共質數（例如，其最大公除數為1），則為 True; 否則為 false
+  - summary: 如果 $a $ 和 $b $ 是共同質數 (例如其最大公除數為 1 ) ，則為 True，否則為 false。
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 113c979b0bc930cd31a28e6392b8f6fa9f354c22
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b5be2672df76c750e82e6a41e3b3932effe5c307
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673728"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334470"

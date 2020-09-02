@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.dividedbyi
 name: DividedByI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回兩個輸入的商。
 syntax: 'function DividedByI (a : Int, b : Int) : Int'
 input:
@@ -13,7 +13,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: b
-    summary: 要分割的第二個輸入 $b $。
+    summary: 第二個輸入 $b $ 以進行分割。
     isPrimitive: true
     uid: Int
 output:
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 43eb5dee09c0f900aeb63ba06aa1540c225edcc7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8f18c9bc8feb37dc3f2d63f80e147005e30df770
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673898"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334708"

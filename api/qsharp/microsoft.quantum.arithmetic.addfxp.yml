@@ -2,22 +2,22 @@
 uid: microsoft.quantum.arithmetic.addfxp
 name: AddFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  加入儲存在配量暫存器中的兩個固定點數位。
+  新增儲存在量子暫存器中的兩個固定點數位。
 
 
-  在州 $ \ket{f_1} $ 和 $ \ket{f_2} $ 中分別指定了兩個固定點暫存器，會執行 operation $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $。
-remarks: 目前的執行需要兩個固定點數位，使其具有與最小有效位相同的點位置計數，亦即 $n _i $ 和 $p _i $ 必須相等。
+  假設有兩個固定點暫存器分別在狀態 $ \ket{f_1} $ 和 $ \ket{f_2} $ 中，則執行作業 $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $。
+remarks: 目前的執行需要有兩個固定點數位，使其具有與最小有效位的相同點位置計數，亦即 $n _i $ 和 $p _i $ 必須相等。
 syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: fp1
-    summary: 第一個定點數
+    summary: 第一個固定點數位
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: fp2
-    summary: 第二個固定點數位，將會更新以包含兩個輸入的總和。
+    summary: 第二個固定點數位將會更新，以包含兩個輸入的總和。
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 75b6e15299b6e0394af8cb530ee7bc66dc07c336
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0f900cd3b7c6552064ec5a52a6d932ff106db0d0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672907"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341763"
