@@ -2,19 +2,19 @@
 uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
 name: AssertAllZeroWithinTolerance
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
-summary: 判斷指定的 qubits 全都在 $ \ket{0}$ 狀態中，直到指定的容錯為止。
+namespace: microsoft.quantum.diagnostics
+summary: 判斷提示，指定的量子位全都在 $ \ket {0} $ 狀態中，直到指定的容錯。
 syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
   types:
   - name: qubits
-    summary: 已判斷提示為 $ \ket{0}$ 狀態的 Qubits。
+    summary: 判斷提示為 $ \ket $ 狀態的量子位 {0} 。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: 狀態應處於 $ \ket{0}$ 狀態的精確度
+    summary: 狀態應該處於 $ \ket {0} $ state 的精確度
     isPrimitive: true
     uid: Double
 output:
@@ -28,9 +28,9 @@ functors:
 seeAlso:
 - assertqubitwithintolerance
 metadata:
-  ms.openlocfilehash: ae55998333d6bc3a4d8b41341842147d80dcd183
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 547180aac49fde1525a7477d9ec75b302912fe2b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677287"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337540"

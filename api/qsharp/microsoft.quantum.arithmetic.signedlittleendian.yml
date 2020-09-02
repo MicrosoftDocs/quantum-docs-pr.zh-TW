@@ -2,13 +2,13 @@
 uid: microsoft.quantum.arithmetic.signedlittleendian
 name: SignedLittleEndian
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
-summary: 以小序儲存的帶正負號整數類型（請參閱 LittleEndian）。
+namespace: microsoft.quantum.arithmetic
+summary: 以位元組由小到大儲存的帶正負號整數的類型 (參閱 LittleEndian) 。
 syntax: newtype SignedLittleEndian = Microsoft.Quantum.Arithmetic.LittleEndian;
 metadata:
-  ms.openlocfilehash: 80fb3a69f1d4e55f69cf7332856e7cf235c4da2f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 202d5c9fa4dfe43caa62d728f913d88733af246b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676641"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352773"

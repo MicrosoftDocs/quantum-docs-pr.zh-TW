@@ -2,20 +2,20 @@
 uid: microsoft.quantum.diagnostics.assertmeasurement
 name: AssertMeasurement
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
-summary: 以給定的 Pauli 為基礎測量給定 qubits 的判斷提示，一律會有指定的結果。
+namespace: microsoft.quantum.diagnostics
+summary: 以指定的 Pauli 為基礎測量指定量子位的判斷提示，一定會有指定的結果。
 remarks: 請注意，此作業的 Adjoint 和受控制版本將不會檢查條件。
 syntax: 'operation AssertMeasurement (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
   types:
   - name: bases
-    summary: 用來判斷機率的測量效果，以多 qubit 的 Pauli 運算子表示。
+    summary: 用來判斷提示之機率的測量效果，以多量子位 Pauli 運算子表示。
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: 要在其上進行判斷提示的暫存器。
+    summary: 要在其上進行判斷提示的註冊。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -38,9 +38,9 @@ functors:
 seeAlso:
 - microsoft.quantum.diagnostics.assertmeasurementprobability
 metadata:
-  ms.openlocfilehash: e8c74cdeb9ba196b337b56ec377a1158cd331ac7
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 8e48ecb3d430469fce3bf7571557f89db2d92b9e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886228"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337698"

@@ -2,15 +2,15 @@
 uid: microsoft.quantum.machinelearning.controlledrotation
 name: ControlledRotation
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
-summary: 描述受控制的旋轉，其目標和控制項索引、旋轉軸，以及模型參數向量的索引。
+namespace: microsoft.quantum.machinelearning
+summary: 描述以其目標和控制索引、旋轉軸和索引至模型參數向量的控制旋轉。
 remarks: >-
-  藉由將設定`ControlIndices`為空的索引陣列， `new Int[0]`即可表示無法控制的旋轉。
+  您可以設定 `ControlIndices` 為空的索引陣列來表示無法控制的旋轉 `new Int[0]` 。
 
 
   ### <a name="examples"></a>範例
 
-  以下代表在暫存器中第一個 qubit 的 $X $ 軸的旋轉、在第二個 qubit 上控制，以及在連續模型中使用第四個參數所指定的角度：
+  以下代表在暫存器中第一個量子位的 $X $ 軸的旋轉、第二個量子位所控制的，以及連續模型中第四個參數所指定的角度：
 
 
   ```Q#
@@ -24,9 +24,9 @@ remarks: >-
   ```
 syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
 metadata:
-  ms.openlocfilehash: 058c1dc75dd169971d0c542d0577d739327e4d56
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 132a69f35e1cbec57c15c3f362a25849e3d66c27
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681684"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344908"

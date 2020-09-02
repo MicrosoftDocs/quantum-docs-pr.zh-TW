@@ -2,20 +2,20 @@
 uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
 name: StatePreparationPositiveCoefficients
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  傳回準備指定之量子狀態的作業。
+  傳回可準備指定量子狀態的作業。
 
 
-  傳回的作業 $U $ 準備具有正係數 $ \ 的任意量子狀態 $ \ket{\psi} $ Alpha_j \ge $0，從 $n $-qubit 計算基礎狀態 $ \ket{0...0} $。
+  傳回的作業 $U $ 會從 $n $-量子位計算基礎狀態 $ \ket{0...0} $ 準備任意的量子狀態 $ \ket{\psi} $，其正係數 $ \ Alpha_j \ge $0。
 
 
-  在新配置的暫存器上執行 U 的動作是由 $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ Alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ Alpha_j | ^ 2}}。
+  在新配置的暫存器上執行的動作是由 $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ Alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ Alpha_j | ^ 2}}。
 
   \end{align} $ $
-remarks: 負輸入係數 $ \ Alpha_j < $0 將會視為正值，其值為 $ | \ Alpha_j | $。 `coefficients`如果指定了少於 $ 2 ^ n $，將會以 $ \ Alpha_j = $0.0 的元素填補。
+remarks: 負輸入係數 $ \ Alpha_j < $0 將視為具有值 $ | \ Alpha_j | $ 的正值。 `coefficients` 如果指定了少於 $ 2 ^ n $ 的元素，則會以 $ \ Alpha_j = $0.0 填補。
 examples: >-
-  下列程式碼片段會準備 qubit 暫存器中的量子狀態 $ \ket{\psi} = \ sqrt {1{0}/8} \ ket + \ sqrt {7{2}/8} \ ket `qubitsLE`$。
+  下列程式碼片段會準備量子位註冊中的量子狀態 $ \ket{\psi} = \ sqrt {1/8} \ ket {0} + \ sqrt {7/8} \ ket {2} $ `qubitsLE` 。
 
 
   ```qsharp
@@ -35,7 +35,7 @@ input:
   content: '(coefficients : Double[])'
   types:
   - name: coefficients
-    summary: 最多 $ 2 ^ n $ 係數 $ \ Alpha_j $ 的陣列。 $J $ th 的係數會以位元組由小到大的格式來編制編碼的數位 state $ \ket{j} $。
+    summary: 最多 $ 2 ^ n $ 係數 $ \ Alpha_j $ 的陣列。 $J $ th 係數會以位元組由大到小的格式來編制數位狀態 $ \ket{j} $ 編碼。
     isArray: true
     isPrimitive: true
     uid: Double
@@ -55,9 +55,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d419fd88ed037001cc51dbd354b5c89dbe334246
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7f801c02044195aa2b85bf6fd941923cf474a36b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686450"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331223"

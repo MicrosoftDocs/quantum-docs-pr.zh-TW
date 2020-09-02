@@ -2,26 +2,26 @@
 uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
 name: AssertOperationsEqualReferenced
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: >-
-  假設有兩個作業，則判斷提示其對所有輸入狀態的行為都相同。
+  假設有兩個作業，請判斷它們對所有輸入狀態的作用都相同。
 
 
-  這個判斷提示是透過使用 Choi – Jamiłkowski isomorphism，將判斷提示縮小為兩個光子暫存器的其中一個 qubit 狀態判斷提示。
+  此判斷提示是藉由使用 Choi 對於– Jamiłkowski isomorphism 來執行，將判斷提示減少到兩個纏結暫存器上的其中一個量子位狀態判斷提示。
 
-  因此，此作業只需要對每個要測試的作業進行單一呼叫，但需要配置的兩倍 qubits。
+  因此，這項作業只需要對每個要測試的作業進行單一呼叫，但需要配置兩次的量子位。
 
-  例如，這個判斷提示可以用來確保作業的優化版本與它的完整執行完全相同，或是在非配量輸入範圍上運作的作業會與已知的案例相關。
+  您可以使用這個判斷提示來確保作業的優化版本與其全面的實作為相同，或在非量子輸入範圍中運作的作業會符合已知案例。
 remarks: >-
-  這種作業需要將預期行為模型化的作業 adjointable，如此一來，就可以單獨在目標暫存器上執行反向操作。
+  這項作業會要求將預期行為模型化的作業 adjointable，如此一來，就可以單獨在目標暫存器上執行反向操作。
 
-  正式地說，其中一個可以指定轉置作業，這會放寬這項需求，但轉置作業不會針對任意配量作業進行實際 realizable，因此不會包含在此做為選項。
+  正式來說，您可以指定可放寬這項需求的轉出作業，但換位作業不是一般 realizable 的任意量子作業，因此此處不包含此選項。
 syntax: 'operation AssertOperationsEqualReferenced (nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj)) : Unit'
 input:
   content: '(nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: 要傳遞至每個作業的 qubits 數目。
+    summary: 要傳遞至每個作業的量子位數目。
     isPrimitive: true
     uid: Int
   - name: actual
@@ -37,7 +37,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expected
-    summary: 定義待測作業之預期行為的作業。
+    summary: 作業，定義受測試作業的預期行為。
     isOperation: true
     input:
       types:
@@ -56,9 +56,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 1d1711ee0c93aedca7731246cc8d12e813a7810b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2285a315056fac57bb025cf5a255a6381ea8af5e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82656659"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337615"

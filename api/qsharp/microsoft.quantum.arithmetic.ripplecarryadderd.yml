@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.ripplecarryadderd
 name: RippleCarryAdderD
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  可還原的就地 ripple-加入兩個整數。
+  可還原的就地 ripple-包含兩個整數的加法。
 
-  假設在 LittleEndian 中編碼的兩個 $n $ bit `xs`整數`ys`會註冊和，而 qubit 包含，則作業會計算兩個整數的總和，其中會保留結果的 $n $ 最低位， `ys`而執行位則是進行 xor 至 qubit `carry`。
-remarks: 所指定受控制的作業會使用對稱和相互取消的作業，以在將控制項加入至每個作業的預設實上進行改善。
+  假設有兩個 $n $ bit 整數編碼在 LittleEndian 暫存器中 `xs` `ys` ，而且量子位包含，則作業會計算兩個整數的總和，其中會保留結果的 $n $ 最低有效位數 `ys` ，而執行時位會進行 xor 至量子位 `carry` 。
+remarks: 指定的受控制作業會使用作業的對稱和相互取消，以改善將控制項加入至每個作業的預設執行。
 syntax: 'operation RippleCarryAdderD (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
   - Thomas g. Draper：「在量子電腦上新增」，2000。
@@ -16,13 +16,13 @@ input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
   types:
   - name: xs
-    summary: LittleEndian qubit register 編碼第一個整數被加數。
+    summary: LittleEndian 量子位登錄第一個整數被加數的編碼。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: LittleEndian qubit 暫存器編碼第二個整數被加數，已修改為保留總和的 $n $ 最低有效位。
+    summary: LittleEndian 量子位暫存器第二個整數被加數的編碼，會修改成保存總和的 $n $ 最不重要的位。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: carry
-    summary: 攜帶 qubit，是以總和的最高有效位進行 xor。
+    summary: 帶有量子位，是以總和的最高有效位進行 xor。
     isPrimitive: true
     uid: Qubit
 output:
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4afc8f01d1a1e85aee8c974e126c4c112fd43536
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bdc59f3699cbe36e80cc808e081b5e5d32d10f46
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676703"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352864"

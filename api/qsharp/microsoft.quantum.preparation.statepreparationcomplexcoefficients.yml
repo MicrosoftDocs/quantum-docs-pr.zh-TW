@@ -2,20 +2,20 @@
 uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
 name: StatePreparationComplexCoefficients
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   傳回準備特定量子狀態的作業。
 
 
-  傳回的作業 $U $ 準備具有複雜係數的任意量子狀態 $ \ket{\psi} $ $r _j e ^ {i t_j} $ （來自 $n $-qubit 計算基礎狀態 $ \ket{0...0} $）。
+  傳回的作業 $U $ 會準備具有複雜係數的任意量子狀態 $ \ket{\psi} $ $r _j e ^ {i t_j} $，從 $n $-量子位計算基礎狀態 $ \ket{0...0} $。
 
 
-  在新配置的暫存器上執行 U 的動作是由 $ $ \begin{align} U\ket {0 ... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}。
+  以 $ $ \begin{align} U\ket {0 ... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}} 為新配置的暫存器提供的動作。
 
   \end{align} $ $
-remarks: 負的輸入係數 $r _j < $0 將會被視為具有值 $ | r_j | $ 的正值。 `coefficients`如果指定了少於 $ 2 ^ n $，將會以 $ （r_j，t_j） = （0.0，0.0） $ 的元素填補。
+remarks: 負輸入係數 $r _j < $0 將被視為具有值 $ | r_j | $ 的正值。 `coefficients` 將會以 $ (r_j、t_j) = (0.0、0.0) $ 的元素填補，以指定小於 $ 2 ^ n $。
 examples: >-
-  下列程式碼片段會準備 qubit 暫存器中的量子狀態 $ \ket{\psi} = e ^ {i 0.1} \ sqrt {1{0}/8} \ ket + \ sqrt {7{2}/8} \ ket `qubitsLE`$。
+  下列程式碼片段會準備量子位註冊中的量子狀態 $ \ket{\psi} = e ^ {i 0.1} \ sqrt {1/8} \ ket {0} + \ sqrt {7/8} \ ket {2} $ `qubitsLE` 。
 
 
   ```qsharp
@@ -43,7 +43,7 @@ input:
   content: '(coefficients : Microsoft.Quantum.Math.ComplexPolar[])'
   types:
   - name: coefficients
-    summary: 最多 $ 2 ^ n $ 複雜係數的陣列，以絕對值和階段 $ （r_j，t_j） $ 表示。 $J $ th 的係數會以位元組由小到大的格式來編制編碼的數位 state $ \ket{j} $。
+    summary: 最多 $ 2 ^ n $ 複雜係數的陣列，以絕對值和階段 $ (r_j，t_j) $ 表示。 $J $ th 係數會以位元組由大到小的格式來編制數位狀態 $ \ket{j} $ 編碼。
     isArray: true
     uid: microsoft.quantum.math.complexpolar
 output:
@@ -62,9 +62,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d42ff528c40346ddb5a487ca68c70544cac20aeb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f7726320e4e1c5da3cb18b9bc34e4e861000aa33
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686478"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331206"

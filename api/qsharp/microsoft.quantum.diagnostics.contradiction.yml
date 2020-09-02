@@ -2,10 +2,10 @@
 uid: microsoft.quantum.diagnostics.contradiction
 name: Contradiction
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: 宣告傳統條件為 false。
 examples: >-
-  下列 Q 號碼程式碼將會列印 "Hello，world"：
+  下列 Q # 程式碼會列印 "Hello，world"：
 
 
   ```Q#
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Bool
   - name: message
-    summary: 當傳統條件為 true 時，要列印的失敗訊息字串。
+    summary: 當傳統條件為真時，所要列印的失敗訊息字串。
     isPrimitive: true
     uid: String
 output:
@@ -35,9 +35,9 @@ output:
 seeAlso:
 - microsoft.quantum.diagnostics.fact
 metadata:
-  ms.openlocfilehash: 5956f0a3010b46651627e147406e89f8a508a370
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 0e134d00cec28d523abe3c3dc4988f0914a302bd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84328505"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337377"

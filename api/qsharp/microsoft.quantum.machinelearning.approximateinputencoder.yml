@@ -2,14 +2,14 @@
 uid: microsoft.quantum.machinelearning.approximateinputencoder
 name: ApproximateInputEncoder
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: 假設有一組係數和一個容錯，會傳回狀態準備作業，將每個係數準備成計算基礎狀態的對應波幅，直到指定的容錯為止。
+namespace: microsoft.quantum.machinelearning
+summary: 假設有一組係數和容錯，則會傳回狀態準備作業，以將每個係數準備為計算基礎狀態的對應波幅，最多可達指定的容錯。
 syntax: 'function ApproximateInputEncoder (tolerance : Double, coefficients : Double[]) : Microsoft.Quantum.MachineLearning.StateGenerator'
 input:
   content: '(tolerance : Double, coefficients : Double[])'
   types:
   - name: tolerance
-    summary: 將指定的係數編碼成輸入狀態時，所要使用的近似值誤差。
+    summary: 用來將指定係數編碼成輸入狀態的近似值誤差。
     isPrimitive: true
     uid: Double
   - name: coefficients
@@ -20,12 +20,12 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.StateGenerator
   types:
-  - summary: 一種狀態準備作業，可將指定的係數準備做為指定暫存器上的輸入狀態。
+  - summary: 一種狀態準備作業，可將指定的係數準備為指定之暫存器的輸入狀態。
     uid: microsoft.quantum.machinelearning.stategenerator
 metadata:
-  ms.openlocfilehash: 1fa74b1e3af1e82e5558a45b8ed3e9d2862a3bef
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5fa25ec584d3a2103559afb25d7673606c8055f1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681713"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344993"

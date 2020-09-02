@@ -2,10 +2,10 @@
 uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
 name: CyclicEntanglingLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: 傳回指定軸上的單向控制旋轉陣列，在 qubits 的暫存器上排列迴圈，並由不同的模型參數進行參數化。
+namespace: microsoft.quantum.machinelearning
+summary: 傳回沿著指定軸的單一控制旋轉陣列、在量子位的暫存器中排列迴圈，並以相異模型參數參數化。
 examples: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```Q#
@@ -24,27 +24,27 @@ input:
   content: '(nQubits : Int, axis : Pauli, stride : Int)'
   types:
   - name: nQubits
-    summary: 給定層處理的 qubits 數目。
+    summary: 給定層處理的量子位數目。
     isPrimitive: true
     uid: Int
   - name: axis
-    summary: 指定圖層中每個旋轉的旋轉軸。
+    summary: 給定圖層中每個旋轉的旋轉軸。
     isPrimitive: true
     uid: Pauli
   - name: stride
-    summary: 每次旋轉的目標和控制項索引之間的分隔。
+    summary: 每個旋轉的目標和控制項索引之間的分隔。
     isPrimitive: true
     uid: Int
 output:
   content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
   types:
-  - summary: 由兩個 qubit 控制的迴圈陣列，在`nQubits` qubits 的暫存器中配置了迴圈。
+  - summary: 兩個量子位控制的旋轉陣列，會在量子位的暫存器上配置迴圈 `nQubits` 。
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: 9578cb4798fc403642a98c7886374295000b6097
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: daac61ccccadbe16910c6487549cd6ce524d3b58
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681655"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344840"

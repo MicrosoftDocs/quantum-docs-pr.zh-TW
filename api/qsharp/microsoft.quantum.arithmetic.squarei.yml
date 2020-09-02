@@ -2,18 +2,18 @@
 uid: microsoft.quantum.arithmetic.squarei
 name: SquareI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 將整數`xs`的平方計算為`result`，其一開始必須為零。
-remarks: 會使用標準的 shift 和 add 方法來計算正方形。 會儲存 $n-$1 qubits 相較于正向解決方案，其會先複製 x，再套用一般乘數，然後再復原複製作業。
+namespace: microsoft.quantum.arithmetic
+summary: 將整數的平方計算 `xs` 為 `result` ，一開始必須為零。
+remarks: 使用標準的 shift 和 add 方法來計算方形。 相較于在套用一般乘數然後復原複製作業之前，會先複製 xs 的正向解決方案，節省 $n-$1 量子位。
 syntax: 'operation SquareI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
-    summary: 將 $ 位數位 $n 為正方形（LittleEndian）
+    summary: '$n $ 位數位到平方 (LittleEndian) '
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $ 2n $ 位結果（LittleEndian），一開始必須是 state $ \ket{0}$。
+    summary: $ 2n $ bit result (LittleEndian) ，必須先處於 state $ \ket {0} $。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: eedc2536da0fd75712929af44f5167d3fc73add3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4b001663d1d4f863d0b597e31bec87c65871ebc1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676617"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352694"

@@ -2,10 +2,10 @@
 uid: microsoft.quantum.machinelearning.defaulttrainingoptions
 name: DefaultTrainingOptions
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 傳回定型分類器的預設選項組。
 examples: >-
-  若要使用預設選項，但使用其他度量，請使用`w/`運算子：
+  若要使用預設選項，但使用額外的度量，請使用 `w/` 運算子：
 
 
   ```Q#
@@ -20,12 +20,12 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.TrainingOptions
   types:
-  - summary: 一組合理的預設訓練選項，可在定型分類器時使用。
+  - summary: 定型分類器時，所使用的一組合理的預設定型選項。
     uid: microsoft.quantum.machinelearning.trainingoptions
 metadata:
-  ms.openlocfilehash: 87f056e336ca78881421e669b3d282af8e679353
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5f9882b1067851fc206e302310657f9bf64cea3f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685443"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344755"

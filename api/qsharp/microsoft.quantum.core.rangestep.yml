@@ -2,9 +2,9 @@
 uid: microsoft.quantum.core.rangestep
 name: RangeStep
 type: function
-namespace: Microsoft.Quantum.Core
-summary: 傳回整數，指定如何計算範圍的下一個值。
-remarks: 範圍運算式的第一個元素是`start`，其第二個`start+step`元素是，第`start+step+step`三個元素是， `end`依此類推，直到傳遞為止。
+namespace: microsoft.quantum.core
+summary: 傳回整數，這個整數會指定如何計算範圍的下一個值。
+remarks: 範圍運算式的第一個專案是 `start` ，其第二個元素是，第三個元素是， `start+step` `start+step+step` 直到 `end` 傳遞為止。
 syntax: 'function RangeStep (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -15,13 +15,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 給定範圍的已定義步驟值。
+  - summary: 指定範圍的已定義步驟值。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 30f67fba4e263f3b01bec1c360198728087783f2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7196f33548767bb47fde9e8bbd6b6dcf720e5f9c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677336"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337937"
