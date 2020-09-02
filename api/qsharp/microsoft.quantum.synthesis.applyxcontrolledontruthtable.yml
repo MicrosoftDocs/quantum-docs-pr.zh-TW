@@ -2,29 +2,29 @@
 uid: microsoft.quantum.synthesis.applyxcontrolledontruthtable
 name: ApplyXControlledOnTruthTable
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: >-
-  針對 @"microsoft.quantum.intrinsic.x" `target` 中的傳統指派，如果布耳函數 `func` 評估為 true，則會在上套用作業 `controlRegister` 。
+  @"microsoft.quantum.intrinsic.x" `target` 如果布耳函數 `func` 針對中的傳統指派評估為 true，則會在上套用運算 `controlRegister` 。
 
 
-  作業會執行單一作業 \begin{align} U\ket {x} \ ket {y} = \ket{x}\ket{y \oplus f （x）} \end{align}，其中 $x $ 和 $y $ `controlRegister` 分別代表和 `target` 。
+  作業會執行單一作業 \begin{align} U\ket {x} \ ket {y} = \ket{x}\ket{y \oplus f (x) } \end{align}，其中 $x $ 和 $y $ `controlRegister` 分別代表和 `target` 。
 
 
-  布耳函數 $f $ 會以大整數表示為事實資料表。
+  布耳函數 $f $ 會以大整數的形式表示為事實資料表。
 
-  例如，在三個輸入上的多數函式會以 bitstring 表示 `11101000` ，其中最重要的位會 `1` 對應至輸入指派 `(1, 1, 1)` ，而最小的位則 `0` 對應至輸入指派 `(0, 0, 0)` 。
+  例如，在三個輸入上的多數函數會以 bitstring 表示 `11101000` ，其中最重要的位會 `1` 對應至輸入指派 `(1, 1, 1)` ，而最小的位會 `0` 對應至輸入指派 `(0, 0, 0)` 。
 
-  它可以用 `0xE8L` 十六進位標記法或 `232L` 十進位標記法中的大整數表示。  `L`尾碼表示常數的類型為 `BigInt` 。
+  它可以使用十六進位標記法中的大整數來表示， `0xE8L` 或以 `232L` 十進位標記法表示。  `L`尾碼表示常數的型別為 `BigInt` 。
 
-  如需此標記法的詳細資訊，請參閱[事實資料表 kata](https://github.com/microsoft/QuantumKatas/tree/master/TruthTables)。
+  您也可以在 [事實資料表 kata](https://github.com/microsoft/QuantumKatas/tree/master/TruthTables)中找到此標記法的詳細資料。
 
 
-  此執行會使用 @"microsoft.quantum.intrinsic.cnot" 和網 @"microsoft.quantum.intrinsic.r1" 關。
+  執行會使用和網 @"microsoft.quantum.intrinsic.cnot" @"microsoft.quantum.intrinsic.r1" 關。
 syntax: 'operation ApplyXControlledOnTruthTable (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit'
 references: >-
-  - [*Schuch*， *J Siewert*，PRL 91，no 027902，2003，arXiv： quant-ph/0303063](https://arxiv.org/abs/quant-ph/0303063)
+  - [*N. Schuch*、 *J Siewert*、PRL 91、no. 027902、2003、arXiv： quant-ph/0303063](https://arxiv.org/abs/quant-ph/0303063)
 
-  - [*Mathias Soeken*、*聖馬丁 Roetteler*、arXiv：2005.12310](https://arxiv.org/abs/2005.12310)
+  - [*Mathias Soeken*、 *聖馬丁 Roetteler*、arXiv：2005.12310](https://arxiv.org/abs/2005.12310)
 input:
   content: '(func : BigInt, controlRegister : Qubit[], target : Qubit)'
   types:
@@ -33,12 +33,12 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: controlRegister
-    summary: 註冊控制項 qubits
+    summary: 註冊控制項量子位
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: 目標 qubit
+    summary: 目標量子位
     isPrimitive: true
     uid: Qubit
 output:
@@ -52,9 +52,9 @@ functors:
 seeAlso:
 - microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
 metadata:
-  ms.openlocfilehash: c15037917da8101270d3888ec0f335ad7986cbf2
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 782833d34462056413628504cca92f5333a04659
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886175"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327978"

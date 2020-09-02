@@ -2,17 +2,17 @@
 uid: microsoft.quantum.arithmetic.comparegtsi
 name: CompareGTSI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 帶正負號整數比較的`result = xs > ys`包裝函式：。
+namespace: microsoft.quantum.arithmetic
+summary: 帶正負號整數比較的包裝函式： `result = xs > ys` 。
 syntax: 'operation CompareGTSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Qubit) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Qubit)'
   types:
   - name: xs
-    summary: 第一個 $n $-bit 數位
+    summary: 第一個 $n $ 位數位
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: ys
-    summary: 第二個 $n $-bit 數位
+    summary: 第二 $n $ 位數位
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
     summary: 如果 $xs > y) $，將會翻轉
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 20960077dedf087096dac4d5dc5e50fcb9aed860
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c916177dd56241d8e8816e1f60f3afefe865dbb9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679768"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327381"

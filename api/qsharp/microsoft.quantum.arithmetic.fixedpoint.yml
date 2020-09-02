@@ -2,13 +2,13 @@
 uid: microsoft.quantum.arithmetic.fixedpoint
 name: FixedPoint
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
-summary: 代表 qubits 編碼固定點數的暫存器。 包含一個整數，其等於二進位點左側的 qubits 數，也就是權數大於或等於1的 qubits，以及一個量子暫存器。
+namespace: microsoft.quantum.arithmetic
+summary: 代表量子位編碼固定點數位的暫存器。 包含的整數等於二進位點左邊的量子位數目，也就是權數大於或等於1的量子位，以及量子暫存器。
 syntax: newtype FixedPoint = (Int, Qubit[]);
 metadata:
-  ms.openlocfilehash: a7dfac25f4a35bea5ef11cff090a8619f0457ce2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 003fdd7fbf4bf9e9d6252823e54c9fba0f0584e0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679625"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342001"

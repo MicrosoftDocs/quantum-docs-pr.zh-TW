@@ -2,14 +2,14 @@
 uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
 name: TimeDependentTrotterSimulationAlgorithm
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: "`TimeDependentSimulationAlgorithm`此函式會使用 Trotter – Plat'home co. 分解來估計可解決與時間相依之 Schrodinger 方程式的單一運算子。"
+namespace: microsoft.quantum.simulation
+summary: '`TimeDependentSimulationAlgorithm` 使用 Trotter – Suzuki 分解的函式，以接近可解決時間相依 Schrodinger 方程式的單一運算子。'
 syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm'
 input:
   content: '(trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: trotterStepSize
-    summary: 模擬時間的持續時間-在單一 Trotter 步驟中進化。
+    summary: 在單一 Trotter 步驟中，模擬時間演進的持續時間。
     isPrimitive: true
     uid: Double
   - name: trotterOrder
@@ -19,12 +19,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm
   types:
-  - summary: '`TimeDependentSimulationAlgorithm` 類型。'
+  - summary: '`TimeDependentSimulationAlgorithm` 型別。'
     uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
 metadata:
-  ms.openlocfilehash: 3dc5c7a7037be2b30dfdc3b7eb7c5d32d2f9b4c5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7b9f0628d108af9eeef5fa7397f4f3088a7d9737
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687260"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328284"

@@ -2,27 +2,27 @@
 uid: microsoft.quantum.simulation.sumgeneratorsystems
 name: SumGeneratorSystems
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: 新增多`GeneratorSystem`個，以建立新的 GeneratorSystem。
+namespace: microsoft.quantum.simulation
+summary: 新增多個 `GeneratorSystem` 來建立新的 GeneratorSystem。
 syntax: 'function SumGeneratorSystems (generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[])'
   types:
   - name: generatorSystems
-    summary: '`GeneratorSystem[]` 類型的陣列。'
+    summary: 類型為 `GeneratorSystem[]` 的陣列。
     isArray: true
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: ， `GeneratorSystem`代表屬於輸入產生器系統總和的系統。
+  - summary: '`GeneratorSystem`代表系統的，這是輸入產生器系統的總和。'
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: 5474e35cb303a6f490794a77483aafd609724eaa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cf4fe3793578c1050f7a95773112985ad671a695
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687319"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328384"

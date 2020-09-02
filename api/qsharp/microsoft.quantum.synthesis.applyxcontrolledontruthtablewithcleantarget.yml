@@ -2,15 +2,15 @@
 uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
 name: ApplyXControlledOnTruthTableWithCleanTarget
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: >-
-  針對 @"microsoft.quantum.intrinsic.x" `target` 中的傳統指派，如果布耳函數 `func` 評估為 true，則會在上套用作業 `controlRegister` 。
+  @"microsoft.quantum.intrinsic.x" `target` 如果布耳函數 `func` 針對中的傳統指派評估為 true，則會在上套用運算 `controlRegister` 。
 
 
-  這項作業會執行特殊案例 @"microsoft.quantum.synthesis.applyxcontrolledontruthtable" ，其中的目標 qubit 已知為 $ \ket {0} $ 狀態。
+  這項作業會執行特殊案例 @"microsoft.quantum.synthesis.applyxcontrolledontruthtable" ，在此案例中，目標量子位已知為 $ \ket {0} $ 狀態。
 
 
-  此執行會使用 @"microsoft.quantum.intrinsic.cnot" 和網 @"microsoft.quantum.intrinsic.r1" 關。  Adjoint 作業的執行已優化，並使用以度量為基礎的 uncomputation。
+  執行會使用和網 @"microsoft.quantum.intrinsic.cnot" @"microsoft.quantum.intrinsic.r1" 關。  Adjoint 作業的實作為優化，並使用以度量為基礎的 uncomputation。
 syntax: 'operation ApplyXControlledOnTruthTableWithCleanTarget (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit'
 input:
   content: '(func : BigInt, controlRegister : Qubit[], target : Qubit)'
@@ -20,12 +20,12 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: controlRegister
-    summary: 註冊控制項 qubits
+    summary: 註冊控制項量子位
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: 目標 qubit （必須是 $ \ket {0} $ state）
+    summary: '目標量子位 (必須是 $ \ket {0} $ state) '
     isPrimitive: true
     uid: Qubit
 output:
@@ -39,9 +39,9 @@ functors:
 seeAlso:
 - microsoft.quantum.synthesis.applyxcontrolledontruthtable
 metadata:
-  ms.openlocfilehash: c779acd9dfcebd3b9a71ba53c66d9e07c19f792b
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 63626151268b4bb522fbd959fdc873c1c7627b93
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886174"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327959"

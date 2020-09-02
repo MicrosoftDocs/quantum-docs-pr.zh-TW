@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
 name: IdenticalPointPosFactFxP
 type: function
-namespace: Microsoft.Quantum.Arithmetic
-summary: 判斷所提供陣列中的所有固定點數位在從最小有效位進行計數時，具有相同的點位置。 亦即，陣列中所有固定點數位的位數減去點位置的數目必須是常數。
+namespace: microsoft.quantum.arithmetic
+summary: 判斷出所提供陣列中的所有固定點數位在從最小的位元數目時，都有相同的點位置。 亦即，陣列中所有固定點數位的位數減去點位置的位數必須是常數。
 syntax: 'function IdenticalPointPosFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit'
 input:
   content: '(fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])'
   types:
   - name: fixedPoints
-    summary: 將檢查相容性的量子固定點數位陣列（使用判斷提示）。
+    summary: 將會使用判斷提示) 檢查相容性 (的量子固定點數位陣列。
     isArray: true
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 4c8d3c487901e7e63c22305ecdeaf3f13dd50da0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d33788f179c75cc524a604e2c41dc343f2bdc1de
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679579"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341916"

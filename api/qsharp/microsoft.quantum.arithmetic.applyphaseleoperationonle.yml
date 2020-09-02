@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
 name: ApplyPhaseLEOperationOnLE
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 在類型<xref:microsoft.quantum.arithmetic.phaselittleendian>的目標暫存器<xref:microsoft.quantum.arithmetic.littleendian>上套用接受暫存器做為輸入的作業。
-remarks: 註冊會藉由使用`PhaseLittleEndian` <xref:microsoft.quantum.canon.qftle>來轉換為，然後在應用程式之後回到其原始標記法`op`。
+namespace: microsoft.quantum.arithmetic
+summary: 在類型的目標暫存器 <xref:microsoft.quantum.arithmetic.littleendian> 上套用接受註冊作為輸入的作業 <xref:microsoft.quantum.arithmetic.phaselittleendian> 。
+remarks: 註冊會透過使用來轉換成 `PhaseLittleEndian` <xref:microsoft.quantum.canon.qftle> ，然後在應用程式之後，再傳回其原始標記法 `op` 。
 syntax: 'operation ApplyPhaseLEOperationOnLE (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,7 +20,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: target
-    summary: 套用作業的註冊。
+    summary: 要套用作業的註冊。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -32,9 +32,9 @@ seeAlso:
 - microsoft.quantum.canon.applyphaseleoperationonlea
 - microsoft.quantum.canon.applyphaseleoperationonleca
 metadata:
-  ms.openlocfilehash: c4923ffd3e0c2ad2321003fad592120b5dcb585f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4ff03eced84ef61914b2e9bef2ec2b92826e6149
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676889"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327823"

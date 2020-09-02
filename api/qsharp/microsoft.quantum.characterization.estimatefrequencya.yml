@@ -2,9 +2,9 @@
 uid: microsoft.quantum.characterization.estimatefrequencya
 name: EstimateFrequencyA
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: 假設有 adjointable 和測量的準備，會藉由執行指定數目的試用來估計該`Zero`測量成功（傳回）的頻率。
-remarks: 針對 adjointable 作業，可以進行某些假設，例如呼叫作業會將 qubits 準備成完全相同的狀態，讓目的電腦能夠進行一些效能優化。
+namespace: microsoft.quantum.characterization
+summary: 針對 adjointable 和測量的準備工作，會透過 `Zero` 執行指定的試用次數，估計 (傳回) 的測量頻率。
+remarks: 針對 adjointable 作業，可以進行某些假設，例如呼叫作業會將量子位準備成完全相同的狀態，如此可讓目的電腦進行一些效能優化。
 syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
@@ -24,7 +24,7 @@ input:
     functors:
     - Adjoint
   - name: measurement
-    summary: 作業 $M $ 代表感利率的測量。
+    summary: 作業 $M $ 代表感興趣的度量。
     isOperation: true
     input:
       types:
@@ -36,23 +36,23 @@ input:
       - isPrimitive: true
         uid: Result
   - name: nQubits
-    summary: 準備和測量各自作用的 qubits 數目。
+    summary: 每個動作的準備和測量量子位數目。
     isPrimitive: true
     uid: Int
   - name: nMeasurements
-    summary: 應該執行測量的次數，以便估計感興趣的頻率。
+    summary: 應執行測量的次數，以估計感興趣的頻率。
     isPrimitive: true
     uid: Int
 output:
   content: Double
   types:
-  - summary: $M （P （\ket{00 \cdots 0} \bra{00 \cdots 0}）） $ 傳回之頻率的估計 $ \hat{p} `Zero`$，使用非偏誤二項式估計工具 $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $ 來取得，其中 $n\_{\uparrow} $ 是觀察到的`Zero`結果數目。
+  - summary: '$M (P ( \ket{00 \cdots 0} \bra{00 \cdots 0} ) # B3 $ 傳回的估計 $ \hat{p} $ `Zero` ，其使用非偏誤二項式估算器 $ \hat{p} = n \_ {\uparrow}/n \_ {\text{measurements}} $ 來取得，其中 $n \_ {\uparrow} $ 是 `Zero` 觀察到的結果數目。'
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 064f6d3cf9c075d635ed27ac4192b5aa4045e4d8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00d54b9dec4e2b57002b04dda4072b9d186baba4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677694"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354530"

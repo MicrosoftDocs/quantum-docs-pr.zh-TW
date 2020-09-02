@@ -2,15 +2,15 @@
 uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
 name: EstimateOverlapBetweenStates
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: 針對每個準備狀態複本的兩項作業，會估計每項操作備妥的狀態之間的平方重迭。
-remarks: 這種作業會使用交換測試來尋找 $ $ \begin{align} \left |\braket{00\cdots 0 |V ^ {\dagger} U |00 \ cdots 0} \right | ^ 2 \end{align} $ $，其中 $U $ 是動作的`preparation1`單一表示，而 $V $ 會對應到`preparation2`其中。
+namespace: microsoft.quantum.characterization
+summary: 假設有兩個作業，每個作業都會準備狀態的複本，並估計每個作業所準備的狀態之間的平方重迭。
+remarks: 這種操作會使用交換測試來尋找 $ $ \begin{align} \left |\braket{00\cdots 0 |V ^ {\dagger} U |00 \ cdots 0} \right | ^ 2 \end{align} $ $，其中 $U $ 是的動作的單一標記法 `preparation1` ，以及 $V $ 對應的位置 `preparation2` 。
 syntax: 'operation EstimateOverlapBetweenStates (preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int)'
   types:
   - name: preparation1
-    summary: 要比較的兩個狀態準備作業的第一個。
+    summary: 要比較的兩個狀態準備作業中的第一個。
     isOperation: true
     input:
       types:
@@ -38,11 +38,11 @@ input:
     functors:
     - Adjoint
   - name: nQubits
-    summary: '`commonPreparation`、 `preparation1`和`preparation2` all 作用的 qubits 數目。'
+    summary: '`commonPreparation`、 `preparation1` 和所有 act 的量子位數目 `preparation2` 。'
     isPrimitive: true
     uid: Int
   - name: nMeasurements
-    summary: 要用於估計重迭的測量數目。
+    summary: 用來估計重迭的度量數目。
     isPrimitive: true
     uid: Int
 output:
@@ -54,9 +54,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 - microsoft.quantum.characterization.estimateimagoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: 6eefd9b32b73d3f73bb31ff81509466e754e20d6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 968b8ec3ba5822475ffea0439a9c1cc84ac995ba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677680"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354479"

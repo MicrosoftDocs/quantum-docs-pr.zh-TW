@@ -2,12 +2,12 @@
 uid: microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
 name: ApplyPermutationUsingDecompositionWithVariableOrder
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: >-
-  使用以分解為基礎的合成，以在配量狀態中 Permutes amplitudes。
+  使用以分解為基礎的合成排列，在量子狀態中 Permutes amplitudes。
 
 
-  這項作業是較一般的版本， @"microsoft.quantum.synthesis.applypermutationusingdecomposition" 可在其中指定變數順序。 不同的變數順序會變更用於受控制閘道的分解順序和事實資料表 @"microsoft.quantum.intrinsic.x" 。  因此，變更變數順序會變更用來實現排列的整體閘道數目。
+  這項作業是 @"microsoft.quantum.synthesis.applypermutationusingdecomposition" 可指定變數順序的一般版本。 不同的變數順序會變更分解順序，以及用於受控制閘道的事實資料表 @"microsoft.quantum.intrinsic.x" 。  因此，變更變數順序會變更用來實現排列的整體閘道數目。
 examples: >-
   若要合成作業 `SWAP` ：
 
@@ -24,17 +24,17 @@ input:
   content: '(perm : Int[], variableOrder : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: perm
-    summary: 從0開始，$ 2 ^ n $ 元素的排列。
+    summary: 從0開始的 $ 2 ^ n $ 元素排列。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: variableOrder
-    summary: 從0開始 $n $ 元素的排列。
+    summary: 從0開始的 $n $ 元素排列。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: qubits
-    summary: 套用排列的 $n $ qubits 清單。
+    summary: 套用排列之 $n $ 量子位的清單。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -48,9 +48,9 @@ seeAlso:
 - microsoft.quantum.synthesis.applypermutationusingdecomposition
 - microsoft.quantum.synthesis.applypermutationusingtransformation
 metadata:
-  ms.openlocfilehash: ef6b24fa5b9c010f01ade622f470aec7c0a25835
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 87a1984cdc281cdea1569604216f66c1c30bae0e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886179"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328044"

@@ -2,17 +2,17 @@
 uid: microsoft.quantum.arithmetic.comparegti
 name: CompareGTI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 整數比較的包裝函`result = x > y`式：。
+namespace: microsoft.quantum.arithmetic
+summary: 整數比較的包裝函式： `result = x > y` 。
 syntax: 'operation CompareGTI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
   types:
   - name: xs
-    summary: 第一個 $n $-bit 數位
+    summary: 第一個 $n $ 位數位
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: 第二個 $n $-bit 數位
+    summary: 第二 $n $ 位數位
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
     summary: 如果 $x > y $，將會翻轉
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: c7db5342b4a01dcb959b12c87dc801b7b7a8f2b3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ca2177b4fc373246c9c018bb3ab2d23fb68cb0f6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679797"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342137"

@@ -2,29 +2,29 @@
 uid: microsoft.quantum.canon.weightonepaulis
 name: WeightOnePaulis
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: 傳回指定 qubits 數目的擁有權數 1 Pauli 運算子陣列。
+namespace: microsoft.quantum.canon
+summary: 傳回指定量子位數目之所有加權 1 Pauli 運算子的陣列。
 syntax: 'function WeightOnePaulis (nQubits : Int) : Pauli[][]'
 input:
   content: '(nQubits : Int)'
   types:
   - name: nQubits
-    summary: 定義所傳回 Pauli 運算子的 qubits 數目。
+    summary: 用來定義所傳回 Pauli 運算子的量子位數目。
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[][]
   types:
-  - summary: 多 qubit Pauli 運算子的陣列，其中每一個都是以長度`nQubits`為的陣列表示。
+  - summary: 多量子位 Pauli 運算子的陣列，其中每個運算子都會表示為具有長度的陣列 `nQubits` 。
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Pauli
 metadata:
-  ms.openlocfilehash: 9e502178d60b75a312f6e5a7b80105c15741b7aa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7c572253aff89ff8607ebc345f3bb4adaa62272c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677876"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354666"

@@ -2,14 +2,14 @@
 uid: microsoft.quantum.simulation.quantumwalkbyqubitization
 name: QuantumWalkByQubitization
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  將區塊編碼反映轉換成配量逐步解說。
+  將區塊編碼反映轉換成量子逐步解說。
 
 
-  假設是`BlockEncodingReflection`由單一 $U $ 所表示，其會將某些運算子 $H 的重要編碼，將它轉換成配量逐步解說 $W $ 包含 $ \pm e ^ {\pm i\sin{-1}^ （H）} $ 的範圍。
+  假設有一個 `BlockEncodingReflection` 由單一 $U $ 將某些運算子編碼 $H $，則會將它轉換成量子逐步解說 $W $ 包含 $ \pm e ^ {\pm i\sin ^ {-1} (H) } $ 的範圍。
 syntax: 'function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
-references: '- Hamiltonian 模擬 by Qubitization Guang 停止 Hao Low，Isaac L. Chuanghttps://arxiv.org/abs/1610.06546'
+references: '- Hamiltonian 模擬，量子位化 Guang Hao Low，Isaac L. Chuang https://arxiv.org/abs/1610.06546'
 input:
   content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection)'
   types:
@@ -18,7 +18,7 @@ input:
 output:
   content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: 配量逐步解說會 $W $ 共同在`a`緩存`s`器上，並將區塊編碼 $H $，並包含 $ \pm e ^ {\Pm i\sin ^{-1}（H）} $ 的範圍。
+  - summary: 量子逐步解說 $W $ 可共同處理暫存器 `a` ，並 `s` 將 $H $ 的區塊編碼，並包含 $ \pm e ^ {\pm i\sin ^ {-1} (H) } $ 的範圍。
     isOperation: true
     input:
       types:
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: e2a6c0469b730140b8584e8cff2aad2d68254793
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cbe89f5020c50fc653db7d629e618c317d528d94
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682488"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328401"

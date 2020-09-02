@@ -2,13 +2,13 @@
 uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 name: TimeDependentGeneratorSystem
 type: newtype
-namespace: Microsoft.Quantum.Simulation
-summary: 表示時間相依的 dynamical 產生器，其為從時間到 dynamical 產生器值的函式。
+namespace: microsoft.quantum.simulation
+summary: 代表時間相依的 dynamical 產生器，做為函式在該時間的時間與 dynamical 產生器的值。
 syntax: newtype TimeDependentGeneratorSystem = (Double -> Microsoft.Quantum.Simulation.GeneratorSystem);
 metadata:
-  ms.openlocfilehash: cc7894d1d136de59b9d065bc66d8109906291992
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 08f6f26881cd55df95f304632ba7e7bd408eccff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687293"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328285"
