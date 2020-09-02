@@ -2,25 +2,25 @@
 uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
 name: RippleCarryAdderNoCarryTTK
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  可還原的就地 ripple-在不執行的情況下加入兩個整數。
+  可反轉的就地 ripple-在不執行的情況下，加入兩個整數。
 
 
-  假設在 LittleEndian 緩存`xs`器和`ys`中編碼的兩個 $n $ bit 整數，作業會計算兩個整數模數 $ 2 ^ n $ 的總和，其中 $n $ 是輸入`xs`和`ys`的位大小。 它不會計算執行位。
-remarks: 這種作業與 RippleCarryAdderTTK 具有相同的功能，但不會傳回「執行位」。
+  假設有兩個 $n $ bit 整數編碼于 LittleEndian 暫存器 `xs` 和中 `ys` ，則作業會計算兩個整數模數 $ 2 ^ n $ 的總和，其中 $n $ 是輸入和的位大小 `xs` `ys` 。 它不會計算執行時位。
+remarks: 這種作業具有與 RippleCarryAdderTTK 相同的功能，但不會傳回執行位。
 syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
-  - Yasuhiro Takahashi、Seiichiro Tani、Noboru Kunihiro：「配量新增線路和未系結的展開傳送」、配量資訊和計算、Vol、2010。
+  - Yasuhiro Takahashi、Seiichiro Tani、Noboru Kunihiro：「量子加法線路和未系結的展開」、量子資訊和計算、2010。
     https://arxiv.org/abs/0910.2530
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
-    summary: LittleEndian qubit register 編碼第一個整數被加數。
+    summary: LittleEndian 量子位登錄第一個整數被加數的編碼。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: LittleEndian qubit 暫存器編碼第二個整數被加數，已修改為保留總和的 $n $ 最低有效位。
+    summary: LittleEndian 量子位暫存器第二個整數被加數的編碼，會修改成保存總和的 $n $ 最不重要的位。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: cf6855325edc354d22b0324f5949a435a11ce8bb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88ebe0e7799d446d4a3ff668a9abe8dd71601642
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676689"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352796"

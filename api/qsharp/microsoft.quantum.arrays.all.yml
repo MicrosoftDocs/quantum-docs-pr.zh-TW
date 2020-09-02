@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.all
 name: All
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 針對陣列的元素定義陣列和述詞，並檢查陣列的所有元素是否符合述詞。
-remarks: "函式是針對泛型型別定義的，也就是說，每當我們有陣列`'T[]`和函數`predicate: 'T -> Bool`時，我們可以產生`Bool`一個值來指出所有專案是否`predicate`符合。"
+namespace: microsoft.quantum.arrays
+summary: 針對陣列的元素定義了陣列和述詞，並檢查陣列的所有元素是否滿足述詞。
+remarks: "函式是針對泛型型別定義的，也就是說，只要有陣列和函式， `'T[]` `predicate: 'T -> Bool` 我們就可以產生一個 `Bool` 值，指出所有元素是否都符合 `predicate` 。"
 examples: >-
   下列程式碼會檢查陣列的所有元素是否為非零：
 
@@ -28,7 +28,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: 從`'T`到`Bool`的函式，用來檢查元素。
+    summary: 中 `'T` `Bool` 用來檢查元素的函式。
     isFunction: true
     input:
       types:
@@ -39,23 +39,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: 的元素陣列`'T`。
+    summary: 的元素陣列 `'T` 。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: 套用`Bool`至所有元素之述詞的和函式值。
+  - summary: 套用至所有專案的述詞之 AND 函式的 `Bool` 值。
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
-  summary: '`array`元素的類型。'
+  summary: 元素的類型 `array` 。
 metadata:
-  ms.openlocfilehash: 116a2a537c4712c968187785873c0546ec236762
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 515dcb29844277e626158e44da4202fae0e7fd61
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676573"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352643"

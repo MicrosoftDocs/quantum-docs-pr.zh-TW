@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.chunks
 name: Chunks
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 將陣列分割成相等長度的多個部分。
-remarks: 請注意，輸出的最後一個元素可能會比`nElements` `Length(arr)`無法被整除的時間短`nElements`。
+namespace: microsoft.quantum.arrays
+summary: 將陣列分割為相等長度的多個部分。
+remarks: 請注意，輸出的最後一個元素可能會比無法整除的還短 `nElements` `Length(arr)` `nElements` 。
 syntax: "function Chunks (nElements : Int, arr : 'T[]) : 'T[][]"
 input:
   content: "(nElements : Int, arr : 'T[])"
@@ -21,16 +21,16 @@ input:
 output:
   content: "'T[][]"
   types:
-  - summary: 陣列，包含原始陣列的每個區塊。
+  - summary: 陣列，其中包含原始陣列的每個區塊。
     isArray: true
     types:
     - isArray: true
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: 283141b3d6826faff9451b122dc0d602edc34500
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 68d4dbf14be8372445eaa0d8034101d314363b00
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676545"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352473"

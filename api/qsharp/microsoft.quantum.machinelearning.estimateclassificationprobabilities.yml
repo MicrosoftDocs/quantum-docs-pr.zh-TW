@@ -2,41 +2,41 @@
 uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
 name: EstimateClassificationProbabilities
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
-summary: 假設有一組範例和一個順序分類器，則會重複測量每個樣本上的分類器輸出，以估計這些樣本的分類機率。
+namespace: microsoft.quantum.machinelearning
+summary: 假設有一組範例和連續的分類器，請重複測量每個樣本上的分類器輸出，以估計這些樣本的分類機率。
 syntax: 'operation EstimateClassificationProbabilities (tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int) : Double[]'
 input:
   content: '(tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int)'
   types:
   - name: tolerance
-    summary: 允許將範例編碼成狀態準備作業的承受度。
+    summary: 允許將範例編碼為狀態準備作業的容錯功能。
     isPrimitive: true
     uid: Double
   - name: model
-    summary: 要用來估計給定範例之分類機率的順序模型。
+    summary: 用來估計給定範例之分類機率的連續模型。
     uid: microsoft.quantum.machinelearning.sequentialmodel
   - name: samples
-    summary: 要分類之每個樣本的功能向量陣列。
+    summary: 要分類的每個範例的功能向量陣列。
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Double
   - name: nMeasurements
-    summary: 要用於估計分類機率的測量數目。
+    summary: 估計分類機率時要使用的度量數目。
     isPrimitive: true
     uid: Int
 output:
   content: Double[]
   types:
-  - summary: 每一個給定範例的分類機率估計值陣列。
+  - summary: 每個給定範例的分類機率估計值陣列。
     isArray: true
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 811f832a57a14e85c5713ce986175e496e623794
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 4a9d35ab2d2030a47c6748ad16af5c7178576103
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885224"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344738"

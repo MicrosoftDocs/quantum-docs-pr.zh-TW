@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.quantumrom
 name: QuantumROM
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  使用量子 ROM 技術來表示指定的密度矩陣。
+  使用量子 ROM 技術來代表指定的密度矩陣。
 
 
-  提供 $N $ 係數 $ \ Alpha_j $ 的清單時，這會傳回一個使用量子 ROM 技術來準備近似值 $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ of 密度矩陣 $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| Alpha_j |} 之淨化的單一 $U ${\ sum_k | \ Alpha_k |}\ket{j}\bra{j} $。 在此近似值中，錯誤 $ \epsilon $ 就是 $ | p_j-\frac{| Alpha_j |}{\ sum_k | \ Alpha_k |} |\le \epsilon/N $ 和 $\|\tilde\rho-\rho\| \le \epsilon $。 換句話說，$ $ \begin{align} U\ket{0}^ {\Lceil\ log_2 N\rceil} \ ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{garbage} _j}。
+  假設有一份 $N $ 係數 $ \ Alpha_j $ 的清單，這會傳回單一 $U $，其使用量子 ROM 技術來準備近似 $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ 淨化的密度對照表 $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| Alpha_j |}{\ sum_k | \ Alpha_k |}\ket{j}\bra{j} $。 在此近似值中，錯誤 $ \epsilon $ 為 $ | p_j-\frac{| Alpha_j |}{\ sum_k | \ Alpha_k |} |\le \epsilon/N $ 和 $ \| \tilde\rho-\rho \| \le \epsilon $。 換句話說，$ $ \begin{align} U\ket {0} ^ {\lceil\ log_2 N\rceil} \ ket {0} ^ {m} = \ sum_ {j = 0} ^ {n-1} \sqrt{p_j} \ket{j}\ket{\text{garbage} _j}。
 
   \end{align} $ $
 examples: >-
-  下列程式碼片段會準備 $ 3 $-qubit state $ \rho = \ sum_ {j = 0} ^{4}\frac{| Alpha_j |} 的淨化{\ sum_k | \ Alpha_k |}\ket{j}\bra{j} $，其中 $ \vec\Alpha = （1.0，2.0，3.0，4.0，5.0） $，錯誤為`1e-3`。
+  下列程式碼片段會準備 $ 3 $-量子位 state $ \rho = \ sum_ {j = 0} ^ {4} \frac{| Alpha_j |} 的淨化{\ sum_k | \ Alpha_k |}\ket{j}\bra{j} $，其中 $ \vec\Alpha = (1.0、2.0、3.0、4.0、5.0) $，而錯誤為 `1e-3` ;
 
 
   ```qsharp
@@ -30,7 +30,7 @@ examples: >-
 
   ```
 syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
-references: '- 在配量線路中使用線性 T 複雜度的電子 Spectra 編碼 Ryan Babbush、Craig Gidney、Dominic W. Berry、Nathan Wiebe、Jarrod McClean、Zitec Paler、奧斯丁 Fowler、Hartmut Nevenhttps://arxiv.org/abs/1805.03662'
+references: '- 使用線性 T 複雜度編碼 Spectra 量子線路中的電子 Ryan Babbush、Craig Gidney、Dominic W. Berry、Nathan Wiebe、Jarrod McClean、Zitec Paler、奧斯丁 Fowler、Hartmut Neven https://arxiv.org/abs/1805.03662'
 input:
   content: '(targetError : Double, coefficients : Double[])'
   types:
@@ -40,9 +40,9 @@ input:
     uid: Double
   - name: coefficients
     summary: >-
-      指定基礎狀態機率的 $N $ 係數陣列。
+      $N $ 係數的陣列，指定基礎狀態的機率。
 
-      負數 $-\ Alpha_j $ 將被視為正 $ | \ Alpha_j | $。
+      負號 $-\ Alpha_j $ 將被視為正 $ | \ Alpha_j | $。
     isArray: true
     isPrimitive: true
     uid: Double
@@ -53,13 +53,13 @@ output:
       ## <a name="first-parameter"></a>第一個參數
 
 
-      元組`(x,(y,z))` ， `x = y + z`其中是配置的 qubits 總數、 `y`是`LittleEndian`註冊的 Qubits 數目，而`z`是垃圾 qubits 的數目。
+      元組， `(x,(y,z))` 其中 `x = y + z` 是配置的量子位總數， `y` 是註冊的量子位數目 `LittleEndian` ，而 `z` 是垃圾量子位的數目。
 
 
       ## <a name="second-parameter"></a>第二個參數
 
 
-      係數陣列的一種標準 $ \ sum_j | \ Alpha_j | $。
+      係數陣列的單一標準 $ \ sum_j | \ Alpha_j | $。
 
 
       ## <a name="third-parameter"></a>第三個參數
@@ -92,9 +92,9 @@ output:
       - Adjoint
       - Controlled
 metadata:
-  ms.openlocfilehash: 9bf373f0cb7c495f8c29a4426861c74fbb0ec7f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f0626eeccd1c8b411f8210b5e59f0321527a39c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686488"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331275"

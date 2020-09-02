@@ -2,13 +2,13 @@
 uid: microsoft.quantum.diagnostics.enabletestingvianame
 name: EnableTestingViaName
 type: newtype
-namespace: Microsoft.Quantum.Diagnostics
-summary: 編譯器可辨識的屬性，您可以透過它來定義替代名稱，以便在載入類型時使用，或針對測試目的進行呼叫。
+namespace: microsoft.quantum.diagnostics
+summary: 編譯器可辨識的屬性，可透過此屬性來定義替代名稱，以便在載入類型或可供測試時使用。
 syntax: newtype EnableTestingViaName = String;
 metadata:
-  ms.openlocfilehash: 769df7a097ddbd49877b72369cd2e72a27e2058c
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 58ae661d98b7177230fa54946bafdd07c77ff38b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885773"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337326"

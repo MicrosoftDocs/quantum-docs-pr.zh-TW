@@ -2,21 +2,21 @@
 uid: microsoft.quantum.diagnostics.dumpmachine
 name: DumpMachine
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: 傾印目前目的電腦的狀態。
 remarks: >-
-  這個方法可讓您將目的機器目前狀態的相關資訊，傾印到檔案或其他位置。
+  這個方法可讓您將目的電腦目前狀態的相關資訊傾印到檔案或其他位置。
 
-  產生的實際資訊以及每一部`location`目的電腦特有的語義。 不過，將空的`()` `location`元組提供為位置（），或只是省略參數，通常是指將輸出產生至主控台。
+  實際產生的資訊和的語義 `location` 都是每個目的電腦的特定資訊。 不過，將空的元組提供為位置 (`()`) ，或只是省略 `location` 參數通常表示要產生主控台的輸出。
 
 
-  對於散發為「配量開發工具組」一部分的本機完整狀態模擬器，這個方法預期會有一個檔案路徑的字串，其中會將 wave 函式以一維複數陣列的形式寫入，其中每個專案都代表測量對應狀態之機率的 amplitudes。
+  對於分散為量子開發工具組一部分的本機完整狀態模擬器，這個方法預期會有檔案路徑的字串，而檔案的路徑會將 wave 函式寫入為一維的複數陣列，其中每個元素都代表測量相對應狀態之機率的 amplitudes。
 syntax: "function DumpMachine (location : 'T) : Unit"
 input:
   content: "(location : 'T)"
   types:
   - name: location
-    summary: 提供有關要在何處產生機器傾印的資訊。
+    summary: 提供有關如何產生機器傾印的資訊。
     uid: "'T"
     isLocal: true
 output:
@@ -26,9 +26,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 7511e0bdded689c84cb90794860dd79e48950414
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7b30ac476cd8c3f5db5344d7ac9cabffd670f1a1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82656564"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337360"

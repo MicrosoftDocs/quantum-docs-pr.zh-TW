@@ -2,7 +2,7 @@
 uid: microsoft.quantum.random.categoricaldistribution
 name: CategoricalDistribution
 type: function
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: 傳回離散類別分佈，其中會明確指定指定結果的每個有限清單的機率。
 examples: >-
   下列 Q # 程式碼會顯示0，機率為30%，而1的機率為70%：
@@ -33,9 +33,9 @@ output:
   - summary: 具有機率的索引 `i` `probs[i] / sum` ，其中 `sum` 是指定的總和 `probs` `Fold(PlusD, 0.0, probs)` 。
     uid: microsoft.quantum.random.discretedistribution
 metadata:
-  ms.openlocfilehash: e81b286a1268e9ad1819a8f77bb375760f95af71
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: a298d84d177c15d67d9d1ec24c8f6a9c11f1cd8b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88863995"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331104"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.diagnostics.dumpoperation
 name: DumpOperation
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: 在指定作業的情況下，會顯示目前執行目標所提供之作業的相關診斷資訊。
 remarks: >-
   呼叫此作業不會從 Q # 內觀察到任何效果。 顯示的確切診斷（如果有的話）取決於目前的執行目標和編輯器環境。
@@ -55,9 +55,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: ba2e3c4dd42faa0919b5777a6db82ce787acb80a
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: c9005373fb2be7bbfcd19870fa741cf4b0d8d754
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88863941"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337343"

@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.prepareuniformsuperposition
 name: PrepareUniformSuperposition
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  建立編碼0到`nIndices`之狀態的統一重迭。
+  建立以0至編碼之狀態的統一迭加 `nIndices` 。
 
 
-  也就是說，這個單一 $U $ 會在給定輸入 state $ \ket{0\cdots 0} $ 的情況下，建立所有數位狀態 $0 $ 到 $M-$1 的統一重迭。 換句話說，$ $ \begin{align} U\ket{0}= \Frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}。
+  亦即，這個單一 $U $ 會根據指定的輸入狀態 $ \ket{0\cdots 0} $，在所有數位狀態 $0 $ 到 $M-$1 的情況下建立統一迭加。 換句話說，$ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}。
 
   \end{align} $ $。
 examples: >-
-  下列範例會準備 $3 $ qubits 上{1}的 state{6}$ \frac {\sqrt} \ sum_ {j{5}= 0} ^ \ket{j} $。
+  下列範例會在 {1} $3 $ 量子位上準備狀態 $ \frac {\sqrt {6} } \ sum_ {j = 0} ^ {5} \ket{j} $。
 
 
   ```Q#
@@ -28,12 +28,12 @@ input:
   content: '(nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: nIndices
-    summary: 在統一重迭中，所需的狀態數目 $M $。
+    summary: 在統一迭加中，所需的狀態數目 $M $。
     isPrimitive: true
     uid: Int
   - name: indexRegister
     summary: >-
-      以`LittleEndian`格式儲存數位狀態的 qubit 註冊。
+      以格式儲存數位狀態的量子位暫存器 `LittleEndian` 。
 
       此暫存器必須能夠儲存 $M-$1 的數位，並假設在 state $ \ket{0\cdots 0} $ 中初始化。
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686532"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331325"
