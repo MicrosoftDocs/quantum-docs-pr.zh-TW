@@ -2,23 +2,23 @@
 uid: microsoft.quantum.characterization.robustphaseestimation
 name: RobustPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: 針對給定的 oracle `U`和 eigenstate 執行健全的非反復式配量階段估計演算法，並以海森堡限制的變異數調整，提供階段的單一實際值估計。
-remarks: 在大量查詢的限制中，Cramer-Rao $ \phi $ 的估計標準差的下限為 $ \sigma \ge 2 \pi/\text{# of 查詢} $。
+namespace: microsoft.quantum.characterization
+summary: 針對給定的 oracle 和 eigenstate 執行健全的非反復式量子階段估計演算法 `U` ，並提供以海森堡限制的變異數調整之階段的單一實際值估計。
+remarks: 在大量查詢的限制中，Cramer-Rao 預估 $ \phi $ 滿足 $ \sigma \ge 2 \pi/\text{的查詢之標準差的下限} $。
 syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
-references: '- 通用單一 Qubit 閘道的健全校正-透過健全的階段估計 Shelby Kimmel、Guang 停止 Hao Low、Theodore 所一 J. Yoderhttps://arxiv.org/abs/1502.02677'
+references: '- 穩固的量子位閘道校正-透過健全的階段預估 Shelby Kimmel、Guang Hao Low、Theodore dreiser 所 J. Yoder https://arxiv.org/abs/1502.02677'
 input:
   content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
   types:
   - name: bitsPrecision
-    summary: 這會使用一些查詢調整，例如 $ \sigma \le 10.7 \pi/\text{# of 查詢} $，以標準差 $ \sigma \le 2 \ pi/2 ^ \text{bitsPrecision} $ 來提供 $ \phi $ 的預估。
+    summary: 這會提供 $ \phi $ with 標準差 $ \sigma \le 2 \ pi/2 ^ \text{bitsPrecision} $ 的估計值，並使用許多查詢規模調整，例如 $ \sigma \le 10.7 \pi/\text{的查詢數} $。
     isPrimitive: true
     uid: Int
   - name: oracle
-    summary: 針對指定的整數 $m $ 執行 $U ^ m $ 的運算。
+    summary: 為指定的整數 $U ^ m $ 執行運算的作業 $m $。
     uid: microsoft.quantum.oracles.discreteoracle
   - name: targetState
-    summary: $U $ 作用的量子暫存器。 如果它儲存 $U $ 的 eigenstate $ \ket{\phi} $，則 $U \ket{\phi} = e ^ {i\phi} \ket{\phi} $ for $ \phi\in （-\pi，\pi] $ 未知的階段。
+    summary: $U $ 作用的量子暫存器。 如果它儲存 $U $ 的 eigenstate $ \ket{\phi} $，則 $U \ket{\phi} = e ^ {i\phi} \ket{\phi} $ 表示 $ \phi\in (-\pi，\pi] $ 未知的階段。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5fa87e4da621871685501d58fa4a70b172f973b7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 098cb9bbf804d93d2e03d4f776bd0e88cb5b25bb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677608"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354258"

@@ -3,18 +3,18 @@ uid: microsoft.quantum.chemistry.jordanwigner.vqe
 name: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
-  summary: 展開 Wigner 係數的精簡標記法，以取得這些和 Pauli 字詞之間的一對一對應。
+  summary: 展開 Wigner 係數的 compact 標記法，以取得這些和 Pauli 詞彙之間的一對一對應。
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
-  summary: 計算計算 Wigner 詞彙預期所需的所有測量運算子。
+  summary: 計算計算 Wigner 期限預期的所有測量運算子。
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
-  summary: 藉由將個別 Wigner 條款的能源加總，來預估分子的能源。
+  summary: 藉由為個別的約旦 Wigner 條款加總，來估計分子的能源。
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
-  summary: 計算與指定的約旦 Wigner Hamiltonian 詞彙相關聯的能源
+  summary: 計算與指定之約旦 Wigner Hamiltonian 期限相關聯的能源
 metadata:
-  ms.openlocfilehash: 60becf06fdae7f096eee7d2752e2f606b98e2890
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 074fd49a4a6d5105051ba5605488679ec89f3ec7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677070"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341457"

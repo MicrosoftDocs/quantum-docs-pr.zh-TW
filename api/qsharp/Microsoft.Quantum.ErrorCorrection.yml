@@ -1,78 +1,78 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.errorcorrection
 name: Microsoft.Quantum.ErrorCorrection
-summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含用於量子錯誤更正的函式、作業和使用者定義類型。"
+summary: " # <a name=\"summary\"></a>摘要\n 此命名空間包含適用于量子錯誤修正的函式、作業和使用者定義類型。"
 functions:
 - uid: microsoft.quantum.errorcorrection.bitflipcode
-  summary: 傳回代表⟦3，1，1⟧位翻轉程式碼編碼器的 QECC 值，以及具有就地的症狀測量的解碼器。
+  summary: 傳回 QECC 值，表示⟦3、1、1⟧位翻轉程式碼編碼器，以及具有就地的症狀測量的解碼器。
 - uid: microsoft.quantum.errorcorrection.bitfliprecoveryfn
-  summary: 針對⟦3，1，1個⟧位翻轉程式碼，所指定的 Pauli 作業的復原的函式（依資料表查閱）。
+  summary: 針對⟦3，1，1⟧位翻轉程式碼的資料表查閱，針對指定的 Pauli 作業進行的復原作業函數。
 - uid: microsoft.quantum.errorcorrection.fivequbitcode
-  summary: 傳回 QECC 值，代表⟦5、1、3⟧程式碼編碼器和具有就地症狀測量的解碼器。
+  summary: 傳回 QECC 值，代表⟦5，1，3⟧代碼編碼器，以及具有就地發生症狀測量的解碼器。
 - uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
-  summary: 傳回函式，將錯誤的症狀測量對應至⟦5，1，3⟧量子代碼的適當錯誤更正 Pauli 運算子（依資料表查閱）。
+  summary: 傳回函式，此函式會將錯誤的症狀度量對應至⟦5，1，3⟧量副程式代碼的資料表查閱適當的錯誤更正 Pauli 運算子。
 - uid: microsoft.quantum.errorcorrection.steanecode
-  summary: 傳回代表⟦7，1，3⟧ Steane 程式碼編碼器的 CSS 值，以及具有就地症狀測量的解碼器。
+  summary: 傳回代表⟦7、1、3⟧ Steane 程式碼編碼器的 CSS 值，以及具有就地發生症狀測量的解碼器。
 - uid: microsoft.quantum.errorcorrection.steanecoderecoveryfns
-  summary: ⟦7，1，3⟧ Steane 量子代碼之「穩定」群組的 X 和 Z 部分結合的解碼器。
+  summary: 適用于⟦7，1，3⟧ Steane 量副程式代碼之穩定型別的 X 和 Z 部分組合的解碼器。
 - uid: microsoft.quantum.errorcorrection.steanecoderecoveryx
-  summary: ⟦7，1，3⟧ Steane 量子代碼之「穩定」群組 X 部分的解碼器。
+  summary: ⟦7，1，3⟧ Steane 量副程式代碼的 X 部分的解碼器。
 - uid: microsoft.quantum.errorcorrection.steanecoderecoveryz
-  summary: ⟦7，1，3⟧ Steane 量子代碼之「穩定」群組的 Z 部分的解碼器。
+  summary: ⟦7，1，3⟧ Steane 量副程式代碼中，Z 部分的的解碼器。
 - uid: microsoft.quantum.errorcorrection.tablelookuprecovery
-  summary: 針對指定之 qubits 暫存器上的 Pauli 作業，此函式會傳回類型的物件， `RecoveryFn` 其中包含執行與指定之 Pauli 作業陣列相關的資料表查閱解碼所需的所有資訊。
+  summary: 針對指定之量子位暫存器上的 Pauli 作業，此函式會傳回類型的物件， `RecoveryFn` 其中包含執行與特定 Pauli 作業陣列相關之資料表查閱解碼所需的所有資訊。
 operations:
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
-  summary: 從 [3，1，3]/⟦3，1，1⟧位翻轉程式碼進行解碼。
+  summary: 從 [3，1，3]/⟦3，1，1⟧位翻轉程式碼解碼。
 - uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
-  summary: 將⟦5，1，3⟧量子代碼解碼。
+  summary: 解碼⟦5，1，3⟧量副程式代碼。
 - uid: microsoft.quantum.errorcorrection.decodefromsteanecode
-  summary: 反向編碼作業，會將未編碼的量子暫存器對應到⟦7，1，3⟧ Steane 量子代碼底下的編碼量子暫存器。
+  summary: 反向編碼作業，會將未編碼的量子暫存器對應至⟦7，1，3⟧ Steane 量副程式代碼下的編碼量子暫存器。
 - uid: microsoft.quantum.errorcorrection.encodeintobitflipcode
-  summary: 編碼為 [3，1，3]/⟦3，1，1⟧位翻轉程式碼。
+  summary: 編碼為 [3，1，3]/⟦3，1，1⟧位-翻轉程式碼。
 - uid: microsoft.quantum.errorcorrection.encodeintofivequbitcode
-  summary: 編碼為⟦5，1，3⟧量子代碼。
+  summary: 編碼為⟦5，1，3⟧量副程式代碼。
 - uid: microsoft.quantum.errorcorrection.encodeintosteanecode
-  summary: 編碼作業，會將未編碼的量子暫存器對應到⟦7，1，3⟧ Steane 量子代碼底下的編碼量子暫存器。
+  summary: 一種編碼作業，會將未編碼的量子暫存器對應至⟦7、1、3⟧ Steane 量副程式代碼底下的編碼量子暫存器。
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
-  summary: 將 Y 軸旋轉的單一 qubit 乘以π/4。
+  summary: 旋轉 Y 軸上的單一量子位與π/4。
 - uid: microsoft.quantum.errorcorrection.knilldistill
-  summary: 執行 Knill 魔術 state 公司演算法。
+  summary: 實行 Knill 魔術 state 公司演算法。
 - uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
-  summary: 測量一組指定的穩定器群組產生器。
+  summary: 測量一組指定的穩定產生器群組。
 - uid: microsoft.quantum.errorcorrection.recover
-  summary: 依據類型所描述的量子代碼，執行單一錯誤更正 `QECC` 。
+  summary: 依類型所描述的量副程式代碼，執行單次錯誤修正 `QECC` 。
 - uid: microsoft.quantum.errorcorrection.recovercss
-  summary: 依據類型所描述的量子代碼，執行單一錯誤更正 `CSS` 。
+  summary: 依類型所描述的量副程式代碼，執行單次錯誤修正 `CSS` 。
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css
-  summary: 分別代表 Calderbank –快速鍵– Steane （CSS）程式碼，如其編碼器、解碼器和其每個錯誤的症狀測量程式所定義 `X` `Z` 。
+  summary: 代表 Calderbank – Shor – Steane (CSS) 的程式碼，如其編碼器、解碼器以及其與錯誤的症狀度量程式所定義 `X` `Z` 。
 - uid: microsoft.quantum.errorcorrection.decodeop
   summary: >-
-    代表將編碼的暫存器解碼成實體暫存器的作業，以及用來記錄症狀的臨時 qubits。
+    代表將編碼的暫存器解碼成實體暫存器的作業，以及用來記錄症狀的臨時量子位。
 
 
     DecodeOp 的引數與從 EncodeOp 傳回的相同，反之亦然。
 - uid: microsoft.quantum.errorcorrection.encodeop
   summary: >-
-    代表使用提供的臨時 qubits，將實體暫存器編碼為邏輯暫存器的作業。
+    表示使用提供的臨時量子位將實體暫存器編碼為邏輯暫存器的作業。
 
 
     第一個引數會被視為將會編碼的實體暫存器，而第二個引數則會被視為將使用的臨時暫存器。
 - uid: microsoft.quantum.errorcorrection.logicalregister
-  summary: 針對編碼邏輯 qubits 的實體 qubits 註冊輸入 `Qubit[]` 。
+  summary: 針對將邏輯量子位編碼的實體量子位註冊類型 `Qubit[]` 。
 - uid: microsoft.quantum.errorcorrection.qecc
-  summary: 代表錯誤更正的程式碼，如其編碼器、解碼器和症狀測量程式所定義。
+  summary: 代表錯誤更正程式碼，如其編碼器、解碼器和症狀度量程式所定義。
 - uid: microsoft.quantum.errorcorrection.recoveryfn
-  summary: 適用于函式的類型，其會將錯誤的症狀對應至可更正偵測到之錯誤的一連串 `Pauli[]` 作業。
+  summary: 適用于將錯誤症狀對應到可更正偵測到之錯誤的一連串作業的函式類型 `Pauli[]` 。
 - uid: microsoft.quantum.errorcorrection.syndrome
-  summary: '`Result[]`指定量子代碼的錯誤症狀之測量結果的類型。'
+  summary: 針對 `Result[]` 指定量副程式代碼的錯誤症狀的測量結果輸入。
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
-  summary: 表示用來測量錯誤更正程式碼區塊之症狀的作業。
+  summary: 表示用來測量錯誤修正程式碼區塊之症狀的作業。
 metadata:
-  ms.openlocfilehash: eed1de587e6bfbfc197113c5cd280ae72df1ce7e
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 6b8fe65de09adf6297ca40420f77719ef19285eb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326603"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341134"

@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.convert
 name: Microsoft.Quantum.Extensions.Convert
-summary: " # <a name=\"summary\"></a>摘要\n 這些是 System. Convert 中的一些函式，也就是與 Q # 類型系統相關的 .NET CLR 命名空間。\n\n # <a name=\"remarks\"></a>備註\n 如果 Bool、Int 和 Double 類型的函式有數個版本，則對應的函式會有後置詞 B、I 和 D。"
+summary: " # <a name=\"summary\"></a>摘要\n 這些是 System. 轉換與 Q # 型別系統中相關的 .NET CLR 命名空間的一些函數。\n\n # <a name=\"remarks\"></a>備註\n 如果有數個適用于 Bool、Int 和 Double 類型的函式版本，對應的函式會有尾碼 B、I 和 D。"
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
   summary: "\n> [!WARNING]\n> 已被取代\n\nBigIntToBools 已被取代。 請改用 @\"microsoft.quantum.convert.bigintasboolarray\"。\n請使用 @\"microsoft.quantum.convert.bigintasboolarray\"。"
@@ -24,9 +24,9 @@ functions:
 - uid: microsoft.quantum.extensions.convert.tostringiformat
   summary: "\n> [!WARNING]\n> 已被取代\n\nToStringIFormat 已被取代。 請改用 @\"microsoft.quantum.convert.intasstringwithformat\"。\n請使用 @\"microsoft.quantum.convert.intasstringwithformat\"。"
 metadata:
-  ms.openlocfilehash: 8196882d8f7edf417f65bcd1651ecb770c4286f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f307cfeabec132c2b3b3953f30a2b0ad208f57a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673298"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341015"

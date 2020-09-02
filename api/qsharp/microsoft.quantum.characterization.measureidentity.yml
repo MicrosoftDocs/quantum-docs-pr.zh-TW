@@ -2,34 +2,34 @@
 uid: microsoft.quantum.characterization.measureidentity
 name: MeasureIdentity
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: 測量 qubits 註冊上的身分識別運算子。
+namespace: microsoft.quantum.characterization
+summary: 測量量子位註冊上的身分識別運算子。
 remarks: >-
-  因為 $ \boldone $ 只有 eigenvalue $1 $，而且沒有負 eigenvalue，所以此作業一律會傳回`Zero`，對應至 eigenvalue $ + 1 = （-1） ^ 0 $，而且不會造成的狀態折迭。 `register`
+  由於 $ \boldone $ 只有 eigenvalue $1 $，而且沒有負 eigenvalue，因此此作業一律 `Zero` 會傳回，對應至 eigenvalue $ + 1 = (-1) ^ $0，而不會造成的狀態折迭 `register` 。
 
 
-  這項作業本身並不實用，但在進程 tomography 的內容中很有用，因為它提供了有關配量處理的追蹤保留資訊。
+  這項作業本身本身並沒有用，但在流程 tomography 的內容中很有用，因為它提供了量子進程的追蹤保留相關資訊。
 
-  特別是，具有損失真測量的目的電腦應該以 $ \boldone $ 的實際測量來取代此作業。
+  尤其是具有失真測量的目的電腦，應該將此作業取代為實際的 $ \boldone $ 度量。
 syntax: 'operation MeasureIdentity (register : Qubit[]) : Result'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: 要測量的暫存器。
+    summary: 要測量的註冊。
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Result
   types:
-  - summary: 結果值`Zero`。
+  - summary: 結果值 `Zero` 。
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9b6b8bfbf8d13bf1415afadd0b520551201cd3d2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677628"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354292"

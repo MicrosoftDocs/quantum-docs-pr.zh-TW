@@ -2,26 +2,26 @@
 uid: microsoft.quantum.math.lg
 name: Lg
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 計算數位的以2為底數的對數。
 syntax: 'function Lg (input : Double) : Double'
 input:
   content: '(input : Double)'
   types:
   - name: input
-    summary: 實際的數位 $x $。
+    summary: $X $ 的實數。
     isPrimitive: true
     uid: Double
 output:
   content: Double
   types:
-  - summary: 以2為底數的對數 $y = \ log_2 （x） $，如此 $x = 2 ^ y $。
+  - summary: 以2為底數的對數 $y = \ log_2 (x) $，如此 $x = 2 ^ y $。
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 2146f224a6c8da738333e3ed190e164c0b3e3969
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5771a12c2869fb04c0cd84981ac5a99f90c9de0f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685311"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334402"
