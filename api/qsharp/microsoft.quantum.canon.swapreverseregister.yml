@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.swapreverseregister
 name: SwapReverseRegister
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 使用交換閘道反轉 qubits 在暫存器中的順序。
+namespace: microsoft.quantum.canon
+summary: 使用交換閘道反轉注冊中量子位的順序。
 syntax: 'operation SwapReverseRegister (register : Qubit[]) : Unit'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: 應使用交換閘道反轉的 qubits 順序
+    summary: 應使用交換閘道反轉的量子位順序
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -22,9 +22,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3e174a7f8248978ba32533213fd5b3ad1d2f7511
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 17c50334ad065f2583283333c194a91c3d1c3525
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678109"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354989"

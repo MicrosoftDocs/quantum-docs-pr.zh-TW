@@ -2,19 +2,19 @@
 uid: microsoft.quantum.simulation.pauliblockencoding
 name: PauliBlockEncoding
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  為 Hamiltonian 建立單一區塊編碼。
+  針對 Hamiltonian 建立單一區塊編碼。
 
 
-  Hamiltonian $H = \ sum_ {j} \ Alpha_j P_j $ 是由 Pauli 詞彙總和 $P _j $ 所描述，每個字詞都有實際係數 $ \ Alpha_j $。
-remarks: 這是藉由準備和 unpreparing state $ \ sum_ {j} \sqrt{\ Alpha_j/\Alpha}\ket{j} $）來取得，並建立一個乘以控制<xref:microsoft.quantum.preparation.statepreparationpositivecoefficients>的<xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>單一和。
+  Hamiltonian $H = \ sum_ {j} \ Alpha_j P_j $ 會以 Pauli 詞彙 $P _j $ 的總和描述，每個詞彙都有實際係數 $ \ Alpha_j $。
+remarks: 這是藉由準備和 unpreparing 狀態 $ \ sum_ {j} \sqrt{\ Alpha_j/\Alpha}\ket{j} $ 來取得，並且會建立相乘控制的單一 <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> 和 <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator> 。
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: '`GeneratorSystem` ，描述 $H $ Pauli 詞彙的總和'
+    summary: '`GeneratorSystem`，描述 $H $ 作為 Pauli 詞彙的總和'
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
@@ -23,21 +23,21 @@ output:
       ## <a name="first-parameter"></a>第一個參數
 
 
-      係數 $ \Alpha = \ sum_ {j} | \ Alpha_j | $ 的一種標準。
+      係數 $ \Alpha = \ sum_ {j} | \ Alpha_j | $ 的一個標準。
 
 
       ## <a name="second-parameter"></a>第二個參數
 
 
-      Hamiltonian `BlockEncodingReflection` $H $ 的單一 $U $。 因為這個單一滿足 $U ^ 2 = I $，所以它也是一個反映。
+      `BlockEncodingReflection`Hamiltonian $H $ 的單一 $U $。 因為這個單一的滿足 $U ^ 2 = I $，所以也是反映。
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a7d259a2d09cb26d46976132589ab6693530cb63
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682550"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329710"

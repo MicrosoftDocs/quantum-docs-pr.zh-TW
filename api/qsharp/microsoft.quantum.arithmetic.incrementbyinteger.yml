@@ -2,24 +2,24 @@
 uid: microsoft.quantum.arithmetic.incrementbyinteger
 name: IncrementByInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  使用階段旋轉，將不帶正負號的量子暫存器遞增為傳統整數。
+  使用階段旋轉，以傳統整數遞增未簽署的量子暫存器。
 
 
-  假設以`target`位元組由小到大的編碼方式，將`increment`不帶正負號的整數 $x $ 編碼，且等於 $a $。
+  假設將 `target` 不帶正負號的整數編碼 $x $ 以位元組由小到大的編碼方式，且 `increment` 等於 $a $。
 
-  然後，此作業會執行單一 $ \ket{x} \mapsto \ket{x + a} $，其中的加法會執行模數 $ 2 ^ n $，其中 $n = \texttt{Length （target！）}$.
+  然後，這項作業會執行單一 $ \ket{x} \mapsto \ket{x + a} $，其中加法會執行模數 $ 2 ^ n $，其中 $n = \texttt{Length (target！ ) } $。
 syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: increment
-    summary: 用來遞增的`target`整數。
+    summary: 用來遞增的整數 `target` 。
     isPrimitive: true
     uid: Int
   - name: target
-    summary: 配量暫存器會使用位元組由小到大編碼來編碼不帶正負號的整數。
+    summary: 量子暫存器使用位元組由小到大編碼來編碼不帶正負號的整數。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: c07015f69d9cab08b287c383230fe79b5d67d6a0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ecd059d615d6e6888807e9ba0afdbeaf422de423
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679547"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342222"
