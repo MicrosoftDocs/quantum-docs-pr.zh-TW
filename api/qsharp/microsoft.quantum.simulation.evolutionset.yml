@@ -2,17 +2,17 @@
 uid: microsoft.quantum.simulation.evolutionset
 name: EvolutionSet
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  代表一組可以立即實及用來執行模擬演算法的閘道。
+  代表一組可用來實作為模擬演算法的閘道。
 
 
-  集合中的專案是由編制索引<xref:microsoft.quantum.simulation.generatorindex>，而且每個集合都是由從`GeneratorIndex`到<xref:microsoft.quantum.simulation.evolutionunitary>的函式所描述，而這些作業是由代表時間的實數來參數化
+  集合中的專案是由所編制索引  <xref:microsoft.quantum.simulation.generatorindex> ，而且每個集合都是由的函式描述 `GeneratorIndex` ，而  <xref:microsoft.quantum.simulation.evolutionunitary> 這是由代表時間的實數所參數化的作業。
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 747986d1374a343827373ef85ac66720ca3c74b6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686993"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343191"

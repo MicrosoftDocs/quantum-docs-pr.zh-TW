@@ -2,34 +2,34 @@
 uid: microsoft.quantum.errorcorrection.encodeintosteanecode
 name: EncodeIntoSteaneCode
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: 編碼作業，會將未編碼的量子暫存器對應到⟦7，1，3⟧ Steane 量子代碼底下的編碼量子暫存器。
+namespace: microsoft.quantum.errorcorrection
+summary: 一種編碼作業，會將未編碼的量子暫存器對應至⟦7、1、3⟧ Steane 量副程式代碼底下的編碼量子暫存器。
 syntax: 'operation EncodeIntoSteaneCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
   - name: physRegister
-    summary: 保存未編碼的量子狀態的 qubit 暫存器
+    summary: 保存未編碼之量子狀態的量子位暫存器
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: auxQubits
-    summary: Qubit 暫存器，其一開始為零，且會新增至量子系統，以便執行編碼作業
+    summary: 量子位暫存器，其一開始是零，並會新增至量子系統，以便執行編碼作業
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
   types:
-  - summary: 在套用 Steane 編碼器之後保留狀態的量子暫存器
+  - summary: 在套用 Steane 編碼器之後保留狀態的量子註冊程式
     uid: microsoft.quantum.errorcorrection.logicalregister
 seeAlso:
 - logicalregister
 - steanecodedecoder
 metadata:
-  ms.openlocfilehash: 57ed5c1f8d9d39feb884bc31520fc556d96153c5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e68ce42d439af4c15e61d49ebeb7ed3657a4d4e5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684983"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336391"
