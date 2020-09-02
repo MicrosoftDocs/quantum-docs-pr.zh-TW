@@ -2,13 +2,13 @@
 uid: microsoft.quantum.errorcorrection.steanecode
 name: SteaneCode
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: 傳回代表⟦7，1，3⟧ Steane 程式碼編碼器的 CSS 值，以及具有就地症狀測量的解碼器。
+namespace: microsoft.quantum.errorcorrection
+summary: 傳回代表⟦7、1、3⟧ Steane 程式碼編碼器的 CSS 值，以及具有就地發生症狀測量的解碼器。
 remarks: >-
-  此程式碼位於下列檔中：
+  下列文章中找到此程式碼：
 
 
-  - A. Steane，「多個物件干擾和量子錯誤修正」，Proc。 Roy. Soc. Lond。 A452 （1996） pp 2551;https://arxiv.org/abs/quant-ph/9601029.
+  - A. Steane，「多個粒子干擾和量子錯誤修正」，處理器。 羅伊。 Soc. Lond。 A452 (1996) pp 2551; https://arxiv.org/abs/quant-ph/9601029.
 syntax: 'function SteaneCode () : Microsoft.Quantum.ErrorCorrection.CSS'
 input:
   content: ()
@@ -16,12 +16,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.CSS
   types:
-  - summary: CSS 類型的物件，它會收集所有相關的資料，以執行⟦7，1，3⟧ Steane 程式碼的編碼和錯誤修正。
+  - summary: CSS 型別的物件，它會收集所有相關資料，以執行⟦7、1、3⟧ Steane 程式碼的編碼和錯誤修正。
     uid: microsoft.quantum.errorcorrection.css
 metadata:
-  ms.openlocfilehash: fd961a82ad1fb99abc9f4b3d7ba061d10680a3aa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: af01020f35baa66113ca5e0992e93f8516e4b176
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682240"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349770"

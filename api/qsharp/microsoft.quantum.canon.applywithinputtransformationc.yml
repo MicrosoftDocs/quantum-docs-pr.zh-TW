@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applywithinputtransformationc
 name: ApplyWithInputTransformationC
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 假設有一項作業接受部分輸入、傳回與該作業相容的輸出，以及該函式的輸入，則會使用函式來套用作業，以將輸入轉換成作業所預期的格式。
+namespace: microsoft.quantum.canon
+summary: 假設有接受一些輸入的作業，傳回與該作業相容之輸出的函式，以及該函式的輸入，則會使用函式來套用作業，以將輸入轉換成作業預期的表單。
 examples: >-
-  下列呼叫會使用@"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" ，將針對@"Microsoft.Quantum.Arithmetic.BigEndian"輸入而設計的作業套用至類型@"Microsoft.Quantum.Arithmetic.LittleEndian"的輸入：
+  下列呼叫會使用 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" ，將針對輸入輸入的作業套用 @"Microsoft.Quantum.Arithmetic.BigEndian" 至類型的輸入 @"Microsoft.Quantum.Arithmetic.LittleEndian" ：
 
 
   ```qsharp
@@ -18,7 +18,7 @@ input:
   content: "(fn : ('U -> 'T), op : ('T => Unit is Ctl), input : 'U)"
   types:
   - name: fn
-    summary: 函式，可將指定的輸入轉換成作業所預期的格式。
+    summary: 將指定輸入轉換成作業預期格式的函式。
     isFunction: true
     input:
       types:
@@ -58,9 +58,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: 0f7538aaa51b3ecf45a4e78db6f214e323f4914c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cb08db44abc2e33548ebe0a428a4b04d352f512a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676259"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357131"

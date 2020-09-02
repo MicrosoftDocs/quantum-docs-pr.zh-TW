@@ -2,8 +2,8 @@
 uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections
 name: ObliviousAmplitudeAmplificationFromPartialReflections
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: 藉由指定部分反射來傳回實遺忘式幅度放大的單一。
+namespace: microsoft.quantum.amplitudeamplification
+summary: 藉由指定部分反射，傳回實無警示幅度放大的單一。
 syntax: 'function ObliviousAmplitudeAmplificationFromPartialReflections (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
@@ -36,9 +36,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: da379bbb849682efb71cf57d45bd0f2909ec8842
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fa27f9bec9868d01803b964bceb09a2b3b3f90d3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672933"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340420"

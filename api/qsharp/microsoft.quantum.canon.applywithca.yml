@@ -2,19 +2,19 @@
 uid: microsoft.quantum.canon.applywithca
 name: ApplyWithCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  假設有兩個作業，則會套用一個做為 conjugated 與另一個。
+  假設有兩個作業，請將其套用為另一個作業的 conjugated。
 
 
-  假設有兩個作業分別由單一運算子 $U $ 和 $V $ 所描述，則會以 $U ^ {\dagger} V U $ 的順序套用。 也就是說，這項作業會執行 $V $ conjugated 搭配 $U $ 所提供的單一運算子。
-remarks: 外部作業一律會假設為 adjointable，但不需要是可控制的，以便讓合併作業可以控制。
+  假設有兩個作業，分別由單一運算子 $U $ 和 $V $，則會以 $U ^ {\dagger} V U $ 的順序套用。 也就是說，這項作業會透過 $U $ conjugated，來實 $V $ 所指定的單一運算子。
+remarks: 外部作業一律會假設為 adjointable，但不需要進行控制，才能讓合併作業成為可控制的。
 syntax: "operation ApplyWithCA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T)"
   types:
   - name: outerOperation
-    summary: 應該用來 $V $ 的運算 $U $。 請注意，外部作業 $U $ 需要 adjointable，但不需要是可控制的。
+    summary: 作業 $U $，其應用於共軛 $V $。 請注意，$U $ 的外部作業需要 adjointable，但不需要是可控制的。
     isOperation: true
     input:
       types:
@@ -60,9 +60,9 @@ seeAlso:
 - applywitha
 - applywithc
 metadata:
-  ms.openlocfilehash: 4e61318e300685103840a759e30e5dd11d9f412f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d1cdd3e6752f7296d9c18a887853d2dc721fc791
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674505"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357165"

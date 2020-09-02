@@ -2,20 +2,20 @@
 uid: microsoft.quantum.amplitudeamplification.applyamplitudeamplification
 name: ApplyAmplitudeAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: 使用一組指定的階段和 oracles 來反映初始和最終狀態，以在指定的暫存器上套用波幅放大。
+namespace: microsoft.quantum.amplitudeamplification
+summary: 在指定的暫存器上套用振幅放大，並使用一組指定的階段和 oracle 來反映初始和最終狀態。
 syntax: 'operation ApplyAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, target : Qubit[]) : Unit'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, target : Qubit[])'
   types:
   - name: phases
-    summary: 一組階段，描述在「振幅放大」演算法的每個步驟中的部分反射。 如需範例，請參閱 @"microsoft.quantum.amplitudeamplification.standardreflectionphases"。
+    summary: 一組階段，描述振幅放大演算法之每個步驟的部分反射。 如需範例，請參閱 @"microsoft.quantum.amplitudeamplification.standardreflectionphases"。
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
   - name: startStateReflection
     summary: 反映初始狀態的 oracle。
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: targetStateReflection
-    summary: 反映所需最終狀態的 oracle。
+    summary: 反映預期最終狀態的 oracle。
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: target
     summary: 要在其上執行振幅放大的暫存器。
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d9381587b10f24411e9b712559e15345784e36e1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1c7069bf0e404ce043c242e9f546904b642b8bb0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672964"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340590"

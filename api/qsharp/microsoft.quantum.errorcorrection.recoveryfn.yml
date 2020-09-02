@@ -2,13 +2,13 @@
 uid: microsoft.quantum.errorcorrection.recoveryfn
 name: RecoveryFn
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: 適用于函式的類型，其會將錯誤的`Pauli[]`症狀對應至可更正偵測到之錯誤的一連串作業。
+namespace: microsoft.quantum.errorcorrection
+summary: 適用于將錯誤症狀對應到可更正偵測到之錯誤的一連串作業的函式類型 `Pauli[]` 。
 syntax: newtype RecoveryFn = (Microsoft.Quantum.ErrorCorrection.Syndrome -> Pauli[]);
 metadata:
-  ms.openlocfilehash: 22e0388c451f81a9df4e446104987685bdd458c3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fc9ef151c1f794a2f72129789518def49903e31d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682250"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349804"

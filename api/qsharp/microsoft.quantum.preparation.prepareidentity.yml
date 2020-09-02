@@ -2,18 +2,18 @@
 uid: microsoft.quantum.preparation.prepareidentity
 name: PrepareIdentity
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  在指定暫存器的情況下，以最常混合狀態準備該註冊。
+  在指定暫存器的情況下，以充分混合狀態準備該註冊。
 
 
-  註冊是以 $ \boldone/2 ^ N $ 狀態來準備，方法是將完整的 depolarizing 通道套用至每個 qubit，其中 $N $ 是暫存器的長度。
+  註冊會在 $ \boldone/2 ^ N $ 狀態中備妥，方法是將完整的 depolarizing 通道套用到每個量子位，其中 $N $ 是註冊的長度。
 syntax: 'operation PrepareIdentity (register : Qubit[]) : Unit'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: 以上述方式 depolarized 其狀態的註冊。
+    summary: 要以上述方式 depolarized 其狀態的註冊。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -25,9 +25,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.preparesinglequbitidentity
 metadata:
-  ms.openlocfilehash: d6ff10bb6251b96e7a6ba58d1afa1e4ab8eaab0a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f772dfd3fc71cb82243b2c45264eb3d01eaeb689
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673457"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331410"

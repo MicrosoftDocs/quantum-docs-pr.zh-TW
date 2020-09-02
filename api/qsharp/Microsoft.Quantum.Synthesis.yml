@@ -1,24 +1,24 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.synthesis
 name: Microsoft.Quantum.Synthesis
-summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間包含以排列和布耳函數為基礎之合成配量作業的函式和作業。"
+summary: " # <a name=\"summary\"></a>摘要\n 此命名空間包含的函式和作業可根據排列和布耳函數來合成量子作業。"
 operations:
 - uid: microsoft.quantum.synthesis.applypermutationusingdecomposition
-  summary: 使用以分解為基礎的合成，以在配量狀態中 Permutes amplitudes。
+  summary: 使用以分解為基礎的合成排列，在量子狀態中 Permutes amplitudes。
 - uid: microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
-  summary: 使用以分解為基礎的合成，以在配量狀態中 Permutes amplitudes。
+  summary: 使用以分解為基礎的合成排列，在量子狀態中 Permutes amplitudes。
 - uid: microsoft.quantum.synthesis.applypermutationusingtransformation
-  summary: 使用以轉換為基礎的合成，以配量狀態 Permutes amplitudes。
+  summary: 使用以轉換為基礎的合成排列，在量子狀態中 Permutes amplitudes。
 - uid: microsoft.quantum.synthesis.applytransposition
   summary: ''
 - uid: microsoft.quantum.synthesis.applyxcontrolledontruthtable
-  summary: 針對 @"microsoft.quantum.intrinsic.x" `target` 中的傳統指派，如果布耳函數 `func` 評估為 true，則會在上套用作業 `controlRegister` 。
+  summary: '@"microsoft.quantum.intrinsic.x" `target` 如果布耳函數 `func` 針對中的傳統指派評估為 true，則會在上套用運算 `controlRegister` 。'
 - uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
-  summary: 針對 @"microsoft.quantum.intrinsic.x" `target` 中的傳統指派，如果布耳函數 `func` 評估為 true，則會在上套用作業 `controlRegister` 。
+  summary: '@"microsoft.quantum.intrinsic.x" `target` 如果布耳函數 `func` 針對中的傳統指派評估為 true，則會在上套用運算 `controlRegister` 。'
 metadata:
-  ms.openlocfilehash: d12a16656826134cfe8c9fb44a1c577c267a6603
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 2b7fa4674af8d6f0a99f1579d323cd3ae90b5635
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886224"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340726"

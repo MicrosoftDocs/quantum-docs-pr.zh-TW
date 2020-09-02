@@ -2,18 +2,18 @@
 uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
 name: ApplyFixedPointAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: 固定點振幅放大演算法
-remarks: StartQubits 必須是 $ \ket{0 \cdots 0} $ 狀態。 這項作業會反復查看數個 $2 $ 的查詢，直到達到最大的查詢數目，或找到目標狀態為止。
+remarks: StartQubits 必須是 $ \ket{0 \cdots 0} $ 狀態。 這項作業會逐一查看多個 $2 $ 的查詢，直到達到最大的查詢數目，或找到目標狀態為止。
 syntax: 'operation ApplyFixedPointAmplification (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
 input:
   content: '(statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[])'
   types:
   - name: statePrepOracle
-    summary: 準備啟動狀態的單一 oracle。
+    summary: 準備開始狀態的單一 oracle。
     uid: microsoft.quantum.oracles.stateoracle
   - name: startQubits
-    summary: Qubit register
+    summary: 量子位註冊
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 097e3f67cdecfd0ee31bd48e4f64aec659353159
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2a2918e6b9e3cf64a3536a6cbecd7432f084494f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676944"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340539"

@@ -2,14 +2,14 @@
 uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
 name: AmplitudeAmplificationFromStatePreparation
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: 以 oracles 進行部分反射的振幅放大。
+namespace: microsoft.quantum.amplitudeamplification
+summary: 部分反射的波幅放大（依 oracle）。
 remarks: >-
-  這會在開始和目標狀態的形式上，比中`AmpAmpByReflectionPhases`更嚴格的條件。
+  如此一來，在開始和目標狀態的表單上會產生更嚴格的條件 `AmpAmpByReflectionPhases` 。
 
-  假設目標狀態是以 $ \ket{1}\_f $ 標記。
+  假設目標狀態是以 $ \ket {1} \_ f $ 標示。
 
-  {0} \_假設 \begin{align} A\ket{0}\_{f} \ket s = \lambda\ket{1}\_f\ket {\ text {target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，\end{align} 在多數情況下`flagQubit` `auxiliaryRegister`是以 state $ \ket{0}\_{f} \ket{0}\_s $ 初始化。
+  假設 \begin{align} A\ket {0} \_ {f} \ket {0} \_ s = \lambda\ket {1} \_ f\ket {\ text {target}} \_ s + \sqrt{1-| \lambda | ^ 2} \ket {0} \_ f\cdots，\end{align} 在大部分的情況下， `flagQubit` 並 `auxiliaryRegister` 在 state $ \ket {0} \_ {f} \ket {0} \_ s $ 中初始化。
 syntax: 'function AmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
@@ -21,13 +21,13 @@ input:
     summary: 準備開始狀態的單一 oracle $A $
     uid: microsoft.quantum.oracles.stateoracle
   - name: idxFlagQubit
-    summary: Qubit 旗標的索引
+    summary: 索引至旗標量子位
     isPrimitive: true
     uid: Int
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: 一種作業，可執行部分反射所實 oracles 的振幅放大。
+  - summary: 一種作業，可由部分反射實作為 oracle 來執行幅度放大。
     isOperation: true
     input:
       types:
@@ -42,9 +42,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 2d29383db3cebfe1848a1fcee3115fcee0825d4d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de9059b0abc7eb8fd622c72561b8875e07a831ad
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676957"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340658"

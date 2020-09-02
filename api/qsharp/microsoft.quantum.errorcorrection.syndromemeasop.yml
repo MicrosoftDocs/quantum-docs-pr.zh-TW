@@ -2,15 +2,15 @@
 uid: microsoft.quantum.errorcorrection.syndromemeasop
 name: SyndromeMeasOp
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: 表示用來測量錯誤更正程式碼區塊之症狀的作業。
+namespace: microsoft.quantum.errorcorrection
+summary: 表示用來測量錯誤修正程式碼區塊之症狀的作業。
 remarks: >-
-  簽章 `(LogicalRegister => Syndrome)` 代表的作業會與中的 qubits 共同運作 `LogicalRegister` ，而某些輔助 qubits 接著會加上輔助 qubits 的測量，以解壓縮 `Syndrome` 代表 `Result[]` 這些測量之的值。
+  簽章 `(LogicalRegister => Syndrome)` 代表一項作業，該作業會共同在的量子位上運作 `LogicalRegister` ，而有些輔助量子位則接著輔助量子位的度量，以將 `Syndrome` 代表 `Result[]` 這些測量之的值解壓縮。
 
 
   ### <a name="examples"></a>範例
 
-  使用待用 \rangle，以非容錯的方式測量位翻轉程式 $S 代碼的 syndromes = \langle ZZI、IZZ qubits $：
+  Syndromes = \langle ZZI，IZZ \rangle $ 以非容錯方式使用臨時量子位的「位-翻轉」程式 $S 代碼的測量：
 
 
   ```qsharp
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: e4c011bcbe4200fe894962e0432f4c5c358d0295
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 529eea0e693460624c8cd842bf04a5ce499fad4e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885759"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349617"

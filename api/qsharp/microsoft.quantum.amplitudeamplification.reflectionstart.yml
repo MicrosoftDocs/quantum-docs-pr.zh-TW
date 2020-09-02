@@ -2,8 +2,8 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionstart
 name: ReflectionStart
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: 會建立有關全部-零字串 | 0 ... 0 〉的反映，這是對振幅放大的一般輸入狀態。
+namespace: microsoft.quantum.amplitudeamplification
+summary: 針對全零字串 | 0 ... 0 〉建立反映，這是振幅放大的一般輸入狀態。
 syntax: 'function ReflectionStart () : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: ()
@@ -16,9 +16,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
 metadata:
-  ms.openlocfilehash: ab686a67cd7cd46b7651b4ca79ec79fff664116d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f79d2b494a407e5d6d9cb750794823ea2faa8302
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680103"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340267"

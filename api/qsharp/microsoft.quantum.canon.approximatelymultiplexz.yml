@@ -2,39 +2,39 @@
 uid: microsoft.quantum.canon.approximatelymultiplexz
 name: ApproximatelyMultiplexZ
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  在 qubits 陣列上套用 Pauli Z 旋轉，並根據指定的容錯來截斷小型旋轉角度。
+  在量子位陣列上套用 Pauli Z 旋轉，並根據指定的容錯截斷小旋轉角度。
 
 
-  這適用于乘以 $n $-qubit number state $ \ket{j} $ 所控制的單一 qubit Pauli 運算子 $Z $，以角度 $ \ theta_j $ 來執行旋轉的乘法控制單一運算。
+  這會套用由 $n $-量子位 number state $ \ket{j} $ 控制時，依角度 $ \ theta_j $ 對單一量子位 Pauli 運算子 $Z $ 執行旋轉的乘法受控制的單一作業。
 
-  特別是，這項作業可以由單一
+  尤其是，這項作業可以由單一
 
 
-  $ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j} \otimes e ^ {i Z theta_j}。
+  $ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j} \otimes e ^ {i Z \ theta_j}。
 
   \end{align} $ $
-remarks: '`coefficients`如果指定了少於 $ 2 ^ n $，將會以 $ \ theta_j = $0.0 的元素填補。'
+remarks: '`coefficients` 如果指定了少於 $ 2 ^ n $ 的元素，則會以 $ \ theta_j = $0.0 填補。'
 syntax: 'operation ApproximatelyMultiplexZ (tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
-references: '- Vivek Shende、Stephen Bullock、Igor L. Markov 的量子邏輯電路合成https://arxiv.org/abs/quant-ph/0406176'
+references: '- 量子邏輯電路的合成 Vivek V. Shende、Stephen S. Bullock、Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
   content: '(tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: tolerance
-    summary: 較小的係數會被截斷的容錯。
+    summary: 低於的容錯會被截斷。
     isPrimitive: true
     uid: Double
   - name: coefficients
-    summary: 最多 $ 2 ^ n $ 係數 $ \ theta_j $ 的陣列。 $J $ th 的係數會以位元組由小到大的格式來編制編碼的數位 state $ \ket{j} $。
+    summary: 最多 $ 2 ^ n $ 係數 $ \ theta_j $ 的陣列。 $J $ th 係數會以位元組由大到小的格式來編制數位狀態 $ \ket{j} $ 編碼。
     isArray: true
     isPrimitive: true
     uid: Double
   - name: control
-    summary: $n $ qubit 控制項暫存器，其會將數位狀態 $ \ket{j} $ 編碼為位元組由小到大的格式。
+    summary: 以位元組由大到小的格式，$n $ 量子位 control register 編碼數位狀態 $ \ket{j} $。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: $E ^ {i P \ theta_j} $ 旋轉的單一 qubit 註冊。
+    summary: 由 $e ^ {i P \ theta_j} $ 旋轉的單一量子位註冊。
     isPrimitive: true
     uid: Qubit
 output:
@@ -48,9 +48,9 @@ functors:
 seeAlso:
 - multiplexz
 metadata:
-  ms.openlocfilehash: 0c544983871e9b88acb87ddf387700edf0ad7024
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b06121839035fc0bdaef2f59298e30fe0fd75390
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674429"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357046"
