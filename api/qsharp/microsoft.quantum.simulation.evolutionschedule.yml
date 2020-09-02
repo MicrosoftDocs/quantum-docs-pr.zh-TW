@@ -2,17 +2,17 @@
 uid: microsoft.quantum.simulation.evolutionschedule
 name: EvolutionSchedule
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  表示時間相依的 dynamical 產生器。
+  代表時間相依的 dynamical 產生器。
 
 
   `Double`參數是 $ [0，1] $ 中的排程。
 syntax: newtype EvolutionSchedule = (Microsoft.Quantum.Simulation.EvolutionSet, (Double -> Microsoft.Quantum.Simulation.GeneratorSystem));
 metadata:
-  ms.openlocfilehash: 99e49eb5e118dc64f8fab3a8ef75a796651c3734
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e6fdee28dc3c2b8c2de9e58282ec12abd351cafd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655146"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343242"

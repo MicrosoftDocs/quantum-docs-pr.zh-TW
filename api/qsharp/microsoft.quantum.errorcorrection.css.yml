@@ -2,13 +2,13 @@
 uid: microsoft.quantum.errorcorrection.css
 name: CSS
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: 分別代表 Calderbank –快速鍵– Steane （CSS）程式碼，如其編碼器、解碼器和其每個`X` `Z`錯誤的症狀測量程式所定義。
+namespace: microsoft.quantum.errorcorrection
+summary: 代表 Calderbank – Shor – Steane (CSS) 的程式碼，如其編碼器、解碼器以及其與錯誤的症狀度量程式所定義 `X` `Z` 。
 syntax: newtype CSS = (Microsoft.Quantum.ErrorCorrection.EncodeOp, Microsoft.Quantum.ErrorCorrection.DecodeOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp);
 metadata:
-  ms.openlocfilehash: b1bedcc35249997229cb7d6615df0ad756b4f5ca
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee80335b929e9c1e4ef5fc67dee03ad9dc99bd29
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685603"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336629"

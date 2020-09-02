@@ -2,8 +2,8 @@
 uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
 name: DecodeFromBitFlipCode
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: 從 [3，1，3]/⟦3，1，1⟧位翻轉程式碼進行解碼。
+namespace: microsoft.quantum.errorcorrection
+summary: 從 [3，1，3]/⟦3，1，1⟧位翻轉程式碼解碼。
 syntax: 'operation DecodeFromBitFlipCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
 input:
   content: '(logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
@@ -14,7 +14,7 @@ input:
 output:
   content: (Qubit[], Qubit[])
   types:
-  - summary: 編碼為邏輯暫存器的資料的元組，以及用來代表其症狀的輔助 qubits。
+  - summary: 編碼為邏輯暫存器之資料的元組，以及用來代表症狀的輔助量子位。
     types:
     - isArray: true
       isPrimitive: true
@@ -26,9 +26,9 @@ seeAlso:
 - logicalregister
 - encodeintobitflipcode
 metadata:
-  ms.openlocfilehash: 22b892a4b6f52c6d577fff954de4e3912c635853
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4a176a3f186e298e98765fa1aa9effe70904d44b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685616"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336595"

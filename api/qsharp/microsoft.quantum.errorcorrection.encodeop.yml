@@ -2,17 +2,17 @@
 uid: microsoft.quantum.errorcorrection.encodeop
 name: EncodeOp
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
-  代表使用提供的臨時 qubits，將實體暫存器編碼為邏輯暫存器的作業。
+  表示使用提供的臨時量子位將實體暫存器編碼為邏輯暫存器的作業。
 
 
   第一個引數會被視為將會編碼的實體暫存器，而第二個引數則會被視為將使用的臨時暫存器。
 syntax: newtype EncodeOp = ((Qubit[], Qubit[]) => Microsoft.Quantum.ErrorCorrection.LogicalRegister);
 metadata:
-  ms.openlocfilehash: 610b9de9ccf236855c8669ac7df41fde6c297533
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7962cc819dc32f48ac2e2e48e6039aa451ec7a26
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684953"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336306"

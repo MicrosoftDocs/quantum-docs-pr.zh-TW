@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.repeatca
 name: RepeatCA
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 重複指定次數的作業。
+namespace: microsoft.quantum.canon
+summary: 以指定的次數重複作業。
 examples: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```Q#
@@ -58,9 +58,9 @@ seeAlso:
 - microsoft.quantum.canon.repeata
 - microsoft.quantum.canon.repeatc
 metadata:
-  ms.openlocfilehash: 5be215cc15ab50668958519b22183afc3e122372
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 726f41b94823916331b95bcf6e80c6505dc69767
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886543"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355550"

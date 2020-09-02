@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.addgeneratorsystems
 name: AddGeneratorSystems
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: 新增兩`GeneratorSystem`個以建立新`GeneratorSystem`的。
+namespace: microsoft.quantum.simulation
+summary: 新增兩個 `GeneratorSystem` 來建立新的 `GeneratorSystem` 。
 syntax: 'function AddGeneratorSystems (generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -17,14 +17,14 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: ， `GeneratorSystem`代表屬於輸入產生器系統總和的系統。
+  - summary: '`GeneratorSystem`代表系統的，這是輸入產生器系統的總和。'
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: 09ce9de385a86207d69224ed3d90a3294f93fdb4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 69090e620f3333391e0138bf38ab292dff48a37e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683066"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330288"

@@ -2,17 +2,17 @@
 uid: microsoft.quantum.simulation.evolutiongenerator
 name: EvolutionGenerator
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  將 dynamical 產生器表示為一組 simulatable 閘道，並以該基礎的角度進行擴充。
+  將 dynamical 產生器表示為一組 simulatable 閘道，並以該基礎進行擴充。
 
 
   詞彙數目的最後一個參數。
 syntax: newtype EvolutionGenerator = (Microsoft.Quantum.Simulation.EvolutionSet, Microsoft.Quantum.Simulation.GeneratorSystem);
 metadata:
-  ms.openlocfilehash: 83d2c39d50ce84510ecca7276074287789e1aa8d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4015fe9075678e1f2f8f701cfc5373f11384600e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686859"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343225"

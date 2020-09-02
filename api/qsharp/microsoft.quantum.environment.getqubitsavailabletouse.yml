@@ -2,8 +2,8 @@
 uid: microsoft.quantum.environment.getqubitsavailabletouse
 name: GetQubitsAvailableToUse
 type: operation
-namespace: Microsoft.Quantum.Environment
-summary: 傳回目前可供使用的 qubits 數目。
+namespace: microsoft.quantum.environment
+summary: 傳回目前可供使用的量子位數目。
 syntax: 'operation GetQubitsAvailableToUse () : Int'
 input:
   content: ()
@@ -12,17 +12,17 @@ output:
   content: Int
   types:
   - summary: >-
-      可以在`using`語句中配置的 qubits 數目。
+      可以在語句中配置的量子位數目 `using` 。
 
-      如果使用的目的電腦未提供此資訊，則`-1`會傳回。
+      如果正在使用的目的電腦未提供此資訊，則 `-1` 會傳回。
     isPrimitive: true
     uid: Int
 seeAlso:
 - getqubitsavailabletoborrow
 metadata:
-  ms.openlocfilehash: 82d8c27064cbb234b32707aa31fb0869f66ce23c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0a6add52244bc38c3e74e5280c3ef007a22c94c7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682390"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336799"

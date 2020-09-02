@@ -2,12 +2,12 @@
 uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
 name: FiveQubitCodeRecoveryFn
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: 傳回函式，將錯誤的症狀測量對應至⟦5，1，3⟧量子代碼的適當錯誤更正 Pauli 運算子（依資料表查閱）。
+namespace: microsoft.quantum.errorcorrection
+summary: 傳回函式，此函式會將錯誤的症狀度量對應至⟦5，1，3⟧量副程式代碼的資料表查閱適當的錯誤更正 Pauli 運算子。
 remarks: >-
-  藉由逐一查看擁有權數 $1 $ 的錯誤，我們總共取得 $ 3 \ 次 5 = 15 $ 可能的非一般 syndromes。
+  藉由逐一查看權數 $1 $ 的所有錯誤，我們總共取得了 $ 3 \ 乘以 5 = 15 $ 的非一般 syndromes。
 
-  連同身分識別，會建立一份錯誤資料表和對應的症狀。 針對5個 qubit 程式碼，此資料表是由所\_提供： $X 1：（0，0，0，1）;X\_2：（1，0，0，0）;X\_3：（1，1，0，0）;X\_4：（0，1，1，0）;X\_5：（0，0，1，1） $，$Z\_1：（1，0，1，0）;Z\_2：（0，1，0，1）;Z\_3：（0，0，1，0）;Z\_4：（1，0，0，1）;Z\_5：（0，1，0，0） $ 加上 $Y _i $，方法是新增 $X _i $ 和 $Z _i $ syndromes。 請注意，資料表查閱復原中的順序是藉由將 bitvectors 轉換成整數（使用位元組由小到大）來指定。
+  與身分識別一起，會建立錯誤資料表和對應的症狀。 在5個量子位程式碼中，此資料表是由所提供： $X \_ 1： (0、0、0、1) ;X \_ 2： (1、0、0、0) ;X \_ 3： (1、1、0、0) ;X \_ 4： (0、1、1、0) ;X \_ 5： (0、0、1、1) $、$Z \_ 1： (1、0、1、0) ;Z \_ 2： (0、1、0、1) ;Z \_ 3： (0、0、1、0) ;Z \_ 4： (1、0、0、1) ;Z \_ 5： (0、1、0、0) $，$Y _i $，方法是新增 $X _i $ 和 $Z _i $ syndromes。 請注意，資料表查閱復原中的順序是藉由將 bitvectors 轉換為整數 (使用位元組由小到大的) 來提供。
 syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: ()
@@ -15,14 +15,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: 類型`RecoveryFn`的函式，其採用不`Result[]`會進行症狀`Pauli[]`測量，並傳回更正偵測到之錯誤的運算子。
+  - summary: 型別為 `RecoveryFn` 的函式，它會接受發生症狀測量 `Result[]` ，並傳回 `Pauli[]` 可更正偵測到之錯誤的運算子。
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - recoveryfn
 metadata:
-  ms.openlocfilehash: 8de748ddaf446cfcf7b8694079bd84bfc171211c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3219f90d40817e810f6adff53d8d843ad419e66b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684892"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336238"
