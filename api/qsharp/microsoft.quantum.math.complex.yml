@@ -2,16 +2,16 @@
 uid: microsoft.quantum.math.complex
 name: Complex
 type: newtype
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
   以實數和虛陣列件表示複數。
 
-  元組的第一個元素是 real 元件，第二個是虛陣列件。
+  元組的第一個元素是真正的元件，第二個是虛構的元件。
 syntax: newtype Complex = (Double, Double);
 metadata:
-  ms.openlocfilehash: f95be6b5e742421712458d171c21e989a68e342b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8462531555c8e27a30cadf05f9f4a59a57ad1026
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683370"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344330"

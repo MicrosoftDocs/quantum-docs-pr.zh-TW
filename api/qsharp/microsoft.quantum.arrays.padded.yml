@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.padded
 name: Padded
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 傳回以指定的值（最多為指定的長度）填補的陣列。
+namespace: microsoft.quantum.arrays
+summary: 傳回以指定的值填補的陣列（最多指定長度）。
 examples: >-
   ```qsharp
 
@@ -23,7 +23,7 @@ input:
   content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
   types:
   - name: nElementsTotal
-    summary: 填補之陣列的長度。 如果這是正數， `inputArray`則會在標頭填補。 如果這是負數， `inputArray`會在結尾填補。
+    summary: 填補陣列的長度。 如果這是正面的， `inputArray` 則會在標頭填補。 如果是負數， `inputArray` 則會在結尾填補。
     isPrimitive: true
     uid: Int
   - name: defaultElement
@@ -31,14 +31,14 @@ input:
     uid: "'T"
     isLocal: true
   - name: inputArray
-    summary: 陣列，其值位於輸出陣列的開頭。
+    summary: 其值位於輸出陣列開頭的陣列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: 陣列`output` ，其為開頭`inputArray`為`defaultElement`s 的填補，直到`output`有長度`nElementsTotal`
+  - summary: 陣列，該陣列 `output` 是 `inputArray` 以 s 為開頭且 `defaultElement` `output` 長度為的。 `nElementsTotal`
     isArray: true
     uid: "'T"
     isLocal: true
@@ -46,9 +46,9 @@ typeParameters:
 - uid: "'T"
   summary: 陣列元素的類型。
 metadata:
-  ms.openlocfilehash: 6fafc015026ca9b369e23fda702af172867444ca
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 37b2f4bae9b5f055762ac1d84fef30d13f35a741
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680896"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351912"

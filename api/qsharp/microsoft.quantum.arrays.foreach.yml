@@ -2,15 +2,15 @@
 uid: microsoft.quantum.arrays.foreach
 name: ForEach
 type: operation
-namespace: Microsoft.Quantum.Arrays
-summary: 針對陣列的元素所定義的陣列和作業，會傳回新的陣列，其中包含作業下原始陣列的影像。
-remarks: "作業是針對泛型型別定義的，也就是說，只要有陣列`'T[]`和作業， `action : 'T -> 'U`我們就可以對應陣列的元素，並產生類型`'U[]`的新陣列。"
+namespace: microsoft.quantum.arrays
+summary: 指定陣列和定義給陣列元素的作業時，會傳回新的陣列，其中包含作業下原始陣列的影像。
+remarks: "作業是針對泛型型別定義的，也就是說，每當我們有陣列和作業時， `'T[]` `action : 'T -> 'U` 我們可以對應陣列的元素，並產生型別的新陣列 `'U[]` 。"
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
-    summary: 從`'T`到`'U`的作業，會套用至每個元素。
+    summary: 從 `'T` 到的作業 `'U` 會套用至每個元素。
     isOperation: true
     input:
       types:
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: 的元素陣列`'T`。
+    summary: 的元素陣列 `'T` 。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: 作業所`'U[]`對應`action`的元素陣列。
+  - summary: 作業所 `'U[]` 對應的元素陣列 `action` 。
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array`元素的類型。'
+  summary: 元素的類型 `array` 。
 - uid: "'U"
-  summary: '`action`運算的結果類型。'
+  summary: 運算的結果類型 `action` 。
 metadata:
-  ms.openlocfilehash: af4b6b469017e4cee581a9bdd96ef6171d9b1deb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c630f23c57ccba1588e553641acf61312411f146
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681026"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352269"

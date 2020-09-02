@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.indexrange
 name: IndexRange
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 指定陣列時，會傳回該陣列索引的範圍，適合用於 for 迴圈。
+namespace: microsoft.quantum.arrays
+summary: 指定陣列時，會傳回該陣列的索引範圍，適用于 for 迴圈。
 examples: >-
-  下列`for`迴圈是相等的：
+  下列 `for` 迴圈是相等的：
 
 
   ```Q#
@@ -32,11 +32,11 @@ output:
     uid: Range
 typeParameters:
 - uid: "'TElement"
-  summary: 陣列元素的類型。
+  summary: 陣列的元素類型。
 metadata:
-  ms.openlocfilehash: 6c3135e07c65ddf6b7c61a4b9f412f5156e48e73
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88b827a5fb9b0dcdaceb6392b14cce98bdd281f5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672779"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352082"

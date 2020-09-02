@@ -2,17 +2,17 @@
 uid: microsoft.quantum.math.complexpolar
 name: ComplexPolar
 type: newtype
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  代表極座標形式的複數。
+  以極座標形式表示複數。
 
 
-  複數的極座標表示 $c = r e ^ {i t} $。
+  複數的極座標表示為 $c = r e ^ {i t} $。
 syntax: newtype ComplexPolar = (Double, Double);
 metadata:
-  ms.openlocfilehash: dc1eb74c9fc146648456f0ec9e2a968b62ea5a82
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4d990a1dfa3bf89bc7b9f9d5bfb07a76e6fbaa74
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685787"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344245"

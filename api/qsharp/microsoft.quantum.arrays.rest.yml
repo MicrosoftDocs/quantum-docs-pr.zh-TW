@@ -2,21 +2,21 @@
 uid: microsoft.quantum.arrays.rest
 name: Rest
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 建立等於輸入陣列的陣列，但不包括第一個陣列元素。
+namespace: microsoft.quantum.arrays
+summary: 建立等於輸入陣列的陣列，但會卸載第一個陣列元素。
 syntax: "function Rest (array : 'T[]) : 'T[]"
 input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: 陣列，其倒數第二個元素是用來構成輸出陣列。
+    summary: 第二個元素到最後一個元素的陣列，其構成輸出陣列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: 包含元素`array[1..Length(array) - 1]`的陣列。
+  - summary: 包含元素的陣列 `array[1..Length(array) - 1]` 。
     isArray: true
     uid: "'T"
     isLocal: true
@@ -24,9 +24,9 @@ typeParameters:
 - uid: "'T"
   summary: 陣列元素的類型。
 metadata:
-  ms.openlocfilehash: 045480f59b03523e39f8feaddacc17b9e6a20c8a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7ffe760d9abfac16053228dc2d3f8518a1b3b288
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680872"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351759"

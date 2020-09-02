@@ -2,29 +2,29 @@
 uid: microsoft.quantum.research.chemistry.applydeltaparity
 name: ApplyDeltaParity
 type: operation
-namespace: Microsoft.Quantum.Research.Chemistry
-summary: 計算前一個 PQRS 之間的同位檢查差異 .。。詞彙和下一個 PQRS .。。長期. 此差異會在輔助 qubit 上計算。
+namespace: microsoft.quantum.research.chemistry
+summary: 計算上一個 PQRS 之間的同位檢查差異 .。。詞彙和下一個 PQRS .。。術語。 這項差異是在輔助量子位上計算。
 remarks: 這會假設 P 的索引 < Q < R < S < .。。適用于 prevPQ 和 nextPQ。
 syntax: 'operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit'
 input:
   content: '(prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[])'
   types:
   - name: prevFermionicTerm
-    summary: 至上一個 PQRS 的索引清單 .。。條款.
+    summary: 先前 PQRS 的索引清單 .。。條款。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: nextFermionicTerm
-    summary: 下一個 PQRS 的索引清單 .。。條款.
+    summary: 下一個 PQRS 的索引清單 .。。條款。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: aux
-    summary: 輔助 qubit，其中會儲存同位檢查計算結果。
+    summary: 儲存同位計算結果的輔助量子位。
     isPrimitive: true
     uid: Qubit
   - name: qubits
-    summary: Qubit 由所有 PQRS 動作條款.
+    summary: 量子位依所有 PQRS 的動作 .。。條款。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 27d2ce22c9d7281682236b5214c39abf1d352eeb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a953418f97a2883d12eb9d415943b8e3f3b24e44
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687132"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330543"

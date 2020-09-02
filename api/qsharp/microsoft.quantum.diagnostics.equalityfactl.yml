@@ -2,8 +2,8 @@
 uid: microsoft.quantum.diagnostics.equalityfactl
 name: EqualityFactL
 type: function
-namespace: Microsoft.Quantum.Diagnostics
-summary: 判斷傳統 BigInt 變數具有預期的值。
+namespace: microsoft.quantum.diagnostics
+summary: 判斷提示傳統 BigInt 變數具有預期的值。
 syntax: 'function EqualityFactL (actual : BigInt, expected : BigInt, message : String) : Unit'
 input:
   content: '(actual : BigInt, expected : BigInt, message : String)'
@@ -26,9 +26,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 1b803b64af8205147f0a7a211124c92e6ff53342
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 51711615d1866f4220e1ed17af8808de0e484299
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677179"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337054"

@@ -2,15 +2,15 @@
 uid: microsoft.quantum.arrays.ispermutation
 name: IsPermutation
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: >-
-  只有在指定的陣列代表排列時，才會輸出 true。
+  只有當指定的陣列表示排列時，才會輸出 true。
 
 
-  指定 `array` 長度的陣列 `n` 時，只有在的每個整數只出現一次時，才會傳回 true， `0` 這樣就可以將其視為 `n - 1` `array` `array` 元素的排列 `n` 。
+  指定長度的陣列時 `array` `n` ，如果和只有在中的每個整數只出現一次，就會傳回 true， `0` 這樣就 `n - 1` `array` `array` 可以將它視為元素上的相片順序 `n` 。
 remarks: 長度為零的陣列會完整排列。
 examples: >-
-  下列 Q 號碼程式碼會列印「所有診斷已順利完成」訊息：
+  下列 Q # 程式碼會列印「所有診斷已順利完成」訊息：
 
 
   ```Q#
@@ -36,9 +36,9 @@ output:
   - isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 259c7a073a02b8cae196853e66cd30d7fe3a9436
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: d00c6e638600ceddce7cb233b2a08c2be0c7afe4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84328403"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352031"
