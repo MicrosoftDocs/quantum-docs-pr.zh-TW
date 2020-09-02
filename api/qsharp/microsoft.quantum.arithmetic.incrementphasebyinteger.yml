@@ -2,30 +2,30 @@
 uid: microsoft.quantum.arithmetic.incrementphasebyinteger
 name: IncrementPhaseByInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  使用階段旋轉，將不帶正負號的量子暫存器遞增為傳統整數。
+  使用階段旋轉，以傳統整數遞增未簽署的量子暫存器。
 
 
-  假設以`target`位元組由小到大的編碼方式，將`increment`不帶正負號的整數 $x $ 編碼，且等於 $a $。
+  假設將 `target` 不帶正負號的整數編碼 $x $ 以位元組由小到大的編碼方式，且 `increment` 等於 $a $。
 
-  然後，此作業會執行單一 $ \ket{x} \mapsto \ket{x + a} $，其中的加法會執行模數 $ 2 ^ n $，其中 $n = \texttt{Length （target！）}$.
+  然後，這項作業會執行單一 $ \ket{x} \mapsto \ket{x + a} $，其中加法會執行模數 $ 2 ^ n $，其中 $n = \texttt{Length (target！ ) } $。
 remarks: >-
-  請注意，我們已簡化電路，因為增量是傳統的常數，而不是配量暫存器。
+  請注意，我們已簡化電路，因為遞增是傳統的常數，而不是量子暫存器。
 
 
-  請參閱[arXiv： quant-ph/0008033v1 的第6頁](https://arxiv.org/pdf/quant-ph/0008033.pdf#page=6)上的圖表和說明。
+  請參閱 [ arXiv： quant-ph/0008033v1 的第6頁 ](https://arxiv.org/pdf/quant-ph/0008033.pdf#page=6) 中的圖表，以取得路線圖和說明。
 syntax: 'operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
-references: '- [*Thomas g. Draper*、arXiv： quant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)'
+references: '- [*Thomas G. Draper*、arXiv： quant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)'
 input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
-    summary: 用來遞增的`target`整數。
+    summary: 用來遞增的整數 `target` 。
     isPrimitive: true
     uid: Int
   - name: target
-    summary: 配量暫存器會在雙重（QFT）中使用位元組由小到大編碼來編碼不帶正負號的整數。
+    summary: 量子暫存器會以雙重 (QFT) 基礎，使用位元組由大到小的編碼方式來編碼不帶正負號的整數。
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -39,9 +39,9 @@ seeAlso:
 - incrementbyintegerbe
 - incrementbyintegerle
 metadata:
-  ms.openlocfilehash: 2893d432b4043bbacb425f3ae42cbbdd3d4dc225
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fa0495c930c638b6caeb9d4f6352eb2377723fc5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679525"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342851"

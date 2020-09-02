@@ -2,25 +2,25 @@
 uid: microsoft.quantum.arithmetic.applymajorityinplace
 name: ApplyMajorityInPlace
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  將三 qubit 多數作業放在 qubits 的暫存器上。
+  在量子位的註冊上就地套用三個量子位的多數作業。
 
 
-  這項作業會在 3 qubits 上就地計算多數函數。
+  這項作業會在3量子位上就地計算多數函數。
 
 
-  如果我們以 $x $ 和 $y $ 的 $z $ 和輸入 qubits 來表示輸出 qubit，此作業會執行下列轉換： $ \ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} （x，y，z）} $。
+  如果我們將輸出量子位表示為 $x $ 和 $y $ 的 $z $ 和輸入量子位，則作業會執行下列轉換： $ \ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x，y，z) } $。
 syntax: 'operation ApplyMajorityInPlace (output : Qubit, input : Qubit[]) : Unit'
 input:
   content: '(output : Qubit, input : Qubit[])'
   types:
   - name: output
-    summary: 第一個輸入 qubit。 請注意，輸出會就地計算並儲存在此 qubit 中。
+    summary: 第一個輸入量子位。 請注意，輸出會就地計算並儲存在此量子位中。
     isPrimitive: true
     uid: Qubit
   - name: input
-    summary: 第二個和第三個輸入 qubits。
+    summary: 第二個和第三個輸入量子位。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9b04666843c7f910352e3f16d566a522fddef3d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8384aeaf43651c2731e6cdf6efc7dbcff12a2a11
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680021"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342987"

@@ -2,27 +2,27 @@
 uid: microsoft.quantum.machinelearning.featureregistersize
 name: FeatureRegisterSize
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: 傳回編碼特定功能向量所需的 qubits 數目。
+namespace: microsoft.quantum.machinelearning
+summary: 傳回編碼特定功能向量所需的量子位數目。
 syntax: 'function FeatureRegisterSize (sample : Double[]) : Int'
 input:
   content: '(sample : Double[])'
   types:
   - name: sample
-    summary: 要編碼為 qubit 暫存器的範例功能向量。
+    summary: 要編碼成量子位註冊的範例功能向量。
     isArray: true
     isPrimitive: true
     uid: Double
 output:
   content: Int
   types:
-  - summary: 編碼`sample`成 qubit 暫存器所需的大小，以 qubits 數表示。
+  - summary: 編碼為量子位暫存器所需的大小 `sample` ，以量子位數表示。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6df78574a5385482223d53e19f56e453b7ee3aa4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ae50e2302b4187a7aa86a01447f735bff4dbe1db
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683541"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336119"

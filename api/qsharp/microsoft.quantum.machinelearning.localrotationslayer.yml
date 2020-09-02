@@ -2,30 +2,30 @@
 uid: microsoft.quantum.machinelearning.localrotationslayer
 name: LocalRotationsLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: 傳回指定軸的不受控制（單一 qubit）旋轉陣列，並針對暫存器中的每個 qubit 逐一旋轉，由不同的模型參數進行參數化。
+namespace: microsoft.quantum.machinelearning
+summary: 傳回未受控制的 (單一量子位) 旋轉的陣列，在指定的軸上，暫存器中的每個量子位都會有一次旋轉，並以相異模型參數參數化。
 syntax: 'function LocalRotationsLayer (nQubits : Int, axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
 input:
   content: '(nQubits : Int, axis : Pauli)'
   types:
   - name: nQubits
-    summary: 給定層處理的 qubits 數目。
+    summary: 給定層處理的量子位數目。
     isPrimitive: true
     uid: Int
   - name: axis
-    summary: 指定圖層中每個旋轉的旋轉軸。
+    summary: 給定圖層中每個旋轉的旋轉軸。
     isPrimitive: true
     uid: Pauli
 output:
   content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
   types:
-  - summary: 關於指定軸的受控制旋轉陣列，每個`nQubits` qubits 各一個。
+  - summary: 特定軸的受控制旋轉陣列，每個量子位都有一個 `nQubits` 。
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: ad6259c46aee6b05ac201bd978f42ce3add8f03d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a08df354e389b1f282e18657f579e831180c81f2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684483"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335904"

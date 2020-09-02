@@ -2,29 +2,29 @@
 uid: microsoft.quantum.machinelearning.validatesequentialclassifier
 name: ValidateSequentialClassifier
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
-summary: 根據指定的預先標記樣本集來驗證指定的順序分類器。
+namespace: microsoft.quantum.machinelearning
+summary: 根據一組指定的預先標記範例，驗證指定的順序分類器。
 syntax: 'operation ValidateSequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : Microsoft.Quantum.MachineLearning.ValidationResults'
 input:
   content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
   types:
   - name: model
-    summary: 要驗證的順序模型。
+    summary: 要驗證的連續模型。
     uid: microsoft.quantum.machinelearning.sequentialmodel
   - name: samples
     summary: 用來驗證指定模型的範例。
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: tolerance
-    summary: 用來編碼每個範例做為順序分類器輸入的近似值誤差。
+    summary: 用來將每個範例編碼為連續分類器輸入的近似值誤差。
     isPrimitive: true
     uid: Double
   - name: nMeasurements
-    summary: 要用來分類每個樣本的測量數目。
+    summary: 要用於分類每個樣本的度量數目。
     isPrimitive: true
     uid: Int
   - name: validationSchedule
-    summary: 應從驗證集繪製樣本的排程。
+    summary: 從驗證集繪製樣本的排程。
     uid: microsoft.quantum.machinelearning.samplingschedule
 output:
   content: Microsoft.Quantum.MachineLearning.ValidationResults
@@ -32,9 +32,9 @@ output:
   - summary: 給定驗證的結果。
     uid: microsoft.quantum.machinelearning.validationresults
 metadata:
-  ms.openlocfilehash: e031630fd11ae7f230343513d3d5fc8d2b25a9c3
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: ac8aece2eb0c325109ddd081f7af82a4b5bbba51
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885854"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335456"

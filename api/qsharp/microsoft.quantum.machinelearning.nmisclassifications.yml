@@ -2,8 +2,8 @@
 uid: microsoft.quantum.machinelearning.nmisclassifications
 name: NMisclassifications
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: 假設有一組推斷的標籤和一組正確的標籤，會傳回每一組標籤不同的索引數目。
+namespace: microsoft.quantum.machinelearning
+summary: 假設有一組推斷的標籤和一組正確的標籤，則會傳回每一組標籤不同的索引數目。
 examples: >-
   ```Q#
 
@@ -27,13 +27,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 索引`idx`的數目， `inferredLabels[idx] != actualLabels[idx]`例如。
+  - summary: 索引的數目 `idx` `inferredLabels[idx] != actualLabels[idx]` 。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0fb65949c86d41412148ae9fc8cda993c518e9e9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6cdc97f48ed8ecca1d7d347b5fbfc6f36326ed55
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684447"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335813"
