@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.mind
 name: MinD
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回兩個指定數位中較小的一個。
-remarks: 如[需](https://docs.microsoft.com/dotnet/api/system.math.min)詳細資訊，請參閱 system.string。
+remarks: 如 [需](https://docs.microsoft.com/dotnet/api/system.math.min) 詳細資訊，請參閱 system.string。
 syntax: 'function MinD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'
@@ -21,9 +21,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: fd1b404ffa5afeb25541992d230ffb1027d4b7b4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cd299a452d407dc2b55fc2bfbca751faa21a1205
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673658"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343718"

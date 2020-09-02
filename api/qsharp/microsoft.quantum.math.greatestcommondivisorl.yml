@@ -2,18 +2,18 @@
 uid: microsoft.quantum.math.greatestcommondivisorl
 name: GreatestCommonDivisorL
 type: function
-namespace: Microsoft.Quantum.Math
-summary: 計算 $a $ 和 $b $ 的最大公除數。 GCD 一律為正數。
+namespace: microsoft.quantum.math
+summary: 計算 $a $ 和 $b $ 的最大公因數。 GCD 一律為正數。
 syntax: 'function GreatestCommonDivisorL (a : BigInt, b : BigInt) : BigInt'
 input:
   content: '(a : BigInt, b : BigInt)'
   types:
   - name: a
-    summary: 計算最大的一般除數的第一個數位
+    summary: 要計算的第一個擴充最大公除數
     isPrimitive: true
     uid: BigInt
   - name: b
-    summary: 計算最大的一般除數的第二個數字
+    summary: 計算最大最大公除數的第二個數字
     isPrimitive: true
     uid: BigInt
 output:
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 4a49c4a3bfbd662bdaf2990d5de87dc668cae135
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 498e1e64f2c1e919b5cd4ecff643f91963f483c1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684216"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343871"

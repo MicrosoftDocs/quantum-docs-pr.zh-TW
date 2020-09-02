@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applyseriesofops
 name: ApplySeriesOfOps
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 依序在陣列上套用 ops 及其目標的清單。
+namespace: microsoft.quantum.canon
+summary: 依序在陣列上套用 ops 清單和其目標。
 syntax: "operation ApplySeriesOfOps (listOfOps : ('T[] => Unit)[], targets : Int[][], register : 'T[]) : Unit"
 input:
   content: "(listOfOps : ('T[] => Unit)[], targets : Int[][], register : 'T[])"
   types:
   - name: listOfOps
-    summary: 要套用的 ops 清單，每個都採用不是陣列。 它們會依序套用，並優先套用至最低索引。
+    summary: 要套用的 ops 清單（每個都有一個 t 陣列）。 它們會依序套用，最小的索引優先。
     isArray: true
     isOperation: true
     input:
@@ -29,7 +29,7 @@ input:
       isPrimitive: true
       uid: Int
   - name: register
-    summary: 要處理的 Qubit register。
+    summary: 要處理的量子位 register。
     isArray: true
     uid: "'T"
     isLocal: true
@@ -41,9 +41,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.applyoprepeatedlyover
 metadata:
-  ms.openlocfilehash: 62c4494fb60a69eb52eca2d3fa97b41eb9b7f020
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e998272cb0e34cd4d8e9b8b2af5bb528042a2d3b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82671159"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357794"

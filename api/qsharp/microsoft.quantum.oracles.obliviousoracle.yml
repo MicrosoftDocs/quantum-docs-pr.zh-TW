@@ -2,26 +2,26 @@
 uid: microsoft.quantum.oracles.obliviousoracle
 name: ObliviousOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
-  表示 oracle for 遺忘式調幅放大。
+  表示 oracle for 無警示振幅放大。
 
 
-  Oracle $O $ 的輸入如下：
+  Oracle $O $ 的輸入包括：
 
 
-  - $O $ 的 ancilla 暫存器 $a $ 作用於。
+  - $O $ 作用的 ancilla 暫存器 $a $。
 
-  - 已選取要套用所需之單一 $U $ 的系統暫存器 $s $，請在註冊 $a $ \ket{t}\_a $ 中進行後選擇。
+  - 系統註冊 $s $ （要套用所需的單一 $U $），在 register $a $ \ket{t} a $ 的 post 選取 \_ 。
 remarks: >-
-  此 oracle 由\_$ $ O\ket {s} a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ 作用於 ancilla state $ \ket{s}\_a $，在任何系統狀態 $ \ket{\psi}\_s $ 上，以 $ \lambda\_a $ 標記的基礎來執行單一 $U $。
+  此 oracle 由 $ $ O\ket {s} \_ a\ket {\ psi} \_ s = \Lambda\ket{t} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp} \_ a\cdots $ $ 作用於 ancilla state $ \ket{s} \_ a $，以 \_ $ \ket{\psi} a $ 的基礎，以振幅 $ \lambda $ 來執行任何系統狀態 $ \ket{t} s $ 上的單一 $U $ \_ 。
 
-  第一個參數是 $ \ket{s}\_a $ 的 qubit 暫存器。 第二個參數是 $ \ket{\psi}\_s $ 的 qubit 暫存器。
+  第一個參數是 $ \ket{s} a $ 的量子位暫存器 \_ 。 第二個參數是 $ \ket{\psi} s $ 的量子位暫存器 \_ 。
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c88ad3b0a4fe6067a0e52972c23587d5835c779e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681247"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332005"

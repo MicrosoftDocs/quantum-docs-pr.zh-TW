@@ -2,17 +2,17 @@
 uid: microsoft.quantum.canon.applytoeachindexca
 name: ApplyToEachIndexCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  將單一 qubit 作業套用至暫存器中的每個索引元素。
+  將單一量子位作業套用至暫存器中的每個索引元素。
 
-  修飾`CA`詞表示單一 qubit 作業是 adjointable 且可控制的。
+  修飾詞 `CA` 表示單一量子位作業是 adjointable 且可控制的。
 syntax: "operation ApplyToEachIndexCA (singleElementOperation : ((Int, 'T) => Unit is Adj + Ctl), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ((Int, 'T) => Unit is Adj + Ctl), register : 'T[])"
   types:
   - name: singleElementOperation
-    summary: 要套用至每個 qubit 的作業。
+    summary: 要套用至每個量子位的作業。
     isOperation: true
     input:
       types:
@@ -28,7 +28,7 @@ input:
     - Adjoint
     - Controlled
   - name: register
-    summary: 要套用指定作業的 qubits 陣列。
+    summary: 要套用指定作業的量子位陣列。
     isArray: true
     uid: "'T"
     isLocal: true
@@ -46,9 +46,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
 metadata:
-  ms.openlocfilehash: 75372ebc47be61ad273456ac1f0413667df12938
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 82fffd6223d8c3b0375db7f939f6da24f550235e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674804"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357658"

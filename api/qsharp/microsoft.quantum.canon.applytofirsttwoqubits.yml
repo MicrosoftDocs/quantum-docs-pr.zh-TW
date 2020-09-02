@@ -2,8 +2,8 @@
 uid: microsoft.quantum.canon.applytofirsttwoqubits
 name: ApplyToFirstTwoQubits
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 將作業套用至註冊中的前兩個 qubits。
+namespace: microsoft.quantum.canon
+summary: 將作業套用至註冊中的前兩個量子位。
 remarks: >-
   這相當於：
 
@@ -18,7 +18,7 @@ input:
   content: '(op : ((Qubit, Qubit) => Unit), register : Qubit[])'
   types:
   - name: op
-    summary: 要套用到前兩個 qubits 的作業
+    summary: 要套用至前兩個量子位的作業
     isOperation: true
     input:
       types:
@@ -31,7 +31,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: register
-    summary: Qubit 陣列，指向套用作業的前兩個 qubits。
+    summary: 量子位陣列至套用作業的前兩個量子位。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -45,9 +45,9 @@ seeAlso:
 - microsoft.quantum.canon.applytofirsttwoqubitsc
 - microsoft.quantum.canon.applytofirsttwoqubitsca
 metadata:
-  ms.openlocfilehash: c14b79486836ff27d1773c851458bd9dc7db8c7f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d2f3fede8f8d6a91d3c860969125c00edcf83bab
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674708"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357428"

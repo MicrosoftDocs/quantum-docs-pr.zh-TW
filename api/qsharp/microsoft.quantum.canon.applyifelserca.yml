@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelserca
 name: ApplyIfElseRCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   根據傳統結果的值，套用兩個單一作業的其中一個。
 
 
-  指定結果`result`時，會在等於`zeroOp` `zeroInput` `result` `Zero`時套用作業，並在時`oneOp(oneInput)` `result == One`套用。
+  因此 `result` ， `zeroOp` `zeroInput` 當等於時，會將作業套用至做為其輸入， `result` `Zero` 並適用 `oneOp(oneInput)` 于 `result == One` 。
 syntax: "operation ApplyIfElseRCA (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: 用來判斷是否`zeroOp`已套用或`oneOp`的測量結果。
+    summary: 用來判斷是否已套用或的測量結果 `zeroOp` `oneOp` 。
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: 要在`result == Zero`其上套用的單一作業。
+    summary: 要在其上套用的單一作業 `result == Zero` 。
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: zeroInput
-    summary: 要`zeroOp`在何時`result == Zero`提供的輸入。
+    summary: 要在何時提供的輸入 `zeroOp` `result == Zero` 。
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: 要在`result == One`其上套用的單一作業。
+    summary: 要在其上套用的單一作業 `result == One` 。
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: oneInput
-    summary: 要`oneOp`在何時`result == One`提供的輸入。
+    summary: 要在何時提供的輸入 `oneOp` `result == One` 。
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: '`zeroOp`要有條件地套用之作業的輸入類型。'
+  summary: 要有條件地套用之作業的輸入類型 `zeroOp` 。
 - uid: "'U"
-  summary: '`oneOp`要有條件地套用之作業的輸入類型。'
+  summary: 要有條件地套用之作業的輸入類型 `oneOp` 。
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: a1182abedfbb4905ec65f5e720d82a1766aa5d65
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bc9f0b3b1504adf1a3ea435a7a4440c6509dd547
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672716"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350178"

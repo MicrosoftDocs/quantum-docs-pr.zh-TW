@@ -2,23 +2,23 @@
 uid: microsoft.quantum.oracles.reflectionoracle
 name: ReflectionOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
-  表示 oracle 的反映。
+  表示反映 oracle。
 
 
-  反映 oracle （$O $）具有輸入：
+  反映 oracle （$O $）有輸入：
 
 
-  - 要用來旋轉反映的子空間的階段 $ \phi $。
+  - 用來旋轉反映子空間的階段 $ \phi $。
 
-  - 要在其上執行給定反映的 qubit 暫存器。
-remarks: 此 oracle $O = \boldone-（1-e ^ {i \phi}） \ket{\psi}\bra{\psi} $ 會透過階段 $ \phi $ 執行部分反映，以瞭解單一純狀態 $ \ket{\psi} $。
+  - 要在其上執行給定反映的量子位註冊。
+remarks: 此 oracle $O = \boldone- (1-e ^ {i \phi} ) \ket{\psi}\bra{\psi} $ 會透過階段 $ \phi $ 來執行部分反映，大約是單一的純狀態 $ \ket{\psi} $。
 syntax: newtype ReflectionOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: b75683aa7178248510c5f336e3dcda28623606af
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b85f21439327c6aa4c8f63e567ca40a7fa3a4538
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673522"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331869"

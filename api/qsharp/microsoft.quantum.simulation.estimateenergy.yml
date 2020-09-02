@@ -2,18 +2,18 @@
 uid: microsoft.quantum.simulation.estimateenergy
 name: EstimateEnergy
 type: operation
-namespace: Microsoft.Quantum.Simulation
-summary: 藉由`statePrepUnitary`使用，在自動設定的輸入狀態階段估計`qpeUnitary`上套用，以執行狀態準備。 `phaseEstAlgorithm`
+namespace: microsoft.quantum.simulation
+summary: 藉由在自動設定的 `statePrepUnitary` 輸入狀態階段估計上套用，並針對使用的 `qpeUnitary` 結果狀態套用，以執行狀態準備 `phaseEstAlgorithm` 。
 syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
   types:
   - name: nQubits
-    summary: 用來執行模擬的 qubits 數目。
+    summary: 用來執行模擬的量子位數目。
     isPrimitive: true
     uid: Int
   - name: statePrepUnitary
-    summary: Oracle，代表初始 dynamical 產生器的狀態準備。
+    summary: 代表初始 dynamical 產生器之狀態準備的 oracle。
     isOperation: true
     input:
       types:
@@ -25,7 +25,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: 代表單一運算子 $U $ 的 oracle，代表 dynamical 產生器下的 time $ \delta t $ 演進，其狀態為 $ \ket{\phi} $，而地面州能源 $E\\= \phi，\delta t $。
+    summary: Oracle 代表單一運算子 $U $ 代表時間 $ \delta t $ 在 dynamical 產生器下的時間 $ \ket{\phi} $ 和地面狀態能源 $E = \phi \\ ，\delta t $。
     isOperation: true
     input:
       types:
@@ -41,9 +41,9 @@ input:
     - Controlled
   - name: phaseEstAlgorithm
     summary: >-
-      針對指定的單一作業執行階段估計的作業。
+      在指定的單一作業上執行階段估計的作業。
 
-      如需詳細資訊，請參閱[反復階段估計](/quantum/libraries/characterization#iterative-phase-estimation)。
+      如需詳細資訊，請參閱 [反復的階段估計](/quantum/libraries/characterization#iterative-phase-estimation) 。
     isOperation: true
     input:
       types:
@@ -58,13 +58,13 @@ input:
 output:
   content: Double
   types:
-  - summary: 以 $U $ 表示的產生器之地面狀態能源 $ \phi $ 的預估 $ \hat{\phi} $。
+  - summary: 以 $U $ 表示之產生器的接地狀態能源 $ \phi $ 的預估 $ \hat{\phi} $。
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: d7f32999782763bbb6224afc2c764188c718379b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9cd5b90932550d1830cd3a14d3d0688ab9675366
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686886"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343378"

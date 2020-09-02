@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelsebca
 name: ApplyIfElseBCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  根據傳統位的值，套用兩個單一作業的其中一個。
+  根據傳統位的值，套用兩項單一作業的其中一個。
 
 
-  `bit`若為，則會在為`trueOp` `trueInput` `bit` `true`時將作業套用為其輸入，而`falseOp(falseInput)`當`bit`為`false`時則適用。
+  有一點 `bit` ，會在為時套用作業 `trueOp` `trueInput` 做為其 `bit` 輸入 `true` ，並 `falseOp(falseInput)` 在為時套用 `bit` `false` 。
 syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: 用來判斷是否`trueOp`套用或`falseOp`的布林值。
+    summary: 用來判斷是否已套用或的布林值 `trueOp` `falseOp` 。
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: 當為`bit` `true`時，要套用的單一作業。
+    summary: 當為時要套用的單一 `bit` 作業 `true` 。
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: trueInput
-    summary: 當為`trueOp` `bit` `true`時，要提供給的輸入。
+    summary: 當為時，所要提供的輸入 `trueOp` `bit` `true` 。
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: 當為`bit` `false`時，要套用的單一作業。
+    summary: 當為時要套用的單一 `bit` 作業 `false` 。
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: falseInput
-    summary: 當為`falseOp` `bit` `false`時，要提供給的輸入。
+    summary: 當為時，所要提供的輸入 `falseOp` `bit` `false` 。
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: '`trueOp`要有條件地套用之作業的輸入類型。'
+  summary: 要有條件地套用之作業的輸入類型 `trueOp` 。
 - uid: "'U"
-  summary: '`falseOp`要有條件地套用之作業的輸入類型。'
+  summary: 要有條件地套用之作業的輸入類型 `falseOp` 。
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 3f0d704d33fc1d3e964e804c2ff68cb893069445
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 608808f776ac0d187571adc415abc0c7d1666ef9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672759"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350348"

@@ -2,26 +2,26 @@
 uid: microsoft.quantum.preparation.blochspherecoordinates
 name: BlochSphereCoordinates
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  計算單一 qubit 狀態的 Bloch 球體座標。
+  計算單一量子位狀態的布洛赫球體座標。
 
 
-  假設有兩個複數 $a 0，a1 $ 代表 qubit 狀態，會在 Bloch 球體上計算座標，讓 $a 0 \ket{0} + a1 \ket{1} = r e ^ {it} （e ^ {-i \phi/2}\cos{（\ theta/2）} \ket{0}+ e ^ {i \phi/2}\sin{（\ theta/2）} \ket{1}） $。
+  假設有兩個複數 $a 0，a1 $ 表示量子位狀態，則會計算布洛赫球體上的座標，例如 $a 0 \ket {0} + a1 \ket {1} = r e ^ {it} (e ^ {-i \phi/2}\cos{ ( \ theta/2) } \ket {0} + e ^ {i \phi/2}\sin{ ( \ theta/2) } \ket {1}) $。
 syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
 input:
   content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a0
-    summary: State $ \ket{0}$ 的複雜係數。
+    summary: 狀態 $ \ket $ 的複數係數 {0} 。
     uid: microsoft.quantum.math.complexpolar
   - name: a1
-    summary: State $ \ket{1}$ 的複雜係數。
+    summary: 狀態 $ \ket $ 的複數係數 {1} 。
     uid: microsoft.quantum.math.complexpolar
 output:
   content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
   types:
-  - summary: 包含`(ComplexPolar(r, t), phi, theta)`的元組。
+  - summary: 包含的元組 `(ComplexPolar(r, t), phi, theta)` 。
     types:
     - uid: microsoft.quantum.math.complexpolar
     - isPrimitive: true
@@ -29,9 +29,9 @@ output:
     - isPrimitive: true
       uid: Double
 metadata:
-  ms.openlocfilehash: 98d543849be177941a0c346c1de6b5b6930e783e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a1bf578d2dc6c45d553bff503385f7760a08458d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683231"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331699"

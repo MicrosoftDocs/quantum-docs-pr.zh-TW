@@ -1,25 +1,25 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.research.chemistry
 name: Microsoft.Quantum.Research.Chemistry
-summary: " # <a name=\"summary\"></a>摘要\n 這個命名空間提供適用于量子化學模擬的先進研究方法。\n\n # <a name=\"references\"></a>參考\n - 改善量子化學，M. B 的配量演算法。 Hastings、d. Wecker、Bauer、Troyer、https://arxiv.org/abs/1403.1539"
+summary: " # <a name=\"summary\"></a>摘要\n 此命名空間提供適用于量子化學模擬的 advanced research 方法。\n\n # <a name=\"references\"></a>參考資料\n - 改善量子化學（M. B）的量子演算法。 Hastings、d. Wecker、b. Bauer、Troyer、 https://arxiv.org/abs/1403.1539"
 functions:
 - uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
-  summary: 將 dynamical 產生器表示為一組 simulatable 閘道，並以 Pauli 為基礎來展開。
+  summary: 將 dynamical 產生器表示為一組 simulatable 閘道，並以 Pauli 為基礎進行擴充。
 - uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
-  summary: 將 dynamical 產生器表示為一組 simulatable 閘道，並以 JWOptimized 為基礎來展開。
+  summary: 將 dynamical 產生器表示為一組 simulatable 閘道，並以 JWOptimized 為基礎進行擴充。
 - uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
-  summary: 將所描述的 Hamiltonian `JWOptimizedHTerms`轉換成`GeneratorSystem`以這個檔案中定義`GeneratorIndex`的慣例表示的。
+  summary: 將描述的 Hamiltonian 轉換為，以這個檔案中 `JWOptimizedHTerms` `GeneratorSystem` 定義的 `GeneratorIndex` 慣例表示。
 - uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
   summary: 傳回優化的 Trotter 步驟作業，以及執行它所需的參數。
 operations:
 - uid: microsoft.quantum.research.chemistry.applydeltaparity
-  summary: 計算前一個 PQRS 之間的同位檢查差異 .。。詞彙和下一個 PQRS .。。長期. 此差異會在輔助 qubit 上計算。
+  summary: 計算上一個 PQRS 之間的同位檢查差異 .。。詞彙和下一個 PQRS .。。術語。 這項差異是在輔助量子位上計算。
 - uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
-  summary: 藉由佔用微調 orbitals 來準備試用狀態的簡單狀態
+  summary: 藉由佔用微調 orbitals，來準備試用狀態的簡單狀態
 metadata:
-  ms.openlocfilehash: aa1aa58d6e2dcee6f650714073b9a1386f0ed679
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 010fc81468a408782ac6549716f60f9b3671f4c3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675482"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340845"

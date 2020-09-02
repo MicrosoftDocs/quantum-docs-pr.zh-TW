@@ -2,17 +2,17 @@
 uid: microsoft.quantum.oracles.discreteoracle
 name: DiscreteOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
-  表示離散化 oracle。
+  表示離散的 oracle。
 
 
-  這是 oracle，它會針對固定作業 $U $ 和非負整數 $m $ 來執行 $U ^ m $。
+  這是 oracle，可針對固定作業（$U $ 和非負整數 $m $）來實 $U ^ m $。
 syntax: newtype DiscreteOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: ef4b696816b6906f4d0858957a9ca10d06e4878f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 64077bd5c448198ee0b3509d970e4df36050da9d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681271"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332022"
