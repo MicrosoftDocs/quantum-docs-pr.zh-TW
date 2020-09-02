@@ -2,19 +2,19 @@
 uid: microsoft.quantum.arithmetic.assertmostsignificantbit
 name: AssertMostSignificantBit
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 判斷代表不帶正負號整數的 qubit 暫存器最重要的 qubit 處於特定狀態。
-remarks: 此作業的受控制版本會忽略控制項。
+namespace: microsoft.quantum.arithmetic
+summary: 判斷提示代表不帶正負號的整數之量子位暫存器最重要的量子位處於特定狀態。
+remarks: 此操作的受控制版本會忽略控制項。
 syntax: 'operation AssertMostSignificantBit (value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: value
-    summary: 要判斷提示之最高位的值。
+    summary: 要判斷提示的最高位值。
     isPrimitive: true
     uid: Result
   - name: number
-    summary: 檢查最高位的不帶正負號整數。
+    summary: 檢查最大位的不帶正負號的整數。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -27,9 +27,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.assert
 metadata:
-  ms.openlocfilehash: 01a69b7f9af1fdc32c565b72aaec4c00bc290fc0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ce471f3e7f1a6ab320f9094493dc5c0f5031d1e1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679902"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342477"

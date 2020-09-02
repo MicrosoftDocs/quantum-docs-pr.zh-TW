@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.dividei
 name: DivideI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   將兩個量子整數相除。
 
 
-  `xs`會保留其餘部分`xs - floor(xs/ys) * ys` ， `result`並保留`floor(xs/ys)`。
+  `xs` 將保留其餘部分 `xs - floor(xs/ys) * ys` ，並 `result` 將保留 `floor(xs/ys)` 。
 remarks: >-
-  會使用標準的 shift 和減法方法來執行除法。
+  使用標準的 shift 和減法方法來執行除法。
 
   受控制的版本是特製化的，因此減法不需要額外的控制項。
 syntax: 'operation DivideI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
@@ -17,13 +17,13 @@ input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
-    summary: $n 的 $ 位被除數，會被餘數取代。
+    summary: $n $ 位被除數，將被餘數取代。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: $n $ 位除數
+    summary: $n $ bit 除數
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $n $ 位的結果，一開始必須是 state ${0}\ket $，而且將會由整數除法的結果取代。
+    summary: $n $ bit 結果時，必須先處於狀態 $ \ket {0} $，並且將由整數除法的結果取代。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 05f4b6766910af24a956bfa14bca615633ed1031
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a426cc92da9db4c1155d2653451031ca37e3965
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679685"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342154"

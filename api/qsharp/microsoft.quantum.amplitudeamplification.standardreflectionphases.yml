@@ -2,15 +2,15 @@
 uid: microsoft.quantum.amplitudeamplification.standardreflectionphases
 name: StandardReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: 計算標準幅度放大的部分反映階段。
-remarks: 除了關於 [開始] 狀態的第一個反映和 [目標狀態] 的最後反映（也就是 $0 $）之外，所有階段都是 $ \pi $。
+namespace: microsoft.quantum.amplitudeamplification
+summary: 計算標準振幅放大的部分反映階段。
+remarks: 所有階段都是 $ \pi $，但第一次反映有關「啟動狀態」和「上次反映」的目標狀態，也就是 $0 $。
 syntax: 'function StandardReflectionPhases (nIterations : Int) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 input:
   content: '(nIterations : Int)'
   types:
   - name: nIterations
-    summary: 要為其產生部分反映階段的振幅放大反覆運算次數。
+    summary: 要為其產生部分反映階段的波幅放大反覆運算數目。
     isPrimitive: true
     uid: Int
 output:
@@ -19,9 +19,9 @@ output:
   - summary: 執行指定為部分反射之階段的作業
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: bbe128a674348d09cec2b1583bcdf60e1d7d8418
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c02770bc2968e53d4bc13dd0c66f1bf6598e860e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676899"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342188"

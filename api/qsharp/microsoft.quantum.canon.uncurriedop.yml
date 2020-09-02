@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.uncurriedop
 name: UncurriedOp
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: 假設有一個會傳回作業的函式，則會傳回同時接受這兩個輸入做為元組的新操作。
+namespace: microsoft.quantum.canon
+summary: 假設有一個會傳回作業的函式，會傳回新的作業，它會將這兩個輸入視為一個元組。
 syntax: "function UncurriedOp (curriedOp : ('T -> ('U => Unit))) : (('T, 'U) => Unit)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit)))"
   types:
   - name: curriedOp
-    summary: 傳回作業的函式。
+    summary: 傳回作業的函數。
     isFunction: true
     input:
       types:
@@ -29,7 +29,7 @@ input:
 output:
   content: (('T, 'U) => Unit)
   types:
-  - summary: 與 `op` 相等的新作業 `op(t, u)` `(curriedOp(t))(u)` 。
+  - summary: '`op`相當於的新作業 `op(t, u)` `(curriedOp(t))(u)` 。'
     isOperation: true
     input:
       types:
@@ -43,17 +43,17 @@ output:
         uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 擴充作業的第一個輸入類型。
+  summary: 局部調用的第一個輸入類型。
 - uid: "'U"
-  summary: 向擴充作業進行第二個輸入的類型。
+  summary: 局部調用的第二個輸入型別。
 seeAlso:
 - microsoft.quantum.canon.uncurryopc
 - microsoft.quantum.canon.uncurryopa
 - microsoft.quantum.canon.uncurryopca
 metadata:
-  ms.openlocfilehash: 1ffa2f189770165a4da3eced0ee5d435a1f76acc
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c339a98eb66dab5a2163a652e769a58f3095a51a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84327470"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354921"

@@ -2,28 +2,28 @@
 uid: microsoft.quantum.simulation.intstopaulis
 name: IntsToPaulis
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: 將整數陣列轉換成單一 qubit Pauli 運算子的陣列。
+namespace: microsoft.quantum.simulation
+summary: 將整數陣列轉換成單一量子位 Pauli 運算子的陣列。
 syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
 input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    summary: 要轉換成 Pauli 運算子之`0..3`範圍中的整數陣列。
+    summary: 要轉換成 Pauli 運算子之範圍中的整數陣列 `0..3`  。
     isArray: true
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[]
   types:
-  - summary: Pauli 運算子`paulis` `Pauli[]` `ints`的陣列，其長度與相等， `paulis[idxPauli]`等於所`[PauliI, PauliX, PauliY, PauliZ]`指定的元素。 `ints[idxPauli]`
+  - summary: '`paulis`Pauli 運算子 `Pauli[]` 的陣列，其長度等同 `ints` `paulis[idxPauli]` 于 `[PauliI, PauliX, PauliY, PauliZ]` 指定 `ints[idxPauli]` 的專案。'
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f4d7e34cc7555fab89c6fd4d8371837da2296015
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682608"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329810"
