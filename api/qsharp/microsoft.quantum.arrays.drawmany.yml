@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.drawmany
 name: DrawMany
 type: operation
-namespace: Microsoft.Quantum.Arrays
-summary: 針對給定的樣本數重複作業，並在陣列中收集其輸出。
+namespace: microsoft.quantum.arrays
+summary: 針對指定的樣本數重複作業，並在陣列中收集其輸出。
 examples: >-
-  下列範例是一個整數，指定一次取樣一個位的作業。
+  下列範例會在指定一次取樣一個位的作業時，提供一個整數。
 
 
   ```Q#
@@ -29,7 +29,7 @@ input:
       - uid: "'TOutput"
         isLocal: true
   - name: nSamples
-    summary: 呼叫以收集的樣本數 `op` 。
+    summary: 要收集的呼叫樣本數 `op` 。
     isPrimitive: true
     uid: Int
   - name: input
@@ -46,13 +46,13 @@ typeParameters:
 - uid: TInput
   summary: 預期的輸入類型 `op` 。
 - uid: TOutput
-  summary: 所傳回的輸出類型 `op` 。
+  summary: 傳回的輸出類型 `op` 。
 seeAlso:
 - microsoft.quantum.canon.repeat
 metadata:
-  ms.openlocfilehash: 8ed96fbb8b543cf8f9f167304e45e5f4fd82ad44
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: a4f3ab6f4224a9b5a293fe458ad653171983a6cc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886220"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352388"

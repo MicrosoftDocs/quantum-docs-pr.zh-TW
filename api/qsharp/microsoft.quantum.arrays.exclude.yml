@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.exclude
 name: Exclude
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 傳回陣列，其中包含另一個陣列的專案，但在指定的索引清單中不包括元素。
+namespace: microsoft.quantum.arrays
+summary: 傳回陣列，其中包含另一個陣列的元素，但不包括指定之索引清單中的元素。
 examples: >-
   ```qsharp
 
@@ -19,19 +19,19 @@ input:
   content: "(remove : Int[], array : 'T[])"
   types:
   - name: remove
-    summary: 索引的陣列，表示應該從輸出排除的元素。
+    summary: 索引的陣列，表示應從輸出中排除的元素。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: array
-    summary: 要在其中取得輸出陣列中之值的陣列。
+    summary: 輸出陣列中的值所採用的陣列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: '`output`陣列，這`output[0]`是`array`其索引不會出現在中`remove`的第一個專案，例如`output[1]`第二個元素，依此類推。'
+  - summary: 陣列 `output` `output[0]` ，這是 `array` 其索引不會出現在中的第一個專案 `remove` ，例如 `output[1]` 第二個這類元素等等。
     isArray: true
     uid: "'T"
     isLocal: true
@@ -39,9 +39,9 @@ typeParameters:
 - uid: "'T"
   summary: 陣列元素的類型。
 metadata:
-  ms.openlocfilehash: 715610f2e8d0932a22d6dfdd0232e981a495fd6f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7e0f978f711962247c08c1b367f3ca62e16cad2c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676485"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352337"

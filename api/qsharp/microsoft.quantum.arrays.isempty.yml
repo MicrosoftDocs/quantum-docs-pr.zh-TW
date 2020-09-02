@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.isempty
 name: IsEmpty
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 只有在陣列是空的時，才會傳回 true。
+namespace: microsoft.quantum.arrays
+summary: 只有當陣列是空的時，才會傳回 true。
 syntax: "function IsEmpty (array : 'T[]) : Bool"
 input:
   content: "(array : 'T[])"
@@ -16,13 +16,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`只有在陣列是空的（長度為0）時，才為。'
+  - summary: '`true` 只有當陣列為空時 (的長度為 0) 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 47f38759dd72a014ac0bb1de552b94ae1821e0d1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c1820f0084275be29007f8a35becdb87be38fcc5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680981"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352014"

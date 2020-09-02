@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.indexof
 name: IndexOf
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 傳回陣列中符合指定述詞之第一個元素的第一個索引。 如果沒有這類元素存在，則會傳回-1。
+namespace: microsoft.quantum.arrays
+summary: 傳回陣列中第一個符合指定之述詞的第一個元素索引。 如果沒有這類元素，則傳回-1。
 examples: >-
-  假設`IsEven : Int -> Bool`是一個函式， `true`只有在其輸入為偶數時才會傳回。 然後，這可與`IndexOf`搭配使用，以尋找陣列中的第一個偶數元素：
+  假設這 `IsEven : Int -> Bool` 是一個函式， `true` 只有在其輸入為偶數時才會傳回。 然後，您可以搭配使用， `IndexOf` 以找出陣列中的第一個偶數元素：
 
 
   ```Q#
@@ -20,7 +20,7 @@ input:
   content: "(predicate : ('T -> Bool), arr : 'T[])"
   types:
   - name: predicate
-    summary: 述詞函式，其作用於陣列的元素。
+    summary: 在陣列元素上作用的述詞函式。
     isFunction: true
     input:
       types:
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 最小的索引`idx` ，例如`predicate(arr[idx])` true，或如果沒有這類元素存在，則為-1。
+  - summary: 最小的索引 `idx` （例如 `predicate(arr[idx])` true），如果沒有這類元素，則為-1。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6b0097c4feb41a00f0d9c1fcb4c2b5dbcaa186ef
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680993"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352116"

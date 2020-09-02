@@ -2,8 +2,8 @@
 uid: microsoft.quantum.diagnostics.nearequalityfactcp
 name: NearEqualityFactCP
 type: function
-namespace: Microsoft.Quantum.Diagnostics
-summary: 判斷傳統複數的值上限為 1e-10 的小容錯。
+namespace: microsoft.quantum.diagnostics
+summary: 判斷值，傳統複數的預期值最高可達 1e-10 的小容錯。
 syntax: 'function NearEqualityFactCP (actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar) : Unit'
 input:
   content: '(actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar)'
@@ -20,9 +20,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 658a61364ee3843288cc96aaf0e12d7b515ee9e1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6d09926d43652d69db2f466f5a0bed7e106a0fa7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682988"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336918"

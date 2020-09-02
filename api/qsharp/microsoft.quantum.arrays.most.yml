@@ -2,21 +2,21 @@
 uid: microsoft.quantum.arrays.most
 name: Most
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 建立等於輸入陣列的陣列，但不包括最後一個陣列元素。
+namespace: microsoft.quantum.arrays
+summary: 建立等於輸入陣列的陣列，但最後一個陣列元素已卸載。
 syntax: "function Most (array : 'T[]) : 'T[]"
 input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: 陣列，其第一個到倒數第二個元素是要形成輸出陣列。
+    summary: 陣列，其優先于倒數第二個元素，以形成輸出陣列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: 包含元素`array[0..Length(array) - 2]`的陣列。
+  - summary: 包含元素的陣列 `array[0..Length(array) - 2]` 。
     isArray: true
     uid: "'T"
     isLocal: true
@@ -24,9 +24,9 @@ typeParameters:
 - uid: "'T"
   summary: 陣列元素的類型。
 metadata:
-  ms.openlocfilehash: 352e0eb9931b47e14f549828aa2a1c34af8ad901
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e3580525b0f5851138110c9be2eb09e8deb16379
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680919"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351895"

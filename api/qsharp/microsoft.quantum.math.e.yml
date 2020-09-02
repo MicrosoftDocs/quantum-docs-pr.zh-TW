@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.e
 name: E
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回自然對數基底 $e $。
-remarks: 如[需](https://docs.microsoft.com/dotnet/api/system.math.e)詳細資訊，請參閱 system.string。
+remarks: 如 [需詳細資訊，請](https://docs.microsoft.com/dotnet/api/system.math.e) 參閱 system.string。
 syntax: 'function E () : Double'
 input:
   content: ()
@@ -15,9 +15,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 84a9053159279de539c48786df3cad1c031fcc3f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 054099f4a7b0ae4a4c7a03571e97fd72f475d5af
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686755"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344189"

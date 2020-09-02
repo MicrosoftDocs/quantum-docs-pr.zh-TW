@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arrays.equala
 name: EqualA
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 假設有兩個相同類型的陣列，以及針對陣列的元素成對定義的述詞，則會檢查陣列是否相等。
+namespace: microsoft.quantum.arrays
+summary: 如果有兩個相同類型的陣列和針對陣列的元素配對所定義的述詞，就會檢查陣列是否相等。
 remarks: >-
-  此函式是針對泛型型別所定義;也就是說，只要有兩個數組`'T[]`和函式`equal: ('T, 'T) -> Bool`，此函式會傳回`Bool`值，指出陣列是否相等。
+  這個函式是針對泛型型別所定義;也就是說，只要有兩個數組和一個函式，此函式就 `'T[]` 會傳回 `equal: ('T, 'T) -> Bool` 一個 `Bool` 值，指出陣列是否相等。
 
-  若要將兩個數組視為相等，它們的長度必須相等，而且陣列中相同位置的元素必須相等。
+  針對兩個被視為相等的陣列，它們必須有相等的長度，而且陣列中相同位置的元素必須相等。
 examples: >-
-  下列程式碼會檢查不同配對的陣列是否相等：
+  下列程式碼會檢查不同的陣列配對是否相等：
 
 
   ```qsharp
@@ -59,18 +59,18 @@ output:
   content: Bool
   types:
   - summary: >-
-      只有當`true` `array1`和`array2`相等時，才會有值。
+      如果和相等，則值為 `true` `array1` `array2` 。
 
-      也就是說，如果這兩個數組具有相同的長度，而且所有元素都等於所定義`equal`的。
+      也就是說，如果兩個數組都有相同的長度，而且所有元素都等於所定義的 `equal` 。
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: 每個陣列元素的類型。
 metadata:
-  ms.openlocfilehash: d2af5ff8e2d66e6162c73c3854670451a00dcf50
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9f3083483b7720efb4f8eda89d2de224543c236e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676491"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352371"

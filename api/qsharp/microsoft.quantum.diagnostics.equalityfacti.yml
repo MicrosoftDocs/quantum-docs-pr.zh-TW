@@ -2,8 +2,8 @@
 uid: microsoft.quantum.diagnostics.equalityfacti
 name: EqualityFactI
 type: function
-namespace: Microsoft.Quantum.Diagnostics
-summary: 判斷傳統 Int 變數具有預期的值。
+namespace: microsoft.quantum.diagnostics
+summary: 判斷提示傳統 Int 變數具有預期的值。
 syntax: 'function EqualityFactI (actual : Int, expected : Int, message : String) : Unit'
 input:
   content: '(actual : Int, expected : Int, message : String)'
@@ -26,9 +26,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: ae9eb90c63a15c814d23ed4850f322bb358922c5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9cf398d689c7393e605cebe8f5345e830520a337
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655432"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337088"

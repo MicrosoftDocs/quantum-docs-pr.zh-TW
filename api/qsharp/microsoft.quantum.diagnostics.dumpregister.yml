@@ -2,27 +2,27 @@
 uid: microsoft.quantum.diagnostics.dumpregister
 name: DumpRegister
 type: function
-namespace: Microsoft.Quantum.Diagnostics
-summary: 傾印與指定 qubits 相關聯的目前目的機器狀態。
+namespace: microsoft.quantum.diagnostics
+summary: 傾印目前目的電腦與指定量子位相關聯的狀態。
 remarks: >-
-  這個方法可讓您將與指定 qubits 的狀態相關聯的資訊，傾印到檔案或其他位置。
+  這個方法可讓您將與指定量子位狀態相關聯的資訊傾印到檔案或其他位置。
 
-  產生的實際資訊以及每一部`location`目的電腦特有的語義。 不過，將空的元組提供為位置`()`（）通常是指將輸出產生至主控台。
+  實際產生的資訊和的語義 `location` 都是每個目的電腦的特定資訊。 不過，將空的元組提供為位置 (`()`) 通常表示要產生主控台的輸出。
 
 
-  對於分散在「量子開發工具組」中的本機完整狀態模擬器，這個方法會預期具有檔案路徑的字串，其會將指定之 qubits 的狀態（也就是對應子系統的 wave 函式）寫入為複數的一維陣列，其中每個專案都代表測量對應狀態之機率的 amplitudes。
+  對於分散為量子開發工具組一部分的本機完整狀態模擬器，這個方法預期會有檔案路徑的字串，而檔案的路徑將會寫入指定的量子位的狀態 (亦即，對應子系統的 wave 函數) 為複數的一維陣列，其中每個專案都代表測量相對應狀態之機率的 amplitudes。
 
-  如果指定的 qubits 是以其他 qubit 光子，而且無法分隔其狀態，則只會報告 qubits 為光子。
+  如果指定的量子位是以其他量子位纏結，而且其狀態無法分隔，它只會報告量子位為纏結。
 syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
 input:
   content: "(location : 'T, qubits : Qubit[])"
   types:
   - name: location
-    summary: 提供有關要在何處產生狀態傾印的資訊。
+    summary: 提供有關何處可以產生狀態傾印的資訊。
     uid: "'T"
     isLocal: true
   - name: qubits
-    summary: 要報告的 qubits 清單。
+    summary: 要報告的量子位清單。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -33,9 +33,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 3bf5302364b37cb1ccef651935833b966ff84464
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 384ce2373081545129c569ea6acc6b01733587fc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677218"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337292"

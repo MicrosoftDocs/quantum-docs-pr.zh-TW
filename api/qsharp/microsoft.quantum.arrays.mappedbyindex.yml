@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.mappedbyindex
 name: MappedByIndex
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 針對陣列的索引元素所定義的陣列和函式，會傳回新的陣列，其中包含函式下原始陣列的影像。
+namespace: microsoft.quantum.arrays
+summary: 如果陣列和函式是針對陣列的索引元素所定義，則會傳回新的陣列，此陣列是由函式下原始陣列的影像所組成。
 examples: >-
-  以下兩行是相同的：
+  下列兩行是相等的：
 
 
   ```qsharp
@@ -15,7 +15,7 @@ examples: >-
   ```
 
 
-  和
+  及
 
 
   ```qsharp
@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: 從`(Int, 'T)`到`'U`的函式，用來對應元素及其索引。
+    summary: 從到的函式， `(Int, 'T)` `'U` 用來對應元素及其索引。
     isFunction: true
     input:
       types:
@@ -41,28 +41,28 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: 的元素陣列`'T`。
+    summary: 的元素陣列 `'T` 。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: 由`mapper`函`'U[]`式所對應的元素陣列。
+  - summary: 由函式 `'U[]` 所對應的元素陣列 `mapper` 。
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array`元素的類型。'
+  summary: 元素的類型 `array` 。
 - uid: "'U"
-  summary: '`mapper`函數的結果類型。'
+  summary: 函數的結果型別 `mapper` 。
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d6f50c3fe90998431b71050a953ec5dc08e31e92
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680924"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351929"
