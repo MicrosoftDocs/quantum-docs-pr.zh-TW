@@ -2,16 +2,16 @@
 uid: microsoft.quantum.amplitudeamplification.fixedpointreflectionphases
 name: FixedPointReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: 計算固定點振幅放大的部分反映階段。
 syntax: 'function FixedPointReflectionPhases (nQueries : Int, successMin : Double) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 references: >-
-  我們使用「具有最佳查詢數目的固定點振幅放大」中的階段
+  我們會使用「具有最佳查詢數目的固定點波幅放大」中的階段
 
 
-  - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305)另請參閱「複合量子閘道的方法」
+  - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305) 另請參閱「複合量子閘道的方法」
 
-  - [LowYoderChuang2016](https://arxiv.org/abs/1603.03996)採用`RotationPhases`格式的階段 LowYoderChuang2016。
+  - [LowYoderChuang2016](https://arxiv.org/abs/1603.03996) 格式的階段 `RotationPhases` 。
 input:
   content: '(nQueries : Int, successMin : Double)'
   types:
@@ -26,12 +26,12 @@ input:
 output:
   content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
   types:
-  - summary: 可以在固定點振幅放大配量演算法執行中使用的階段陣列。
+  - summary: 可用於固定點振幅放大量子演算法實的階段陣列。
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: f1484b1f3bad5e5c6213919f0b95adcbc62f25c1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88345904b92a4e16fc25e8faa73ccbde181b03dc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672995"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340471"

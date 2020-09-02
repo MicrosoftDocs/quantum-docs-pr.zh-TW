@@ -2,24 +2,24 @@
 uid: microsoft.quantum.preparation.preparesinglequbitidentity
 name: PrepareSingleQubitIdentity
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  準備最常混合狀態中的 qubit。
+  以充分混合狀態準備量子位。
 
 
-  它會套用 depolarizing channel $ $ \begin{align} \Omega （\rho） \mathrel{，以準備 $ \boldone/$2 狀態中的指定 qubit： =} \frac{1} {4} \ sum_ {\mu \in \{0，1，2，3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}，\end{align} $ $，其中 $\_\sigma i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是密度運算子，代表混合的狀態。
+  它會藉由套用 depolarizing 通道 $ $ \begin{align} \Omega ( \rho) \mathrel{，來準備 $ \boldone/$2 狀態中的給定量子位： =} \frac {1} {4} \ sum_ {\mu \in \{ 0，1，2，3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\dagger}，\end{align} $ $ where $ \sigma \_ i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是代表混合狀態的密度運算子。
 remarks: >-
-  混合狀態 $ \boldone/$2 描述將此作業套用至狀態的結果會隱含地描述此作業中隨機播放所預期的值。
+  混合狀態 $ \boldone/$2 描述將此作業套用至狀態的結果，會以隱含的方式描述這項作業中所做的隨機播放的預期值。
 
-  因此，對於任何單一應用程式，這項作業會將純狀態對應到純狀態，但它會如預期的方式運作。
+  因此，在任何單一應用程式中，這項作業會將純狀態對應至純虛擬狀態，但它的運作方式如預期所述。
 
-  特別是，這項作業可以在進程 tomography 中用來測量通道的*非 unital*元件。
+  尤其是，這項作業可以在流程 tomography 中用來測量通道的 *非 unital* 元件。
 syntax: 'operation PrepareSingleQubitIdentity (qubit : Qubit) : Unit'
 input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    summary: Qubit，其狀態會以上述方式 depolarized。
+    summary: 量子位，其狀態會以上述方式 depolarized。
     isPrimitive: true
     uid: Qubit
 output:
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 4dd07e9e59575d60bca81c996ad5fc1a3a82b16d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 65b39d742a6ba4399137fb4d88c6f762969a0f93
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686512"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331342"

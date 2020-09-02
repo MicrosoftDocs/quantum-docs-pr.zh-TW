@@ -2,12 +2,12 @@
 uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
 name: MeasureStabilizerGenerators
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: 測量一組指定的穩定器群組產生器。
+namespace: microsoft.quantum.errorcorrection
+summary: 測量一組指定的穩定產生器群組。
 remarks: >-
-  這不會檢查是否已通勤一組指定的產生器。
+  這不會檢查指定的產生器集是否通勤。
 
-  如果沒有通勤，測量結果可能是任意的。
+  如果未通勤，測量結果可能是任意的。
 syntax: 'operation MeasureStabilizerGenerators (stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result)) : Microsoft.Quantum.ErrorCorrection.Syndrome'
 input:
   content: '(stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result))'
@@ -16,17 +16,17 @@ input:
     summary: >-
       Multiqubit Pauli 運算子的陣列。
 
-      例如， `stabilizerGroup[0]`是單一 qubit Pauli 矩陣的清單，它的張量產品是一個穩定的產生器。
+      例如， `stabilizerGroup[0]` 是單一量子位 Pauli 矩陣的清單，其 tensor 產品是一個穩定器產生器。
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Pauli
   - name: logicalRegister
-    summary: 定義了穩定程式碼的 qubits 陣列。
+    summary: 定義了穩定程式碼的量子位陣列。
     uid: microsoft.quantum.errorcorrection.logicalregister
   - name: gadget
-    summary: 指定如何測量 multiqubit Pauli 運算子的運算。
+    summary: 指定如何測量 multiqubit Pauli 運算子的作業。
     isOperation: true
     input:
       types:
@@ -43,12 +43,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.Syndrome
   types:
-  - summary: 測量結果。
+  - summary: 度量的結果。
     uid: microsoft.quantum.errorcorrection.syndrome
 metadata:
-  ms.openlocfilehash: d89455e8341d053053e110a6cfccd19e206d38d8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fe7e1d75d6108d3f1c8288560c011af14bf6529b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682303"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350008"

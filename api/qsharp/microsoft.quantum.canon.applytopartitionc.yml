@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.applytopartitionc
 name: ApplyToPartitionC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  將一對作業套用至暫存器的指定分割區，分為兩個部分。
+  將一組作業套用至註冊的指定分割區分成兩個部分。
 
-  修飾`C`詞表示作業是可控制的。
+  修飾詞 `C` 表示作業可控制。
 syntax: 'operation ApplyToPartitionC (op : ((Qubit[], Qubit[]) => Unit is Ctl), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
 input:
   content: '(op : ((Qubit[], Qubit[]) => Unit is Ctl), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
@@ -30,13 +30,13 @@ input:
     - Controlled
   - name: numberOfQubitsToFirstArgument
     summary: >-
-      要放入資料分割第一個部分的目標 qubits 數目。
+      要放入資料分割第一個部分的目標量子位數目。
 
-      其餘的 qubits 會構成資料分割的第二個部分。
+      其餘的量子位會組成資料分割的第二個部分。
     isPrimitive: true
     uid: Int
   - name: target
-    summary: 由指定的兩個作業進行分割和操作的 qubits 暫存器。
+    summary: 由指定的兩項作業進行分割並操作的量子位登錄。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -50,9 +50,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytopartition
 metadata:
-  ms.openlocfilehash: e53e8bfc9320760fab7bfa0204892eeef331c804
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e52201676a9c424556a3d11d85ed873344b48830
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674595"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357318"

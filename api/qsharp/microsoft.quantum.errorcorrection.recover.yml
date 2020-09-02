@@ -2,20 +2,20 @@
 uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: 依據`QECC`類型所描述的量子代碼，執行單一錯誤更正。
+namespace: microsoft.quantum.errorcorrection
+summary: 依類型所描述的量副程式代碼，執行單次錯誤修正 `QECC` 。
 syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: 以`QECC`類型封裝的配量錯誤更正程式碼描述了量子資料的編碼和解碼，以及如何測量錯誤 syndromes 的方式。
+    summary: 封裝為類型的量子錯誤修正程式碼 `QECC` 會描述量子資料的編碼和解碼，以及如何測量錯誤 syndromes。
     uid: microsoft.quantum.errorcorrection.qecc
   - name: fn
-    summary: '`RecoveryFn` ，其會將每個錯誤的`Pauli[]`症狀對應至可更正偵測到之錯誤的作業。'
+    summary: '`RecoveryFn`，會將每個錯誤的症狀對應到可 `Pauli[]` 更正偵測到之錯誤的作業。'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
-    summary: 定義了穩定程式碼的 qubits 陣列。
+    summary: 定義了穩定程式碼的量子位陣列。
     uid: microsoft.quantum.errorcorrection.logicalregister
 output:
   content: Unit
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 2a873e06c20bf62c998b1096d862d26ff89aa134
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b61c7255da3c8c22ffbbf7cd9a739ad4c9cca5d4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682296"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349957"

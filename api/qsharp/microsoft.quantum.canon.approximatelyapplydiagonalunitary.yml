@@ -2,31 +2,31 @@
 uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
 name: ApproximatelyApplyDiagonalUnitary
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  將複雜階段的陣列套用至 qubits 暫存器的數位基礎狀態，並根據指定的容錯來截斷小型旋轉角度。
+  將複雜階段的陣列套用至量子位註冊的數值基礎狀態，並根據指定的容錯來截斷小旋轉角度。
 
 
-  這種作業會執行一個對角線，以在 $n $-qubit number state $ \ket{j} $ 上套用複雜的階段 $e ^ {i \ theta_j} $。
+  此作業會在 $n $ 量子位 number state $ \ket{j} $ 上，執行套用複雜階段 $e ^ {i \ theta_j} $ 的對角線。
 
-  特別是，這項作業可以由單一
+  尤其是，這項作業可以由單一
 
 
   $ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j}。
 
   \end{align} $ $
-remarks: '`coefficients`如果指定了少於 $ 2 ^ n $，將會以 $ \ theta_j = $0.0 的元素填補。'
+remarks: '`coefficients` 如果指定了少於 $ 2 ^ n $ 的元素，則會以 $ \ theta_j = $0.0 填補。'
 syntax: 'operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
-references: '- Vivek Shende、Stephen Bullock、Igor L. Markov 的量子邏輯電路合成https://arxiv.org/abs/quant-ph/0406176'
+references: '- 量子邏輯電路的合成 Vivek V. Shende、Stephen S. Bullock、Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
   content: '(tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: tolerance
-    summary: 較小的係數會被截斷的容錯。
+    summary: 低於的容錯會被截斷。
     isPrimitive: true
     uid: Double
   - name: coefficients
-    summary: 最多 $ 2 ^ n $ 係數 $ \ theta_j $ 的陣列。 $J $ th 的係數會以位元組由小到大的格式來編制編碼的數位 state $ \ket{j} $。
+    summary: 最多 $ 2 ^ n $ 係數 $ \ theta_j $ 的陣列。 $J $ th 係數會以位元組由大到小的格式來編制數位狀態 $ \ket{j} $ 編碼。
     isArray: true
     isPrimitive: true
     uid: Double
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - applydiagonalunitary
 metadata:
-  ms.openlocfilehash: ec183b0a42a3e2382a395a4711390c2ab8e9eb85
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f67d8807ec5e7931b415a132b77e9653b3d1c0a6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674475"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357080"

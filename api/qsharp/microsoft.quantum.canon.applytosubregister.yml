@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applytosubregister
 name: ApplyToSubregister
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 將作業套用至暫存器的 subregister，並使用其索引陣列指定的 qubits。
+namespace: microsoft.quantum.canon
+summary: 將作業套用至暫存器的 subregister，並使用其索引的陣列所指定的量子位。
 examples: >-
-  建立三個 qubit state ${1}\frac {{2}\sqrt}{0}\_\ket 2 （{0}\_\ket 1 \{0}ket _3 +{1}\_\ket 1 \{1}ket _3） $：
+  建立三個量子位狀態 $ \frac {1} {\sqrt {2} } \ket {0} \_ 2 ( \ket {0} \_ 1 \ ket {0} _3 + \ket {1} \_ 1 \ ket {1} _3) $：
 
 
   ```qsharp
@@ -30,12 +30,12 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: idxs
-    summary: 索引的陣列，表示將套用作業的 qubits。
+    summary: 索引的陣列，表示將套用作業的量子位。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: target
-    summary: 註冊作業作用所在的。
+    summary: 註冊的作用。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -49,9 +49,9 @@ seeAlso:
 - applytosubregisterc
 - applytosubregisterca
 metadata:
-  ms.openlocfilehash: 89c488fd593e6f81a1c811e0b507a69a9f891be9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00e62624cf1bfc9460316a03c02770fb585df3ba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674571"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357284"

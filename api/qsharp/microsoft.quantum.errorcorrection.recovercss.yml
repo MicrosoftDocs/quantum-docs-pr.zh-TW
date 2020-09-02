@@ -2,23 +2,23 @@
 uid: microsoft.quantum.errorcorrection.recovercss
 name: RecoverCSS
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: 依據`CSS`類型所描述的量子代碼，執行單一錯誤更正。
+namespace: microsoft.quantum.errorcorrection
+summary: 依類型所描述的量副程式代碼，執行單次錯誤修正 `CSS` 。
 syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: 以`CSS`類型封裝的配量 CSS 錯誤更正程式碼描述了量子資料的編碼和解碼，以及如何測量錯誤 syndromes。
+    summary: 封裝為類型的量子 CSS 錯誤修正程式碼 `CSS` 會描述量子資料的編碼和解碼，以及如何測量錯誤 syndromes。
     uid: microsoft.quantum.errorcorrection.css
   - name: fnX
-    summary: '`RecoveryFn` ，其會將每個 $X $ 錯誤的`Pauli[]`症狀對應至可更正偵測到之錯誤的作業。'
+    summary: '`RecoveryFn`，會將每個 $X $ 錯誤的症狀對應到可 `Pauli[]` 更正偵測到之錯誤的作業。'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: fnZ
-    summary: '`RecoveryFn` ，其會將每個 $Z $ 錯誤的`Pauli[]`症狀對應至可更正偵測到之錯誤的作業。'
+    summary: '`RecoveryFn`，會將每個 $Z $ 錯誤的症狀對應到可 `Pauli[]` 更正偵測到之錯誤的作業。'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
-    summary: 定義了穩定程式碼的 qubits 陣列。
+    summary: 定義了穩定程式碼的量子位陣列。
     uid: microsoft.quantum.errorcorrection.logicalregister
 output:
   content: Unit
@@ -30,9 +30,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 8c9504e985b224421d3eb66b0d7e9bc0ef8f2e96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cb3a6bf49913b340545e3659f078adc244356246
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682279"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349889"

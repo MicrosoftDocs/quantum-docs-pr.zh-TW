@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.bitwise.parity
 name: Parity
 type: function
-namespace: Microsoft.Quantum.Extensions.Bitwise
-summary: 同位檢查已被取代。 請改用 @"microsoft.quantum.bitwise.parity"。
+namespace: microsoft.quantum.extensions.bitwise
+summary: 同位已被取代。 請改用 @"microsoft.quantum.bitwise.parity"。
 syntax: 'function Parity (a : Int) : Int'
 input:
   content: '(a : Int)'
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: b3b0262bd14bec84e49476a4b2410b2c25088882
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d74175dca1a44dc909f355aba8630e4dfe2453af
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682192"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349447"

@@ -2,16 +2,16 @@
 uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation
 name: ObliviousAmplitudeAmplificationFromStatePreparation
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: 遺忘式以 oracles 進行部分反射的振幅放大。
+namespace: microsoft.quantum.amplitudeamplification
+summary: 無警示幅度放大（依 oracle 進行部分反射）。
 remarks: >-
-  這會在輔助啟動和目標狀態的形式上，比中`AmpAmpObliviousByReflectionPhases`更嚴格的條件。
+  如此一來，就能在的輔助啟動和目標狀態形式上產生更嚴格的條件，而不是 `AmpAmpObliviousByReflectionPhases` 。
 
-  假設 $A{0}\_\ket f\ket{0}\_A = \ket{\text{start}}\_{fa} $ 從計算基礎 $ \ket\_{0}\_f\ket{0}$ 準備輔助啟動狀態 $ \ket{\text{start}} {fa} $。
+  假設 $A \ket {0} \_ f\ket {0} \_ A = \ket{\text{start}} \_ {fa} $ 可 \_ 從計算基礎 $ \ket {0} \_ f\ket $ 準備輔助啟動狀態 $ \ket{\text{start}} {fa} $ {0} 。
 
-  假設目標狀態是以 $ \ket{1}\_f $ 標記。
+  假設目標狀態是以 $ \ket {1} \_ f $ 標示。
 
-  假設\_\begin{align} O\ket {\ text {start}} {fa} \ket{\psi}\_s = \lambda\ket{1}\_f\ket {\ text {任何}}\_a\ket {\ text {target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots，\end{align} 適用于某些單一 $U $。
+  假設 \begin{align} O\ket {\ text {start}} \_ {fa} \ket{\psi} \_ s = \lambda\ket {1} \_ f\ket {\ text {任何}} \_ a\ket {\ text {target}} \_ s U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket {0} \_ f\cdots，\end{align} 針對某些單一 $U $。
 syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
@@ -20,19 +20,19 @@ input:
     summary: 部分反射的階段
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
   - name: startStateOracle
-    summary: 準備輔助啟動狀態的單一 oracle $A $
+    summary: 單一 oracle $A $ 可準備輔助啟動狀態
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: 可在輔助和系統緩存`ObliviousOracle`器上共同運作之類型的單一 oracle $O $
+    summary: 單一 oracle $O $ 的型別 `ObliviousOracle` ，在輔助和系統註冊上共同運作
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: idxFlagQubit
-    summary: Qubit 旗標注冊的索引
+    summary: 單一量子位旗標登錄的索引
     isPrimitive: true
     uid: Int
 output:
   content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: 根據部分反射來執行遺忘式幅度放大的作業。
+  - summary: 根據部分反射來實行無警示振幅放大的作業。
     isOperation: true
     input:
       types:
@@ -50,9 +50,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: adc6f48a5d335eb9dc92dcb13425de900b5c8563
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9c4bedaffafdbe0c7dfdda6a4a6ec3ded4a69bfd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680133"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340369"

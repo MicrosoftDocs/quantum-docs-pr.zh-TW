@@ -2,17 +2,17 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionphases
 name: ReflectionPhases
 type: newtype
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: 幅度放大中部分反射順序的階段。
+namespace: microsoft.quantum.amplitudeamplification
+summary: 以振幅放大的部分反射順序的階段。
 remarks: >-
-  第一個參數是反映有關啟動狀態的階段陣列。 第二個參數是反映有關目標狀態的階段陣列。
+  第一個參數是反映開始狀態之階段的陣列。 第二個參數是反映目標狀態之階段的陣列。
 
-  這兩個數組的長度必須相等。 請注意，在許多情況下，有關 [開始] 狀態和 [目標狀態] 最後一個階段的第一個階段會引進全域階段轉移，而且可能會設定為 $0 $。
+  這兩個數組的長度必須相等。 請注意，在許多情況下，有關目標狀態的開始狀態和最後一個階段的第一個階段會引進全域階段轉移，而且可以設定為 $0 $。
 syntax: newtype ReflectionPhases = (Double[], Double[]);
 metadata:
-  ms.openlocfilehash: 84d2c006997f8a2a3c9b121581b5dd58804a806d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4a0ed1c01dc6cd14d2569064d769d7057087db48
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680123"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340352"
