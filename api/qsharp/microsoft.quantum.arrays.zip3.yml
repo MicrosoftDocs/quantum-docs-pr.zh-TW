@@ -2,19 +2,19 @@
 uid: microsoft.quantum.arrays.zip3
 name: Zip3
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 假設有三個數組，則會傳回3個元組的新陣列，讓每個3元組都包含每個原始陣列中的元素。
+namespace: microsoft.quantum.arrays
+summary: 假設有三個數組，則會傳回3個元組的新陣列，讓每個3元組包含每個原始陣列的元素。
 syntax: "function Zip3 (first : 'T1[], second : 'T2[], third : 'T3[]) : ('T1, 'T2, 'T3)[]"
 input:
   content: "(first : 'T1[], second : 'T2[], third : 'T3[])"
   types:
   - name: first
-    summary: 陣列，其中包含每個元組之第一個元素的值。
+    summary: 陣列，其中包含每個元組的第一個元素值。
     isArray: true
     uid: "'T1"
     isLocal: true
   - name: second
-    summary: 陣列，其中包含每個元組之第二個元素的值。
+    summary: 陣列，其中包含每個元組的第二個元素的值。
     isArray: true
     uid: "'T2"
     isLocal: true
@@ -26,7 +26,7 @@ input:
 output:
   content: ('T1, 'T2, 'T3)[]
   types:
-  - summary: 陣列，其中包含每個`(first[idx], second[idx], third[idx])` `idx`的表單3個元組。 如果這三個數組的長度不相等，輸出就會是較短的輸入。
+  - summary: 陣列，其中包含每個的表單3個元組 `(first[idx], second[idx], third[idx])` `idx` 。 如果三個數組的長度不相等，則輸出將會是輸入較短的時間長度。
     isArray: true
     types:
     - uid: "'T1"
@@ -37,18 +37,18 @@ output:
       isLocal: true
 typeParameters:
 - uid: "'T1"
-  summary: 第一個陣列元素的類型。
+  summary: 第一個陣列元素的型別。
 - uid: "'T2"
-  summary: 第二個陣列元素的類型。
+  summary: 第二個陣列元素的型別。
 - uid: "'T3"
-  summary: 第三個陣列元素的類型。
+  summary: 第三個陣列元素的型別。
 seeAlso:
 - zip
 - zip4
 metadata:
-  ms.openlocfilehash: 899066b309e41df3a1bb2bdce93382ff58de2662
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d16fb3da1b11fbed9487ef8555dd83bb6b3a16a5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680744"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351385"

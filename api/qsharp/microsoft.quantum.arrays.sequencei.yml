@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.sequencei
 name: SequenceI
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 取得指定間隔中的整數陣列。
+namespace: microsoft.quantum.arrays
+summary: 取得指定間隔內的整數陣列。
 examples: >-
   ```qsharp
 
@@ -28,20 +28,20 @@ input:
     isPrimitive: true
     uid: Int
   - name: to
-    summary: 不小於的間隔的內含結束索引`from`。
+    summary: 不小於的間隔的內含結尾索引 `from` 。
     isPrimitive: true
     uid: Int
 output:
   content: Int[]
   types:
-  - summary: 包含數位`from`序列（ `from + 1`，...） `to`的陣列。
+  - summary: 陣列，其中包含數位的序列 `from` （ `from + 1` ，...） `to` 。
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0efe1b4c3980c808cd89e56fd4948e06218cab66
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 079ea7c2082f541c89bfee1f7edd8bc2ed670751
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680837"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351674"

@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.lessthanl
 name: LessThanL
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: 只有當某個數位小於另一個數位時，才會傳回 true。
+namespace: microsoft.quantum.logical
+summary: 只有當數位小於另一個數位時，才會傳回 true。
 remarks: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```Q#
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`只有當完全小於`a`時，才為`b`。'
+  - summary: '`true` 只有在 `a` 嚴格小於時才會 `b` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 9d4f97dc354ae51052c812d6cef3673edee84cb0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 118c96ec863aff82dcc04be5d8e2b5570657756f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684695"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345656"

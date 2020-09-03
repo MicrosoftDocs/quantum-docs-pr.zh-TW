@@ -2,17 +2,17 @@
 uid: microsoft.quantum.arrays.subarray
 name: Subarray
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 採用陣列和位置清單，並從符合指定位置的原始陣列元素產生新陣列。
+namespace: microsoft.quantum.arrays
+summary: 採用陣列和位置清單，並產生新的陣列，該陣列是從符合指定位置的原始陣列元素組成。
 remarks: >-
-  函式會針對泛型型別定義，也就是每次有陣列`'T[]`以及定義子陣列的`Int[]`位置清單時。
+  函數是針對泛型型別定義的，也就是，只要有陣列 `'T[]` 和定義子陣列的位置清單 `Int[]` 。
 
-  子陣列的結構是根據產生給定陣列的新深層複本，而不是維護參考。
+  子陣列的結構是依據產生指定陣列的新深層複本，而不是維護參考。
 
 
-  如果`Length(indices) < Length(array)`為，則此函式會傳回`array`的子集。 另一方面，如果`indices`包含重複的元素，的對應元素`array`也會同樣重複。
+  如果 `Length(indices) < Length(array)` 為，則此函數會傳回的子集 `array` 。 另一方面，如果 `indices` 包含重複的元素，則 `array` 會同樣重複的對應元素。
 
-  如果`indices`和`array`的長度相同，則此函式會提供`array`的排列。
+  如果 `indices` 和 `array` 的長度相同，此函數會提供的排列 `array` 。
 syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(indices : Int[], array : 'T[])"
@@ -23,24 +23,24 @@ input:
     isPrimitive: true
     uid: Int
   - name: array
-    summary: 的元素陣列`'T`。
+    summary: 的元素陣列 `'T` 。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: 元素的`out`陣列，其索引會`out[idx] == array[indices[idx]]`對應到子陣列，因此。
+  - summary: 專案的陣列 `out` ，其索引會對應至子陣列，因此為 `out[idx] == array[indices[idx]]` 。
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array`元素的類型。'
+  summary: 元素的類型 `array` 。
 metadata:
-  ms.openlocfilehash: 2740a39d1b7c1c56aed4f9107c65d339c5fb4c1a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1d5739f49e32ec4548cb24df2106dec0866a94cb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675123"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351623"

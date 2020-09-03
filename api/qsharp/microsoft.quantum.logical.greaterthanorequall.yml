@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.greaterthanorequall
 name: GreaterThanOrEqualL
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: 只有在數位大於或等於另一個數位時，才會傳回 true。
+namespace: microsoft.quantum.logical
+summary: 只有當數位大於或等於另一個數位時，才會傳回 true。
 remarks: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```Q#
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`只有當`a`大於或等於時，才為`b`。'
+  - summary: '`true` 如果 `a` 大於或等於，則為 `b` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: d99d09cfa15f95d4827a4b6197395d9cd16a0928
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 077f9141d547dfffcc43cbdd5db9a68f22983212
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684738"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345707"

@@ -2,31 +2,31 @@
 uid: microsoft.quantum.math.squarednorm
 name: SquaredNorm
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  傳回向量的平方2標準。
+  傳回向量的平方二標準。
 
 
-  傳回向量的平方2標準。也就是說，如果輸入 $ \vec{x} $，會傳回 $ \ sum_i x_i ^ 2 $。
+  傳回向量的平方二標準;亦即，假設輸入 $ \vec{x} $，則會傳回 $ \ sum_i x_i ^ 2 $。
 syntax: 'function SquaredNorm (array : Double[]) : Double'
 input:
   content: '(array : Double[])'
   types:
   - name: array
-    summary: 要傳回其平方標準的向量。
+    summary: 要傳回其平方2標準的向量。
     isArray: true
     isPrimitive: true
     uid: Double
 output:
   content: Double
   types:
-  - summary: 的平方 2-標準`array`。
+  - summary: 的平方雙標準 `array` 。
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: e370d6d5f21d459bbe37e969776e3722bf14bd9e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a10001eb154b19bacf10fa846ceee8c5c093f1e6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673560"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332821"
