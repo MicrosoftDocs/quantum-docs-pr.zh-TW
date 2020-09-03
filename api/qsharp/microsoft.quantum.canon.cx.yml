@@ -2,9 +2,9 @@
 uid: microsoft.quantum.canon.cx
 name: CX
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  將受控制的 X （CX）閘道套用至一對 qubits。
+  將受控制 X (CX) 閘道套用至一對量子位。
 
 
   $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{align}，$ $，其中資料列和資料行的組織方式如量子概念指南中所示。
@@ -19,7 +19,7 @@ remarks: >-
   ```
 
 
-  和：
+  以及：
 
 
   ```qsharp
@@ -32,11 +32,11 @@ input:
   content: '(control : Qubit, target : Qubit)'
   types:
   - name: control
-    summary: CX 閘道的控制 qubit。
+    summary: 適用于 CX 閘道的控制量子位。
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: CX 閘道的目標 qubit。
+    summary: CX 閘道的目標量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d5a987001de638b9415a1d5ede1dc88aee7edf0f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0be3fea70cf8201b6b1877fce688f8104749b424
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680303"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356587"

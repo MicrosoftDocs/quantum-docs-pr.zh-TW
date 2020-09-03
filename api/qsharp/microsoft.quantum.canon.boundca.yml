@@ -2,13 +2,13 @@
 uid: microsoft.quantum.canon.boundca
 name: BoundCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  假設有一系列作業在單一輸入上執行，就會產生一個依序執行每個指定運算的新操作。
+  針對單一輸入的作業陣列，會產生依序執行每個指定作業的新作業。
 
-  修飾`CA`詞表示陣列中的所有作業都是 adjointable 且可控制的。
+  修飾詞 `CA` 指出陣列中的所有作業都是 adjointable 且可控制的。
 examples: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```qsharp
@@ -20,7 +20,7 @@ examples: >-
   ```
 
 
-  和
+  及
 
 
   ```qsharp
@@ -50,7 +50,7 @@ input:
 output:
   content: ('T => Unit is Adj + Ctl)
   types:
-  - summary: 依序在其輸入上執行每個指定作業的新作業。
+  - summary: 在其輸入上依序執行每個指定作業的新作業。
     isOperation: true
     input:
       types:
@@ -65,13 +65,13 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: 陣列中的每個作業作用所在的目標。
+  summary: 陣列中的每個作業所作用的目標。
 seeAlso:
 - microsoft.quantum.canon.bound
 metadata:
-  ms.openlocfilehash: 0144486e675bfb18d4e171a4a8cfec7e5a8be2ae
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3a843acbb186750e23d35b3c3e38ce76b369392e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675944"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356893"

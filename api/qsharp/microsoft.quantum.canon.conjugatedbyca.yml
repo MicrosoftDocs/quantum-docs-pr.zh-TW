@@ -2,15 +2,15 @@
 uid: microsoft.quantum.canon.conjugatedbyca
 name: ConjugatedByCA
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: 若有外部和內部作業，則會傳回新的作業，以 conjugates 外部運算的內部運算。
-remarks: 外部作業一律會假設為 adjointable，但不需要是可控制的，以便讓合併作業可以控制。
+namespace: microsoft.quantum.canon
+summary: 指定外部和內部作業時，會傳回由外部作業 conjugates 內部作業的新作業。
+remarks: 外部作業一律會假設為 adjointable，但不需要進行控制，才能讓合併作業成為可控制的。
 syntax: "function ConjugatedByCA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl)) : ('T => Unit is Adj + Ctl)"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl))"
   types:
   - name: outerOperation
-    summary: 應該用來 $V $ 的運算 $U $。 請注意，外部作業 $U $ 需要 adjointable，但不需要是可控制的。
+    summary: 作業 $U $，其應用於共軛 $V $。 請注意，$U $ 的外部作業需要 adjointable，但不需要是可控制的。
     isOperation: true
     input:
       types:
@@ -39,7 +39,7 @@ input:
 output:
   content: ('T => Unit is Adj + Ctl)
   types:
-  - summary: 新的作業，其動作是由單一 $U ^ {\dagger} V U $ 表示。
+  - summary: 由單一 $U ^ {\dagger} V U $ 表示其動作的新作業。
     isOperation: true
     input:
       types:
@@ -61,9 +61,9 @@ seeAlso:
 - conjugatedbyca
 - applywith
 metadata:
-  ms.openlocfilehash: a57abf658e59e05baabc700a08c38e10e1325801
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 85b738f29ba5838e6eeedd871756efa771fd08f0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680378"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356655"

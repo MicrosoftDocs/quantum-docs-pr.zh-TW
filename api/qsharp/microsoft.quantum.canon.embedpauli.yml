@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.embedpauli
 name: EmbedPauli
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: 假設有單一 qubit Pauli 運算子和 qubit 的索引，會傳回具有指定之單一 Pauli 運算子的多 qubit Qubit 運算子，該索引和`PauliI`每個其他的索引。
+namespace: microsoft.quantum.canon
+summary: 假設有一個量子位的 Pauli 運算子和一個量子位的索引，則會傳回具有指定之單一 Pauli 運算子的多重量子位量子位運算子（位於該索引和 `PauliI` 其他每個索引）。
 examples: >-
-  若要取得陣列`[PauliI, PauliI, PauliX, PauliI]`：
+  若要取得陣列 `[PauliI, PauliI, PauliX, PauliI]` ：
 
 
   ```qsharp
@@ -18,15 +18,15 @@ input:
   content: '(pauli : Pauli, location : Int, n : Int)'
   types:
   - name: pauli
-    summary: 要放在指定位置的單一 qubit Pauli 運算子。
+    summary: 要放在指定位置的單一量子位 Pauli 運算子。
     isPrimitive: true
     uid: Pauli
   - name: location
-    summary: 索引`output[location] == pauli`，其中`output`是此函式的輸出。
+    summary: 索引 `output[location] == pauli` ，其中 `output` 是此函數的輸出。
     isPrimitive: true
     uid: Int
   - name: n
-    summary: 要傳回之陣列的長度。
+    summary: 要傳回的陣列長度。
     isPrimitive: true
     uid: Int
 output:
@@ -36,9 +36,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: df9cff23b6a7255ec57e944fd1bed140ff18560a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a5a6dbabfe51f52da9eb63d23bfbf1cf7ee03370
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675592"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356366"

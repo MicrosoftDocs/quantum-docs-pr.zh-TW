@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.compose
 name: Compose
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   傳回兩個函數的組合。
 
@@ -13,7 +13,7 @@ input:
   content: "(outer : ('U -> 'V), inner : ('T -> 'U))"
   types:
   - name: outer
-    summary: 要套用的第二個函式。
+    summary: 要套用的第二個函數。
     isFunction: true
     input:
       types:
@@ -37,7 +37,7 @@ input:
 output:
   content: ('T -> 'V)
   types:
-  - summary: 新的函式 $h $，適用于所有輸入 $x $、$f （g （x）） = h （x） $。
+  - summary: '新的函式 $h $，用於所有輸入 $x $、$f (g (x) # A3 = h (x) $。'
     isFunction: true
     input:
       types:
@@ -49,15 +49,15 @@ output:
         isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: 要套用之第一個函式的輸入類型。
+  summary: 要套用之第一個函數的輸入類型。
 - uid: "'U"
-  summary: 要套用之第一個函式的輸出類型，以及要套用之第二個函數的輸入類型。
+  summary: 要套用之第一個函式的輸出類型，以及要套用之第二個函式的輸入類型。
 - uid: "'V"
-  summary: 要套用之第二個函式的輸出類型。
+  summary: 要套用之第二個函數的輸出類型。
 metadata:
-  ms.openlocfilehash: 77037411aace0f69850b62322f3e63d6a34358ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e62937fd42cb4067ca7a7947cac29a9ef539da6c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675807"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356740"

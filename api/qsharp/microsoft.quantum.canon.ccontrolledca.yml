@@ -2,17 +2,17 @@
 uid: microsoft.quantum.canon.ccontrolledca
 name: CControlledCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  假設有作業作業，會傳回新作業，此作業會在傳統控制項位為 true 時套用 op。 如果`false`為，則不會發生任何事。
+  在指定作業作業的情況下，會傳回新的作業，如果傳統的控制項位為 true，就會套用 op。 如果為，則不 `false` 會發生任何事。
 
-  修飾`CA`詞表示作業可控制和 adjointable。
+  修飾詞 `CA` 表示作業可控制且 adjointable。
 syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
 input:
   content: "(op : ('T => Unit is Ctl + Adj))"
   types:
   - name: op
-    summary: 要有條件地套用的作業。
+    summary: 有條件地套用的作業。
     isOperation: true
     input:
       types:
@@ -28,7 +28,7 @@ input:
 output:
   content: ((Bool, 'T) => Unit is Ctl + Adj)
   types:
-  - summary: 如果傳統控制項位為 true，則為 op 的新作業。
+  - summary: 如果傳統控制位為 true，則為 op 的新作業。
     isOperation: true
     input:
       types:
@@ -49,9 +49,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
 metadata:
-  ms.openlocfilehash: a0a30761119d661d759f585d4ce4f6a4e7b30f94
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7b8b96c1a7b3095b6f81ab1c74ccbc6d759c498d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675870"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356791"

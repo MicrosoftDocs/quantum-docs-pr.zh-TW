@@ -251,9 +251,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: "\n> [!WARNING]\n> 已被取代\n\nRandomSingleQubitPauli 已被取代。 請改用 @\"microsoft.quantum.random.drawrandompauli\"。"
 metadata:
-  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: 86740e618edd4a58f9aef339a21b6cacac373689
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88863072"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340012"
