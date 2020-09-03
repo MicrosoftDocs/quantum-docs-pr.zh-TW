@@ -2,18 +2,18 @@
 uid: microsoft.quantum.arithmetic.preparefxp
 name: PrepareFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: 將量子固定點數位初始化為傳統常數。
 syntax: 'operation PrepareFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: constant
-    summary: 要初始化配量固定點數位的常數。
+    summary: 要初始化量子固定點數位的常數。
     isPrimitive: true
     uid: Double
   - name: fp
-    summary: 要初始化的固定點數位（類型為 FixedPoint）。
+    summary: 要初始化的 FixedPoint) 類型的固定點數位 (。
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3bf618cc74481e87da11d9b5328a64432afae468
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a24d076ccad09dd564ed702155d9c1f15d111d16
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679411"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353340"

@@ -2,19 +2,19 @@
 uid: microsoft.quantum.arithmetic.reflectaboutinteger
 name: ReflectAboutInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   反映指定之傳統整數的量子暫存器。
 
 
-  假設一開始是在 state $ \ sum_i \ Alpha_i \ket{i} $ 中的配量暫存器，其中每個 $ \ket{i} $ 都是代表整數 $i $ 的基礎狀態，會反映出指定整數 $ \ket{j} $，$ $ \ sum_i （-1） ^ {\ delta_ {ij}} \ Alpha_i \ket{i} $ $ 的基礎狀態之暫存器的狀態
-remarks: 這項作業會就地執行，而不會明確配置額外的輔助 qubits。
+  如果一開始是以 $ \ sum_i \ Alpha_i \ket{i} $ 表示的量子暫存器，其中每個 $ \ket{i} $ 是代表整數 $i $ 的基礎狀態，則會反映有關指定整數 $ \ket{j} $，$ $ \ sum_i (-1) ^ {\ delta_ {ij}} \ Alpha_i \ket{i} $ $ 的基礎狀態的註冊狀態
+remarks: 這項作業會就地執行，而不會明確配置額外的輔助量子位。
 syntax: 'operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: index
-    summary: 建立要反映之基礎狀態的傳統整數。
+    summary: 針對要反映之基礎狀態的傳統整數索引。
     isPrimitive: true
     uid: Int
   - name: reg
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7d63f4f3d4f05aa91305c057badbe329f3561bbd
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: f7f26677218b816ae27baee2a0fdde1504619d28
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884663"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353255"

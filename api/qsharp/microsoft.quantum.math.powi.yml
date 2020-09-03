@@ -2,14 +2,14 @@
 uid: microsoft.quantum.math.powi
 name: PowI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回指定乘冪的數位。
 syntax: 'function PowI (a : Int, power : Int) : Int'
 input:
   content: '(a : Int, power : Int)'
   types:
   - name: a
-    summary: 要引發的 $a $ 的數位。
+    summary: 要引發 $a $ 的數位。
     isPrimitive: true
     uid: Int
   - name: power
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 343ca99cc9be6edbdb0a8f76a908d1ec2846b7ba
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 67bb6ac1868872cd3064ade850aa2fda2f04dc35
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681553"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333365"

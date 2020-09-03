@@ -2,24 +2,24 @@
 uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 將整數`xs`乘以整數`ys` ，並將結果儲存`result`在中，其一開始必須為零。
+namespace: microsoft.quantum.arithmetic
+summary: 將整數乘以 `xs` 整數 `ys` 並將結果儲存在中 `result` ，這一開始必須是零。
 remarks: >-
-  會使用標準的 shift 和 add 方法來執行乘法。
+  使用標準的 shift 和 add 方法來執行乘法。
 
-  藉由將 $x _i $ 複製到控制 qubits 上的 ancilla qubit，然後控制 ancilla qubit 上的加法，來改善受控制的版本。
+  藉由將 $x _i $ 複製到控制項量子位上的 ancilla 量子位，然後控制 ancilla 量子位的加法，來改善受控制版本。
 syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
-    summary: $n $-bit 被乘數（LittleEndian）
+    summary: '$n $ bit 被乘數 (LittleEndian) '
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: $n $ 位乘數（LittleEndian）
+    summary: '$n $ bit 乘數 (LittleEndian) '
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $ 2n $ 位結果（LittleEndian），一開始必須是 state $ \ket{0}$。
+    summary: $ 2n $ bit result (LittleEndian) ，必須先處於 state $ \ket {0} $。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fcb55b47c0d5ca82736e8c3da14190daffd2b414
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 67e1ef577bf36cf524d2468bc191d2b381c800df
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679480"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353374"

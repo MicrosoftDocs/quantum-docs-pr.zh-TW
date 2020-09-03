@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arithmetic.multiplyfxp
 name: MultiplyFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: 將量子暫存器中的兩個固定點數位相乘。
-remarks: 目前的執行需要三個固定點數位具有相同的點位置和相同的 qubits 數目。
+remarks: 目前的執行需要三個固定點數位具有相同的點位置和相同的量子位數目。
 syntax: 'operation MultiplyFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
@@ -16,7 +16,7 @@ input:
     summary: 第二個固定點數位。
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: 結果固定點數位，一開始必須是 state $ \ket{0}$。
+    summary: 結果固定點數必須一開始就是狀態 $ \ket {0} $。
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b37ca00a41df323f2cab854eecd40c276696cbe4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c19c5333f936f633427b8fc7d1ce4d1892ea47c5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679466"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353408"

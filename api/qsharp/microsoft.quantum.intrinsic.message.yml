@@ -2,9 +2,9 @@
 uid: microsoft.quantum.intrinsic.message
 name: Message
 type: function
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: 記錄訊息。
-remarks: 此函式的特定行為與模擬器相依，但在大多數情況下，會將指定的訊息寫入主控台。
+remarks: 此函式的特定行為與模擬器相依，但在大部分情況下，會將指定的訊息寫入主控台。
 syntax: 'function Message (msg : String) : Unit'
 input:
   content: '(msg : String)'
@@ -19,9 +19,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: b089c79752d13d9b35c4d212a5ffeeed49d100e5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 807ab3fa3b305f9ddf5afec2c4a84921ccb2b7aa
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674148"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346812"

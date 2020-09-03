@@ -2,19 +2,19 @@
 uid: microsoft.quantum.intrinsic.r1frac
 name: R1Frac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  以指定為 dyadic 分數的角度{1}，套用關於 $ \ket $ 狀態的旋轉。
+  {1}以指定為 dyadic 分數的角度，套用有關 $ \ket $ 狀態的旋轉。
 
 
-  \begin{align} R_1 （n，k） \mathrel{： =} \operatorname{diag} （1，e ^ {i \pi k/2 ^ n}）。
+  \begin{align} R_1 (n，k) \mathrel{： =} \operatorname{diag} (1，e ^ {i \pi k/2 ^ n} ) 。
 
   \end{align}
 
 
   > [!WARNING]
 
-  > 這項作業會**opposite**使用中@"microsoft.quantum.intrinsic.r"的相反正負號慣例，而且不包含所包含之 $ 1/2 $ @"microsoft.quantum.intrinsic.r1"的因素。
+  > 這項作業會使用與 **相反** 的正負號慣例 @"microsoft.quantum.intrinsic.r" ，而不包含包含的 $ 1/2 $ 的因素 @"microsoft.quantum.intrinsic.r1" 。
 remarks: >-
   相當於：
 
@@ -31,15 +31,15 @@ input:
   content: '(numerator : Int, power : Int, qubit : Qubit)'
   types:
   - name: numerator
-    summary: Dyadic 分數中的分子，表示 qubit 要旋轉的角度。
+    summary: Dyadic 分數中的分子，用來旋轉量子位的角度。
     isPrimitive: true
     uid: Int
   - name: power
-    summary: 2的乘冪，指定要旋轉 qubit 的角度分母。
+    summary: 二的乘冪，指定量子位旋轉的角度的分母。
     isPrimitive: true
     uid: Int
   - name: qubit
-    summary: 應套用閘道的 Qubit。
+    summary: 應套用閘道的量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -51,9 +51,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 45fa756e94be8b580c909004016e0f40861111c1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1cfaf195a3c811d43df50548771759f6dbf3fdc6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683741"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346744"

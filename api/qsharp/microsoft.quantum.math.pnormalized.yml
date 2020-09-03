@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.pnormalized
 name: PNormalized
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  標準化在此`L(p)`標準`Double`中的向量。
+  標準化 `Double` 標準中的向量 `L(p)` 。
 
 
-  也就是說，如果陣列 $x $ 的類型`Double[]`，這會傳回陣列，其中所有元素都除以 $p $-標準 $\|x\|_p $。
+  亦即，假設陣列 $x $ 的型別 `Double[]` ，則會傳回陣列，其中所有專案都除以 $p $-標準 $ \| x \| _p $。
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,16 +23,16 @@ input:
 output:
   content: Double[]
   types:
-  - summary: 陣列 $x $ 正規化 $p $-標準 $\|x\|_p $。
+  - summary: 陣列 $x $ $p $-標準 $ \| x _p $ 的正規化 \| 。
     isArray: true
     isPrimitive: true
     uid: Double
 seeAlso:
 - pnorm
 metadata:
-  ms.openlocfilehash: 68697fe159fecfeed0078f95de8d91f825125f41
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4605ad867b02b240bd5c11bd8a5137b089b5265e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684020"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333467"

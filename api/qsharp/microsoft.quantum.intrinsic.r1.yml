@@ -2,12 +2,12 @@
 uid: microsoft.quantum.intrinsic.r1
 name: R1
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  依據指定的角度，套用關於{1}$ \ket $ 狀態的旋轉。
+  根據指定的角度，套用大約 $ \ket {1} $ 狀態的旋轉。
 
 
-  \begin{align} R_1 （\theta） \mathrel{： =} \operatorname{diag} （1，e ^ {i\theta}）。
+  \begin{align} R_1 ( \theta) \mathrel{： =} \operatorname{diag} (1，e ^ {i\theta} ) 。
 
   \end{align}
 remarks: >-
@@ -26,11 +26,11 @@ input:
   content: '(theta : Double, qubit : Qubit)'
   types:
   - name: theta
-    summary: 要旋轉 qubit 的角度。
+    summary: 要旋轉量子位的角度。
     isPrimitive: true
     uid: Double
   - name: qubit
-    summary: 應套用閘道的 Qubit。
+    summary: 應套用閘道的量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5be535daca1227284ddfa8c38a0082fdf8df7865
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 38998df8067a22ce1fdc81f9ad9fbed0a6ec48a2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674121"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346778"

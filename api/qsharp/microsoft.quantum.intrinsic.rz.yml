@@ -2,12 +2,12 @@
 uid: microsoft.quantum.intrinsic.rz
 name: Rz
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  依據指定的角度，套用關於 $z $ 軸的旋轉。
+  依指定的角度套用 $z $ 軸的旋轉。
 
 
-  \begin{align} R_z （\theta） \mathrel{： =} e ^ {-i \theta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \theta/2} \end{bmatrix}。
+  \begin{align} R_z ( \theta) \mathrel{： =} e ^ {-i \theta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \theta/2} \end{bmatrix}。
 
   \end{align}
 remarks: >-
@@ -24,11 +24,11 @@ input:
   content: '(theta : Double, qubit : Qubit)'
   types:
   - name: theta
-    summary: 要旋轉 qubit 的角度。
+    summary: 要旋轉量子位的角度。
     isPrimitive: true
     uid: Double
   - name: qubit
-    summary: 應套用閘道的 Qubit。
+    summary: 應套用閘道的量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -40,9 +40,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 8ab20bd25777abfcdef4ce79b112173d7de9ba4c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5d88af70316ca85299b5c141ebbfd9d071ed320e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674106"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346472"

@@ -2,14 +2,14 @@
 uid: microsoft.quantum.math.powl
 name: PowL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回指定乘冪的數位。
 syntax: 'function PowL (a : BigInt, power : Int) : BigInt'
 input:
   content: '(a : BigInt, power : Int)'
   types:
   - name: a
-    summary: 要引發的 $a $ 的數位。
+    summary: 要引發 $a $ 的數位。
     isPrimitive: true
     uid: BigInt
   - name: power
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: a7e8722abb7be51c2c4757c1fe1c34cfb0ef040d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5daf93a2afbfffad0cb9af17cc17ad842906023c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684000"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333280"
