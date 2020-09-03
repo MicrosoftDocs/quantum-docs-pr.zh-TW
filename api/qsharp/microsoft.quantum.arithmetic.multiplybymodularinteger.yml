@@ -2,35 +2,35 @@
 uid: microsoft.quantum.arithmetic.multiplybymodularinteger
 name: MultiplyByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  在 qubit 暫存器上以整數常數執行模組化乘法。
+  在量子位暫存器上以整數常數執行模組化乘法。
 
 
-  讓我們以`modulus` $N $ 和`constMultiplier` by $a $ 來表示。
+  讓我們 `modulus` 以 $N $ 和 `constMultiplier` by $a $ 表示。
 
-  然後，這項作業會根據計算基礎來執行下列對應所定義的單一作業： $ $ \begin{align} \ket{y} \mapsto \ket{（\cdot y） \operatorname{mod} N} \end{align} $ $ 適用于 $0 $ 和 $N-$1 之間的所有 $y $。
+  然後，這項作業會根據計算基礎來執行下列對應所定義的單一作業： $ $ \begin{align} \ket{y} \mapsto \ket{ (\cdot y) \operatorname{mod} N} \end{align} $ $，適用于 $0 $ 和 $N-$1 之間的所有 $y $。
 remarks: >-
-  - 如需線路圖表和說明，請參閱第[8 頁 arXiv 的圖7： quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
+  - 如需電路圖和說明，請參閱[arXiv： quant-ph/0205095V3 頁面 8](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)上的圖7。
 
-  - 這項作業對應至 ArXiv 中的 U ₐ [： quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
+  - 此作業對應到[arXiv： quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)中的 u ₐ
 syntax: 'operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: constMultiplier
-    summary: 乘數相乘的常數。 必須為模數的共同質數。
+    summary: 乘以乘數的常數。 必須是與模數的共同質數。
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: 乘法運算會執行模數`modulus`。
+    summary: 乘法運算會執行模數 `modulus` 。
     isPrimitive: true
     uid: Int
   - name: multiplier
     summary: >-
       要乘以常數的數位。
 
-      這是 qubits 編碼整數的陣列，以位元組由小到大的格式提供。
+      這是以位元組由小到大格式的整數量子位編碼的陣列。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 48a0f19334f65a6b80003d90dc4dc216dc8dee98
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4ebbe9808772f51b1a7b2b3caf47379e74bd823e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676727"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353510"

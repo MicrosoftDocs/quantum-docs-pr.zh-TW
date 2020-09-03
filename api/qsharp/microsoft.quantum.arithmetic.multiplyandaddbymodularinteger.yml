@@ -2,16 +2,16 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 name: MultiplyAndAddByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  在 qubit 暫存器上執行以整數常數進行模組化的乘法和 add。
+  在量子位暫存器上，以整數常數執行模組化乘法和 add。
 
 
-  針對給定的模數，執行對應 $ $ \begin{align} \ket{x} \ket{b} \mapsto \ket{x} \ket{（b + a \cdot x） \operatorname{mod} N} \end{align} $ $，$N $、常數乘數 $a $ 和被加數 $y $。
+  針對指定的模數，將 map $ $ \begin{align} \ket{x} \ket{b} \mapsto \ket{x} \ket{ (b + a \cdot x) \operatorname{mod} N} \end{align} $ $ $N $、常數乘數 $a $ 和被加數 $y $。
 remarks: >-
-  - 如需線路圖表和說明，請參閱 arXiv 第7頁的 [圖 6] [： quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)
+  - 如需電路圖和說明，請參閱[arXiv： quant-ph/0205095V3 頁面 7](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)上的圖6
 
-  - 這項作業對應至[arXiv： quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)中的 CMULT （a） MOD （N）
+  - 此作業對應于 CMULT () MOD (N) 在 [arXiv： quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
 syntax: 'operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,14 +20,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: 相對於的模數 $N $ 加上乘法。
+    summary: 模數 $N $ 所採用的加法和乘法。
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: 代表不帶正負號整數的量子暫存器，其值會加入的每個基礎`summand`狀態標籤中。
+    summary: 代表不帶正負號整數的量子暫存器，其值要加入至的每個基礎狀態標籤 `summand` 。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: summand
-    summary: 表示做為此作業目標之不帶正負號整數的量子暫存器。
+    summary: 量子暫存器，代表要作為此作業目標的不帶正負號的整數。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 38efb2840406fc82b7ae24640bec6641f048a5b2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de9bec96048c4c1f8431bdfd831f560e7c1af72c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676742"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353527"
