@@ -2,8 +2,8 @@
 uid: microsoft.quantum.convert.boolarrayasint
 name: BoolArrayAsInt
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: 以位元組由小到大的格式，從位的字串產生正整數。
+namespace: microsoft.quantum.convert
+summary: 以位元組由小到大的格式從位元組字串產生正整數。
 syntax: 'function BoolArrayAsInt (bits : Bool[]) : Int'
 input:
   content: '(bits : Bool[])'
@@ -19,9 +19,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: d2c07120712802203e5463f35245ecf01297f94c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7a2384b6abd51e67142cbb3b43d0998012b0ebd0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82661401"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338890"

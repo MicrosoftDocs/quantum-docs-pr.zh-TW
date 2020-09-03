@@ -2,14 +2,14 @@
 uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
 name: PrepareUnitaryCoupledClusterState
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 單一結合-叢集狀態準備試用狀態
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: 單一耦合-叢集狀態準備試用狀態
 syntax: 'operation PrepareUnitaryCoupledClusterState (initialStatePreparation : (Qubit[] => Unit), clusterOperator : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], trotterStepSize : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(initialStatePreparation : (Qubit[] => Unit), clusterOperator : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], trotterStepSize : Double, qubits : Qubit[])'
   types:
   - name: initialStatePreparation
-    summary: 用來準備初始試用狀態的單一。
+    summary: 單一準備初始試用狀態。
     isOperation: true
     input:
       types:
@@ -27,7 +27,7 @@ input:
     isPrimitive: true
     uid: Double
   - name: qubits
-    summary: Hamiltonian 的 Qubits。
+    summary: Hamiltonian 的量子位。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -37,9 +37,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 9f9f3ae3be33e1ec85524acf13b74b9cf60dc99f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1f4308a112aa9855836c038ec061570dcc166ed0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82663815"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339264"

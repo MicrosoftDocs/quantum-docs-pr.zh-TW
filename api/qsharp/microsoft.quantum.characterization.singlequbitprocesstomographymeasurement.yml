@@ -2,23 +2,23 @@
 uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
 name: SingleQubitProcessTomographyMeasurement
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: 指定特定的通道，以 Pauli 為基礎執行單一 qubit 進程 tomography 測量。
-remarks: 這項作業所傳回之結果的散發，是兩個 qubit 狀態 tomography 的特殊案例。 Let $ \rho = J （\Lambda）/$2 是 $ \Lambda $ 的 Choi – Jamiłkowski 狀態。 然後，上述分佈等同于 $ $ \begin{align} \Pr （\texttt{Zero} | \rho;M） = \operatorname{Tr} （M \rho）、\end{align} $ $，其中 $M = 2 （\boldone + P） ^ \mathrm{T}/2 \cdot （\boldone + Q）/$2 是對應至 $P $ 和 $Q $ 的有效度量。
+namespace: microsoft.quantum.characterization
+summary: 指定特定的通道，以 Pauli 為基礎執行單一量子位流程 tomography 測量。
+remarks: 這項作業所傳回之結果的散發是雙量子位狀態 tomography 的特殊案例。 Let $ \rho = J ( \Lambda) /$2 是 $ \Lambda $ 的 Choi 對於– Jamiłkowski 狀態。 然後，上述散發與 $ $ \begin{align} \Pr ( \texttt{Zero} 相同。rhoM) = \operatorname{Tr} (M \rho) ，\end{align} $ $ where $M = 2 ( \boldone + P) ^ \mathrm{T}/2 \cdot ( \boldone + Q) /$2 是對應至 $P $ 和 $Q $ 的有效測量。
 syntax: 'operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit)) : Result'
 input:
   content: '(preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit))'
   types:
   - name: preparation
-    summary: 要準備 qubit 的 Pauli 基礎元素 $P $。
+    summary: 要準備量子位的 Pauli 基礎元素 $P $。
     isPrimitive: true
     uid: Pauli
   - name: measurement
-    summary: 要測量 qubit 的 Pauli 基礎元素 $Q $。
+    summary: 要測量量子位的 Pauli 基礎元素 $Q $。
     isPrimitive: true
     uid: Pauli
   - name: channel
-    summary: 單一 qubit 通道 $ \Lambda $，其行為正以進程 tomography 來預估。
+    summary: 單一量子位通道 $ \Lambda $，其行為正以進程 tomography 進行評估。
     isOperation: true
     input:
       types:
@@ -32,15 +32,15 @@ output:
   content: Result
   types:
   - summary: >-
-      機率為`Zero` $ $ \begin{align} \Pr （\Texttt{Zero} | \Lambda;）的結果P，Q） = \operatorname{Tr}\left （\frac{\boldone + Q}{2} \Lambda\left [\Frac{\boldone + P}{2} \right] \right）。
+      `Zero`Probability $ $ \Begin{align} \Pr ( \texttt{zero} | \Lambda; 的結果P，Q) = \operatorname{Tr}\left ( \frac{\boldone + Q} {2} \Lambda\left [\frac{\boldone + P} {2} \right] \right) 。
 
       \end{align} $ $
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: f554910a414666c6d61a96932a932b9320426360
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 030ca1ba45df6ea1fc37b994c30bd4f862a6b923
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677576"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354241"

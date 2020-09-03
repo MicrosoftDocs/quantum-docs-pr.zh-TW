@@ -2,14 +2,14 @@
 uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
 name: PrepareSparseMultiConfigurationalState
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 藉由將 excitations 新增至初始試用狀態，來準備試用狀態的 Sparse 多設定狀態。
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: 藉由將 excitations 新增到初始試用狀態，來準備試用狀態的稀疏多重 configurational 狀態。
 syntax: 'operation PrepareSparseMultiConfigurationalState (initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[]) : Unit'
 input:
   content: '(initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[])'
   types:
   - name: initialStatePreparation
-    summary: 用來準備初始試用狀態的單一。
+    summary: 單一準備初始試用狀態。
     isOperation: true
     input:
       types:
@@ -21,11 +21,11 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: excitations
-    summary: Excitations，這是由 excitation 的振幅和 excitation 作用所在的 qubit 索引所表示的初始試用狀態。
+    summary: 初始試用狀態的 Excitations，由 excitation 的波幅和 excitation 作用所在的量子位索引所代表。
     isArray: true
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
   - name: qubits
-    summary: Hamiltonian 的 Qubits。
+    summary: Hamiltonian 的量子位。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -35,9 +35,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 54d7bbbc0909279d9617b9e7cd523e998db5874a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cb4a90a4686c26139f956ae7438fd1da6b38897b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82664906"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339298"

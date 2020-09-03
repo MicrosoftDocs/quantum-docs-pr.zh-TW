@@ -2,18 +2,18 @@
 uid: microsoft.quantum.canon.rall0
 name: RAll0
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  執行階段轉移作業。
+  執行階段移位操作。
 
 
-  $R = \boldone-（1-e ^ {i \phi}） \ket{0\cdots 0} \bra{0\cdots 0} $。
+  $R = \boldone- (1-e ^ {i \phi} ) \ket{0\cdots 0} \bra{0\cdots 0} $。
 syntax: 'operation RAll0 (phase : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(phase : Double, qubits : Qubit[])'
   types:
   - name: phase
-    summary: 適用于 state $ \ket{0\cdots 0} \bra{0\cdots 0} $ 的階段 $ \phi $。
+    summary: 階段 $ \phi $ 已套用至 state $ \ket{0\cdots 0} \bra{0\cdots 0} $。
     isPrimitive: true
     uid: Double
   - name: qubits
@@ -32,9 +32,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.rall1
 metadata:
-  ms.openlocfilehash: ccb15f15469589cf989d1b0fd7d4135a608d6b7c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 257b669f9cb832b0d3f3650b7f9274ba3a1377ac
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678496"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355771"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.convert.intasboolarray
 name: IntAsBoolArray
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: 使用傳回之陣列的位元組由小到大表示，產生正整數的二進位標記法。
+namespace: microsoft.quantum.convert
+summary: 針對傳回的陣列，使用位元組由小到大的標記法，產生正整數的整數表示。
 remarks: >-
-  輸入`bits`必須介於0到63之間。
+  輸入 `bits` 必須介於0到63之間。
 
-  輸入`number`必須介於0和 $ 2 ^ {\texttt{bits}}-$1 之間。
+  輸入 `number` 必須介於0到 $ 2 ^ {\texttt{bits}}-$1 之間。
 syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
@@ -17,20 +17,20 @@ input:
     isPrimitive: true
     uid: Int
   - name: bits
-    summary: 二進位標記法中的位數`number`。
+    summary: 二進位表示中的位數目 `number` 。
     isPrimitive: true
     uid: Int
 output:
   content: Bool[]
   types:
-  - summary: 表示`number`的布林值陣列。
+  - summary: 表示的布林值陣列 `number` 。
     isArray: true
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: f14af582713f5d08e29b54a1e1758b4efbeea094
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 529ef27e63bd637c3994fd3c37d1d707a9bde5b8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82659176"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338550"

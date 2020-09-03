@@ -2,19 +2,19 @@
 uid: microsoft.quantum.canon.noop
 name: NoOp
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  在引數上執行身分識別作業（無 op）。
+  在引數上 (非 op) 執行身分識別作業。
 
 
   這項作業會接受任何類型的值，而且不會對它執行任何動作。
 
-  當預期會有作業類型的輸入時，這會很有用，但不應採取任何動作。
+  只要預期的是作業類型的輸入，但不應該採取任何動作，這項功能就很有用。
 
-  例如，如果特定錯誤更正的症狀指出未發生任何錯誤， `NoOp<Qubit[]>`則可能是正確的復原程式。
+  比方說，如果特定錯誤更正問題指出未發生任何錯誤， `NoOp<Qubit[]>` 則可能是正確的修復程式。
 
-  同樣地，如果作業預期狀態準備程式做為輸入， `NoOp<Qubit[]>`就可以用來準備 state $ \ket{0 \cdots 0} $。
-remarks: 幾乎在所有情況下，都必須明確`NoOp`指定的型別參數。 例如， `NoOp<Qubit>`與相同<xref:microsoft.quantum.intrinsic.i>。
+  同樣地，如果作業預期狀態準備程式做為輸入， `NoOp<Qubit[]>` 就可以用來準備狀態 $ \ket{0 \cdots 0} $。
+remarks: 在幾乎所有情況下，必須明確指定的型別參數 `NoOp` 。 例如，與 `NoOp<Qubit>` 相同 <xref:microsoft.quantum.intrinsic.i> 。
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9af76ff7f2c559aef0f940ff3c56e6f8d8cdbb60
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678729"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355975"

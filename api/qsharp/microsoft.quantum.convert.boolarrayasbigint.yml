@@ -2,12 +2,12 @@
 uid: microsoft.quantum.convert.boolarrayasbigint
 name: BoolArrayAsBigInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: >-
-  將指定的布林陣列轉換為相等的大整數。
+  將指定的布林值陣列轉換為相等的大整數。
 
-  陣列的0元素是大整數的最小有效位。
-remarks: '如需詳細資訊，請參閱[c # BigInteger](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_)的函式。'
+  陣列的0元素是大整數中最不重要的位。
+remarks: '如需詳細資訊，請參閱 [c # BigInteger](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) 函式。'
 syntax: 'function BoolArrayAsBigInt (a : Bool[]) : BigInt'
 input:
   content: '(a : Bool[])'
@@ -22,9 +22,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 770b565a3137085ff6af3ea3d4a1ad3ff5938f6d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 04f8279a4f399689628d403eb150cd09dc51ba63
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82661980"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338924"

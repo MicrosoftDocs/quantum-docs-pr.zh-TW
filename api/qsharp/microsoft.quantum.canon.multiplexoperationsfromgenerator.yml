@@ -2,20 +2,20 @@
 uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
 name: MultiplexOperationsFromGenerator
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  套用在 qubit 數位 state $ \ket{j} $ 所控制的單一 $V _j $ 時，套用一個已控制的單一運算 $U $。
+  套用 $U $ 的乘法控制項單一作業，此作業會在由 n-量子位 number state $ \ket{j} $ 控制時套用單一 $V _j $。
 
 
   $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
-remarks: '`coefficients`如果指定了少於 $ 2 ^ n $，將會以 identity 元素填補。 此執行會使用 $n-$1 輔助 qubits。'
+remarks: '`coefficients` 如果指定了少於 $ 2 ^ n $，將會以識別元素填補。 此實行使用 $n-$1 輔助量子位。'
 syntax: "operation MultiplexOperationsFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
-references: '- [*Andrew M. Childs、Dmitri Maslov、Yunseong，Neil J. Ross、中國人民幣 Su*、arXiv：1711.10980](https://arxiv.org/abs/1711.10980)'
+references: '- [*Andrew M. Childs、Dmitri Maslov、Yunseong 等、Neil J. Ross、中國人民幣 Su*、arXiv：1711.10980](https://arxiv.org/abs/1711.10980)'
 input:
   content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
   - name: unitaryGenerator
-    summary: 元組，其中第一個`Int`專案是 unitaries $N $ 的數目，而第二個`(Int -> ('T => () is Adj + Ctl))`元素是在 $ [0，n-1] $ 中接受整數 $j $ 的函式，並輸出單一作業 $V _j $。
+    summary: 元組，其中第一個專案 `Int` 是 unitaries $N $ 的數目，而第二個元素 `(Int -> ('T => () is Adj + Ctl))` 是採用整數 $j $ in $ [0，n-1] $ 的函式，並輸出單一作業 $V _j $。
     types:
     - isPrimitive: true
       uid: Int
@@ -39,10 +39,10 @@ input:
           - Adjoint
           - Controlled
   - name: index
-    summary: $n $ qubit 控制項暫存器，其會將數位狀態 $ \ket{j} $ 編碼為位元組由小到大的格式。
+    summary: 以位元組由大到小的格式，$n $ 量子位 control register 編碼數位狀態 $ \ket{j} $。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: $V _j $ 作用於的一般 qubit。
+    summary: $V _j $ 的一般量子位註冊。
     uid: "'T"
     isLocal: true
 output:
@@ -54,9 +54,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b9599723cf6296367412a5603f4b36a3d610acc5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 456bb3a91d5e996b0af3e40676803984482f91ea
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678797"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355946"
