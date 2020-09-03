@@ -2,26 +2,26 @@
 uid: microsoft.quantum.math.negationl
 name: NegationL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回輸入的一元否定。
 syntax: 'function NegationL (input : BigInt) : BigInt'
 input:
   content: '(input : BigInt)'
   types:
   - name: input
-    summary: 要傳回其負的值。
+    summary: 要傳回其負數值的值。
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt
   types:
-  - summary: 的一元否定`input`。
+  - summary: 的一元否定 `input` 。
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 89ed30d46691a593f7ac8487df78d64f8885a601
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 262daa47c25ac45d5a8bf20fdd4f2236c2c638bc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684179"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333824"

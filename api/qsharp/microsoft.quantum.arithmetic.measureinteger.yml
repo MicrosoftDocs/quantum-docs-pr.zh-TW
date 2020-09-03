@@ -2,28 +2,28 @@
 uid: microsoft.quantum.arithmetic.measureinteger
 name: MeasureInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 測量量子暫存器的內容，並將它轉換成整數。 測量是以標準計算為基礎來執行，亦即 eigenbasis `PauliZ`。
-remarks: 此作業會將其輸入暫存器重設為 $ \ket{00\cdots 0} $ 狀態，適用于釋回目的電腦。
+namespace: microsoft.quantum.arithmetic
+summary: 測量量子暫存器的內容，並將它轉換成整數。 測量是以標準計算為基礎來執行，亦即，的 eigenbasis `PauliZ` 。
+remarks: 此作業會將其輸入暫存器重設為 $ \ket{00\cdots 0} $ 狀態，適合用來釋回目的電腦。
 syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
 input:
   content: '(target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: target
-    summary: 以位元組由小到大編碼的量子暫存器。
+    summary: 以位元組由大到小的編碼方式的量子暫存器。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Int
   types:
-  - summary: 不帶正負號的整數，其中包含`target`的測量值。
+  - summary: 不帶正負號的整數，其中包含的測量值 `target` 。
     isPrimitive: true
     uid: Int
 seeAlso:
 - microsoft.quantum.canon.measureintegerbe
 metadata:
-  ms.openlocfilehash: cb7432ccf4c66b4f508b182e8c96bd73b13e2f08
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e89e30375be30508652f285295bcf79f2a5de919
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676763"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353578"

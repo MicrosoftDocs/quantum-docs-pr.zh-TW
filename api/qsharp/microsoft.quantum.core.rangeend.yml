@@ -2,13 +2,13 @@
 uid: microsoft.quantum.core.rangeend
 name: RangeEnd
 type: function
-namespace: Microsoft.Quantum.Core
-summary: 傳回指定範圍的已定義結束值，這不一定是序列中的最後一個元素。
+namespace: microsoft.quantum.core
+summary: 傳回指定範圍的定義結束值，這不一定是序列中的最後一個元素。
 remarks: >-
-  範圍運算式的第一個元素是`start`，其第二個`start+step`元素是，第`start+step+step`三個元素是， `end`依此類推，直到傳遞為止。
+  範圍運算式的第一個專案是 `start` ，其第二個元素是，第三個元素是， `start+step` `start+step+step` 直到 `end` 傳遞為止。
 
 
-  請注意，定義的範圍結束值可能與範圍所指定之序列中的最後一個元素不同。例如，在範圍 0. 中。 2.。 5最後一個元素是4，但結束值為5。
+  請注意，定義的範圍結束值可能會與範圍所指定之序列中的最後一個元素不同;例如，在範圍0中。 2。 5最後一個元素是4，但結束值為5。
 syntax: 'function RangeEnd (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -19,13 +19,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 給定範圍的已定義結束值。
+  - summary: 指定範圍的定義結束值。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 08a7e70a8e12ef85902f03d7e24f99d3b5082f38
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82657629"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337989"

@@ -2,34 +2,34 @@
 uid: microsoft.quantum.convert.pauliarrayasint
 name: PauliArrayAsInt
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: 將以單一 qubit Pauli 運算子陣列表示的多 qubit Pauli 運算子編碼成整數。
+namespace: microsoft.quantum.convert
+summary: 將以單一量子位 Pauli 運算子陣列表示的多量子位 Pauli 運算子編碼為整數。
 remarks: >-
-  您可以使用兩個位來編碼每個 Pauli 運算子： $ $ \begin{align} \boldone \mapsto 00、\quad X \mapsto 01、\quad Y \mapsto 11、\quad Z \mapsto 10。
+  每個 Pauli 運算子都可以使用兩個位進行編碼： $ $ \begin{align} \boldone \mapsto 00、\quad X \mapsto 01、\quad Y \mapsto 11、\quad Z \mapsto 10。
 
   \end{align} $ $
 
 
-  假設有一個 Pauli 運算子`[P0, ..., Pn]`陣列，此函式會傳回整數，並以位元組由大到小的順序`bits(Pn) ... bits(P0)`串連每個 Pauli 運算子的對應，以形成二進位擴充。
+  根據 Pauli 運算子的陣列 `[P0, ..., Pn]` ，此函式會以位元組由大到小的順序串連每個 Pauli 運算子的對應，以傳回以二進位擴充形成的整數 `bits(Pn) ... bits(P0)` 。
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
   types:
   - name: paulis
-    summary: 最多有31個單一 qubit Pauli 運算子的陣列。
+    summary: 最多31個單一量子位 Pauli 運算子的陣列。
     isArray: true
     isPrimitive: true
     uid: Pauli
 output:
   content: Int
   types:
-  - summary: 唯一識別`paulis`的整數，如下所述。
+  - summary: 唯一識別的整數 `paulis` ，如下所述。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e0ec584f77489d019a501ff31074e730152218f7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677400"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338286"

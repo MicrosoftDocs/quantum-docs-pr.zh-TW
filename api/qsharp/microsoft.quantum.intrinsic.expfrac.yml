@@ -2,27 +2,27 @@
 uid: microsoft.quantum.intrinsic.expfrac
 name: ExpFrac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  以 dyadic 分數所指定的引數，套用多 qubit Pauli 運算子的指數。
+  以 dyadic 分數指定的引數，套用多量子位 Pauli 運算子的指數。
 
 
-  \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}，\end{align}，其中 $P _i $ 是的 $i $ th 元素`paulis`，其中 $N = $`Length(paulis)`。
+  \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}，\end{align} where $P _i $ 是的 $i $ th 元素 `paulis` ，其中 $N = $ `Length(paulis)` 。
 syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
   - name: paulis
-    summary: 單一 qubit Pauli 值的陣列，表示每個 qubit 上的張量產品因素。
+    summary: 單一量子位 Pauli 值的陣列，表示每個量子位上的 tensor 產品因素。
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: numerator
-    summary: Qubit 暫存器要旋轉的角度之 dyadic 分數標記法中的分子（$k $）。
+    summary: 分子 ($k $) 以 dyadic 分數表示量子位暫存器要旋轉的角度。
     isPrimitive: true
     uid: Int
   - name: power
-    summary: 兩個（$n $）的乘冪，指定要旋轉 qubit 暫存器的角度分母。
+    summary: 兩個 (的乘冪 $n $) 指定量子位註冊要旋轉的角度的分母。
     isPrimitive: true
     uid: Int
   - name: qubits
@@ -39,9 +39,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 61bd52b3bcce87c6bcbf61ebeb52f720e96fe0f0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9873cc2a15cb458baba9c6984c050974ad4b17d4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683813"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347050"

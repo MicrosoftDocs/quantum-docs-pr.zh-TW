@@ -2,15 +2,15 @@
 uid: microsoft.quantum.intrinsic.cnot
 name: CNOT
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  將受控制的 NOT （CNOT-CONTAINS）閘道套用至一對 qubits。
+  將受控制-不 (CNOT) 閘道套用至一對量子位。
 
 
-  \begin{align} \operatorname{CNOT} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 \\ \\ & 0 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}，\end{align}
+  \begin{align} \operatorname{CNOT} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}，\end{align}
 
 
-  其中，資料列和資料行的排序方式就像在「配量概念指南」中。
+  其中的資料列和資料行會依照量子概念指南中的順序排序。
 remarks: >-
   相當於：
 
@@ -25,11 +25,11 @@ input:
   content: '(control : Qubit, target : Qubit)'
   types:
   - name: control
-    summary: CNOT-CONTAINS 閘道的控制項 qubit。
+    summary: CNOT 閘道的控制項量子位。
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: CNOT-CONTAINS 閘道的目標 qubit。
+    summary: CNOT 閘道的目標量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a690d324f8449a953f59eded299547b354da6417
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 76be7211917c6422beb17c1ca4fccb32c4594d17
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683846"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347118"
