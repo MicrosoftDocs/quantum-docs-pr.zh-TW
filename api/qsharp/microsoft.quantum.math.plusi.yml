@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.plusi
 name: PlusI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回兩個輸入的總和。
 syntax: 'function PlusI (a : Int, b : Int) : Int'
 input:
@@ -13,19 +13,19 @@ input:
     isPrimitive: true
     uid: Int
   - name: b
-    summary: 要加總的第二個輸入 $b $。
+    summary: 第二個輸入 $b $ 以加總。
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: 總和 $a + b $。
+  - summary: Sum $a + b $。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: db75cff49b60159a805182ee91ff3d037f56a520
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e0685a8895ba09f5d5dc9a283184eb935e923661
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684073"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333654"

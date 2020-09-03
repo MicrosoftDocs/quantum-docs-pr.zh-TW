@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.reversedopbea
 name: ReversedOpBEA
 type: function
-namespace: Microsoft.Quantum.Arithmetic
-summary: 假設有一個接受以大至小的輸入的作業，則會傳回接受以位元組為序輸入的新作業。
+namespace: microsoft.quantum.arithmetic
+summary: 假設有一個使用位元組由大到小的輸入，則會傳回採用位元組由小到大輸入的新作業。
 syntax: 'function ReversedOpBEA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj)) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj)'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj))'
@@ -23,7 +23,7 @@ input:
 output:
   content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj)
   types:
-  - summary: 接受其輸入做為位元組由小到大暫存器的新作業。
+  - summary: 以位元組由大到小的暫存器形式接受其輸入的新作業。
     isOperation: true
     input:
       types:
@@ -40,9 +40,9 @@ seeAlso:
 - reversedopbec
 - reversedopbeca
 metadata:
-  ms.openlocfilehash: c67352e8b6e04304d6ab45095a3a487bc5de2862
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 190c5493fdda209be0dbe8ca490e7f1a9e483224
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679353"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353153"

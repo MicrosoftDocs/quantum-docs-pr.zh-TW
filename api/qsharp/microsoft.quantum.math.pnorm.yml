@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.pnorm
 name: PNorm
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  傳回的`L(p)`向量`Double`的標準。
+  傳回 `L(p)` 向量的標準 `Double` 。
 
 
-  也就是說，如果陣列 $x `Double[]`$ 的類型，這會傳回 $p $-標準 $\|x\|\_p = （\ sum_ {j} | x_j | ^ {p}） ^ {1/p} $。
+  亦即，假設陣列 $x $ 的型 `Double[]` 別，這會傳回 $p $-標準 $ \| x \| \_ p = ( \ sum_ {j} | x_j | ^ {p} ) ^ {1/p} $。
 syntax: 'function PNorm (p : Double, array : Double[]) : Double'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Double
   types:
-  - summary: $P $-標準 $\|x\|_p $。
+  - summary: $P $-標準 $ \| x \| _p $。
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5583e7d14c7363538ca11f48564ebac7240f511b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0f267609a04e66b6a445a92473a223a776fdccda
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684035"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333501"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.intrinsic.s
 name: S
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  將 S 閘道套用至單一 qubit。
+  將 S 閘道套用至單一量子位。
 
 
-  這項作業可以由單一矩陣 \begin{align} S \mathrel{： =} \begin{bmatrix} 1 所模擬，& 0 \\ \\ 0 & i \end{bmatrix}。
+  這項作業可由單一矩陣 \begin{align} S \mathrel{： =} \begin{bmatrix} 1 & 0 \\ \\ 0 & i \end{bmatrix}。
 
   \end{align}
 syntax: 'operation S (qubit : Qubit) : Unit'
@@ -15,7 +15,7 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    summary: 應套用閘道的 Qubit。
+    summary: 應套用閘道的量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 1e42056d91daac49fab6a4488bd0ef7c27698027
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: eb0b9525aba5e218fb5b71e0b5bdcb04547360fc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885711"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346438"

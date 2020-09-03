@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.realmod
 name: RealMod
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 計算兩個實數之間的模數。
 remarks: >-
-  此函式會藉由包裝關於單位圓形的直線來計算實際模數，然後在對應至輸入的單位圓上尋找角度。
+  此函式會藉由包裝單元圓圈相關的實數來計算實際模數，然後尋找對應于輸入的單位圓形上的角度。
 
-  然後`minValue` ，輸入會有效地指定要剪下單位圓形的位置。
+  `minValue`然後，輸入會有效地指定要將單元圓形剪下的位置。
 examples: >-
   ```qsharp
       // Returns 3 π / 2.
@@ -21,15 +21,15 @@ input:
   content: '(value : Double, modulo : Double, minValue : Double)'
   types:
   - name: value
-    summary: 實際的數位 $x $ 來取的模數。
+    summary: $X $ 取得模數的實數。
     isPrimitive: true
     uid: Double
   - name: modulo
-    summary: 要採用的 $x $ 模數的實際數位。
+    summary: 要採用 $x $ 的模數的實際數位。
     isPrimitive: true
     uid: Double
   - name: minValue
-    summary: 這個函數所傳回的最小值。
+    summary: 此函數所傳回的最小值。
     isPrimitive: true
     uid: Double
 output:
@@ -38,9 +38,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 0a35628198ae5d496b093b98542daeac16aced9b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6738040f8628998a98a69a7e884125ac91228787
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681485"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333127"

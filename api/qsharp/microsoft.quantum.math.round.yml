@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.round
 name: Round
 type: function
-namespace: Microsoft.Quantum.Math
-summary: 將值四捨五入為最接近的整數。
-remarks: 如需詳細資訊，請參閱[system.object](https://docs.microsoft.com/dotnet/api/system.math.round) 。
+namespace: microsoft.quantum.math
+summary: 將值四捨五入到最接近的整數。
+remarks: 請 [參閱](https://docs.microsoft.com/dotnet/api/system.math.round) system.string 以取得詳細資料。
 syntax: 'function Round (a : Double) : Int'
 input:
   content: '(a : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f34b5bcd0f9fea0f72beb1f4ccdbb66ee1ce7c5d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6d80d05e83cbd299302d4ad2fb8722db4c444541
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681472"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333110"

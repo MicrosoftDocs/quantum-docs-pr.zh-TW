@@ -2,15 +2,15 @@
 uid: microsoft.quantum.intrinsic.swap
 name: SWAP
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  將交換閘道套用至一對 qubits。
+  將交換閘道套用至一對量子位。
 
 
-  \begin{align} \operatorname{SWAP} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 \\ \\ & 0 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}，\end{align}
+  \begin{align} \operatorname{SWAP} \mathrel{： =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}，\end{align}
 
 
-  其中，資料列和資料行的排序方式就像在「配量概念指南」中。
+  其中的資料列和資料行會依照量子概念指南中的順序排序。
 remarks: >-
   相當於：
 
@@ -29,11 +29,11 @@ input:
   content: '(qubit1 : Qubit, qubit2 : Qubit)'
   types:
   - name: qubit1
-    summary: 要交換的第一個 qubit。
+    summary: 要交換的第一個量子位。
     isPrimitive: true
     uid: Qubit
   - name: qubit2
-    summary: 要交換的第二個 qubit。
+    summary: 要交換的第二個量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -45,9 +45,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e8e2681cef50354ac0e6807304912fcddcc0361b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 46790a007bf48b7bfff11e92d7379f24676b81e3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681757"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346421"

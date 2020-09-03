@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.reversedoplec
 name: ReversedOpLEC
 type: function
-namespace: Microsoft.Quantum.Arithmetic
-summary: 假設有一個接受以位元組由小到大的輸入的作業，則會傳回接受以大至小的輸入的新作業。
+namespace: microsoft.quantum.arithmetic
+summary: 假設有一個作業採用位元組由小到大的輸入，則會傳回採用位元組由大到小的輸入的新作業。
 syntax: 'function ReversedOpLEC (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl)) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl)'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl))'
@@ -23,7 +23,7 @@ input:
 output:
   content: (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl)
   types:
-  - summary: 接受其輸入做為位元組由小到大暫存器的新作業。
+  - summary: 以位元組由大到小的暫存器形式接受其輸入的新作業。
     isOperation: true
     input:
       types:
@@ -40,9 +40,9 @@ seeAlso:
 - reversedoplea
 - reversedopleca
 metadata:
-  ms.openlocfilehash: 36ded499519ccb493841973015a23c8c4df7372f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f31b1ae42b9f3a39abfb1e21016092d377f6ac8b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675176"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353000"
