@@ -2,17 +2,17 @@
 uid: microsoft.quantum.chemistry.jordanwigner.selectz
 name: SelectZ
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 將 Pauli $Z $ 閘道套用至索引狀態 $ \ket{p} $ 的 qubits $p $ 的單一 $U $。 也就是說，$ $ \begin{align} U\ket {p} \ ket {\ psi} = \ket{p}Z\_p\ket {\ psi} \end{align} $ $
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: 單一 $U $，適用于量子位上的 Pauli $Z $ 閘道 $p $ \ket{p} $。 亦即 $ $ \begin{align} U\ket {p} \ ket {\ psi} = \ket{p}Z \_ p\ket {\ psi} \end{align} $ $
 syntax: 'operation SelectZ (indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
 input:
   content: '(indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: indexRegister
-    summary: 此暫存器的 state $ \ket{p} $ 會決定套用 $Z $ 的 qubit。
+    summary: 此註冊的狀態 $ \ket{p} $ 會決定套用 $Z $ 的量子位。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: targetRegister
-    summary: 對其套用 Pauli 運算子的 qubits 註冊。
+    summary: 註冊已套用 Pauli 運算子的量子位。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -25,9 +25,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4577f684260e3f0898dac1c2dd0794323deaa98e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 915adc14764c84f5d914164535aba7caf5ef9d05
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82663255"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339111"

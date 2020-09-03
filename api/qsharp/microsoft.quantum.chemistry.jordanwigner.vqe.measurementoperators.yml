@@ -2,38 +2,38 @@
 uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
 name: MeasurementOperators
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
-summary: 計算計算 Wigner 詞彙預期所需的所有測量運算子。
+namespace: microsoft.quantum.chemistry.jordanwigner.vqe
+summary: 計算計算 Wigner 期限預期的所有測量運算子。
 syntax: 'function MeasurementOperators (nQubits : Int, indices : Int[], termType : Int) : Pauli[][]'
 input:
   content: '(nQubits : Int, indices : Int[], termType : Int)'
   types:
   - name: nQubits
-    summary: 模擬分子系統所需的 qubits 數目。
+    summary: 模擬分子系統所需的量子位數目。
     isPrimitive: true
     uid: Int
   - name: indices
-    summary: 陣列，其中包含套用每個 Pauli 運算子之 qubit 的索引。
+    summary: 陣列，其中包含每個 Pauli 運算子適用的量子位索引。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: termType
-    summary: 約旦 Wigner 詞彙的類型。
+    summary: 約旦 Wigner 詞彙的型別。
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[][]
   types:
-  - summary: 測量運算子的陣列（每個都是 Pauli 的陣列）。
+  - summary: 度量運算子的陣列 (每個都是 Pauli) 的陣列。
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Pauli
 metadata:
-  ms.openlocfilehash: cae0c641ca24e81d6c5ce4c3293e33ba0adb8f22
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fa0907d1e9087065169f3d2b4505851d325fb520
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82662237"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338975"

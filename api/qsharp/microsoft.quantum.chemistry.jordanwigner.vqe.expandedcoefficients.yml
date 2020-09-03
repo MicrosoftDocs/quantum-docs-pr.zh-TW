@@ -2,32 +2,32 @@
 uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
 name: ExpandedCoefficients
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
-summary: 展開 Wigner 係數的精簡標記法，以取得這些和 Pauli 字詞之間的一對一對應。
+namespace: microsoft.quantum.chemistry.jordanwigner.vqe
+summary: 展開 Wigner 係數的 compact 標記法，以取得這些和 Pauli 詞彙之間的一對一對應。
 syntax: 'function ExpandedCoefficients (coeff : Double[], termType : Int) : Double[]'
 input:
   content: '(coeff : Double[], termType : Int)'
   types:
   - name: coeff
-    summary: 從約旦 Wigner Hamiltonian 資料結構讀取的係數陣列。
+    summary: 係數的陣列，如同從約旦 Wigner Hamiltonian 資料結構讀取而來。
     isArray: true
     isPrimitive: true
     uid: Double
   - name: termType
-    summary: 約旦 Wigner 詞彙的類型。
+    summary: 約旦 Wigner 詞彙的型別。
     isPrimitive: true
     uid: Int
 output:
   content: Double[]
   types:
-  - summary: 已展開的係數陣列，每個 Pauli 的詞彙一個。
+  - summary: 展開的係數陣列，每個 Pauli 詞彙一個。
     isArray: true
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 56a2d86a59ec110eac20cdd7e6aa29a9e617ee46
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3ebf6bb76efb562bf534b3831fe557f345b06166
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82662632"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338992"

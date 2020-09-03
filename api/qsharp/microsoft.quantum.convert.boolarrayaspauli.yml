@@ -2,23 +2,23 @@
 uid: microsoft.quantum.convert.boolarrayaspauli
 name: BoolArrayAsPauli
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: 假設有位字串，會傳回以單一 qubit Pauli 運算子陣列表示的多 qubit Pauli 運算子。
+namespace: microsoft.quantum.convert
+summary: 指定一個位字串，會傳回多量子位的 Pauli 運算子，以單一量子位 Pauli 運算子的陣列表示。
 remarks: 布林陣列和量子暫存器的長度必須相等。
 syntax: 'function BoolArrayAsPauli (pauli : Pauli, bitApply : Bool, bits : Bool[]) : Pauli[]'
 input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
   types:
   - name: pauli
-    summary: 要套用至 qubits 的 Pauli 運算子`bitsApply == bits[idx]`，其中。
+    summary: Pauli 運算子，適用于量子位 where `bitsApply == bits[idx]` 。
     isPrimitive: true
     uid: Pauli
   - name: bitApply
-    summary: 如果 bit 是此值，則套用 Pauli。
+    summary: 如果位為此值，則套用 Pauli。
     isPrimitive: true
     uid: Bool
   - name: bits
-    summary: 布林值陣列。
+    summary: 布林陣列。
     isArray: true
     isPrimitive: true
     uid: Bool
@@ -29,9 +29,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: c4f43eb0a30e42b6deb28c9910b1c95454b827c8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b839b3aec8195ec0240ad16cbc83a0c7a8c83430
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82661363"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338771"

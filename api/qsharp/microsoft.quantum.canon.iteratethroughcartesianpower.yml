@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.iteratethroughcartesianpower
 name: IterateThroughCartesianPower
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  在整數範圍的笛卡動力中，套用每個索引的作業。
+  在整數範圍的笛卡兒乘冪中，為每個索引套用一個運算。
 
 
-  針對範圍`0..(bound - 1)`的笛卡動力，反復套用作業。
+  反復針對範圍的笛卡兒乘冪的每個元素，套用一項作業 `0..(bound - 1)` 。
 examples: >-
-  假設有一`op`項作業，下列兩個程式碼片段就是相同的：
+  在指定作業 `op` 的情況下，下列兩個程式碼片段是相等的：
 
 
   ```Q#
@@ -39,15 +39,15 @@ input:
   content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
-    summary: 應該引發範圍`0..(bound - 1)`的笛卡動力。
+    summary: 應產生範圍的笛卡兒乘冪 `0..(bound - 1)` 。
     isPrimitive: true
     uid: Int
   - name: bound
-    summary: 要反覆運算之範圍的規格，指定為範圍的長度。
+    summary: 要逐一查看的範圍規格，指定為範圍的長度。
     isPrimitive: true
     uid: Int
   - name: op
-    summary: 要針對指定笛卡動力的每個元素呼叫的作業。
+    summary: 針對給定笛卡兒乘冪的每個元素呼叫的作業。
     isOperation: true
     input:
       types:
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ed106ae6d6b84b2b00644709751e57153aec91fb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679062"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356162"

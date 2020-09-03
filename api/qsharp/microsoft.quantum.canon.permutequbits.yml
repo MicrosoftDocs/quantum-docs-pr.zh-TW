@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.permutequbits
 name: PermuteQubits
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: 使用交換作業來 Permutes qubits。
+namespace: microsoft.quantum.canon
+summary: 使用交換操作來 Permutes 量子位。
 examples: >-
-  指定的順序 = [2，1，0]，並 register $ \ket{\ Alpha_0} \ket{\ Alpha_1} \ket{\ Alpha_2} $，PermuteQubits 將暫存器變更為 $ \ket{\ Alpha_2} \ket{\ Alpha_1} \ket{\ Alpha_0} $
+  給定順序 = [2，1，0]，並註冊 $ \ket{\ Alpha_0} \ket{\ Alpha_1} \ket{\ Alpha_2} $，PermuteQubits 將註冊變更為 $ \ket{\ Alpha_2} \ket{\ Alpha_1} \ket{\ Alpha_0} $
 
 
   ```qsharp
@@ -22,12 +22,12 @@ input:
   content: '(ordering : Int[], register : Qubit[])'
   types:
   - name: ordering
-    summary: 描述 qubits 的新排序，其中索引 i 的 qubit 現在會在 [i] 排序。
+    summary: 描述量子位的新順序，其中量子位 at index 現在會依序為 [i]。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: register
-    summary: 要處理的 Qubit register。
+    summary: 要處理的量子位 register。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -40,9 +40,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e6f0db4538980d47c26a6947223546c4beb3a180
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 017fd0ec49bc9bb0b7f823a942cf6df02a37ce87
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678607"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355805"

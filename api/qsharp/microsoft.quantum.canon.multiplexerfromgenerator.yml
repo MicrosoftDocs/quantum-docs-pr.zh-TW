@@ -2,18 +2,18 @@
 uid: microsoft.quantum.canon.multiplexerfromgenerator
 name: MultiplexerFromGenerator
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  傳回乘法控制的單一作業 $U $，此作業會套用單一 $V _j $ （由 n-qubit number state $ \ket{j} $ 控制）。
+  傳回 $U $ 的乘法控制項單一作業，此作業會在由 n-量子位 number state $ \ket{j} $ 控制時套用單一 $V _j $。
 
 
-  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
+  $U = \sum ^ {2 ^ n-1-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
 syntax: 'function MultiplexerFromGenerator (unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl)))) : ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl))))'
   types:
   - name: unitaryGenerator
-    summary: 元組，其中第一個`Int`專案是 unitaries $N $ 的數目，而第二個`(Int -> ('T => () is Adj + Ctl))`元素是在 $ [0，n-1] $ 中接受整數 $j $ 的函式，並輸出單一作業 $V _j $。
+    summary: 元組，其中第一個專案 `Int` 是 unitaries $N $ 的數目，而第二個元素 `(Int -> ('T => () is Adj + Ctl))` 是採用整數 $j $ in $ [0，n-1] $ 的函式，並輸出單一作業 $V _j $。
     types:
     - isPrimitive: true
       uid: Int
@@ -40,7 +40,7 @@ input:
 output:
   content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: $U $ 的乘以控制的單一作業，會套用所描述`unitaryGenerator`的 unitaries。
+  - summary: $U $ 的乘法受控制的單一作業，套用所描述的 unitaries `unitaryGenerator` 。
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.multiplexoperationsfromgenerator
 metadata:
-  ms.openlocfilehash: 1000e7606b7afed988687839cc85442a0dd9ff30
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d48b87b9b2e2aea6f49503290a1ac372f33c46a2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678837"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356043"

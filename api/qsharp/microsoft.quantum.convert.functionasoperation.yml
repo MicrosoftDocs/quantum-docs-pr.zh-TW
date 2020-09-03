@@ -2,13 +2,13 @@
 uid: microsoft.quantum.convert.functionasoperation
 name: FunctionAsOperation
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: >-
   將函數轉換成作業。
 
 
-  假設有一個函式，會傳回呼叫該函數的作業，而這不會執行任何其他動作。
-remarks: 這主要適用于將函數傳遞至預期作業作為輸入的函式或作業。
+  指定函式時，會傳回呼叫該函式，而不會執行其他動作的作業。
+remarks: 這項功能主要適用于將函式傳遞至預期作業為輸入的函式或作業。
 syntax: "function FunctionAsOperation (fn : ('Input -> 'Output)) : ('Input => 'Output)"
 input:
   content: "(fn : ('Input -> 'Output))"
@@ -27,7 +27,7 @@ input:
 output:
   content: ('Input => 'Output)
   types:
-  - summary: '`op`所有`input`的作業， `op(input)`與完全相同`fn(input)` 。'
+  - summary: 與 `op` `op(input)` 全部相同的作業 `fn(input)` `input` 。
     isOperation: true
     input:
       types:
@@ -41,11 +41,11 @@ typeParameters:
 - uid: "'Input"
   summary: 要轉換之函數的輸入類型。
 - uid: "'Output"
-  summary: 要轉換之函式的輸出類型。
+  summary: 要轉換之函數的輸出類型。
 metadata:
-  ms.openlocfilehash: a1383f44c1515e60cde3ee44f8daf3c53a621839
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6e5d92c4aeae43707fc21cfa116e1c375160e0b3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82659532"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338584"

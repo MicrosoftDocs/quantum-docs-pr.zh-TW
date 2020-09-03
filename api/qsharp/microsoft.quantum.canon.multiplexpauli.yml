@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.multiplexpauli
 name: MultiplexPauli
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  在 qubits 的陣列上套用 Pauli 旋轉。
+  在量子位的陣列上套用 Pauli 旋轉。
 
 
-  這適用于乘以 $n $-qubit number state $ \ket{j} $ 所控制的單一 qubit Pauli 運算子 $P $ 時，會依角度 $ \ theta_j $ 來執行旋轉的「大規模控制」單一運算。
+  這會套用一個受控制的單一作業，此作業會在由 $n $-量子位 number state $ \ket{j} $ 控制時，對單一量子位 Pauli 運算子 $P $ 執行旋轉（依角度 $ \ theta_j $）。
 
-  特別是，此作業的動作是由單一
+  尤其是這項作業的動作是由單一
 
 
   $ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j} \otimes e ^ {i P \ theta_j}。
@@ -18,25 +18,25 @@ summary: >-
 
 
   ##
-remarks: '`coefficients`如果指定了少於 $ 2 ^ n $，將會以 $ \ theta_j = $0.0 的元素填補。'
+remarks: '`coefficients` 如果指定了少於 $ 2 ^ n $ 的元素，則會以 $ \ theta_j = $0.0 填補。'
 syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: coefficients
-    summary: 最多 $ 2 ^ n $ 係數 $ \ theta_j $ 的陣列。 $J $ th 的係數會以位元組由小到大的格式來編制編碼的數位 state $ \ket{j} $。
+    summary: 最多 $ 2 ^ n $ 係數 $ \ theta_j $ 的陣列。 $J $ th 係數會以位元組由大到小的格式來編制數位狀態 $ \ket{j} $ 編碼。
     isArray: true
     isPrimitive: true
     uid: Double
   - name: pauli
-    summary: Pauli 運算子 $P $ 來決定旋轉軸。
+    summary: Pauli 運算子 $P $，可決定旋轉軸。
     isPrimitive: true
     uid: Pauli
   - name: control
-    summary: $n $ qubit 控制項暫存器，其會將數位狀態 $ \ket{j} $ 編碼為位元組由小到大的格式。
+    summary: 以位元組由大到小的格式，$n $ 量子位 control register 編碼數位狀態 $ \ket{j} $。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: $E ^ {i P \ theta_j} $ 旋轉的單一 qubit 註冊。
+    summary: 由 $e ^ {i P \ theta_j} $ 旋轉的單一量子位註冊。
     isPrimitive: true
     uid: Qubit
 output:
@@ -50,9 +50,9 @@ functors:
 seeAlso:
 - approximatelymultiplexpauli
 metadata:
-  ms.openlocfilehash: 202a1caec428d83027de127b08f05a8e07a63caa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 53905a1537a81a3abbab32f350e748dd674cdebf
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678771"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355875"

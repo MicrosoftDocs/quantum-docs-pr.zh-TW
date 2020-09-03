@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.iteratethroughcartesianproduct
 name: IterateThroughCartesianProduct
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  針對數個範圍的笛卡兒乘積中的每個索引套用作業。
+  針對多個範圍的笛卡兒乘積中的每個索引套用作業。
 
 
-  反復套用、 `0..(bounds[0] - 1)` `0..(bounds[1] - 1)`、... 的笛卡兒乘積之每個元素的作業`0..(bounds[Length(bounds) - 1] - 1)`
+  針對 `0..(bounds[0] - 1)` 、 `0..(bounds[1] - 1)` 、...、等笛卡兒乘積的每個元素反復套用作業 `0..(bounds[Length(bounds) - 1] - 1)`
 examples: >-
-  假設有一`op`項作業，下列兩個程式碼片段就是相同的：
+  在指定作業 `op` 的情況下，下列兩個程式碼片段是相等的：
 
 
   ```Q#
@@ -50,7 +50,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: op
-    summary: 要針對指定笛卡兒乘積的每個元素呼叫的作業。
+    summary: 針對給定笛卡兒乘積的每個專案呼叫的作業。
     isOperation: true
     input:
       types:
@@ -69,9 +69,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianpower
 metadata:
-  ms.openlocfilehash: 0021d7715963d0b0d2f3a0248b857b7591876220
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 07b22e7b094198a42c6126579ebf285b7d93af52
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679038"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356179"

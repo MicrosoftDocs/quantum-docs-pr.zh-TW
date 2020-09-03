@@ -2,13 +2,13 @@
 uid: microsoft.quantum.convert.call
 name: Call
 type: operation
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: >-
-  呼叫具有指定輸入的函式。
+  使用指定的輸入呼叫函數。
 
 
-  假設函式和該函數的輸入，會呼叫函數並傳回其輸出。
-remarks: 這種作業主要適用于強制在作業內的特定位置呼叫函式，或呼叫預期作業的函式。
+  假設函式和該函式的輸入，則會呼叫函式並傳回其輸出。
+remarks: 這項作業主要適合用來強制在作業內的特定位置呼叫函式，或在需要作業的情況下呼叫函數。
 syntax: "operation Call (fn : ('Input -> 'Output), input : 'Input) : 'Output"
 input:
   content: "(fn : ('Input -> 'Output), input : 'Input)"
@@ -25,7 +25,7 @@ input:
       - uid: "'Output"
         isLocal: true
   - name: input
-    summary: 要傳遞至函式的輸入。
+    summary: 要傳遞至函數的輸入。
     uid: "'Input"
     isLocal: true
 output:
@@ -35,9 +35,9 @@ output:
     uid: "'Output"
     isLocal: true
 metadata:
-  ms.openlocfilehash: 407f1b1e3caf0740cca2eaae479dffdaf57fa614
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3dfed1dfb313ede3ff7f70baadb3b15278d6c9e2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82660502"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338669"
