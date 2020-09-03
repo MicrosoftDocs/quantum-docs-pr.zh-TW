@@ -2,13 +2,13 @@
 uid: microsoft.quantum.logical.conditioned
 name: Conditioned
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: 根據布林條件的值傳回兩個值的其中一個。
+namespace: microsoft.quantum.logical
+summary: 根據布林值條件的值，傳回兩個值的其中一個。
 remarks: >-
-  不同于`?|`運算子，此函式不會執行最少運算，因此這兩個輸入都會完全評估。
+  與運算子不同的 `?|` 是，此函式不會進行較短的運算，因此會完全評估這兩個輸入。
 
 
-  最高的運算行為，以下是相同的：
+  最高的最小運算行為，如下所示：
 
 
   ```Q#
@@ -27,23 +27,23 @@ input:
     isPrimitive: true
     uid: Bool
   - name: ifTrue
-    summary: 當為`condition` `true`時，所要傳回的值。
+    summary: 當為時要傳回的 `condition` 值 `true` 。
     uid: "'T"
     isLocal: true
   - name: ifFalse
-    summary: 當為`condition` `false`時，所要傳回的值。
+    summary: 當為時要傳回的 `condition` 值 `false` 。
     uid: "'T"
     isLocal: true
 output:
   content: "'T"
   types:
-  - summary: '`ifTrue`如果`condition`為`true`，則`ifFalse`為，否則為。'
+  - summary: '`ifTrue` 如果 `condition` 為 `true` ，則為， `ifFalse` 否則為。'
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: c5a255fe0434c7dfc9bf49f1a1c9c6be03cd8055
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98d1cf77257fc79ba12fe383c0c2e49a25bdee10
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674070"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346149"

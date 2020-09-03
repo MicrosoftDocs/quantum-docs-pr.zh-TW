@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.zip
 name: Zip
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 假設有兩個數組，會傳回新的成對陣列，讓每一組都包含每個原始陣列中的元素。
+namespace: microsoft.quantum.arrays
+summary: 假設有兩個數組，會傳回一組新的陣列，讓每一組都包含每個原始陣列中的元素。
 examples: >-
   ```qsharp
 
@@ -19,19 +19,19 @@ input:
   content: "(left : 'T[], right : 'U[])"
   types:
   - name: left
-    summary: 陣列，其中包含每個元組之第一個元素的值。
+    summary: 陣列，其中包含每個元組的第一個元素值。
     isArray: true
     uid: "'T"
     isLocal: true
   - name: right
-    summary: 陣列，其中包含每個元組之第二個元素的值。
+    summary: 陣列，其中包含每個元組的第二個元素的值。
     isArray: true
     uid: "'U"
     isLocal: true
 output:
   content: ('T, 'U)[]
   types:
-  - summary: 陣列，其中包含每個的`(left[idx], right[idx])`一`idx`組表單。 如果這兩個數組的長度不相等，輸出就會是較短的輸入。
+  - summary: 陣列，其中包含每個的表單配對 `(left[idx], right[idx])` `idx` 。 如果兩個數組的長度不相等，則輸出將會是輸入較短的時間長度。
     isArray: true
     types:
     - uid: "'T"
@@ -40,16 +40,16 @@ output:
       isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: 左邊陣列元素的類型。
+  summary: 左方陣列元素的型別。
 - uid: "'U"
-  summary: 右側陣列元素的類型。
+  summary: 右陣列元素的型別。
 seeAlso:
 - zip3
 - zip4
 metadata:
-  ms.openlocfilehash: ae3a66ee226cdc0e26ec0cc0e87b1822bad45579
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 448a5f66cbb8d927f357d83420c593ee80555705
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675092"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351453"

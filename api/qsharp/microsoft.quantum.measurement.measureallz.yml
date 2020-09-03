@@ -2,18 +2,18 @@
 uid: microsoft.quantum.measurement.measureallz
 name: MeasureAllZ
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: >-
-  以 Pauli Z 為基礎，共同測量 qubits 的暫存器。
+  以 Pauli Z 為單位共同測量量子位的暫存器。
 
 
-  測量 $Z \otimes Z \otimes \cdots \otimes Z $ 基礎中的 qubits 暫存器，代表整個暫存器的同位。
+  以 $Z \otimes Z \otimes \cdots \otimes Z $ 基礎測量量子位的暫存器，代表整個登錄的同位檢查。
 syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: 要測量的暫存器。
+    summary: 要測量的註冊。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -24,9 +24,9 @@ output:
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: a553a01d583cca9fcf5eb1e2c75896450990892a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 62cda639138f90d15ea591808af3b904864126dc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685197"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332498"

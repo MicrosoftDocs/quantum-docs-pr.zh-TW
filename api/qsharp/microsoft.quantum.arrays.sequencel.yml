@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.sequencel
 name: SequenceL
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 取得指定間隔中的整數陣列。
-remarks: 和`from` `to`之間的差異必須符合一個`Int`值。
+namespace: microsoft.quantum.arrays
+summary: 取得指定間隔內的整數陣列。
+remarks: 和之間的 `from` 差異 `to` 必須符合 `Int` 值。
 examples: >-
   ```qsharp
 
@@ -24,20 +24,20 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: to
-    summary: 不小於的間隔的內含結束索引`from`。
+    summary: 不小於的間隔的內含結尾索引 `from` 。
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt[]
   types:
-  - summary: 包含數位`from`序列（ `from + 1`，...） `to`的陣列。
+  - summary: 陣列，其中包含數位的序列 `from` （ `from + 1` ，...） `to` 。
     isArray: true
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 7271856286009cfd1651f19f69f932e79d79c2bf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c39259d5c39ff523464b1defc3c29c7dca6551ee
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680820"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351657"

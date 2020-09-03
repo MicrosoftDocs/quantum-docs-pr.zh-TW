@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.swapped
 name: Swapped
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 在陣列中套用兩個元素的交換。
+namespace: microsoft.quantum.arrays
+summary: 針對陣列中的兩個元素套用交換。
 syntax: "function Swapped (firstIndex : Int, secondIndex : Int, arr : 'T[]) : 'T[]"
 input:
   content: "(firstIndex : Int, secondIndex : Int, arr : 'T[])"
@@ -13,11 +13,11 @@ input:
     isPrimitive: true
     uid: Int
   - name: secondIndex
-    summary: 要交換之第二個元素的索引。
+    summary: 要交換的第二個元素的索引。
     isPrimitive: true
     uid: Int
   - name: arr
-    summary: 要交換元素的陣列。
+    summary: 具有要交換之元素的陣列。
     isArray: true
     uid: "'T"
     isLocal: true
@@ -25,7 +25,7 @@ output:
   content: "'T[]"
   types:
   - summary: >-
-      已套用就地交換的陣列。
+      套用了就地交換的陣列。
 
 
       ## <a name="example"></a>範例
@@ -42,9 +42,9 @@ output:
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: 0f87061e3f3ef2a310df6a6bdc8c65619356406a
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 5cadb5a93f91fc37aa0c2d2f61c69644e3eff9f6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884622"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351606"

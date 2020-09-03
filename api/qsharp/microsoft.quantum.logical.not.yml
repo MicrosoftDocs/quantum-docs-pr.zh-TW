@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.not
 name: Not
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: 傳回值的 Boolean 否定。
+namespace: microsoft.quantum.logical
+summary: 傳回值的布林值否定。
 remarks: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```Q#
@@ -20,19 +20,19 @@ input:
   content: '(value : Bool)'
   types:
   - name: value
-    summary: 要否定的值。
+    summary: 要反轉的值。
     isPrimitive: true
     uid: Bool
 output:
   content: Bool
   types:
-  - summary: '`true`只有在`value`為時， `false`才為。'
+  - summary: '`true` 如果為，則為，如果為，則 `value` 為 `false` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 0d2e455b7567a282709711caa6d5a5e59f52100b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7d9cf5117273cd565b51815a2487fd9687844b14
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684608"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345384"

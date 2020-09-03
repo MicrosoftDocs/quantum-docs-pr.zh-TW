@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.equali
 name: EqualI
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: 只有在兩個輸入相等時，才會傳回 true。
+namespace: microsoft.quantum.logical
+summary: 只有當兩個輸入相等時，才會傳回 true。
 remarks: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```Q#
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`只有當`a`等於時，才為`b`。'
+  - summary: '`true` 只有當 `a` 等於時，才為 `b` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 1e9689935b11355a8ac67aa463f7e02c86c159f9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8ad9bd9d9f9cac8f6c0aa9ca1e8224c7ad8a42db
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683624"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346030"

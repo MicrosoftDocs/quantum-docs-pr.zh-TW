@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.timesc
 name: TimesC
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回兩個輸入的乘積。
 syntax: 'function TimesC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
 input:
@@ -12,7 +12,7 @@ input:
     summary: 要相乘的第一個輸入 $a $。
     uid: microsoft.quantum.math.complex
   - name: b
-    summary: 要相乘的第二個輸入 $b $。
+    summary: 第二個輸入 $b $ 以相乘。
     uid: microsoft.quantum.math.complex
 output:
   content: Microsoft.Quantum.Math.Complex
@@ -20,9 +20,9 @@ output:
   - summary: 產品 $a \times b $。
     uid: microsoft.quantum.math.complex
 metadata:
-  ms.openlocfilehash: 8d4bf6e21a66eb51cefa2d666ba691d3d4daeaf6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 16a93255d7bd98fd8b67a3caf585e8d7b845cf3e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685284"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332770"

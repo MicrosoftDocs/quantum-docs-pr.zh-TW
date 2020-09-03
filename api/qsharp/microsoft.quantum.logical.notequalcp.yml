@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.notequalcp
 name: NotEqualCP
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 只有在兩個輸入不相等時，才會傳回 true。
 syntax: 'function NotEqualCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Bool'
 input:
@@ -17,13 +17,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`只有當`a`不等於時，才為`b`。'
+  - summary: '`true` 如果和 `a` 不等於，則為 `b` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: ecedd873481c655c9c799c55192d01edc19a1773
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c63c95fb5f0c42686415dd65f5038aca06cfef96
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684549"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345350"

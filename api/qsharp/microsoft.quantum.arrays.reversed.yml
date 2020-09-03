@@ -2,21 +2,21 @@
 uid: microsoft.quantum.arrays.reversed
 name: Reversed
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 建立陣列，其中包含與輸入陣列相同的元素，但以相反的順序。
+namespace: microsoft.quantum.arrays
+summary: 建立陣列，其中包含與輸入陣列相同的元素，但以反向順序表示。
 syntax: "function Reversed (array : 'T[]) : 'T[]"
 input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: 要以反向順序複製其專案的陣列。
+    summary: 要以反轉順序複製其元素的陣列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: 包含元素`array[Length(array) - 1]`的陣列。 `array[0]`.
+  - summary: 包含元素的陣列 `array[Length(array) - 1]` 。 `array[0]`.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -24,9 +24,9 @@ typeParameters:
 - uid: "'T"
   summary: 陣列元素的類型。
 metadata:
-  ms.openlocfilehash: f7424045ae518a2ea4c91724a0811d1ce5aaabd9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee68cb5aa0207b5a09fd02146cda4c0067c79130
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680850"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351708"

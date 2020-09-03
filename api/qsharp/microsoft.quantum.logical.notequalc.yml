@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.notequalc
 name: NotEqualC
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 只有在兩個輸入不相等時，才會傳回 true。
 syntax: 'function NotEqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Bool'
 input:
@@ -17,13 +17,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`只有當`a`不等於時，才為`b`。'
+  - summary: '`true` 如果和 `a` 不等於，則為 `b` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 1047a12a676440e93f736df7d8220c23f3ac0a0c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d6c146c99e8b5b8dda1add4dffba28de71b69a55
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684568"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345367"
