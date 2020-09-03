@@ -2,9 +2,9 @@
 uid: microsoft.quantum.intrinsic.i
 name: I
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
-summary: 在單一 qubit 上執行身分識別作業（無 op）。
-remarks: 這不是任何作業。 它是為了完整性而提供，因為有時候在演算法中呼叫身分識別，或將它當做參數傳遞會很有用。
+namespace: microsoft.quantum.intrinsic
+summary: 在單一量子位上執行 (無 op) 的身分識別作業。
+remarks: 這是一項無作業。 它是為了完整性而提供，因為有時在演算法中呼叫身分識別，或將它當作參數傳遞會很有用。
 syntax: 'operation I (target : Qubit) : Unit'
 input:
   content: '(target : Qubit)'
@@ -21,9 +21,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: f3403e33b859c8fd0943c02126f45327d341be52
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7cd0e0a0cb2f477216c3f85902ce27f65285c82c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683763"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346999"

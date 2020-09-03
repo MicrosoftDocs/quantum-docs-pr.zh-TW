@@ -2,24 +2,24 @@
 uid: microsoft.quantum.math.negationc
 name: NegationC
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 傳回輸入的一元否定。
 syntax: 'function NegationC (input : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
 input:
   content: '(input : Microsoft.Quantum.Math.Complex)'
   types:
   - name: input
-    summary: 要傳回其負的值。
+    summary: 要傳回其負數值的值。
     uid: microsoft.quantum.math.complex
 output:
   content: Microsoft.Quantum.Math.Complex
   types:
-  - summary: 的一元否定`input`。
+  - summary: 的一元否定 `input` 。
     uid: microsoft.quantum.math.complex
 metadata:
-  ms.openlocfilehash: 4a8fff92778578483db7c8bfa579c66549da5670
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 46d5f178e0340aca3f47f01b7905c151ab0220fb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686618"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333994"
