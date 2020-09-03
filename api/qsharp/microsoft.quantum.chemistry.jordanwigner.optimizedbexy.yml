@@ -2,22 +2,22 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 在 $ （X ^ {z + 1}\_.py ^ {z}\_p） z\_{p-1} 上套用 Pauli 字串的單一 $U $Z_0 $ on qubits $ 0. p $ 的索引上，$z \in\{0，1\}$ 和 $p $。 也就是說，$ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} （X ^ {z + 1}\_.py ^ {z}\_p） z\_{p-1} .。。Z_0 \ket{\psi} \end{align} $ $
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: 單一 $U $，其會將 Pauli 字串套用至 $ (X ^ {z + 1} \_ .py ^ {z} \_ p) z \_ {p-1} .。。Z_0 $ on 量子位 $ 0. p $ 條件的索引 $z \in \{ 0、1 \} $ 和 $p $。 亦即 $ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} (X ^ {z + 1} \_ .py ^ {z} \_ p) z \_ {p-1} .。。Z_0 \ket{\psi} \end{align} $ $
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
-references: '- 在配量線路中使用線性 T 複雜度的電子 Spectra 編碼 Ryan Babbush、Craig Gidney、Dominic W. Berry、Nathan Wiebe、Jarrod McClean、Zitec Paler、奧斯丁 Fowler、Hartmut Nevenhttps://arxiv.org/abs/1805.03662'
+references: '- 使用線性 T 複雜度編碼 Spectra 量子線路中的電子 Ryan Babbush、Craig Gidney、Dominic W. Berry、Nathan Wiebe、Jarrod McClean、Zitec Paler、奧斯丁 Fowler、Hartmut Neven https://arxiv.org/abs/1805.03662'
 input:
   content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: pauliBasis
-    summary: 當此 qubit 處於 state $ \ket{0}$ 時，會套用 $X $。 當狀態為 $ \ket{1}$ 時，會套用 $Y $。
+    summary: 當此量子位處於狀態 $ \ket {0} $ 時，就會套用 $X $。 當其處於狀態 $ \ket {1} $ 時，就會套用 $Y $。
     isPrimitive: true
     uid: Qubit
   - name: indexRegister
-    summary: 此暫存器的 state $ \ket{p} $ 會決定套用 $X $ 或 $Y $ 的 qubit。
+    summary: 此註冊的狀態 $ \ket{p} $ 會決定套用 $X $ 或 $Y $ 的量子位。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: targetRegister
-    summary: 對其套用 Pauli 運算子的 qubits 註冊。
+    summary: 註冊已套用 Pauli 運算子的量子位。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2208efefe094c472d4f179e3a75dae721c4ff211
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b221c123b0917232b6f470be84d56358fe08f47e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82665310"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339451"

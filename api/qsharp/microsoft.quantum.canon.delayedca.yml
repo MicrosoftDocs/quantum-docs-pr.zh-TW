@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.delayedca
 name: DelayedCA
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: 傳回使用指定的引數來套用給定運算的作業。
+namespace: microsoft.quantum.canon
+summary: 傳回以指定的引數套用指定作業的作業。
 syntax: "function DelayedCA (op : ('T => Unit is Ctl + Adj), arg : 'T) : (Unit => Unit is Ctl + Adj)"
 input:
   content: "(op : ('T => Unit is Ctl + Adj), arg : 'T)"
   types:
   - name: op
-    summary: 套用傳回值的結果所套用的作業
+    summary: 套用傳回值的結果所要套用的作業
     isOperation: true
     input:
       types:
@@ -23,13 +23,13 @@ input:
     - Adjoint
     - Controlled
   - name: arg
-    summary: 要對其`op`套用作業的輸入。
+    summary: 要套用作業的輸入 `op` 。
     uid: "'T"
     isLocal: true
 output:
   content: (Unit => Unit is Ctl + Adj)
   types:
-  - summary: 適用于`op`輸入的新作業`arg`
+  - summary: 適用于輸入的新作業 `op``arg`
     isOperation: true
     input:
       types:
@@ -49,9 +49,9 @@ seeAlso:
 - microsoft.quantum.canon.delayed
 - microsoft.quantum.canon.delay
 metadata:
-  ms.openlocfilehash: 49f8d45df6b59fa1dec9f0ba42f54f43a48f0ed5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0b3bcbc7835135dc7fe2a561dc6ebad7f0a9c7d7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675604"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356400"

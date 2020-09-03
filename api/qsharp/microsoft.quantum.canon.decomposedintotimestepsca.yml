@@ -2,18 +2,18 @@
 uid: microsoft.quantum.canon.decomposedintotimestepsca
 name: DecomposedIntoTimeStepsCA
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: 針對指定的作業，傳回執行 Trotter – Plat'home co. 整合器的作業。
+namespace: microsoft.quantum.canon
+summary: 傳回對指定作業執行 Trotter – Suzuki 整合器的作業。
 remarks: >-
-  使用`order`等於的呼叫時`1`，此函式會傳回可由最低順序的 Trotter （plat'home co. 整合器 $ $ \begin{align} S_1 （\lambda） = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}）模擬的運算。 \end{align} $ $，我們已遵循[quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)的標記法，並讓 $ \lambda $ 成為進化時間（以所傳回作業的第一個輸入表示）。並讓 $\{H_j\}_ {j = 1} ^ {m} $ 成為整合的一組（扭曲 Hermitian） dynamical 產生器，這是`op(j, lambda, _)`由單一運算子所模擬，$e ^ {H_j \lambda} $。
+  以等於的呼叫時 `order` `1` ，此函式會傳回可由最低順序的 Trotter – Suzuki 整合者 $ $ \begin{align} S_1 ( \lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda} 的運算 \end{align} $ $，我們已遵循 [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) 的標記法，並讓 $ \lambda $ 成為所傳回作業的第一個輸入所表示的演進時間 () ，並讓 let $ \{ H_j \} _ {j = 1} ^ {m} $ 成為一組 (扭曲-Hermitian) 要整合的 dynamical 產生器，這 `op(j, lambda, _)` 是由單一運算子 $e ^ {H_j \lambda} $ 所模擬。
 
 
-  同樣地， `order`的`2`會傳回第二個 Order 對稱 Trotter – plat'home co. 整合器 $ $ \begin{align} S_2 （\lambda） = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m{1} } ^ e ^ {H_ {j '} \lambda/2}。
+  同樣地， `order` 的會傳回 `2` 第二個順序的對稱 Trotter – Suzuki 整合者 $ $ \begin{align} S_2 ( \lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^ {1} e ^ {H_ {j '} \lambda/2}。
 
   \end{align} $ $
 
 
-  較高的偶數`order`會使用[quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)的遞迴結構來執行。
+  更高的值 `order` 會使用 [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)的遞迴結構來執行。
 syntax: "function DecomposedIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: '- [*D. Berry、G. Ahokas、Cleve、b. Sanders*](https://arxiv.org/abs/quant-ph/0508139)'
 input:
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: op
-    summary: 接受索引輸入（類型`Int`）和時間輸入（類型`Double`）進行分解的作業。
+    summary: 一種作業，可接受索引輸入 (類型 `Int`) 和時間輸入 (類型 `Double`) 以進行分解。
     isOperation: true
     input:
       types:
@@ -43,15 +43,15 @@ input:
     - Controlled
   - name: trotterOrder
     summary: >-
-      選取要使用的 Trotter-Plat'home co. 整合器順序。
+      選取要使用的 Trotter-Suzuki 整合器順序。
 
-      訂單1，甚至訂單2，4，6,.。。目前支援。
+      Order 1 甚至訂單2，4，6,.。。目前支援。
     isPrimitive: true
     uid: Int
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: 會傳回一個實 Trotter – Plat'home co. 整合器的，其中第一個`Double`參數是整合步驟的大小，而第二個參數則是針對其採取動作的目標。
+  - summary: 傳回實 Trotter – Suzuki 整合器的單一參數，其中第一個參數 `Double` 是整合步驟的大小，而第二個參數則是採取動作的目標。
     isOperation: true
     input:
       types:
@@ -68,11 +68,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: 每個時間步驟應作用的類型：通常是`Qubit[]`或`Qubit`。
+  summary: 每次步驟應採取的型別;通常是 `Qubit[]` 或 `Qubit` 。
 metadata:
-  ms.openlocfilehash: 1fdb15e9a28c24ac58f026a89779951b982edb27
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e3febe45478ca86a36844d6af75884872cb12680
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680260"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356536"

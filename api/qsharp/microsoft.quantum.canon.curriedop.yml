@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.curriedop
 name: CurriedOp
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  在兩個輸入上傳回作業的擴充版本。
+  傳回兩個輸入之作業的局部擴充版本。
 
 
-  也就是說，假設有兩個輸入的作業，則此函式會套用 Curry 的 isomorphism $f （x，y） \equiv f （x）（y） $ 來傳回一個輸入的作業，而這項作業會傳回一個輸入的作業。
+  亦即，假設有兩個輸入的作業，此函式會將 Curry 的 isomorphism $f (x，y) \equiv f (x) # B4 y) $ 傳回一個輸入的作業，以傳回一個輸入的運算。
 remarks: >-
-  以下是相同的：
+  以下是相等的：
 
 
   ```qsharp
@@ -44,7 +44,7 @@ input:
 output:
   content: ('T -> ('U => Unit))
   types:
-  - summary: 接受配對之第一個元素的作業，並傳回可接受做為其輸入的作業，以作為其在原始作業輸入的第二個元素。
+  - summary: 接受一組第一個專案的作業，並傳回可接受做為其輸入的作業，該作業會將原始作業的輸入的第二個元素做為其輸入。
     isFunction: true
     input:
       types:
@@ -63,13 +63,13 @@ output:
             uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 成對定義之函式的第一個元件類型。
+  summary: 成對定義之函式的第一個元件型別。
 - uid: "'U"
   summary: 成對定義之函式的第二個元件類型。
 metadata:
-  ms.openlocfilehash: b89dbef2ff8d28656cae7f527fb3d94d869381f0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 97b800f064737d0c53bc7c90853cfe9c91a74aa9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675691"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356604"

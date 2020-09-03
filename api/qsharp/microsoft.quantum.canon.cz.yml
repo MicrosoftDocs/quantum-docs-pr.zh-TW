@@ -2,9 +2,9 @@
 uid: microsoft.quantum.canon.cz
 name: CZ
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  將受控制的 Z （CZ）閘道套用至一對 qubits。
+  將控制的 Z (CZ) 閘道套用至一對量子位。
 
 
   $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 0 & 0 &-1 \end{align}，$ $，其中資料列和資料行的組織方式如量子概念指南中所示。
@@ -22,11 +22,11 @@ input:
   content: '(control : Qubit, target : Qubit)'
   types:
   - name: control
-    summary: CZ 閘道的控制項 qubit。
+    summary: CZ 閘道的控制項量子位。
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: CZ 閘道的目標 qubit。
+    summary: CZ 閘道的目標量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -38,9 +38,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: ebece418cac216516b6c34ca22ead35275ac37c7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 56173b63ca5d5da72a350315213671fbb1cf7367
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680273"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356553"

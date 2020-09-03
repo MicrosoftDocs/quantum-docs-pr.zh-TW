@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.cy
 name: CY
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  將受控制的 Y （CY）閘道套用至一對 qubits。
+  將受控制的 Y (CY) 閘道套用至一對量子位。
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 &-i \\ \\ 0 & 0 & 我 & 0 \end{align}，$ $，其中資料列和資料行的組織方式如量子概念指南中所示。
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 &-i \\ \\ 0 & 0 & i & 0 \end{align}，$ $，其中資料列和資料行的組織方式如量子概念指南中所示。
 remarks: >-
   相當於：
 
@@ -22,11 +22,11 @@ input:
   content: '(control : Qubit, target : Qubit)'
   types:
   - name: control
-    summary: CY 閘道的控制項 qubit。
+    summary: CY 閘道的控制量子位。
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: CY 閘道的目標 qubit。
+    summary: CY 閘道的目標量子位。
     isPrimitive: true
     uid: Qubit
 output:
@@ -38,9 +38,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: c7d7d0fb5413051ec7a654c04e01b6ffc02903e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6d2934f6e8b2f5b286d70eb773ae3fdaf8a3ba65
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680294"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356570"

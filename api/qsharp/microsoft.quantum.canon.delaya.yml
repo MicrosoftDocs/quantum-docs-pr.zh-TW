@@ -2,16 +2,16 @@
 uid: microsoft.quantum.canon.delaya
 name: DelayA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   套用具有延遲的指定作業。
 
 
-  給定作業和該作業的輸入時，會在提供額外的輸入之後套用作業。
+  如果有作業和該作業的輸入，則會在提供額外的輸入之後套用作業。
 
-  特別是，運算式`Delay(op, arg, _)`是在呼叫時套用`op`至`arg`的作業。
+  尤其是，運算式 `Delay(op, arg, _)` 是 `op` 在呼叫時套用的作業 `arg` 。
 
-  運算式`Delay(op,arg,_)`可讓延遲的應用程式`op`。
+  運算式 `Delay(op,arg,_)` 允許延遲的應用程式 `op` 。
 syntax: "operation DelayA (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit"
 input:
   content: "(op : ('T => Unit is Adj), arg : 'T, aux : Unit)"
@@ -30,11 +30,11 @@ input:
     functors:
     - Adjoint
   - name: arg
-    summary: 要對其套用作業的輸入。
+    summary: 要套用作業的輸入。
     uid: "'T"
     isLocal: true
   - name: aux
-    summary: 使用部分應用程式來延遲應用程式運作的引數。
+    summary: 使用部分應用程式來延遲作業應用程式的引數。
     isPrimitive: true
     uid: Unit
 output:
@@ -51,9 +51,9 @@ seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
 metadata:
-  ms.openlocfilehash: d4119e1229ac193ab52ac56c37333560dbbedf9e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 18d272b642a228edf90b05e5522ec85918a77732
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680212"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356485"

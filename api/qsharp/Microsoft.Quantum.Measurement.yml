@@ -3,25 +3,25 @@ uid: microsoft.quantum.measurement
 name: Microsoft.Quantum.Measurement
 operations:
 - uid: microsoft.quantum.measurement.measureallz
-  summary: 以 Pauli Z 為基礎，共同測量 qubits 的暫存器。
+  summary: 以 Pauli Z 為單位共同測量量子位的暫存器。
 - uid: microsoft.quantum.measurement.measurepaulis
-  summary: 假設有多個 qubit 的 Pauli 運算子陣列，則會使用指定的測量小工具來測量每一個，然後傳回結果的陣列。
+  summary: 指定多量子位 Pauli 運算子的陣列時，會使用指定的測量小工具來測量每個運算子，然後傳回結果的陣列。
 - uid: microsoft.quantum.measurement.measurewithscratch
-  summary: 使用明確的臨時 qubit 來測量指定的 Pauli 運算子，以執行測量。
+  summary: 使用明確的臨時量子位來測量指定的 Pauli 運算子，以執行度量。
 - uid: microsoft.quantum.measurement.mresetx
-  summary: 測量 X 中的單一 qubit，並在測量之後將它重設為固定的初始狀態。
+  summary: 以 X 為基礎測量單一量子位，並將它重設為遵循測量的固定初始狀態。
 - uid: microsoft.quantum.measurement.mresety
-  summary: 以 Y 為單位測量單一 qubit，並在測量之後將它重設為固定的初始狀態。
+  summary: 以 Y 為單位測量單一量子位，並將它重設為遵循測量的固定初始狀態。
 - uid: microsoft.quantum.measurement.mresetz
-  summary: 以 Z 為單位測量單一 qubit，並將它重設為測量之後的固定初始狀態。
+  summary: 以 Z 為單位測量單一量子位，並將它重設為遵循測量的固定初始狀態。
 - uid: microsoft.quantum.measurement.multim
-  summary: 根據標準，測量給定陣列中的每個 qubit。
+  summary: 以標準為單位測量指定陣列中的每個量子位。
 - uid: microsoft.quantum.measurement.settobasisstate
-  summary: 藉由測量 qubit 並視需要套用位翻轉，將 qubit 設定為給定的計算基礎狀態。
+  summary: 藉由測量量子位並視需要套用位翻轉，將量子位設定為指定的計算基礎狀態。
 metadata:
-  ms.openlocfilehash: 894c0bb7f0b57e9fe04837b89cd57345745df6c5
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 10d1ca2f2733e22f950cb5d1867bb24a07bd5619
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326620"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339995"

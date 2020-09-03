@@ -2,19 +2,19 @@
 uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
 name: PrepareSingleConfigurationalStateSingleSiteOccupation
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 藉由佔用微調 orbitals 來準備試用狀態的簡單狀態
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: 藉由佔用微調 orbitals，來準備試用狀態的簡單狀態
 syntax: 'operation PrepareSingleConfigurationalStateSingleSiteOccupation (qubitIndices : Int[], qubits : Qubit[]) : Unit'
 input:
   content: '(qubitIndices : Int[], qubits : Qubit[])'
   types:
   - name: qubitIndices
-    summary: Electrons 所要佔用的 qubits 索引。
+    summary: 電子要佔用的量子位索引。
     isArray: true
     isPrimitive: true
     uid: Int
   - name: qubits
-    summary: Hamiltonian 的 Qubits。
+    summary: Hamiltonian 的量子位。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 1f4d073162e2896e5c2c7f8503e524aacc0b3101
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6ae72c826058288ba2318b0056cf017e571e216e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82664943"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339383"
