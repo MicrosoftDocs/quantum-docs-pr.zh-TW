@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
+ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863653"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358253"
 ---
 # <a name="develop-with-no-locq-applications"></a>使用 Q# 應用程式進行開發
 
@@ -41,7 +41,7 @@ Q# 程式可以自行執行，不需要如 C#、F# 或 Python 等主機語言中
 設定 Visual Studio Codespaces：
 
 1. 建立 [Azure 帳戶](https://azure.microsoft.com/free/)。
-2. 建立 Codespaces 環境。 遵循[快速入門](https://docs.microsoft.com/visualstudio/online/quickstarts/browser)。 建立 Codespace 時，建議您在 [Git 存放庫] 欄位中輸入 `microsoft/Quantum`，以載入 QDK 特定的設定。
+2. 建立 Codespaces 環境。 遵循[快速入門](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser)。 建立 Codespace 時，建議您在 [Git 存放庫] 欄位中輸入 `microsoft/Quantum`，以載入 QDK 特定的設定。
 3. 您現在可以啟動新的環境，並透過 [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)，在瀏覽器中開始進行開發。 或者，您也可以使用本機安裝的 VS Code，並使用 Codespaces 做為[遠端環境](https://docs.microsoft.com/visualstudio/online/how-to/vscode)。
 
 
