@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863431"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063235"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>教學課程：使用 Q\# 探索糾纏
 
@@ -112,7 +112,7 @@ Bell 這個名稱取自「貝爾狀態」，是指兩個量子位元的特定狀
 
 作業的引數會在括弧內指定為元組。
 
-作業的傳回類型指定於冒號後面。 在此案例中，`SetQubitState` 作業不會傳回任何項目，因此會標示為傳回 `Unit`。 這相當於 Q# F # 中的對等專案 `unit` ，它大致上類似于 `void` c #，而空白的元組 (`Tuple[()]` 在 Python 中) 。
+作業的傳回類型指定於冒號後面。 在此案例中，`SetQubitState` 作業不會傳回任何項目，因此會標示為傳回 `Unit`。 這相當於 Q# F # 中的對等專案 `unit` ，它大致上類似于 `void` c #，而 Python (中的空元組則是以 `()` 類型提示 `Tuple[()]`) 表示。
 
 您在第一項作業中使用了兩個量子作業 Q# ：
 
