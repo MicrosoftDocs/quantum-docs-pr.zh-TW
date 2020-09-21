@@ -1,37 +1,37 @@
 ---
 title: QDK 的開放原始碼授權
-description: 瞭解使用和參與 Microsoft 標準程式庫的授權 Q# -授權和貢獻。
+description: 瞭解使用和參與 Microsoft Q# 標準程式庫（授權和參與）的授權。
 author: martinro
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f964d5f4a4c20c8d53ceb4375c869030cd53ff07
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4531d8c19e35f48f6e4c3cc2cebe3d82d6fa1025
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868452"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833689"
 ---
 # <a name="licensing"></a>授權 #
 
-配量開發工具組提供廣泛的開放原始碼函式和作業集合，並以[MIT 授權](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt)進行授權。
-可以從 GitHub 上的[Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries)存放庫取得可在目的電腦上移植的標準程式庫部分，以及其他程式庫（例如和其他程式庫），例如「[量子化學程式庫](xref:microsoft.quantum.chemistry.concepts.intro)」。
+配量開發工具組提供了一系列廣泛的開放原始碼函式和作業，並以 [MIT 授權](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt)為依據。
+您可以從 GitHub 上的 [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) 儲存機制，以及其他程式庫（例如 [量子化學程式庫](xref:microsoft.quantum.chemistry.concepts.intro)）取得可在目的電腦之間移植的標準程式庫部分。
 
-Microsoft 的量子開發工具組也提供在[Microsoft Research 授權](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE)之下授權的特殊程式庫功能和作業。
-您可以從 GitHub 上的[Microsoft/量子-NC](https://github.com/microsoft/quantum-nc)存放庫取得這些資訊。
+Microsoft 的量子開發工具組也提供以 [Microsoft Research 授權](https://github.com/Microsoft/Quantum-NC/blob/main/LICENSE)為依據的特殊程式庫功能和作業。
+您可以從 GitHub 上的 [Microsoft/量子-NC](https://github.com/microsoft/quantum-nc) 儲存機制取得這些資訊。
 
-另外還有許多範例，說明並說明如何使用標準程式庫和其他程式庫中的函式和作業。
-這些範例均以[MIT 授權](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt)為依據。
-這些範例可從 GitHub 上的[Microsoft/量子](https://github.com/Microsoft/Quantum)存放庫取得。
+另外還有許多範例可說明和說明如何使用標準程式庫和其他程式庫中的函式和作業。
+這些範例是以 [MIT 授權](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt)為依據。
+您可以從 GitHub 上的 [Microsoft/量子](https://github.com/Microsoft/Quantum) 儲存機制取得範例。
 
 ## <a name="contributing"></a>參與 ##
 
 此專案歡迎參與和提供建議。
-大部分的參與都要求您同意「參與者授權合約 (CLA)」，宣告您有權且確實授與我們使用投稿的權利。 如需詳細資訊，請造訪[CLA](https://cla.microsoft.com)。
+大部分的參與都要求您同意「參與者授權合約 (CLA)」，宣告您有權且確實授與我們使用投稿的權利。 如需詳細資訊，請造訪 [CLA](https://cla.microsoft.com)。
 
 當您提交提取要求時，CLA Bot 會自動判斷您是否需要提供 CLA，並適當地裝飾 PR (例如標籤、註解)。 請遵循 bot 提供的指示。 您只需要使用我們的 CLA 在所有存放庫上執行此動作一次。
 

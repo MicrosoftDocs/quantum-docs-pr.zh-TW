@@ -2,25 +2,25 @@
 title: 建立量子亂數產生器
 description: 建立一個 Q# 專案，以藉由建立量子亂數產生器來示範基本的量子概念，例如迭加。
 author: bromeg
-ms.author: megbrow@microsoft.com
+ms.author: megbrow
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863633"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834035"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>教學課程：在 Q\# 中實作量子亂數產生器
 
 以量子亂數字產生器撰寫的簡單範例是量子演算法 Q# 。 此演算法利用量子機制的本質來產生亂數。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)。
 - Q#使用[Python 主機程式](xref:microsoft.quantum.install.python)或[c # 主機程式](xref:microsoft.quantum.install.cs)來建立[ Q# 應用程式](xref:microsoft.quantum.install.standalone)的專案。
@@ -33,7 +33,7 @@ ms.locfileid: "88863633"
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-如[了解量子運算](xref:microsoft.quantum.overview.understanding)一文所述，量子位元是一種可疊加的量子資訊單位。 測量時，量子位元只能是 0 或 1。 不過在執行期間，量子位元的狀態代表著測量讀數為 0 或 1 的機率。 這個概率性的狀態稱為疊加。 我們可以使用此機率來產生亂數。
+如[了解量子運算](xref:microsoft.quantum.overview.understanding)一文所述，量子位元是一種可疊加的量子資訊單位。 測量時，量子位元只能是 0 或 1。 不過，當作業正在執行時，量子位的狀態代表以測量值讀取0或1的機率。 這個概率性的狀態稱為疊加。 我們可以使用此機率來產生亂數。
 
 在我們 Q# 的作業中，我們會介紹的 `Qubit` 原生資料類型 Q# 。 我們只能使用 `using` 陳述式來配置 `Qubit`。 當量子位元獲得配置時，一定會處於 `Zero` 狀態。 
 
@@ -74,11 +74,11 @@ ms.locfileid: "88863633"
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
-視專案設定和命令列選項而定，可執行檔將會在模擬器或資源估計工具上執行標記為 `@EntryPoint()` 屬性的作業或函式。
+程式會 `@EntryPoint()` 根據專案設定和命令列選項，執行以模擬器或資源估算器上的屬性標記的作業或函式。
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 
-在 Visual Studio 中，只要按 Ctrl + F5 執行指令碼即可。
+在 Visual Studio 中，只要按 Ctrl + F5 執行腳本即可。
 
 在 VS Code 中，透過在終端機中輸入下列命令，以第一次建立 Program.qs：
 

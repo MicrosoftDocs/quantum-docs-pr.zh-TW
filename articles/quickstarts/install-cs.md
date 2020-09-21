@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 96a1d0d75f3ff7de11407fd76479cbae86ce7571
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863681"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759267"
 ---
 # <a name="develop-with-no-locq-and-net"></a>使用 Q# 和 .NET 進行開發
 
@@ -88,7 +88,7 @@ Q# 的建置目的是為了能夠與如 C# 和 F# 等 .NET 語法充分配合。
 依照上述指示設定好專案後，您便可以從 .NET 主控台應用程式呼叫 Q#。
 Q# 編譯器會針對每個 Q# 作業和函式建立 .NET 類別，讓您能夠在模擬器上執行配量程式。
 
-例如，[.NET 互通性範例](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)包含 Q# 作業的下列範例：
+例如，[.NET 互通性範例](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)包含 Q# 作業的下列範例：
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 

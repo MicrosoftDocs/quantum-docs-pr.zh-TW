@@ -1,19 +1,20 @@
 ---
 title: 量子機器學習程式庫
+description: 瞭解如何在量子系統上使用機器學習服務
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863092"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833798"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>量子 Machine Learning 簡介
 
@@ -74,4 +75,4 @@ ms.locfileid: "88863092"
 
 這種資訊應該足以開始使用程式碼。 但是，如果您想要深入瞭解此模型，請閱讀原始提案：「以 [*電路為中心的量子分類器」、Maria Schuld、Alex Bocharov、Krysta Svore 和 Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
 
-除了您在後續步驟中會看到的程式碼範例，您也可以在[本教學](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification)課程中開始探索量子分類 
+除了您在後續步驟中會看到的程式碼範例，您也可以在[本教學](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/QuantumClassification)課程中開始探索量子分類 

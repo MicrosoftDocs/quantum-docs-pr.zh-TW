@@ -2,19 +2,19 @@
 title: 撰寫和模擬中的量子位層級程式 Q#
 description: 撰寫和模擬在個別量子位層級運作之量副程式的逐步教學課程
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863342"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834953"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>教學課程：在 Q 中撰寫和模擬量子位層級程式\#
 
@@ -32,7 +32,7 @@ ms.locfileid: "88863342"
 <br/>
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 * 使用您慣用的語言和開發環境，[安裝](xref:microsoft.quantum.install)量子開發工具組。
 * 如果您已安裝 QDK，請確定您已[更新](xref:microsoft.quantum.update)為最新版本
@@ -116,7 +116,7 @@ namespace NamespaceQFT {
 接下來，我們會套用組成作業本身的閘道。
 Q# 已包含許多基本量子閘道作為命名空間中的作業 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ，而且這些不是例外狀況。 
 
-在作業中 Q# ，執行 callables 的語句當然會依序執行。
+在作業中 Q# ，叫用 callables 的語句當然會依序執行。
 因此，第一個要套用的閘道是 [`H`](xref:microsoft.quantum.intrinsic.h) 第一個量子位的 (Hadamard) ：
 
 <br/>
@@ -134,7 +134,7 @@ Q# 已包含許多基本量子閘道作為命名空間中的作業 [`Microsoft.Q
 
 #### <a name="controlled-operations"></a>控制的作業
 
-Q# 讓在一或多個控制項量子位上執行作業時非常容易。
+Q# 讓您在一或多個控制項量子位上執行作業時非常容易。
 一般而言，我們只是在呼叫前面加 `Controlled` 上，而作業引數的變更如下：
 
  `Op(<normal args>)` $ \to $ `Controlled Op([<control qubits>], (<normal args>))` 。
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 完成檔案 Q# 和作業之後，就可以呼叫和模擬我們的量副程式。
 
-## <a name="execute-the-program"></a>執行程式
+## <a name="run-the-program"></a>執行程式
 
 在檔案中定義我們的作業之後 Q# `.qs` ，我們現在需要呼叫該作業，並觀察任何傳回的傳統資料。
 目前，沒有任何傳回的 (回想，上述定義的作業會傳回 `Unit`) ，但是當我們稍後修改作業 Q# 以傳回測量結果陣列 (`Result[]`) 時，我們將會解決此情況。
@@ -269,7 +269,7 @@ Q#從命令提示字元執行程式，只需要對檔案進行少許變更 Q# �
 dotnet run
 ```
 
-執行時，您應該會 `Message` `DumpMachine` 在主控台中看到下列輸出和輸出。
+完成時，您應該會 `Message` `DumpMachine` 在主控台中看到下列輸出和輸出。
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,9 +314,9 @@ C # 主機有四個部分：
     此範例中沒有任何內容。
 3. 執行量子演算法。 
     每個作業 Q# 都會產生具有相同名稱的 c # 類別。 
-    此類別具有 `Run` 方法，會以**非同步方式**執行作業。
-    執行是非同步的，因為實際硬體的執行將是非同步的。 
-    因為此 `Run` 方法是非同步，所以我們會呼叫 `Wait()` 方法; 這會封鎖執行，直到工作完成，並以同步方式傳回結果。 
+    此類別的 `Run` 方法會以 **非同步方式**執行作業。
+    執行是非同步，因為在實際的硬體上執行它將會是非同步。 
+    因為此 `Run` 方法是非同步，所以我們會呼叫 `Wait()` 方法; 這會封鎖執行，直到工作完成並以同步方式傳回結果為止。 
 4. 處理傳回的作業結果。
     目前，作業不會傳回任何內容。
 
@@ -499,7 +499,7 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left ( \ket {
 }
 ```
 
-如果您是從命令提示字元工作，傳回的陣列只會在執行結束時直接列印到主控台。
+如果您是從命令提示字元工作，傳回的陣列只會在執行結束時直接顯示在主控台中。
 否則，請更新您的主機程式以處理傳回的陣列。
 
 #### <a name="command-prompt"></a>[命令提示字元](#tab/tabid-cmdline)

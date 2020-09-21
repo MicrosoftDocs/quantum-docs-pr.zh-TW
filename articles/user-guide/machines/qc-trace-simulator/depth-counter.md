@@ -1,35 +1,35 @@
 ---
 title: 深度計數器-量子開發工具組
-description: 深入瞭解 Microsoft QDK depth 計數器，它會使用配量追蹤模擬器來收集程式中所叫用之每項作業的深度計數 Q# 。
+description: 深入瞭解 Microsoft QDK depth 計數器，它會使用量子追蹤模擬器來收集程式中所叫用的每個作業的深度計數 Q# 。
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5c54f6fc479203d30c68c4958329605d4323f9ea
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8280783adfcc2867c3a598a6f57d827125aadcfd
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868316"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833448"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>量子追蹤模擬器：深度計數器
 
-「深度」計數器是「量子開發工具組」[量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的一部分。
-您可以使用它來收集計數，以代表在量副程式中叫用的每個作業深度下限。 
+深度計數器是量子開發工具組 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的一部分。
+您可以使用它來收集計數，以代表在量副程式中叫用之每項作業的深度下限。 
 
 ## <a name="depth-values"></a>深度值
 
-根據預設，所有作業的深度為**0** ，但作業除外 `T` ，其深度為**1**。 這表示根據預設，只 `T` 會計算作業的深度 (這通常是) 的理想做法。 「深度」計數器會匯總並收集作業的[呼叫圖形](https://en.wikipedia.org/wiki/Call_graph)所有邊緣的統計資料。
+依預設，除了作業**0** `T` （深度為**1**）之外，所有作業的深度都是0。 這表示，根據預設，只 `T` 會計算作業的深度 (這通常是) 的理想做法。 深度計數器會匯總並收集作業 [呼叫圖形](https://en.wikipedia.org/wiki/Call_graph)所有邊緣的統計資料。
 
-所有的 <xref:microsoft.quantum.intrinsic> 作業都是以單一 qubit 旋轉、 <xref:microsoft.quantum.intrinsic.t> 作業、單一 qubit Clifford 作業、 <xref:microsoft.quantum.intrinsic.cnot> 作業和多 qubit Pauli 可預見值的測量來表示。 使用者可以透過的欄位，設定每個基本作業的深度 `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 。
+所有 <xref:microsoft.quantum.intrinsic> 作業都是以單一量子位的旋轉、 <xref:microsoft.quantum.intrinsic.t> 作業、單一量子位 Clifford 作業、 <xref:microsoft.quantum.intrinsic.cnot> 作業以及多量子位 Pauli 可預見值的度量來表示。 使用者可以透過的欄位來設定每個基本作業的深度 `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 。
 
 ## <a name="invoking-the-depth-counter"></a>叫用深度計數器
 
-若要使用深度計數器來執行配量追蹤模擬器，您必須建立 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 實例，將其 `UseDepthCounter` 屬性設定為**true**，然後 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 使用 `QCTraceSimulatorConfiguration` 做為參數來建立新的實例。 
+若要使用深度計數器執行量子追蹤模擬器，您必須建立 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 實例、將其屬性設定 `UseDepthCounter` 為 **true**，然後以 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> `QCTraceSimulatorConfiguration` 做為參數來建立新的實例。 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -37,9 +37,9 @@ config.UseDepthCounter = true;
 var sim = new QCTraceSimulator(config);
 ```
 
-## <a name="using-the-depth-counter-in-a-c-host-program"></a>在 c # 主機程式中使用 depth 計數器
+## <a name="using-the-depth-counter-in-a-c-host-program"></a>使用 c # 主機程式中的深度計數器
 
-本節後面的 c # 範例會 `T` `CCNOT` 根據下列範例程式碼，來計算作業的深度 Q# ：
+本節後面的 c # 範例會 `T` `CCNOT` 根據下列範例程式碼來計算作業的深度 Q# ：
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -52,7 +52,7 @@ operation ApplySampleWithCCNOT() : Unit {
 }
 ```
 
-若要檢查 `CCNOT` 是否有 `T` 深度**5**而且 `ApplySampleWithCCNOT` 具有 `T` 深度**6**，請使用下列 c # 程式碼：
+若要檢查 `CCNOT` 是否有 `T` 深度 **5** 並 `ApplySampleWithCCNOT` 有 `T` 深度 **6**，請使用下列 c # 程式碼：
 
 ```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
@@ -66,16 +66,16 @@ double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounte
 double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
-程式的第一個部分會執行 `ApplySampleWithCCNOT` 。 第二個部分使用 [`GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) 方法來抓取 `T` 和的深度 `CCNOT` `ApplySampleWithCCNOT` 。 
+程式的第一個部分會執行 `ApplySampleWithCCNOT` 。 第二個部分會使用 [`GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) 方法來取得 `T` 和的 `CCNOT` 深度 `ApplySampleWithCCNOT` 。 
 
-最後，您可以使用下列各項，以 CSV 格式輸出深度計數器所收集的所有統計資料：
+最後，您可以使用下列程式，以 CSV 格式輸出深度計數器收集的所有統計資料：
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
 ## <a name="see-also"></a>另請參閱
 
-- 量子開發工具組配量[追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的總覽。
+- 量子開發工具組 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 模擬器總覽。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 參考。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API 參考。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.DepthCounter>API 參考。

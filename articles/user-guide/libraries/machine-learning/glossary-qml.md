@@ -1,19 +1,20 @@
 ---
 title: 量子機器學習程式庫詞彙
+description: 量子機器學習服務詞彙的詞彙
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 068fc61d0d7c066df1270384679e13a3b3a8c878
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863035"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833903"
 ---
 # <a name="quantum-machine-learning-glossary"></a>量子 Machine Learning 詞彙
 
@@ -42,7 +43,7 @@ ms.locfileid: "88863035"
 ### <a name="training-epochs-tolerance-gridlocks"></a>訓練 epoch、容錯、gridlocks
 
 「Epoch」表示經過排程定型資料的一次完成。
-每個定型執行緒的 epoch 數目上限 (請參閱下面) 應該有上限。 定型執行緒的定義是使用最佳的已知候選參數來終止 (，) 在已執行 epoch 數目上限時。 不過，當驗證排程的分類誤判率低於選擇的容錯時，這類訓練會稍早終止。 例如，假設分類誤判容錯為 0.01 (1% ) ;如果在2000範例的驗證集上，我們看到的情形少於20個，則表示已達到容錯層級。 如果候選模型的驗證分數尚未在 gridlock) 的數個連續 (epoch 中顯示任何改進，則定型執行緒也會提前終止。 Gridlock 終止的邏輯目前已硬式編碼。
+每個定型執行緒的 epoch 數目上限 (請參閱下面) 應該有上限。 定型執行緒的定義是使用最佳的已知候選參數來終止 (，) 在 epoch 數目上限已執行時。 不過，當驗證排程的分類誤判率低於選擇的容錯時，這類訓練會稍早終止。 例如，假設分類誤判容錯為 0.01 (1% ) ;如果在2000範例的驗證集上，我們看到的情形少於20個，則表示已達到容錯層級。 如果候選模型的驗證分數尚未在 gridlock) 的數個連續 (epoch 中顯示任何改進，則定型執行緒也會提前終止。 Gridlock 終止的邏輯目前已硬式編碼。
 
 ### <a name="measurements-count"></a>度量計數
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b06eba9cadce84aca6f87e4451026ca2ffc794f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d7a8dff8d491a9ce6451148d2d27121f1c190ed0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867636"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759317"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>量子計算的線性代數
 
@@ -22,8 +22,8 @@ ms.locfileid: "87867636"
 
 熟悉[量子物理的基本概念](xref:microsoft.quantum.overview.understanding)可以協助您了解量子運算，同樣地，了解一些基本的線性代數也可以協助您了解量子演算法的運作方式。 至少請熟悉**向量**和**矩陣乘法**。 如果您需要複習這些代數概念知識，以下是一些涵蓋基本知識的教學課程：
 
-- [關於線性代數的 Jupyter 筆記本教學課程](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
-- [關於複數運算的 Jupyter 筆記本教學課程](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+- [關於線性代數的 Jupyter 筆記本教學課程](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
+- [關於複數運算的 Jupyter 筆記本教學課程](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
 - [量子運算的線性代數](https://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf)
 - [線性代數的基本概念](https://www.math.ubc.ca/~carrell/NB.pdf)
 - [量子運算入門](https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition)

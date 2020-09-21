@@ -1,6 +1,6 @@
 ---
 標題： Pauli 度量描述：瞭解如何使用單一和多重量子位的 Pauli 度量運算。
-作者： QuantumWriter uid： pauli ms. 作者： nawiebe@microsoft.com ms. 日期： 12/11/2017 ms。主題：非 loc 文章：
+作者： bradben uid： pauli ms. 作者： v-benbra ms. date： 12/11/2017 ms. 主題：非 loc 文章：
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ $$
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -168,7 +168,7 @@ $$
 因此，兩個 Pauli z 運算子的 tensor 產品 $ $ 形成由兩個空格組成的矩陣 $ ，由 + 1 $ 和 $ -1 $ 特徵值組成。
 就像單一量子位案例一樣，兩者都構成一半的空間，這表示一半的可存取向量空間屬於 $ + 1 $ eigenspace，而剩餘一半到 $ -1 $ eigenspace。
 一般來說，從 tensor 產品的定義中，任何 Pauli-Z 運算子的 tensor 產品 $ $ 和身分識別也會遵守這一點，都很容易看出。
-例如，
+例如，套用至物件的
 
 $$
 \begin{align}
@@ -223,14 +223,14 @@ $Z z 的特徵值 \otimes $ 只取決於構成每個計算基礎向量之量子�
 原因是測量 $ Z z 會 \otimes $ 將量子狀態投射到 $ 這些運算子的 + 1 $ 或 $ -1 $ eigenstate 中。
 測量 $ z \otimes \mathbb { 1 } $ ，然後 $ \mathbb { } \otimes 按 1 z， $ 將量子狀態向量先投射到 Z 1 的一半空間 $ \otimes \mathbb { } $ ，然後再到 $ \mathbb { 1 } \otimes z $ 的半個空格。由於有四個計算基礎向量，執行這兩個測量可將狀態減少到四分之一空間，因此會將其縮減為單一計算基礎向量。
 
-## <a name="correlations-between-qubits"></a>量子位間的相互關聯
+## <a name="correlations-between-qubits"></a>量子位元之間的關聯性
 另一種查看 Pauli 矩陣（例如 $ x x 或 z z） tensor 產品的方式 \otimes $ $ \otimes $ ，就是這些測量資料可讓您查看儲存在兩個量子位之間相互關聯的資訊。
 測量 $ X \otimes \id $ 可讓您查看在第一個量子位中儲存在本機的資訊。
 雖然這兩種類型的度量在量子運算中同樣有價值，但前者也會導致量子運算的威力。
 它會顯示在量子運算中，您想要學習的資訊通常不會儲存在任何單一量子位中，而是會一次儲存在所有量子位中，因此只會透過聯合 (度量來查看它（例如 $ Z \otimes z $) 會將這項資訊變成資訊清單）。
 
 例如，在錯誤修正中，我們通常會想要瞭解在學習到我們想要保護的狀態時，發生了什麼錯誤。
-[位在程式碼範例](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)中的範例示範如何使用 $ Z \otimes z \otimes \id $ 和 $ \id \otimes z \otimes z $ < 等度量來進行。--TODO：當位翻轉程式碼範例在上線上時，請將此變更為範例瀏覽器的連結。 -->
+[位在程式碼範例](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code)中的範例示範如何使用 $ Z \otimes z \otimes \id $ 和 $ \id \otimes z \otimes z $ < 等度量來進行。--TODO：當位翻轉程式碼範例在上線上時，請將此變更為範例瀏覽器的連結。 -->
 
 您也可以測量任意 Pauli 運算子（例如 $ X \otimes Y \otimes Z \otimes \boldone $ ）。
 Pauli 運算子的所有這類 tensor 產品只有兩個特徵值 $ \pm 1 $ ，而 eigenspaces 則構成整個向量空間的一半空格。

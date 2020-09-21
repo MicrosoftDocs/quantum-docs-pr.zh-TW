@@ -2,19 +2,19 @@
 title: 在量子開發工具組中執行格羅弗的搜尋演算法 Q#
 description: 建立一個 Q# 專案，以示範格羅弗的演算法，也就是其中一個標準量子演算法。
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 86c6a651a117b788eb4c8fdd805ead7ab8f54dd7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863112"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834800"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>教學課程：以 Q\# 執行格羅弗搜尋演算法
 
@@ -26,7 +26,7 @@ ms.locfileid: "88863112"
 
 只要幾行程式碼，您就可以建置格羅弗搜尋演算法。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - Microsoft [Quantum Development Kit][install]。
 
@@ -58,9 +58,9 @@ ms.locfileid: "88863112"
 
 ### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# Visual Studio 或 Visual Studio Code 的應用程式
 
-視專案設定和命令列選項而定，可執行檔將會在模擬器或資源估計工具上執行標記為 `@EntryPoint()` 屬性的作業或函式。
+程式會 `@EntryPoint()` 根據專案設定和命令列選項，執行以模擬器或資源估算器上的屬性標記的作業或函式。
 
-在 Visual Studio 中，只要按 Ctrl + F5 執行指令碼即可。
+在 Visual Studio 中，只要按 Ctrl + F5 執行腳本即可。
 
 在 VS Code 中，透過在終端機中輸入下列命令，以第一次建立 `Program.qs`：
 
@@ -89,7 +89,7 @@ operations.qs [options] [command]
 Commands:
 ```
 
-這是因為您未指定想要使用的 qubits 數目，所以終端機會告訴您可執行檔的命令。 如果我們想要使用 5 個 qubits，則我們應該輸入：
+這是因為您未指定想要使用的量子位數目，所以終端機會顯示可執行程式的可用命令。 如果我們想要使用5量子位，請輸入：
 
 ```Command line
 dotnet run --n-qubits 5
@@ -110,7 +110,7 @@ Reflecting about marked state...
 如果您喜歡本教學課程，請參閱下列資源以深入瞭解如何使用 Q# 來撰寫您自己的量子應用程式：
 
 - [回到 QDK 使用者入門指南](xref:microsoft.quantum.welcome)
-- 試用較一般的格羅弗搜尋演算法[範例](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)
+- 試用較一般的格羅弗搜尋演算法[範例](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search)
 - [深入瞭解格羅弗搜尋與 Quantum Katas](xref:microsoft.quantum.overview.katas)
 - 深入瞭解[振幅放大][amplitude-amplification]，格羅弗搜尋演算法背後的量子運算技術
 - [量子運算概念](xref:microsoft.quantum.concepts.intro)

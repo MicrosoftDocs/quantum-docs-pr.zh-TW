@@ -1,6 +1,6 @@
 ---
 title: 參與 Microsoft QDK 的檔
-description: 瞭解如何將概念或 API 內容提供給 Microsoft 量子檔集。
+description: 瞭解如何將概念或 API 內容投稿至 Microsoft 量子檔集。
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
@@ -9,65 +9,65 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866871"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759674"
 ---
 # <a name="improving-documentation"></a>改善文件
 
-量子開發工具組的檔會採用數種不同的形式，讓量子開發人員可以立即使用該資訊。
+量子開發工具組的檔採用數種不同的形式，因此量子開發人員可立即取得資訊。
 
-遵循檔的原則[做為程式碼](https://www.writethedocs.org/guide/docs-as-code/)，所有的配量開發工具組檔都會格式化為程式碼，並使用 Git 進行管理，其方式與用來建立量子開發工具組的原始程式碼相同。
-在大部分的情況下，程式碼支援檔是由各種形式的[Markdown](https://daringfireball.net/projects/markdown/)所組成，這是一種語言，用來以純文字格式寫出豐富格式的文字，可在命令列、ide 和原始檔控制中輕鬆使用。
-我們同樣採用[MathJax](https://www.mathjax.org/)程式庫，以允許在檔中使用 LaTeX 語言來格式化數學法，如下所詳述。
+遵循檔的原則即程式 [代碼](https://www.writethedocs.org/guide/docs-as-code/)，所有量子開發工具組檔都會格式化為程式碼，並使用 Git 來管理，方法與用來建立量子開發工具組的原始程式碼相同。
+在大部分的情況下，程式碼支援檔是由各種形式的 [Markdown](https://daringfireball.net/projects/markdown/)所組成，這是一種以純文字格式寫出豐富格式文本的語言，在命令列、ide 和原始檔控制中都很容易使用。
+同樣地，我們也採用 [MathJax](https://www.mathjax.org/) 程式庫，以便在檔中使用 LaTeX 語言來格式化數學，如下所述。
 
 
-話雖如此，每一種形式的檔都有不同的細節：
+話雖如此，每一種形式的檔都有不同的詳細資料：
 
-- **概念檔**包含發行至的一系列文章 https://docs.microsoft.com/quantum ，並說明從量子計算的基本概念到交換格式的技術規格等所有事項。 這些文章是以[DocFX-Flavored Markdown (DFM) ](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)所撰寫，這是用來建立豐富檔集的 Markdown 變體。
-- **API 參考**是每個函 Q# 式、作業和使用者定義類型的一組頁面，已發行至 https://docs.microsoft.com/qsharp/api/ 。 這些頁面會記錄每個可呼叫的輸入和作業，以及範例和詳細資訊的連結。 API 參考會在每次發行時，從原始程式碼中的小型 DFM 檔自動解壓縮 Q# 。
-- 每個範例和 kata 中包含的**readme.txt <!----> **檔案，會說明如何使用該範例或 kata、其涵蓋的內容，以及它與其他的量子開發工具組的關係。 這些檔案是使用[GitHub Flavored Markdown (GFM) ](https://github.github.com/gfm/)，這是更輕輕鬆的 DFM 替代方案，可將檔直接附加至程式碼存放庫。
+- **概念檔**是由一組發行至的發行項所組成 https://docs.microsoft.com/quantum ，而且會從量子運算的基本概念，到交換格式的技術規格中說明所有專案。 這些文章是以 [DocFX-Flavored Markdown (DFM) ](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)，這是用來建立豐富檔集的 Markdown 變異。
+- **API 參考**是針對每個函 Q# 式、作業和使用者定義型別發行的一組頁面 https://docs.microsoft.com/qsharp/api/ 。 這些頁面會記錄每個可呼叫的輸入和作業，以及範例和詳細資訊的連結。 API 參考會自動從原始程式碼中的小型 DFM 檔中解壓縮， Q# 作為每個版本的一部分。
+- 每個範例和 kata 中隨附的 Readme.txt 檔案會說明如何使用該範例或 kata、其涵蓋的內容，以及與量子開發工具組的其餘部分之間的關聯性** <!----> 。** 這些檔案是使用 [GitHub Flavored Markdown (GFM) ](https://github.github.com/gfm/)所撰寫，這是 DFM 的較輕量替代方案，可直接將檔附加至程式碼存放庫。
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>參與概念檔
 
-為了提供概念或讀我檔案的改進，在適當的情況下，您可以根據[**MicrosoftDocs/量子-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr/
-)、 [**microsoft/量子**](https://github.com/Microsoft/Quantum)或[**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas)，以提取要求開始。
-我們將在下方說明提取要求的詳細資訊，但現在有幾件事可以在改善檔時記住：
+為了提供概念或讀我檔案的改進，在適當的情況下，會從提取要求開始至 [**MicrosoftDocs/量子檔-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr/
+)、 [**microsoft/量子**](https://github.com/Microsoft/Quantum)或 [**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas)。
+我們將在下面說明更多有關提取要求的資訊，但現在有幾件事在您改善檔時要牢記在心：
 
-- 讀者會從非常廣泛的背景，進入「量子開發工具組」檔。 來自高中學生的每個人，想要學習新功能和令人興奮的任職教職員執行量子運算研究時，應該能夠取得閱讀檔的相關內容。 在可能的範圍內，請不要對讀者的部分取得豐富的知識，因為它們可能只是從開始。如果您可以提供清楚且可存取的描述，或者可以提供其他資源的連結以取得詳細資訊，它最有説明。
-- 檔集並不像書籍或論文一樣，而讀者會收到「中間」這類的內容。 例如，搜尋引擎可能不會建議索引，也可能是由朋友傳送連結來嘗試協助他們。請一律提供清楚的內容，以及適當的連結，以協助您的讀者。
-- 有些讀者會發現抽象的語句和定義最有説明，而其他讀取器則是從具體範例中推斷的最佳做法。 同時提供一般案例和特定範例，可協助這兩個讀取器充分利用量副程式設計。
-- 特別是當您也寫了記載的程式碼時，您可能會很明顯地得知您的讀者並不清楚。 沒有一種獨特的程式設計方法，因此無論讀者有多麼聰明或有經驗，他們都無法猜出您在程式碼中最有説明的設計模式。 清楚瞭解讀取器可以如何利用您的程式碼來協助提供該內容。
-- 「量副程式設計」小組的許多成員都是學術研究人員，主要是透過對其投稿貢獻的引文來辨識。 除了協助讀者尋找額外的資料之外，也請務必適當地提及學術的輸出（例如論文、交談、blog 文章和軟體工具），以協助學術參與者繼續進行最佳的工作來改善社區。
-- 「量副程式設計」小組是廣泛而 wonderfully 的多樣化團體。 使用協力廠商範例中的名詞代名詞 (例如：「如果使用者 ...，他將 ...」 ) 可以進行排除而不是包含。 在引文和連結中 cognizant 人員名稱，以及正確包含非 ASCII 字元，可以藉由顯示其成員來提供社區的多樣性。 同樣地，英文語言中的許多單字通常會以 hateful 的方式使用，因此在技術檔中使用時，可能會對個別讀者和大型團體造成損害。
+- 讀者從非常廣泛的背景進入量子開發工具組檔。 來自高中學生的每個人都想要學習任職的教職員，執行量子運算的教職員應該能夠從閱讀檔中取得一些東西。 在可能的範圍內，請不要對讀者的部分進行廣泛的知識，因為它們可能只是開始。如果您可以提供清楚且可存取的說明，也可以提供其他資源的連結，以取得詳細資訊。
+- 檔集並不像書籍或論文一樣，讀者可能會在看起來像「中間」。 例如，搜尋引擎可能不會建議索引，或可能已傳送給 friend 的連結嘗試協助他們完成。請在適當的情況下，一律提供明確的內容以及適當的連結，以協助您的讀者。
+- 某些讀者會尋找最有用的抽象語句和定義，而其他讀取器則是從具體範例中推斷來獲得最佳效果。 提供一般案例和特定範例，可協助這兩個讀者充分利用量副程式設計。
+- 尤其是，如果您也撰寫了所記載的程式碼，您可能會很明顯地對讀者來說不太明顯。 沒有一個獨特的程式設計方法，所以無論讀者有多麼聰明或經驗，都不能猜到哪些設計模式最有助於您在程式碼中表達您的想法。 清楚瞭解讀者如何預期使用您的程式碼，可協助提供該內容。
+- 量副程式設計團體的許多成員都是學術研究人員，主要是透過對社區投稿發表的引文來辨識。 除了協助讀者找出其他的材質之外，請務必適當地找出像是論文、演講、blog 文章和軟體工具等學術輸出，以協助學術的投稿人員繼續進行最佳的工作，以改善社區。
+- 量副程式設計團體是廣泛且 wonderfully 的多樣化團體。 在協力廠商範例中使用名詞代名詞 (例如：「如果使用者 ...」，他將會 ) ，而不是包含。 在引文和連結中 cognizant 人員的姓名，以及包含非 ASCII 字元的正確包含，可以藉由顯示其成員的方式來提供該社區的多樣性。 同樣地，英文語言中的許多單字通常會以惡意的方式使用，因此在技術檔中使用時，可能會對個別讀者和大型團體造成損害。
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>參考概念文章中的範例程式碼
 
-如果您想要包含[範例存放庫](https://github.com/Microsoft/Quantum)中的程式碼，您可以使用特殊的 DocFX-Flavored Markdown 命令來執行此動作：
+如果您想要包含 [範例存放庫](https://github.com/Microsoft/Quantum)中的程式碼，您可以使用特殊的 DocFX-Flavored Markdown 命令：
 
 ```markdown
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-此命令會[ `Game.qs` 從 `chsh-game` 範例](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)匯入行4到8的檔案，並將它們標示為 Q# 程式碼以進行語法反白顯示。
-使用此命令，您可以避免在概念文章和範例存放庫之間複製程式碼，讓檔中的範例程式碼一律盡可能保持最新狀態。
+此命令會[ `Game.qs` 從 `chsh-game` 範例](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)匯入檔案中的第4行到第8行，將它們標示為 Q# 程式碼以進行語法醒目提示。
+使用這個命令，您可以避免在概念文章和範例存放庫之間複製程式碼，讓檔中的範例程式碼一律盡可能保持最新狀態。
 
 ## <a name="contributing-to-the-api-references"></a>參與 API 參考
 
-若要改善 API 參考的效果，在記載的程式碼上直接開啟提取要求最有説明。
-每個函式、作業或使用者定義類型都支援以 `///` 而不是) 表示的檔批註 (`//` 。
-當我們編譯每個版本的「配量」開發工具組時，會使用這些批註來產生的 API 參考， https://docs.microsoft.com/qsharp/api/ 包括每個可呼叫之輸入和輸出的詳細資料，以及每個可呼叫的假設，以及如何使用它們的範例。
+若要提升 API 參考的改進，請直接在所記載的程式碼上開啟提取要求是很有説明的。
+每個函式、作業或使用者定義型別都支援以 (表示的檔批註， `///` 而不是 `//`) 。
+當我們編譯量子開發工具組的每個版本時，會使用這些批註來產生 API 參考， https://docs.microsoft.com/qsharp/api/ 包括每個可呼叫之輸入和輸出的詳細資訊、每個可呼叫的假設，以及如何使用它們的範例。
 
 > [!IMPORTANT]
 > 請務必不要手動編輯產生的 API 檔，因為每個新版本都會覆寫這些檔案。
-> 我們將您對您的貢獻做為價值，並想要確保您的變更在發行後仍持續協助使用者發行。
+> 我們將您對您的投稿貢獻價值，並想要確保您的變更會繼續協助使用者在發行後發行。
 
 例如，請考慮函數 `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)` 。
-檔批註應該可以協助使用者瞭解如何解讀 `bits` 和功能的 `oracle` 用途。
-您可以透過 Q# 檔批註中特別命名的 Markdown 區段，將這些不同的資訊片段提供給編譯器。
+檔批註應能協助使用者瞭解如何解讀和函式的 `bits` `oracle` 用途。
+您可以透過 Q# 檔批註中的特殊命名 Markdown 區段，將這些不同的資訊片段提供給編譯器。
 在的範例 `ControlledOnBitString` 中，我們可能會撰寫如下所示的內容：
 
 ```qsharp
@@ -138,13 +138,13 @@ ms.locfileid: "87866871"
  }
 ```
 
-您可以在函式的 API 檔中查看上述程式碼的呈現版本。 [ `ControlledOnBitString` ](xref:microsoft.quantum.canon.controlledonbitstring)
+您可以在函式的 API 檔中查看上述程式碼的轉譯版本。 [ `ControlledOnBitString` ](xref:microsoft.quantum.canon.controlledonbitstring)
 
-除了撰寫檔的一般作法外，在撰寫 API 檔批註時，您可以記住一些事項：
+除了撰寫檔的一般作法，撰寫 API 檔批註也有助於牢記一些事項：
 
-- 每個檔批註的格式必須符合 Q# 編譯器所預期的內容，您的檔才會正確顯示。 某些區段（例如 `/// # Remarks` 允許自由格式內容），而區段之類的區段 `/// # See Also` 則較為嚴格。
-- 讀者可以在主要 API 參考網站上、每個命名空間的摘要，或甚至是透過使用暫留資訊，從其 IDE 中讀取您的 API 檔。 請確定 `/// # Summary` 不超過句子的長度可協助您的讀者快速地排序它們是否需要進一步閱讀或查看其他位置，並可協助快速透過命名空間摘要進行掃描。
-- 您的檔可能會比程式碼本身更長，但也沒關係！ 即使是一小段程式碼，對不知道該程式碼所在內容的使用者，也可能會產生非預期的影響。 藉由提供具體的範例和清楚的說明，您可以協助使用者充分利用其所提供的程式碼。
+- 每個檔批註的格式都必須符合 Q# 編譯器預期的檔顯示正確的內容。 某些區段（例如 `/// # Remarks` 允許自由格式的內容），而區段（例如 `/// # See Also` 區段）的限制較嚴格。
+- 讀者可以在主要 API 參考網站、每個命名空間的摘要，或甚至是透過使用暫止資訊的 IDE 中讀取您的 API 檔。 確定 `/// # Summary` 不超過句子的長度，可協助您的讀者快速地排序他們是否需要進一步閱讀或查看其他位置，並可協助快速掃描命名空間摘要。
+- 您的檔可能會比程式碼本身更長的時間，但沒關係！ 即使是一小段程式碼，對不知道該程式碼所在內容的使用者也可能會產生非預期的影響。 藉由提供具體範例和明確的說明，您可以協助使用者充分利用其可用的程式碼。
 
 <!-- ## LaTeX Formatting ##
 

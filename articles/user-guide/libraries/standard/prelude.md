@@ -2,19 +2,19 @@
 title: QDK 中的內建作業和函數
 description: 瞭解 QDK 中的內建作業和函式，包括傳統函數和單一、旋轉和測量作業。
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: dd507d0c644ae711a5e5a1dff9156f571cb0fa92
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863733"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833554"
 ---
 # <a name="the-prelude"></a>序言 #
 
@@ -240,7 +240,7 @@ return rs;
 
 ### <a name="math"></a>數學 ###
 
-<xref:microsoft.quantum.math>命名空間提供來自 .net 基類庫[ `System.Math` 類別](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)的許多實用功能。
+<xref:microsoft.quantum.math>命名空間提供來自 .net 基類庫[ `System.Math` 類別](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)的許多實用功能。
 這些函數的使用方式與任何其他函式相同 Q# ：
 
 ```qsharp

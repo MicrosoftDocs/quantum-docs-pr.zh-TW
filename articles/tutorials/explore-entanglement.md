@@ -2,19 +2,19 @@
 title: 探索纏結 Q#
 description: 瞭解如何在中撰寫量副程式 Q# 。 使用 Quantum Development Kit (QDK) 開發貝爾狀態應用程式
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
-ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
+ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90063235"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834018"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>教學課程：使用 Q\# 探索糾纏
 
@@ -104,7 +104,7 @@ Bell 這個名稱取自「貝爾狀態」，是指兩個量子位元的特定狀
 現在已經可以呼叫這項作業來將量子位元設定為古典狀態，亦即 100% 的時間會傳回 `Zero` 或 100% 的時間會傳回 `One`。
 `Zero` 和 `One` 是常數，代表測量量子位元的唯二兩個可能結果。
 
-`SetQubitState` 作業會測量量子位元。 如果量子位元是我們想要的狀態 `SetQubitState`，就不動它；反之，則執行 `X` 作業，將量子位元的狀態變更為想要的狀態。
+`SetQubitState` 作業會測量量子位元。 如果量子位是我們想要的狀態，請將 `SetQubitState` 它單獨保留; 否則，藉由執行此作業 `X` ，我們會將量子位狀態變更為所需的狀態。
 
 #### <a name="about-no-locq-operations"></a>關於 Q# 作業
 
@@ -300,7 +300,7 @@ Test results (# of 0s, # of 1s):
 ## <a name="prepare-entanglement"></a>準備糾纏
 
 現在讓我們看看如何 Q# 表達纏量子位的方式。
-首先，我們將第一個量子位元設定為初始狀態，然後使用 `H` 作業將它置於疊加狀態。  然後，在測量第一個量子位之前，我們會使用 () 的新作業 `CNOT` ，這代表受控制-非。  對兩個量子位元執行這項作業的結果是：如果第一個量子位元是 `One` 就會翻轉第二個量子位元。  現在，這兩個量子位元相互纏結。  第一個量子位元的統計資料並未變更 (測量後 `Zero` 或 `One` 的機率各半)，但現在當我們測量第二個量子位元時，其量值「一律」會與第一個量子位元的相同。 我們的 `CNOT` 讓這兩個量子位元相互糾纏，因此其中一個量子位元發生的情況，也會出現在另一個量子位元上。 如果您反轉測量 (先執行第二個量子位元，再執行第一個)，也會發生相同的情況。 第一個測量是隨機的，第二個測量則會根據第一個測量所發現的結果，以鎖定步驟執行。
+首先，我們將第一個量子位元設定為初始狀態，然後使用 `H` 作業將它置於疊加狀態。  然後，在測量第一個量子位之前，我們會使用 () 的新作業 `CNOT` ，這代表 *受控制-非*。  在兩個量子位上執行這項作業的結果是，如果第一個量子位是，則會翻轉第二個量子位 `One` 。  現在，這兩個量子位元相互纏結。  第一個量子位元的統計資料並未變更 (測量後 `Zero` 或 `One` 的機率各半)，但現在當我們測量第二個量子位元時，其量值「一律」會與第一個量子位元的相同。 我們的 `CNOT` 讓這兩個量子位元相互糾纏，因此其中一個量子位元發生的情況，也會出現在另一個量子位元上。 如果您反轉測量 (先執行第二個量子位元，再執行第一個)，也會發生相同的情況。 第一個測量是隨機的，第二個測量則會根據第一個測量所發現的結果，以鎖定步驟執行。
 
 我們必須做的第一件事是配置兩個量子位，而不是一個 `TestBellState` ：
 

@@ -2,19 +2,19 @@
 title: Quantum 開發套件版本資訊
 description: 深入了解 Microsoft Quantum Development Kit 預覽版的最新更新。
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992253"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834137"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -48,7 +48,7 @@ ms.locfileid: "88992253"
 
 此版本包含下列項目：
 
-- 在筆記本中開啟的命名空間 Q# 現在適用于未來所有的儲存格執行。 例如，您可以在筆記本頂端的資料格中開啟一次命名空間，而不需要在每個程式碼資料格中開啟相關的命名空間。 新的 `%lsopen` 魔術命令會顯示目前開啟的命名空間清單。
+- 在筆記本中開啟的命名空間 Q# 現在適用于未來所有的資料格計算。 例如，您可以在筆記本頂端的資料格中開啟一次命名空間，而不需要在每個程式碼資料格中開啟相關的命名空間。 新的 `%lsopen` 魔術命令會顯示目前開啟的命名空間清單。
 
 請參閱連結[庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[運行](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)時間、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed)和[Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)的封閉式 pr 完整清單。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "88992253"
 - 移動的作業：
   - `Microsoft.Quantum.Intrinsic.Assert` 現在為 `Microsoft.Quantum.Diagnostics.AssertMeasurement`
   - `Microsoft.Quantum.Intrinsic.AssertProb` 現在為 `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
-- Bug 修正 
+- 錯誤修正 
 
 請參閱連結[庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[運行](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)時間、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed)和[Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)的封閉式 pr 完整清單。  
 
@@ -132,7 +132,7 @@ ms.locfileid: "88992253"
 
 此版本包含下列項目：
 
-- 新的量子機器學習程式庫。如需詳細資訊，請移至我們的 [QML 文件頁面](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview)
+- 新的量子機器學習程式庫。如需詳細資訊，請移至我們的 [QML 文件頁面](xref:microsoft.quantum.machine-learning.concepts.intro)
 - 我的 Q# bug 修正，在載入 NuGet 套件時，最多可提升 10 20 倍的效能
 
 請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)和 [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
@@ -144,7 +144,7 @@ ms.locfileid: "88992253"
 此版本包含下列項目：
 
 - 新的 Microsoft.Quantum.SDK NuGet 套件，將在建立新專案時取代 Microsoft.Quantum.Development.Kit NuGet 套件。 現有專案將會繼續支援 Microsoft.Quantum.Development.Kit NuGet 套件。 
-- 支援 Q# 編譯器擴充功能（由新的套件 NuGet 提供）。如需詳細資訊，請參閱[Github 上的檔](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler)、[編譯器延伸模組範例](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions)和[ Q# 開發人員 Blog](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)
+- 支援 Q# 編譯器擴充功能（由新的套件 NuGet 提供）。如需詳細資訊，請參閱[Github 上的檔](https://github.com/microsoft/qsharp-compiler/tree/main/src/QuantumSdk#extending-the-q-compiler)、[編譯器延伸模組範例](https://github.com/microsoft/qsharp-compiler/tree/main/examples/CompilerExtensions)和[ Q# 開發人員 Blog](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)
 - 新增 .NET Core 3.1 支援，強烈建議您安裝 3.1.100 版，因為使用舊版 .NET Core SDK 版本可能會造成問題
 - 在 Microsoft.Quantum.QsCompiler.Experimental 下提供新的編譯器轉換
 - 以 HTML 格式公開輸出狀態向量的新功能Q#
@@ -182,7 +182,7 @@ ms.locfileid: "88992253"
 
 此版本包含下列項目：
 
-- 更新 Visual Studio Code 和 Visual Studio 擴充功能，將語言伺服器部署為獨立式可執行檔，以排除 .NET Core SDK 版本相依性  
+- Visual Studio Code & Visual Studio 擴充功能的更新，可將語言伺服器部署為獨立的可執行檔，以消除 .NET Core SDK 版本相依性  
 - 移轉到 .NET Core 3.0
 - 重大更新 - Microsoft.Quantum.Simulation.Core.IOperationFactory 引進新的 `Fail` 方法 此方法只會影響未擴充 SimulatorBase 的自訂模擬器。 如需詳細資料，請[檢閱 GitHub 中的提取要求](https://github.com/microsoft/qsharp-runtime/pull/59)。
 - 受取代屬性的新增支援
@@ -224,7 +224,7 @@ ms.locfileid: "88992253"
 此版本包含下列項目：
 
 - 切割陣列的新索引位置；請[參閱語言參考](xref:microsoft.quantum.guide.expressions#array-slices)以取得詳細資訊。
-- 已新增 [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)上裝載的 Dockerfile，如需詳細資訊，請參閱 [I 存放 Q# 庫。](https://github.com/microsoft/iqsharp/blob/master/README.md)
+- 已新增 [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)上裝載的 Dockerfile，如需詳細資訊，請參閱 [I 存放 Q# 庫。](https://github.com/microsoft/iqsharp/blob/main/README.md)
 - [追蹤模擬器](xref:microsoft.quantum.machines.qc-trace-simulator.intro)的重大變更、組態設定的更新、名稱變更；請參閱 [.NET API 瀏覽器以了解更新的名稱](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration)。
 
 請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)和[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)完整的已關閉 PR 清單。  
@@ -252,14 +252,14 @@ ms.locfileid: "88992253"
 
 ### <a name="library"></a>程式庫 
 
-此版本新增了數值程式庫：請深入了解如何[使用新的數值程式庫](xref:microsoft.quantum.numerics.usage)，並試用[新範例](https://github.com/microsoft/quantum/tree/master/Numerics)。  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102)。  
+此版本新增了數值程式庫：請深入了解如何[使用新的數值程式庫](xref:microsoft.quantum.numerics.usage)，並試用[新範例](https://github.com/microsoft/quantum/tree/main/Numerics)。  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102)。  
 
 此版本重組、擴充並更新了化學程式庫：
 * 改善元件的模組化、擴充性、一般程式碼清除功能。  [PR #58](https://github.com/microsoft/QuantumLibraries/pull/58)。
 * 新增[多重參考波函數](xref:microsoft.quantum.chemistry.concepts.multireference)的支援，包括疏鬆多重參考波函數和單一結合叢集。  [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110)。
 * (謝謝！)[1QBit](https://1qbit.com) 參與者 ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit))：使用變分 ansatz 的能量評估。 [PR #120](https://github.com/Microsoft/QuantumLibraries/pull/120)。
 * 將 [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 結構描述更新為新的 [0.2 版](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2)，並新增單一結合叢集規格。 [問題 #65](https://github.com/microsoft/QuantumLibraries/issues/65)。
-* 將 Python 互通性新增至化學程式庫函式。 試著使用此[範例](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration)。 [問題 #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110)。
+* 將 Python 互通性新增至化學程式庫函式。 試著使用此[範例](https://github.com/microsoft/Quantum/tree/main/Chemistry/PythonIntegration)。 [問題 #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110)。
 
 ## <a name="version-061905"></a>0\.6.1905 版
 
@@ -349,7 +349,7 @@ ms.locfileid: "88992253"
 
 - 新增 Jupyter Notebook 的支援，提供絕佳的學習方式 Q# 。  請[查看新的 Jupyter Notebook 範例，並了解如何撰寫您自己的 Notebook](xref:microsoft.quantum.install)。 
 
-- 將整數 adder 演算法新增至 Quantum Canon 程式庫。  另請參閱[說明如何使用新的整數 adder](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb) 的 Jupyter Notebook。
+- 將整數 adder 演算法新增至 Quantum Canon 程式庫。  另請參閱[說明如何使用新的整數 adder](https://github.com/microsoft/Quantum/blob/main/samples/arithmetic/AdderExample.ipynb) 的 Jupyter Notebook。
 
 - 社群回報的 DumpRegister 問題 ([#148](https://github.com/Microsoft/Quantum/issues/148)) 的 Bug 修正。
 
@@ -635,7 +635,7 @@ dotnet clean
 
 #### <a name="testing"></a>測試
 
-- 測試必須在 64 位元模式中執行。 如果您的測試失敗並出現 BadImageFormatException，請移至 [測試] 功能表，然後選取 [測試設定] > [預設處理器架構] > [X64]。
+- 測試必須在64位模式下執行。 如果您的測試失敗並出現 BadImageFormatException，請移至 [測試] 功能表，然後選取 [測試設定] > [預設處理器架構] > [X64]。
 - 有些測試的執行會非常耗時 (最多可能需要 5 分鐘，視您的電腦而定)。 這是正常的，因為有些測試會使用超過 20 個量子位元；我們最大的測試目前以 23 個量子位元執行。
 
 #### <a name="samples"></a>範例
