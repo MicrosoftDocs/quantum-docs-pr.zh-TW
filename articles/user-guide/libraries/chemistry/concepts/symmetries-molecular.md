@@ -1,30 +1,30 @@
 ---
-title: 分子積分的 Symmetries
+title: 分子積分 Symmetries
 description: 瞭解如何使用 Q# OrbitalIntegral 類型來列舉分子 symmetries。
-author: nathanwiebe2
-ms.author: nawiebe
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1f71c0ac8e2cd2781c0bc7b23d6c9222f3b9d18a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 9ebb8e9bda06967d3cfa002a7d074933d9135ada
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869438"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833816"
 ---
-# <a name="symmetries-of-molecular-integrals"></a>分子積分的 Symmetries
+# <a name="symmetries-of-molecular-integrals"></a>分子積分 Symmetries
 
-Coulomb Hamiltonian 的固有對稱性，這是[電子系統的配量模型](xref:microsoft.quantum.chemistry.concepts.quantummodels)中所提供的 Hamiltonian，其中描述 electrons 與彼此互動和 nuclei，並會導致一些 symmetries，以在 Hamiltonian 中壓縮詞彙。
-在一般情況下，如果不會對基礎函數 $ \ psi_j $ 進行進一步的假設，我們只會將 \begin{equation} h_ {pqrs} = h_ {qpsr}，\tag{★} \label{eq： hpqrs} \end{equation}，這可以在[電子系統的量子模型](xref:microsoft.quantum.chemistry.concepts.quantummodels)中立即看到，如果 $p、q $ 和 $r，s $ 是從反 commutation 互換，則其值會保持相同。
+Coulomb Hamiltonian 的固有對稱（即 [電子系統的量子模型](xref:microsoft.quantum.chemistry.concepts.quantummodels)中所提供的 Hamiltonian），其說明電子與彼此互動和 nuclei 的互動，會導致許多可能被利用的 symmetries 來壓縮 Hamiltonian 中的詞彙。
+一般情況下，如果沒有進一步假設基礎函式 $ \ psi_j $，則只有該 \begin{equation} h_ {pqrs} = h_ {qpsr}，\tag{★} \label{eq： hpqrs} \end{equation} 可以立即從 [適用于電子系統的量子模型](xref:microsoft.quantum.chemistry.concepts.quantummodels) 中的積分看到，如果 $p、q $ 和 $r，s $ 是從反 commutation 交換。
 
-假設 orbitals 是實值 (，因為它們是用於高斯 orbital 基底) 然後我們會進一步 \begin{equation} h_ {pqrs} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {spqr} = h_ {qrsp} .\tag {★} \label{eq： hpqrsreal} \end{equation} 提供這種假設，我們可以使用上述 symmetries 來減少儲存 Hamiltonian 的矩陣元素所需的資料（以 $8 $ 的係數表示）。雖然這樣做會讓以一致的方式匯入資料，稍微更具挑戰性。
-幸運的是，Hamiltonian 模擬程式庫有一些副程式，可以用來從[LIQUI $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/)或直接從[NWChem](http://www.nwchem-sw.org/index.php/Main_Page)匯入整數檔案。
+如果我們假設 orbitals 是實值的 (，因為它們是針對高斯 orbital 基底) 那麼，我們會進一步讓 \begin{equation} h_ {pqrs} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} spqr {h_} qrsp： hpqrsreal} \end{equation} 假設有這類假設，我們可以使用上述 symmetries 來減少儲存 Hamiltonian 矩陣元素所需的資料，其因素為 $8 $;雖然這樣做可讓您以一致的方式匯入資料，而稍微更具挑戰性。
+幸運的是，Hamiltonian 模擬程式庫有一些副程式，可用來從 [LIQUI $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) 或直接從 [NWChem](http://www.nwchem-sw.org/index.php/Main_Page)匯入整數檔。
 
-分子 orbital 的整數 (\_ 也就是 $h {pq} $ 和 $h \_ {pqrs} $ 詞彙) 例如，這會使用 `OrbitalIntegral` 類型來表示，這會提供一些實用的函式來表示此對稱。
+分子 orbital 的整數 (亦即 $h \_ {pq} $ 和 $h \_ {pqrs} $ 詞彙) 例如這些會使用 `OrbitalIntegral` 類型來表示，這會提供許多實用的函式來表示此對稱。
 ```csharp
     // Load the namespace containing orbital integral objects.
     using Microsoft.Quantum.Chemistry.OrbitalIntegrals;
@@ -51,7 +51,7 @@ Coulomb Hamiltonian 的固有對稱性，這是[電子系統的配量模型](xre
     var twoElectronIntegrals = twoElectronIntegral.EnumerateOrbitalSymmetries();
 ```
 
-除了列舉所有數值完全相同的 orbital 整數，所代表的 Hamiltonian 中所包含的所有微調 orbital 索引清單 `OrbitalIntegral` 可能會產生如下。
+除了列舉所有以數位相同的 orbital 整數之外，可能產生的 Hamiltonian 中包含的所有微調 orbital 索引清單，如下所示 `OrbitalIntegral` 。
 ```csharp
     // Create a `OrbitalIntegral` instance to store a two-electron molecular
     // orbital integral data.
@@ -62,10 +62,10 @@ Coulomb Hamiltonian 的固有對稱性，這是[電子系統的配量模型](xre
     // of `SpinOrbital` instances.
     var twoElectronSpinOrbitalIndices = twoElectronIntegral.EnumerateSpinOrbitals();
 ```
-## <a name="constructing-fermionic-hamiltonians-from-molecular-integrals"></a>從分子的 Hamiltonians 建立 Fermionic 的
+## <a name="constructing-fermionic-hamiltonians-from-molecular-integrals"></a>從分子的積分來建立 Fermionic Hamiltonian
 
-不是藉由新增來建立 Fermionic Hamiltonian，而是會 `FermionTerm` 自動新增對應到每個 orbital 整數的所有詞彙。
-例如，下列程式碼會自動列舉所有 permutational symmetries，並以標準順序排序詞彙： 
+`FermionTerm`與每個 orbital 整數對應的所有詞彙可能會自動加入，而不是藉由新增來建立 Fermionic Hamiltonian。
+例如，下列程式碼會自動列舉所有的 permutational symmetries，並以標準順序排序詞彙： 
 ```csharp
     // Load the namespace containing fermion objects. This
     // example also uses LINQ queries.

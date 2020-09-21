@@ -2,23 +2,23 @@
 title: 量子資源估算器-量子開發工具組
 description: 深入瞭解 Microsoft QDK resources 估算器，其預估在量子電腦上執行特定作業實例所需的資源 Q# 。
 author: anpaz-msft
-ms.author: anpaz@microsoft.com
+ms.author: anpaz
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992236"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835922"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>量子開發工具組 (QDK) 資源估算器
 
-顧名思義，類別會估計在 `ResourcesEstimator` 量子電腦上執行某項作業的指定實例所需的資源 Q# 。 它是藉由執行量子操作來完成，而不實際模擬量子電腦的狀態。基於這個原因，它會針對 Q# 使用上千個量子位的作業預估資源，前提是程式碼的傳統部分在合理的時間內執行。
+顧名思義，類別會估計在 `ResourcesEstimator` 量子電腦上執行某項作業的指定實例所需的資源 Q# 。 它是藉由執行量子操作來完成，而不實際模擬量子電腦的狀態;基於這個原因，它會針對 Q# 使用上千個量子位的作業預估資源，前提是程式碼的傳統部分在合理的時間內執行。
 
 資源估算器建置於 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器之上，它提供了一組更豐富的計量和工具來協助您進行調試 Q# 程式。
 

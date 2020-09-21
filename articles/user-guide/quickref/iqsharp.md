@@ -2,18 +2,18 @@
 title: 我的 Q# 神奇命令
 description: Q#使用 Jupyter 筆記本的 I 魔術命令快速參考頁面 Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d2d092588e1a5c69d12e5d50377e3e26412c094
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863688"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833562"
 ---
 # <a name="ino-locq-magic-commands"></a>我的 Q# 神奇命令
 
@@ -39,7 +39,7 @@ ms.locfileid: "88863688"
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output)：顯示目前 Azure Quantum 工作區中工作的結果。
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status)：顯示目前 Azure Quantum 工作區中工作的狀態。
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit)：將作業提交至 Azure Quantum 工作區。
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target)：設定或顯示 Q# Azure Quantum 工作區中的作業提交使用中的執行目標。
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target)：設定或顯示 Q# Azure Quantum 工作區中的工作提交使用中的執行目標。
 
 ### <a name="chemistry-from-microsoftquantumchemistry-package"></a>來自 Microsoft 量子化學套件的化學 () 
 

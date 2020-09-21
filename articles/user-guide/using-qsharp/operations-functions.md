@@ -2,19 +2,19 @@
 title: 中的作業和函數 Q#
 description: 如何定義和呼叫作業和函式，以及控制和 adjoint 作業特殊化。
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759419"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833486"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>中的作業和函數 Q#
 
@@ -73,9 +73,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 如果作業會執行單一轉換（如同中許多作業的情況），則 Q# 可以在 *adjointed* 或 *控制*時定義作業的運作方式。 作業的 *adjoint* 特製化會指定作業的「反轉」運作方式，而 *受控制* 的特製化則會指定當作業的應用程式在特定量子暫存器的狀態時，如何運作。
 
-量子運算的伴隨對於許多方面來說非常重要。 如需與實用的程式設計技巧一起討論的其中一種情況範例 Q# ，請參閱本文中的 [動詞變化或是](#conjugations) 。 
-
-受控制的作業版本是一項新的作業，只有在所有控制項量子位都處於指定狀態時，才會有效地套用基底作業。
+量子運算的伴隨對於許多方面來說非常重要。 如需與實用的程式設計技巧一起討論的其中一個這類情況的範例 Q# ，請參閱 [控制流程：動詞變化或是](xref:microsoft.quantum.guide.controlflow#conjugations)。 受控制的作業版本是一項新的作業，只有在所有控制項量子位都處於指定狀態時，才會有效地套用基底作業。
 如果控制項量子位在迭加中，則會將基底作業時套用至迭加的適當部分。
 因此，受控制的作業通常用來產生纏結。
 
@@ -364,46 +362,6 @@ function ConjugateUnitaryWith(
 
 使用者定義型別會被視為基礎型別的包裝版本，而不是做為子類型。
 這表示，如果您預期基礎型別的值為，就無法使用使用者定義型別的值。
-
-
-### <a name="conjugations"></a>動詞變化或是
-
-相較于傳統的位，釋出量子記憶體稍微多一點，因為在量子位仍纏結的情況下，盲目重設量子位可能會對其餘的計算造成不想要的效果。 您可以在釋放記憶體之前適當地「復原」已執行的計算，以避免這些效果。 在量子運算中，常見的模式如下： 
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    outerOperation(target);
-    innerOperation(target);
-    Adjoint outerOperation(target);
-}
-```
-
-從0.9 版開始， Q# 支援結合語句來執行上述轉換。 使用該語句，可以透過 `ApplyWith` 下列方式來執行作業：
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    within{ 
-        outerOperation(target);
-    }
-    apply {
-        innerOperation(target);
-    }
-}
-```
-如果外部和內部轉換並未立即以作業的形式提供使用，這種結合語句會變得更有用，但是由數個語句所組成的區塊描述更方便描述。 
-
-在區塊內定義的語句反向轉換會由編譯器自動產生，並在套用區塊完成之後執行。
-由於在區塊中使用的任何可變動變數都無法在套用區塊中重新綁定，因此產生的轉換保證會是在區塊內的計算 adjoint。 
 
 
 ## <a name="defining-new-functions"></a>定義新函數

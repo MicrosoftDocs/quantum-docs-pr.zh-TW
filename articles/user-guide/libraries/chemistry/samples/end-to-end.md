@@ -2,18 +2,18 @@
 title: 範例 NWChem 量副程式
 description: 使用 NWChem 的輸入組，逐步解說取得量子化學模擬的閘道計數範例。
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759710"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835752"
 ---
 # <a name="end-to-end-with-nwchem"></a>端對端使用 NWChem #
 
@@ -46,14 +46,14 @@ Import-Module InvokeNWChem.psm1
 ```
 
 > [!NOTE]
-> 根據預設，Windows 會防止以安全性措施的形式執行任何腳本或模組。
-> 若要允許 `Invoke-NWChem.psm1` 在 Windows 上執行的模組，您可能需要變更執行原則。
+> 根據預設，Windows 會防止執行任何腳本或模組做為安全性措施。
+> 若要允許 `Invoke-NWChem.psm1` 在 Windows 上執行的模組，您可能需要變更原則。
 > 若要這樣做，請執行 `Set-ExecutionPolicy` 下列命令：
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> 然後，當您結束 PowerShell 時，就會還原執行原則。
-> 如果您想要儲存執行原則，請針對下列各項使用不同的值 `-Scope` ：
+> 當您結束 PowerShell 時，原則將會還原。
+> 如果您想要儲存原則，請針對下列各項使用不同的值 `-Scope` ：
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

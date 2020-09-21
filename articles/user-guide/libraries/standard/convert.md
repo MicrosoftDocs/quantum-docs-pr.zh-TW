@@ -1,28 +1,28 @@
 ---
 title: 標準程式庫中的類型轉換 Q#
-description: 瞭解標準程式庫中的通用和使用者定義類型轉換函式 Q# 。
+description: 瞭解標準程式庫中的一般和使用者定義型別轉換函式 Q# 。
 author: cgranade
 uid: microsoft.quantum.libraries.convert
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2319bf453f5fbf6bd068859ea65562423d3ff4d0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa8a1ad624067906998d2735c7a95174a163ce97
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868504"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835599"
 ---
 # <a name="type-conversions"></a>類型轉換 #
 
-Q#是**強型**別語言。
+Q# 是 **強型** 別語言。
 特別的是，不 Q# 會在相異類型之間隱含轉換。 例如，不是 `1 + 2.0` 有效的 Q# 運算式。
-而是 Q# 提供各種類型轉換函式，以供您用來建立指定類型的新值。
+相反地，會 Q# 提供各種類型轉換函式來建立特定類型的新值。
 
-例如，的 <xref:microsoft.quantum.core.length> 輸出類型為 `Int` ，因此它的輸出必須先轉換成，然後才能當做 `Double` 浮點運算式的一部分使用。
-這可以使用函數來完成 <xref:microsoft.quantum.convert.intasdouble> ：
+例如， <xref:microsoft.quantum.core.length> 具有的輸出型別 `Int` ，因此它的輸出必須先轉換成，然後才能當做 `Double` 浮點運算式的一部分使用。
+您可以使用函數來完成此動作 <xref:microsoft.quantum.convert.intasdouble> ：
 
 ```qsharp
 open Microsoft.Quantum.Convert as Convert;
@@ -32,7 +32,7 @@ function HalfLength<'T>(arr : 'T[]) : Double {
 }
 ```
 
-<xref:microsoft.quantum.convert>命名空間提供一般類型轉換函式，以使用基本內建類型，例如 `Int` 、 `Double` 、 `BigInt` 、 `Result` 和 `Bool` ：
+<xref:microsoft.quantum.convert>命名空間提供一般的型別轉換函式，可處理基本的內建類型，例如 `Int` 、、 `Double` `BigInt` 、 `Result` 和 `Bool` ：
 
 ```qsharp
 let bool = Convert.ResultAsBool(One);        // true
@@ -40,9 +40,9 @@ let big = Convert.IntAsBigInt(271);          // 271L
 let indices = Convert.RangeAsIntArray(0..4); // [0, 1, 2, 3, 4]
 ```
 
-<xref:microsoft.quantum.convert>命名空間也會提供一些更外來的轉換（例如 `FunctionAsOperation` ），以將函式轉換 `'T -> 'U` 成新的作業 `'T => 'U` 。
+<xref:microsoft.quantum.convert>命名空間也會提供一些更外來的轉換，例如將函式轉換 `FunctionAsOperation` `'T -> 'U` 成新作業的 `'T => 'U` 。
 
-最後， Q# 標準程式庫提供許多使用者定義的類型，例如 <xref:microsoft.quantum.math.complex> 和 <xref:microsoft.quantum.arithmetic.littleendian> 。
+最後， Q# 標準程式庫會提供一些使用者定義類型，例如 <xref:microsoft.quantum.math.complex> 和 <xref:microsoft.quantum.arithmetic.littleendian> 。
 除了這些類型，標準程式庫還提供 <xref:microsoft.quantum.arithmetic.bigendianaslittleendian> 下列功能：
 
 ```Q#
