@@ -2,19 +2,19 @@
 title: Quantum Development Kit 程式庫
 description: 概述 Microsoft Quantum Development Kit 中包含的標準、化學和數值程式庫。
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d61fe459362fdb5f3550768a26b34656a8a538a7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 90672b6ec78bf8305bdb3ab8326002cf8ce34bfe
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869098"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835718"
 ---
 # <a name="overview-of-no-locq-libraries"></a>Q# 程式庫概觀
 Quantum Development Kit 提供了數個程式庫，讓您能夠更輕鬆地在 Q# 中開發量子應用程式。

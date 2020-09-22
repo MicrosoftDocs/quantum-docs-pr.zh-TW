@@ -2,19 +2,19 @@
 title: 量子化學程式庫簡介
 description: 了解 Microsoft 量子化學程式庫，以及如何使用該程式庫來模擬量子電腦上的電子結構問題。
 author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com
+ms.author: ageller
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e2ec4173d4f2bdaac7125c13b09708934b758a1d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 15439a34933bd561dc011acf48e669abeb031e33
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869404"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835786"
 ---
 # <a name="introduction-to-the-quantum-chemistry-library"></a>量子化學程式庫簡介
 

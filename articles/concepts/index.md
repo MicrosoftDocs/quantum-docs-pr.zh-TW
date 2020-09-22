@@ -2,19 +2,19 @@
 title: 量子運算的歷程和背景
 description: 瞭解量子計算的歷程、說明運作方式的背景知識，以及有關 Microsoft Quantum Development Kit 的資訊。
 author: QuantumWriter
-ms.author: nawiebe
+ms.author: v-benbra
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f62317cd32068319f15c15ae1fa0775ea3fb00b2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1b767313b7f421ddaba62ab2be99fe10b8d0430e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866820"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834545"
 ---
 # <a name="quantum-computing-history-and-background"></a>量子運算的歷程和背景
 
