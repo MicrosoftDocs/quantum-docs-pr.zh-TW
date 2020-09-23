@@ -2,19 +2,19 @@
 title: 量子追蹤模擬器 - Quantum 開發套件
 description: 了解如何使用 Microsoft 量子電腦追蹤模擬器來對傳統程式碼進行偵錯，以及評估 Q# 程式的資源需求。
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868214"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833353"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum 開發套件 (QDK) 量子追蹤模擬器
 
@@ -86,7 +86,7 @@ QDK 有五個可搭配量子追蹤模擬器使用的工具，用來偵測程式�
 |-----| -----|
 |[相異輸入檢查工具](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |檢查共用的量子位元是否有潛在的衝突 |
 |[不正確的量子位元使用檢查工具](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |檢查程式是否將作業套用至已發行的量子位元 |
-|[基元操作計數器](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 計算在量子程式中叫用的每個作業所使用的基本執行次數  |
+|[基元操作計數器](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 計算在量子程式中叫用的每個作業所使用的基本流程次數  |
 |[深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |收集計數，此計數代表在量子程式中所叫用每個作業的深度下限   |
 |[寬度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |計算量子程式中每個作業所配置和借用的量子佔元數目 |
 

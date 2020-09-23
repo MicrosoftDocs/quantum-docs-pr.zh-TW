@@ -2,19 +2,19 @@
 title: Q# 使用者指南
 description: 使用者指南的用途和內容概觀
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869625"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834749"
 ---
 # <a name="the-no-locq-user-guide"></a>Q# 使用者指南
 
@@ -46,7 +46,7 @@ ms.locfileid: "87869625"
 
 - [使用量子位元](xref:microsoft.quantum.guide.qubits)：說明用於處理個別量子和量子系統的 Q# 功能，尤其是對其執行分配、操作和測量的功能。 
 
-- [控制流程](xref:microsoft.quantum.guide.controlflow)：詳細說明 Q# 中可用的程式設計控制流程模式，其中包括許多標準技術 (例如，條件式執行、for 迴圈、while 迴圈)，以及量子特有的「重複直到成功 (Repeat-Until-Success)」模式。
+- [控制流程](xref:microsoft.quantum.guide.controlflow)：詳細說明 Q# 中可用的程式設計控制流程模式，其中包括許多標準技術 (例如，條件式流程、for 迴圈、while 迴圈)，以及量子特有的「重複直到成功 (Repeat-Until-Success)」模式。
 
 - [測試和偵錯](xref:microsoft.quantum.guide.testingdebugging)：詳細說明一些技術，用來確保您的程式碼會執行其作業。 
     由於量子資訊的一般不透明度，對量子程式進行偵錯可能需要特殊技術。 
