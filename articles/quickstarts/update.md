@@ -2,7 +2,7 @@
 title: 更新 Quantum Development Kit (QDK)
 description: 說明如何將您的 Q# 專案和 Microsoft Quantum 開發套件更新為目前的版本。
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863650"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834914"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>更新 Microsoft Quantum Development Kit (QDK)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88863650"
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>更新 Visual Studio 中的 Q# 專案
  
-1. 更新為最新版的 Visual Studio 2019，請參閱[此處](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019)以取得指示。
+1. 更新為最新版的 Visual Studio 2019，請參閱[此處](https://docs.microsoft.com/visualstudio/install/update-visual-studio)以取得指示。
 2. 在 Visual Studio 中開啟方案。
 3. 從功能表中選取 [組建] -> [清除方案]。
 4. 在每個 .csproj 檔案中，將目標框架變更為 `netcoreapp3.1` (若為程式庫專案，則變更為 `netstandard2.1`)。
