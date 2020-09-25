@@ -1,20 +1,21 @@
 ---
 title: 使用 Q# 和 .NET 進行開發
+description: 了解如何使用 .NET 語言建立 Q# 應用程式。
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 96a1d0d75f3ff7de11407fd76479cbae86ce7571
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e8733918daa02afaea0fc1994d5f0851d4be9b93
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759267"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834324"
 ---
 # <a name="develop-with-no-locq-and-net"></a>使用 Q# 和 .NET 進行開發
 

@@ -2,23 +2,23 @@
 title: Q# 程式設計語言和 QDK 是什麼？
 description: 了解 Microsoft Quantum 開發套件、Q# 程式設計語言，以及如何建立量子程式。
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 21adfcc1c5321d87665adb39a3c838bbda0b8861
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863783"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834562"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# 程式設計語言和 QDK 是什麼？
 
-Q# 是 Microsoft 的開放原始碼程式設計語言，可用來開發和執行量子演算法。 其屬於 Quantum 開發套件 (QDK) 的一部分，內含 [Q# 程式庫](xref:microsoft.quantum.libraries)、[量子模擬器](xref:microsoft.quantum.machines)、[適用於其他程式設計環境的擴充功能](xref:microsoft.quantum.install)和 [API 文件](xref:microsoft.quantum.standardlibsintro)。 除了標準的 Q# 程式庫以外，QDK 還包含化學、機器學習與數值程式庫。
+Q# 是 Microsoft 的開放原始碼程式設計語言，可用來開發和執行量子演算法。 其屬於 Quantum 開發套件 (QDK) 的一部分，內含 [Q# 程式庫](xref:microsoft.quantum.libraries)、[量子模擬器](xref:microsoft.quantum.machines)、[適用於其他程式設計環境的擴充功能](xref:microsoft.quantum.install)和 [API 文件](xref:microsoft.quantum.apiref-intro)。 除了標準的 Q# 程式庫以外，QDK 還包含化學、機器學習與數值程式庫。
 
 作為程式設計語言，Q# 擷取了 Python、C# 和 F# 中的熟悉元素，並可支援使用迴圈、if/then 陳述式和常見資料類型來撰寫程式的基本程序模型。 其也引進了新的量子特有資料結構和運算。
 
@@ -54,7 +54,7 @@ Q# 程式可以編譯成獨立的應用程式，或由以 Python 或 .NET 語言
 
 在模擬器中隔離 Q# 程式碼可確保演算法會遵循量子物理定律，並可在量子電腦上正確執行。
 
-![qsharp-code-flow](~/media/qsharp-code-flow.png)
+![Qsharp 代碼流程](~/media/qsharp-code-flow.png)
 
 ## <a name="how-do-i-use-the-qdk"></a>要如何使用 QDK？
 

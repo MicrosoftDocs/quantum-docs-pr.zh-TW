@@ -3,18 +3,18 @@ uid: microsoft.quantum.welcome
 title: 開始使用 Quantum Development Kit (QDK)
 description: 了解如何使用 Microsoft Quantum 開發套件，以 Q# 開始為量子專案進行程式設計。
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/10/2020
 ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: e56b0e0455773481fbff6cfb7f4a6817cfc93d1a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863746"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834494"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>開始使用 Quantum Development Kit (QDK)
 
@@ -22,8 +22,8 @@ ms.locfileid: "88863746"
 
 Quantum 開發套件 (QDK) 包含使用 Q# 建置自有量子程式和實驗所需的全部工具，這是專為量子應用程式開發而設計的程式語言。
 
-若要直接進入，請從 [QDK 安裝指南](xref:microsoft.quantum.install)開始。
-系統會引導您在 Windows、Linux 或 MacOS 機器上安裝 Quantum 開發套件，以便您撰寫自己的量子程式。
+若要直接進入，請從 [QDK 設定指南](xref:microsoft.quantum.install)開始。
+系統會引導您在 Windows、Linux 或 MacOS 機器上設定 Quantum 開發套件，以便您撰寫自己的量子程式。
 
 如果您不熟悉量子運算，請檢閱[概觀](xref:microsoft.quantum.overview.introduction)一節，以了解量子電腦的用途，以及量子運算的基本概念。
 
@@ -33,8 +33,7 @@ Quantum 開發套件提供許多方式讓您了解如何使用 Q# 開發量子�
 若要運用強大的量子功能，您可以試用我們的教學課程：
 
 * [量子亂數產生器](xref:microsoft.quantum.quickstarts.qrng) - 從 "Q# Hello World" 樣式應用程式開始，可提供量子概念的簡介，還可讓您在幾分鐘內建置並執行量子應用程式。
-* [使用 Q# 探索糾纏](xref:microsoft.quantum.write-program) - 此教學課程會引導您撰寫 Q# 程式來示範一些關於量子程式設計的基本概念。
-    如果您尚未準備好開始撰寫程式碼，仍可在不安裝 QDK 的情況下繼續，同時大致了解 Q# 程式設計語言和量子運算的首要概念。
+* [使用 Q# 探索糾纏](xref:microsoft.quantum.write-program) - 此教學課程會引導您撰寫 Q# 程式來示範一些關於量子程式設計的基本概念。 如果您尚未準備好開始撰寫程式碼，仍可在不安裝 QDK 的情況下繼續，同時大致了解 Q# 程式設計語言和量子運算的首要概念。
 * [格羅弗搜尋演算法](xref:microsoft.quantum.quickstarts.search) - 探索這個 Q# 程式範例，以摘要示範低階量子運算的方式，讓您了解 Q# 在表示量子演算法方面的能力。
     本教學課程會引導您使用 Visual Studio 或 Visual Studio Code，開發 Q# 應用程式形式的程式。
 
@@ -60,7 +59,7 @@ Quantum 開發套件提供許多方式讓您了解如何使用 Q# 開發量子�
 ### <a name="no-locq-developer-guides"></a>Q# 開發人員指南
 
 * [Q# 使用者指南](xref:microsoft.quantum.guide)會詳述用來在 Q# 中建立量子程式的核心概念。
-* [量子模擬器和主機應用程式](xref:microsoft.quantum.machines)說明如何執行量子演算法、可用的量子機器有哪些，以及如何為量子程式撰寫非 Q# 驅動程式。
+* [量子模擬器和主機應用程式](xref:microsoft.quantum.machines)說明如何計算量子演算法、可用的量子機器有哪些，以及如何為量子程式撰寫非 Q# 驅動程式。
 
 ### <a name="no-locq-libraries"></a>Q# 程式庫
 
@@ -68,7 +67,7 @@ Quantum 開發套件提供許多方式讓您了解如何使用 Q# 開發量子�
     這些主題包括控制流程、資料結構、錯誤修正、測試和偵錯。 
 * [Q# 化學程式庫](xref:microsoft.quantum.chemistry.concepts.intro)說明可支援量子化學模擬 (量子運算的重要應用程式) 的作業和函式。 這些主題包括模擬哈密頓力學和量子相位估算法等其他主題。
 * [Q# 數值程式庫](xref:microsoft.quantum.numerics.intro)說明可支援以目標機器原生作業表示複雜算術函式的作業和函式。
-* [Q# 程式庫參考](xref:microsoft.quantum.standardlibsintro)包含各命名空間的程式庫實體相關參考資訊。
+* [Q# 程式庫參考](xref:microsoft.quantum.apiref-intro)包含各命名空間的程式庫實體相關參考資訊。
 
 ### <a name="general-quantum-computing"></a>一般量子運算
 

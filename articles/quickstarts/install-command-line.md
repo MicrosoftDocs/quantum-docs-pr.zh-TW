@@ -1,22 +1,25 @@
 ---
 title: 使用 Q# 應用程式進行開發
-author: KittyYeungQ
-ms.author: kitty
-ms.date: 4/24/2020
+description: 了解如何建立從命令提示字元執行的 Q# 應用程式。
+author: bradben
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
-ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358253"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834409"
 ---
 # <a name="develop-with-no-locq-applications"></a>使用 Q# 應用程式進行開發
+
+遵循與您的環境對應的索引標籤中的指示。
 
 Q# 程式可以自行執行，不需要如 C#、F# 或 Python 等主機語言中的驅動程式。
 
@@ -45,7 +48,7 @@ Q# 程式可以自行執行，不需要如 C#、F# 或 Python 等主機語言中
 3. 您現在可以啟動新的環境，並透過 [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)，在瀏覽器中開始進行開發。 或者，您也可以使用本機安裝的 VS Code，並使用 Codespaces 做為[遠端環境](https://docs.microsoft.com/visualstudio/online/how-to/vscode)。
 
 
-若要為其他環境安裝 QDK，請在命令提示字元中輸入：
+若要為其他環境安裝 QDK，請在命令提示字元中輸入下列內容：
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -63,14 +66,14 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 2. 按一下 [獨立主控台應用程式]。
 3. 瀏覽至要儲存專案的位置，然後按一下 [建立專案]。
 4. 成功建立專案後，按一下右下方的 [開啟新增專案...]。
-        
+
 檢查專案。 您應該會看到名為 `Program.qs` 的來源檔案，這個 Q# 程式會定義一個將訊息列印至主控台的簡單作業。
 
 若要執行應用程式：
+
 1. 按一下 [終端機] -> [新增終端機]。
 2. 在終端機提示中，輸入 `dotnet run`。
 3. 您應該會看到下列文字出現在輸出視窗中 `Hello quantum world!`
-
 
 > [!NOTE]
 > VS Code Q# 擴充功能目前不支援具有多個根資料夾的工作區。 如果您在一個 VS Code 工作區中有多個專案，則所有專案都必須包含在相同的根資料夾內。
@@ -80,6 +83,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 藉由建立 Q# `Hello World` 應用程式來確認您的 Visual Studio 安裝。
 
 若要建立新的 Q# 應用程式：
+
 1. 開啟 Visual Studio，然後按一下 [檔案] -> [新增] -> [專案]。
 2. 在搜尋方塊中鍵入 `Q#`，選取 [Q# 應用程式]，然後按 [下一步]。
 3. 為應用程式輸入名稱和位置，然後按一下 [建立]。
@@ -88,6 +92,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 檢查專案。 您應該會看到名為 `Program.qs` 的來源檔案，這個 Q# 程式會定義一個將訊息列印至主控台的簡單作業。
 
 若要執行應用程式：
+
 1. 選取 [偵錯] -> [啟動但不偵錯]。
 2. 您應該會看到 `Hello quantum world!` 文字已列印到主控台視窗。
 
@@ -105,11 +110,13 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
 1. 建立新的應用程式：
+
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
 1. 瀏覽至新的應用程式目錄：
+
     ```dotnetcli
     cd runSayHello
     ```
@@ -117,6 +124,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
     此目錄中應該有一個 `Program.qs` 檔案，這個 Q# 程式會定義一個將訊息列印至主控台的簡單作業。 您可以使用文字編輯器來修改此範本，使用自己的量子應用程式來覆寫它。 
 
 1. 執行程式：
+
     ```dotnetcli
     dotnet run
     ```

@@ -1,20 +1,21 @@
 ---
 title: 使用 Q# 和 Python 進行開發
+description: 了解如何使用 Python 建立 Q# 應用程式。
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866735"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834154"
 ---
 # <a name="develop-with-no-locq-and-python"></a>使用 Q# 和 Python 進行開發
 
@@ -116,4 +117,4 @@ ms.locfileid: "87866735"
 
 ## <a name="next-steps"></a>後續步驟
 
-您已在慣用環境中安裝了 Quantum Development Kit，接下來可以遵循此指南開始撰寫及執行[您的第一個量子程式](xref:microsoft.quantum.quickstarts.qrng)。
+您已在慣用環境中測試了 Quantum 開發套件，接下來可以遵循此指南開始撰寫及執行[您的第一個量子程式](xref:microsoft.quantum.quickstarts.qrng)。

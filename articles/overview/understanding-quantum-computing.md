@@ -2,23 +2,23 @@
 title: 了解量子計算
 description: 什麼是量子電腦，量子電腦又是如何使用量子力學原理的？
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 214fe809aaeba759005fa76ba3615f376d402bc9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866956"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834987"
 ---
 # <a name="understanding-quantum-computing"></a>了解量子計算
 
-量子運算會使用量子力學原理來處理資訊。 因此，量子運算所需的方法與傳統運算不同。  這項差異的其中一個範例是量子電腦中所使用的處理器。  傳統電腦使用的是我們熟悉的矽基晶片，量子電腦所使用的則是量子材料，例如原子、離子、光子或電子。  
+量子運算會使用量子力學原理來處理資訊。 因此，量子運算所需的方法與傳統運算不同。 這項差異的其中一個範例是量子電腦中所使用的處理器。 傳統電腦使用的是我們熟悉的矽基晶片，量子電腦所使用的則是量子系統，例如原子、離子、光子或電子。 傳統電腦會使用其配量屬性，來表示可在 1 和 0 的不同配量疊加所準備的位元。  
 
 量子材料的行為會遵循量子力學定律，因此會利用概率運算、疊加和糾纏等概念。 這些概念為量子演算法提供了基礎，讓其可以充分運用量子運算的威力來解決複數問題。 本文會說明量子運算所依據的一些量子力學基本概念。
 
