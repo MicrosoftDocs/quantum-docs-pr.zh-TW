@@ -387,6 +387,22 @@ operations:
     將作業套用至註冊中的前兩個量子位。
 
     修飾詞 `CA` 表示作業可控制且 adjointable。
+- uid: microsoft.quantum.canon.applytohead
+  summary: 將作業套用至陣列的第一個元素。
+- uid: microsoft.quantum.canon.applytoheada
+  summary: 將作業套用至陣列的第一個元素。
+- uid: microsoft.quantum.canon.applytoheadc
+  summary: 將作業套用至陣列的第一個元素。
+- uid: microsoft.quantum.canon.applytoheadca
+  summary: 將作業套用至陣列的第一個元素。
+- uid: microsoft.quantum.canon.applytomost
+  summary: 將作業套用至陣列的最後一個元素以外的所有專案。
+- uid: microsoft.quantum.canon.applytomosta
+  summary: 將作業套用至陣列的最後一個元素以外的所有專案。
+- uid: microsoft.quantum.canon.applytomostc
+  summary: 將作業套用至陣列的最後一個元素以外的所有專案。
+- uid: microsoft.quantum.canon.applytomostca
+  summary: 將作業套用至陣列的最後一個元素以外的所有專案。
 - uid: microsoft.quantum.canon.applytopartition
   summary: 將一組作業套用至註冊的指定分割區分成兩個部分。
 - uid: microsoft.quantum.canon.applytopartitiona
@@ -404,6 +420,14 @@ operations:
     將一組作業套用至註冊的指定分割區分成兩個部分。
 
     修飾詞 `CA` 表示作業可控制且 adjointable。
+- uid: microsoft.quantum.canon.applytorest
+  summary: 將作業套用至陣列的第一個元素以外的所有專案。
+- uid: microsoft.quantum.canon.applytoresta
+  summary: 將作業套用至陣列的第一個元素以外的所有專案。
+- uid: microsoft.quantum.canon.applytorestc
+  summary: 將作業套用至陣列的第一個元素以外的所有專案。
+- uid: microsoft.quantum.canon.applytorestca
+  summary: 將作業套用至陣列的第一個元素以外的所有專案。
 - uid: microsoft.quantum.canon.applytosubregister
   summary: 將作業套用至暫存器的 subregister，並使用其索引的陣列所指定的量子位。
 - uid: microsoft.quantum.canon.applytosubregistera
@@ -421,6 +445,14 @@ operations:
     將作業套用至暫存器的 subregister，並使用其索引的陣列所指定的量子位。
 
     修飾詞 `CA` 表示作業可控制且 adjointable。
+- uid: microsoft.quantum.canon.applytotail
+  summary: 將作業套用至陣列的最後一個元素。
+- uid: microsoft.quantum.canon.applytotaila
+  summary: 將作業套用至陣列的最後一個元素。
+- uid: microsoft.quantum.canon.applytotailc
+  summary: 將作業套用至陣列的最後一個元素。
+- uid: microsoft.quantum.canon.applytotailca
+  summary: 將作業套用至陣列的最後一個元素。
 - uid: microsoft.quantum.canon.applywith
   summary: 假設有兩個作業，請將其套用為另一個作業的 conjugated。
 - uid: microsoft.quantum.canon.applywitha
@@ -581,9 +613,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> 已被取代\n\nResultStack 已被取代。"
 metadata:
-  ms.openlocfilehash: 969eec6767f3323e0470b0e968051bafb92d29ae
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 7346d86d3ff9db2146f37a3f402b60faebe442b7
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89341559"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464431"

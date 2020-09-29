@@ -85,16 +85,16 @@ operations:
     它會藉由套用 depolarizing 通道 $ $ \begin{align} \Omega ( \rho) \mathrel{，來準備 $ \boldone/$2 狀態中的給定量子位： =} \frac {1} {4} \ sum_ {\mu \in \{ 0，1，2，3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\dagger}，\end{align} $ $ where $ \sigma \_ i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是代表混合狀態的密度運算子。
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
-    建立以0至編碼之狀態的統一迭加 `nIndices` 。
+    建立以0至編碼之狀態的統一迭加 `nIndices - 1` 。
 
 
     亦即，這個單一 $U $ 會根據指定的輸入狀態 $ \ket{0\cdots 0} $，在所有數位狀態 $0 $ 到 $M-$1 的情況下建立統一迭加。 換句話說，$ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}。
 
     \end{align} $ $。
 metadata:
-  ms.openlocfilehash: 46bed785972355044c9ef9765ab957ca6d31e5f1
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 35645ba3566dbe0b8e9efa76fa4c3316ce7d5e47
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89339876"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464312"

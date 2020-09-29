@@ -45,6 +45,8 @@ functions:
   summary: 只有當數位小於或等於另一個數位時，才會傳回 true。
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: 只有當數位小於或等於另一個數位時，才會傳回 true。
+- uid: microsoft.quantum.logical.lexographiccomparison
+  summary: 指定比較函式時，會傳回 lexographically 比較兩個數組的新函數。
 - uid: microsoft.quantum.logical.nearlyequald
   summary: 只有在兩個輸入幾乎相等 (（也就是在 1e-12) 的容錯內）時，才會傳回 true。
 - uid: microsoft.quantum.logical.not
@@ -70,9 +72,9 @@ functions:
 - uid: microsoft.quantum.logical.xor
   summary: 傳回兩個值的布林專屬分隔分離。
 metadata:
-  ms.openlocfilehash: 0ab7077bc2cdf9bc76f3da701a88869f8bb9bf85
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 006100b659daedbcca30fe443756a185a965ee1e
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89340097"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464329"
