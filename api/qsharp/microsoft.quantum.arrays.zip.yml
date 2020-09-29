@@ -3,7 +3,7 @@ uid: microsoft.quantum.arrays.zip
 name: Zip
 type: function
 namespace: microsoft.quantum.arrays
-summary: 假設有兩個數組，會傳回一組新的陣列，讓每一組都包含每個原始陣列中的元素。
+summary: Zip 已淘汰。 請改用 @"microsoft.quantum.arrays.zipped"。
 examples: >-
   ```qsharp
 
@@ -46,10 +46,11 @@ typeParameters:
 seeAlso:
 - zip3
 - zip4
+- unzipped
 metadata:
-  ms.openlocfilehash: 448a5f66cbb8d927f357d83420c593ee80555705
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 13d4e79f779f3fdb669af1d497053a085ffa4902
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89351453"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91474307"
