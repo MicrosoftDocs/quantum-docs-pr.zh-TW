@@ -9,9 +9,9 @@ summary: >-
   元組的第一個元素是真正的元件，第二個是虛構的元件。
 syntax: newtype Complex = (Double, Double);
 metadata:
-  ms.openlocfilehash: 8462531555c8e27a30cadf05f9f4a59a57ad1026
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 83c65ff1ad316189416078f56d0519c195284887
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89344330"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91489902"

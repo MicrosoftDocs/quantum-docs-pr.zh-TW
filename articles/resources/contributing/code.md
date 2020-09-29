@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834885"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91489760"
 ---
 # <a name="contributing-code"></a>提供程式碼
 
@@ -82,6 +82,10 @@ operation TestApplyWith() : Unit {
 
 ### Citations and References ### -->
 
+## <a name="pull-requests"></a>提取要求
+
+當您準備好要參與工作時，請透過 GitHub 將提取要求傳送至對應的存放庫。
+小組將會審查並提供意見反應。 所有批註都必須經過回答和解決，而且所有的檢查都必須在程式碼合併至分支之前傳遞 `main` 。
 
 ## <a name="when-well-reject-a-pull-request"></a>當我們拒絕提取要求時
 
