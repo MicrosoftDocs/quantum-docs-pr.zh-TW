@@ -19,9 +19,9 @@ output:
   - summary: 一種狀態準備作業，可將指定的係數準備為指定之暫存器的輸入狀態。
     uid: microsoft.quantum.machinelearning.stategenerator
 metadata:
-  ms.openlocfilehash: 88bb75d8e6e330cdc7d157b80581413333c9b371
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 390d59f6a367bd618effbfe88c6a20cd284cbc4d
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89336051"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91491392"

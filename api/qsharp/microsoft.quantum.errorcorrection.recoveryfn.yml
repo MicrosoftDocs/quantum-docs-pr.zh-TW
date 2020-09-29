@@ -6,9 +6,9 @@ namespace: microsoft.quantum.errorcorrection
 summary: 適用于將錯誤症狀對應到可更正偵測到之錯誤的一連串作業的函式類型 `Pauli[]` 。
 syntax: newtype RecoveryFn = (Microsoft.Quantum.ErrorCorrection.Syndrome -> Pauli[]);
 metadata:
-  ms.openlocfilehash: fc9ef151c1f794a2f72129789518def49903e31d
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 48f2721239a52303951109b5bd68fe0a998c8f29
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89349804"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91483164"
