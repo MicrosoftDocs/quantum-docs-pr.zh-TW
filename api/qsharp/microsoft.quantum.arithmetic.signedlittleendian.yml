@@ -6,9 +6,9 @@ namespace: microsoft.quantum.arithmetic
 summary: 以位元組由小到大儲存的帶正負號整數的類型 (參閱 LittleEndian) 。
 syntax: newtype SignedLittleEndian = Microsoft.Quantum.Arithmetic.LittleEndian;
 metadata:
-  ms.openlocfilehash: 202d5c9fa4dfe43caa62d728f913d88733af246b
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 150f7ef0bb21c4641bdfbada97c9385ae4b69b2d
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89352773"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91476075"
