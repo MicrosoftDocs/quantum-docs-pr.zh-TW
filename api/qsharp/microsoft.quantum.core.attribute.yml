@@ -6,9 +6,9 @@ namespace: microsoft.quantum.core
 summary: 編譯器可辨識的屬性，可用來將使用者自訂類型標示為屬性。
 syntax: newtype Attribute = Unit;
 metadata:
-  ms.openlocfilehash: 45ae9bf7acc13149637131781cfd7b0effa7234b
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: fa074f7a27d983844e353a35621f8c90b79785c8
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89343039"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91483096"

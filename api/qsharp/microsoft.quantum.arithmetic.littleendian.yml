@@ -7,9 +7,9 @@ summary: 以位元組由小到大的順序註冊，將不帶正負號的整數�
 remarks: 我們 `LittleEndian` `LE` 將在檔中縮寫。
 syntax: newtype LittleEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: ac8833cad5eb3f8e9f6de66ebb499d33a1361a26
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: a4a8a53a5ec33471be61852643d80492433b7ec0
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89342732"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91476993"
