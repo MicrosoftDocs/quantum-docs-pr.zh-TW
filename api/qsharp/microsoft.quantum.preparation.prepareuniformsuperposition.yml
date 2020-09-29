@@ -4,12 +4,13 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: microsoft.quantum.preparation
 summary: >-
-  建立以0至編碼之狀態的統一迭加 `nIndices` 。
+  建立以0至編碼之狀態的統一迭加 `nIndices - 1` 。
 
 
   亦即，這個單一 $U $ 會根據指定的輸入狀態 $ \ket{0\cdots 0} $，在所有數位狀態 $0 $ 到 $M-$1 的情況下建立統一迭加。 換句話說，$ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}。
 
   \end{align} $ $。
+remarks: 作業是 adjointable 的，但在 `indexRegister` `nIndices` 這種情況下，必須在統一迭加中。
 examples: >-
   下列範例會在 {1} $3 $ 量子位上準備狀態 $ \frac {\sqrt {6} } \ sum_ {j = 0} ^ {5} \ket{j} $。
 
@@ -20,6 +21,7 @@ examples: >-
 
   using(indexRegister = Qubit[3]) {
       PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));
+      // ...
   }
 
   ```
@@ -46,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: ff1e1e50992b209865c4e3b1c82e9faec9199d58
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89331325"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91485391"
