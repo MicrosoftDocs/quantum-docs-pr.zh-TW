@@ -7,9 +7,9 @@ summary: 以位元組由大到小的順序註冊，將不帶正負號的整數�
 remarks: 我們 `BigEndian` `BE` 將在檔中縮寫。
 syntax: newtype BigEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: b8aca5fb596ff61064b7542785d245a3ef7ecace
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 9f862fc9ea72282c5e8ae95e388d94698bc746c5
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89327585"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91462986"
