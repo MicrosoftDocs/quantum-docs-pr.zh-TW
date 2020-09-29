@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834137"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492348"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -23,6 +23,24 @@ ms.locfileid: "90834137"
 如需安裝指示，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
+
+## <a name="version-01220092803"></a>版本0.12.20092803
+
+*發行日期：2020年9月29日*
+
+此版本包含下列項目：
+
+- [量子中繼標記法](https://github.com/microsoft/qsharp-language/tree/main/Specifications/QIR#quantum-intermediate-representation-qir)的公告和草稿規格 (QIR) 預定作為跨不同前端和後端的通用格式。 另請參閱我們在 QIR 上的 [blog 文章](https://devblogs.microsoft.com/qsharp/introducing-quantum-intermediate-representation-qir) 。
+- 推出新的[ Q# 語言](https://github.com/microsoft/qsharp-language)存放庫，其中也包含完整的[ Q# 檔](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language)。
+- 針對涉及大量量子位之程式的 QuantumSimulator 效能改進：更好的應用程式閘道融合決策;改進 Linux 系統上的平行處理;新增閘道執行的智慧型排程;bug 修正。
+- Visual Studio 中的檔案現在支援 IntelliSense 功能 Q# ，而且即使沒有專案檔也 Visual Studio Code。
+- 各種 Q# /Python 互通性的增強功能和 bug 修正，包括更好的 NumPy 資料類型支援。
+- Microsoft. array 命名空間的增強功能 (請參閱 [microsoft/QuantumLibraries # 313](https://github.com/microsoft/QuantumLibraries/issues/313)) 。
+- 加入新的 [重複使用-Success 範例](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/repeat-until-success) ，此範例只會使用兩個量子位。
+
+自上次發行之後，我們的每個開放原始碼存放庫中的預設分支已重新命名為 `main` 。
+
+請參閱連結[庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24)、[運行](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24)時間、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24)和[Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24)的封閉式 pr 完整清單。
 
 ## <a name="version-01220082513"></a>版本0.12.20082513
 

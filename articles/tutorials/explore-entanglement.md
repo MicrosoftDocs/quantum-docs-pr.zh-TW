@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834018"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492331"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>教學課程：使用 Q\# 探索糾纏
 
@@ -83,7 +83,7 @@ Bell 這個名稱取自「貝爾狀態」，是指兩個量子位元的特定狀
 
 ### <a name="initialize-qubit-using-measurement"></a>使用度量將量子位初始化
 
-在下列的第一個程式碼中，我們會示範如何在中使用量子位 Q# 。  我們會介紹兩項作業， [`M`](xref:microsoft.quantum.intrinsic.m) 並 [`X`](xref:microsoft.quantum.intrinsic.x) 轉換量子位的狀態。 在此程式碼片段中定義的 `SetQubitState` 作業需要一個量子位元做為參數和另一個參數 `desired`，後者代表我們想要的量子位元狀態。  `SetQubitState` 作業使用 `M` 作業對量子位元執行測量。  在中 Q# ，量子位測量一律會傳回 `Zero` 或 `One` 。  如果量測傳回的值不等於所需的值，則會「 `SetQubitState` 翻轉」量子位; 也就是說，它會執行作業 `X` ，將量子位狀態變更為新的狀態，其中測量的機率會傳回 `Zero` 並 `One` 反轉。 如此一來， `SetQubitState` 一律會將目標量子位置於預期狀態。
+在下列第一個程式碼片段中，我們會示範如何在中使用量子位 Q# 。  我們會介紹兩項作業， [`M`](xref:microsoft.quantum.intrinsic.m) 並 [`X`](xref:microsoft.quantum.intrinsic.x) 轉換量子位的狀態。 在此程式碼片段中定義的 `SetQubitState` 作業需要一個量子位元做為參數和另一個參數 `desired`，後者代表我們想要的量子位元狀態。  `SetQubitState` 作業使用 `M` 作業對量子位元執行測量。  在中 Q# ，量子位測量一律會傳回 `Zero` 或 `One` 。  如果量測傳回的值不等於所需的值，則會「 `SetQubitState` 翻轉」量子位; 也就是說，它會執行作業 `X` ，將量子位狀態變更為新的狀態，其中測量的機率會傳回 `Zero` 並 `One` 反轉。 如此一來， `SetQubitState` 一律會將目標量子位置於預期狀態。
 
 以下列程式碼取代的內容 `Program.qs` ：
 
@@ -112,7 +112,7 @@ Bell 這個名稱取自「貝爾狀態」，是指兩個量子位元的特定狀
 
 作業的引數會在括弧內指定為元組。
 
-作業的傳回類型指定於冒號後面。 在此案例中，`SetQubitState` 作業不會傳回任何項目，因此會標示為傳回 `Unit`。 這相當於 Q# F # 中的對等專案 `unit` ，它大致上類似于 `void` c #，而 Python (中的空元組則是以 `()` 類型提示 `Tuple[()]`) 表示。
+作業的傳回類型指定於冒號後面。 在此情況下，作業沒有傳回 `SetQubitState` 型別，因此它標示為 return `Unit` 。 這相當於 Q# F # 中的對等專案 `unit` ，它大致上類似于 `void` c #，而 Python (中的空元組則是以 `()` 類型提示 `Tuple[()]`) 表示。
 
 您在第一項作業中使用了兩個量子作業 Q# ：
 
@@ -159,7 +159,7 @@ Bell 這個名稱取自「貝爾狀態」，是指兩個量子位元的特定狀
 
 根據預設，中的變數 Q# 是不可變的，其值在系結之後可能不會變更。 `let` 關鍵字可用來指出不可變變數的繫結。 作業引數一律為不可變的。
 
-如果您需要可變更值的變數 (例如範例中的 `numOnes`)，您可以使用 `mutable` 關鍵字來宣告變數。 可變變數的值可使用 `setQubitState` 陳述式來變更。
+如果您需要可變更值的變數 (例如範例中的 `numOnes`)，您可以使用 `mutable` 關鍵字來宣告變數。 可變變數的值可使用 `set` 陳述式來變更。
 
 在這兩種情況下，都會由編譯器來推斷變數的類型。 Q# 變數不需要任何類型注釋。
 
@@ -169,7 +169,7 @@ Bell 這個名稱取自「貝爾狀態」，是指兩個量子位元的特定狀
 
 ## <a name="run-the-code-from-the-command-prompt"></a>從命令提示字元執行程式碼
 
-若要執行程式碼，我們必須 *指定編譯器，以在* 提供命令時呼叫以執行 `dotnet run` 。 這項作業是透過在檔案中的簡單變更來完成， Q# 方法是 `@EntryPoint()` `TestBellState` 在此案例中加入具有直接在可呼叫：作業的一行。 完整的程式碼應該是：
+若要執行程式碼，我們必須告訴編譯器，在我們提供命令時要 *執行的可* 呼叫 `dotnet run` 。 這項作業是透過在檔案中的簡單變更來完成， Q# 方法是 `@EntryPoint()` `TestBellState` 在此案例中加入具有直接在可呼叫：作業的一行。 完整的程式碼應該是：
 
 ```qsharp
 namespace Bell {
@@ -237,7 +237,7 @@ Test results (# of 0s, # of 1s):
 
 ### <a name="x-flips-qubit-state"></a>`X` 翻轉量子位狀態
 
-首先，我們將嘗試翻轉量子位元 (如果量子位元處於 `Zero` 狀態，會翻轉成 `One`，反之亦然)。 在 `TestBellState` 中加以測量之前先執行 `X` 作業，即可完成此動作：
+首先，我們會嘗試翻轉量子位 (如果量子位處於 `Zero` 狀態，它會翻轉為 `One` ，反之亦然) 。 在 `TestBellState` 中加以測量之前先執行 `X` 作業，即可完成此動作：
 
 ```qsharp
 X(qubit);
