@@ -7,9 +7,9 @@ summary: 描述由一系列的參數化和控制的旋轉、旋轉角度的指�
 syntax: newtype SequentialModel = (Microsoft.Quantum.MachineLearning.ControlledRotation[], Double[], Double);
 references: '- [arXiv:1804.00633](https://arxiv.org/abs/1804.00633)'
 metadata:
-  ms.openlocfilehash: 33608b412d9d67dc2a640e371a4f76b23982704e
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 80f55c8cc6a4334c43049517e535d2ed96f820a3
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89335695"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91465349"
