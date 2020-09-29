@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.excluding
+name: Excluding
+type: function
+namespace: microsoft.quantum.arrays
+summary: 傳回陣列，其中包含另一個陣列的元素，但不包括指定之索引清單中的元素。
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12, 13, 14, 15];
+
+  // The following line returns [10, 12, 15].
+
+  let subarray = Excluding([1, 3, 4], array);
+
+  ```
+syntax: "function Excluding (remove : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(remove : Int[], array : 'T[])"
+  types:
+  - name: remove
+    summary: 索引的陣列，表示應從輸出中排除的元素。
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: array
+    summary: 輸出陣列中的值所採用的陣列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: 陣列 `output` `output[0]` ，這是 `array` 其索引不會出現在中的第一個專案 `remove` ，例如 `output[1]` 第二個這類元素等等。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 陣列元素的類型。
+metadata:
+  ms.openlocfilehash: 4d11c4578b91eac6d59574900887dcb265f66898
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493554"

@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.count
+name: Count
+type: function
+namespace: microsoft.quantum.arrays
+summary: 針對陣列的元素定義陣列和述詞，會傳回陣列中的元素數目，這些專案是由滿足述詞的元素所組成。
+remarks: 函式是針對泛型型別定義的，也就是說，每當我們有陣列和述詞時，就 `'T[]` `'T -> Bool` 可以篩選元素。
+examples: >-
+  下列程式碼示範 "Count" 函式。
+
+  使用函式定義述詞 @"microsoft.quantum.logical.greaterthani" ：
+
+
+  ```Q#
+   let predicate = GreaterThanI(_, 5);
+   let count = Count(predicate, [2, 5, 9, 1, 8]);
+   // count = 2
+  ```
+syntax: "function Count (predicate : ('T -> Bool), array : 'T[]) : Int"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: predicate
+    summary: 從 `'T` 到布林值的函式，用來篩選元素。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: 的元素陣列 `'T` 。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Int
+  types:
+  - summary: 中符合述詞的元素數目 `array` 。
+    isPrimitive: true
+    uid: Int
+typeParameters:
+- uid: "'T"
+  summary: 元素的類型 `array` 。
+metadata:
+  ms.openlocfilehash: cac44615a0b871cdb33de827d2ff9bc0c08935d3
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493575"

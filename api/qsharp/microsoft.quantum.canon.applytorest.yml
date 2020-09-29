@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytorest
+name: ApplyToRest
+type: operation
+namespace: microsoft.quantum.canon
+summary: >-
+  將作業套用至陣列的第一個元素以外的所有專案。
+
+
+  假設有作業 `op` 和目標陣列，則 `targets` 適用 `op(Rest(targets))` 。
+examples: >-
+  下列 Q # 程式碼片段是相等的：
+
+
+  ```Q#
+
+  ApplyToRest(ApplyCNOTChain, register);
+
+  ApplyCNOTChain(Rest(register));
+
+  ```
+syntax: "operation ApplyToRest (op : ('T[] => Unit), targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T[] => Unit), targets : 'T[])"
+  types:
+  - name: op
+    summary: 要套用的作業。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 要套用之作業的輸入類型。
+seeAlso:
+- microsoft.quantum.canon.applytoresta
+- microsoft.quantum.canon.applytorestc
+- microsoft.quantum.canon.applytorestca
+metadata:
+  ms.openlocfilehash: 0b64522f93ccbe0d3fe093c39e6dbb58cbc16fc1
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493470"

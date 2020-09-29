@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytomost
+name: ApplyToMost
+type: operation
+namespace: microsoft.quantum.canon
+summary: >-
+  將作業套用至陣列的最後一個元素以外的所有專案。
+
+
+  假設有作業 `op` 和目標陣列，則 `targets` 適用 `op(Most(targets))` 。
+examples: >-
+  下列 Q # 程式碼片段是相等的：
+
+
+  ```Q#
+
+  ApplyToMost(ApplyCNOTChain, register);
+
+  ApplyCNOTChain(Most(register));
+
+  ```
+syntax: "operation ApplyToMost (op : ('T[] => Unit), targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T[] => Unit), targets : 'T[])"
+  types:
+  - name: op
+    summary: 要套用的作業。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 要套用之作業的輸入類型。
+seeAlso:
+- microsoft.quantum.canon.applytomosta
+- microsoft.quantum.canon.applytomostc
+- microsoft.quantum.canon.applytomostca
+metadata:
+  ms.openlocfilehash: e2b6ed4171425496c7da84ba522d56532028ce75
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493478"
