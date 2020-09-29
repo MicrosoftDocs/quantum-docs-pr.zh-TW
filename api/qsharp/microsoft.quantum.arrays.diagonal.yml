@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.diagonal
+name: Diagonal
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  傳回二維陣列的對角線元素陣列
+
+
+  如果二維陣列沒有方形圖形，則會傳回資料列和資料行數目最小值的對角線。
+examples: >-
+  ```Q#
+
+  let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+  let diagonal = Diagonal(matrix);
+
+  // same as: column = [1, 5, 9]
+
+  ```
+syntax: "function Diagonal (matrix : 'T[][]) : 'T[]"
+input:
+  content: "(matrix : 'T[][])"
+  types:
+  - name: matrix
+    summary: 以資料列順序排列的二維矩陣
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 之每個專案的型別 `matrix` 。
+seeAlso:
+- microsoft.quantum.arrays.transposed
+metadata:
+  ms.openlocfilehash: 3e8d56081dbac5eac36b71839c3d747d5350333c
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493571"

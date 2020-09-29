@@ -1,0 +1,81 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.sorted
+name: Sorted
+type: function
+namespace: microsoft.quantum.arrays
+summary: 指定陣列時，會傳回該陣列的元素，並依指定的比較函式排序。
+remarks: >-
+  函式 `comparison` 假設為可轉移，因此，如果 `comparison(a, b)` 和 `comparison(b, c)` ，則 `comparison(a, c)` 會假設為。 如果這個屬性不存在，則此函式的輸出可能會不正確。
+
+
+  因為這是函式，所以即使兩個元素被視為相等，也會完全 determinstic 結果，也 `comparison` 就是當 `comparison(a, b)` 和 `comparison(b, a)` 都是時 `true` 。
+
+  尤其是，此函式所執行的排序保證是穩定的，因此，如果在 `a` `b` 和內的兩個專案都是以相同的順序出現在中，則也會在 `array` `comparison` `a` `b` 輸出中顯示。
+
+
+  例如：
+
+
+  ```Q#
+
+  function LastDigitLessThanOrEqual(left : Int, right : Int) : Bool {
+      return LessThanOrEqualI(
+          left % 10, right % 10
+      );
+  }
+
+
+  function SortedByLastDigit() : Int[] {
+      return Sorted(LastDigitLessThanOrEqual, [3, 37, 11, 17]);
+  }
+
+  // returns [11, 3, 37, 17].
+
+  ```
+examples: >-
+  下列程式碼片段會以遞增順序排序要進行的整數陣列：
+
+
+  ```Q#
+
+  let sortedArray = Sorted(LessThanOrEqualI, [3, 17, 11, -201, -11]);
+
+  ```
+syntax: "function Sorted (comparison : (('T, 'T) -> Bool), array : 'T[]) : 'T[]"
+input:
+  content: "(comparison : (('T, 'T) -> Bool), array : 'T[])"
+  types:
+  - name: comparison
+    summary: 比較兩個元素的函式，如果是，則會將其 `a` 視為小於或等於 `b` `comparison(a, b)` `true` 。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: 要排序的陣列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 之每個專案的型別 `array` 。
+metadata:
+  ms.openlocfilehash: d20fad7286845f21dbb7e609d2bec37ee14adb90
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493514"

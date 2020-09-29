@@ -1,0 +1,66 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.unique
+name: Unique
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  傳回不等於相鄰元素的新陣列。
+
+
+  假設有一些元素陣列和函式測試是否相等，此函式會傳回新的陣列，其中會保留專案的相對順序，但是所有相等的相鄰元素都會篩選成隻有一個專案。
+remarks: 如果有多個元素相等，但彼此不同，則輸出陣列中會出現多個專案。  使用此函式搭配 `Sorted` 來取得具有整體唯一元素的陣列。
+examples: >-
+  ```Q#
+
+  let unique1 = Unique(EqualI, [1, 1, 3, 3, 2, 5, 5, 5, 7]);
+
+  // same as [1, 3, 2, 5, 7]
+
+  let unique2 = Unique(EqualI, [2, 2, 1, 1, 2, 2, 1, 1]);
+
+  // same as [2, 1, 2, 1];
+
+  let unique3 = Unique(EqualI, Sorted(LessThanOrEqualI, [2, 2, 1, 1, 2, 2, 1, 1]));
+
+  // same as [1, 2];
+
+  ```
+syntax: "function Unique (equal : (('T, 'T) -> Bool), array : 'T[]) : 'T[]"
+input:
+  content: "(equal : (('T, 'T) -> Bool), array : 'T[])"
+  types:
+  - name: equal
+    summary: 比較兩個元素的函式， `a` 如果是，則視為等於 `b` `equal(a, b)` `true` 。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: 要針對唯一元素篩選的陣列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: 不等於相鄰元素的陣列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 之每個專案的型別 `array` 。
+metadata:
+  ms.openlocfilehash: a47f41ce4298035bd2ccf23dfd26491349f946f7
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493499"

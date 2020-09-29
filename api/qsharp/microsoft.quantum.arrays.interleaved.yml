@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.interleaved
+name: Interleaved
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  交錯 (的兩個數組幾乎) 相同大小。
+
+
+  此函式會傳回兩個數組的交錯，從第一個陣列中的第一個元素開始，然後是第二個數組中的第一個元素，依此類推。
+
+
+  第一個陣列的長度必須與第二個數組的長度相同，或者可以有一個以上的元素。
+examples: >-
+  ```Q#
+
+  // same as int1 = [1, -1, 2, -2, 3, -3]
+
+  let int1 = Interleaved([1, 2, 3], [-1, -2, -3])
+
+
+  // same as int2 = [false, true, false, true, false]
+
+  let int2 = Interleaved(ConstantArray(3, false), ConstantArray(2, true));
+
+  ```
+syntax: "function Interleaved (first : 'T[], second : 'T[]) : 'T[]"
+input:
+  content: "(first : 'T[], second : 'T[])"
+  types:
+  - name: first
+    summary: 要交錯的第一個陣列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: second
+    summary: 要交錯的第二個數組。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: 交錯陣列
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 和之每個元素的型別 `first` `second` 。
+metadata:
+  ms.openlocfilehash: 4decfb4189f8e7fd320c5fdb67fbeab73109fd66
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493539"

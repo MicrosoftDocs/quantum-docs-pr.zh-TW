@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytorestc
+name: ApplyToRestC
+type: operation
+namespace: microsoft.quantum.canon
+summary: >-
+  將作業套用至陣列的第一個元素以外的所有專案。
+
+
+  假設有作業 `op` 和目標陣列，則 `targets` 適用 `op(Rest(targets))` 。
+syntax: "operation ApplyToRestC (op : ('T[] => Unit is Ctl), targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T[] => Unit is Ctl), targets : 'T[])"
+  types:
+  - name: op
+    summary: 要套用的作業。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 要套用之作業的輸入類型。
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytorest
+- microsoft.quantum.canon.applytoresta
+- microsoft.quantum.canon.applytorestca
+metadata:
+  ms.openlocfilehash: 47c9d975fb505013fde47b26db3beb93221cc7c5
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493467"

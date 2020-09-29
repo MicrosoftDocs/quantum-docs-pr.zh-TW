@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zipped4
+name: Zipped4
+type: function
+namespace: microsoft.quantum.arrays
+summary: 假設有四個數組，會傳回4個元組的新陣列，讓每個4元組包含每個原始陣列的元素。
+syntax: "function Zipped4 (first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[]) : ('T1, 'T2, 'T3, 'T4)[]"
+input:
+  content: "(first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[])"
+  types:
+  - name: first
+    summary: 陣列，其中包含每個元組的第一個元素值。
+    isArray: true
+    uid: "'T1"
+    isLocal: true
+  - name: second
+    summary: 陣列，其中包含每個元組的第二個元素的值。
+    isArray: true
+    uid: "'T2"
+    isLocal: true
+  - name: third
+    summary: 陣列，其中包含每個元組第三個元素的值。
+    isArray: true
+    uid: "'T3"
+    isLocal: true
+  - name: fourth
+    summary: 陣列，其中包含每個元組第四個元素的值。
+    isArray: true
+    uid: "'T4"
+    isLocal: true
+output:
+  content: ('T1, 'T2, 'T3, 'T4)[]
+  types:
+  - summary: 陣列，其中包含每個的表單4元組 `(first[idx], second[idx], third[idx], fourth[idx])` `idx` 。 如果四個數組的長度不相等，則輸出將會是輸入較短的時間長度。
+    isArray: true
+    types:
+    - uid: "'T1"
+      isLocal: true
+    - uid: "'T2"
+      isLocal: true
+    - uid: "'T3"
+      isLocal: true
+    - uid: "'T4"
+      isLocal: true
+typeParameters:
+- uid: "'T1"
+  summary: 第一個陣列元素的型別。
+- uid: "'T2"
+  summary: 第二個陣列元素的型別。
+- uid: "'T3"
+  summary: 第三個陣列元素的型別。
+- uid: "'T4"
+  summary: 第四個陣列元素的型別。
+seeAlso:
+- microsoft.quantum.arrays.zipped
+- microsoft.quantum.arrays.zipped3
+metadata:
+  ms.openlocfilehash: 12c6501fd173798718b2ab14d14d93b5d53361b6
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493491"
