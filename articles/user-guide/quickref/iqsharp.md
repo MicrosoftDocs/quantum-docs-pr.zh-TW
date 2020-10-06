@@ -8,12 +8,12 @@ uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4549afb84bf0084160079e3cef3a7f94dffcda3e
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833562"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771350"
 ---
 # <a name="ino-locq-magic-commands"></a>我的 Q# 神奇命令
 
@@ -34,7 +34,7 @@ ms.locfileid: "90833562"
 ### <a name="azure-quantum-integration"></a>Azure Quantum 整合
 
 - [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect)：連接到 Azure Quantum 工作區，或顯示目前的連接狀態。
-- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute)：在 Azure Quantum 工作區中執行工作。
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute)：將作業提交至 Azure Quantum 工作區，並等候完成。
 - [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs)：顯示目前 Azure Quantum 工作區中的作業清單。
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output)：顯示目前 Azure Quantum 工作區中工作的結果。
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status)：顯示目前 Azure Quantum 工作區中工作的狀態。

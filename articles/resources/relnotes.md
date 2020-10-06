@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492348"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771324"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -23,6 +23,12 @@ ms.locfileid: "91492348"
 如需安裝指示，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
+
+## <a name="version-01220100504"></a>版本0.12.20100504
+
+*發行日期：2020年10月5日*
+
+此版本修正了影響筆記本載入的錯誤 Q# (請參閱 [iqsharp # 331](https://github.com/microsoft/iqsharp/pull/331)) 。
 
 ## <a name="version-01220092803"></a>版本0.12.20092803
 
@@ -66,7 +72,7 @@ ms.locfileid: "91492348"
 
 此版本包含下列項目：
 
-- 在筆記本中開啟的命名空間 Q# 現在適用于未來所有的資料格計算。 例如，您可以在筆記本頂端的資料格中開啟一次命名空間，而不需要在每個程式碼資料格中開啟相關的命名空間。 新的 `%lsopen` 魔術命令會顯示目前開啟的命名空間清單。
+- 您現在可以在執行所有未來的資料格時，在筆記本中開啟的命名空間 Q# 。 例如，您可以在筆記本頂端的資料格中開啟一次命名空間，而不需要在每個程式碼資料格中開啟相關的命名空間。 新的 `%lsopen` 魔術命令會顯示目前開啟的命名空間清單。
 
 請參閱連結[庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[運行](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)時間、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed)和[Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)的封閉式 pr 完整清單。  
 
