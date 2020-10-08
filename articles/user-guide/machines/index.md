@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833435"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771302"
 ---
 # <a name="quantum-simulators"></a>量子模擬器
 
@@ -24,7 +24,7 @@ ms.locfileid: "90833435"
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Quantum 開發套件 (QDK) 量子模擬器
 
-量子模擬器負責為演算法提供量子基元的實作。 這包括基元操作 (例如 `H`、`CNOT`、`Measure`) 以及量子位元的管理和追蹤。 QDK 包含不同的量子模擬器類別，代表相同量子演算法的不同執行模型。 
+量子模擬器負責為演算法提供量子基元的實作。 這包括基元操作 (例如 `H`、`CNOT`、`Measure`) 以及量子位元的管理和追蹤。 QDK 包含不同的量子模擬器類別，代表模擬相同量子演算法的不同方式。 
 
 
 每種量子模擬器都可以針對這些基元提供不同的實作。 例如，[完整狀態模擬器](xref:microsoft.quantum.machines.full-state-simulator)會藉由完全模擬[量子狀態向量](xref:microsoft.quantum.glossary#quantum-state)來執行量子演算法，而[量子電腦追蹤模擬器](xref:microsoft.quantum.machines.qc-trace-simulator.intro)根本不會考慮實際的量子狀態。 相反地，該模擬器會追蹤該演算法的量子閘、量子位元和其他資源使用狀況。

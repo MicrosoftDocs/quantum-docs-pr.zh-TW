@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833353"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771301"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum 開發套件 (QDK) 量子追蹤模擬器
 
@@ -86,7 +86,7 @@ QDK 有五個可搭配量子追蹤模擬器使用的工具，用來偵測程式�
 |-----| -----|
 |[相異輸入檢查工具](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |檢查共用的量子位元是否有潛在的衝突 |
 |[不正確的量子位元使用檢查工具](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |檢查程式是否將作業套用至已發行的量子位元 |
-|[基元操作計數器](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 計算在量子程式中叫用的每個作業所使用的基本流程次數  |
+|[基元操作計數器](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 計算在量子程式中叫用的每個作業所使用的基本次數  |
 |[深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |收集計數，此計數代表在量子程式中所叫用每個作業的深度下限   |
 |[寬度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |計算量子程式中每個作業所配置和借用的量子佔元數目 |
 
