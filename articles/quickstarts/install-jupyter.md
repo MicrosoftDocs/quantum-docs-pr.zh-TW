@@ -10,18 +10,18 @@ uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834307"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771398"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>使用 Q# Jupyter Notebook 進行開發
 
 安裝 QDK 以在 Q# Jupyter Notebook 上開發 Q# 作業。
 
-Jupyter Notebook 允許就地程式碼計算，連同指示、備註與其他內容。 此環境很適合用來撰寫含內嵌說明或配量運算互動式教學課程的 Q# 程式碼。 以下是您開始建立自己的 Q# 筆記本時所需執行的動作。
+Jupyter Notebook 允許就地執行指示、備註與其他內容旁的程式碼。 此環境很適合用來撰寫含內嵌說明或配量運算互動式教學課程的 Q# 程式碼。 以下是您開始建立自己的 Q# 筆記本時所需執行的動作。
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>安裝 IQ# Jupyter 核心
 
