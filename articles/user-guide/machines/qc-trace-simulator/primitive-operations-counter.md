@@ -9,22 +9,22 @@ uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835973"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690954"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>量子追蹤模擬器：基本操作計數器
 
 基本操作計數器是量子開發工具組 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的一部分。 它會計算量副程式中叫用的每個作業所使用的基本進程數目。 
 
-所有 <xref:microsoft.quantum.intrinsic> 作業都是以單一量子位的旋轉、T 運算、單一量子位 Clifford 作業、CNOT 作業以及多量子位 Pauli 可預見值的度量來表示。 基本操作計數器會匯總並收集作業 [呼叫圖形](https://en.wikipedia.org/wiki/Call_graph)所有邊緣的統計資料。
+所有 <xref:Microsoft.Quantum.Intrinsic> 作業都是以單一量子位的旋轉、T 運算、單一量子位 Clifford 作業、CNOT 作業以及多量子位 Pauli 可預見值的度量來表示。 基本操作計數器會匯總並收集作業 [呼叫圖形](https://en.wikipedia.org/wiki/Call_graph)所有邊緣的統計資料。
 
 ## <a name="invoking-the-primitive-operation-counter"></a>叫用基本操作計數器
 
-若要使用基本操作計數器執行量子追蹤模擬器，您必須建立 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 實例、將 `UsePrimitiveOperationsCounter` 屬性設為 **true**，然後以 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 做為參數來建立新的實例 `QCTraceSimulatorConfiguration` 。
+若要使用基本操作計數器執行量子追蹤模擬器，您必須建立 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 實例、將 `UsePrimitiveOperationsCounter` 屬性設為 **true** ，然後以 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 做為參數來建立新的實例 `QCTraceSimulatorConfiguration` 。
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>使用 c # 主機程式中的基本操作計數器
 
-本節中的 c # 範例 <xref:microsoft.quantum.intrinsic.t> 會 <xref:microsoft.quantum.intrinsic.ccnot> 根據下列範例程式碼，計算執行作業所需的作業數目 Q# ：
+本節中的 c # 範例 <xref:Microsoft.Quantum.Intrinsic.T> 會 <xref:Microsoft.Quantum.Intrinsic.ccnot> 根據下列範例程式碼，計算執行作業所需的作業數目 Q# ：
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -75,7 +75,7 @@ double cxCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveO
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - 量子開發工具組 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 模擬器總覽。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 參考。

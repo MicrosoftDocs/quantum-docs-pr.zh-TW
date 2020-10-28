@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835837"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691598"
 ---
 # <a name="expressions-in-no-locq"></a>中的運算式 Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 您可以使用或不含小數點、或 `.` 以 ' e ' 或 ' e (' 表示的指數部分來撰寫它們，但在這種情況下，只有可能的負號和小數位數是有效的) 。
 以下是有效的 `Double` 常值： `0.0` 、 `1.2e5` 、 `1e-5` 。
 
-如果有任何專案類型的陣列運算式，您可以使用內 `Int` 建函數來形成運算式 [`Length`](xref:microsoft.quantum.core.length) ，並以括弧括住陣列運算式。
+如果有任何專案類型的陣列運算式，您可以使用內 `Int` 建函數來形成運算式 [`Length`](xref:Microsoft.Quantum.Core.Length) ，並以括弧括住陣列運算式。
 例如，如果系結 `a` 至陣列，則 `Length(a)` 為整數運算式。
 如果 `b` 是整數陣列的陣列， `Int[][]` 則 `Length(b)` 為中的子陣列數目， `b` 而 `Length(b[1])` 是中第二個子陣列中的整數數目 `b` 。
 
@@ -111,7 +111,7 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a>字串運算式
 
-Q# 允許在語句中使用字串 `fail` (在 [控制流程](xref:microsoft.quantum.guide.controlflow#fail-statement)) 和標準函式中所述 [`Message`](xref:microsoft.quantum.intrinsic.message) 。 後者的特定行為取決於使用的模擬器，但通常會在程式期間呼叫時，將訊息寫入主機主控台 Q# 。
+Q# 允許在語句中使用字串 `fail` (在 [控制流程](xref:microsoft.quantum.guide.controlflow#fail-statement)) 和標準函式中所述 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 。 後者的特定行為取決於使用的模擬器，但通常會在程式期間呼叫時，將訊息寫入主機主控台 Q# 。
 
 中的字串 Q# 是常值或字串插值。
 
@@ -128,7 +128,7 @@ Q#字串插補的語法是 c # 語法的子集。 以下是其相關的重點 Q#
 
 * 若要將字串常值識別為插入字串，請在其前面加上 `$` 符號。 `$`與開始字串常值的之間不能有空白字元 `"` 。
 
-* 以下是使用 [`Message`](xref:microsoft.quantum.intrinsic.message) 函數將測量結果與其他運算式一起寫入至主控台的基本範例 Q# 。
+* 以下是使用 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 函數將測量結果與其他運算式一起寫入至主控台的基本範例 Q# 。
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ Q#字串插補的語法是 c # 語法的子集。 以下是其相關的重點 Q#
 
 除了常值以外，唯一的元組運算式是系結至元組值的符號、元組陣列的陣列元素，以及傳回元組的可呼叫調用。
 
-## <a name="user-defined-type-expressions"></a>使用者定義型別運算式
+## <a name="user-defined-type-expressions"></a>User-Defined 類型運算式
 
 使用者定義型別的常值包含型別名稱，後面接著型別的基底元組類型的元組常值。
 例如，如果 `IntPair` 是根據的使用者定義型別，則 `(Int, Int)` `IntPair(2, 3)` 是該類型的有效常值。
@@ -237,7 +237,7 @@ let g = Foo(arg)!;      // Syntax error
 
 對於實體參考的量子位和 callables，沒有合理的預設值。
 因此，對於這些型別，預設值是不正確參考，您無法使用而不會造成執行階段錯誤，類似于 c # 或 JAVA 等語言中的 null 參考。
-包含量子位或 callables 的陣列必須使用非預設值來初始化，才能安全地使用其專案。 如需適當的初始化常式，請參閱 <xref:microsoft.quantum.arrays> 。
+包含量子位或 callables 的陣列必須使用非預設值來初始化，才能安全地使用其專案。 如需適當的初始化常式，請參閱 <xref:Microsoft.Quantum.Arrays> 。
 
 每個類型的預設值為：
 
@@ -448,7 +448,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 
 叫用 [型別參數化](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) 可呼叫時，您可以在可呼叫的運算式之後，于角括弧內指定實際的型別參數 `< >` 。
 這通常不是必要動作，因為 Q# 編譯器會推斷實際的類型。
-但是，如果未指定型別參數化引數，[部分應用程式](xref:microsoft.quantum.guide.operationsfunctions#partial-application)*就*需要它。
+但是，如果未指定型別參數化引數， [部分應用程式](xref:microsoft.quantum.guide.operationsfunctions#partial-application)*就* 需要它。
 將具有不同仿函數支援的作業傳遞給可呼叫的時，它也很有用。
 
 例如，如果有簽章，而且有簽章和簽章，則 `Func` `('T1, 'T2, 'T1) -> 'T2` `Op1` `Op2` 會 `(Qubit[] => Unit is Adj)` `Op3` `(Qubit[] => Unit)` `Func` 使用 `Op1` 做為第一個引數做為第二個引數，並做為第三個引數 `Op2` `Op3` ：

@@ -9,14 +9,14 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835616"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690871"
 ---
-# <a name="higher-order-control-flow"></a>高階控制流程 #
+# <a name="higher-order-control-flow"></a>Higher-Order 控制流程 #
 
 標準程式庫的其中一個主要角色，是讓您更輕鬆地以 [量副程式](https://en.wikipedia.org/wiki/Quantum_programming)表示高階演算法的概念。
 因此， Q# canon 會提供各種不同的流程式控制制結構，每個都使用函式和作業的部分應用程式來執行。
@@ -38,7 +38,7 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-以 <xref:microsoft.quantum.canon.applytoeachca> 和陣列操作函式（例如）表示， <xref:microsoft.quantum.arrays.zip> 這樣做會更短且更容易閱讀：
+以 <xref:Microsoft.Quantum.Canon.ApplyToEachCA> 和陣列操作函式（例如）表示， <xref:Microsoft.Quantum.Arrays.Zipped> 這樣做會更短且更容易閱讀：
 
 ```qsharp
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
@@ -50,7 +50,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 Canon 所提供的其中一個主要抽象概念是反覆運算的。
 例如，假設有一個表單 $U \otimes U \otimes \cdots \otimes U $，適用于單一量子位的單一 $U $。
-在中 Q# ，我們可能會使用將它表示為在暫存器 <xref:microsoft.quantum.arrays.indexrange> `for` 上的迴圈：
+在中 Q# ，我們可能會使用將它表示為在暫存器 <xref:Microsoft.Quantum.Arrays.IndexRange> `for` 上的迴圈：
 
 ```qsharp
 /// # Summary
@@ -83,16 +83,16 @@ ApplyToEachCA(Adjoint U, register);
 ```
 
 特別是，這表示呼叫 `ApplyToEachCA` 可以出現在自動產生 adjoint 特製化的作業中。
-同樣地，適用 <xref:microsoft.quantum.canon.applytoeachindex> 于表示表單的模式 `U(0, targets[0]); U(1, targets[1]); ...` ，並針對其輸入所支援的每個函子組合提供版本。
+同樣地，適用 <xref:Microsoft.Quantum.Canon.ApplyToEachIndex> 于表示表單的模式 `U(0, targets[0]); U(1, targets[1]); ...` ，並針對其輸入所支援的每個函子組合提供版本。
 
 > [!TIP]
 > `ApplyToEach` 是型別參數化，因此可以搭配使用以外輸入的作業來使用 `Qubit` 。
-> 例如，假設 `codeBlocks` 是 <xref:microsoft.quantum.errorcorrection.logicalregister> 需要復原的值陣列。
+> 例如，假設 `codeBlocks` 是 <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister> 需要復原的值陣列。
 > 然後， `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` 會將錯誤更正程式碼和復原函式 `code` 個別套用 `recoveryFn` 至每個區塊。
 > 這甚至適用于傳統的輸入： `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` 會套用 $ \pi/$2 的旋轉大約 $X $，後面接著 $pi/$3 $Y $ 的旋轉。
 
 Q#Canon 也提供對功能性程式設計熟悉之傳統列舉模式的支援。
-例如，會 <xref:microsoft.quantum.arrays.fold> 將模式 $f (f (f (s \_ {\text{initial}}，x \_ 0) ，x \_ 1) ，\dots ..) $ 以減少清單上的函式。
+例如，會 <xref:Microsoft.Quantum.Arrays.Fold> 將模式 $f (f (f (s \_ {\text{initial}}，x \_ 0) ，x \_ 1) ，\dots ..) $ 以減少清單上的函式。
 此模式可用來執行 sum、products、最小值、maxima 和其他這類函數：
 
 ```qsharp
@@ -103,12 +103,12 @@ function Sum(xs : Int[]) {
 }
 ```
 
-同樣地， <xref:microsoft.quantum.arrays.mapped> 和等函式 <xref:microsoft.quantum.arrays.mappedbyindex> 可以用來在中表達功能性程式設計概念 Q# 。
+同樣地， <xref:Microsoft.Quantum.Arrays.Mapped> 和等函式 <xref:Microsoft.Quantum.Arrays.MappedByIndex> 可以用來在中表達功能性程式設計概念 Q# 。
 
 ## <a name="composing-operations-and-functions"></a>撰寫作業和函數 ##
 
 Canon 所提供的控制流程結構會將作業和函式作為其輸入，因此可將數個作業或函式組合成單一可呼叫的功能。
-比方說，在量副程式設計中，模式 $UVU ^ {\dagger} $ 非常常見，因此 canon 會將作業提供 <xref:microsoft.quantum.canon.applywith> 為此模式的抽象概念。
+比方說，在量副程式設計中，模式 $UVU ^ {\dagger} $ 非常常見，因此 canon 會將作業提供 <xref:Microsoft.Quantum.Canon.ApplyWith> 為此模式的抽象概念。
 此抽象概念也可讓您以更有效率的方式編譯線路，因為 `Controlled` 在順序上 `U(qubit); V(qubit); Adjoint U(qubit);` 採取動作並不需要採取任何動作 `U` 。
 若要查看這一點，請讓 $c (U) $ 成為單一代表 `Controlled U([control], target)` ，並讓 $c (V) $ 以相同方式定義。
 然後，針對任意狀態 $ \ket{\psi} $、\begin{align} c (U) c (V) c (U) ^ \dagger \ket {1} \otimes \ket{\psi} & = \ket {1} \OTIMES (UVU ^ {\dagger} \ket{\psi} ) \\ \\ & = ( \boldone \otimes U)  (c (V) # A13 ( \boldone \otimes U ^ \dagger) \ket {1} \otimes \ket{\psi}。
@@ -126,7 +126,7 @@ Canon 所提供的控制流程結構會將作業和函式作為其輸入，因�
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-同樣地，會 <xref:microsoft.quantum.canon.bound> 產生可依序套用一連串其他作業的作業。
+同樣地，會 <xref:Microsoft.Quantum.Canon.Bound> 產生可依序套用一連串其他作業的作業。
 例如，以下是相等的：
 
 ```qsharp
@@ -141,7 +141,7 @@ Bound([H, X], qubit);
 ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
-### <a name="time-ordered-composition"></a>依時間排序的組合 ###
+### <a name="time-ordered-composition"></a>Time-Ordered 組合 ###
 
 我們還可以在部分應用程式和傳統函式的角度考慮流量控制，也可以根據傳統流量控制來建立更複雜的量子概念模型。
 這種比喻是由單一運算子精確對應至呼叫作業的副作用來精確地進行，例如，任何以其他單一運算子來分解的單一運算子，都對應于針對發出指示做為特定單一運算子的傳統副程式來建立特定的呼叫序列。
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-到目前為止，我們現在可以在 *沒有量子機制參考的情況*下，Trotter – Suzuki 擴充的原因。
+到目前為止，我們現在可以在 *沒有量子機制參考的情況* 下，Trotter – Suzuki 擴充的原因。
 擴充實際上是由 $ \eqref{eq： trotter-suzuki-0} $ 所動機的一種非常特定的反復專案模式。
-此反復專案模式的實作為 <xref:microsoft.quantum.canon.decomposeintotimestepsca> ：
+此反復專案模式的實作為 <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> ：
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -180,7 +180,7 @@ DecomposeIntoTimeStepsCA((2, U), 1);
 最後，canon 會藉 `Controlled` 由提供其他方式來進行量子運算的條件，以建立在仿函數上。
 在計算基礎狀態（$ \ket{0\cdots 0} $）的情況下，這種情況通常很常見，尤其是在量子算術中。
 使用上述的控制項作業和函式，我們可以在單一語句中使用更一般的量子條件。
-讓我們來看看 <xref:microsoft.quantum.canon.controlledonbitstring> 它如何 (san 型別參數) ，然後逐一細分這些片段。
+讓我們來看看 <xref:Microsoft.Quantum.Canon.ControlledOnBitString> 它如何 (san 型別參數) ，然後逐一細分這些片段。
 我們必須做的第一件事，是定義一項作業，以實際執行在任意計算基礎狀態中執行控制項的繁重工作。
 不過，我們不會直接呼叫這項作業，因此我們要加入 `_` 名稱的開頭，以指出它是在其他位置的另一個結構。
 
@@ -212,8 +212,8 @@ operation _ControlledOnBitString(
 }
 ```
 
-在這裡，我們用 <xref:microsoft.quantum.canon.applypaulifrombitstring> 來套用 $P $，部分套用至其目標，以搭配使用 `ApplyWith` 。
-不過請注意，我們需要將 *控制項* 暫存器轉換成所需的表單，因此我們會 `(Controlled oracle)` 在 *目標*上部分套用內部作業。
+在這裡，我們用 <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> 來套用 $P $，部分套用至其目標，以搭配使用 `ApplyWith` 。
+不過請注意，我們需要將 *控制項* 暫存器轉換成所需的表單，因此我們會 `(Controlled oracle)` 在 *目標* 上部分套用內部作業。
 這會 `ApplyWith` 讓以 $P $ 的括弧括住控制項暫存器，就像我們所要的一樣。
 
 到目前為止，我們可以完成這項作業，但 unsatisfying 新的作業不會像套用仿函數一樣「感覺」 `Controlled` 。

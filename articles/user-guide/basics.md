@@ -1,5 +1,5 @@
 ---
-title: Q# 基礎
+title: Q# 基本概念
 description: 的基本概念 Q#
 author: gillenhaalb
 ms.author: a-gibec
@@ -9,14 +9,14 @@ uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b3bc0841eabeac5d3968776f9dab3a02b1a1eef9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835514"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691625"
 ---
-# <a name="no-locq-basics"></a>Q# 基礎
+# <a name="no-locq-basics"></a>Q# 基本概念
 
 本文提供的基本組建區塊簡介 Q# 。
 
@@ -28,7 +28,7 @@ ms.locfileid: "90835514"
 該觀點的重要結果是，程式不 Q# 會直接建立量子位本身的模型，而是說明傳統方式控制的電腦如何與這些量子位互動。
 根據設計，不 Q# 會直接定義量子狀態或量子機制的其他屬性。
 比方說，請考慮「量子運算概念指南」中所討論的「狀態 $ \ket{+} = \left ( \ket {0} + \ket {1} \right) /\sqrt {2} $。 [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro)
-若要在中準備此狀態 Q# ，請從量子位在 $ \ket $ 狀態中初始化的事實開始， {0} 以及該 $ \ket{+} = H\ket {0} $，其中 $H $ 是[ `H` 作業所](xref:microsoft.quantum.intrinsic.h)執行的[Hadamard 轉換](xref:microsoft.quantum.glossary#hadamard)。 初始化和轉換量子位的基本程式碼，如下所 Q# 示：
+若要在中準備此狀態 Q# ，請從量子位在 $ \ket $ 狀態中初始化的事實開始， {0} 以及該 $ \ket{+} = H\ket {0} $，其中 $H $ 是[ `H` 作業所](xref:Microsoft.Quantum.Intrinsic.H)執行的[Hadamard 轉換](xref:microsoft.quantum.glossary#hadamard)。 初始化和轉換量子位的基本程式碼，如下所 Q# 示：
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -37,7 +37,7 @@ using (qubit = Qubit()) {
     // H is now applied, such that the qubit is in H|0⟩ = |+⟩, as desired.
 }
 ```
-如需 *初始化或配置*量子位的詳細資訊，請參閱 [使用量子位](xref:microsoft.quantum.guide.qubits)。
+如需 *初始化或配置* 量子位的詳細資訊，請參閱 [使用量子位](xref:microsoft.quantum.guide.qubits)。
 
 ## <a name="quantum-states-in-no-locq"></a>中的量子狀態 Q#
 
@@ -45,24 +45,24 @@ using (qubit = Qubit()) {
 使用這種方法時，您可以完全無從確定每個目的電腦 *上的* 量子狀態為何，根據電腦而定，可能會有不同的解釋。 
 
 Q#程式無法 introspect 至量子位的狀態。
-相反地，程式可以呼叫的作業（例如， [`Measure`](xref:microsoft.quantum.intrinsic.measure) 從量子位中學習資訊），然後呼叫和之類的作業 [`X`](xref:microsoft.quantum.intrinsic.x) 來處理 [`H`](xref:microsoft.quantum.intrinsic.h) 量子位的狀態。
+相反地，程式可以呼叫的作業（例如， [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) 從量子位中學習資訊），然後呼叫和之類的作業 [`X`](xref:Microsoft.Quantum.Intrinsic.X) 來處理 [`H`](xref:Microsoft.Quantum.Intrinsic.H) 量子位的狀態。
 這些作業實際 *執行* 的動作，只會由用來執行特定程式的目的電腦來具體處理 Q# 。
 例如，如果在我們的 [完整狀態](xref:microsoft.quantum.machines.full-state-simulator)模擬器上執行程式，模擬器會對模擬的量子系統執行對應的數學運算。
-但在未來，當目的電腦是真實量子電腦時，在中呼叫這類操作會 Q# 引導量子電腦在*真正*的量子系統上執行對應的*實際*操作，例如，精確地計時的雷射脈衝) 。
+但在未來，當目的電腦是真實量子電腦時，在中呼叫這類操作會 Q# 引導量子電腦在 *真正* 的量子系統上執行對應的 *實際* 操作，例如，精確地計時的雷射脈衝) 。
 
 Q#程式會 recombines 目的電腦所定義的這些作業，以建立新的較高層級作業來表示量子計算。
 如此一來，就能 Q# 輕鬆地表達基礎量子和混合式量子的邏輯，也就是目的電腦或模擬器的結構一般。
 
 ## <a name="no-locq-operations-and-functions"></a>Q# 作業和函式
 
-具體而言， Q# 套裝程式含 *作業*、 *函數*和任何使用者定義型別。 
+具體而言， Q# 套裝程式含 *作業* 、 *函數* 和任何使用者定義型別。 
 
 作業是用來描述量子系統的轉換，而且是最基本的程式組建區塊 Q# 。 中定義的每個 Q# 作業都會呼叫任何數目的其他作業。
 
 與作業不同的是，函式是用來描述純粹具 *決定性* 的傳統行為，而且除了計算傳統值之外，沒有任何影響。 例如，假設您想要測量程式結尾的量子位，並將測量結果新增至陣列。
-在此情況下， `Measure` 是*operation*一項作業，會指示目的電腦對 (real 或模擬) 量子位進行測量。 同樣地，函式會處理將傳回的結果新增至陣列的 *傳統處理常式* 。
+在此情況下， `Measure` 是 *operation* 一項作業，會指示目的電腦對 (real 或模擬) 量子位進行測量。 同樣地，函式會處理將傳回的結果新增至陣列的 *傳統處理常式* 。
 
-作業和函數統稱為 *callables*。 中導入了其基礎結構和行為，並詳細說明[中 Q# 的作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。
+作業和函數統稱為 *callables* 。 中導入了其基礎結構和行為，並詳細說明[中 Q# 的作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。
 
 
 ## <a name="no-locq-syntax-overview"></a>Q# 語法總覽
@@ -94,7 +94,7 @@ Q# 是一種強型別語言，可讓編譯器在編譯時期提供程式的強�
 let count = 5;
 ```
 
-比較有趣的範例是 `for` 支援反覆運算的語句，並包含 *語句區塊*。
+比較有趣的範例是 `for` 支援反覆運算的語句，並包含 *語句區塊* 。
 假設是系結至量子位之暫存器的 `qubits` 符號， (的型別或型別的 `Qubit[]` 陣列 `Qubit`) 。 結果為
 ```qsharp
 for (qubit in qubits) {

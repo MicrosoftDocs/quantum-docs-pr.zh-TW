@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 476e93e3737dee6ad8f3a97e8ffbcfb9b0012ee1
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833903"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691522"
 ---
 # <a name="quantum-machine-learning-glossary"></a>量子 Machine Learning 詞彙
 
@@ -30,7 +30,7 @@ ms.locfileid: "90833903"
 
 ## <a name="hyperparameters"></a>超參數
 
-模型定型程式是由稱為 *超參數*的特定預先設定值所控制：
+模型定型程式是由稱為 *超參數* 的特定預先設定值所控制：
 
 ### <a name="learning-rate"></a>學習率
 
@@ -56,9 +56,10 @@ ms.locfileid: "90833903"
 
 #### <a name="how-to-modify-the-hyperparameters"></a>如何修改超參數
 
-在 QML 程式庫中，修改超參數的最佳方式是覆寫 UDT 的預設值 [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions) 。 若要這樣做，我們會使用函式來呼叫它 [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) ，並套用運算子 `w/` 以覆寫預設值。 例如，若要使用100000測量和0.01 的學習率：
- ```qsharp
+在 QML 程式庫中，修改超參數的最佳方式是覆寫 UDT 的預設值 [`TrainingOptions`](xref:Microsoft.Quantum.MachineLearning.TrainingOptions) 。 若要這樣做，我們會使用函式來呼叫它 [`DefaultTrainingOptions`](xref:Microsoft.Quantum.MachineLearning.DefaultTrainingOptions) ，並套用運算子 `w/` 以覆寫預設值。 例如，若要使用100000測量和0.01 的學習率：
+
+```qsharp
 let options = DefaultTrainingOptions()
 w/ LearningRate <- 0.01
 w/ NMeasurements <- 100000;
- ```
+```

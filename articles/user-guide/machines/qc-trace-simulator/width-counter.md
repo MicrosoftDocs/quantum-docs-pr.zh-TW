@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 701c36dd8c8b087a2728cd935aee0c2ffc4f59f9
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835939"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691118"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>量子追蹤模擬器：寬度計數器
 
@@ -22,7 +22,7 @@ ms.locfileid: "90835939"
 
 ## <a name="invoking-the-width-counter"></a>叫用寬度計數器
 
-若要使用 width 計數器執行量子追蹤模擬器，您必須建立 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 實例、將 `UseWidthCounter` 屬性設為 **true**，然後以 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 做為參數來建立新的實例 `QCTraceSimulatorConfiguration` 。 
+若要使用 width 計數器執行量子追蹤模擬器，您必須建立 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 實例、將 `UseWidthCounter` 屬性設為 **true** ，然後以 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 做為參數來建立新的實例 `QCTraceSimulatorConfiguration` 。 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -32,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>在 c # 主機程式中使用 width 計數器
 
-本節後面的 c # 範例會 <xref:microsoft.quantum.intrinsic.x> 根據下列範例程式碼，來計算由乘法受控制作業所配置的額外量子位數目 Q# ：
+本節後面的 c # 範例會 <xref:Microsoft.Quantum.Intrinsic.X> 根據下列範例程式碼，來計算由乘法受控制作業所配置的額外量子位數目 Q# ：
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -44,7 +44,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-相乘控制的作業會 <xref:microsoft.quantum.intrinsic.x> 在總共五個量子位上運作，配置兩個 [附屬量子位](xref:microsoft.quantum.glossary#ancilla)，且輸入寬度為 **5**。 使用下列 c # 程式來確認計數：
+相乘控制的作業會 <xref:Microsoft.Quantum.Intrinsic.X> 在總共五個量子位上運作，配置兩個 [附屬量子位](xref:microsoft.quantum.glossary#ancilla)，且輸入寬度為 **5** 。 使用下列 c # 程式來確認計數：
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
@@ -71,7 +71,7 @@ double inputWidth =
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - 量子開發工具組 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 模擬器總覽。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 參考。

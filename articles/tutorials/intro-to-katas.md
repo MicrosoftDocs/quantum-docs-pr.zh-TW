@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b2eff2a457b809bd168b9b59ab013b7fc7541e6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834817"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691650"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>透過 Quantum Katas 學習量子運算
 
@@ -55,7 +55,7 @@ ms.locfileid: "90834817"
 |[辨識量子閘](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|一系列的練習，旨在讓您熟悉中的基本量子閘道 Q# 。 包括適用於基本單一量子位元和多量子位元量子閘的練習、伴隨和控制的量子閘，以及如何使用量子閘來修改量子位元的狀態。|
 |[建立量子疊加](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|使用這些練習，熟悉中的迭加和程式設計概念 Q# 。 包含在中進行基本單一量子位和多量子位閘道、迭加和流程式控制制和遞迴的練習 Q# 。|
 |[使用測量來區別量子狀態](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|請解決這些練習，了解量子測量和正交與非正交狀態。 |
-|[聯結測量](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|了解聯合同位測量，以及如何使用[量值](xref:microsoft.quantum.intrinsic.measure)作業來區別量子狀態。|
+|[聯結測量](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|了解聯合同位測量，以及如何使用[量值](xref:Microsoft.Quantum.Intrinsic.Measure)作業來區別量子狀態。|
 
 ### <a name="algorithms"></a>演算法
 

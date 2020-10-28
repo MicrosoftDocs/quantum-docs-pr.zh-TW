@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771324"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691676"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -23,6 +23,16 @@ ms.locfileid: "91771324"
 如需安裝指示，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
+
+## <a name="version-01320102604"></a>版本0.13.20102604
+
+*發行日期：2020年10月27日、*
+
+此版本包含下列項目：
+
+- 資源估計現在除了量子位元數目之外，也會同時發出可達成的深度和寬度估計值。 如需詳細資料，請參閱[這裡](xref:microsoft.quantum.machines.resources-estimator#metrics-reported)。
+
+請參閱連結[庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22)、[運行](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22)時間、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22)和[Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22)的封閉式 pr 完整清單。
 
 ## <a name="version-01220100504"></a>版本0.12.20100504
 
@@ -54,8 +64,8 @@ ms.locfileid: "91771324"
 
 此版本包含下列項目：
 
-- 新的 [Microsoft 量子命名空間](xref:microsoft.quantum.random)，提供更方便的方式，從程式內取樣隨機值 Q# 。  ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311)， [qsharp-runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328)) 
-- 改進了[具有新作業的 `DumpOperation` ](xref:microsoft.quantum.diagnostics.dumpoperation) [Microsoft 量子. 診斷命名空間](xref:microsoft.quantum.diagnostics)，以及限制量子位配置和 oracle 呼叫的新作業。  ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302)) 
+- 新的 [Microsoft 量子命名空間](xref:Microsoft.Quantum.Random)，提供更方便的方式，從程式內取樣隨機值 Q# 。  ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311)， [qsharp-runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328)) 
+- 改進了[具有新作業的 `DumpOperation` ](xref:Microsoft.Quantum.Diagnostics.DumpOperation) [Microsoft 量子. 診斷命名空間](xref:Microsoft.Quantum.Diagnostics)，以及限制量子位配置和 oracle 呼叫的新作業。  ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302)) 
 - Python 中的新[ `%project` 魔術命令](xref:microsoft.quantum.iqsharp.magic-ref.project) Q# 和 Python 中的[ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) ，可支援對 Q# 目前工作區資料夾以外專案的參考。 如需這項功能目前的限制，請參閱 [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) 。 
 - 支援自動載入 `.csproj` /Python 主機的檔案 Q# ，可讓您在初始化時載入外部專案或封裝參考。 如需詳細資訊，請參閱使用[ Q# Python 和 Jupyter 筆記本](xref:microsoft.quantum.guide.host-programs)的指南。
 - 新增了 ErrorCorrection 的症狀範例。
@@ -83,7 +93,7 @@ ms.locfileid: "91771324"
 此版本包含下列項目：
 
 - `qdk-chem`用於轉換舊版電子結構問題序列化格式的新工具 (例如： FCIDUMP) 至[Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
-- 命名空間中的新函 [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) 式和作業時使用轉換和分解型合成演算法來套用傳統 oracle。
+- 命名空間中的新函 [`Microsoft.Quantum.Synthesis`](xref:Microsoft.Quantum.Synthesis) 式和作業時使用轉換和分解型合成演算法來套用傳統 oracle。
 - 我 Q# 現在允許 `%simulate` 、 `%estimate` 和其他魔術命令的引數。 如需詳細資訊，請參閱[ `%simulate` 魔術命令參考](xref:microsoft.quantum.iqsharp.magic-ref.simulate)。
 - I 中的新階段顯示選項 Q# 。如需詳細資訊，請參閱[ `%config` 魔術命令參考](xref:microsoft.quantum.iqsharp.magic-ref.config)。
 - 我 Q# 和 `qsharp` python 套件現在透過 conda 套件提供 ([qsharp](https://anaconda.org/quantum-engineering/qsharp) 和 [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) ，以簡化 Q# conda 環境中 Jupyter 和 Python 功能的本機安裝。 如需詳細資訊，請參閱[ Q# Jupyter 筆記本](xref:microsoft.quantum.install.jupyter)和[ Q# Python](xref:microsoft.quantum.install.python)安裝指南。
@@ -130,7 +140,7 @@ ms.locfileid: "91771324"
 - Docker 映射的效能改進 Q#
 
 > [!NOTE]
-> Q#[`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint)目前無法從 Python 或 .net 主機程式呼叫使用新屬性的應用程式。
+> Q#[`@EntryPoint()`](xref:Microsoft.Quantum.Core.EntryPoint)目前無法從 Python 或 .net 主機程式呼叫使用新屬性的應用程式。
 > 如需詳細資訊，請參閱 [Python](xref:microsoft.quantum.install.python) 和 [.NET 互通性](xref:microsoft.quantum.install.cs) 指南。
 
 ## <a name="version-01120033107"></a>0\.11.2003.3107 版
@@ -183,7 +193,7 @@ ms.locfileid: "91771324"
 
 此版本包含下列項目：
 
-- 單元測試的新測試屬性 Q# ，請參閱[此處的](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test)更新 API 檔和更新的測試[here](xref:microsoft.quantum.guide.testingdebugging) & 偵錯工具指南
+- 單元測試的新測試屬性 Q# ，請參閱[此處的](xref:Microsoft.Quantum.Diagnostics.Test)更新 API 檔和更新的測試[here](xref:microsoft.quantum.guide.testingdebugging) & 偵錯工具指南
 - 在程式執行錯誤的情況下新增堆疊追蹤 Q#
 - 由於 [OmniSharp C# Visual Studio Code 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)更新，支援在 Visual Studio Code 中的中斷點
 
@@ -224,7 +234,7 @@ ms.locfileid: "91771324"
 
 請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)和 [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
 
-## <a name="version-09-packagereference-0919082902"></a>0\.9 版 (*PackageReference 0.9.1908.2902*)
+## <a name="version-09-packagereference-0919082902"></a>0\.9 版 ( *PackageReference 0.9.1908.2902* )
 
 *發行日期：2019 年 8 月 29 日*
 
@@ -233,7 +243,7 @@ ms.locfileid: "91771324"
 - 中 [結合語句](xref:microsoft.quantum.guide.operationsfunctions#conjugations) 的新支援 Q#
 - 編譯器中的新程式碼動作 (例如：「取代為」、「新增文件」)，以及簡單的陣列項目更新
 - 在 Visual Studio Code 延伸模組中新增了安裝範本和新的專案命令
-- 新增了 ApplyIf 結合器的新變體，例如 [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
+- 新增了 ApplyIf 結合器的新變體，例如 [Microsoft.Quantum.Canon.ApplyIfOne](xref:Microsoft.Quantum.Canon.ApplyIfOne)
 - 有額外的 [Quantum Katas](https://github.com/Microsoft/QuantumKatas) 可轉換為 Jupyter Notebook
 - Visual Studio 延伸模組現在需要 Visual Studio 2019
 
@@ -241,7 +251,7 @@ ms.locfileid: "91771324"
 
 此處會摘要說明這些變更，以及升級現有程式的指示。  深入瞭解[ Q# 開發人員 blog](https://devblogs.microsoft.com/qsharp)上的這些變更。
 
-## <a name="version-08-packagereference-0819071701"></a>0\.8 版 (*PackageReference 0.8.1907.1701*)
+## <a name="version-08-packagereference-0819071701"></a>0\.8 版 ( *PackageReference 0.8.1907.1701* )
 
 *發行日期：2019 年 7 月 12 日*
 
@@ -253,7 +263,7 @@ ms.locfileid: "91771324"
 
 請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)和[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)完整的已關閉 PR 清單。  
 
-## <a name="version-07-packagereference-0719053109"></a>0\.7 版 (*PackageReference 0.7.1905.3109*)
+## <a name="version-07-packagereference-0719053109"></a>0\.7 版 ( *PackageReference 0.7.1905.3109* )
 
 *發行日期：2019 年 5 月 31 日*
 
@@ -320,7 +330,7 @@ ms.locfileid: "91771324"
 
 * 有數個命名空間已被取代，因為其中的作業已重組至其他命名空間。 使用這些命名空間的程式將可繼續運作，但會有編譯時間警告指出作業定義所在的命名空間。  
 
-* Microsoft.Quantum.Arithmetic 命名空間已正規化為使用 <xref:microsoft.quantum.arithmetic.littleendian> 使用者定義類型。 需要轉換為 Little Endian 時，請使用函式 [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian)。  
+* Microsoft.Quantum.Arithmetic 命名空間已正規化為使用 <xref:Microsoft.Quantum.Arithmetic.LittleEndian> 使用者定義類型。 需要轉換為 Little Endian 時，請使用函式 [BigEndianAsLittleEndian](xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian)。  
 
 * 數個 callables (函式和作業) 的名稱已變更為符合[ Q# 樣式指南](xref:microsoft.quantum.contributing.style)。  舊的可呼叫名稱已被取代。  使用舊有可呼叫項目的程式將可繼續運作，但會出現編譯時間警告。 
 
@@ -356,7 +366,7 @@ ms.locfileid: "91771324"
 > * 對於 0.6 版本，隨附於 Quantum Development Kit 的語言伺服器不支援多個工作區。
 > * 若要在 Visual Studio Code 中使用專案，請開啟包含專案本身和所有參考專案的根資料夾。   
 > * 若要在 Visual Studio 中使用解決方案，解決方案中包含的所有專案必須位於與解決方案相同的資料夾中，或解決方案的其中一個子資料夾中。  
-> * 在專案間移轉至 0.6 和更新版本的參考，以及使用舊版套件的專案，均**不**受支援。
+> * 在專案間移轉至 0.6 和更新版本的參考，以及使用舊版套件的專案，均 **不** 受支援。
 
 ## <a name="version-051904"></a>0\.5.1904 版
 
@@ -529,7 +539,7 @@ Q#編碼員社區正在成長，我們會很高興以查看第一個使用者參
 * Jessica Lemieux ([@Lemj3111](https://github.com/Lemj3111))：修正 @"microsoft.quantum.canon.quantumphaseestimation" 並建立了新的單元測試。  [PR #54](https://github.com/Microsoft/Quantum/pull/54)
 * Tama McGlinn ([@TamaHobbit](https://github.com/TamaHobbit))：藉由確定 QuantumSimulator 執行個體已處置，清除了遙傳範例。 [PR #20](https://github.com/Microsoft/Quantum/pull/20)
 
-同時也**非常感謝** 參與商業工程服務小組的 Microsoft 軟體工程師，他們在參加黑客松期間時對我們的文件做出了重要的變更。  他們的變更我們所有人大幅提升了定義的明確性和上線體驗：
+同時也 **非常感謝** 參與商業工程服務小組的 Microsoft 軟體工程師，他們在參加黑客松期間時對我們的文件做出了重要的變更。  他們的變更我們所有人大幅提升了定義的明確性和上線體驗：
 * Sascha Corti
 * Mihaela Curmei
 * John Donnelly
@@ -541,7 +551,7 @@ Q#編碼員社區正在成長，我們會很高興以查看第一個使用者參
 
 ### <a name="update-existing-projects"></a>更新現有的專案
 
-此版本具完整的回溯相容性。 只要將專案中的 nuget 套件更新為 `0.2.1806.1503-preview` 版，並執行**完整重建**，即可確定所有中繼檔案都會重新產生。
+此版本具完整的回溯相容性。 只要將專案中的 nuget 套件更新為 `0.2.1806.1503-preview` 版，並執行 **完整重建** ，即可確定所有中繼檔案都會重新產生。
 
 在 Visual Studio 中，依照關於[更新套件](https://docs.microsoft.com/nuget/tools/package-manager-ui#updating-a-package)的一般指示操作。
 

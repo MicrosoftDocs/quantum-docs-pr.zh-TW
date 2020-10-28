@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835922"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691870"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>量子開發工具組 (QDK) 資源估算器
 
@@ -77,7 +77,7 @@ qubit_result = myOperation.estimate_resources()
 
 ### <a name="invoking-the-resources-estimator-from-the-command-line"></a>從命令列叫用資源估算器
 
-Q#從命令列執行程式時，請使用 **--** 模擬器 (或 **-s**快速鍵) 參數來指定 `ResourcesEstimator` 目的電腦。 下列命令會使用資源估算器來執行程式： 
+Q#從命令列執行程式時，請使用 **--** 模擬器 (或 **-s** 快速鍵) 參數來指定 `ResourcesEstimator` 目的電腦。 下列命令會使用資源估算器來執行程式： 
 
 ```dotnetcli
 dotnet run -s ResourcesEstimator
@@ -130,15 +130,42 @@ namespace Quantum.MyProgram
 |__Measure__    |任何測量的執行計數。  |
 |__R__    |任何單一量子位旋轉、排除 `T` 、Clifford 和 Pauli 作業的執行計數。  |
 |__T__    |作業的執行計數 `T` 和其 conjugates，包括 `T` 作業、T_x = .h 和 T_y = Hy Hy。  |
-|__Depth__|作業所執行的量子線路深度下限 Q# 。 根據預設，深度度量只會計算網 `T` 關。 如需詳細資訊，請參閱 [深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)。   |
-|__寬度__    |作業執行期間所配置的最大量子位數目下限 Q# 。 可能無法同時達成 __深度__ 和 __寬度__ 下限。  |
+|__深度__|作業所執行的量子線路深度 Q# (請參閱 [以下](#depth-width-and-qubitcount)) 。 根據預設，深度度量只會計算網 `T` 關。 如需詳細資訊，請參閱 [深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)。   |
+|__寬度__|作業所執行的量子電路寬度 Q# (請參閱 [以下](#depth-width-and-qubitcount)) 。 根據預設，深度度量只會計算網 `T` 關。 如需詳細資訊，請參閱 [深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)。   |
+|__QubitCount__    |作業執行期間所配置的最大量子位數目下限 Q# 。 此計量可能與 __深度__ (不相容，請參閱下面的) 。  |
 |__BorrowedWidth__    |在作業內借用的量子位數目上限 Q# 。  |
+
+
+## <a name="depth-width-and-qubitcount"></a>深度、寬度和 QubitCount
+
+報告的深度和寬度估計值彼此相容。
+ (先前兩個數字都是可達成的，但深度和寬度都需要不同的電路。 ) 這組中的計量目前可由相同的線路同時達成。
+
+系統會報告下列計量：
+
+__深度：__ 針對根作業，它會假設特定的閘道時間來執行它。
+針對呼叫的作業或後續的作業-在最新的量子位可用性時間與作業結束之間的時間差異。
+
+__寬度：__ 針對根本操作（量子位實際用來執行它的數目） (和作業，它會呼叫) 。
+針對呼叫的作業或後續作業-已使用的量子位數目，以及在作業開始時使用的量子位數目。
+
+請注意，重複使用的量子位並不會影響到這個數位。
+亦即，如果在作業 A 開始之前已釋出幾個量子位，而且此作業要求的所有量子位都是藉由重複使用先前的發行量子位來滿足) 的 (和作業，則作業 A 的寬度會回報為0。 成功的借用量子位不會影響到寬度。
+
+__QubitCount：__ 若為根作業，則為執行此作業所需的最小量子位數目 (以及從中呼叫的作業) 。
+針對呼叫的作業或後續的作業，也就是足以個別執行此作業的量子位數目下限。 此數目不包含輸入量子位。 它包含借用量子位。
+
+支援兩種作業模式。 您可以藉由設定 QCTraceSimulatorConfiguration OptimizeDepth 來選取模式。
+
+__OptimizeDepth = true：__ QubitManager 不建議量子位重複使用，並且會在每次要求量子位時配置新的量子位。 針對根操作 __深度__ ，會變成 (下限) 的最小深度。 此深度會回報相容的 __寬度__ ， (可以同時) 。 請注意，此寬度在此深度中可能不是最佳的。 __QubitCount__ 可能會比根作業的寬度低，因為它會假設重複使用。
+
+__OptimizeDepth = false：__ 建議 QubitManager 使用量子位，並在配置新的量子位之前重複使用已發行的。 針對根作業 __寬度__ ，會變成最小寬度 (下限) 。 您可以在其上取得相容 __深度__ 的報告。 __QubitCount__ 將與根本作業的 __寬度__ 相同（假設沒有借用）。
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>提供測量結果的機率
 
-您可以 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 從 <xref:microsoft.quantum.diagnostics> 命名空間使用，以提供有關測量運算之預期機率的資訊。 如需詳細資訊，請參閱[量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器
+您可以 <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> 從 <xref:Microsoft.Quantum.Diagnostics> 命名空間使用，以提供有關測量運算之預期機率的資訊。 如需詳細資訊，請參閱[量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [量子追蹤模擬器](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [量子 Toffoli 模擬器](xref:microsoft.quantum.machines.toffoli-simulator)

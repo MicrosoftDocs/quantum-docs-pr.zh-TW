@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759727"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691529"
 ---
 # <a name="obtaining-energy-level-estimates"></a>取得能階估計值
 估計能源等級的價值是量子化學的其中一個主要應用程式。 本文概述如何針對分子 hydrogen 的標準範例來執行此操作。 本節中所參考的範例位於 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) 化學範例存放庫中。 示範的更多視覺效果範例會繪製輸出 [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) 。
@@ -44,7 +44,7 @@ ms.locfileid: "90759727"
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-模擬 Hamiltonian 需要將 fermion 運算子轉換成量子位運算子。 這項轉換會透過 Wigner 編碼來執行，如下所示：
+模擬 Hamiltonian 需要將 fermion 運算子轉換成量子位運算子。 這項轉換會透過 Jordan-Wigner 編碼來執行，如下所示：
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -83,7 +83,7 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-此時，您可以使用標準程式庫的 [階段估計演算法](xref:microsoft.quantum.libraries.characterization) ，利用先前的模擬來學習地面狀態能源。 這需要針對量子地面狀態準備良好的近似值。 這類近似值的建議會在架構中提供 [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 。 但是，如果不存在這些建議，則預設方法會將數個 `hamiltonian.NElectrons` 電子新增至大量，以將對角單一 electron 的詞彙氫化降至最低。 階段估計函式和作業會以 DocFX 標記法的形式提供于 [量子](xref:microsoft.quantum.characterization) 命名空間中。
+此時，您可以使用標準程式庫的 [階段估計演算法](xref:microsoft.quantum.libraries.characterization) ，利用先前的模擬來學習地面狀態能源。 這需要針對量子地面狀態準備良好的近似值。 這類近似值的建議會在架構中提供 [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 。 但是，如果不存在這些建議，則預設方法會將數個 `hamiltonian.NElectrons` 電子新增至大量，以將對角單一 electron 的詞彙氫化降至最低。 階段估計函式和作業會以 DocFX 標記法的形式提供于 [量子](xref:Microsoft.Quantum.Characterization) 命名空間中。
 
 下列程式碼片段顯示化學模擬程式庫的即時演進輸出如何與量子階段估計整合。
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 82882f01d1b5c036faee71f18a18b2595107ddb7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835905"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690782"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>量子開發工具組 (QDK) Toffoli 模擬器
 
@@ -48,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a>從命令列叫用 Toffoli 模擬器
 
-Q#從命令列執行程式時，請使用 **--** 模擬器 (或 **-s**快速鍵) 參數來指定 Toffoli 模擬器目的電腦。 下列命令會使用資源估算器來執行程式： 
+Q#從命令列執行程式時，請使用 **--** 模擬器 (或 **-s** 快速鍵) 參數來指定 Toffoli 模擬器目的電腦。 下列命令會使用資源估算器來執行程式： 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -67,7 +67,7 @@ dotnet run -s ToffoliSimulator
 Toffoli 模擬器支援：
 
 * `R` `Exp` 當產生的作業等於或識別矩陣時，旋轉和 exponentiated Paulis （例如和） `X` 。
-* 量測 [和判斷提示作業，但](xref:microsoft.quantum.diagnostics.assertmeasurement) 僅限 Pauli `Z` 基礎。 請注意，測量運算的機率一律為 **0** 或 **1**;Toffoli 模擬器中沒有隨機性。
+* 量測 [和判斷提示作業，但](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) 僅限 Pauli `Z` 基礎。 請注意，測量運算的機率一律為 **0** 或 **1** ;Toffoli 模擬器中沒有隨機性。
 * `DumpMachine` 和函式 `DumpRegister` 。
 這兩個函式都會輸出 `Z` 每個量子位的目前基礎狀態，每行一個量子位。
 

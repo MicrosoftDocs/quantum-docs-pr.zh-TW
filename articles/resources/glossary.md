@@ -107,7 +107,7 @@
 
 ## <a name="clifford-group"></a>Clifford 群組
 
-一組作業，會佔用 [布洛赫球體](xref:microsoft.quantum.glossary#bloch-sphere) 的 octants，以及 [Pauli 運算子](xref:microsoft.quantum.glossary#pauli-operators)的效果排列。 這些包括作業[ $ X $ ](xref:microsoft.quantum.intrinsic.x)、 [ $ Y $ ](xref:microsoft.quantum.intrinsic.y)、 [ $ Z $ ](xref:microsoft.quantum.intrinsic.z)、 [ $ H $ ](xref:microsoft.quantum.intrinsic.h)和[ $ S $ ](xref:microsoft.quantum.intrinsic.s)。
+一組作業，會佔用 [布洛赫球體](xref:microsoft.quantum.glossary#bloch-sphere) 的 octants，以及 [Pauli 運算子](xref:microsoft.quantum.glossary#pauli-operators)的效果排列。 這些包括作業[ $ X $ ](xref:Microsoft.Quantum.Intrinsic.X)、 [ $ Y $ ](xref:Microsoft.Quantum.Intrinsic.Y)、 [ $ Z $ ](xref:Microsoft.Quantum.Intrinsic.Z)、 [ $ H $ ](xref:Microsoft.Quantum.Intrinsic.H)和[ $ S $ ](xref:Microsoft.Quantum.Intrinsic.S)。
 
 ## <a name="controlled"></a>控制
 
@@ -115,7 +115,7 @@
 
 ## <a name="dirac-notation"></a>Dirac 標記法
 
-符號縮寫，可簡化 [量子狀態](xref:microsoft.quantum.glossary#quantum-state)的標記法，也稱為 *bra ket* 標記法。  *Bra*部分代表一個資料列向量，例如，一個 $ \bra { } = \begin{bmatrix} { _2， } & { } \end{bmatrix} $ 而*ket*部分代表一個資料行向量（ $ \ket { b } = \begin{bmatrix} b { _1 } \\\\ b _2） { } \end{bmatrix} $ 。 如需詳細資訊，請參閱 [Dirac 標記法](xref:microsoft.quantum.concepts.dirac)。
+符號縮寫，可簡化 [量子狀態](xref:microsoft.quantum.glossary#quantum-state)的標記法，也稱為 *bra ket* 標記法。  *Bra* 部分代表一個資料列向量，例如，一個 $ \bra { } = \begin{bmatrix} { _2， } & { } \end{bmatrix} $ 而 *ket* 部分代表一個資料行向量（ $ \ket { b } = \begin{bmatrix} b { _1 } \\\\ b _2） { } \end{bmatrix} $ 。 如需詳細資訊，請參閱 [Dirac 標記法](xref:microsoft.quantum.concepts.dirac)。
 
 ## <a name="eigenvalue"></a>特徵
 
@@ -150,7 +150,7 @@ Q#語言中純傳統 (非量子) 的副程式類型。 雖然函式是在量子�
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](xref:microsoft.quantum.glossary#qubit)，並將其放入偶數[迭加](xref:microsoft.quantum.glossary#superposition) $ \ket { 0 } $ 或 $ \ket { 1 （ } $ 如果量子位一開始是 $ \ket { 0 } $ 狀態）。 在中 Q# ，這項作業會由預先定義的作業套用 [`H`](xref:microsoft.quantum.intrinsic.h) 。
+Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](xref:microsoft.quantum.glossary#qubit)，並將其放入偶數[迭加](xref:microsoft.quantum.glossary#superposition) $ \ket { 0 } $ 或 $ \ket { 1 （ } $ 如果量子位一開始是 $ \ket { 0 } $ 狀態）。 在中 Q# ，這項作業會由預先定義的作業套用 [`H`](xref:Microsoft.Quantum.Intrinsic.H) 。
 
 ## <a name="immutable"></a>固定
 
@@ -182,7 +182,7 @@ Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](
 
 ## <a name="partial-application"></a>部分應用程式
 
-呼叫[不含](xref:microsoft.quantum.glossary#operation)所有必要輸入的[函數](xref:microsoft.quantum.glossary#function)或作業。 這 [會傳回新的可](xref:microsoft.quantum.glossary#callable) 呼叫，只需要在未來應用程式中提供的底線)  (所表示的遺漏參數。 例如，假設有個函式， `MyFunc(x : int, y : int) : int {return x + y;}` 您可以將它部分套用至新的函式 `let NewFunc = MyFunc(_, 3)` 。 然後，您可以稍後再使用遺漏的參數 `NewFunc(2)` （傳回值 *5*）來呼叫新的函式。  如需詳細資訊，請參閱 [部分應用程式](xref:microsoft.quantum.guide.operationsfunctions#partial-application)。
+呼叫[不含](xref:microsoft.quantum.glossary#operation)所有必要輸入的[函數](xref:microsoft.quantum.glossary#function)或作業。 這 [會傳回新的可](xref:microsoft.quantum.glossary#callable) 呼叫，只需要在未來應用程式中提供的底線)  (所表示的遺漏參數。 例如，假設有個函式， `MyFunc(x : int, y : int) : int {return x + y;}` 您可以將它部分套用至新的函式 `let NewFunc = MyFunc(_, 3)` 。 然後，您可以稍後再使用遺漏的參數 `NewFunc(2)` （傳回值 *5* ）來呼叫新的函式。  如需詳細資訊，請參閱 [部分應用程式](xref:microsoft.quantum.guide.operationsfunctions#partial-application)。
 
 ## <a name="pauli-operators"></a>Pauli 運算子
 

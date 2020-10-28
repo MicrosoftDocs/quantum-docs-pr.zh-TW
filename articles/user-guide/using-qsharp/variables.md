@@ -9,16 +9,16 @@ uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835871"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690943"
 ---
 # <a name="variables-in-no-locq"></a>中的變數 Q#
 
-Q# 區分可變和不可變的符號，或 *變數*（系結/指派給運算式）。
+Q# 區分可變和不可變的符號，或 *變數* （系結/指派給運算式）。
 一般情況下，建議使用不可變的符號，因為它可讓編譯器執行更多的優化。
 
 系結的左邊是由符號元組和運算式的右手邊所組成。
@@ -40,7 +40,7 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 > [!NOTE]
 > 在上述範例中，不需要明確指定新變數的類型，因為語句右邊的運算式 `let` 是明確的，而編譯器會推斷正確的型別。 
 
-使用定義 `let` 的變數是 *不可變*的，也就是說，一旦定義之後，就無法再以任何方式變更。
+使用定義 `let` 的變數是 *不可變* 的，也就是說，一旦定義之後，就無法再以任何方式變更。
 這可讓您進行數個有説明的優化作業，包括優化將變數重新排序以套用作業變異的傳統邏輯 `Adjoint` 。
 
 ## <a name="mutable-variables"></a>可變變數
@@ -58,7 +58,7 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 
 #### <a name="apply-and-reassign-statements"></a>Apply 和重新指派語句
 
-`set`如果右手邊是由二元運算子的應用程式所組成，且結果是要重新綁定至運算子的左邊引數，則特定種類的語句（ *apply 和重新指派*語句）可提供便利的串連方式。 例如，套用至物件的
+`set`如果右手邊是由二元運算子的應用程式所組成，且結果是要重新綁定至運算子的左邊引數，則特定種類的語句（ *apply 和重新指派* 語句）可提供便利的串連方式。 例如，套用至物件的
 
 ```qsharp
 mutable counter = 0;
@@ -92,7 +92,7 @@ for (q in qubits) {
 #### <a name="update-and-reassign-statements"></a>Update 和重新指派語句
 
 右手邊的 [複製和更新運算式](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) 有類似的串連。
-同樣地，使用者定義型別中的*命名專案*以及*陣列專案*也會有*更新和重新指派*語句。  
+同樣地，使用者定義型別中的 *命名專案* 以及 *陣列專案* 也會有 *更新和重新指派* 語句。  
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-在陣列的案例中， [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) 標準連結 Q# 庫提供了許多常見的陣列初始化和操作需求所需的工具，因此有助於避免在一開始就必須更新陣列專案。 
+在陣列的案例中， [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) 標準連結 Q# 庫提供了許多常見的陣列初始化和操作需求所需的工具，因此有助於避免在一開始就必須更新陣列專案。 
 
 更新和重新指派語句會在需要時提供替代：
 
@@ -135,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-例如，您可以使用中所提供之陣列的程式庫工具， [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) 輕鬆地定義函式，以傳回類型的陣列， `Pauli` 其中索引處的 `i` 專案會採用指定的 `Pauli` 值，而所有其他專案則是 () 的身分識別 `PauliI` 。
+例如，您可以使用中所提供之陣列的程式庫工具， [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) 輕鬆地定義函式，以傳回類型的陣列， `Pauli` 其中索引處的 `i` 專案會採用指定的 `Pauli` 值，而所有其他專案則是 () 的身分識別 `PauliI` 。
 
 以下是這類函式的兩個定義，而第二個則利用我們處置的工具。
 
@@ -150,7 +150,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 }
 ```
 
-與其逐一查看陣列中的每個索引，並有條件地將它設定為 `PauliI` 或指定 `pauli` ，您可以改為使用 `ConstantArray` from [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) 來建立 `PauliI` 類型的陣列，然後只傳回已在索引中變更特定值的複製和更新運算式 `location` ：
+與其逐一查看陣列中的每個索引，並有條件地將它設定為 `PauliI` 或指定 `pauli` ，您可以改為使用 `ConstantArray` from [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) 來建立 `PauliI` 類型的陣列，然後只傳回已在索引中變更特定值的複製和更新運算式 `location` ：
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {

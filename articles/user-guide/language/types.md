@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 349138984387cc564cca18ea09c7bf161524b0b6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835820"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691620"
 ---
 # <a name="types-in-no-locq"></a>中的類型 Q#
 
@@ -22,7 +22,7 @@ ms.locfileid: "90835820"
 
 我們注意 Q# 到這是一種 *強型* 別語言，可讓編譯器在編譯時期提供程式的強大保證，以利使用這些類型 Q# 。
 為了盡可能提供最強的保證，中的型別之間的轉換 Q# 必須使用表達該轉換的函式來明確地呼叫。 
-Q# 提供多個這類功能做為 <xref:microsoft.quantum.convert> 命名空間的一部分。
+Q# 提供多個這類功能做為 <xref:Microsoft.Quantum.Convert> 命名空間的一部分。
 相反地，將至相容的型別會隱含地發生。 
 
 Q# 提供兩種基本類型，可直接使用，以及各種不同的方式來產生其他類型的新類型。
@@ -30,7 +30,7 @@ Q# 提供兩種基本類型，可直接使用，以及各種不同的方式來�
 
 ## <a name="primitive-types"></a>基本類型
 
-此 Q# 語言提供下列基本型*primitive types*別，您可以直接在程式中使用這些類型 Q# 。 您也可以使用這些基本類型來建立新的類型。
+此 Q# 語言提供下列基本型 *primitive types* 別，您可以直接在程式中使用這些類型 Q# 。 您也可以使用這些基本類型來建立新的類型。
 
 - 此 `Int` 類型代表64位帶正負號的整數，例如， `2` 、 `107` 、 `-5` 。
 - `BigInt`類型代表任意大小的帶正負號整數，例如，、 `2L` `107L` 、 `-5L` 。
@@ -126,7 +126,7 @@ Q# 未提供在建立元組後變更其內容的機制。
 
 特別是，這表示您可以查看其輸入元組或輸出元組類型具有單一引數或傳回單一值的一或多個作業或函數。
 
-我們將此屬性稱為 _單一元組等價_。
+我們將此屬性稱為 _單一元組等價_ 。
 
 
 ## <a name="user-defined-types"></a>使用者定義類型
@@ -155,7 +155,7 @@ newtype Complex = (Double, Double);
 ```
 這個語句會建立具有兩個型別匿名專案的新型別 `Double` 。   
 
-除了匿名專案之外，使用者定義型別也支援*named items* Q# 0.7 或更高版本的命名專案。 例如，您可以將專案命名為 `Real` 代表複數實數部分的雙精度浮點數，並 `Imag` 針對虛數部分： 
+除了匿名專案之外，使用者定義型別也支援 *named items* Q# 0.7 或更高版本的命名專案。 例如，您可以將專案命名為 `Real` 代表複數實數部分的雙精度浮點數，並 `Imag` 針對虛數部分： 
 
 ```qsharp
 newtype Complex = (Real : Double, Imag : Double);
@@ -167,7 +167,7 @@ newtype Complex = (Real : Double, Imag : Double);
 newtype Nested = (Double, (ItemName : Int, String)); 
 ```
 
-命名專案的優點是可以直接透過 *存取運算子*來存取它們 `::` 。 
+命名專案的優點是可以直接透過 *存取運算子* 來存取它們 `::` 。 
 
 ```qsharp
 function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
@@ -259,8 +259,8 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 假設類型 `'Tinput` 和 `'Tresult` ：
 
-* `('Tinput => 'Tresult)` 是任何 *運算*的基本類型，例如 `((Qubit, Pauli) => Result)` 。
-* `('Tinput -> 'Tresult)` 是任何 *函數*的基本類型，例如 `(Int -> Int)` 。 
+* `('Tinput => 'Tresult)` 是任何 *運算* 的基本類型，例如 `((Qubit, Pauli) => Result)` 。
+* `('Tinput -> 'Tresult)` 是任何 *函數* 的基本類型，例如 `(Int -> Int)` 。 
 
 這些稱為可呼叫 *的簽* 章。
 
@@ -271,7 +271,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 ### <a name="functors"></a>函子
 
-函*式類型是*由其簽章完全指定。 例如，計算角度正弦的函式會有型別 `(Double -> Double)` 。 
+函 *式類型是* 由其簽章完全指定。 例如，計算角度正弦的函式會有型別 `(Double -> Double)` 。 
 
 *作業* 具有某些其他特性，表示為作業類型的一部分。 這類特性包含作業所支援之 *函子* 的相關資訊。
 例如，如果執行作業依賴其他量子位的狀態，則它應該支援 `Controlled` 仿函數; 如果作業具有反向，則應該支援 `Adjoint` 仿函數。
@@ -282,13 +282,13 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 若要 `Controlled` 在作業類型中要求和/或仿函數的支援 `Adjoint` ，您必須加入指出對應特性的注釋。
 批註 `is Ctl` (例如， `(Qubit => Unit is Ctl)`) 表示作業可控制。 也就是說，它的執行依賴另一個量子位或量子位的狀態。 同樣地，批註也會 `is Adj` 指出作業具有 adjoint，也就是它可以「反轉」，以便連續套用作業，然後將其 adjoint 狀態保持不變。 
 
-如果您想要要求該類型的作業同時支援 `Adjoint` 和 `Controlled` 仿函數，您可以將它表示為 `(Qubit => Unit is Adj + Ctl)` 。 例如，內建的 Pauli 作業 <xref:microsoft.quantum.intrinsic.x> 具有類型 `(Qubit => Unit is Adj + Ctl)` 。 
+如果您想要要求該類型的作業同時支援 `Adjoint` 和 `Controlled` 仿函數，您可以將它表示為 `(Qubit => Unit is Adj + Ctl)` 。 例如，內建的 Pauli 作業 <xref:Microsoft.Quantum.Intrinsic.X> 具有類型 `(Qubit => Unit is Adj + Ctl)` 。 
 
 不支援任何函子的作業類型是由其輸入和輸出類型單獨指定，不含其他注釋。
 
-### <a name="type-parameterized-functions-and-operations"></a>類型參數化函數和作業
+### <a name="type-parameterized-functions-and-operations"></a>Type-Parameterized 函數和作業
 
-可呼叫的類型可以包含 *型別參數*。
+可呼叫的類型可以包含 *型別參數* 。
 使用前面加上單引號的符號來指出型別參數;例如， `'A` 是合法的型別參數。
 如需如何定義型別參數化 callables 的詳細資訊和詳細資訊，請參閱[中 Q# 的作業和函數](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)。
 

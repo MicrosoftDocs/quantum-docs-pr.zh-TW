@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1bb66ae0fe7de785c417b0bef480e52adea5534d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834953"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691717"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>教學課程：在 Q 中撰寫和模擬量子位層級程式\#
 
@@ -32,7 +32,7 @@ ms.locfileid: "90834953"
 <br/>
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 * 使用您慣用的語言和開發環境，[安裝](xref:microsoft.quantum.install)量子開發工具組。
 * 如果您已安裝 QDK，請確定您已[更新](xref:microsoft.quantum.update)為最新版本
@@ -58,7 +58,7 @@ ms.locfileid: "90834953"
 
 本教學課程的第一個部分包含定義作業，此作業會 Q# `Perform3qubitQFT` 在三個量子位上執行量子傅立葉轉換。 
 
-此外，我們將使用函式 [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) 來觀察三個量子位系統的模擬 wavefunction 如何在整個作業中演進。
+此外，我們將使用函式 [`DumpMachine`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) 來觀察三個量子位系統的模擬 wavefunction 如何在整個作業中演進。
 
 第一個步驟是建立您的 Q# 專案和檔案。
 這項操作的步驟取決於您將用來呼叫程式的環境，而且您可以在個別的 [安裝指南](xref:microsoft.quantum.install)中找到詳細資料。
@@ -104,32 +104,32 @@ namespace NamespaceQFT {
         }
 ```
 
-使用時 `using` ，量子位會自動以 $ \ket {0} $ 狀態進行配置。 我們可以使用和來確認這一點 [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) ，這會將字串和系統的目前狀態列印到主控台。
+使用時 `using` ，量子位會自動以 $ \ket {0} $ 狀態進行配置。 我們可以使用和來確認這一點 [`Message(<string>)`](xref:Microsoft.Quantum.Intrinsic.Message) [`DumpMachine()`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) ，這會將字串和系統的目前狀態列印到主控台。
 
 > [!NOTE]
-> 和函式 `Message(<string>)` `DumpMachine()` (自 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) 和 [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) ，分別) 會直接列印到主控台。 就像實際的量子運算一樣， Q# 無法讓我們直接存取量子位狀態。
+> 和函式 `Message(<string>)` `DumpMachine()` (自 [`Microsoft.Quantum.Intrinsic`](xref:Microsoft.Quantum.Intrinsic) 和 [`Microsoft.Quantum.Diagnostics`](xref:Microsoft.Quantum.Diagnostics) ，分別) 會直接列印到主控台。 就像實際的量子運算一樣， Q# 無法讓我們直接存取量子位狀態。
 > 不過，由於會 `DumpMachine` 列印目的電腦的目前狀態，它可以提供在搭配完整狀態模擬器使用時進行偵錯工具和學習的寶貴見解。
 
 
 ### <a name="applying-single-qubit-and-controlled-gates"></a>套用單一量子位和控制的閘道
 
 接下來，我們會套用組成作業本身的閘道。
-Q# 已包含許多基本量子閘道作為命名空間中的作業 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ，而且這些不是例外狀況。 
+Q# 已包含許多基本量子閘道作為命名空間中的作業 [`Microsoft.Quantum.Intrinsic`](xref:Microsoft.Quantum.Intrinsic) ，而且這些不是例外狀況。 
 
 在作業中 Q# ，叫用 callables 的語句當然會依序執行。
-因此，第一個要套用的閘道是 [`H`](xref:microsoft.quantum.intrinsic.h) 第一個量子位的 (Hadamard) ：
+因此，第一個要套用的閘道是 [`H`](xref:Microsoft.Quantum.Intrinsic.H) 第一個量子位的 (Hadamard) ：
 
 <br/>
 <img src="../media/qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" width="120">
 
 若要 (從登錄將作業套用至特定量子位，也就是 `Qubit` 從陣列中的單一 `Qubit[]`) 我們使用標準索引標記法。
-因此，將 [`H`](xref:microsoft.quantum.intrinsic.h) 套用至我們的註冊的第一個量子位 `qs` 會採用下列格式：
+因此，將 [`H`](xref:Microsoft.Quantum.Intrinsic.H) 套用至我們的註冊的第一個量子位 `qs` 會採用下列格式：
 
 ```qsharp
             H(qs[0]);
 ```
 
-除了將 `H` (Hadamard) 閘道套用至個別量子位，QFT 電路主要是由受控制的旋轉所組成 [`R1`](xref:microsoft.quantum.intrinsic.r1) 。
+除了將 `H` (Hadamard) 閘道套用至個別量子位，QFT 電路主要是由受控制的旋轉所組成 [`R1`](xref:Microsoft.Quantum.Intrinsic.R1) 。
 一般作業會將 `R1(θ, <qubit>)` 量子位的 $ \ket {0} $ 元件保持不變，同時將 $e ^ {i\theta} $ 的旋轉套用至 $ \ket {1} $ 元件。
 
 #### <a name="controlled-operations"></a>控制的作業
@@ -153,7 +153,7 @@ Q# 讓您在一或多個控制項量子位上執行作業時非常容易。
             Controlled R1([qs[2]], (PI()/4.0, qs[0]));
 ```
 
-請注意，我們會使用 [`PI()`](xref:microsoft.quantum.math.pi) 來自命名空間的函式 [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) ，以 pi 弧度來定義旋轉。
+請注意，我們會使用 [`PI()`](xref:Microsoft.Quantum.Math.PI) 來自命名空間的函式 [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) ，以 pi 弧度來定義旋轉。
 此外，我們 `Double` 會除以 (例如) ， `2.0` 因為除以整數 `2` 會擲回類型錯誤。 
 
 > [!TIP]
@@ -171,7 +171,7 @@ Q# 讓您在一或多個控制項量子位上執行作業時非常容易。
             H(qs[2]);
 ```
 
-我們只需要套用一個網 [`SWAP`](xref:microsoft.quantum.intrinsic.swap) 關來完成線路：
+我們只需要套用一個網 [`SWAP`](xref:Microsoft.Quantum.Intrinsic.SWAP) 關來完成線路：
 
 ```qsharp
             SWAP(qs[2], qs[0]);
@@ -188,7 +188,7 @@ Q# 讓您在一或多個控制項量子位上執行作業時非常容易。
 
 ### <a name="deallocate-qubits"></a>解除配置量子位
 
-我們 [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) 再次呼叫以查看作業後狀態，最後會套用至量子位暫存器， [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) 以在完成作業之前將量子位重設為 $ \ket {0} $：
+我們 [`DumpMachine()`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) 再次呼叫以查看作業後狀態，最後會套用至量子位暫存器， [`ResetAll`](xref:Microsoft.Quantum.Intrinsic.resetall) 以在完成作業之前將量子位重設為 $ \ket {0} $：
 
 ```qsharp
             Message("After:");
@@ -280,7 +280,7 @@ dotnet run
 1. 首先，我們會匯入 `qsharp` 模組，該模組會註冊模組載入器以獲得 Q# 互通性。 
     這可讓 Q# 命名空間 (例如， `NamespaceQFT` 我們在檔案中定義的 Q#) 會顯示為 Python 模組，我們可以從中匯入 Q# 作業。
 2. 然後，匯入 Q# 我們將在此案例中直接叫用---的作業 `Perform3qubitQFT` 。
-    我們只需要將進入點匯入程式中， Q# (也_not_就是不 `H` 是與等作業 `R1` ，由其他 Q# 作業呼叫，但傳統主機) 絕不會呼叫。
+    我們只需要將進入點匯入程式中， Q# (也 _not_ 就是不 `H` 是與等作業 `R1` ，由其他 Q# 作業呼叫，但傳統主機) 絕不會呼叫。
 3. 在模擬 Q# 作業或函式時，請使用表單在 `<Q#callable>.simulate(<args>)` `QuantumSimulator()` 目的電腦上執行。 
 
 > [!NOTE]
@@ -314,7 +314,7 @@ C # 主機有四個部分：
     此範例中沒有任何內容。
 3. 執行量子演算法。 
     每個作業 Q# 都會產生具有相同名稱的 c # 類別。 
-    此類別的 `Run` 方法會以 **非同步方式**執行作業。
+    此類別的 `Run` 方法會以 **非同步方式** 執行作業。
     執行是非同步，因為在實際的硬體上執行它將會是非同步。 
     因為此 `Run` 方法是非同步，所以我們會呼叫 `Wait()` 方法; 這會封鎖執行，直到工作完成並以同步方式傳回結果為止。 
 4. 處理傳回的作業結果。
@@ -347,12 +347,12 @@ namespace NamespaceQFT
 ```
 執行應用程式，您的輸出應該會符合下面的結果。
 當您按下按鍵後，程式就會結束。
-***
+**_
 
 ```Output
 Initial state |000>:
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|0>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |3>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
@@ -362,14 +362,14 @@ Initial state |000>:
 |7>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 After:
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 ```
 
 在完整狀態模擬器上呼叫時，會 `DumpMachine()` 提供這些量子狀態 wavefunction 的多重標記法。 $N $-量子位系統的可能狀態可以用 $ 2 ^ n $ 計算基礎狀態表示，每一個都有相對應的複數 (只是一個振幅和一個階段) 。
@@ -380,14 +380,13 @@ After:
 
 
 其餘的資料列描述測量以笛卡兒和極座標形式測量基礎狀態向量 $ \ket{i} $ 的機率幅度。
-針對輸入狀態 $ \ket $ 的第一列詳細資料 {000} ：
-* **`|0>:`** 此資料列對應于 `0` 計算基礎狀態 (假設我們的初始狀態後置配置為 $ \ket {000} $，則會預期這是具有機率幅度的唯一狀態) 。
-* **`1.000000 +  0.000000 i`**：笛卡兒格式的機率幅度。
-* **` == `**： `equal` 符號會分隔兩個對等的表示。
-* **`********************`**：量值的圖形表示，的數目 `*` 會與測量這個狀態向量的機率成正比。 
-* **`[ 1.000000 ]`**：量值的數值
-* **`    ---`**：振幅階段的圖形表示。
-* **`[ 0.0000 rad ]`**：階段的數值 (弧度) 。
+針對輸入狀態 $ \ket $： _ 的第一個資料列， {000} **`|0>:`** 這個資料列會對應至 `0` 計算基礎狀態， (假設我們的初始狀態後置配置為 $ \ket {000} $，我們預期這是具有機率幅度的唯一狀態) 。
+* **`1.000000 +  0.000000 i`** ：笛卡兒格式的機率幅度。
+* **` == `** ： `equal` 符號會分隔兩個對等的表示。
+* **`********************`** ：量值的圖形表示，的數目 `*` 會與測量這個狀態向量的機率成正比。 
+* **`[ 1.000000 ]`** ：量值的數值
+* **`    ---`** ：振幅階段的圖形表示。
+* **`[ 0.0000 rad ]`** ：階段的數值 (弧度) 。
 
 大小和階段都會以圖形表示顯示。 量值的表示方式很簡單：它會顯示一個橫條 `*` ，而機率愈高，則會顯示較大的橫條。 針對階段，請參閱 [測試和偵測：](xref:microsoft.quantum.guide.testingdebugging#dump-functions) 根據角度範圍的可能符號表示傾印函數。
 
@@ -396,7 +395,7 @@ After:
 
 $ $ \ket{\psi} \_ {初始} = \ket {000} $ $
 
-至 
+to 
 
 $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left ( \ket {000} + \ket {001} + \ket + \ket {010} {011} + \ket {100} + \ket {101} + \ket + \ket {110} {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}，\end{align} $ $
 
@@ -437,7 +436,7 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left ( \ket {
                 set resultArray w/= i <- M(qs[i]);
             }
 ```
-[`IndexRange`](xref:microsoft.quantum.arrays.indexrange)在陣列上呼叫的函式 (例如我們量子位的陣列， `qs`) 傳回陣列索引的範圍。 在這裡，我們會在迴圈中使用它， `for` 以依序使用語句來測量每個量子位 `M(qs[i])` 。
+[`IndexRange`](xref:Microsoft.Quantum.Arrays.IndexRange)在陣列上呼叫的函式 (例如我們量子位的陣列， `qs`) 傳回陣列索引的範圍。 在這裡，我們會在迴圈中使用它， `for` 以依序使用語句來測量每個量子位 `M(qs[i])` 。
 每個測量的 `Result` 類型 (`Zero` 或 `One`) 接著會 `resultArray` 使用 update 和重新指派語句新增至中的對應索引位置。
 
 > [!NOTE]
@@ -517,19 +516,19 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left ( \ket {
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement:
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
@@ -565,20 +564,20 @@ print("|" + binaryCompBasisState + ">")
 ```Output
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
@@ -642,20 +641,20 @@ namespace NamespaceQFT
 ```Output
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement:
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
@@ -672,12 +671,12 @@ Press any key to continue...
 ***
 
 此輸出說明一些不同的專案：
-1. 將傳回的結果與預先度量比較 `DumpMachine` ，顯然不會說明_not_ QFT 後迭加的基礎狀態。
+1. 將傳回的結果與預先度量比較 `DumpMachine` ，顯然不會說明 _not_ QFT 後迭加的基礎狀態。
     度量只會傳回單一基礎狀態，並在系統 wavefunction 中以該狀態的波幅決定機率。
 2. 從之後的測量結果 `DumpMachine` ，我們發現測量 _改變_ 了狀態本身，將其從初始迭加的基礎狀態投射到對應至測量值的單一基礎狀態。
 
 如果我們要重複執行這項作業多次，我們會看到結果統計資料開始說明 QFT 後狀態的平均加權迭加，這會導致每個快照的隨機結果。
-_但是_，除了效率不佳且仍然完美之外，這只會重現基礎狀態的相對 amplitudes，而不是兩者之間的相對階段。
+_但是_ ，除了效率不佳且仍然完美之外，這只會重現基礎狀態的相對 amplitudes，而不是兩者之間的相對階段。
 後者在此範例中並不是問題，但如果提供比 $ \ket $ 更複雜的 QFT 輸入，則會看到相對階段。 {000}
 
 #### <a name="partial-measurements"></a>部分度量 
@@ -701,13 +700,13 @@ _但是_，除了效率不佳且仍然完美之外，這只會重現基礎狀態
 如同我們在簡介中所述，大部分的 Q# 功能都能讓您抽象化處理個別的量子位。
 事實上，如果您想要開發全方位、適用的量副程式，請擔心某項作業 `H` 在特定輪替之前或之後是否會變慢。 
 
-連結 Q# 庫包含 [QFT](xref:microsoft.quantum.canon.qft) 作業，您可以直接採用並套用至任意數目的量子位。
+連結 Q# 庫包含 [QFT](xref:Microsoft.Quantum.Canon.QFT) 作業，您可以直接採用並套用至任意數目的量子位。
 若要試試看，請在您的檔案中定義 Q# 具有相同內容的新作業 `Perform3QubitQFT` ，但是從第一個的所有專案，都是 `H` `SWAP` 由兩個簡單的程式碼所取代：
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
 ```
-第一行只 [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) 會建立已配置量子位陣列的運算式， `qs` 這是 [QFT](xref:microsoft.quantum.canon.qft) 作業做為引數所採用的運算式。
+第一行只 [`BigEndian`](xref:Microsoft.Quantum.Arithmetic.BigEndian) 會建立已配置量子位陣列的運算式， `qs` 這是 [QFT](xref:Microsoft.Quantum.Canon.QFT) 作業做為引數所採用的運算式。
 這對應于註冊中量子位的索引順序。
 
 若要存取這些作業，請 `open` 在檔案的開頭新增其各自命名空間的語句 Q# ：
@@ -720,7 +719,7 @@ _但是_，除了效率不佳且仍然完美之外，這只會重現基礎狀態
 
 若要瞭解使用程式庫作業的真正優點 Q# ，請將量子位數目變更為以下以外的值 `3` ：
 ```qsharp
-        mutable resultArray = new Result[4]; 
+        mutable resultArray = new Result[4];
 
         using (qs = Qubit[4]) {
             //...
@@ -729,16 +728,3 @@ _但是_，除了效率不佳且仍然完美之外，這只會重現基礎狀態
 因此，您可以針對任何指定的量子位數目套用適當的 QFT，而不需要擔心 `H` 每個量子位的新作業和旋轉。
 
 請注意，當您增加量子位數目時，量子模擬器會以指數方式執行一次以上的時間，---精確地查看真正的量子硬體！
-
-
-
-
-
-
-
-
-
-
-
-
-

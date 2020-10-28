@@ -89,7 +89,7 @@ author： QuantumWriter uid： benbra ms... ms. date： 12/11/2017 ms. 主題：
 
 $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left (\ket { 00 }  +  \ket { 11 } \right) ，$$
 
-具有這項或更高複雜度的作業在量子演算法和量子錯誤修正中很常見，因此，其視覺效果有一個簡單的方法，稱為 *量子電路圖*，因此應該會有很大的降低。
+具有這項或更高複雜度的作業在量子演算法和量子錯誤修正中很常見，因此，其視覺效果有一個簡單的方法，稱為 *量子電路圖* ，因此應該會有很大的降低。
 準備此充分纏結量子狀態的電路圖為：
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } 
 <!--找不到可輕鬆將其置中的方法 .。。可能是需要的延伸模組：-->
 ![Hadamard 作業的符號，可在單一量子位暫存器上運作](~/media/2.svg)
 
-是在單一量子位登錄上進行的 [Hadamard](xref:microsoft.quantum.intrinsic.h) 作業。
+是在單一量子位登錄上進行的 [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) 作業。
 
 量子閘道會依時間順序排序，最左邊的閘道會先套用至量子位。
 換句話說，如果您將電線畫成固定的配量狀態，則線路會在圖表中的每個閘道之間，從左至右都帶著量子狀態。
@@ -150,7 +150,7 @@ $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } 
 ![單一控制閘道的電路圖](~/media/5.svg)
 
 在這裡，黑色圓圈表示控制閘道的量子位，而垂直線路則代表當控制項量子位接受值1時所套用的單一 $ $ 。
-在 $ g X 和 g Z 的特殊情況下， = $ $ = $ 我們引進下列標記法來描述受控制的閘道版本 (請注意，受控制的 X 閘道是[ $ CNOT 網 $ 關](xref:microsoft.quantum.intrinsic.cnot)) ：
+在 $ g X 和 g Z 的特殊情況下， = $ $ = $ 我們引進下列標記法來描述受控制的閘道版本 (請注意，受控制的 X 閘道是[ $ CNOT 網 $ 關](xref:Microsoft.Quantum.Intrinsic.CNOT)) ：
 
 <!--- ![](.\media\6.svg) --->
 <!--找不到可輕鬆將其置中的方法 .。。可能是需要的延伸模組：-->
@@ -175,7 +175,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 <!--找不到可輕鬆將其置中的方法 .。。可能是需要的延伸模組：-->
 ![代表測量運算的符號](~/media/7.svg)
 
-Q# 針對此目的實作為 [量值運算子](xref:microsoft.quantum.intrinsic.measure) 。
+Q# 針對此目的實作為 [量值運算子](xref:Microsoft.Quantum.Intrinsic.Measure) 。
 如需詳細資訊，請參閱 [度量一節](xref:microsoft.quantum.libraries.standard.prelude#measurements) 。
 
 同樣地，subcircuit

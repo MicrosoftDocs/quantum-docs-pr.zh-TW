@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91489760"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691795"
 ---
 # <a name="contributing-code"></a>提供程式碼
 
@@ -31,12 +31,12 @@ ms.locfileid: "91489760"
 
 ### <a name="unit-tests"></a>單元測試
 
-Q#組成程式庫（例如 canon）的函式、作業和使用者定義類型，會在[**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)儲存機制的開發過程中自動進行測試。
+Q#組成程式庫（例如 canon）的函式、作業和使用者定義類型，會在 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)儲存機制的開發過程中自動進行測試。
 比方說，當新的提取要求開啟時，我們的 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) 設定會確認提取要求中的變更不會中斷任何與量副程式設計社區相依的現有功能。
 
 使用最新 Q# 版本，單元測試是使用屬性來定義 `@Test("QuantumSimulator")` 。 引數可以是 "QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator" 或任何指定執行目標的完整名稱。 有幾個屬性定義不同的執行目標可以附加到相同的可呼叫。 有些測試仍使用已被取代的 [Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) 套件，此封裝會公開所有 Q# `Test` 以 [Xunit](https://xunit.github.io/) framework 結尾的函式和作業。 您不再需要此套件來定義單元測試。 
 
-下列函式是用來確保和函 <xref:microsoft.quantum.canon.fst> 式 <xref:microsoft.quantum.canon.snd> 都在代表性範例中傳回正確的輸出。
+下列函式是用來確保和函 <xref:Microsoft.Quantum.Canon.Fst> 式 <xref:Microsoft.Quantum.Canon.Snd> 都在代表性範例中傳回正確的輸出。
 如果或的輸出 `Fst` `Snd` 不正確， `fail` 語句會用來導致測試失敗。
 
 ```qsharp
@@ -57,7 +57,7 @@ function PairTest () : Unit {
 ```
 
 您可以使用標準程式庫指南的 [測試一節](xref:microsoft.quantum.libraries.diagnostics) 中的技巧來檢查更複雜的條件。
-例如，下列測試會檢查所呼叫的是否與 `H(q); X(q); H(q);` <xref:microsoft.quantum.canon.applywith> 相同 `Z(q)` 。
+例如，下列測試會檢查所呼叫的是否與 `H(q); X(q); H(q);` <xref:Microsoft.Quantum.Canon.ApplyWith> 相同 `Z(q)` 。
 
 ```Q#
 @Test("QuantumSimulator")

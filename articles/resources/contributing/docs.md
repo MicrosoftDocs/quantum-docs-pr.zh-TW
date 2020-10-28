@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759674"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691782"
 ---
 # <a name="improving-documentation"></a>改善文件
 
@@ -27,9 +27,9 @@ ms.locfileid: "90759674"
 
 話雖如此，每一種形式的檔都有不同的詳細資料：
 
-- **概念檔**是由一組發行至的發行項所組成 https://docs.microsoft.com/quantum ，而且會從量子運算的基本概念，到交換格式的技術規格中說明所有專案。 這些文章是以 [DocFX-Flavored Markdown (DFM) ](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)，這是用來建立豐富檔集的 Markdown 變異。
-- **API 參考**是針對每個函 Q# 式、作業和使用者定義型別發行的一組頁面 https://docs.microsoft.com/qsharp/api/ 。 這些頁面會記錄每個可呼叫的輸入和作業，以及範例和詳細資訊的連結。 API 參考會自動從原始程式碼中的小型 DFM 檔中解壓縮， Q# 作為每個版本的一部分。
-- 每個範例和 kata 中隨附的 Readme.txt 檔案會說明如何使用該範例或 kata、其涵蓋的內容，以及與量子開發工具組的其餘部分之間的關聯性** <!----> 。** 這些檔案是使用 [GitHub Flavored Markdown (GFM) ](https://github.github.com/gfm/)所撰寫，這是 DFM 的較輕量替代方案，可直接將檔附加至程式碼存放庫。
+- **概念檔** 是由一組發行至的發行項所組成 https://docs.microsoft.com/quantum ，而且會從量子運算的基本概念，到交換格式的技術規格中說明所有專案。 這些文章是以 [DocFX-Flavored Markdown (DFM) ](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)，這是用來建立豐富檔集的 Markdown 變異。
+- **API 參考** 是針對每個函 Q# 式、作業和使用者定義型別發行的一組頁面 https://docs.microsoft.com/qsharp/api/ 。 這些頁面會記錄每個可呼叫的輸入和作業，以及範例和詳細資訊的連結。 API 參考會自動從原始程式碼中的小型 DFM 檔中解壓縮， Q# 作為每個版本的一部分。
+- 每個範例和 kata 中隨附的 Readme.txt 檔案會說明如何使用該範例或 kata、其涵蓋的內容，以及與量子開發工具組的其餘部分之間的關聯性 **<!----> 。** 這些檔案是使用 [GitHub Flavored Markdown (GFM) ](https://github.github.com/gfm/)所撰寫，這是 DFM 的較輕量替代方案，可直接將檔附加至程式碼存放庫。
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>參與概念檔
 
@@ -46,7 +46,7 @@ ms.locfileid: "90759674"
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>參考概念文章中的範例程式碼
 
-如果您想要包含 [範例存放庫](https://github.com/Microsoft/Quantum)中的程式碼，您可以使用特殊的 DocFX-Flavored Markdown 命令：
+如果您想要包含 [範例存放庫](https://github.com/Microsoft/Quantum)中的程式碼，您可以使用特殊的 DocFX-Flavored Markdown 命令來執行此作業：
 
 ```markdown
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
@@ -138,7 +138,7 @@ ms.locfileid: "90759674"
  }
 ```
 
-您可以在函式的 API 檔中查看上述程式碼的轉譯版本。 [ `ControlledOnBitString` ](xref:microsoft.quantum.canon.controlledonbitstring)
+您可以在函式的 API 檔中查看上述程式碼的轉譯版本。 [ `ControlledOnBitString` ](xref:Microsoft.Quantum.Canon.ControlledOnBitString)
 
 除了撰寫檔的一般作法，撰寫 API 檔批註也有助於牢記一些事項：
 
