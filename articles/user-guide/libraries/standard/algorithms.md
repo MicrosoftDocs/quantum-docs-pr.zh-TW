@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835667"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692213"
 ---
 # <a name="quantum-algorithms"></a>量子演算法 #
 
@@ -49,8 +49,8 @@ Q# 引進了振幅放大作為無警示振幅放大的特製化。  無警示幅
 傅立葉轉換是一種傳統分析的基本工具，與量子計算一樣重要。
 此外， *量子傅立葉轉換* (QFT) 遠超過傳統電腦上可能會有的功能，這是設計量子演算法時所選擇的第一個工具。
 
-作為 QFT 的近似值，我們提供的作業可 <xref:microsoft.quantum.canon.approximateqft> 讓您針對所需的演算法精確度，剪除不是絕對必要的旋轉，藉以進行進一步的優化。
-大約的 QFT 需要 dyadic $Z $-輪替作業以及作業 <xref:microsoft.quantum.intrinsic.rfrac> <xref:microsoft.quantum.intrinsic.h> 。
+作為 QFT 的近似值，我們提供的作業可 <xref:Microsoft.Quantum.Canon.ApproximateQft> 讓您針對所需的演算法精確度，剪除不是絕對必要的旋轉，藉以進行進一步的優化。
+大約的 QFT 需要 dyadic $Z $-輪替作業以及作業 <xref:Microsoft.Quantum.Intrinsic.RFrac> <xref:Microsoft.Quantum.Intrinsic.H> 。
 輸入和輸出會假設以位元組由大到小的編碼方式進行編碼---也就是說，具有索引的量子位 `0` 會在二進位整數表示的最左邊 (最高) 位中進行編碼。
 這會與 [ket 標記法](xref:microsoft.quantum.concepts.dirac)一致，因為在 state $ \ket $ 中的三個量子位暫存器 {100} 會對應至處於狀態 $ \ket $ 的 $q _0 $ {1} ，而 $q _1 $ 和 $q _2 $ 同時處於狀態 $ \ket {0} $。
 近似值參數 $a $ 會決定 $Z $ 旋轉的剪除層級，亦即 $a \in [0 ... n] $。
@@ -103,15 +103,15 @@ Beauregard 的新增項會使用 Draper 的新增項，或更明確的 $ \phi \\
 
 ### <a name="quantum-phase-estimation"></a>量子相位估算法 ###
 
-量子傅立葉轉換的一個特別重要的應用，是瞭解單一運算子的特徵值，這是一個稱為 *階段估計*的問題。
+量子傅立葉轉換的一個特別重要的應用，是瞭解單一運算子的特徵值，這是一個稱為 *階段估計* 的問題。
 請考慮使用單一 $U $ 和 state $ \ket{\phi} $，讓 $ \ket{\phi} $ 是 $U $ 的 eigenstate，其中包含未知 eigenvalue $ \phi $、\begin{equation} U\ket {\ phi} = \phi\ket{\phi}。
 \end{equation}，如果我們只能存取 $U $ 做為 oracle，則可以藉由使用套用至受控制作業目標的 $Z $ 旋轉，來學習階段 $ \phi $，並將其傳播回到控制項上。
 
 假設 $V $ 是 $U $ 的受控應用程式，例如 \begin{align} V ( \ket {0} \otimes \ket{\phi} ) & = \ket \otimes \ket{\phi} {0} \\ \\ \textrm{and} V ( \ket {1} \otimes \ket{\phi} ) & = e ^ {i \phi} \ket {1} \otimes \ket{\phi}。
 然後，\end{align} 由線性 \begin{align} V ( \ket{+} \otimes \ket{\phi} ) & = \frac{ ( \ket {0} \otimes \ket{\phi} ) + e ^ {i \phi} ( \ket {1} \otimes \ket{\phi} ) } {\sqrt {2} }。
-\end{align} 我們可以收集詞彙，以找出 \begin{align} V ( \ket{+} \otimes \ket{\phi} ) & = \frac{\ket {0} + e ^ {i \phi} \ket {1} } {\sqrt {2} } \otimes \ket{\phi} \\ \\ & = (R_1 ( \phi) \ket{+} ) \otimes \ket{\phi}，\end{align}，其中 $R _1 $ 是作業所套用的單一 <xref:microsoft.quantum.intrinsic.r1> 。
+\end{align} 我們可以收集詞彙，以找出 \begin{align} V ( \ket{+} \otimes \ket{\phi} ) & = \frac{\ket {0} + e ^ {i \phi} \ket {1} } {\sqrt {2} } \otimes \ket{\phi} \\ \\ & = (R_1 ( \phi) \ket{+} ) \otimes \ket{\phi}，\end{align}，其中 $R _1 $ 是作業所套用的單一 <xref:Microsoft.Quantum.Intrinsic.R1> 。
 以不同的方式放置，套用 $V $ 的效果與套用具有未知角度的 $R _1 $ 相同，即使我們只能存取 $V $ 做為 oracle。
-因此，在本討論的其餘部分，我們將討論以 $R _1 ( \phi) $ （我們使用所謂的 *階段 kickback*來實行）進行的階段估計。
+因此，在本討論的其餘部分，我們將討論以 $R _1 ( \phi) $ （我們使用所謂的 *階段 kickback* 來實行）進行的階段估計。
 
 因為控制和目標暫存器會在此程式之後繼續 untangled，所以我們可以重複使用 $ \ket{\phi} $ 做為受控制應用程式的 $U ^ $2 的目標，以準備第二個控制項量子位處於狀態 $R _1 (2 \phi) \ket{+} $。
 以這種方式繼續進行，我們可以取得表單 \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\ \\ & \propto \ bigotimes_ {j = 0} ^ {n} \left ( \ket {0} + \exp (i 2 ^ {j} \phi) \ket {1} \right) \\ \\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1-1} \exp (i \phi k) \ket{k} \end{align}，其中 $n $ 是我們需要的精確度位數，而且，我們使用 $ {} \propto {} $ 表示我們已抑制 $1/\sqrt{2 ^ n} $ 的正規化係數。
@@ -119,4 +119,4 @@ Beauregard 的新增項會使用 Draper 的新增項，或更明確的 $ \phi \\
 如果我們假設整數 $p $ 的 $ \phi = 2 \pi p/2 ^ k $，則會將此視為 $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots .. p_n} $，其中 $p _j $ 是 $j ^ {\textrm{th}} $ bit $2 \pi \phi $。
 套用量子傅立葉轉換的 adjoint 之後，我們就會取得編碼為量子狀態之階段的二進位標記法。
 
-在中 Q# ，這是由作業所執行，此作業會 <xref:microsoft.quantum.characterization.quantumphaseestimation> 採用 <xref:microsoft.quantum.oracles.discreteoracle> $U ^ m $ 的實作為 $m $ 的正整數函數來執行應用程式。
+在中 Q# ，這是由作業所執行，此作業會 <xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation> 採用 <xref:Microsoft.Quantum.Oracles.DiscreteOracle> $U ^ m $ 的實作為 $m $ 的正整數函數來執行應用程式。

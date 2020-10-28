@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 115cd65621afd8272887b36163b066a4e6a554d7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835650"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692175"
 ---
 # <a name="applications"></a>應用程式 #
 
@@ -48,13 +48,13 @@ Hamiltonian 模擬是許多其他量子模擬問題的主要元件，而 Hamilto
 
 量子模擬演算法會將 Hamiltonian 的指定描述轉換成一系列的基本量子閘道，這是指 Hamiltonian 所說的整體大約時間演進。
 
-在 Hamiltonian 分解為 Hermitian 元件總和的特殊情況下，Trotter-Suzuki 分解是一個特別簡單且直覺的演算法，用來模擬 Hamiltonian，以分解成 Hermitian 元件的總和。 比方說，這個系列的第一個訂單整合者近似 $ $ \begin{align} U (t) & = \left ( e ^ {-iH \_ 0 t/r} e ^ {-iH \_ 1 t/r} \cdots e ^ {-iH \_ {d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ |H \_ j \\ | ^ 2 t ^ 2/r) ，使用 $r d $ 詞彙的產品 \end{align} $ $。 
+在 Hamiltonian 分解為 Hermitian 部分總和的特殊情況下，Trotter-Suzuki 分解是一種特別簡單且直覺的演算法，可模擬 Hamiltonian，以分解成 Hermitian 元件的總和。 比方說，這個系列的第一個訂單整合者近似 $ $ \begin{align} U (t) & = \left ( e ^ {-iH \_ 0 t/r} e ^ {-iH \_ 1 t/r} \cdots e ^ {-iH \_ {d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ |H \_ j \\ | ^ 2 t ^ 2/r) ，使用 $r d $ 詞彙的產品 \end{align} $ $。 
 
 > [!TIP]
-> 範例中涵蓋了 Trotter Suzuki 模擬演算法的應用程式。
-> 針對 Ising 模型，只使用每部目的電腦提供的內部作業，請參閱[ **SimpleIsing**範例](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)。
-> 如需使用 Trotter Suzuki 程式庫控制結構的 Ising 模型，請參閱[ **IsingTrotter**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)。
-> 如需使用 Trotter Suzuki 程式庫控制結構的分子 Hydrogen，請參閱[ **H2 模擬**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)。
+> 範例中涵蓋 Trotter-Suzuki 模擬演算法的應用程式。
+> 針對 Ising 模型，只使用每部目的電腦提供的內部作業，請參閱 [ **SimpleIsing** 範例](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)。
+> 如需使用 Trotter-Suzuki 程式庫控制結構的 Ising 模型，請參閱 [ **IsingTrotter** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)。
+> 如需使用 Trotter-Suzuki 程式庫控制結構的分子 Hydrogen，請參閱 [ **H2 模擬** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)。
 
 在許多情況下，我們想要執行模擬演算法，但對其執行的細節不感興趣。 例如，第二個訂單的整合者近似 $ $ \begin{align} U (t) & = \left ( e ^ {-iH \_ 0 t/2r} e ^ {-iH \_ 1 t/2r} \cdots e ^ {-iH \_ {d-1} t/2r} e ^ {-iH \_ {d-1} t/2r} \cdots e ^ {-iH \_ 1 t/2r} e ^ {-iH \_ 0 t/2r} \right) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ |H \_ j \\ | ^ 3 t ^ 3/r ^ 2) ，\end{align} $ $ （使用 $ 2rd $ 詞彙的產品）。 較大的訂單會牽涉到更多的詞彙，而優化的變異可能需要指數的高度非一般排序。 其他先進的演算法也可能牽涉到在中繼步驟中使用 ancilla 量子位。 因此，我們會將模擬演算法封裝在 canon 中做為使用者定義型別
 
@@ -68,7 +68,7 @@ newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is 
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
 ```
 
-例如，您可以使用下列 canon 函式來呼叫 Trotter Suzuki 分解，並以參數 `trotterStepSize` 修改每個指數中的模擬持續時間，以及所 `trotterOrder` 需的整合程式順序。
+例如，您可以使用下列 canon 函式來呼叫 Trotter-Suzuki 分解，並以參數 `trotterStepSize` 修改每個指數中的模擬持續時間，以及所需的整合 `trotterOrder` 程式順序。
 
 ```qsharp
 function TrotterSimulationAlgorithm(
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> 範例中涵蓋模擬程式庫的應用程式。 如需使用 Ising 模型中的階段估計 `SimulationAlgorithm` ，請參閱[ **IsingPhaseEstimation**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)。
-> 如需使用 Ising 模型中的 adiabatic 狀態準備 `TimeDependentSimulationAlgorithm` ，請參閱[ **AdiabaticIsing**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)。
+> 範例中涵蓋模擬程式庫的應用程式。 如需使用 Ising 模型中的階段估計 `SimulationAlgorithm` ，請參閱 [ **IsingPhaseEstimation** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)。
+> 如需使用 Ising 模型中的 adiabatic 狀態準備 `TimeDependentSimulationAlgorithm` ，請參閱 [ **AdiabaticIsing** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)。
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Adiabatic 狀態準備 & 階段估計 ###
@@ -132,15 +132,15 @@ operation EstimateAdiabaticStateEnergy(
 `nQubits` 這是用來編碼初始量子狀態的量子位數目。 `statePrepUnitary` 從計算基礎 $ \ket{0\cdots 0} $ 準備開始狀態。 `adiabaticUnitary` 是實 adiabatic 狀態準備的單一作業，例如函數所產生的  `InterpolatedEvolution` 。 `qpeUnitary` 這是用來對產生的量子狀態執行階段估計的單一作業。 `phaseEstAlgorithm` 是我們選擇的階段估計演算法。
 
 > [!TIP]
-> 範例中涵蓋 adiabatic 狀態準備的應用程式。 針對使用手動執行 adiabatic 狀態準備和使用函式的 Ising 模型 `AdiabaticEvolution` ，請參閱[ **AdiabaticIsing**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)。
-> 如需 Ising 模型中的階段估計和 adiabatic 狀態準備，請參閱[ **IsingPhaseEstimation**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)。
+> 範例中涵蓋 adiabatic 狀態準備的應用程式。 針對使用手動執行 adiabatic 狀態準備和使用函式的 Ising 模型 `AdiabaticEvolution` ，請參閱 [ **AdiabaticIsing** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)。
+> 如需 Ising 模型中的階段估計和 adiabatic 狀態準備，請參閱 [ **IsingPhaseEstimation** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)。
 
 > [!TIP]
-> [分子 Hydrogen 的模擬](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)是有趣且簡短的範例。 [O'Malley](https://arxiv.org/abs/1512.06860)中所報告的模型和實驗性結果。 只需要 Pauli 矩陣，並採用表單 $ \hat H = g \_ {0} I \_ 0I \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {z \_ 0} {z 1} + g \_ \_ 4 {y 0} { \_ Y 1} \_ + g \_ 5 {x \_ 0} {X \_ 1} $。 這是有效的 Hamiltonian，只需要2個量子位，其中 $g $ 的常數會從兩個 Hydrogen 原子之間的距離 $R $ 計算。 使用 canon 函式，Paulis 會轉換成 unitaries，然後使用 Trotter-Suzuki 分解在短時間內演進。 在不使用 adiabatic 狀態準備的情況下，您可以建立 $H _2 $ 地面狀態的良好近似值，因此可以直接藉由利用 canon 的階段估計來找到地面狀態能源。
+> [分子 Hydrogen 的模擬](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)是有趣且簡短的範例。 [O'Malley](https://arxiv.org/abs/1512.06860)中所報告的模型和實驗性結果。 只需要 Pauli 矩陣，並採用表單 $ \hat H = g \_ {0} I \_ 0I \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {z \_ 0} {z 1} + g \_ \_ 4 {y 0} { \_ Y 1} \_ + g \_ 5 {x \_ 0} {X \_ 1} $。 這是有效的 Hamiltonian，只需要2個量子位，其中 $g $ 的常數會從兩個 Hydrogen 原子之間的距離 $R $ 計算。 使用 canon 函式時，Paulis 會轉換成 unitaries，然後在短時間內使用 Trotter-Suzuki 分解進行演進。 在不使用 adiabatic 狀態準備的情況下，您可以建立 $H _2 $ 地面狀態的良好近似值，因此可以直接藉由利用 canon 的階段估計來找到地面狀態能源。
 
 ## <a name="shors-algorithm"></a>秀爾演算法 ##
 Shor 的演算法仍是量子運算中最重要的一項發展，因為它展示了量子電腦可用來解決重要的問題，目前傳統方式棘手的問題。
-Shor 的演算法提供快速的方式，讓您使用量子電腦來將大型數位納入考慮，這是一種稱為「 *分解*」的問題。
+Shor 的演算法提供快速的方式，讓您使用量子電腦來將大型數位納入考慮，這是一種稱為「 *分解* 」的問題。
 許多當日 cryptosystems 的安全性是根據假設沒有快速演算法可進行分解。
 因此，Shor 的演算法對於我們在量子後世界中的安全性考慮有深遠的影響。
 
@@ -151,7 +151,7 @@ Shor 的演算法可視為混合式演算法。
 
 ### <a name="period-finding"></a>期間尋找 ###
 
-瞭解量子傅立葉轉換和階段估計的運作方式 (查看 [量子演算法](xref:microsoft.quantum.libraries.standard.algorithms)) ，我們可以使用這些工具來解決傳統方式的硬運算問題，稱為「 *期間尋找*」。  在下一節中，我們將瞭解如何套用期間尋找以進行分解。
+瞭解量子傅立葉轉換和階段估計的運作方式 (查看 [量子演算法](xref:microsoft.quantum.libraries.standard.algorithms)) ，我們可以使用這些工具來解決傳統方式的硬運算問題，稱為「 *期間尋找* 」。  在下一節中，我們將瞭解如何套用期間尋找以進行分解。
 
 假設有兩個整數 $a $ 和 $N $，其中 $a<N $，則期間尋找的目標（也稱為訂單尋找）是尋找 _order_ $r $ of $a $ 模數 $N $，其中 $r $ 會定義為最小的正整數，例如 $a ^ r \equiv 1 \text{Mod} N $。  
 
@@ -178,8 +178,8 @@ $U _a $ 的特徵值為 $ $ U \_ a \ket{x \_ s} = e ^ {2 \ pi i s/r} \ket{x \_ s
 為了達到 $ (a ^ nx) \text{mod} N $，我們可以直接套用受控制的 $U _ {a ^ n} $，我們會在其中計算 $a ^ n \text{mod} N $ 傳統方式，以插入量子電路。  
 [量子算術檔](./algorithms.md#arithmetic)中已描述達成這類別模組化算術的線路，尤其我們需要模組乘冪電路來實行受控制的 $U \_ {a ^ i} $ 作業。
 
-雖然上述電路對應至 [量子階段估計](xref:microsoft.quantum.characterization.quantumphaseestimation) ，並明確地啟用訂單尋找，但我們可以減少所需的量子位數目。 我們可以依照 [arXiv： quant 的第8頁](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)所述的順序尋找 Beauregard 的方法，或使用位於 Microsoft 的其中一個階段估計常式。 例如， [健全的階段估計](xref:microsoft.quantum.characterization.robustphaseestimation) 也會使用一個額外的量子位。
- 
+雖然上述電路對應至 [量子階段估計](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) ，並明確地啟用訂單尋找，但我們可以減少所需的量子位數目。 我們可以依照 [arXiv： quant 的第8頁](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)所述的順序尋找 Beauregard 的方法，或使用位於 Microsoft 的其中一個階段估計常式。 例如， [健全的階段估計](xref:microsoft.quantum.characterization.robustphaseestimation) 也會使用一個額外的量子位。
+
 ### <a name="factoring"></a>保 理 ###
 分解的目標是要判斷整數 $N $ 的兩個主要因素，其中 $N $ 是 $n $ 位數位。  
 分解包含以下所述的步驟。 這些步驟分成三個部分：傳統前置處理常式 (1-4) ;用來找出 $a \text{mod} N $ (5) 的量子運算常式;和傳統的後處理常式，從 order (6-9) 衍生質數。
@@ -197,6 +197,6 @@ $U _a $ 的特徵值為 $ $ U \_ a \ket{x \_ s} = e ^ {2 \ pi i s/r} \ket{x \_ s
 9. 如果 $ \text{gcd} (^ {r/2}-1，N) $ 是 $N $ 的非一般因素，會傳回 $ \text{gcd} (^ {r/2}-1，N) $。
 
 
-分解演算法是概率：它可以顯示，機率至少為一半，$r $ 將是偶數，$a ^ {r/2} \neq-1 \text{mod} N $，因此會產生主要因數。   (如需詳細資訊，請參閱[Shor 的原始](https://doi.org/10.1109/SFCS.1994.365700)檔，[如需詳細資訊](xref:microsoft.quantum.more-information)) ，請參閱中的其中一個*基本的量子*運算文字。
+分解演算法是概率：它可以顯示，機率至少為一半，$r $ 將是偶數，$a ^ {r/2} \neq-1 \text{mod} N $，因此會產生主要因數。   (如需詳細資訊，請參閱 [Shor 的原始](https://doi.org/10.1109/SFCS.1994.365700)檔， [如需詳細資訊](xref:microsoft.quantum.more-information)) ，請參閱中的其中一個 *基本的量子* 運算文字。
 如果未傳回主要因素，則只需從步驟 (1) 重複演算法。  $N $ 嘗試之後，每次嘗試失敗的機率最多為 $ 2 ^ {-n} $。
 因此，在重複此演算法之後，幾乎可以確保成功的次數很少。

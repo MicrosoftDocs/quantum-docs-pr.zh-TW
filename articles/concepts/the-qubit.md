@@ -96,7 +96,7 @@
 
 $$\begin{bmatrix}1 \\\\ 0 \end{bmatrix} 、 \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} 、 \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { 1 } { \sqrt { 2 } } \end{bmatrix} 、 \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { -1 } { \sqrt { 2 } } \end{bmatrix} \text { 和 } \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { i } { \sqrt { 2 } } \end{bmatrix} 。      $$
 
-量子狀態向量 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 和 $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 採用特殊角色。 這兩個向量會形成描述量子位狀態的向量空間基礎。 這表示任何量子狀態向量都可以撰寫為這些基礎向量的總和。 具體而言，向量 $ \begin{bmatrix} x \\\\ y \end{bmatrix} $ 可以撰寫為 $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 。 雖然這些向量的任何旋轉都可做為量子位的完全有效基礎，我們也選擇以 *計算為基礎*來為其提供許可權。
+量子狀態向量 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 和 $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 採用特殊角色。 這兩個向量會形成描述量子位狀態的向量空間基礎。 這表示任何量子狀態向量都可以撰寫為這些基礎向量的總和。 具體而言，向量 $ \begin{bmatrix} x \\\\ y \end{bmatrix} $ 可以撰寫為 $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 。 雖然這些向量的任何旋轉都可做為量子位的完全有效基礎，我們也選擇以 *計算為基礎* 來為其提供許可權。
 
 我們會將這兩個量子狀態對應至傳統位（亦即 $ 0 和1）的兩個狀態 $ $ $ 。 標準慣例是選擇
 
@@ -108,7 +108,7 @@ $$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} 、 \qquad 1 \equiv \begin{bm
 
 現在我們已經知道如何呈現量子位，我們可以討論 [*測量*](https://en.wikipedia.org/wiki/Measurement_in_quantum_mechanics)的概念，以取得這些狀態所代表的部分直覺。 測量結果對應于在量子位上「查看」的非正式構想，這會立即將量子狀態折迭為兩個傳統狀態 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 或 $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 的其中一個。 測量量子狀態向量所指定的量子位時 $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ ，我們會取得機率 $ 為 ^ 2 的結果0和機率為 $ $ | \alpha | $ $ $ $ | \beta | ^ 2 $ 的結果1。   在結果 $ 0 上 $ ，量子位的新狀態為 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ ; 在結果 $ 1 上， $ 其狀態為 $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 。 請注意， $ $ 由於正規化條件 $ | \alpha | ^ 2 + | \beta | ^ 2 = 1 $ ，這些機率會加總為1。
 
-度量的屬性也表示量子狀態向量的整體正負號是不相關的。 否定向量相當於箭號 $ \alpha \right \alpha $ 和箭號 $ \beta \right \beta $ 。 因為測量 $ 0 $ 和1的機率 $ $ 取決於詞彙的範圍平方，所以插入這類正負號並不會改變機率。 這類階段通常稱為「 [ `` *全域階段」（global 階段*' '](https://en.wikipedia.org/wiki/Phase_factor) ），更一般的形式可以是 $ e ^ { i， \phi } $ 而不只是 $ \pm 1 $ 。
+度量的屬性也表示量子狀態向量的整體正負號是不相關的。 否定向量相當於箭號 $ \alpha \right \alpha $ 和箭號 $ \beta \right \beta $ 。 因為測量 $ 0 $ 和1的機率 $ $ 取決於詞彙的範圍平方，所以插入這類正負號並不會改變機率。 這類階段通常稱為「 [ `` *全域階段」（global 階段* ' '](https://en.wikipedia.org/wiki/Phase_factor) ），更一般的形式可以是 $ e ^ { i， \phi } $ 而不只是 $ \pm 1 $ 。
 
 測量的最後一個重要屬性是它不一定會損毀所有的量子狀態向量。 如果我們從狀態 1 0 的量子位開始 $ \begin{bmatrix} \\\\ \end{bmatrix} $ （對應至傳統狀態 $ 0） $ ，測量此狀態一律會產生結果 $ 0， $ 並讓量子狀態保持不變。 在這種情況下，如果我們只有傳統的位 (也就是量子位，也就是 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 或 $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $) 然後測量則不會損毀系統。 這表示我們可以在量子電腦上複寫傳統資料並操作，就像在傳統電腦上一樣。 不過，若要一次將資訊儲存在這兩個狀態中，就能將量子運算提升至可能的傳統方式，並進一步 robs 量子電腦不限複製量子資料的能力，另請參閱 [無複製定理](https://en.wikipedia.org/wiki/No-cloning_theorem)。
 
@@ -122,7 +122,7 @@ $$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} 、 \qquad 1 \equiv \begin{bm
 此圖表中的箭號會顯示配量狀態向量的方向，而每個箭號的轉換都可視為圍繞其中一個基線軸的旋轉。
 雖然將量子計算視為一連串的旋轉是一個強大的直覺，但使用此直覺來設計和描述演算法是很困難的。 Q# 藉由提供描述這類旋轉的語言來緩和此問題。
 
-## <a name="single-qubit-operations"></a>單一量子位作業
+## <a name="single-qubit-operations"></a>Single-Qubit 作業
 
 量子電腦藉由套用一組通用的量子閘道來處理資料，以模擬量子狀態向量的任何旋轉。
 這種 universality 概念與傳統 (的概念類似 universality 的概念，例如，如果輸入位的每個轉換都可以使用有限的長度電路來執行，則會將閘道組視為通用的傳統) 計算。
@@ -176,7 +176,7 @@ $$
 
 最簡單的這類基本功能是單一量子位旋轉。 通常會考慮三個單一量子位的旋轉： $ R_x $ 、 $ R_y $ 和 $ R_z $ 。 例如，若要將旋轉 R_x 的動作視覺化 $ ( \theta) $ ，請想像一下布洛赫球體 X 軸方向的右手邊 $ ， $ 並以 $ \ theta/2 弧度的角度旋轉向量 $ 。 這種混淆因數 $ 2 $ 的原因是，在 $ $ 繪製于布洛赫球體的情況下，正向向量的 \circ 相隔 180 ^，但實際上是沿著 $ 幾何的 90 ^ \circ $ 角度。 對應的單一矩陣如下：
 
-\begin{align* } 
+\begin{align *} 
  & R_z ( \theta) = e ^ { -i\theta z/2 } = \begin{bmatrix} e ^ { -i \ theta/2 } & 0 \\\\ 0 & e ^ { i \ theta/2 } \end{bmatrix} ， \\\\ 
  & R_x ( \theta) = e ^ { -i\theta x/2 } = HR_z ( \theta) H = \begin{bmatrix} \cos ( \ theta/2) & -i\sin () \\\\ & i\sin ( \ theta/2) \end{bmatrix} \\\\ 
  & R_y ( \theta) = e ^ { -i\theta y/2 } = SHR_z ( \theta) HS ^ \dagger = \begin{bmatrix} \cos ( \ theta/2) & -\sin ( \ theta/2) \\\\ \sin ( \ theta/2) & \cos ( \ theta/2) \end{bmatrix} 。 \end {對齊*}

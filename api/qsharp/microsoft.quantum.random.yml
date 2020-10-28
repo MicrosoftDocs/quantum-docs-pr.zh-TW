@@ -1,0 +1,54 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 傳回離散類別分佈，其中會明確指定指定結果的每個有限清單的機率。
+  uid: Microsoft.Quantum.Random.CategoricalDistribution
+- summary: 傳回指定的內含間隔的統一散發。
+  uid: Microsoft.Quantum.Random.ContinuousUniformDistribution
+- summary: 傳回指定內含範圍的統一散發。
+  uid: Microsoft.Quantum.Random.DiscreteUniformDistribution
+- summary: 傳回具有給定平均值和變異數的一般分佈。
+  uid: Microsoft.Quantum.Random.NormalDistribution
+- summary: 傳回具有 mean 0 和變異數1的一般分佈。
+  uid: Microsoft.Quantum.Random.StandardNormalDistribution
+- summary: ''
+  uid: Microsoft.Quantum.Random.StandardTransformation
+- summary: 指定連續散發時，會傳回由指定函式轉換原始的新散發。
+  uid: Microsoft.Quantum.Random.TransformedContinuousDistribution
+name: Microsoft.Quantum.Random
+newtypes:
+- summary: 代表任意大小之整數的單變數機率分佈。
+  uid: Microsoft.Quantum.Random.BigDiscreteDistribution
+- summary: 表示複數的單變數機率分佈。
+  uid: Microsoft.Quantum.Random.ComplexDistribution
+- summary: 代表單變數在實數上的機率分佈。
+  uid: Microsoft.Quantum.Random.ContinuousDistribution
+- summary: 表示透過整數的單變數機率分佈。
+  uid: Microsoft.Quantum.Random.DiscreteDistribution
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Random.Delay
+- summary: 從 probablities 清單所指定的類別散發中，繪製隨機樣本。
+  uid: Microsoft.Quantum.Random.DrawCategorical
+- summary: 獲得成功機率之後，會傳回一則具有指定機率的單一利利實驗。
+  uid: Microsoft.Quantum.Random.DrawRandomBool
+- summary: 以指定的內含間隔繪製隨機實數。
+  uid: Microsoft.Quantum.Random.DrawRandomDouble
+- summary: 在指定的內含範圍內繪製隨機整數。
+  uid: Microsoft.Quantum.Random.DrawRandomInt
+- summary: 繪製隨機的 Pauli 值。
+  uid: Microsoft.Quantum.Random.DrawRandomPauli
+- summary: ''
+  uid: Microsoft.Quantum.Random.DrawStandardNormalVariate
+- summary: 由於有資料陣列和其索引的散發，因此會嘗試隨機播放專案。
+  uid: Microsoft.Quantum.Random.MaybeChooseElement
+- summary: 從轉換後的發行版本進行取樣的僅限內部操作。 只能透過部分應用程式使用。
+  uid: Microsoft.Quantum.Random.SampleTransformedContinuousDistribution
+summary: ''
+uid: Microsoft.Quantum.Random
+metadata:
+  ms.openlocfilehash: 1504b9ae9ffc21a7684a45b58f56f138068beb67
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92697730"

@@ -1,0 +1,32 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Measurement
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Measurement.BasisChangeZtoY
+- summary: 以 X 為基礎測量單一量子位，並將它重設為遵循測量的固定初始狀態。
+  uid: Microsoft.Quantum.Measurement.MResetX
+- summary: 以 Y 為單位測量單一量子位，並將它重設為遵循測量的固定初始狀態。
+  uid: Microsoft.Quantum.Measurement.MResetY
+- summary: 以 Z 為單位測量單一量子位，並將它重設為遵循測量的固定初始狀態。
+  uid: Microsoft.Quantum.Measurement.MResetZ
+- summary: 以 Pauli Z 為單位共同測量量子位的暫存器。
+  uid: Microsoft.Quantum.Measurement.MeasureAllZ
+- summary: 指定多量子位 Pauli 運算子的陣列時，會使用指定的測量小工具來測量每個運算子，然後傳回結果的陣列。
+  uid: Microsoft.Quantum.Measurement.MeasurePaulis
+- summary: 使用明確的臨時量子位來測量指定的 Pauli 運算子，以執行度量。
+  uid: Microsoft.Quantum.Measurement.MeasureWithScratch
+- summary: 以標準為單位測量指定陣列中的每個量子位。
+  uid: Microsoft.Quantum.Measurement.MultiM
+- summary: 藉由測量量子位並視需要套用位翻轉，將量子位設定為指定的計算基礎狀態。
+  uid: Microsoft.Quantum.Measurement.SetToBasisState
+summary: ''
+uid: Microsoft.Quantum.Measurement
+metadata:
+  ms.openlocfilehash: f35f2867ca9fd68cbc0fbc0cf3d386d441adbaa7
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92697391"
