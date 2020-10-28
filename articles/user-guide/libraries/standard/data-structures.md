@@ -9,21 +9,21 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835582"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692233"
 ---
 # <a name="data-structures-and-modeling"></a>資料結構與模型化 #
 
 ## <a name="classical-data-structures"></a>傳統資料結構 ##
 
 除了用來表示量子概念的使用者定義型別之外，canon 還提供作業、函式和型別，以使用用於量子系統控制中的傳統資料。
-例如，函 <xref:microsoft.quantum.arrays.reversed> 式會採用陣列做為輸入，並以反向順序傳回相同的陣列。
+例如，函 <xref:Microsoft.Quantum.Arrays.Reversed> 式會採用陣列做為輸入，並以反向順序傳回相同的陣列。
 然後可以在型別的陣列上使用 `Qubit[]` ，以避免在整數的量子表示之間轉換時，必須套用不必要的 $ \operatorname{SWAP} $ 管制。
-同樣地，在上一節中，我們在上一節中看到，表單的類型 `(Int, Int -> T)` 可以用來表示隨機存取集合，因此函式會 <xref:microsoft.quantum.arrays.lookupfunction> 提供便利的方式來從陣列類型中建立這類類型。
+同樣地，在上一節中，我們在上一節中看到，表單的類型 `(Int, Int -> T)` 可以用來表示隨機存取集合，因此函式會 <xref:Microsoft.Quantum.Arrays.LookupFunction> 提供便利的方式來從陣列類型中建立這類類型。
 
 ### <a name="pairs"></a>對 ###
 
@@ -38,7 +38,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 Canon 提供數個函式來處理陣列。
 這些函式是以類型參數化，因此可以與任何類型的陣列一起使用 Q# 。
-例如，函式 <xref:microsoft.quantum.arrays.reversed> 會傳回新的陣列，其專案是從其輸入的反向順序。
+例如，函式 <xref:Microsoft.Quantum.Arrays.Reversed> 會傳回新的陣列，其專案是從其輸入的反向順序。
 這可以用來變更在呼叫作業時如何表示量子暫存器：
 
 ```qsharp
@@ -49,14 +49,14 @@ QFT(BigEndian(Reversed(leRegister!)));
 QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-同樣地，函 <xref:microsoft.quantum.arrays.subarray> 式可以用來重新排列或取得陣列元素的子集：
+同樣地，函 <xref:Microsoft.Quantum.Arrays.Subarray> 式可以用來重新排列或取得陣列元素的子集：
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-結合 flow 控制項時，陣列操作函式（例如） <xref:microsoft.quantum.arrays.zip> 可以提供強大的方式來表達量副程式：
+結合 flow 控制項時，陣列操作函式（例如） <xref:Microsoft.Quantum.Arrays.Zipped> 可以提供強大的方式來表達量副程式：
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -64,7 +64,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
+        Zipped([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -127,8 +127,8 @@ is Adj + Ctl {
 }
 ```
 
-此 oracle 接著是一種特殊的作業案例，可讓您透過 <xref:microsoft.quantum.canon.rall1> 任意階段來旋轉，而不是反映案例 $ \phi = \pi $。
-在此情況下， `RAll1` 類似于 <xref:microsoft.quantum.intrinsic.r1> 序言作業，因為它會旋轉 $ \ket{11\cdots1} $，而不是單一量子位狀態 $ \ket {1} $。
+此 oracle 接著是一種特殊的作業案例，可讓您透過 <xref:Microsoft.Quantum.Canon.RAll1> 任意階段來旋轉，而不是反映案例 $ \phi = \pi $。
+在此情況下， `RAll1` 類似于 <xref:Microsoft.Quantum.Intrinsic.R1> 序言作業，因為它會旋轉 $ \ket{11\cdots1} $，而不是單一量子位狀態 $ \ket {1} $。
 
 標示初始子空間的 oracle 可以類似的方式來建立。
 在虛擬虛擬中：
@@ -139,7 +139,7 @@ is Adj + Ctl {
 4. 將 $X $ 閘道套用至每個量子位。
 5. 將 $H $ 閘道套用至每個量子位。
 
-這次，我們也會示範如何 <xref:microsoft.quantum.canon.applywith> 搭配 <xref:microsoft.quantum.canon.rall1> 上述操作來使用：
+這次，我們也會示範如何 <xref:Microsoft.Quantum.Canon.ApplyWith> 搭配 <xref:Microsoft.Quantum.Canon.RAll1> 上述操作來使用：
 
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
@@ -160,10 +160,10 @@ is Adj + Ctl {
 
 > [!TIP]
 > 範例中涵蓋了以下所述的兩種 oracle 類型。
-> 若要深入瞭解連續查詢 oracle，請參閱[ **PhaseEstimation**範例](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)。
-> 若要深入瞭解離散查詢 oracle，請參閱[ **IsingPhaseEstimation**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)。
+> 若要深入瞭解連續查詢 oracle，請參閱 [ **PhaseEstimation** 範例](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)。
+> 若要深入瞭解離散查詢 oracle，請參閱 [ **IsingPhaseEstimation** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)。
 
-Oracle 的第一種類型是，我們會呼叫不同的查詢 oracle，並以使用者定義型別表示 <xref:microsoft.quantum.oracles.discreteoracle> ，只涉及單一矩陣。
+Oracle 的第一種類型是，我們會呼叫不同的查詢 oracle，並以使用者定義型別表示 <xref:Microsoft.Quantum.Oracles.DiscreteOracle> ，只涉及單一矩陣。
 如果 $U $ 是要預估其特徵值的單一元件，則 $U $ 的 oracle 只是實作為 $U $ 的副程式的一種。
 例如，您可以將 $U $ 視為上方所定義的 oracle $Q $ 以進行振幅估計。
 此矩陣的特徵值可用來估計初始和目標狀態（$ \sin ^ 2 ( \theta) $）之間的重迭，使用 quadratically 的樣本數比另一種需要的少。
@@ -173,7 +173,7 @@ Oracle 的第一種類型是，我們會呼叫不同的查詢 oracle，並以使
 在這種情況下，我們會與您互動的副程式，以瞭解此閘道的 $ \theta $ 固定值為 $ $ \begin{align} U & = R_z ( \theta) \\ \\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \ theta/2} \end{bmatrix}。
 \end{align} $ $
 
-階段估計中使用的第二種 oracle 類型是連續查詢 oracle，以類型表示 <xref:microsoft.quantum.oracles.continuousoracle> 。
+階段估計中使用的第二種 oracle 類型是連續查詢 oracle，以類型表示 <xref:Microsoft.Quantum.Oracles.ContinuousOracle> 。
 針對階段估計的連續查詢 oracle 採用 $U (t) $ 的形式，其中 $t $ 是傳統方式的已知實數。
 如果我們讓 $U $ 成為固定的單一查詢，則連續查詢 oracle 會採用 $U (t) = U ^ t $ 的表單。
 這可讓我們查詢 $ \sqrt{U} $ 之類的矩陣，無法直接在離散查詢模型中執行。
@@ -211,7 +211,7 @@ $ $ \begin{align} U (t) & = \left ( e ^ {-iH \_ 0 t/r} e ^ {-iH \_ 1 t/r} \cdots
 Dynamical 產生器模型化程式庫提供了一個架構，可根據更簡單的產生器，以有系統的方式編碼複雜的 如此一來，就可以將這類描述傳遞給模擬程式庫，以根據選擇的模擬演算法來執行時間演進，並自動處理許多詳細資料。
 
 > [!TIP]
-> 範例中涵蓋了下面所述的 dynamical 產生器程式庫。 如需以 Ising 模型為基礎的範例，請參閱[ **IsingGenerators**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators)。
+> 範例中涵蓋了下面所述的 dynamical 產生器程式庫。 如需以 Ising 模型為基礎的範例，請參閱 [ **IsingGenerators** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators)。
 > 如需以分子 Hydrogen 為基礎的範例，請參閱 [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) 和 [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) 範例。
 
 ### <a name="complete-description-of-a-generator"></a>產生器的完整描述 ###
@@ -261,7 +261,7 @@ newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 
 第一個參數代表時間持續時間，會乘以 `GeneratorIndex` 單一演進的係數。 第二個參數是單一動作的量子位暫存器。 
 
-### <a name="time-dependent-generators"></a>時間相依產生器 ###
+### <a name="time-dependent-generators"></a>Time-Dependent 產生器 ###
 
 在許多情況下，我們也想要模型化時間相依的產生器，可能發生在薛丁格方程式 $ $ \begin{align} i\frac {d \ket{\psi (t) }} {d t} & = \hat H (t) \ket{\psi (t) }、\end{align} $ $，而產生器 $ \hat H (t) $ 現在是與時間相依。 從上述時間獨立的產生器到此情況的延伸模組很簡單。 `GeneratorSystem`我們會改為使用使用者定義型別，而不是針對所有時間 $t $ 來修正 Hamiltonian 的問題 `GeneratorSystemTimeDependent` 。
 

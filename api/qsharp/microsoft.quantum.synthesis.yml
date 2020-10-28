@@ -1,0 +1,71 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 分解變數上的排列
+  uid: Microsoft.Quantum.Synthesis.DecomposedOn
+- summary: 編碼中的事實資料表編碼 {1,-1}
+  uid: Microsoft.Quantum.Synthesis.Encoded
+- summary: 以反轉係數擴充頻譜
+  uid: Microsoft.Quantum.Synthesis.Extended
+- summary: '{-1,1}使用 Yates 的方法，以編碼方式計算布耳函數的 Hadamard 轉換'
+  uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: 如果目標不是0，則將 MCMTMask 類型視為單一陣列，否則會傳回空陣列。
+  uid: Microsoft.Quantum.Synthesis.GateMask
+- summary: 最多可計算兩個 MCMT 遮罩，以將 y 轉換為 x。
+  uid: Microsoft.Quantum.Synthesis.GateMasksForAssignment
+- summary: 傳回設定整數位的所有位置。
+  uid: Microsoft.Quantum.Synthesis.IntegerBits
+- summary: 將控制項的遮罩和目標位轉換成一對控制項量子位和目標量子位
+  uid: Microsoft.Quantum.Synthesis.MaskToQubitsPair
+- summary: '{-1,1} 布林值真值的編碼'
+  uid: Microsoft.Quantum.Synthesis.RMEncoding
+- summary: 從布林值陣列調整事實資料表（根據變數數目，新陣列的長度會傳回 `2^numVars` ），可能需要以 `table` 專案擴充大小， `false` 或將它截斷為 `2^numVars` 元素。
+  uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: 計算閘道遮罩至合成排列。
+  uid: Microsoft.Quantum.Synthesis.TBSMain
+- summary: 計算用來將為永久 [x] 轉換為 x 的閘道遮罩，並更新目前的排列。
+  uid: Microsoft.Quantum.Synthesis.TBSStep
+- summary: 藉由折迭所有變數索引來收集受控制閘道的所有功能
+  uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutation
+- summary: 單一變數索引的分解邏輯
+  uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutationFolder
+- summary: 根據閘道遮罩來更新輸出模式。
+  uid: Microsoft.Quantum.Synthesis.UpdatedOutputPattern
+- summary: 根據閘道遮罩來更新排列。
+  uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
+- summary: 將0位插入整數
+  uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+name: Microsoft.Quantum.Synthesis
+newtypes:
+- summary: 根據變數索引進行分解時的狀態
+  uid: Microsoft.Quantum.Synthesis.DecompositionState
+- summary: >-
+    一種類型，代表多重控制的多目標 Toffoli 閘道。
+
+    第一個整數是控制行的位元遮罩。  設定的位索引會對應至控制行索引。
+
+    第二個整數是目標行的位元遮罩。  設定對應至目標行索引的位索引。
+
+    這兩個整數的位索引必須相鄰。
+  uid: Microsoft.Quantum.Synthesis.MCMTMask
+operations:
+- summary: 使用以分解為基礎的合成排列，在量子狀態中 Permutes amplitudes。
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
+- summary: 使用以分解為基礎的合成排列，在量子狀態中 Permutes amplitudes。
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
+- summary: 使用以轉換為基礎的合成排列，在量子狀態中 Permutes amplitudes。
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: '@"microsoft.quantum.intrinsic.x" `target` 如果布耳函數 `func` 針對中的傳統指派評估為 true，則會在上套用運算 `controlRegister` 。'
+  uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
+- summary: '@"microsoft.quantum.intrinsic.x" `target` 如果布耳函數 `func` 針對中的傳統指派評估為 true，則會在上套用運算 `controlRegister` 。'
+  uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTableWithCleanTarget
+summary: 此命名空間包含的函式和作業可根據排列和布耳函數來合成量子作業。
+uid: Microsoft.Quantum.Synthesis
+metadata:
+  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92701210"
