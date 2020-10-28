@@ -1,0 +1,50 @@
+---
+uid: Microsoft.Quantum.Random.DrawCategorical
+title: DrawCategorical 操作
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Random
+qsharp.name: DrawCategorical
+qsharp.summary: Draws a random sample from a categorical distribution specified by a list of probablities.
+ms.openlocfilehash: fdc5ae3a9341cb11e8fda129bdd030289b6c99c2
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92699657"
+---
+# <a name="drawcategorical-operation"></a><span data-ttu-id="eba39-102">DrawCategorical 操作</span><span class="sxs-lookup"><span data-stu-id="eba39-102">DrawCategorical operation</span></span>
+
+<span data-ttu-id="eba39-103">命名空間： [Microsoft. 量子](xref:Microsoft.Quantum.Random)</span><span class="sxs-lookup"><span data-stu-id="eba39-103">Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)</span></span>
+
+<span data-ttu-id="eba39-104">包： [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="eba39-104">Package: [](https://nuget.org/packages/)</span></span>
+
+
+<span data-ttu-id="eba39-105">從 probablities 清單所指定的類別散發中，繪製隨機樣本。</span><span class="sxs-lookup"><span data-stu-id="eba39-105">Draws a random sample from a categorical distribution specified by a list of probablities.</span></span>
+
+```qsharp
+operation DrawCategorical (probs : Double[]) : Int
+```
+
+
+## <a name="description"></a><span data-ttu-id="eba39-106">描述</span><span class="sxs-lookup"><span data-stu-id="eba39-106">Description</span></span>
+
+<span data-ttu-id="eba39-107">選取特定索引的機率與該索引的陣列元素值成正比。</span><span class="sxs-lookup"><span data-stu-id="eba39-107">The probability of selecting a specific index is proportional to the value of the array element at that index.</span></span>
+<span data-ttu-id="eba39-108">會忽略等於零的陣列元素，而且永遠不會傳回其索引。</span><span class="sxs-lookup"><span data-stu-id="eba39-108">Array elements that are equal to zero are ignored and their indices are never returned.</span></span> <span data-ttu-id="eba39-109">如果任何陣列元素小於零，或如果沒有陣列元素大於零，則作業會失敗。</span><span class="sxs-lookup"><span data-stu-id="eba39-109">If any array element is less than zero, or if no array element is greater than zero, then the operation fails.</span></span>
+
+## <a name="input"></a><span data-ttu-id="eba39-110">輸入</span><span class="sxs-lookup"><span data-stu-id="eba39-110">Input</span></span>
+
+### <a name="probs--double"></a><span data-ttu-id="eba39-111">probs： [Double](xref:microsoft.quantum.lang-ref.double)[]</span><span class="sxs-lookup"><span data-stu-id="eba39-111">probs : [Double](xref:microsoft.quantum.lang-ref.double)[]</span></span>
+
+<span data-ttu-id="eba39-112">浮點數的陣列，與選取每個索引的機率成正比。</span><span class="sxs-lookup"><span data-stu-id="eba39-112">An array of floating-point numbers proportional to the probability of selecting each index.</span></span>
+
+
+
+## <a name="output--int"></a><span data-ttu-id="eba39-113">輸出： [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="eba39-113">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+<span data-ttu-id="eba39-114">整數 $i $ 具有機率 $ \Pr (i) = p_i/\ sum_i p_i $，其中 $p _i $ 是的 $i $ 第一個元素 `probs` 。</span><span class="sxs-lookup"><span data-stu-id="eba39-114">An integer $i$ with probability $\Pr(i) = p_i / \sum_i p_i$, where $p_i$ is the $i$th element of `probs`.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="eba39-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eba39-115">See Also</span></span>
+
+- [<span data-ttu-id="eba39-116">CategoricalDistribution。</span><span class="sxs-lookup"><span data-stu-id="eba39-116">Microsoft.Quantum.Random.CategoricalDistribution</span></span>](xref:Microsoft.Quantum.Random.CategoricalDistribution)

@@ -1,0 +1,72 @@
+---
+uid: Microsoft.Quantum.Canon.MultiplexPauli
+title: MultiplexPauli 操作
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Canon
+qsharp.name: MultiplexPauli
+qsharp.summary: Applies a Pauli rotation conditioned on an array of qubits.
+ms.openlocfilehash: 0714e796c1e5ad097814bcf507f49f59a844e9ff
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92698955"
+---
+# <a name="multiplexpauli-operation"></a><span data-ttu-id="7b150-102">MultiplexPauli 操作</span><span class="sxs-lookup"><span data-stu-id="7b150-102">MultiplexPauli operation</span></span>
+
+<span data-ttu-id="7b150-103">命名空間： [Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="7b150-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+
+<span data-ttu-id="7b150-104">包： [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="7b150-104">Package: [](https://nuget.org/packages/)</span></span>
+
+
+<span data-ttu-id="7b150-105">在量子位的陣列上套用 Pauli 旋轉。</span><span class="sxs-lookup"><span data-stu-id="7b150-105">Applies a Pauli rotation conditioned on an array of qubits.</span></span>
+
+```qsharp
+operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit
+```
+
+
+## <a name="description"></a><span data-ttu-id="7b150-106">描述</span><span class="sxs-lookup"><span data-stu-id="7b150-106">Description</span></span>
+
+<span data-ttu-id="7b150-107">這會套用一個受控制的單一作業，此作業會在由 $n $-量子位 number state $ \ket{j} $ 控制時，對單一量子位 Pauli 運算子 $P $ 執行旋轉（依角度 $ \ theta_j $）。</span><span class="sxs-lookup"><span data-stu-id="7b150-107">This applies a multiply controlled unitary operation that performs rotations by angle $\theta_j$ about single-qubit Pauli operator $P$ when controlled by the $n$-qubit number state $\ket{j}$.</span></span>
+<span data-ttu-id="7b150-108">尤其是這項作業的動作是由單一</span><span class="sxs-lookup"><span data-stu-id="7b150-108">In particular, the action of this operation is represented by the unitary</span></span>
+
+<span data-ttu-id="7b150-109">$ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j} \otimes e ^ {i P \ theta_j}。</span><span class="sxs-lookup"><span data-stu-id="7b150-109">$$ \begin{align} U = \sum^{2^n - 1}_{j=0} \ket{j}\bra{j} \otimes e^{i P \theta_j}.</span></span>
+<span data-ttu-id="7b150-110">\end{align} $ $</span><span class="sxs-lookup"><span data-stu-id="7b150-110">\end{align} $$</span></span>
+
+## <a name="input"></a><span data-ttu-id="7b150-111">輸入</span><span class="sxs-lookup"><span data-stu-id="7b150-111">Input</span></span>
+
+### <a name="coefficients--double"></a><span data-ttu-id="7b150-112">係數： [Double](xref:microsoft.quantum.lang-ref.double)[]</span><span class="sxs-lookup"><span data-stu-id="7b150-112">coefficients : [Double](xref:microsoft.quantum.lang-ref.double)[]</span></span>
+
+<span data-ttu-id="7b150-113">最多 $ 2 ^ n $ 係數 $ \ theta_j $ 的陣列。</span><span class="sxs-lookup"><span data-stu-id="7b150-113">Array of up to $2^n$ coefficients $\theta_j$.</span></span> <span data-ttu-id="7b150-114">$J $ th 係數會以位元組由大到小的格式來編制數位狀態 $ \ket{j} $ 編碼。</span><span class="sxs-lookup"><span data-stu-id="7b150-114">The $j$th coefficient indexes the number state $\ket{j}$ encoded in little-endian format.</span></span>
+
+
+### <a name="pauli--pauli"></a><span data-ttu-id="7b150-115">pauli： [pauli](xref:microsoft.quantum.lang-ref.pauli)</span><span class="sxs-lookup"><span data-stu-id="7b150-115">pauli : [Pauli](xref:microsoft.quantum.lang-ref.pauli)</span></span>
+
+<span data-ttu-id="7b150-116">Pauli 運算子 $P $，可決定旋轉軸。</span><span class="sxs-lookup"><span data-stu-id="7b150-116">Pauli operator $P$ that determines axis of rotation.</span></span>
+
+
+### <a name="control--littleendian"></a><span data-ttu-id="7b150-117">控制項： [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="7b150-117">control : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+
+<span data-ttu-id="7b150-118">以位元組由大到小的格式，$n $ 量子位 control register 編碼數位狀態 $ \ket{j} $。</span><span class="sxs-lookup"><span data-stu-id="7b150-118">$n$-qubit control register that encodes number states $\ket{j}$ in little-endian format.</span></span>
+
+
+### <a name="target--qubit"></a><span data-ttu-id="7b150-119">目標： [量子位](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="7b150-119">target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
+
+<span data-ttu-id="7b150-120">由 $e ^ {i P \ theta_j} $ 旋轉的單一量子位註冊。</span><span class="sxs-lookup"><span data-stu-id="7b150-120">Single qubit register that is rotated by $e^{i P \theta_j}$.</span></span>
+
+
+
+## <a name="output--unit"></a><span data-ttu-id="7b150-121">輸出： [單位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="7b150-121">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+
+
+
+## <a name="remarks"></a><span data-ttu-id="7b150-122">備註</span><span class="sxs-lookup"><span data-stu-id="7b150-122">Remarks</span></span>
+
+<span data-ttu-id="7b150-123">`coefficients` 如果指定了少於 $ 2 ^ n $ 的元素，則會以 $ \ theta_j = $0.0 填補。</span><span class="sxs-lookup"><span data-stu-id="7b150-123">`coefficients` will be padded with elements $\theta_j = 0.0$ if fewer than $2^n$ are specified.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7b150-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7b150-124">See Also</span></span>
+
+- [<span data-ttu-id="7b150-125">Canon. ApproximatelyMultiplexPauli</span><span class="sxs-lookup"><span data-stu-id="7b150-125">Microsoft.Quantum.Canon.ApproximatelyMultiplexPauli</span></span>](xref:Microsoft.Quantum.Canon.ApproximatelyMultiplexPauli)

@@ -1,0 +1,60 @@
+---
+uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubits
+title: ApplyToFirstTwoQubits 操作
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Canon
+qsharp.name: ApplyToFirstTwoQubits
+qsharp.summary: Applies an operation to the first two qubits in the register.
+ms.openlocfilehash: aad07889c0dbf2329304c98b06dbd0c225df8a81
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92699183"
+---
+# <a name="applytofirsttwoqubits-operation"></a><span data-ttu-id="91b31-102">ApplyToFirstTwoQubits 操作</span><span class="sxs-lookup"><span data-stu-id="91b31-102">ApplyToFirstTwoQubits operation</span></span>
+
+<span data-ttu-id="91b31-103">命名空間： [Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="91b31-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+
+<span data-ttu-id="91b31-104">包： [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="91b31-104">Package: [](https://nuget.org/packages/)</span></span>
+
+
+<span data-ttu-id="91b31-105">將作業套用至註冊中的前兩個量子位。</span><span class="sxs-lookup"><span data-stu-id="91b31-105">Applies an operation to the first two qubits in the register.</span></span>
+
+```qsharp
+operation ApplyToFirstTwoQubits (op : ((Qubit, Qubit) => Unit), register : Qubit[]) : Unit
+```
+
+
+## <a name="input"></a><span data-ttu-id="91b31-106">輸入</span><span class="sxs-lookup"><span data-stu-id="91b31-106">Input</span></span>
+
+### <a name="op--qubitqubit--unit"></a><span data-ttu-id="91b31-107">op： ([量子位](xref:microsoft.quantum.lang-ref.qubit)，[量子位](xref:microsoft.quantum.lang-ref.qubit)) => [單位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="91b31-107">op : ([Qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit)) => [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span> 
+
+<span data-ttu-id="91b31-108">要套用至前兩個量子位的作業</span><span class="sxs-lookup"><span data-stu-id="91b31-108">An operation to be applied to the first two qubits</span></span>
+
+
+### <a name="register--qubit"></a><span data-ttu-id="91b31-109">register： [量子位](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="91b31-109">register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+
+<span data-ttu-id="91b31-110">量子位陣列至套用作業的前兩個量子位。</span><span class="sxs-lookup"><span data-stu-id="91b31-110">Qubit array to the first two qubits of which the operation is applied.</span></span>
+
+
+
+## <a name="output--unit"></a><span data-ttu-id="91b31-111">輸出： [單位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="91b31-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+
+
+
+## <a name="remarks"></a><span data-ttu-id="91b31-112">備註</span><span class="sxs-lookup"><span data-stu-id="91b31-112">Remarks</span></span>
+
+<span data-ttu-id="91b31-113">這相當於：</span><span class="sxs-lookup"><span data-stu-id="91b31-113">This is equivalent to:</span></span>
+
+```qsharp
+op(register[0], register[1]);
+```
+
+## <a name="see-also"></a><span data-ttu-id="91b31-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="91b31-114">See Also</span></span>
+
+- [<span data-ttu-id="91b31-115">Canon. ApplyToFirstTwoQubitsA</span><span class="sxs-lookup"><span data-stu-id="91b31-115">Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsA)
+- [<span data-ttu-id="91b31-116">Canon. ApplyToFirstTwoQubitsC</span><span class="sxs-lookup"><span data-stu-id="91b31-116">Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsC</span></span>](xref:Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsC)
+- [<span data-ttu-id="91b31-117">Canon. ApplyToFirstTwoQubitsCA</span><span class="sxs-lookup"><span data-stu-id="91b31-117">Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsCA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsCA)
