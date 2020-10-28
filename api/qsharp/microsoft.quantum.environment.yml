@@ -1,0 +1,18 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Environment
+newtypes: []
+operations:
+- summary: 傳回目前可供借用的量子位數目。 這包括未使用的量子位;也就是說，這包括所傳回的量子位 `GetQubitsAvailableToUse` 。
+  uid: Microsoft.Quantum.Environment.GetQubitsAvailableToBorrow
+- summary: 傳回目前可供使用的量子位數目。
+  uid: Microsoft.Quantum.Environment.GetQubitsAvailableToUse
+summary: 這些函式會提供發生量子計算之環境的相關資訊。
+uid: Microsoft.Quantum.Environment
+metadata:
+  ms.openlocfilehash: 04a3ffe56be7da2c9adc13e2b27fe9ce0f982c44
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92698211"

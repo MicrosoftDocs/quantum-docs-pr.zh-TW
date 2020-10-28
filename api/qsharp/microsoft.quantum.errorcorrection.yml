@@ -1,0 +1,92 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 傳回 QECC 值，表示⟦3、1、1⟧位翻轉程式碼編碼器，以及具有就地的症狀測量的解碼器。
+  uid: Microsoft.Quantum.ErrorCorrection.BitFlipCode
+- summary: 針對⟦3，1，1⟧位翻轉程式碼的資料表查閱，針對指定的 Pauli 作業進行的復原作業函數。
+  uid: Microsoft.Quantum.ErrorCorrection.BitFlipRecoveryFn
+- summary: 傳回 QECC 值，代表⟦5，1，3⟧代碼編碼器，以及具有就地發生症狀測量的解碼器。
+  uid: Microsoft.Quantum.ErrorCorrection.FiveQubitCode
+- summary: 傳回函式，此函式會將錯誤的症狀度量對應至⟦5，1，3⟧量副程式代碼的資料表查閱適當的錯誤更正 Pauli 運算子。
+  uid: Microsoft.Quantum.ErrorCorrection.FiveQubitCodeRecoveryFn
+- summary: 傳回代表⟦7、1、3⟧ Steane 程式碼編碼器的 CSS 值，以及具有就地發生症狀測量的解碼器。
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCode
+- summary: 適用于⟦7，1，3⟧ Steane 量副程式代碼之穩定型別的 X 和 Z 部分組合的解碼器。
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryFns
+- summary: ⟦7，1，3⟧ Steane 量副程式代碼的 X 部分的解碼器。
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryX
+- summary: ⟦7，1，3⟧ Steane 量副程式代碼中，Z 部分的的解碼器。
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryZ
+- summary: 針對指定之量子位暫存器上的 Pauli 作業，此函式會傳回類型的物件， `RecoveryFn` 其中包含執行與特定 Pauli 作業陣列相關之資料表查閱解碼所需的所有資訊。
+  uid: Microsoft.Quantum.ErrorCorrection.TableLookupRecovery
+- summary: ''
+  uid: Microsoft.Quantum.ErrorCorrection.TableLookupRecoveryImpl
+name: Microsoft.Quantum.ErrorCorrection
+newtypes:
+- summary: 代表 Calderbank – Shor – Steane (CSS) 的程式碼，如其編碼器、解碼器以及其與錯誤的症狀度量程式所定義 `X` `Z` 。
+  uid: Microsoft.Quantum.ErrorCorrection.CSS
+- summary: >-
+    代表將編碼的暫存器解碼成實體暫存器的作業，以及用來記錄症狀的臨時量子位。
+
+    DecodeOp 的引數與從 EncodeOp 傳回的相同，反之亦然。
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeOp
+- summary: >-
+    表示使用提供的臨時量子位將實體暫存器編碼為邏輯暫存器的作業。
+
+    第一個引數會被視為將會編碼的實體暫存器，而第二個引數則會被視為將使用的臨時暫存器。
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeOp
+- summary: 針對將邏輯量子位編碼的實體量子位註冊類型 `Qubit[]` 。
+  uid: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+- summary: 代表錯誤更正程式碼，如其編碼器、解碼器和症狀度量程式所定義。
+  uid: Microsoft.Quantum.ErrorCorrection.QECC
+- summary: 適用于將錯誤症狀對應到可更正偵測到之錯誤的一連串作業的函式類型 `Pauli[]` 。
+  uid: Microsoft.Quantum.ErrorCorrection.RecoveryFn
+- summary: 針對 `Result[]` 指定量副程式代碼的錯誤症狀的測量結果輸入。
+  uid: Microsoft.Quantum.ErrorCorrection.Syndrome
+- summary: 表示用來測量錯誤修正程式碼區塊之症狀的作業。
+  uid: Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp
+operations:
+- summary: >-
+    私用作業，用來同時執行位翻轉編碼器和解碼器。
+
+    請注意，此編碼器可利用就地連貫的復原，在這種情況下，它會「造成」的初始狀態所描述的錯誤 `auxQubits` 。 尤其是，如果 `auxQubits` 最初是在 state $ \ket {10} $ 中，這會導致在編碼的量子位上 $X _1 $ error。
+  uid: Microsoft.Quantum.ErrorCorrection.ApplyBitFlipEncoder
+- summary: 從 [3，1，3]/⟦3，1，1⟧位翻轉程式碼解碼。
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeFromBitFlipCode
+- summary: 解碼⟦5，1，3⟧量副程式代碼。
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeFromFiveQubitCode
+- summary: 反向編碼作業，會將未編碼的量子暫存器對應至⟦7，1，3⟧ Steane 量副程式代碼下的編碼量子暫存器。
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeFromSteaneCode
+- summary: 編碼為 [3，1，3]/⟦3，1，1⟧位-翻轉程式碼。
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoBitFlipCode
+- summary: 編碼為⟦5，1，3⟧量副程式代碼。
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoFiveQubitCode
+- summary: 一種編碼作業，會將未編碼的量子暫存器對應至⟦7、1、3⟧ Steane 量副程式代碼底下的編碼量子暫存器。
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoSteaneCode
+- summary: 私用作業可用來同時執行5個量子位編碼器和解碼器。
+  uid: Microsoft.Quantum.ErrorCorrection.FiveQubitCodeEncoderImpl
+- summary: 旋轉 Y 軸上的單一量子位與π/4。
+  uid: Microsoft.Quantum.ErrorCorrection.InjectPi4YRotation
+- summary: 實行 Knill 魔術 state 公司演算法。
+  uid: Microsoft.Quantum.ErrorCorrection.KnillDistill
+- summary: 測量一組指定的穩定產生器群組。
+  uid: Microsoft.Quantum.ErrorCorrection.MeasureStabilizerGenerators
+- summary: 依類型所描述的量副程式代碼，執行單次錯誤修正 `QECC` 。
+  uid: Microsoft.Quantum.ErrorCorrection.Recover
+- summary: 依類型所描述的量副程式代碼，執行單次錯誤修正 `CSS` 。
+  uid: Microsoft.Quantum.ErrorCorrection.RecoverCSS
+- summary: 私用作業可用來同時執行 Steane 程式碼編碼器和解碼器。
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeEncoderImpl
+- summary: >-
+    症狀測量和內嵌的反向。
+
+    $X $-和 $Z $-stabilizers 不會平均處理，這是因為編碼電路的特殊選擇。 這種不對稱會導致不同的症狀解壓縮常式。 您可以直接在程式碼狀態上測量多量子位 Pauli 運算子來測量症狀，但是針對公司用途，邏輯量子位會傳回單一量子位，但在此情況下，不需要進一步 ancillas 即可完成這些症狀測量。
+  uid: Microsoft.Quantum.ErrorCorrection._ExtractLogicalQubitFromSteaneCode
+summary: 此命名空間包含適用于量子錯誤修正的函式、作業和使用者定義類型。
+uid: Microsoft.Quantum.ErrorCorrection
+metadata:
+  ms.openlocfilehash: ba16a793fc9389c7102047a6664c0338ea11314d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92698030"

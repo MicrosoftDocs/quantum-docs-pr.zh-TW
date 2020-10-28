@@ -1,0 +1,66 @@
+---
+uid: Microsoft.Quantum.Canon.ApplyDiagonalUnitary
+title: ApplyDiagonalUnitary 操作
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Canon
+qsharp.name: ApplyDiagonalUnitary
+qsharp.summary: Applies an array of complex phases to numeric basis states of a register of qubits.
+ms.openlocfilehash: 6ecacf6e4fe2c505036de208c8aeb5350e479e3c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92699324"
+---
+# <a name="applydiagonalunitary-operation"></a>ApplyDiagonalUnitary 操作
+
+命名空間： [Canon](xref:Microsoft.Quantum.Canon)
+
+包： [](https://nuget.org/packages/)
+
+
+將複雜階段的陣列套用至量子位註冊的數值基礎狀態。
+
+```qsharp
+operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+```
+
+
+## <a name="description"></a>描述
+
+此作業會在 $n $ 量子位 number state $ \ket{j} $ 上，執行套用複雜階段 $e ^ {i \ theta_j} $ 的對角線。
+尤其是，這項作業可以由單一
+
+$ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j}。
+\end{align} $ $
+
+## <a name="input"></a>輸入
+
+### <a name="coefficients--double"></a>係數： [Double](xref:microsoft.quantum.lang-ref.double)[]
+
+最多 $ 2 ^ n $ 係數 $ \ theta_j $ 的陣列。 $J $ th 係數會以位元組由大到小的格式來編制數位狀態 $ \ket{j} $ 編碼。
+
+
+### <a name="qubits--littleendian"></a>量子位： [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)
+
+以位元組由大到小的格式，$n $ 量子位 control register 編碼數位狀態 $ \ket{j} $。
+
+
+
+## <a name="output--unit"></a>輸出： [單位](xref:microsoft.quantum.lang-ref.unit)
+
+
+
+## <a name="remarks"></a>備註
+
+`coefficients` 如果指定了少於 $ 2 ^ n $ 的元素，則會以 $ \ theta_j = $0.0 填補。
+
+## <a name="references"></a>參考
+
+- 量子邏輯電路的合成 Vivek V. Shende、Stephen S. Bullock、Igor L. Markov https://arxiv.org/abs/quant-ph/0406176
+
+## <a name="see-also"></a>另請參閱
+
+- [Canon. ApproximatelyApplyDiagonalUnitary](xref:Microsoft.Quantum.Canon.ApproximatelyApplyDiagonalUnitary)

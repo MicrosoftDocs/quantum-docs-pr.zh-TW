@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771301"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690826"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum 開發套件 (QDK) 量子追蹤模擬器
 
@@ -55,7 +55,7 @@ namespace Quantum.MyProgram
 
 因為量子追蹤模擬器不會模擬實際的量子狀態，所以無法計算作業內測量結果的機率。 
 
-因此，如果作業包含測量，您就必須使用來自 <xref:microsoft.quantum.diagnostics> 命名空間中的 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 作業，明確地提供這些機率。 下列範例會加以說明：
+因此，如果作業包含測量，您就必須使用來自 <xref:Microsoft.Quantum.Diagnostics> 命名空間中的 <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> 作業，明確地提供這些機率。 下列範例會加以說明：
 
 ```qsharp
 operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
@@ -74,7 +74,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-當量子追蹤模擬器遇到 `AssertMeasurementProbability`，會記錄在 `source` 上測量的 `PauliZ`，然後 `q` 應該會產生 `Zero` 的結果，且機率為 **0.5**。 當模擬器稍後執行 `M` 作業時，會尋找記錄的結果機率值，而 `M` 會傳回 `Zero` 或 `One`，且機率為 **0.5**。 對追蹤量子狀態的模擬器執行相同的程式碼時，模擬器會檢查 `AssertMeasurementProbability` 中提供的機率是否正確。
+當量子追蹤模擬器遇到 `AssertMeasurementProbability`，會記錄在 `source` 上測量的 `PauliZ`，然後 `q` 應該會產生 `Zero` 的結果，且機率為 **0.5** 。 當模擬器稍後執行 `M` 作業時，會尋找記錄的結果機率值，而 `M` 會傳回 `Zero` 或 `One`，且機率為 **0.5** 。 對追蹤量子狀態的模擬器執行相同的程式碼時，模擬器會檢查 `AssertMeasurementProbability` 中提供的機率是否正確。
 
 請注意，如果有至少一個測量作業未使用 `AssertMeasurementProbability` 加以標註，模擬器就會擲回 [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception)。
 

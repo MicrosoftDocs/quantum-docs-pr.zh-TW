@@ -1,0 +1,36 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 傳回兩個整數的位 AND。 這會執行與內建運算子相同的計算 `&&&` 。
+  uid: Microsoft.Quantum.Bitwise.And
+- summary: 將數位的位表示向左移位指定的位數。
+  uid: Microsoft.Quantum.Bitwise.LeftShiftedI
+- summary: 將數位的位表示向左移位指定的位數。
+  uid: Microsoft.Quantum.Bitwise.LeftShiftedL
+- summary: 傳回整數的位 NOT。 這會執行與內建運算子相同的計算 `~~~` 。
+  uid: Microsoft.Quantum.Bitwise.Not
+- summary: 傳回兩個整數的位 OR。 這會執行與內建運算子相同的計算 `|||` 。
+  uid: Microsoft.Quantum.Bitwise.Or
+- summary: 傳回整數 (1 的位同位，如果其二進位標記法包含奇數，則為 0; 否則為) 。
+  uid: Microsoft.Quantum.Bitwise.Parity
+- summary: 將數位的位表示右移指定的位數。
+  uid: Microsoft.Quantum.Bitwise.RightShiftedI
+- summary: 將數位的位表示右移指定的位數。
+  uid: Microsoft.Quantum.Bitwise.RightShiftedL
+- summary: 傳回整數，表示 Pauli 運算子陣列的 X 位。
+  uid: Microsoft.Quantum.Bitwise.XBits
+- summary: 傳回兩個整數的位互斥 OR (XOR) 。 這會執行與內建運算子相同的計算 `^^^` 。
+  uid: Microsoft.Quantum.Bitwise.Xor
+- summary: 傳回整數，表示 Pauli 運算子陣列的 Z 位。
+  uid: Microsoft.Quantum.Bitwise.ZBits
+name: Microsoft.Quantum.Bitwise
+newtypes: []
+operations: []
+summary: 這個命名空間包含的函式可用於傳統資料類型的位標記法。
+uid: Microsoft.Quantum.Bitwise
+metadata:
+  ms.openlocfilehash: 6730a0350f56c2356b9c0851b37de1cd277da90f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92699479"

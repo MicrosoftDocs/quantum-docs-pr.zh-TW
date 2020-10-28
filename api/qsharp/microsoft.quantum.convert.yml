@@ -1,0 +1,58 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 將指定的大整數轉換為布林值陣列。 陣列的0元素是大整數中最不重要的位。
+  uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
+- summary: 將指定的布林值陣列轉換為相等的大整數。 陣列的0元素是大整數中最不重要的位。
+  uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
+- summary: 以位元組由小到大的格式從位元組字串產生正整數。
+  uid: Microsoft.Quantum.Convert.BoolArrayAsInt
+- summary: 指定一個位字串，會傳回多量子位的 Pauli 運算子，以單一量子位 Pauli 運算子的陣列表示。
+  uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
+- summary: 將型別轉換為 `Bool[]` `Result[]` 型別，其中 `true` 對應至， `One` 而且 `false` 會對應至 `Zero` 。
+  uid: Microsoft.Quantum.Convert.BoolArrayAsResultArray
+- summary: 將型別轉換為 `Bool` `Result` 型別，其中 `true` 對應至， `One` 而且 `false` 會對應至 `Zero` 。
+  uid: Microsoft.Quantum.Convert.BoolAsResult
+- summary: 將指定的布林值轉換為相等的字串表示。
+  uid: Microsoft.Quantum.Convert.BoolAsString
+- summary: 將指定的雙精確度浮點數轉換為相等的字串表示。
+  uid: Microsoft.Quantum.Convert.DoubleAsString
+- summary: 使用指定的格式，將指定的雙精確度浮點數轉換為相等的字串表示。
+  uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat
+- summary: 將函數轉換成作業。
+  uid: Microsoft.Quantum.Convert.FunctionAsOperation
+- summary: 將指定的整數轉換為相等的大整數。
+  uid: Microsoft.Quantum.Convert.IntAsBigInt
+- summary: 針對傳回的陣列，使用位元組由小到大的標記法，產生正整數的整數表示。
+  uid: Microsoft.Quantum.Convert.IntAsBoolArray
+- summary: 將指定的整數轉換為相等的雙精確度浮點數。
+  uid: Microsoft.Quantum.Convert.IntAsDouble
+- summary: 將指定的整數轉換為相等的字串表示。
+  uid: Microsoft.Quantum.Convert.IntAsString
+- summary: 使用指定的格式，將指定的整數轉換為相等的字串表示。
+  uid: Microsoft.Quantum.Convert.IntAsStringWithFormat
+- summary: 盡可能將指定的大整數轉換為相等的整數。 函數會傳回一組產生的整數和一個布林值旗標，如果有可能的話，則為 true。
+  uid: Microsoft.Quantum.Convert.MaybeBigIntAsInt
+- summary: 將以單一量子位 Pauli 運算子陣列表示的多量子位 Pauli 運算子編碼為整數。
+  uid: Microsoft.Quantum.Convert.PauliArrayAsInt
+- summary: 建立 `arr` 由 start 列舉的整數陣列。步。。結束。
+  uid: Microsoft.Quantum.Convert.RangeAsIntArray
+- summary: 將型別轉換為 `Result[]` `Bool[]` 型別，其中 `One` 對應至， `true` 而且 `Zero` 會對應至 `false` 。
+  uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
+- summary: 以位元組由小到大的格式從結果字串產生正整數。
+  uid: Microsoft.Quantum.Convert.ResultArrayAsInt
+- summary: 將型別轉換為 `Result` `Bool` 型別，其中 `One` 對應至， `true` 而且 `Zero` 會對應至 `false` 。
+  uid: Microsoft.Quantum.Convert.ResultAsBool
+name: Microsoft.Quantum.Convert
+newtypes: []
+operations:
+- summary: 使用指定的輸入呼叫函數。
+  uid: Microsoft.Quantum.Convert.Call
+summary: '這個命名空間包含在各種 Q # 資料類型之間轉換的函式。'
+uid: Microsoft.Quantum.Convert
+metadata:
+  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92698394"
