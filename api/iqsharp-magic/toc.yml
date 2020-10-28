@@ -26,6 +26,8 @@
   name: '%chemistry.inputstate.load 魔術命令'
 - href: config.md
   name: '%config 魔術命令'
+- href: debug.md
+  name: '%debug 魔術命令'
 - href: estimate.md
   name: '%estimate 魔術命令'
 - href: kata.md
