@@ -87,7 +87,7 @@
 
 在先前的討論中，我們著重于計算基礎度量。
 事實上，量子運算中有其他常見的測量，從標記的角度來看，這在計算基礎測量方面很方便。
-當您使用時 Q# ，最常見的測量類型可能會是 *Pauli 測量*，這會將計算基礎度量一般化以包含其他基底的度量，以及不同量子位之間的同位檢查。
+當您使用時 Q# ，最常見的測量類型可能會是 *Pauli 測量* ，這會將計算基礎度量一般化以包含其他基底的度量，以及不同量子位之間的同位檢查。
 在這種情況下，通常會討論測量 Pauli 運算子，通常是 $ x、Y、z $ 或 $ z \otimes z、x \otimes x、x \otimes Y $ 等運算子。
 
 > [!TIP]
@@ -128,7 +128,7 @@ Pauli 量值的標記法會藉由識別 $ X、Y、Z 量測作為對等量值來�
 |$ $ X |$H               $                    |
 |$ $ Y |$HS ^               {\dagger}$         |
 
-也就是說，使用這種語言時，「measure Y」相當於套用 $ $ $ HS ^， \dagger $ 然後以計算為基礎來測量，其中是內建的 [`S`](xref:microsoft.quantum.intrinsic.s) 量子作業有時稱為「階段閘道」，且可由單一矩陣模擬
+也就是說，使用這種語言時，「measure Y」相當於套用 $ $ $ HS ^， \dagger $ 然後以計算為基礎來測量，其中是內建的 [`S`](xref:Microsoft.Quantum.Intrinsic.S) 量子作業有時稱為「階段閘道」，且可由單一矩陣模擬
 
 $$
 \begin{align}
@@ -194,7 +194,7 @@ $$
 >         0 & 1 & 0 & 0 \\\\
 >0 & 0 & 0 & 1 > \end { 矩陣 } \right) >     \end{align}
 > $$
-> 用來模擬內建函式 [`SWAP`](xref:microsoft.quantum.intrinsic) 。
+> 用來模擬內建函式 [`SWAP`](xref:Microsoft.Quantum.Intrinsic) 。
 
 |Pauli 測量     | 單一轉換  |
 |----------------------|------------------------|
@@ -214,7 +214,7 @@ $$
 |$X \otimesY $ | $ \operatorname { CNOT } \_ { 10 } (H \otimes HS ^ \dagger) $|
 |$Y \otimesY $ | $ \operatorname { CNOT } \_ { 10 } (HS ^ \dagger \otimes hs ^ \dagger) $|
 
-在此， [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) 會因為下列原因而出現作業。
+在此， [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) 會因為下列原因而出現作業。
 每個不含矩陣的 Pauli 量值 $ \boldone $ 都等同于上述推理的單一至 $ z \otimes z $ 。
 $Z z 的特徵值 \otimes $ 只取決於構成每個計算基礎向量之量子位的同位，且受控制的作業不會用來計算這個同位，並將其儲存在第一個位。
 然後，在測量第一個位之後，我們可以復原產生之半形的身分識別，這相當於測量 Pauli 運算子。
@@ -240,16 +240,16 @@ Pauli 運算子的所有這類 tensor 產品只有兩個特徵值 $ \pm 1 $ ，�
 將 Pauli 量測視為中的內建功能 Q# 很有説明，因為測量這類運算子需要較長的控制-非管制和基礎轉換鏈，以描述將作業 $ $ 表示為 Z 和 tensor 產品所需的 diagonalizing U 閘道 $ $ $ \id $ 。
 藉由指定您想要執行上述其中一個預先定義的測量，您就不需要擔心如何轉換基礎，讓計算基礎度量能提供必要的資訊。
 Q# 自動為您處理所有必要的基礎轉換。
-如需詳細資訊，請參閱 [`Measure`](xref:microsoft.quantum.intrinsic.measure) 和 [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) 作業。
+如需詳細資訊，請參閱 [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) 和 [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) 作業。
 
-## <a name="the-no-cloning-theorem"></a>無複製定理
+## <a name="the-no-cloning-theorem"></a>No-Cloning 定理
 
 量子資訊的功能強大。
 它讓我們能夠以更快的速度，比最知名的傳統演算法更快地進行一些令人驚奇的事，像是更有效率地模擬傳統方式需要指數成本才能精確模擬的相關 electron 系統。
 不過，量子運算的威力有一些限制。
-這種限制是由 *無複製定理*所提供。
+這種限制是由 *無複製定理* 所提供。
 
-未複製的定理會恰如其命名。
+No-Cloning 的定理會恰如其命名。
 它不允許量子電腦複製一般量子狀態。
 定理證明很簡單。
 雖然沒有複製定理的完整證明在這裡討論的技術並不多，但在我們的 (範圍內沒有額外輔助量子位的證明是在計算期間用於臨時空間，而在中很容易使用和管理 Q# ，請參閱 [借用量子位](xref:microsoft.quantum.guide.qubits#borrowed-qubits)) 。
@@ -273,15 +273,15 @@ $$
 \end{align}
 $$
 
-這會提供無複製定理背後的基本直覺：任何複製未知量子狀態的裝置，都必須在其所複製的部分狀態下引發錯誤。
+這會提供 No-Cloning 定理背後的基本直覺：任何複製未知量子狀態的裝置，都必須在其所複製的部分狀態下引發錯誤。
 雖然 cloner 在輸入狀態上以線性方式運作的關鍵假設是透過新增和測量輔助量子位，所以這類互動也會透過測量統計資料來洩漏系統的相關資訊，並防止在這類情況下進行完全複製。
-如需更完整的無複製定理證明，請參閱 [以取得詳細資訊](xref:microsoft.quantum.more-information)。
+如需更完整的 No-Cloning 定理詳細 [資訊](xref:microsoft.quantum.more-information)，請參閱。
 
-無複製定理對於量子運算很重要，因為如果您可以更經濟的方式複製量子狀態，則會獲得從量子狀態學習的近乎神奇功能。
+No-Cloning 定理對於量子運算很重要，因為如果您可以更經濟的方式複製量子狀態，則會獲得從量子狀態學習的近乎神奇功能。
 事實上，您可能違反了海森堡的 vaunted 不確定性原則。
 或者，您也可以使用最佳的 cloner，從複雜的量子散發取得單一範例，並從單一範例學習該散發的所有相關資訊。
 這就像是您將硬幣和觀察到的結果，然後在告知朋友的結果中，他們會回應「必須使用 $ p = 0.512643 \ ldots $ ！來讓那個硬幣的分佈有利  這類的語句不會 sensical，因為 (列印頭結果的其中一項資訊，) 只是無法提供在沒有大量先前資訊的情況下編碼散發所需的許多資訊。
 同樣地，在沒有先前資訊的情況下，我們無法完全複製量子狀態，因為我們無法在不知道 p 的情況下準備集團這類的硬幣 $ $ 。
 
 在量子運算中，資訊不是免費的。
-測量的每個量子位都提供一項資訊，而無複製定理則顯示沒有任何後門程式可被惡意探索到系統與在其上叫用的干擾之間的基本取捨。
+測量的每個量子位都提供一項資訊，而 No-Cloning 定理指出沒有任何後門程式可被入侵，以因應系統與在其上叫用之干擾之間的基本取捨。

@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0fbbe127b9f4c6b98bdc2cf0e46098bf40a816e3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a8a527df59bd7ee038de71e04003cf456b094afb
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866854"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691769"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>參與 Quantum Development Kit
 
@@ -59,6 +59,7 @@ Quantum Development Kit 包含許多不同的部分，在這些部分合作之�
 - [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler)：Q# 編譯器、Visual Studio 擴充功能和 Visual Studio Code 擴充功能。
 - [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime)：適用於 Quantum Development Kit 的模擬架構、程式碼產生和模擬目標電腦。
 - [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp)：適用於 Q# Jupyter 核心和 Python 主機功能，以及可供在雲端環境中使用 IQ# 的 Docker 映像。
+- [**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language)：這是開發和指定新 Q# 功能的位置，您可以在其中分享有關 Q# 語言與核心程式庫未來演進的想法與建議。
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr)： https://docs.microsoft.com/quantum 所發佈文件的原始程式碼。
 
 > [!NOTE]

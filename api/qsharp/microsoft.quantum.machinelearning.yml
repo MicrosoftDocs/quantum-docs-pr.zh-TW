@@ -1,0 +1,116 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 假設有一組係數和容錯，則會傳回狀態準備作業，以將每個係數準備為計算基礎狀態的對應波幅，最多可達指定的容錯。
+  uid: Microsoft.Quantum.MachineLearning.ApproximateInputEncoder
+- summary: 如果有一或多個控制的旋轉層級，則會傳回具有模型參數索引移位的單一圖層，讓不同的圖層以相異模型參數參數化。
+  uid: Microsoft.Quantum.MachineLearning.CombinedStructure
+- summary: 傳回沿著指定軸的單一控制旋轉陣列、在量子位的暫存器中排列迴圈，並以相異模型參數參數化。
+  uid: Microsoft.Quantum.MachineLearning.CyclicEntanglingLayer
+- summary: 傳回定型分類器的預設選項組。
+  uid: Microsoft.Quantum.MachineLearning.DefaultTrainingOptions
+- summary: 傳回編碼特定功能向量所需的量子位數目。
+  uid: Microsoft.Quantum.MachineLearning.FeatureRegisterSize
+- summary: 由於分類機率和偏差的考慮，會傳回從該機率推斷的標籤。
+  uid: Microsoft.Quantum.MachineLearning.InferredLabel
+- summary: 由於分類機率和偏差的陣列，會傳回從每個機率推斷的標籤。
+  uid: Microsoft.Quantum.MachineLearning.InferredLabels
+- summary: 如果有一組係數和容錯，則會傳回狀態準備作業，將每個係數準備為計算基礎狀態的對應波幅。
+  uid: Microsoft.Quantum.MachineLearning.InputEncoder
+- summary: 傳回未受控制的 (單一量子位) 旋轉的陣列，在指定的軸上，暫存器中的每個量子位都會有一次旋轉，並以相異模型參數參數化。
+  uid: Microsoft.Quantum.MachineLearning.LocalRotationsLayer
+- summary: 假設有一組推斷的標籤和一組正確的標籤，則會傳回每一組標籤不同的索引。
+  uid: Microsoft.Quantum.MachineLearning.Misclassifications
+- summary: 假設有一組推斷的標籤和一組正確的標籤，則會傳回每一組標籤不同的索引數目。
+  uid: Microsoft.Quantum.MachineLearning.NMisclassifications
+- summary: 傳回套用指定順序分類器所需的量子位數目。
+  uid: Microsoft.Quantum.MachineLearning.NQubitsRequired
+- summary: 傳回以相異模型參數參數化之指定軸的單一量子位旋轉陣列。
+  uid: Microsoft.Quantum.MachineLearning.PartialRotationsLayer
+- summary: 使用指定的排程來取樣指定的陣列。
+  uid: Microsoft.Quantum.MachineLearning.Sampled
+- summary: 傳回指定取樣排程中的元素數目。
+  uid: Microsoft.Quantum.MachineLearning.ScheduleLength
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._AllNearlyEqualD
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._CallFlipped
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._CanApplyTwoQubitCase
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._EncodeSample
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Features
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Flipped
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Label
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._MisclassificationRate
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._NegativeLocations
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._TailMeasurement
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._UncontrolledSpanSequence
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Unnegate
+- summary: 傳回會導致接近最小分類誤判分數的偏差值。
+  uid: Microsoft.Quantum.MachineLearning._UpdatedBias
+name: Microsoft.Quantum.MachineLearning
+newtypes:
+- summary: 描述以其目標和控制索引、旋轉軸和索引至模型參數向量的控制旋轉。
+  uid: Microsoft.Quantum.MachineLearning.ControlledRotation
+- summary: 範例，其標記為該範例所屬的類別。
+  uid: Microsoft.Quantum.MachineLearning.LabeledSample
+- summary: 從一組範例中繪製批次的排程。
+  uid: Microsoft.Quantum.MachineLearning.SamplingSchedule
+- summary: 描述由一系列的參數化和控制的旋轉、旋轉角度的指派，以及模型辨識的兩個類別之間的偏差所組成的量子分類器模型。
+  uid: Microsoft.Quantum.MachineLearning.SequentialModel
+- summary: 描述準備指定輸入至連續分類器的作業。
+  uid: Microsoft.Quantum.MachineLearning.StateGenerator
+- summary: 要用於定型量子分類器的選項組合。
+  uid: Microsoft.Quantum.MachineLearning.TrainingOptions
+- summary: 針對一組範例驗證分類器的結果。
+  uid: Microsoft.Quantum.MachineLearning.ValidationResults
+operations:
+- summary: 提供順序分類器的結構和參數化，將分類器套用至量子位的註冊。
+  uid: Microsoft.Quantum.MachineLearning.ApplySequentialClassifier
+- summary: 假設有一組範例和連續的分類器，請重複測量每個樣本上的分類器輸出，以估計這些樣本的分類機率。
+  uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbabilities
+- summary: 假設有一個範例和一連串的分類器，請重複測量給定範例上的分類器輸出，以估計該範例的分類機率。
+  uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbability
+- summary: 針對特定模型和指定編碼的輸入，預估順序分類器的定型漸層。
+  uid: Microsoft.Quantum.MachineLearning.EstimateGradient
+- summary: 給定順序分類器的結構，在指定的標示定型集上訓練分類器。
+  uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifier
+- summary: 假設有連續分類器的結構，則會從特定模型開始訓練指定加上標籤之定型集的分類器。
+  uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifierAtModel
+- summary: 根據一組指定的預先標記範例，驗證指定的順序分類器。
+  uid: Microsoft.Quantum.MachineLearning.ValidateSequentialClassifier
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ApplyLEOperationToRawRegister
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ApplyTwoQubitCase
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._EstimateDerivativeWithParameterShift
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._PrepareClassification
+- summary: 隨機方式將輸入以指定的因數成長或縮小。
+  uid: Microsoft.Quantum.MachineLearning._RandomlyRescale
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ReflectAboutNegativeCoefficients
+- summary: 針對資料樣本的子集，執行連續分類器定型的一個 epoch。
+  uid: Microsoft.Quantum.MachineLearning._RunSingleTrainingEpoch
+- summary: 嘗試以迷你批次漸層的方向更新單一參數
+  uid: Microsoft.Quantum.MachineLearning._RunSingleTrainingStep
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._TrainSequentialClassifierAtModel
+summary: 此命名空間提供在量子機器學習應用程式中使用的函式和作業。
+uid: Microsoft.Quantum.MachineLearning
+metadata:
+  ms.openlocfilehash: 3e77526589c4224697d7f47a5a6dc7e7edf45ef8
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92699838"

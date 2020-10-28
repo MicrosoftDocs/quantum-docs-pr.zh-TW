@@ -1,0 +1,18 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.MachineLearning.Datasets
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning.Datasets.IrisTrainingData
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning.Datasets.WineData
+summary: 此命名空間提供與量子機器學習分類器搭配使用的範例資料集。
+uid: Microsoft.Quantum.MachineLearning.Datasets
+metadata:
+  ms.openlocfilehash: 2c59603bd33e7a2cef5000d3a920b22043f696c5
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92699858"

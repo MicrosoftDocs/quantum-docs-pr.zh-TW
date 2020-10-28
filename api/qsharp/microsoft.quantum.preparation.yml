@@ -1,0 +1,107 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >-
+    計算單一量子位狀態的布洛赫球體座標。
+
+    假設有兩個複數 $a 0，a1 $ 表示量子位狀態，則會計算布洛赫球體上的座標，例如 $a 0 \ket {0} + a1 \ket {1} = r e ^ {it} (e ^ {-i \phi/2}\cos{ ( \ theta/2) } \ket {0} + e ^ {i \phi/2}\sin{ ( \ theta/2) } \ket {1}) $。
+  uid: Microsoft.Quantum.Preparation.BlochSphereCoordinates
+- summary: >-
+    使用量子 ROM 技術來代表指定的密度矩陣。
+
+    假設有一份 $N $ 係數 $ \ Alpha_j $ 的清單，這會傳回單一 $U $，其使用量子 ROM 技術來準備近似 $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ 淨化的密度對照表 $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| Alpha_j |}{\ sum_k | \ Alpha_k |}\ket{j}\bra{j} $。 在此近似值中，錯誤 $ \epsilon $ 為 $ | p_j-\frac{| Alpha_j |}{\ sum_k | \ Alpha_k |} |\le \epsilon/N $ 和 $ \| \tilde\rho-\rho \| \le \epsilon $。 換句話說，$ $ \begin{align} U\ket {0} ^ {\lceil\ log_2 N\rceil} \ ket {0} ^ {m} = \ sum_ {j = 0} ^ {n-1} \sqrt{p_j} \ket{j}\ket{\text{garbage} _j}。 \end{align} $ $
+  uid: Microsoft.Quantum.Preparation.QuantumROM
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex
+- summary: 傳回必須配置給所傳回之作業的量子位總數 `QuantumROM` 。
+  uid: Microsoft.Quantum.Preparation.QuantumROMQubitCount
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.RangeLength
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients
+- summary: >-
+    傳回準備特定量子狀態的作業。
+
+    傳回的作業 $U $ 會準備具有複雜係數的任意量子狀態 $ \ket{\psi} $ $r _j e ^ {i t_j} $，從 $n $-量子位計算基礎狀態 $ \ket{0...0} $。
+
+    以 $ $ \begin{align} U\ket {0 ... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}} 為新配置的暫存器提供的動作。 \end{align} $ $
+  uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
+- summary: >-
+    傳回可準備指定量子狀態的作業。
+
+    傳回的作業 $U $ 會從 $n $-量子位計算基礎狀態 $ \ket{0...0} $ 準備任意的量子狀態 $ \ket{\psi} $，其正係數 $ \ Alpha_j \ge $0。
+
+    在新配置的暫存器上執行的動作是由 $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ Alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ Alpha_j | ^ 2}}。 \end{align} $ $
+  uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients
+- summary: 任意狀態準備程式的執行步驟。
+  uid: Microsoft.Quantum.Preparation._ApproximatelyUnprepareArbitraryStatePlan
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._CompileApproximateArbitraryStatePreparation
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._QuantumROMQubitManager
+- summary: 任意狀態準備程式的執行步驟。
+  uid: Microsoft.Quantum.Preparation._StatePreparationSBMComputeCoefficients
+name: Microsoft.Quantum.Preparation
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.ApplyGlobalRotationStep
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.ApplyMultiplexStep
+- summary: 將作業套用至基礎量子位，以組成位元組由小到大的註冊。 這項作業會標示為內部，因為以位元組由小到大的暫存器預期會是「不透明的」，因此只是執行的詳細資料。
+  uid: Microsoft.Quantum.Preparation.ApplyToLittleEndian
+- summary: 假設有一組係數和位元組由小到大編碼的量子暫存器，請在該暫存器上備妥指定係數所描述的狀態，直到指定的近似值容錯。
+  uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
+- summary: 假設有一組係數和位元組由小到大編碼的量子暫存器，請在該暫存器上備妥給定係數所描述的狀態。
+  uid: Microsoft.Quantum.Preparation.PrepareArbitraryState
+- summary: 針對給定的參考和目標暫存器上的指定作業，準備 Choi 對於– Jamiłkowski 狀態。
+  uid: Microsoft.Quantum.Preparation.PrepareChoiState
+- summary: 針對給定的參考和目標暫存器上具有 adjoint 變異的指定作業，準備 Choi 對於– Jamiłkowski 狀態。
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateA
+- summary: 使用受控制的變異數，針對指定的參考和目標暫存器，準備 Choi 對於– Jamiłkowski 狀態。
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateC
+- summary: 為指定的作業準備 Choi 對於– Jamiłkowski 狀態，並在指定的參考和目標暫存器上使用受控制和 adjoint 的變體。
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateCA
+- summary: >-
+    成對 entangles 兩個量子位暫存器。
+
+    亦即，假設有兩個暫存器，請在個別暫存器上的每一對 \left 之間準備充分纏結 state $ \frac {1} {\sqrt {2} } \ket ( \ket {00} + \right {11} 量子位) $，假設每個暫存器都是以 $ \ket{0\cdots 0} $ 狀態開始。
+  uid: Microsoft.Quantum.Preparation.PrepareEntangledState
+- summary: >-
+    在指定暫存器的情況下，以充分混合狀態準備該註冊。
+
+    註冊會在 $ \boldone/2 ^ N $ 狀態中備妥，方法是將完整的 depolarizing 通道套用到每個量子位，其中 $N $ 是註冊的長度。
+  uid: Microsoft.Quantum.Preparation.PrepareIdentity
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState
+- summary: >-
+    準備量子位，以指定 Pauli 運算子的 + 1 (`Zero`) eigenstate。 如果指定了識別運算子，則會以充分混合狀態準備量子位。
+
+    如果量子位一開始是 $ \ket {0} $ 狀態，則此作業會準備指定 Pauli 操作員的 $ + $1 eigenstate 中的量子位，或者，若為 `PauliI` ，則改為在充分混合狀態中 (查看 <xref:microsoft.quantum.preparation.preparesinglequbitidentity>) 。
+
+    如果量子位的狀態不是 $ \ket {0} $，這項作業會套用下列閘道： $H $ for `PauliX` 、$HS $ for `PauliY` 、$I $ for `PauliZ` 和 <xref:microsoft.quantum.preparation.preparesinglequbitidentity> `PauliI` 。
+  uid: Microsoft.Quantum.Preparation.PrepareQubit
+- summary: >-
+    以充分混合狀態準備量子位。
+
+    它會藉由套用 depolarizing 通道 $ $ \begin{align} \Omega ( \rho) \mathrel{，來準備 $ \boldone/$2 狀態中的給定量子位： =} \frac {1} {4} \ sum_ {\mu \in \{ 0，1，2，3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\dagger}，\end{align} $ $ where $ \sigma \_ i $ 是 $i $ th Pauli 運算子，其中 $ \rho $ 是代表混合狀態的密度運算子。
+  uid: Microsoft.Quantum.Preparation.PrepareSingleQubitIdentity
+- summary: >-
+    建立以0至編碼之狀態的統一迭加 `nIndices - 1` 。
+
+    亦即，這個單一 $U $ 會根據指定的輸入狀態 $ \ket{0\cdots 0} $，在所有數位狀態 $0 $ 到 $M-$1 的情況下建立統一迭加。 換句話說，$ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}。 \end{align} $ $。
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition
+- summary: 的執行步驟 <xref:microsoft.quantum.canon.prepareuniformsuperposition>
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition_
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString
+summary: 此命名空間包含用來準備量子位至任意初始狀態的函式和作業。
+uid: Microsoft.Quantum.Preparation
+metadata:
+  ms.openlocfilehash: f8dc07d5fe1073f626eea41e6291d8cc919d93b6
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92700531"
