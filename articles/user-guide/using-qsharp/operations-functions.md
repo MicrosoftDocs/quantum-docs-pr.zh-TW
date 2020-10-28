@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 55e6d3e1a242386c46213083692377520df83a80
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833486"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692139"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>中的作業和函數 Q#
 
@@ -32,7 +32,7 @@ ms.locfileid: "90833486"
 
 每個作業都會接受輸入、產生輸出，並指定一或多個作業特製化的實作為。
 本文的不同章節將詳細說明可能的特製化，以及如何定義和呼叫它們。
-現在，請考慮下列作業，此作業只會定義預設的本文特製化，並採用單一量子位作為其輸入，然後在該輸入上呼叫內建作業 <xref:microsoft.quantum.intrinsic.x> ：
+現在，請考慮下列作業，此作業只會定義預設的本文特製化，並採用單一量子位作為其輸入，然後在該輸入上呼叫內建作業 <xref:Microsoft.Quantum.Intrinsic.X> ：
 
 ```qsharp
 operation BitFlip(target : Qubit) : Unit {
@@ -46,7 +46,7 @@ operation BitFlip(target : Qubit) : Unit {
 `Unit` 的用法類似于 `void` c # 和其他命令式語言，相當於 `unit` F # 和其他功能性語言。
 
 作業也會傳回比更有趣 `Unit` 的類型。
-例如，此作業會傳回 <xref:microsoft.quantum.intrinsic.m> 類型的輸出 `Result` ，表示已執行度量。  您可以將作業從作業傳遞至另一個作業，或使用它搭配 `let` 關鍵字來定義新的變數。
+例如，此作業會傳回 <xref:Microsoft.Quantum.Intrinsic.m> 類型的輸出 `Result` ，表示已執行度量。  您可以將作業從作業傳遞至另一個作業，或使用它搭配 `let` 關鍵字來定義新的變數。
 
 這種方法可代表在低層級與量子作業互動的傳統計算，例如 [密集編碼](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)：
 
@@ -65,13 +65,13 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 > [!NOTE]
 > 中的每個作業 Q# 都只會接受一個輸入，而且只會傳回一個輸出。
-> 多個輸入和輸出是使用 *元組*表示，這會將多個值一起收集成單一值。
+> 多個輸入和輸出是使用 *元組* 表示，這會將多個值一起收集成單一值。
 > 在這方面， Q# 是「元組即元組外」語言。
 > 遵循這個概念之後，必須將一組空的括弧 `()` 視為具有類型的 "empty" 元組來讀取 `Unit` 。
 
 ## <a name="controlled-and-adjoint-operations"></a>控制和 Adjoint 作業
 
-如果作業會執行單一轉換（如同中許多作業的情況），則 Q# 可以在 *adjointed* 或 *控制*時定義作業的運作方式。 作業的 *adjoint* 特製化會指定作業的「反轉」運作方式，而 *受控制* 的特製化則會指定當作業的應用程式在特定量子暫存器的狀態時，如何運作。
+如果作業會執行單一轉換（如同中許多作業的情況），則 Q# 可以在 *adjointed* 或 *控制* 時定義作業的運作方式。 作業的 *adjoint* 特製化會指定作業的「反轉」運作方式，而 *受控制* 的特製化則會指定當作業的應用程式在特定量子暫存器的狀態時，如何運作。
 
 量子運算的伴隨對於許多方面來說非常重要。 如需與實用的程式設計技巧一起討論的其中一個這類情況的範例 Q# ，請參閱 [控制流程：動詞變化或是](xref:microsoft.quantum.guide.controlflow#conjugations)。 受控制的作業版本是一項新的作業，只有在所有控制項量子位都處於指定狀態時，才會有效地套用基底作業。
 如果控制項量子位在迭加中，則會將基底作業時套用至迭加的適當部分。
@@ -88,7 +88,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 ### <a name="calling-operation-specializations"></a>呼叫作業特製化
 
-中*functor*的仿函數 Q# 是用來從另一個作業定義新作業的 factory。
+中 *functor* 的仿函數 Q# 是用來從另一個作業定義新作業的 factory。
 中的兩個標準函子 Q# 為 `Adjoint` 和 `Controlled` 。
 
 在定義新作業的執行時，函子可以存取基底作業的執行。
@@ -139,7 +139,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 在上述範例中的第一個作業宣告中，會 `BitFlip` 分別使用簽章和來定義作業和 `DecodeSuperdense` `(Qubit => Unit)` `((Qubit, Qubit) => (Result, Result))` 。
 例如 `DecodeSuperdense` ，它不是單一作業，因此不會有受控制的無法 adjoint 特製化 (回想這類作業傳回) 的相關需求 `Unit` 。
-不過，只要 `BitFlip` 執行單一作業 <xref:microsoft.quantum.intrinsic.x> ，您就可以使用這兩個特殊化來定義它。
+不過，只要 `BitFlip` 執行單一作業 <xref:Microsoft.Quantum.Intrinsic.X> ，您就可以使用這兩個特殊化來定義它。
 
 本節將詳細說明如何在您的作業宣告中包含特製化的存在 Q# ，因此讓它們能夠與或函子一起呼叫 `Adjoint` `Controlled` 。
 如需有效或無效來宣告特定特製化的某些情況的詳細資訊，請參閱本文中有效定義特製化的 [狀況](#circumstances-for-validly-defining-specializations) 。
@@ -202,7 +202,7 @@ Q# 作業可以包含下列明確的特製化宣告：
 作業特製化是由特製化標記 (例如， `body` 或 `adjoint`) 後面接著其中一個：
 
 - 如下所述的明確宣告。
-- 指示編譯器*如何*產生特製化*的指示詞*，其中一個：
+- 指示編譯器 *如何* 產生特製化 *的指示詞* ，其中一個：
   - `intrinsic`，表示目的電腦提供特製化。
   - `distribute`，搭配和特製化使用 `controlled` `controlled adjoint` 。
     搭配使用時 `controlled` ，表示編譯器應該套用至中的所有作業來計算特製化 `Controlled` `body` 。
@@ -368,7 +368,7 @@ function ConjugateUnitaryWith(
 
 函式是純粹具決定性的傳統常式 Q# ，其與作業不同，因為它們不允許在計算輸出值之後產生任何影響。
 尤其是，函數無法呼叫作業;act、配置或借用量子位;範例亂數字;或其他相依于函式的輸入值之外的狀態。
-因此，函式 Q# 是 *純*虛擬的，因為它們一律會將相同的輸入值對應至相同的輸出值。
+因此，函式 Q# 是 *純* 虛擬的，因為它們一律會將相同的輸入值對應至相同的輸出值。
 此行為可讓編譯器在產生作業特製化 Q# 時，安全地重新排列呼叫函式的方式和時機。
 
 每個原始程式檔 Q# 都可以定義任何數目的函式。
@@ -401,7 +401,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 ### <a name="classical-logic-in-functions--good"></a>函數中的傳統邏輯 = = 良好
 
-只要有可能的話，就能以函式（而非作業）寫出傳統邏輯，讓作業可以更容易使用。 例如，如果您已撰寫先前的宣告 `Square` 做為作業*operation*，則編譯器無法保證以相同的輸入呼叫它會一致地產生相同的輸出。
+只要有可能的話，就能以函式（而非作業）寫出傳統邏輯，讓作業可以更容易使用。 例如，如果您已撰寫先前的宣告 `Square` 做為作業 *operation* ，則編譯器無法保證以相同的輸入呼叫它會一致地產生相同的輸出。
 
 若要底線函式和作業之間的差異，請考慮傳統方式從作業內取樣亂數字的問題 Q# ：
 
@@ -415,7 +415,7 @@ operation U(target : Qubit) : Unit {
 
 每次 `U` 呼叫時，會有不同的動作 `target` 。
 尤其是，編譯器無法保證如果您將特製化宣告加入 `adjoint auto` 至 `U` ，則 `U(target); Adjoint U(target);` 會做為身分識別 (也就是無法運作的) 。
-這違反了 [向量和矩陣](xref:microsoft.quantum.concepts.vectors)中定義之 adjoint 的定義，因此可讓編譯器在您呼叫作業的作業中自動產生 adjoint 特製化，以 <xref:microsoft.quantum.math.randomreal> 中斷編譯器所提供的保證; <xref:microsoft.quantum.math.randomreal> 是沒有 adjoint 或受控制版本存在的作業。
+這違反了 [向量和矩陣](xref:microsoft.quantum.concepts.vectors)中定義之 adjoint 的定義，因此可讓編譯器在您呼叫作業的作業中自動產生 adjoint 特製化，以 <xref:Microsoft.Quantum.Math.RandomReal> 中斷編譯器所提供的保證; <xref:Microsoft.Quantum.Math.RandomReal> 是沒有 adjoint 或受控制版本存在的作業。
 
 另一方面，允許等函式呼叫 `Square` 是安全的，並確保編譯器只需要保留輸入，以 `Square` 保持其輸出穩定。
 因此，將盡可能多的傳統邏輯隔離到函式，可讓您輕鬆地在其他函數和作業中重複使用該邏輯。
@@ -467,7 +467,7 @@ function MapDoublesToStrings(fn : (Double -> String), values : Double[]) : Strin
 不過，這種困難的結果是因為您未提供編譯器所需的資訊，以辨識不同版本的 `Map` 相關資訊。
 實際上，您希望編譯器將 `Map` 類型的數學函式視為某種 Q# *類型* 的數學函數 Q# 。
 
-Q# 讓函式和作業具有 *型別參數*，以及它們的一般元組參數，以正規化這個概念。
+Q# 讓函式和作業具有 *型別參數* ，以及它們的一般元組參數，以正規化這個概念。
 在先前的範例中，您想要將 `Map` `Int, Pauli` 第一個案例和 `Double, String` 第二個案例中的型別參數視為有型別參數。
 在大部分的情況下，請使用這些型別參數，就好像它們是一般型別一樣。 使用型別參數的值來建立陣列和元組、呼叫函數和作業，以及指派給一般或可變動變數。
 
@@ -503,7 +503,7 @@ let paulis = Map(IntToPauli, ints);
 
 > [!TIP]
 > 撰寫泛型函式和作業是一個位置，其中「元組-元組外」是一個非常實用的方法，可考慮函式 Q# 和作業。
-> 由於每個函式只會接受一個輸入，而且只會傳回一個輸出，所以類型的輸入會 `'T -> 'U` 符合 *任何*函式 Q# 。
+> 由於每個函式只會接受一個輸入，而且只會傳回一個輸出，所以類型的輸入會 `'T -> 'U` 符合 *任何* 函式 Q# 。
 > 同樣地，您可以將任何作業傳遞至類型的輸入 `'T => 'U` 。
 
 作為第二個範例，請考慮撰寫函數以傳回兩個其他函式組合的挑戰：
@@ -536,9 +536,9 @@ Q#標準程式庫提供一系列的類型參數化作業和函式，讓高階控
 這些將在[ Q# 標準程式庫指南](xref:microsoft.quantum.libraries.standard.intro)中進一步討論。
 
 
-## <a name="callables-as-first-class-values"></a>Callables 為第一級值
+## <a name="callables-as-first-class-values"></a>Callables 為 First-Class 值
 
-使用函式（而非作業）來推理控制流程和傳統邏輯的一項重要技巧，是利用中的作業和函 Q# *式為第一類*。
+使用函式（而非作業）來推理控制流程和傳統邏輯的一項重要技巧，是利用中的作業和函 Q# *式為第一類* 。
 亦即，它們本身就是語言中的每個值。
 例如，以下是完全有效的程式 Q# 代碼，如果有一些間接的：
 
@@ -549,7 +549,7 @@ operation FirstClassExample(target : Qubit) : Unit {
 }
 ```
 
-`ourH`前一個程式碼片段中的變數值接著是作業，如此一來， <xref:microsoft.quantum.intrinsic.h> 您就可以像任何其他作業一樣呼叫該值。
+`ourH`前一個程式碼片段中的變數值接著是作業，如此一來， <xref:Microsoft.Quantum.Intrinsic.H> 您就可以像任何其他作業一樣呼叫該值。
 有了這項功能，您就可以撰寫作業，將作業當作輸入的一部分來執行，形成更高順序的控制流程概念。
 比方說，您可能會想要「方形」作業，方法是將它套用至相同的目標量子位兩次。
 
@@ -589,7 +589,7 @@ function TeleporationDecoderForMessage(hereBit : Result, thereBit : Result)
 
 ## <a name="partial-application"></a>部分應用程式
 
-您可以使用 *部分應用程式*來大幅增加傳回作業的函式，在此情況下，您可以提供一或多個部分的輸入給函數或作業，而不需要實際呼叫它。 在先前的 `ApplyTwice` 範例中，您可以指出您不想要立即指定應套用輸入作業的量子位：
+您可以使用 *部分應用程式* 來大幅增加傳回作業的函式，在此情況下，您可以提供一或多個部分的輸入給函數或作業，而不需要實際呼叫它。 在先前的 `ApplyTwice` 範例中，您可以指出您不想要立即指定應套用輸入作業的量子位：
 
 ```qsharp
 operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit {

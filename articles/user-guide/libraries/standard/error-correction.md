@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835548"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692046"
 ---
 # <a name="error-correction"></a>錯誤修正 #
 
@@ -61,7 +61,7 @@ ms.locfileid: "90835548"
 | $X_2$ | $ \ket {001} $ | $ \ket {110} $ | $+$ | $-$ |
 
 因此，這兩個度量的結果可唯一判斷發生的位翻轉錯誤，但不會洩漏有關我們所編碼之狀態的任何資訊。
-我們將這些結果稱為*有問題*的結果，並將其重新對應至造成復原的錯誤的處理*程式。*
+我們將這些結果稱為 *有問題* 的結果，並將其重新對應至造成復原的錯誤的處理 *程式。*
 尤其是，我們強調的是，復原是一種 *傳統* 的推斷程式，它會將發生的症狀作為其輸入，並傳回如何修正可能發生之任何錯誤的處方。
 
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "90835548"
 > 同樣地，套用階段翻轉作業 `Z` 會將 $ \ket{\overline {1} } $ 對應到 $-\ket{\overline {1} } $，因此會將 $ \ket{\overline{+}} $ 對應到 $ \ket{\overline {-} } $。
 > 更常見的情況是，您可以建立程式碼來處理更大量的錯誤，以及處理 $Z $ 錯誤以及 $X $ 錯誤。
 
-我們可以針對在所有程式碼狀態上採取相同方式的量子錯誤修正來描述度量的深入解析，是 *穩定形式*的本質。
+我們可以針對在所有程式碼狀態上採取相同方式的量子錯誤修正來描述度量的深入解析，是 *穩定形式* 的本質。
 Q#Canon 會提供架構來描述從穩定程式碼到的編碼和解碼，以及描述如何從錯誤中復原。
 在本節中，我們會將此架構和其應用程式描述為一些簡單的量子錯誤修正程式碼。
 
@@ -82,14 +82,14 @@ Q#Canon 會提供架構來描述從穩定程式碼到的編碼和解碼，以及
 
 為了協助指定錯誤修正碼， Q# canon 提供數種不同的使用者定義類型：
 
-- <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`：表示應將量子位的暫存器解釋為錯誤修正程式碼的程式碼區塊。
-- <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`：表示測量結果的陣列應解釋為在程式碼區塊上測量的症狀。
-- <xref:microsoft.quantum.errorcorrection.recoveryfn>`= (Syndrome -> Pauli[])`：表示應該使用*傳統*函式來解讀症狀，並傳回應該套用的更正。
-- <xref:microsoft.quantum.errorcorrection.encodeop>`= ((Qubit[], Qubit[]) => LogicalRegister)`：表示某項作業會採用量子位來代表資料和全新的 ancilla 量子位，以產生錯誤修正程式碼的程式碼區塊。
-- <xref:microsoft.quantum.errorcorrection.decodeop>`= (LogicalRegister => (Qubit[], Qubit[]))`：表示分解錯誤修正程式碼至資料量子位的程式碼區塊，以及用來代表症狀資訊的 ancilla 量子位的作業。
-- <xref:microsoft.quantum.errorcorrection.syndromemeasop>`= (LogicalRegister => Syndrome)`：表示應該用來從程式碼區塊中解壓縮症狀資訊的作業，而不會干擾程式碼所保護的狀態。
+- <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`：表示應將量子位的暫存器解釋為錯誤修正程式碼的程式碼區塊。
+- <xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`：表示測量結果的陣列應解釋為在程式碼區塊上測量的症狀。
+- <xref:Microsoft.Quantum.ErrorCorrection.RecoveryFn>`= (Syndrome -> Pauli[])`：表示應該使用 *傳統* 函式來解讀症狀，並傳回應該套用的更正。
+- <xref:Microsoft.Quantum.ErrorCorrection.EncodeOp>`= ((Qubit[], Qubit[]) => LogicalRegister)`：表示某項作業會採用量子位來代表資料和全新的 ancilla 量子位，以產生錯誤修正程式碼的程式碼區塊。
+- <xref:Microsoft.Quantum.ErrorCorrection.DecodeOp>`= (LogicalRegister => (Qubit[], Qubit[]))`：表示分解錯誤修正程式碼至資料量子位的程式碼區塊，以及用來代表症狀資訊的 ancilla 量子位的作業。
+- <xref:Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp>`= (LogicalRegister => Syndrome)`：表示應該用來從程式碼區塊中解壓縮症狀資訊的作業，而不會干擾程式碼所保護的狀態。
 
-最後，canon 會提供型別， <xref:microsoft.quantum.errorcorrection.qecc> 以收集定義量子錯誤修正程式碼時所需的其他類型。 與每個穩定程式量副程式代碼相關聯的程式碼長度 $n $、邏輯量子位的數位 $k $，以及 $d $ 的最小距離，通常會以⟦ $n $、$k $、$d $ ⟧的標記法來群組在一起。 例如，函數會 <xref:microsoft.quantum.errorcorrection.bitflipcode> 定義⟦3，1，1⟧位翻轉程式碼：
+最後，canon 會提供型別， <xref:Microsoft.Quantum.ErrorCorrection.QECC> 以收集定義量子錯誤修正程式碼時所需的其他類型。 與每個穩定程式量副程式代碼相關聯的程式碼長度 $n $、邏輯量子位的數位 $k $，以及 $d $ 的最小距離，通常會以⟦ $n $、$k $、$d $ ⟧的標記法來群組在一起。 例如，函數會 <xref:Microsoft.Quantum.ErrorCorrection.BitFlipCode> 定義⟦3，1，1⟧位翻轉程式碼：
 
 ```qsharp
 let encodeOp = EncodeOp(BitFlipEncoder);
@@ -104,7 +104,7 @@ let code = QECC(encodeOp, decodeOp, syndMeasOp);
 請注意，此 `QECC` 類型 *不* 包含復原功能。
 這可讓我們變更修復錯誤所用的復原函式，而不需要變更程式碼本身的定義;這項功能特別適用于將特徵測量的意見反應納入復原所假設的模型中。
 
-以這種方式定義程式碼之後，我們就可以使用此作業 <xref:microsoft.quantum.errorcorrection.recover> 從錯誤中復原：
+以這種方式定義程式碼之後，我們就可以使用此作業 <xref:Microsoft.Quantum.ErrorCorrection.Recover> 從錯誤中復原：
 
 ```qsharp
 let code = BitFlipCode();

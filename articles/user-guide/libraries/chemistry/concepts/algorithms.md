@@ -1,6 +1,6 @@
 ---
 title: 模擬 Hamiltonian Dynamics
-description: 瞭解如何使用 Trotter Suzuki 公式和量子位化來處理 Hamiltonian 模擬。
+description: 瞭解如何使用 Trotter-Suzuki 公式和量子位化來處理 Hamiltonian 模擬。
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834001"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691883"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>模擬 Hamiltonian Dynamics
 
@@ -28,13 +28,13 @@ Trotter-Suzuki 公式背後的構想很簡單：以簡單的方式來表達 Hami
 尤其是，讓 $H = \ sum_ {j = 1} ^ m H_j $ Hamiltonian。
 然後，$ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2) ，$ $，這表示如果 $t \ll $1，則此近似值中的錯誤會變成可忽略。
 請注意，如果 $e ^ {-i H t} $ 是一般的指數，則此近似值中的錯誤不會 $O (m ^ 2 t ^ 2) $：它會是零。
-發生此錯誤的原因是 $e ^ {-iHt} $ 是運算子指數，因此使用此公式時發生錯誤，因為 $H _j $ 詞彙不會在 (， *例如*$H _j H_k \ne H_k H_j $ 一般) 。
+發生此錯誤的原因是 $e ^ {-iHt} $ 是運算子指數，因此使用此公式時發生錯誤，因為 $H _j $ 詞彙不會在 (， *例如* $H _j H_k \ne H_k H_j $ 一般) 。
 
 如果 $t $ 是大型的，Trotter – Suzuki 公式仍然可以用來將動態模擬為一系列簡短的步驟來精確地模擬。
 讓 $r $ 成為在時間演進中所採取的步驟數目，因此每次步驟都是針對時間 $t/r $ 執行。 接著，我們有了 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left ( \ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r) $ $ 表示如果 $r $ 調整為 $m ^ 2 t ^ 2/\ epsilon $，則在任何 $ \epsilon>$0 中最多可以有 $ \epsilon $ 的錯誤。
 
 您可以藉由建立一連串運算子指數來建立更精確的近似值，以取消錯誤詞彙。
-最簡單的這類公式，第二個 order Trotter-Suzuki 公式，採用 "$ U_2 (t) = \left ( \ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2r} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2) $ $ $r $ 以 $m ^ {3/2} t ^ {3/2}/\sqrt {\ epsilon} $ 進行調整，可針對任何 $ \epsilon>$0 建立小於 $ \epsilon $ 的錯誤。
+最簡單的這類公式，第二個順序 Trotter-Suzuki 公式，採用 "$ U_2 (t) = \left ( \ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2r} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2) $ $ $r $ 以 $m ^ {3/2} t ^ {3/2}/\sqrt {\ epsilon} $ 進行調整，可針對任何 $ \epsilon>$0 建立小於 $ \epsilon $ 的錯誤。
 
 甚至更高順序的公式（特別是 ($ 2k $) $k>$0 的第一個順序）可以用遞迴方式進行： $ $ U_ {2k} (t) = [U_ {2k-2} (s_k \~ t) ] ^ 2 U_ {2k-2} ( [1-4s_k] t) [U_ {2k-2} (s_k \~ t) ] ^ 2 = e ^ {-iHt} + O ( # B11 m t) ^ {2k + 1}/r ^ {2k} ) ，$ $，其中 $s _k = (4-4 ^ {1/ (2k-1) } ) ^ {-1} $。
 
@@ -52,7 +52,7 @@ Trotter-Suzuki 公式背後的構想很簡單：以簡單的方式來表達 Hami
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}。
 $ $ 這裡、$e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ 和 $e ^ {-iHt} \ket {01} = e ^ {-it} \ket {01} $，這可能是因為 $0 $ 的同位檢查是 $0 $，而位字串 $1 $ 的同位檢查為 $1 $ 的結果。
 
-Pauli 運算子的指數可以使用作業直接實作為 Q# <xref:microsoft.quantum.intrinsic.exp> ：
+Pauli 運算子的指數可以使用作業直接實作為 Q# <xref:Microsoft.Quantum.Intrinsic.Exp> ：
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -65,7 +65,7 @@ Pauli 運算子的指數可以使用作業直接實作為 Q# <xref:microsoft.qua
 
 針對 Fermionic Hamiltonian， [約旦– Wigner 分解](xref:microsoft.quantum.chemistry.concepts.jordanwigner) 可方便地將 Hamiltonian 對應到 Pauli 運算子的總和。
 這表示您可以輕鬆地調整上述方法來模擬化學。
-以下是在化學中執行這類模擬的簡單範例，而不是手動迴圈 Wigner 標記法中的所有 Pauli 字詞。
+以下是在化學中執行這類模擬的簡單範例，而不是在 Jordan-Wigner 標記法中手動迴圈執行。
 我們的起點是 Fermionic Hamiltonian 的 [約旦 Wigner 編碼](xref:microsoft.quantum.chemistry.concepts.jordanwigner) ，以程式碼形式以類別的實例來表示 `JordanWignerEncoding` 。
 
 ```csharp
@@ -156,7 +156,7 @@ $ \Operatorname{Prepare} $ 作業不會直接在量子位化中使用，而是�
 
 在中，您可以輕鬆地設定這些副程式 Q# 。
 例如，請考慮使用簡單的量子位橫向-Ising Hamiltonian，其中 $H = X_1 + X_2 + Z_1 Z_2 $。
-在此情況下，會叫用 Q# 執行 $ \operatorname{Select} $ 作業的程式碼 <xref:microsoft.quantum.canon.multiplexoperations> ，而 $ \operatorname{Prepare} $ 作業則可以使用來執行 <xref:microsoft.quantum.preparation.preparearbitrarystate> 。
+在此情況下，會叫用 Q# 執行 $ \operatorname{Select} $ 作業的程式碼 <xref:Microsoft.Quantum.Canon.MultiplexOperations> ，而 $ \operatorname{Prepare} $ 作業則可以使用來執行 <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> 。
 您可以在[ Q# 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)中找到包含模擬 Hubbard 模型的範例。
 
 針對任意化學問題手動指定這些步驟，需要投入大量的時間，這是使用化學程式庫避免的。
@@ -182,6 +182,6 @@ using(qubits = Qubit[nQubits]){
 }
 ```
 
-重要的是，此執行 <xref:microsoft.quantum.chemistry.jordanwigner.qubitizationoracle> 適用于指定為 Pauli 字串線性組合的任意 hamiltonian。
-使用針對化學模擬優化的版本 <xref:microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle> 。
+重要的是，此執行 <xref:Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle> 適用于指定為 Pauli 字串線性組合的任意 hamiltonian。
+使用針對化學模擬優化的版本 <xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle> 。
 此版本已經過優化，可將使用在 [量子線路中使用編碼電子 Spectra 的技巧，以線性 t 複雜度進行編碼](https://arxiv.org/abs/1805.03662)，以最小化 t 閘道的數目。

@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8dddc15354c32808e7ad1310bce233ee3dc93fe8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835633"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692156"
 ---
 # <a name="quantum-characterization-and-statistics"></a>量子特性和統計資料 #
 
@@ -22,7 +22,7 @@ ms.locfileid: "90835633"
 這是一項挑戰，因為每次測量量子系統都會產生最多一項資訊。
 若要瞭解 eigenvalue，請單獨使用量子狀態，許多度量的結果都必須一起拼接，讓使用者可以搜集所需的許多資訊來代表這些概念。
 量子狀態尤其是繁瑣語法，因為 [沒有任何複製定理](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) 指出沒有任何方法可從單一狀態複本學習任意的量子狀態，因為這樣做可讓您建立狀態的複本。
-這種從使用者開始的量子狀態模糊化會反映出來，而不會 Q# 公開或甚至定義狀態對量副程式*is*的影響。
+這種從使用者開始的量子狀態模糊化會反映出來，而不會 Q# 公開或甚至定義狀態對量副程式 *is* 的影響。
 因此，我們藉由將作業和狀態視為黑箱來處理量子特性;這種方法與量子特性、驗證和驗證 (QCVV) 的實驗實務很普遍。
 
 特性與先前討論過的其他程式庫不同。
@@ -39,7 +39,7 @@ ms.locfileid: "90835633"
 以下建議的每個方法都會使用不同的策略來設計實驗，並使用不同的資料處理方法來學習該階段。  它們各有獨特的優點，包括嚴格的錯誤界限、將先前資訊納入的能力、容許錯誤或在記憶體上執行 limitted 傳統電腦。
 
 在討論反復的階段估計時，我們會考慮將單一的 $U $ 指定為黑色方塊的操作。
-如同 [資料結構](xref:microsoft.quantum.libraries.data-structures)中的 oracle 一節中所述， Q# canon 會依 <xref:microsoft.quantum.oracles.discreteoracle> 使用者定義型別（由元組類型定義）來模型作業 `((Int, Qubit[]) => Unit : Adjoint, Controlled)` 。
+如同 [資料結構](xref:microsoft.quantum.libraries.data-structures)中的 oracle 一節中所述， Q# canon 會依 <xref:Microsoft.Quantum.Oracles.DiscreteOracle> 使用者定義型別（由元組類型定義）來模型作業 `((Int, Qubit[]) => Unit : Adjoint, Controlled)` 。
 具體而言，如果 `U : DiscreteOracle` ，則會 `U(m)` 為執行 $U ^ m $ `m : Int` 。
 
 有了這項定義之後，反復階段估計的每個步驟都會藉由準備 $ \ket{+} $ 狀態的輔助量子位，以及我們 [假設)  ($U 的初始](xref:microsoft.quantum.concepts.matrix-advanced) 狀態 $ \ket{\phi} $ 來進行，亦即 $U (m) \ket{\phi} = e ^ {im\phi} \ ket {\ phi} $。  
@@ -99,7 +99,7 @@ ms.locfileid: "90835633"
 為了瞭解這一點，我們想要學習 $n $-bit 變數 $x $。
 先前的散發 $ \Pr (x) $ 支援 $x $ 的 $ 2 ^ n $ 假設值。
 這表示，如果我們需要高度精確的估計值 $x $ then 貝氏階段估計可能需要過高的記憶體和處理時間。
-針對某些應用程式（例如量子模擬），所需的 limitted 精確度不會妨礙其他應用程式（例如 Shor 的演算法）在其階段估計步驟內無法使用精確的貝氏推斷。  基於這個理由，我們也提供近似貝氏方法的執行，例如 [隨機的逐步解說階段估計 (RWPE) ](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) ，也提供非貝氏的方法，例如 [穩固的階段估計](xref:microsoft.quantum.characterization.robustphaseestimation)。
+針對某些應用程式（例如量子模擬），所需的 limitted 精確度不會妨礙其他應用程式（例如 Shor 的演算法）在其階段估計步驟內無法使用精確的貝氏推斷。  基於這個理由，我們也提供近似貝氏方法的執行，例如 [隨機的逐步解說階段估計 (RWPE) ](xref:Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation) ，也提供非貝氏的方法，例如 [穩固的階段估計](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation)。
 
 ### <a name="robust-phase-estimation"></a>強大的階段估計 ###
 
@@ -112,14 +112,14 @@ ms.locfileid: "90835633"
 其他相關的詳細資料（例如，只有 $1 $ ancilla 量子位的小空間額外負荷）或程式是不可調整的，這表示所需的量子實驗順序與中繼測量結果無關。 在這個範例中，您可以選擇階段估計演算法的重點，其中一個應該參考檔，例如和參考的發行集， @"microsoft.quantum.characterization.robustphaseestimation" 以取得詳細資訊和其執行。
 
 > [!TIP]
-> 在許多範例中，會使用強大的階段預估。 如需瞭解各種實體系統的接地狀態能源，請參閱[ **H2 模擬**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)、 [ **SimpleIsing**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)和[ **Hubbard 模型**範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)。
+> 在許多範例中，會使用強大的階段預估。 如需瞭解各種實體系統的接地狀態能源，請參閱 [ **H2 模擬** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)、 [ **SimpleIsing** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)和 [ **Hubbard 模型** 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)。
 
 
 ### <a name="continuous-oracles"></a>連續 Oracle ###
 
-我們也可以從上述使用的 oracle 模型一般化，以允許依 canon 類型模型化的持續時間 oracle <xref:microsoft.quantum.oracles.continuousoracle> 。
+我們也可以從上述使用的 oracle 模型一般化，以允許依 canon 類型模型化的持續時間 oracle <xref:Microsoft.Quantum.Oracles.ContinuousOracle> 。
 請考慮使用 $U $ 的單一單一運算子，而不是單一的單一運算子系列 $U (t) $ for $t \in \mathbb{R} $，如此 $U (t) U (s) $ = $U (t + s) $。
-這是較弱的語句，因為我們可以藉 <xref:microsoft.quantum.oracles.discreteoracle> 由限制 \, 某些固定 $ \delta t $ 的 $t = m \delta t $ 來建立。
+這是較弱的語句，因為我們可以藉 <xref:Microsoft.Quantum.Oracles.DiscreteOracle> 由限制 \, 某些固定 $ \delta t $ 的 $t = m \delta t $ 來建立。
 藉由 [石頭的定理](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups)，$U (t) = \exp (i H t) $ for a operator $H $，其中 $ \exp $ 是矩陣指數，如 [advanced 矩陣](xref:microsoft.quantum.concepts.matrix-advanced)中所述。
 Eigenstate $ \ket{\phi} $ of $H $，如此一來，$H \ket{\phi} = \phi \ket{\phi} $ 接著也是 eigenstate of $U (t) $ for all $t $，\begin{equation} U (t) \ket{\phi} = e ^ {i \phi t} \ket{\phi}。
 \end{equation}
@@ -146,14 +146,14 @@ Q# 提供適用于貝氏階段估計的實用近似值，其設計目的是要�
 
 Canon 所提供的每個階段估計作業都會 Q# 採用一組不同的輸入，將我們所要求的品質參數化為最終估計 $ \hat{\phi} $。
 不過，這些不同的輸入全都共用數個輸入，因此在品質參數上的部分應用程式會產生一般簽章。
-例如，下一 <xref:microsoft.quantum.characterization.robustphaseestimation> 節中所討論的作業具有下列簽章：
+例如，下一 <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> 節中所討論的作業具有下列簽章：
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
 ```
 
 `bitsPrecision`輸入是唯一的 `RobustPhaseEstimation` ，但 `oracle` `eigenstate` 在一般情況下是唯一的。
-因此，如 **H2Sample**中所示，作業可以接受具有表單輸入的反復階段估計演算法， `(DiscreteOracle, Qubit[]) => Unit` 以允許使用者指定任意階段估計演算法：
+因此，如 **H2Sample** 中所示，作業可以接受具有表單輸入的反復階段估計演算法， `(DiscreteOracle, Qubit[]) => Unit` 以允許使用者指定任意階段估計演算法：
 
 ```qsharp
 operation H2EstimateEnergy(
