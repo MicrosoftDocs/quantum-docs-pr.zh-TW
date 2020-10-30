@@ -9,18 +9,18 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 3e6700acc09adf9e2e771f6289c73ad51aa2cb90
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835123"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692261"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>量子計算的線性代數
 
 線性代數是量子運算的語言。 雖然不了解線性代數也可以實作或撰寫量子程式，但線性代數卻廣泛用於描述量子位元狀態、量子運算，以及用於預測量子電腦為了回應一連串指示所會執行的動作。
 
-熟悉[量子物理的基本概念](xref:microsoft.quantum.overview.understanding)可以協助您了解量子運算，同樣地，了解一些基本的線性代數也可以協助您了解量子演算法的運作方式。 至少請熟悉**向量**和**矩陣乘法**。 如果您需要複習這些代數概念知識，以下是一些涵蓋基本知識的教學課程：
+熟悉[量子物理的基本概念](xref:microsoft.quantum.overview.understanding)可以協助您了解量子運算，同樣地，了解一些基本的線性代數也可以協助您了解量子演算法的運作方式。 至少請熟悉 **向量** 和 **矩陣乘法** 。 如果您需要複習這些代數概念知識，以下是一些涵蓋基本知識的教學課程：
 
 - [關於線性代數的 Jupyter 筆記本教學課程](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
 - [關於複數運算的 Jupyter 筆記本教學課程](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
@@ -30,7 +30,7 @@ ms.locfileid: "90835123"
 
 ## <a name="vectors-and-matrices-in-quantum-computing"></a>量子運算中的向量和矩陣
 
-在[了解量子運算](xref:microsoft.quantum.overview.understanding)的主題中，您曾看到量子位元的狀態可以是 1 或 0 或疊加或兩者。 使用線性代數時，量子位元的狀態可以用向量加以描述，並以單行**矩陣** $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 來呈現。 這也稱為**量子狀態向量**，而且必須符合 $|a|^2 + |b|^2 = 1$ 的要求。  
+在[了解量子運算](xref:microsoft.quantum.overview.understanding)的主題中，您曾看到量子位元的狀態可以是 1 或 0 或疊加或兩者。 使用線性代數時，量子位元的狀態可以用向量加以描述，並以單行 **矩陣** $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 來呈現。 這也稱為 **量子狀態向量** ，而且必須符合 $|a|^2 + |b|^2 = 1$ 的要求。  
 
 矩陣的元素代表量子位元塌縮向某一方的概率，其中 $|a|^2$ 是塌縮為 0 的概率，而 $|b|^2$ 則是塌縮為 1 的概率。 下列矩陣全都代表有效的量子狀態向量：
 
@@ -41,7 +41,7 @@ $$\begin{bmatrix} 1 \\\\  0 \end{bmatrix}、\begin{bmatrix} 0 \\\\  1 \end{bmatr
 以下是以矩陣乘法所呈現的兩個常見量子運算。
 
 
-[`X` 運算](xref:microsoft.quantum.intrinsic.x)會以 Pauli 矩陣 $X$ 來表示，
+[`X` 運算](xref:Microsoft.Quantum.Intrinsic.X)會以 Pauli 矩陣 $X$ 來表示，
 
 $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}，$$
     
@@ -49,7 +49,7 @@ $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}，$$
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}。$$
 
-['H' 運算](xref:microsoft.quantum.intrinsic.h)會以 Hadamard 變換 $H$ 來表示，
+['H' 運算](xref:Microsoft.Quantum.Intrinsic.H)會以 Hadamard 變換 $H$ 來表示，
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}，$$
 
@@ -57,13 +57,13 @@ $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}，$$
 
 $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=\left(\frac{1}{\sqrt{2}}\right)^2=\frac{1}{2}。$$
 
-代表量子運算的矩陣有一個要求，那就是其必須是**麼正** (unitary) 矩陣。 如果某個矩陣的**逆**矩陣等於該矩陣的**共軛轉置**矩陣，該矩陣便是麼正矩陣。
+代表量子運算的矩陣有一個要求，那就是其必須是 **麼正** (unitary) 矩陣。 如果某個矩陣的 **逆** 矩陣等於該矩陣的 **共軛轉置** 矩陣，該矩陣便是麼正矩陣。
 
 ## <a name="representing-two-qubit-states"></a>代表兩個量子位元狀態
 
 在上述範例中，一個量子位元的狀態使用單行矩陣 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 來描述，而對其套用運算的行為則以乘上兩個矩陣來描述。 不過，量子電腦會使用多個量子位元，因此該如何描述兩個量子位元的結合狀態呢？ 
 
-請記住，每個量子位元都是一個向量空間，因此不能直接相乘。 相反地，您必須使用**張量積**，這是一種相關運算，會從個別向量空間建立新的向量空間，並以 $\otimes $ 符號表示。 例如，兩個量子位元狀態 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 和 $\begin{bmatrix} c \\\\  d \end{bmatrix}$ 的張量積計算如下
+請記住，每個量子位元都是一個向量空間，因此不能直接相乘。 相反地，您必須使用 **張量積** ，這是一種相關運算，會從個別向量空間建立新的向量空間，並以 $\otimes $ 符號表示。 例如，兩個量子位元狀態 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 和 $\begin{bmatrix} c \\\\  d \end{bmatrix}$ 的張量積計算如下
 
 $$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}。 $$
 
