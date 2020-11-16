@@ -7,8 +7,8 @@ ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -18,7 +18,7 @@ ms.locfileid: "92692110"
 ---
 # <a name="the-prelude"></a><span data-ttu-id="28414-103">序言</span><span class="sxs-lookup"><span data-stu-id="28414-103">The Prelude</span></span> #
 
-<span data-ttu-id="28414-104">:::no-loc(Q#):::包含在量子開發工具組中的編譯器和目的電腦提供一組內建函式和作業，可在中撰寫量副程式時使用 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="28414-104">The :::no-loc(Q#)::: compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programs in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="28414-104">Q#包含在量子開發工具組中的編譯器和目的電腦提供一組內建函式和作業，可在中撰寫量副程式時使用 Q# 。</span><span class="sxs-lookup"><span data-stu-id="28414-104">The Q# compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programs in Q#.</span></span>
 
 ## <a name="intrinsic-operations-and-functions"></a><span data-ttu-id="28414-105">內建作業和函數</span><span class="sxs-lookup"><span data-stu-id="28414-105">Intrinsic Operations and Functions</span></span> ##
 
@@ -30,11 +30,11 @@ ms.locfileid: "92692110"
 - <span data-ttu-id="28414-110">執行測量的作業。</span><span class="sxs-lookup"><span data-stu-id="28414-110">Operations implementing measurements.</span></span>
 
 <span data-ttu-id="28414-111">由於 Clifford + $T $ 閘道集是適用于量子運算的 [通用](xref:microsoft.quantum.concepts.multiple-qubits) ，因此這些作業足以大約在 negligibly small 錯誤內執行任何量子演算法。</span><span class="sxs-lookup"><span data-stu-id="28414-111">Since the Clifford + $T$ gate set is [universal](xref:microsoft.quantum.concepts.multiple-qubits) for quantum computing, these operations suffice to approximately implement any quantum algorithm within negligibly small error.</span></span>
-<span data-ttu-id="28414-112">藉由提供旋轉，可讓程式設計人員 :::no-loc(Q#)::: 在單一量子位的單一和 CNOT 閘道程式庫中工作。</span><span class="sxs-lookup"><span data-stu-id="28414-112">By providing rotations as well, :::no-loc(Q#)::: allows the programmer to work within the single qubit unitary and CNOT gate library.</span></span> <span data-ttu-id="28414-113">此程式庫較容易考慮，因為它不需要程式設計人員直接表達 Clifford + $T $ 分解，也因為有高效率的方法可將單一量子位 unitaries 編譯成 Clifford 和 $T $ 閘道 (請參閱 [這裡](xref:microsoft.quantum.more-information) 以取得) 的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="28414-113">This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [here](xref:microsoft.quantum.more-information) for more information).</span></span>
+<span data-ttu-id="28414-112">藉由提供旋轉，可讓程式設計人員 Q# 在單一量子位的單一和 CNOT 閘道程式庫中工作。</span><span class="sxs-lookup"><span data-stu-id="28414-112">By providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.</span></span> <span data-ttu-id="28414-113">此程式庫較容易考慮，因為它不需要程式設計人員直接表達 Clifford + $T $ 分解，也因為有高效率的方法可將單一量子位 unitaries 編譯成 Clifford 和 $T $ 閘道 (請參閱 [這裡](xref:microsoft.quantum.more-information) 以取得) 的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="28414-113">This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [here](xref:microsoft.quantum.more-information) for more information).</span></span>
 
 <span data-ttu-id="28414-114">可能的話，在序言中所定義的作業（在量子位上作用）允許套用 `Controlled` variant，讓目的電腦能夠執行適當的分解。</span><span class="sxs-lookup"><span data-stu-id="28414-114">Where possible, the operations defined in the prelude which act on qubits allow for applying the `Controlled` variant, such that the target machine will perform the appropriate decomposition.</span></span>
 
-<span data-ttu-id="28414-115">這部分序言中定義的許多函數和作業都在 @"microsoft.quantum.intrinsic" 命名空間中，因此大部分的 :::no-loc(Q#)::: 原始程式檔都會 `open Microsoft.Quantum.Intrinsic;` 緊接在初始命名空間宣告之後。</span><span class="sxs-lookup"><span data-stu-id="28414-115">Many of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.intrinsic" namespace, such that most :::no-loc(Q#)::: source files will have an `open Microsoft.Quantum.Intrinsic;` directive immediately following the initial namespace declaration.</span></span>
+<span data-ttu-id="28414-115">這部分序言中定義的許多函數和作業都在 @"microsoft.quantum.intrinsic" 命名空間中，因此大部分的 Q# 原始程式檔都會 `open Microsoft.Quantum.Intrinsic;` 緊接在初始命名空間宣告之後。</span><span class="sxs-lookup"><span data-stu-id="28414-115">Many of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.intrinsic" namespace, such that most Q# source files will have an `open Microsoft.Quantum.Intrinsic;` directive immediately following the initial namespace declaration.</span></span>
 <span data-ttu-id="28414-116"><xref:Microsoft.Quantum.Core>命名空間會自動開啟，如此一來，就 <xref:Microsoft.Quantum.Core.Length> 可以在沒有語句的情況下使用 `open` 。</span><span class="sxs-lookup"><span data-stu-id="28414-116">The <xref:Microsoft.Quantum.Core> namespace is automatically opened, so that functions such as <xref:Microsoft.Quantum.Core.Length> can be used without an `open` statement at all.</span></span>
 
 ### <a name="common-single-qubit-unitary-operations"></a><span data-ttu-id="28414-117">常見 Single-Qubit 單一作業</span><span class="sxs-lookup"><span data-stu-id="28414-117">Common Single-Qubit Unitary Operations</span></span> ###
@@ -101,7 +101,7 @@ ms.locfileid: "92692110"
 
 #### <a name="rotations"></a><span data-ttu-id="28414-159">輪替人員</span><span class="sxs-lookup"><span data-stu-id="28414-159">Rotations</span></span> ####
 
-<span data-ttu-id="28414-160">除了上述的 Pauli 和 Clifford 作業， :::no-loc(Q#)::: 序言也提供各種方式來表達旋轉。</span><span class="sxs-lookup"><span data-stu-id="28414-160">In addition to the Pauli and Clifford operations above, the :::no-loc(Q#)::: prelude provides a variety of ways of expressing rotations.</span></span>
+<span data-ttu-id="28414-160">除了上述的 Pauli 和 Clifford 作業， Q# 序言也提供各種方式來表達旋轉。</span><span class="sxs-lookup"><span data-stu-id="28414-160">In addition to the Pauli and Clifford operations above, the Q# prelude provides a variety of ways of expressing rotations.</span></span>
 <span data-ttu-id="28414-161">如同在 [單一量子位作業](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)中所述，旋轉的能力對量子演算法而言很重要。</span><span class="sxs-lookup"><span data-stu-id="28414-161">As described in [single-qubit operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), the ability to rotate is critical to quantum algorithms.</span></span>
 
 <span data-ttu-id="28414-162">我們一開始會先重新叫用，我們可以使用 $H $ 和 $T $ 閘道來表達任何單一量子位作業，其中 $H $ 是 Hadamard 作業，其中 \begin{equation} T \mathrel{： =} \begin{bmatrix} 1 & 0 \\ \\ % FIXME：這目前使用四次的摧毀駭客攻擊。</span><span class="sxs-lookup"><span data-stu-id="28414-162">We start by recalling that we can express any single-qubit operation using the $H$ and $T$ gates, where $H$ is the Hadamard operation, and where \begin{equation} T \mathrel{:=} \begin{bmatrix} 1 & 0 \\\\ % FIXME: this currently uses the quad back whack hack.</span></span>
@@ -232,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a><span data-ttu-id="28414-247">擴充功能和作業</span><span class="sxs-lookup"><span data-stu-id="28414-247">Extension Functions and Operations</span></span> ##
 
-<span data-ttu-id="28414-248">此外，序言會在 .NET 層級定義一組豐富的數學和類型轉換函式，以便在程式碼中使用 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="28414-248">In addition, the prelude defines a rich set of mathematical and type conversion functions at the .NET level for use within :::no-loc(Q#)::: code.</span></span>
+<span data-ttu-id="28414-248">此外，序言會在 .NET 層級定義一組豐富的數學和類型轉換函式，以便在程式碼中使用 Q# 。</span><span class="sxs-lookup"><span data-stu-id="28414-248">In addition, the prelude defines a rich set of mathematical and type conversion functions at the .NET level for use within Q# code.</span></span>
 <span data-ttu-id="28414-249">例如， <xref:Microsoft.Quantum.Math> 命名空間會定義有用的作業，例如 <xref:Microsoft.Quantum.Math.Sin> 和 <xref:Microsoft.Quantum.Math.Log> 。</span><span class="sxs-lookup"><span data-stu-id="28414-249">For instance, the <xref:Microsoft.Quantum.Math> namespace defines useful operations such as <xref:Microsoft.Quantum.Math.Sin> and <xref:Microsoft.Quantum.Math.Log>.</span></span>
 <span data-ttu-id="28414-250">量子開發工具組所提供的實使用傳統的 .NET 基類庫，因此可能會涉及量副程式與其傳統驅動程式之間的額外通訊往返。</span><span class="sxs-lookup"><span data-stu-id="28414-250">The implementation provided by the Quantum Development Kit uses the classical .NET base class library, and thus may involve an additional communications round trip between quantum programs and their classical drivers.</span></span>
 <span data-ttu-id="28414-251">雖然這不會對本機模擬器造成問題，但這可能是使用遠端模擬器或實際硬體做為目的電腦時的效能問題。</span><span class="sxs-lookup"><span data-stu-id="28414-251">While this does not present a problem for a local simulator, this can be a performance issue when using a remote simulator or actual hardware as a target machine.</span></span>
@@ -241,7 +241,7 @@ return rs;
 ### <a name="math"></a><span data-ttu-id="28414-253">數學</span><span class="sxs-lookup"><span data-stu-id="28414-253">Math</span></span> ###
 
 <span data-ttu-id="28414-254"><xref:Microsoft.Quantum.Math>命名空間提供來自 .net 基類庫[ `System.Math` 類別](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)的許多實用功能。</span><span class="sxs-lookup"><span data-stu-id="28414-254">The <xref:Microsoft.Quantum.Math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true).</span></span>
-<span data-ttu-id="28414-255">這些函數的使用方式與任何其他函式相同 :::no-loc(Q#)::: ：</span><span class="sxs-lookup"><span data-stu-id="28414-255">These functions can be used in the same manner as any other :::no-loc(Q#)::: functions:</span></span>
+<span data-ttu-id="28414-255">這些函數的使用方式與任何其他函式相同 Q# ：</span><span class="sxs-lookup"><span data-stu-id="28414-255">These functions can be used in the same manner as any other Q# functions:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -249,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-<span data-ttu-id="28414-256">其中已根據其引數的型別多載 .NET 靜態方法，對應的函式 :::no-loc(Q#)::: 會加上後置詞，表示其輸入的類型：</span><span class="sxs-lookup"><span data-stu-id="28414-256">Where a .NET static method has been overloaded based on the type of its arguments, the corresponding :::no-loc(Q#)::: function is annotated with a suffix indicating the type of its input:</span></span>
+<span data-ttu-id="28414-256">其中已根據其引數的型別多載 .NET 靜態方法，對應的函式 Q# 會加上後置詞，表示其輸入的類型：</span><span class="sxs-lookup"><span data-stu-id="28414-256">Where a .NET static method has been overloaded based on the type of its arguments, the corresponding Q# function is annotated with a suffix indicating the type of its input:</span></span>
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

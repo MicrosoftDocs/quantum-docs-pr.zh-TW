@@ -1,14 +1,14 @@
 ---
 title: 寬度計數器-量子開發工具組
-description: '深入瞭解 Microsoft QDK width 計數器，它會使用量子追蹤模擬器來計算程式中的作業所配置和借用的量子位數目 :::no-loc(Q#)::: 。'
+description: '深入瞭解 Microsoft QDK width 計數器，它會使用量子追蹤模擬器來計算程式中的作業所配置和借用的量子位數目 Q# 。'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -18,7 +18,7 @@ ms.locfileid: "92691118"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a><span data-ttu-id="eaf39-103">量子追蹤模擬器：寬度計數器</span><span class="sxs-lookup"><span data-stu-id="eaf39-103">Quantum trace simulator: width counter</span></span>
 
-<span data-ttu-id="eaf39-104">寬度計數器是量子開發工具組 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的一部分。</span><span class="sxs-lookup"><span data-stu-id="eaf39-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="eaf39-105">您可以使用它來計算程式中每項作業所配置和借用的量子位數目 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="eaf39-105">You can use it to count the number of qubits allocated and borrowed by each operation in a :::no-loc(Q#)::: program.</span></span> <span data-ttu-id="eaf39-106">某些基本作業可以配置額外的量子位，例如，將控制的 `X` 作業或控制的 `T` 作業相乘。</span><span class="sxs-lookup"><span data-stu-id="eaf39-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
+<span data-ttu-id="eaf39-104">寬度計數器是量子開發工具組 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器的一部分。</span><span class="sxs-lookup"><span data-stu-id="eaf39-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="eaf39-105">您可以使用它來計算程式中每項作業所配置和借用的量子位數目 Q# 。</span><span class="sxs-lookup"><span data-stu-id="eaf39-105">You can use it to count the number of qubits allocated and borrowed by each operation in a Q# program.</span></span> <span data-ttu-id="eaf39-106">某些基本作業可以配置額外的量子位，例如，將控制的 `X` 作業或控制的 `T` 作業相乘。</span><span class="sxs-lookup"><span data-stu-id="eaf39-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
 
 ## <a name="invoking-the-width-counter"></a><span data-ttu-id="eaf39-107">叫用寬度計數器</span><span class="sxs-lookup"><span data-stu-id="eaf39-107">Invoking the width counter</span></span>
 
@@ -32,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a><span data-ttu-id="eaf39-109">在 c # 主機程式中使用 width 計數器</span><span class="sxs-lookup"><span data-stu-id="eaf39-109">Using the width counter in a C# host program</span></span>
 
-<span data-ttu-id="eaf39-110">本節後面的 c # 範例會 <xref:Microsoft.Quantum.Intrinsic.X> 根據下列範例程式碼，來計算由乘法受控制作業所配置的額外量子位數目 :::no-loc(Q#)::: ：</span><span class="sxs-lookup"><span data-stu-id="eaf39-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="eaf39-110">本節後面的 c # 範例會 <xref:Microsoft.Quantum.Intrinsic.X> 根據下列範例程式碼，來計算由乘法受控制作業所配置的額外量子位數目 Q# ：</span><span class="sxs-lookup"><span data-stu-id="eaf39-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

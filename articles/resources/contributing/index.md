@@ -7,8 +7,8 @@ ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: a8a527df59bd7ee038de71e04003cf456b094afb
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
@@ -55,11 +55,11 @@ ms.locfileid: "92691769"
 
 - <span data-ttu-id="92835-132">[**microsoft/Quantum**](https://github.com/Microsoft/Quantum)：內有範例和工具可協助您開始使用 Quantum Development Kit。</span><span class="sxs-lookup"><span data-stu-id="92835-132">[**microsoft/Quantum**](https://github.com/Microsoft/Quantum): Samples and tools to help get started with the Quantum Development Kit.</span></span>
 - <span data-ttu-id="92835-133">[**microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries)：適用於 Quantum Development Kit 的標準和領域專屬程式庫。</span><span class="sxs-lookup"><span data-stu-id="92835-133">[**microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries): Standard and domain-specific libraries for the Quantum Development Kit.</span></span>
-- <span data-ttu-id="92835-134">[**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas)：自學型程式設計練習，可供學習量子運算和 :::no-loc(Q#)::: 程式設計語言。</span><span class="sxs-lookup"><span data-stu-id="92835-134">[**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Self-paced programming exercises for learning quantum computing and the :::no-loc(Q#)::: programming language.</span></span>
-- <span data-ttu-id="92835-135">[**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler)：:::no-loc(Q#)::: 編譯器、Visual Studio 擴充功能和 Visual Studio Code 擴充功能。</span><span class="sxs-lookup"><span data-stu-id="92835-135">[**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): The :::no-loc(Q#)::: compiler, Visual Studio extension, and Visual Studio Code extension.</span></span>
+- <span data-ttu-id="92835-134">[**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas)：自學型程式設計練習，可供學習量子運算和 Q# 程式設計語言。</span><span class="sxs-lookup"><span data-stu-id="92835-134">[**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Self-paced programming exercises for learning quantum computing and the Q# programming language.</span></span>
+- <span data-ttu-id="92835-135">[**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler)：Q# 編譯器、Visual Studio 擴充功能和 Visual Studio Code 擴充功能。</span><span class="sxs-lookup"><span data-stu-id="92835-135">[**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): The Q# compiler, Visual Studio extension, and Visual Studio Code extension.</span></span>
 - <span data-ttu-id="92835-136">[**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime)：適用於 Quantum Development Kit 的模擬架構、程式碼產生和模擬目標電腦。</span><span class="sxs-lookup"><span data-stu-id="92835-136">[**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): Simulation framework, code generation, and simulation target machines for the Quantum Development Kit.</span></span>
-- <span data-ttu-id="92835-137">[**microsoft/iqsharp**](https://github.com/microsoft/iqsharp)：適用於 :::no-loc(Q#)::: Jupyter 核心和 Python 主機功能，以及可供在雲端環境中使用 I:::no-loc(Q#)::: 的 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="92835-137">[**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Jupyter kernel and Python host functionality for :::no-loc(Q#):::, as well as Docker images for using I:::no-loc(Q#)::: in cloud environments.</span></span>
-- <span data-ttu-id="92835-138">[**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language)：這是開發和指定新 :::no-loc(Q#)::: 功能的位置，您可以在其中分享有關 :::no-loc(Q#)::: 語言與核心程式庫未來演進的想法與建議。</span><span class="sxs-lookup"><span data-stu-id="92835-138">[**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language): This is where new :::no-loc(Q#)::: features are developed and specified, and where you can share ideas and suggestions about the future evolution of the :::no-loc(Q#)::: language and core libraries.</span></span>
+- <span data-ttu-id="92835-137">[**microsoft/iqsharp**](https://github.com/microsoft/iqsharp)：適用於 Q# Jupyter 核心和 Python 主機功能，以及可供在雲端環境中使用 IQ# 的 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="92835-137">[**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Jupyter kernel and Python host functionality for Q#, as well as Docker images for using IQ# in cloud environments.</span></span>
+- <span data-ttu-id="92835-138">[**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language)：這是開發和指定新 Q# 功能的位置，您可以在其中分享有關 Q# 語言與核心程式庫未來演進的想法與建議。</span><span class="sxs-lookup"><span data-stu-id="92835-138">[**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language): This is where new Q# features are developed and specified, and where you can share ideas and suggestions about the future evolution of the Q# language and core libraries.</span></span>
 - <span data-ttu-id="92835-139">[**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr)： https://docs.microsoft.com/quantum 所發佈文件的原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="92835-139">[**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): Source code for the documentation published at https://docs.microsoft.com/quantum.</span></span>
 
 > [!NOTE]
@@ -67,7 +67,7 @@ ms.locfileid: "92691769"
 
 <span data-ttu-id="92835-141">另外還有一些更特殊化的存放庫，著重在與 Quantum 開發套件相關的輔助功能。</span><span class="sxs-lookup"><span data-stu-id="92835-141">There are also a few other, more specialized repositories focusing on auxiliary functionality related to the Quantum Development Kit.</span></span>
 
-- <span data-ttu-id="92835-142">[**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty)：適用於 :::no-loc(Q#)::: 語法的 LaTeX 格式化支援。</span><span class="sxs-lookup"><span data-stu-id="92835-142">[**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): LaTeX formatting support for :::no-loc(Q#)::: syntax.</span></span>
+- <span data-ttu-id="92835-142">[**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty)：適用於 Q# 語法的 LaTeX 格式化支援。</span><span class="sxs-lookup"><span data-stu-id="92835-142">[**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): LaTeX formatting support for Q# syntax.</span></span>
 
 ## <a name="next-steps"></a><span data-ttu-id="92835-143">後續步驟</span><span class="sxs-lookup"><span data-stu-id="92835-143">Next steps</span></span>
 

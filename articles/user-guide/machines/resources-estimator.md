@@ -1,14 +1,14 @@
 ---
 title: 量子資源估算器-量子開發工具組
-description: '深入瞭解 Microsoft QDK resources 估算器，其預估在量子電腦上執行特定作業實例所需的資源 :::no-loc(Q#)::: 。'
+description: '深入瞭解 Microsoft QDK resources 估算器，其預估在量子電腦上執行特定作業實例所需的資源 Q# 。'
 author: anpaz-msft
 ms.author: anpaz
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -18,13 +18,13 @@ ms.locfileid: "92691870"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a><span data-ttu-id="ca541-103">量子開發工具組 (QDK) 資源估算器</span><span class="sxs-lookup"><span data-stu-id="ca541-103">Quantum Development Kit (QDK) resources estimator</span></span>
 
-<span data-ttu-id="ca541-104">顧名思義，類別會估計在 `ResourcesEstimator` 量子電腦上執行某項作業的指定實例所需的資源 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="ca541-104">As the name implies, the `ResourcesEstimator` class estimates the resources required to run a given instance of a :::no-loc(Q#)::: operation on a quantum computer.</span></span> <span data-ttu-id="ca541-105">它是藉由執行量子操作來完成，而不實際模擬量子電腦的狀態;基於這個原因，它會針對 :::no-loc(Q#)::: 使用上千個量子位的作業預估資源，前提是程式碼的傳統部分在合理的時間內執行。</span><span class="sxs-lookup"><span data-stu-id="ca541-105">It accomplishes this by running the quantum operation without actually simulating the state of a quantum computer; for this reason, it estimates resources for :::no-loc(Q#)::: operations that use thousands of qubits, provided that the classical part of the code runs in a reasonable time.</span></span>
+<span data-ttu-id="ca541-104">顧名思義，類別會估計在 `ResourcesEstimator` 量子電腦上執行某項作業的指定實例所需的資源 Q# 。</span><span class="sxs-lookup"><span data-stu-id="ca541-104">As the name implies, the `ResourcesEstimator` class estimates the resources required to run a given instance of a Q# operation on a quantum computer.</span></span> <span data-ttu-id="ca541-105">它是藉由執行量子操作來完成，而不實際模擬量子電腦的狀態;基於這個原因，它會針對 Q# 使用上千個量子位的作業預估資源，前提是程式碼的傳統部分在合理的時間內執行。</span><span class="sxs-lookup"><span data-stu-id="ca541-105">It accomplishes this by running the quantum operation without actually simulating the state of a quantum computer; for this reason, it estimates resources for Q# operations that use thousands of qubits, provided that the classical part of the code runs in a reasonable time.</span></span>
 
-<span data-ttu-id="ca541-106">資源估算器建置於 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器之上，它提供了一組更豐富的計量和工具來協助您進行調試 :::no-loc(Q#)::: 程式。</span><span class="sxs-lookup"><span data-stu-id="ca541-106">The resources estimator is built on top of the [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), which provides a richer set of metrics and tools to help debug :::no-loc(Q#)::: programs.</span></span>
+<span data-ttu-id="ca541-106">資源估算器建置於 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器之上，它提供了一組更豐富的計量和工具來協助您進行調試 Q# 程式。</span><span class="sxs-lookup"><span data-stu-id="ca541-106">The resources estimator is built on top of the [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), which provides a richer set of metrics and tools to help debug Q# programs.</span></span>
 
 ## <a name="invoking-and-running-the-resources-estimator"></a><span data-ttu-id="ca541-107">叫用和執行資源估算器</span><span class="sxs-lookup"><span data-stu-id="ca541-107">Invoking and running the resources estimator</span></span>
 
-<span data-ttu-id="ca541-108">您可以使用 [資源] 估算器來執行任何作業 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="ca541-108">You can use the resources estimator to run any :::no-loc(Q#)::: operation.</span></span> <span data-ttu-id="ca541-109">如需其他詳細資訊，請參閱 [執行 :::no-loc(Q#)::: 程式的方法](xref:microsoft.quantum.guide.host-programs)。</span><span class="sxs-lookup"><span data-stu-id="ca541-109">For additional details, see [Ways to run a :::no-loc(Q#)::: program](xref:microsoft.quantum.guide.host-programs).</span></span>
+<span data-ttu-id="ca541-108">您可以使用 [資源] 估算器來執行任何作業 Q# 。</span><span class="sxs-lookup"><span data-stu-id="ca541-108">You can use the resources estimator to run any Q# operation.</span></span> <span data-ttu-id="ca541-109">如需其他詳細資訊，請參閱 [執行 Q# 程式的方法](xref:microsoft.quantum.guide.host-programs)。</span><span class="sxs-lookup"><span data-stu-id="ca541-109">For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
 
 ### <a name="invoking-the-resources-estimator-from-c"></a><span data-ttu-id="ca541-110">叫用從 C 估算器的資源#</span><span class="sxs-lookup"><span data-stu-id="ca541-110">Invoking the resources estimator from C#</span></span> 
 
@@ -69,7 +69,7 @@ BorrowedWidth   0
 
 ### <a name="invoking-the-resources-estimator-from-python"></a><span data-ttu-id="ca541-119">從 Python 叫用資源估算器</span><span class="sxs-lookup"><span data-stu-id="ca541-119">Invoking the resources estimator from Python</span></span>
 
-<span data-ttu-id="ca541-120">使用匯入作業，從 Python 程式庫使用 [estimate_resources ( # B1 ](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) 方法 :::no-loc(Q#)::: ：</span><span class="sxs-lookup"><span data-stu-id="ca541-120">Use the [estimate_resources()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported :::no-loc(Q#)::: operation:</span></span>
+<span data-ttu-id="ca541-120">使用匯入作業，從 Python 程式庫使用 [estimate_resources ( # B1 ](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) 方法 Q# ：</span><span class="sxs-lookup"><span data-stu-id="ca541-120">Use the [estimate_resources()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:</span></span>
 
 ```python
 qubit_result = myOperation.estimate_resources()
@@ -77,7 +77,7 @@ qubit_result = myOperation.estimate_resources()
 
 ### <a name="invoking-the-resources-estimator-from-the-command-line"></a><span data-ttu-id="ca541-121">從命令列叫用資源估算器</span><span class="sxs-lookup"><span data-stu-id="ca541-121">Invoking the resources estimator from the command line</span></span>
 
-<span data-ttu-id="ca541-122">:::no-loc(Q#):::從命令列執行程式時，請使用 **--** 模擬器 (或 **-s** 快速鍵) 參數來指定 `ResourcesEstimator` 目的電腦。</span><span class="sxs-lookup"><span data-stu-id="ca541-122">When running a :::no-loc(Q#)::: program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the `ResourcesEstimator` target machine.</span></span> <span data-ttu-id="ca541-123">下列命令會使用資源估算器來執行程式：</span><span class="sxs-lookup"><span data-stu-id="ca541-123">The following command runs a program using the resources estimator:</span></span> 
+<span data-ttu-id="ca541-122">Q#從命令列執行程式時，請使用 **--** 模擬器 (或 **-s** 快速鍵) 參數來指定 `ResourcesEstimator` 目的電腦。</span><span class="sxs-lookup"><span data-stu-id="ca541-122">When running a Q# program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the `ResourcesEstimator` target machine.</span></span> <span data-ttu-id="ca541-123">下列命令會使用資源估算器來執行程式：</span><span class="sxs-lookup"><span data-stu-id="ca541-123">The following command runs a program using the resources estimator:</span></span> 
 
 ```dotnetcli
 dotnet run -s ResourcesEstimator
@@ -85,7 +85,7 @@ dotnet run -s ResourcesEstimator
 
 ### <a name="invoking-the-resources-estimator-from-juptyer-notebooks"></a><span data-ttu-id="ca541-124">從 Juptyer 筆記本叫用資源估算器</span><span class="sxs-lookup"><span data-stu-id="ca541-124">Invoking the resources estimator from Juptyer Notebooks</span></span>
 
-<span data-ttu-id="ca541-125">使用 I :::no-loc(Q#)::: 魔術命令 [% 估計](xref:microsoft.quantum.iqsharp.magic-ref.simulate) 來執行此作業 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="ca541-125">Use the I:::no-loc(Q#)::: magic command [%estimate](xref:microsoft.quantum.iqsharp.magic-ref.simulate) to run the :::no-loc(Q#)::: operation.</span></span>
+<span data-ttu-id="ca541-125">使用 I Q# 魔術命令 [% 估計](xref:microsoft.quantum.iqsharp.magic-ref.simulate) 來執行此作業 Q# 。</span><span class="sxs-lookup"><span data-stu-id="ca541-125">Use the IQ# magic command [%estimate](xref:microsoft.quantum.iqsharp.magic-ref.simulate) to run the Q# operation.</span></span>
 
 ```
 %estimate myOperation
@@ -95,7 +95,7 @@ dotnet run -s ResourcesEstimator
 
 <span data-ttu-id="ca541-127">除了 TSV 資料表以外，您也可以透過程式設計方式，透過 [資源] 估算器的屬性，在執行期間取得估計的資源 `Data` 。</span><span class="sxs-lookup"><span data-stu-id="ca541-127">In addition to a TSV table, you can programmatically retrieve the resources estimated during the run via the `Data` property of the resources estimator.</span></span> <span data-ttu-id="ca541-128">`Data`屬性提供 `System.DataTable` 具有兩個數據行的實例： `Metric` 和 `Sum` ，由度量的名稱索引。</span><span class="sxs-lookup"><span data-stu-id="ca541-128">The `Data` property provides a `System.DataTable` instance with two columns: `Metric` and `Sum`, indexed by the metrics' names.</span></span>
 
-<span data-ttu-id="ca541-129">下列程式碼示範如何取出和列印工作所使用的總 `QubitClifford` 次數 `T` 和 `CNOT` 作業 :::no-loc(Q#)::: ：</span><span class="sxs-lookup"><span data-stu-id="ca541-129">The following code shows how to retrieve and print the total number of `QubitClifford`, `T` and `CNOT` operations used by a :::no-loc(Q#)::: operation:</span></span>
+<span data-ttu-id="ca541-129">下列程式碼示範如何取出和列印工作所使用的總 `QubitClifford` 次數 `T` 和 `CNOT` 作業 Q# ：</span><span class="sxs-lookup"><span data-stu-id="ca541-129">The following code shows how to retrieve and print the total number of `QubitClifford`, `T` and `CNOT` operations used by a Q# operation:</span></span>
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -130,10 +130,10 @@ namespace Quantum.MyProgram
 |<span data-ttu-id="ca541-138">__Measure__</span><span class="sxs-lookup"><span data-stu-id="ca541-138">__Measure__</span></span>    |<span data-ttu-id="ca541-139">任何測量的執行計數。</span><span class="sxs-lookup"><span data-stu-id="ca541-139">The run count of any measurements.</span></span>  |
 |<span data-ttu-id="ca541-140">__R__</span><span class="sxs-lookup"><span data-stu-id="ca541-140">__R__</span></span>    |<span data-ttu-id="ca541-141">任何單一量子位旋轉、排除 `T` 、Clifford 和 Pauli 作業的執行計數。</span><span class="sxs-lookup"><span data-stu-id="ca541-141">The run count of any single-qubit rotations, excluding `T`, Clifford and Pauli operations.</span></span>  |
 |<span data-ttu-id="ca541-142">__T__</span><span class="sxs-lookup"><span data-stu-id="ca541-142">__T__</span></span>    |<span data-ttu-id="ca541-143">作業的執行計數 `T` 和其 conjugates，包括 `T` 作業、T_x = .h 和 T_y = Hy Hy。</span><span class="sxs-lookup"><span data-stu-id="ca541-143">The run count of `T` operations and their conjugates, including the `T` operations, T_x = H.T.H, and T_y = Hy.T.Hy.</span></span>  |
-|<span data-ttu-id="ca541-144">__深度__</span><span class="sxs-lookup"><span data-stu-id="ca541-144">__Depth__</span></span>|<span data-ttu-id="ca541-145">作業所執行的量子線路深度 :::no-loc(Q#)::: (請參閱 [以下](#depth-width-and-qubitcount)) 。</span><span class="sxs-lookup"><span data-stu-id="ca541-145">Depth of the quantum circuit run by the :::no-loc(Q#)::: operation (see [below](#depth-width-and-qubitcount)).</span></span> <span data-ttu-id="ca541-146">根據預設，深度度量只會計算網 `T` 關。</span><span class="sxs-lookup"><span data-stu-id="ca541-146">By default, the depth metric only counts `T` gates.</span></span> <span data-ttu-id="ca541-147">如需詳細資訊，請參閱 [深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)。</span><span class="sxs-lookup"><span data-stu-id="ca541-147">For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).</span></span>   |
-|<span data-ttu-id="ca541-148">__寬度__</span><span class="sxs-lookup"><span data-stu-id="ca541-148">__Width__</span></span>|<span data-ttu-id="ca541-149">作業所執行的量子電路寬度 :::no-loc(Q#)::: (請參閱 [以下](#depth-width-and-qubitcount)) 。</span><span class="sxs-lookup"><span data-stu-id="ca541-149">Width of the quantum circuit run by the :::no-loc(Q#)::: operation (see [below](#depth-width-and-qubitcount)).</span></span> <span data-ttu-id="ca541-150">根據預設，深度度量只會計算網 `T` 關。</span><span class="sxs-lookup"><span data-stu-id="ca541-150">By default, the depth metric only counts `T` gates.</span></span> <span data-ttu-id="ca541-151">如需詳細資訊，請參閱 [深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)。</span><span class="sxs-lookup"><span data-stu-id="ca541-151">For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).</span></span>   |
-|<span data-ttu-id="ca541-152">__QubitCount__</span><span class="sxs-lookup"><span data-stu-id="ca541-152">__QubitCount__</span></span>    |<span data-ttu-id="ca541-153">作業執行期間所配置的最大量子位數目下限 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="ca541-153">The lower bound for the maximum number of qubits allocated during the run of the :::no-loc(Q#)::: operation.</span></span> <span data-ttu-id="ca541-154">此計量可能與 __深度__ (不相容，請參閱下面的) 。</span><span class="sxs-lookup"><span data-stu-id="ca541-154">This metric might not be compatible with __Depth__ (see below).</span></span>  |
-|<span data-ttu-id="ca541-155">__BorrowedWidth__</span><span class="sxs-lookup"><span data-stu-id="ca541-155">__BorrowedWidth__</span></span>    |<span data-ttu-id="ca541-156">在作業內借用的量子位數目上限 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="ca541-156">The maximum number of qubits borrowed inside the :::no-loc(Q#)::: operation.</span></span>  |
+|<span data-ttu-id="ca541-144">__深度__</span><span class="sxs-lookup"><span data-stu-id="ca541-144">__Depth__</span></span>|<span data-ttu-id="ca541-145">作業所執行的量子線路深度 Q# (請參閱 [以下](#depth-width-and-qubitcount)) 。</span><span class="sxs-lookup"><span data-stu-id="ca541-145">Depth of the quantum circuit run by the Q# operation (see [below](#depth-width-and-qubitcount)).</span></span> <span data-ttu-id="ca541-146">根據預設，深度度量只會計算網 `T` 關。</span><span class="sxs-lookup"><span data-stu-id="ca541-146">By default, the depth metric only counts `T` gates.</span></span> <span data-ttu-id="ca541-147">如需詳細資訊，請參閱 [深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)。</span><span class="sxs-lookup"><span data-stu-id="ca541-147">For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).</span></span>   |
+|<span data-ttu-id="ca541-148">__寬度__</span><span class="sxs-lookup"><span data-stu-id="ca541-148">__Width__</span></span>|<span data-ttu-id="ca541-149">作業所執行的量子電路寬度 Q# (請參閱 [以下](#depth-width-and-qubitcount)) 。</span><span class="sxs-lookup"><span data-stu-id="ca541-149">Width of the quantum circuit run by the Q# operation (see [below](#depth-width-and-qubitcount)).</span></span> <span data-ttu-id="ca541-150">根據預設，深度度量只會計算網 `T` 關。</span><span class="sxs-lookup"><span data-stu-id="ca541-150">By default, the depth metric only counts `T` gates.</span></span> <span data-ttu-id="ca541-151">如需詳細資訊，請參閱 [深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)。</span><span class="sxs-lookup"><span data-stu-id="ca541-151">For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).</span></span>   |
+|<span data-ttu-id="ca541-152">__QubitCount__</span><span class="sxs-lookup"><span data-stu-id="ca541-152">__QubitCount__</span></span>    |<span data-ttu-id="ca541-153">作業執行期間所配置的最大量子位數目下限 Q# 。</span><span class="sxs-lookup"><span data-stu-id="ca541-153">The lower bound for the maximum number of qubits allocated during the run of the Q# operation.</span></span> <span data-ttu-id="ca541-154">此計量可能與 __深度__ (不相容，請參閱下面的) 。</span><span class="sxs-lookup"><span data-stu-id="ca541-154">This metric might not be compatible with __Depth__ (see below).</span></span>  |
+|<span data-ttu-id="ca541-155">__BorrowedWidth__</span><span class="sxs-lookup"><span data-stu-id="ca541-155">__BorrowedWidth__</span></span>    |<span data-ttu-id="ca541-156">在作業內借用的量子位數目上限 Q# 。</span><span class="sxs-lookup"><span data-stu-id="ca541-156">The maximum number of qubits borrowed inside the Q# operation.</span></span>  |
 
 
 ## <a name="depth-width-and-qubitcount"></a><span data-ttu-id="ca541-157">深度、寬度和 QubitCount</span><span class="sxs-lookup"><span data-stu-id="ca541-157">Depth, Width, and QubitCount</span></span>

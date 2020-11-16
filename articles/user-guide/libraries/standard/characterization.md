@@ -7,8 +7,8 @@ ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -22,7 +22,7 @@ ms.locfileid: "92692156"
 <span data-ttu-id="05c38-105">這是一項挑戰，因為每次測量量子系統都會產生最多一項資訊。</span><span class="sxs-lookup"><span data-stu-id="05c38-105">This is challenging because every measurement of a quantum system yields at most one bit of information.</span></span>
 <span data-ttu-id="05c38-106">若要瞭解 eigenvalue，請單獨使用量子狀態，許多度量的結果都必須一起拼接，讓使用者可以搜集所需的許多資訊來代表這些概念。</span><span class="sxs-lookup"><span data-stu-id="05c38-106">In order to learn an eigenvalue, let alone a quantum state, the results of many measurements must be stitched together so that the user can glean the many bits of information needed to represent these concepts.</span></span>
 <span data-ttu-id="05c38-107">量子狀態尤其是繁瑣語法，因為 [沒有任何複製定理](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) 指出沒有任何方法可從單一狀態複本學習任意的量子狀態，因為這樣做可讓您建立狀態的複本。</span><span class="sxs-lookup"><span data-stu-id="05c38-107">Quantum states are especially vexing because the [no-cloning theorem](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) states that there is no way to learn an arbitrary quantum state from a single copy of the state, because doing so would let you make copies of the state.</span></span>
-<span data-ttu-id="05c38-108">這種從使用者開始的量子狀態模糊化會反映出來，而不會 :::no-loc(Q#)::: 公開或甚至定義狀態對量副程式 *is* 的影響。</span><span class="sxs-lookup"><span data-stu-id="05c38-108">This obfuscation of the quantum state from the user is reflected in the fact that :::no-loc(Q#)::: does not expose or even define what a state *is* to quantum programs.</span></span>
+<span data-ttu-id="05c38-108">這種從使用者開始的量子狀態模糊化會反映出來，而不會 Q# 公開或甚至定義狀態對量副程式 *is* 的影響。</span><span class="sxs-lookup"><span data-stu-id="05c38-108">This obfuscation of the quantum state from the user is reflected in the fact that Q# does not expose or even define what a state *is* to quantum programs.</span></span>
 <span data-ttu-id="05c38-109">因此，我們藉由將作業和狀態視為黑箱來處理量子特性;這種方法與量子特性、驗證和驗證 (QCVV) 的實驗實務很普遍。</span><span class="sxs-lookup"><span data-stu-id="05c38-109">We thus approach quantum characterization by treating operations and states as black-box; this approach shares much in common with the experimental practice of quantum characterization, verification and validation (QCVV).</span></span>
 
 <span data-ttu-id="05c38-110">特性與先前討論過的其他程式庫不同。</span><span class="sxs-lookup"><span data-stu-id="05c38-110">Characterization is distinct from many of the other libraries discussed previously.</span></span>
@@ -39,7 +39,7 @@ ms.locfileid: "92692156"
 <span data-ttu-id="05c38-118">以下建議的每個方法都會使用不同的策略來設計實驗，並使用不同的資料處理方法來學習該階段。</span><span class="sxs-lookup"><span data-stu-id="05c38-118">Each of the methods proposed below uses a different strategy for designing experiments and different data processing methods to learn the phase.</span></span>  <span data-ttu-id="05c38-119">它們各有獨特的優點，包括嚴格的錯誤界限、將先前資訊納入的能力、容許錯誤或在記憶體上執行 limitted 傳統電腦。</span><span class="sxs-lookup"><span data-stu-id="05c38-119">They each have unique advantage ranging from having rigorous error bounds, to the abilities to incorporate prior information, tolerate errors or run on memory limitted classical computers.</span></span>
 
 <span data-ttu-id="05c38-120">在討論反復的階段估計時，我們會考慮將單一的 $U $ 指定為黑色方塊的操作。</span><span class="sxs-lookup"><span data-stu-id="05c38-120">In discussing iterative phase estimation, we will consider a unitary $U$ given as a black-box operation.</span></span>
-<span data-ttu-id="05c38-121">如同 [資料結構](xref:microsoft.quantum.libraries.data-structures)中的 oracle 一節中所述， :::no-loc(Q#)::: canon 會依 <xref:Microsoft.Quantum.Oracles.DiscreteOracle> 使用者定義型別（由元組類型定義）來模型作業 `((Int, Qubit[]) => Unit : Adjoint, Controlled)` 。</span><span class="sxs-lookup"><span data-stu-id="05c38-121">As described in the section on oracles in [data structures](xref:microsoft.quantum.libraries.data-structures), the :::no-loc(Q#)::: canon models such operations by the <xref:Microsoft.Quantum.Oracles.DiscreteOracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.</span></span>
+<span data-ttu-id="05c38-121">如同 [資料結構](xref:microsoft.quantum.libraries.data-structures)中的 oracle 一節中所述， Q# canon 會依 <xref:Microsoft.Quantum.Oracles.DiscreteOracle> 使用者定義型別（由元組類型定義）來模型作業 `((Int, Qubit[]) => Unit : Adjoint, Controlled)` 。</span><span class="sxs-lookup"><span data-stu-id="05c38-121">As described in the section on oracles in [data structures](xref:microsoft.quantum.libraries.data-structures), the Q# canon models such operations by the <xref:Microsoft.Quantum.Oracles.DiscreteOracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.</span></span>
 <span data-ttu-id="05c38-122">具體而言，如果 `U : DiscreteOracle` ，則會 `U(m)` 為執行 $U ^ m $ `m : Int` 。</span><span class="sxs-lookup"><span data-stu-id="05c38-122">Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.</span></span>
 
 <span data-ttu-id="05c38-123">有了這項定義之後，反復階段估計的每個步驟都會藉由準備 $ \ket{+} $ 狀態的輔助量子位，以及我們 [假設)  ($U 的初始](xref:microsoft.quantum.concepts.matrix-advanced) 狀態 $ \ket{\phi} $ 來進行，亦即 $U (m) \ket{\phi} = e ^ {im\phi} \ ket {\ phi} $。</span><span class="sxs-lookup"><span data-stu-id="05c38-123">With this definition in place, each step of iterative phase estimation proceeds by preparing an auxiliary qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.</span></span>  
@@ -50,7 +50,7 @@ ms.locfileid: "92692156"
 
 <span data-ttu-id="05c38-128">此時， `Result` 透過反復階段估計所取得的值來重建階段是一個傳統的統計推斷問題。</span><span class="sxs-lookup"><span data-stu-id="05c38-128">At this point, reconstructing the phase from the `Result` values obtained through iterative phase estimation is a classical statistical inference problem.</span></span>
 <span data-ttu-id="05c38-129">在指定固定的推斷方法的情況下，尋找最大化所獲得資訊的 $m $ 值只是統計資料中的問題。</span><span class="sxs-lookup"><span data-stu-id="05c38-129">Finding the value of $m$ that maximizes the information gained, given a fixed inference method, is simply a problem in statistics.</span></span>
-<span data-ttu-id="05c38-130">我們強調這一點，方法是在貝氏參數估計形式的理論層級簡要描述反復的階段估計，然後再繼續描述 canon 中提供的統計演算法 :::no-loc(Q#)::: 來解決這個傳統推斷問題。</span><span class="sxs-lookup"><span data-stu-id="05c38-130">We emphasize this by briefly describing iterative phase estimation at a theoretical level in the Bayesian parameter estimation formalism before proceeding to describe the statistical algorithms provided in the :::no-loc(Q#)::: canon for solving this classical inference problem.</span></span>
+<span data-ttu-id="05c38-130">我們強調這一點，方法是在貝氏參數估計形式的理論層級簡要描述反復的階段估計，然後再繼續描述 canon 中提供的統計演算法 Q# 來解決這個傳統推斷問題。</span><span class="sxs-lookup"><span data-stu-id="05c38-130">We emphasize this by briefly describing iterative phase estimation at a theoretical level in the Bayesian parameter estimation formalism before proceeding to describe the statistical algorithms provided in the Q# canon for solving this classical inference problem.</span></span>
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a><span data-ttu-id="05c38-131">未 Eigenstates 的反復階段估計</span><span class="sxs-lookup"><span data-stu-id="05c38-131">Iterative Phase Estimation Without Eigenstates</span></span> ###
 
@@ -130,7 +130,7 @@ ms.locfileid: "92692156"
 
 ### <a name="random-walk-phase-estimation"></a><span data-ttu-id="05c38-195">隨機的逐步解說階段估計</span><span class="sxs-lookup"><span data-stu-id="05c38-195">Random Walk Phase Estimation</span></span> ###
 
-<span data-ttu-id="05c38-196">:::no-loc(Q#)::: 提供適用于貝氏階段估計的實用近似值，其設計目的是要透過針對從反復階段估計取得的資料記錄，進行隨機的逐步解說，以接近運作的量子裝置。</span><span class="sxs-lookup"><span data-stu-id="05c38-196">:::no-loc(Q#)::: provides a useful approximation of Bayesian phase estimation designed for use close to quantum devices that operates by conditioning a random walk on the data record obtained from iterative phase estimation.</span></span>
+<span data-ttu-id="05c38-196">Q# 提供適用于貝氏階段估計的實用近似值，其設計目的是要透過針對從反復階段估計取得的資料記錄，進行隨機的逐步解說，以接近運作的量子裝置。</span><span class="sxs-lookup"><span data-stu-id="05c38-196">Q# provides a useful approximation of Bayesian phase estimation designed for use close to quantum devices that operates by conditioning a random walk on the data record obtained from iterative phase estimation.</span></span>
 <span data-ttu-id="05c38-197">這個方法是可調整且完全具決定性的，可讓您在估計階段 $ \hat{\phi} $ 中，以極低的記憶體額外負荷來調整最接近最佳的錯誤。</span><span class="sxs-lookup"><span data-stu-id="05c38-197">This method is both adaptive and entirely deterministic, allowing for near-optimal scaling of errors in the estimated phase $\hat{\phi}$ with very low memory overheads.</span></span>
 
 <span data-ttu-id="05c38-198">此通訊協定會使用大約的貝氏推斷方法，假設先前的散發是高斯。</span><span class="sxs-lookup"><span data-stu-id="05c38-198">The protocol uses an approximate Bayesian inference method that assumes the prior distribution is Gaussian.</span></span>
@@ -144,7 +144,7 @@ ms.locfileid: "92692156"
 
 ## <a name="calling-phase-estimation-algorithms"></a><span data-ttu-id="05c38-206">呼叫階段估計演算法</span><span class="sxs-lookup"><span data-stu-id="05c38-206">Calling Phase Estimation Algorithms</span></span> ##
 
-<span data-ttu-id="05c38-207">Canon 所提供的每個階段估計作業都會 :::no-loc(Q#)::: 採用一組不同的輸入，將我們所要求的品質參數化為最終估計 $ \hat{\phi} $。</span><span class="sxs-lookup"><span data-stu-id="05c38-207">Each phase estimation operation provided with the :::no-loc(Q#)::: canon takes a different set of inputs parameterizing the quality that we demand out of the final estimate $\hat{\phi}$.</span></span>
+<span data-ttu-id="05c38-207">Canon 所提供的每個階段估計作業都會 Q# 採用一組不同的輸入，將我們所要求的品質參數化為最終估計 $ \hat{\phi} $。</span><span class="sxs-lookup"><span data-stu-id="05c38-207">Each phase estimation operation provided with the Q# canon takes a different set of inputs parameterizing the quality that we demand out of the final estimate $\hat{\phi}$.</span></span>
 <span data-ttu-id="05c38-208">不過，這些不同的輸入全都共用數個輸入，因此在品質參數上的部分應用程式會產生一般簽章。</span><span class="sxs-lookup"><span data-stu-id="05c38-208">These various inputs, however, all share several inputs in common, such that partial application over the quality parameters results in a common signature.</span></span>
 <span data-ttu-id="05c38-209">例如，下一 <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> 節中所討論的作業具有下列簽章：</span><span class="sxs-lookup"><span data-stu-id="05c38-209">For example, the <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> operation discussed in the next section has the following signature:</span></span>
 

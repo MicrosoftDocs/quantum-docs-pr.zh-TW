@@ -7,8 +7,8 @@ ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -24,7 +24,7 @@ ms.locfileid: "92690782"
 
 ## <a name="invoking-the-toffoli-simulator"></a><span data-ttu-id="c6ae5-109">叫用 Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="c6ae5-109">Invoking the Toffoli simulator</span></span>
 
-<span data-ttu-id="c6ae5-110">您可以透過類別公開 Toffoli 模擬器 `ToffoliSimulator` 。</span><span class="sxs-lookup"><span data-stu-id="c6ae5-110">You expose the Toffoli simulator via the `ToffoliSimulator` class.</span></span> <span data-ttu-id="c6ae5-111">如需其他詳細資訊，請參閱 [執行 :::no-loc(Q#)::: 程式的方法](xref:microsoft.quantum.guide.host-programs)。</span><span class="sxs-lookup"><span data-stu-id="c6ae5-111">For additional details, see [Ways to run a :::no-loc(Q#)::: program](xref:microsoft.quantum.guide.host-programs).</span></span>
+<span data-ttu-id="c6ae5-110">您可以透過類別公開 Toffoli 模擬器 `ToffoliSimulator` 。</span><span class="sxs-lookup"><span data-stu-id="c6ae5-110">You expose the Toffoli simulator via the `ToffoliSimulator` class.</span></span> <span data-ttu-id="c6ae5-111">如需其他詳細資訊，請參閱 [執行 Q# 程式的方法](xref:microsoft.quantum.guide.host-programs)。</span><span class="sxs-lookup"><span data-stu-id="c6ae5-111">For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a><span data-ttu-id="c6ae5-112">從 C 叫用 Toffoli 模擬器#</span><span class="sxs-lookup"><span data-stu-id="c6ae5-112">Invoking the Toffoli simulator from C#</span></span>
 
@@ -40,7 +40,7 @@ ms.locfileid: "92690782"
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a><span data-ttu-id="c6ae5-115">從 Python 叫用 Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="c6ae5-115">Invoking the Toffoli simulator from Python</span></span>
 
-<span data-ttu-id="c6ae5-116">使用匯入作業，從 Python 程式庫使用 [toffoli_simulate ( # B1 ](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) 方法 :::no-loc(Q#)::: ：</span><span class="sxs-lookup"><span data-stu-id="c6ae5-116">Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported :::no-loc(Q#)::: operation:</span></span>
+<span data-ttu-id="c6ae5-116">使用匯入作業，從 Python 程式庫使用 [toffoli_simulate ( # B1 ](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) 方法 Q# ：</span><span class="sxs-lookup"><span data-stu-id="c6ae5-116">Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:</span></span>
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -48,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a><span data-ttu-id="c6ae5-117">從命令列叫用 Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="c6ae5-117">Invoking the Toffoli simulator from the command line</span></span>
 
-<span data-ttu-id="c6ae5-118">:::no-loc(Q#):::從命令列執行程式時，請使用 **--** 模擬器 (或 **-s** 快速鍵) 參數來指定 Toffoli 模擬器目的電腦。</span><span class="sxs-lookup"><span data-stu-id="c6ae5-118">When running a :::no-loc(Q#)::: program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the Toffoli simulator target machine.</span></span> <span data-ttu-id="c6ae5-119">下列命令會使用資源估算器來執行程式：</span><span class="sxs-lookup"><span data-stu-id="c6ae5-119">The following command runs a program using the resources estimator:</span></span> 
+<span data-ttu-id="c6ae5-118">Q#從命令列執行程式時，請使用 **--** 模擬器 (或 **-s** 快速鍵) 參數來指定 Toffoli 模擬器目的電腦。</span><span class="sxs-lookup"><span data-stu-id="c6ae5-118">When running a Q# program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the Toffoli simulator target machine.</span></span> <span data-ttu-id="c6ae5-119">下列命令會使用資源估算器來執行程式：</span><span class="sxs-lookup"><span data-stu-id="c6ae5-119">The following command runs a program using the resources estimator:</span></span> 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -56,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a><span data-ttu-id="c6ae5-120">從 Juptyer 筆記本叫用 Toffoli 模擬器</span><span class="sxs-lookup"><span data-stu-id="c6ae5-120">Invoking the Toffoli simulator from Juptyer Notebooks</span></span>
 
-<span data-ttu-id="c6ae5-121">使用 I :::no-loc(Q#)::: 魔術命令 [% toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) 來執行 :::no-loc(Q#)::: 操作。</span><span class="sxs-lookup"><span data-stu-id="c6ae5-121">Use the I:::no-loc(Q#)::: magic command [%toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) to run the :::no-loc(Q#)::: operation.</span></span>
+<span data-ttu-id="c6ae5-121">使用 I Q# 魔術命令 [% toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) 來執行 Q# 操作。</span><span class="sxs-lookup"><span data-stu-id="c6ae5-121">Use the IQ# magic command [%toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) to run the Q# operation.</span></span>
 
 ```
 %toffoli myOperation

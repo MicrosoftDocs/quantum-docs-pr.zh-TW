@@ -7,8 +7,8 @@ ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 5505086c5efac89f6940cde1ecae2ce629cfeda5
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -19,33 +19,33 @@ ms.locfileid: "92690968"
 # <a name="testing-and-debugging"></a><span data-ttu-id="51afd-103">測試和偵錯</span><span class="sxs-lookup"><span data-stu-id="51afd-103">Testing and debugging</span></span>
 
 <span data-ttu-id="51afd-104">就像傳統程式設計一樣，必須能夠檢查量副程式是否正常運作，並且能夠診斷不正確的行為。</span><span class="sxs-lookup"><span data-stu-id="51afd-104">As with classical programming, it is essential to be able to check that quantum programs act as intended, and to be able to diagnose incorrect behavior.</span></span>
-<span data-ttu-id="51afd-105">在本節中，我們將討論 :::no-loc(Q#)::: 針對量副程式進行測試和偵測所提供的工具。</span><span class="sxs-lookup"><span data-stu-id="51afd-105">In this section, we cover the tools offered by :::no-loc(Q#)::: for testing and debugging quantum programs.</span></span>
+<span data-ttu-id="51afd-105">在本節中，我們將討論 Q# 針對量副程式進行測試和偵測所提供的工具。</span><span class="sxs-lookup"><span data-stu-id="51afd-105">In this section, we cover the tools offered by Q# for testing and debugging quantum programs.</span></span>
 
 ## <a name="unit-tests"></a><span data-ttu-id="51afd-106">單元測試</span><span class="sxs-lookup"><span data-stu-id="51afd-106">Unit Tests</span></span>
 
 <span data-ttu-id="51afd-107">測試傳統程式的其中一個常見方法是撰寫稱為 *單元測試* 的小程式，以在程式庫中執行程式碼，並將其輸出與某些預期輸出進行比較。</span><span class="sxs-lookup"><span data-stu-id="51afd-107">One common approach to testing classical programs is to write small programs called *unit tests* , which run code in a library and compare its output to some expected output.</span></span>
 <span data-ttu-id="51afd-108">例如，您可以確定 `Square(2)` `4` 因為您知道 $ 2 ^ 2 = $4 的 *先驗* ，所以會傳回。</span><span class="sxs-lookup"><span data-stu-id="51afd-108">For example, you can ensure that `Square(2)` returns `4` since you know *a priori* that $2^2 = 4$.</span></span>
 
-<span data-ttu-id="51afd-109">:::no-loc(Q#)::: 支援建立量副程式的單元測試，並可在 [xUnit](https://xunit.github.io/) 單元測試架構中以測試的形式執行。</span><span class="sxs-lookup"><span data-stu-id="51afd-109">:::no-loc(Q#)::: supports creating unit tests for quantum programs, and which can run as tests within the [xUnit](https://xunit.github.io/) unit testing framework.</span></span>
+<span data-ttu-id="51afd-109">Q# 支援建立量副程式的單元測試，並可在 [xUnit](https://xunit.github.io/) 單元測試架構中以測試的形式執行。</span><span class="sxs-lookup"><span data-stu-id="51afd-109">Q# supports creating unit tests for quantum programs, and which can run as tests within the [xUnit](https://xunit.github.io/) unit testing framework.</span></span>
 
 ### <a name="creating-a-test-project"></a><span data-ttu-id="51afd-110">建立測試專案</span><span class="sxs-lookup"><span data-stu-id="51afd-110">Creating a Test Project</span></span>
 
 #### <a name="visual-studio-2019"></a>[<span data-ttu-id="51afd-111">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="51afd-111">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
-<span data-ttu-id="51afd-112">開啟 Visual Studio 2019。</span><span class="sxs-lookup"><span data-stu-id="51afd-112">Open Visual Studio 2019.</span></span> <span data-ttu-id="51afd-113">移 **至 [檔案** ] 功能表，然後選取 [ **新增 > 專案** ...]。在右上角，搜尋 `:::no-loc(Q#):::` 並選取 [ **:::no-loc(Q#)::: 測試專案** ] 範本。</span><span class="sxs-lookup"><span data-stu-id="51afd-113">Go to the **File** menu and select **New > Project...** . In the upper right corner, search for `:::no-loc(Q#):::`, and select the **:::no-loc(Q#)::: Test Project** template.</span></span>
+<span data-ttu-id="51afd-112">開啟 Visual Studio 2019。</span><span class="sxs-lookup"><span data-stu-id="51afd-112">Open Visual Studio 2019.</span></span> <span data-ttu-id="51afd-113">移 **至 [檔案** ] 功能表，然後選取 [ **新增 > 專案** ...]。在右上角，搜尋 `Q#` 並選取 [ **Q# 測試專案** ] 範本。</span><span class="sxs-lookup"><span data-stu-id="51afd-113">Go to the **File** menu and select **New > Project...** . In the upper right corner, search for `Q#`, and select the **Q# Test Project** template.</span></span>
 
 #### <a name="command-line--visual-studio-code"></a>[<span data-ttu-id="51afd-114">命令列/Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="51afd-114">Command Line / Visual Studio Code</span></span>](#tab/tabid-vscode)
 
 <span data-ttu-id="51afd-115">從您最愛的命令列執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="51afd-115">From your favorite command line, run the following command:</span></span>
 ```dotnetcli
-$ dotnet new xunit -lang :::no-loc(Q#)::: -o Tests
+$ dotnet new xunit -lang Q# -o Tests
 $ cd Tests
 $ code . # To open in Visual Studio Code
 ```
 
 ****
 
-<span data-ttu-id="51afd-116">您的新專案有一個單一檔案 `Tests.qs` ，它提供了一個方便的位置來定義新的 :::no-loc(Q#)::: 單元測試。</span><span class="sxs-lookup"><span data-stu-id="51afd-116">Your new project has a single file `Tests.qs`, which provides a convenient place to define new :::no-loc(Q#)::: unit tests.</span></span>
+<span data-ttu-id="51afd-116">您的新專案有一個單一檔案 `Tests.qs` ，它提供了一個方便的位置來定義新的 Q# 單元測試。</span><span class="sxs-lookup"><span data-stu-id="51afd-116">Your new project has a single file `Tests.qs`, which provides a convenient place to define new Q# unit tests.</span></span>
 <span data-ttu-id="51afd-117">一開始，這個檔案包含一個範例單元測試， `AllocateQubit` 它會檢查新配置的量子位是否處於 $ \ket {0} $ 狀態並列印訊息：</span><span class="sxs-lookup"><span data-stu-id="51afd-117">Initially, this file contains one sample unit test `AllocateQubit` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:</span></span>
 
 ```qsharp
@@ -60,7 +60,7 @@ $ code . # To open in Visual Studio Code
     }
 ```
 
-<span data-ttu-id="51afd-118">任何 :::no-loc(Q#)::: 採用型別和傳回之引數的作業或函數，都 `Unit` `Unit` 可以透過屬性標示為單元測試 `@Test("...")` 。</span><span class="sxs-lookup"><span data-stu-id="51afd-118">Any :::no-loc(Q#)::: operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute.</span></span> <span data-ttu-id="51afd-119">在上述範例中，該屬性的引數會 `"QuantumSimulator"` 指定測試執行的目標。</span><span class="sxs-lookup"><span data-stu-id="51afd-119">In the previous example, the argument to that attribute, `"QuantumSimulator"`, specifies the target on which the test runs.</span></span> <span data-ttu-id="51afd-120">單一測試可以在多個目標上執行。</span><span class="sxs-lookup"><span data-stu-id="51afd-120">A single test can run on multiple targets.</span></span> <span data-ttu-id="51afd-121">例如，在之前加入屬性 `@Test("ResourcesEstimator")` `AllocateQubit` 。</span><span class="sxs-lookup"><span data-stu-id="51afd-121">For example, add an attribute `@Test("ResourcesEstimator")` before `AllocateQubit`.</span></span> 
+<span data-ttu-id="51afd-118">任何 Q# 採用型別和傳回之引數的作業或函數，都 `Unit` `Unit` 可以透過屬性標示為單元測試 `@Test("...")` 。</span><span class="sxs-lookup"><span data-stu-id="51afd-118">Any Q# operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute.</span></span> <span data-ttu-id="51afd-119">在上述範例中，該屬性的引數會 `"QuantumSimulator"` 指定測試執行的目標。</span><span class="sxs-lookup"><span data-stu-id="51afd-119">In the previous example, the argument to that attribute, `"QuantumSimulator"`, specifies the target on which the test runs.</span></span> <span data-ttu-id="51afd-120">單一測試可以在多個目標上執行。</span><span class="sxs-lookup"><span data-stu-id="51afd-120">A single test can run on multiple targets.</span></span> <span data-ttu-id="51afd-121">例如，在之前加入屬性 `@Test("ResourcesEstimator")` `AllocateQubit` 。</span><span class="sxs-lookup"><span data-stu-id="51afd-121">For example, add an attribute `@Test("ResourcesEstimator")` before `AllocateQubit`.</span></span> 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
@@ -69,9 +69,9 @@ $ code . # To open in Visual Studio Code
 ```
 <span data-ttu-id="51afd-122">儲存檔案並執行所有測試。</span><span class="sxs-lookup"><span data-stu-id="51afd-122">Save the file and run all tests.</span></span> <span data-ttu-id="51afd-123">現在應該會有兩個單元測試，一個在 `AllocateQubit` 上執行 `QuantumSimulator` ，另一個在上執行 `ResourcesEstimator` 。</span><span class="sxs-lookup"><span data-stu-id="51afd-123">There should now be two unit tests, one where `AllocateQubit` runs on the `QuantumSimulator`, and one where it runs in the `ResourcesEstimator`.</span></span> 
 
-<span data-ttu-id="51afd-124">編譯器會將 :::no-loc(Q#)::: 內建目標 `"QuantumSimulator"` 、 `"ToffoliSimulator"` 和 `"ResourcesEstimator"` 視為單元測試的有效執行目標。</span><span class="sxs-lookup"><span data-stu-id="51afd-124">The :::no-loc(Q#)::: compiler recognizes the built-in targets `"QuantumSimulator"`, `"ToffoliSimulator"`, and `"ResourcesEstimator"` as valid run targets for unit tests.</span></span> <span data-ttu-id="51afd-125">您也可以指定任何完整名稱來定義自訂的執行目標。</span><span class="sxs-lookup"><span data-stu-id="51afd-125">It is also possible to specify any fully qualified name to define a custom run target.</span></span> 
+<span data-ttu-id="51afd-124">編譯器會將 Q# 內建目標 `"QuantumSimulator"` 、 `"ToffoliSimulator"` 和 `"ResourcesEstimator"` 視為單元測試的有效執行目標。</span><span class="sxs-lookup"><span data-stu-id="51afd-124">The Q# compiler recognizes the built-in targets `"QuantumSimulator"`, `"ToffoliSimulator"`, and `"ResourcesEstimator"` as valid run targets for unit tests.</span></span> <span data-ttu-id="51afd-125">您也可以指定任何完整名稱來定義自訂的執行目標。</span><span class="sxs-lookup"><span data-stu-id="51afd-125">It is also possible to specify any fully qualified name to define a custom run target.</span></span> 
 
-### <a name="running-no-locq-unit-tests"></a><span data-ttu-id="51afd-126">執行 :::no-loc(Q#)::: 單元測試</span><span class="sxs-lookup"><span data-stu-id="51afd-126">Running :::no-loc(Q#)::: Unit Tests</span></span>
+### <a name="running-no-locq-unit-tests"></a><span data-ttu-id="51afd-126">執行 Q# 單元測試</span><span class="sxs-lookup"><span data-stu-id="51afd-126">Running Q# Unit Tests</span></span>
 
 #### <a name="visual-studio-2019"></a>[<span data-ttu-id="51afd-127">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="51afd-127">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
@@ -140,9 +140,9 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ## <a name="facts-and-assertions"></a><span data-ttu-id="51afd-148">事實和判斷提示</span><span class="sxs-lookup"><span data-stu-id="51afd-148">Facts and Assertions</span></span>
 
-<span data-ttu-id="51afd-149">因為中的函式沒有 :::no-loc(Q#)::: _邏輯_ 副作用，所以您永遠不會在程式中觀察到 :::no-loc(Q#)::: 任何其他類型的效果，從執行其輸出類型為空元組的函式 `()` 。</span><span class="sxs-lookup"><span data-stu-id="51afd-149">Because functions in :::no-loc(Q#)::: have no _logical_ side effects, you can never observe, from within a :::no-loc(Q#)::: program, any other kinds of effects from running a function whose output type is the empty tuple `()`.</span></span>
-<span data-ttu-id="51afd-150">也就是說，目的電腦可以選擇不執行任何會傳回的函式，以 `()` 保證此省略不會修改任何下列程式碼的行為 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="51afd-150">That is, a target machine can choose not to run any function which returns `()` with the guarantee that this omission will not modify the behavior of any following :::no-loc(Q#)::: code.</span></span>
-<span data-ttu-id="51afd-151">此行為可讓函式傳回 `()` (，例如 `Unit`) 將判斷提示和偵測邏輯內嵌到程式中的有用工具 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="51afd-151">This behavior makes functions returning `()` (such as `Unit`) a useful tool for embedding assertions and debugging logic into :::no-loc(Q#)::: programs.</span></span> 
+<span data-ttu-id="51afd-149">因為中的函式沒有 Q# _邏輯_ 副作用，所以您永遠不會在程式中觀察到 Q# 任何其他類型的效果，從執行其輸出類型為空元組的函式 `()` 。</span><span class="sxs-lookup"><span data-stu-id="51afd-149">Because functions in Q# have no _logical_ side effects, you can never observe, from within a Q# program, any other kinds of effects from running a function whose output type is the empty tuple `()`.</span></span>
+<span data-ttu-id="51afd-150">也就是說，目的電腦可以選擇不執行任何會傳回的函式，以 `()` 保證此省略不會修改任何下列程式碼的行為 Q# 。</span><span class="sxs-lookup"><span data-stu-id="51afd-150">That is, a target machine can choose not to run any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.</span></span>
+<span data-ttu-id="51afd-151">此行為可讓函式傳回 `()` (，例如 `Unit`) 將判斷提示和偵測邏輯內嵌到程式中的有用工具 Q# 。</span><span class="sxs-lookup"><span data-stu-id="51afd-151">This behavior makes functions returning `()` (such as `Unit`) a useful tool for embedding assertions and debugging logic into Q# programs.</span></span> 
 
 <span data-ttu-id="51afd-152">讓我們來看一個簡單的範例：</span><span class="sxs-lookup"><span data-stu-id="51afd-152">Let's consider a simple example:</span></span>
 
@@ -156,8 +156,8 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-<span data-ttu-id="51afd-153">在這裡，關鍵字 `fail` 表示計算不應繼續，並且會在執行程式的目的電腦上引發例外狀況 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="51afd-153">Here, the keyword `fail` indicates that the computation should not proceed, and raises an exception in the target machine running the :::no-loc(Q#)::: program.</span></span>
-<span data-ttu-id="51afd-154">根據定義，無法從內觀察到這類失敗 :::no-loc(Q#)::: ，因為目的電腦在到達語句之後就不再執行程式 :::no-loc(Q#)::: 代碼 `fail` 。</span><span class="sxs-lookup"><span data-stu-id="51afd-154">By definition, a failure of this kind cannot be observed from within :::no-loc(Q#):::, as the target machine no longer runs the :::no-loc(Q#)::: code after reaching a `fail` statement.</span></span>
+<span data-ttu-id="51afd-153">在這裡，關鍵字 `fail` 表示計算不應繼續，並且會在執行程式的目的電腦上引發例外狀況 Q# 。</span><span class="sxs-lookup"><span data-stu-id="51afd-153">Here, the keyword `fail` indicates that the computation should not proceed, and raises an exception in the target machine running the Q# program.</span></span>
+<span data-ttu-id="51afd-154">根據定義，無法從內觀察到這類失敗 Q# ，因為目的電腦在到達語句之後就不再執行程式 Q# 代碼 `fail` 。</span><span class="sxs-lookup"><span data-stu-id="51afd-154">By definition, a failure of this kind cannot be observed from within Q#, as the target machine no longer runs the Q# code after reaching a `fail` statement.</span></span>
 <span data-ttu-id="51afd-155">因此，如果我們繼續進行呼叫 `PositivityFact` ，我們可以確保其輸入是正面的。</span><span class="sxs-lookup"><span data-stu-id="51afd-155">Thus, if we proceed past a call to `PositivityFact`, we can be assured that its input was positive.</span></span>
 
 <span data-ttu-id="51afd-156">請注意，我們可以 `PositivityFact` 使用 [`Fact`](xref:Microsoft.Quantum.Diagnostics.fact) 命名空間中的函式來執行相同的行為 <xref:Microsoft.Quantum.Diagnostics> ：</span><span class="sxs-lookup"><span data-stu-id="51afd-156">Note that we can implement the same behavior as `PositivityFact` using the [`Fact`](xref:Microsoft.Quantum.Diagnostics.fact) function from the <xref:Microsoft.Quantum.Diagnostics> namespace:</span></span>
@@ -189,7 +189,7 @@ using (register = Qubit())
 {
     H(register);
     AssertMeasurement([PauliX], [register], Zero);
-    // Even though we do not have access to states in :::no-loc(Q#):::,
+    // Even though we do not have access to states in Q#,
     // we know by the anthropic principle that the state
     // of register at this point is |+〉.
 }
@@ -357,7 +357,7 @@ namespace Samples {
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-<span data-ttu-id="51afd-208">下列範例會示範如何 <xref:Microsoft.Quantum.Diagnostics.DumpRegister> <xref:Microsoft.Quantum.Diagnostics.DumpMachine> 在程式碼中使用和 :::no-loc(Q#)::: ：</span><span class="sxs-lookup"><span data-stu-id="51afd-208">The following example shows you how you can use both <xref:Microsoft.Quantum.Diagnostics.DumpRegister> and <xref:Microsoft.Quantum.Diagnostics.DumpMachine> in your :::no-loc(Q#)::: code:</span></span>
+<span data-ttu-id="51afd-208">下列範例會示範如何 <xref:Microsoft.Quantum.Diagnostics.DumpRegister> <xref:Microsoft.Quantum.Diagnostics.DumpMachine> 在程式碼中使用和 Q# ：</span><span class="sxs-lookup"><span data-stu-id="51afd-208">The following example shows you how you can use both <xref:Microsoft.Quantum.Diagnostics.DumpRegister> and <xref:Microsoft.Quantum.Diagnostics.DumpMachine> in your Q# code:</span></span>
 
 ```qsharp
 namespace app
@@ -384,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a><span data-ttu-id="51afd-209">偵錯</span><span class="sxs-lookup"><span data-stu-id="51afd-209">Debugging</span></span>
 
-<span data-ttu-id="51afd-210">在和函 `Assert` 式 `Dump` 和作業之上， :::no-loc(Q#)::: 支援標準 Visual Studio 偵錯工具功能的子集： [設定行中斷點](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [使用 F10 逐步執行程式碼](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)，以及在模擬器上執行您的程式碼時，可以 [檢查傳統變數的值](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) 。</span><span class="sxs-lookup"><span data-stu-id="51afd-210">On top of `Assert` and `Dump` functions and operations, :::no-loc(Q#)::: supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible when running your code on the simulator.</span></span>
+<span data-ttu-id="51afd-210">在和函 `Assert` 式 `Dump` 和作業之上， Q# 支援標準 Visual Studio 偵錯工具功能的子集： [設定行中斷點](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [使用 F10 逐步執行程式碼](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)，以及在模擬器上執行您的程式碼時，可以 [檢查傳統變數的值](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) 。</span><span class="sxs-lookup"><span data-stu-id="51afd-210">On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible when running your code on the simulator.</span></span>
 
 <span data-ttu-id="51afd-211">在 Visual Studio Code 中的偵錯工具會利用 c # 針對 OmniSharp 所支援的 Visual Studio Code 擴充功能所提供的偵錯工具，且需要安裝 [最新版本](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。</span><span class="sxs-lookup"><span data-stu-id="51afd-211">Debugging in Visual Studio Code leverages the debugging capabilities provided by the C# for Visual Studio Code extension powered by OmniSharp and requires installing the [latest version](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).</span></span> 

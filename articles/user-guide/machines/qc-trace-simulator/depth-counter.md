@@ -1,14 +1,14 @@
 ---
 title: 深度計數器-量子開發工具組
-description: '深入瞭解 Microsoft QDK depth 計數器，它會使用量子追蹤模擬器來收集程式中所叫用的每個作業的深度計數 :::no-loc(Q#)::: 。'
+description: '深入瞭解 Microsoft QDK depth 計數器，它會使用量子追蹤模擬器來收集程式中所叫用的每個作業的深度計數 Q# 。'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -39,7 +39,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-depth-counter-in-a-c-host-program"></a><span data-ttu-id="e6bc6-114">使用 c # 主機程式中的深度計數器</span><span class="sxs-lookup"><span data-stu-id="e6bc6-114">Using the depth counter in a C# host program</span></span>
 
-<span data-ttu-id="e6bc6-115">本節後面的 c # 範例會 `T` `CCNOT` 根據下列範例程式碼來計算作業的深度 :::no-loc(Q#)::: ：</span><span class="sxs-lookup"><span data-stu-id="e6bc6-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="e6bc6-115">本節後面的 c # 範例會 `T` `CCNOT` 根據下列範例程式碼來計算作業的深度 Q# ：</span><span class="sxs-lookup"><span data-stu-id="e6bc6-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

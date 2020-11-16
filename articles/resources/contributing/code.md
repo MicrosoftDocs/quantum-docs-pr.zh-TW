@@ -7,8 +7,8 @@ ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -31,10 +31,10 @@ ms.locfileid: "92691795"
 
 ### <a name="unit-tests"></a><span data-ttu-id="93cd8-111">單元測試</span><span class="sxs-lookup"><span data-stu-id="93cd8-111">Unit Tests</span></span>
 
-<span data-ttu-id="93cd8-112">:::no-loc(Q#):::組成程式庫（例如 canon）的函式、作業和使用者定義類型，會在 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)儲存機制的開發過程中自動進行測試。</span><span class="sxs-lookup"><span data-stu-id="93cd8-112">The :::no-loc(Q#)::: functions, operations, and user-defined types that make up libraries such as the canon are automatically tested as a part of development on the [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) repository.</span></span>
+<span data-ttu-id="93cd8-112">Q#組成程式庫（例如 canon）的函式、作業和使用者定義類型，會在 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)儲存機制的開發過程中自動進行測試。</span><span class="sxs-lookup"><span data-stu-id="93cd8-112">The Q# functions, operations, and user-defined types that make up libraries such as the canon are automatically tested as a part of development on the [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) repository.</span></span>
 <span data-ttu-id="93cd8-113">比方說，當新的提取要求開啟時，我們的 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) 設定會確認提取要求中的變更不會中斷任何與量副程式設計社區相依的現有功能。</span><span class="sxs-lookup"><span data-stu-id="93cd8-113">When a new pull request is opened, for instance, our [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) configuration will check that the changes in the pull request do not break any existing functionality that the quantum programming community depends on.</span></span>
 
-<span data-ttu-id="93cd8-114">使用最新 :::no-loc(Q#)::: 版本，單元測試是使用屬性來定義 `@Test("QuantumSimulator")` 。</span><span class="sxs-lookup"><span data-stu-id="93cd8-114">With the latest :::no-loc(Q#)::: version, unit tests are defined using the `@Test("QuantumSimulator")` attribute.</span></span> <span data-ttu-id="93cd8-115">引數可以是 "QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator" 或任何指定執行目標的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="93cd8-115">The argument may be either "QuantumSimulator", "ToffoliSimulator", "TraceSimulator", or any fully qualified name specifying the run target.</span></span> <span data-ttu-id="93cd8-116">有幾個屬性定義不同的執行目標可以附加到相同的可呼叫。</span><span class="sxs-lookup"><span data-stu-id="93cd8-116">Several attributes defining different run targets may be attached to the same callable.</span></span> <span data-ttu-id="93cd8-117">有些測試仍使用已被取代的 [Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) 套件，此封裝會公開所有 :::no-loc(Q#)::: `Test` 以 [Xunit](https://xunit.github.io/) framework 結尾的函式和作業。</span><span class="sxs-lookup"><span data-stu-id="93cd8-117">Some of our tests still use the deprecated [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) package that exposes all :::no-loc(Q#)::: functions and operations ending in `Test` to the [xUnit](https://xunit.github.io/) framework.</span></span> <span data-ttu-id="93cd8-118">您不再需要此套件來定義單元測試。</span><span class="sxs-lookup"><span data-stu-id="93cd8-118">This package is no longer needed for defining unit tests.</span></span> 
+<span data-ttu-id="93cd8-114">使用最新 Q# 版本，單元測試是使用屬性來定義 `@Test("QuantumSimulator")` 。</span><span class="sxs-lookup"><span data-stu-id="93cd8-114">With the latest Q# version, unit tests are defined using the `@Test("QuantumSimulator")` attribute.</span></span> <span data-ttu-id="93cd8-115">引數可以是 "QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator" 或任何指定執行目標的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="93cd8-115">The argument may be either "QuantumSimulator", "ToffoliSimulator", "TraceSimulator", or any fully qualified name specifying the run target.</span></span> <span data-ttu-id="93cd8-116">有幾個屬性定義不同的執行目標可以附加到相同的可呼叫。</span><span class="sxs-lookup"><span data-stu-id="93cd8-116">Several attributes defining different run targets may be attached to the same callable.</span></span> <span data-ttu-id="93cd8-117">有些測試仍使用已被取代的 [Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) 套件，此封裝會公開所有 Q# `Test` 以 [Xunit](https://xunit.github.io/) framework 結尾的函式和作業。</span><span class="sxs-lookup"><span data-stu-id="93cd8-117">Some of our tests still use the deprecated [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) package that exposes all Q# functions and operations ending in `Test` to the [xUnit](https://xunit.github.io/) framework.</span></span> <span data-ttu-id="93cd8-118">您不再需要此套件來定義單元測試。</span><span class="sxs-lookup"><span data-stu-id="93cd8-118">This package is no longer needed for defining unit tests.</span></span> 
 
 <span data-ttu-id="93cd8-119">下列函式是用來確保和函 <xref:Microsoft.Quantum.Canon.Fst> 式 <xref:Microsoft.Quantum.Canon.Snd> 都在代表性範例中傳回正確的輸出。</span><span class="sxs-lookup"><span data-stu-id="93cd8-119">The following function is used to ensure that the <xref:Microsoft.Quantum.Canon.Fst> and <xref:Microsoft.Quantum.Canon.Snd> functions both return the right outputs in a representative example.</span></span>
 <span data-ttu-id="93cd8-120">如果或的輸出 `Fst` `Snd` 不正確， `fail` 語句會用來導致測試失敗。</span><span class="sxs-lookup"><span data-stu-id="93cd8-120">If the output of `Fst` or `Snd` is incorrect, the `fail` statement is used to cause the test to fail.</span></span>
@@ -59,7 +59,7 @@ function PairTest () : Unit {
 <span data-ttu-id="93cd8-121">您可以使用標準程式庫指南的 [測試一節](xref:microsoft.quantum.libraries.diagnostics) 中的技巧來檢查更複雜的條件。</span><span class="sxs-lookup"><span data-stu-id="93cd8-121">More complicated conditions can be checked using the techniques in the [testing section](xref:microsoft.quantum.libraries.diagnostics) of the standard libraries guide.</span></span>
 <span data-ttu-id="93cd8-122">例如，下列測試會檢查所呼叫的是否與 `H(q); X(q); H(q);` <xref:Microsoft.Quantum.Canon.ApplyWith> 相同 `Z(q)` 。</span><span class="sxs-lookup"><span data-stu-id="93cd8-122">For instance, the following test checks that `H(q); X(q); H(q);` as called by <xref:Microsoft.Quantum.Canon.ApplyWith> does the same thing as `Z(q)`.</span></span>
 
-```:::no-loc(Q#):::
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -99,7 +99,7 @@ operation TestApplyWith() : Unit {
 <span data-ttu-id="93cd8-139">這可以是另一種將功能發行為協力廠商程式庫的情況，這種情況可能很合理。</span><span class="sxs-lookup"><span data-stu-id="93cd8-139">This can be another case where releasing a feature as a third-party library can make a lot of sense.</span></span>
 <span data-ttu-id="93cd8-140">另外，我們可能會要求您提供修改功能的協助，使其更符合我們的藍圖，讓我們可以執行最適合的工作。</span><span class="sxs-lookup"><span data-stu-id="93cd8-140">Alternatively, we may ask for your help in modifying a feature to better fit into our roadmap so that we can do the best work we can with it.</span></span>
 
-<span data-ttu-id="93cd8-141">如果提取要求需要更多檔或單元測試以協助我們使用它，或如果它的樣式與其他程式庫的樣式有所差異，讓 :::no-loc(Q#)::: 使用者更難找到您的功能，我們也會要求您變更提取要求。</span><span class="sxs-lookup"><span data-stu-id="93cd8-141">We'll also ask for changes to a pull request if it requires more documentation or unit tests to help us make use of it, or if it differs enough in style from the rest of the :::no-loc(Q#)::: libraries that it will make it harder for users to find your feature.</span></span>
+<span data-ttu-id="93cd8-141">如果提取要求需要更多檔或單元測試以協助我們使用它，或如果它的樣式與其他程式庫的樣式有所差異，讓 Q# 使用者更難找到您的功能，我們也會要求您變更提取要求。</span><span class="sxs-lookup"><span data-stu-id="93cd8-141">We'll also ask for changes to a pull request if it requires more documentation or unit tests to help us make use of it, or if it differs enough in style from the rest of the Q# libraries that it will make it harder for users to find your feature.</span></span>
 <span data-ttu-id="93cd8-142">在這些情況下，我們會嘗試在程式碼評論中提供一些建議，讓您可以新增或變更專案，讓我們更輕鬆地納入您的貢獻。</span><span class="sxs-lookup"><span data-stu-id="93cd8-142">In these cases, we'll try to offer some advice in code reviews about what can be added or changed to make your contribution easier for us to include.</span></span>
 
 <span data-ttu-id="93cd8-143">最後，我們無法接受導致量子運算群體的投稿，如 [Microsoft 開放原始碼](https://opensource.microsoft.com/codeofconduct/)管理辦法所述。</span><span class="sxs-lookup"><span data-stu-id="93cd8-143">Finally, we cannot accept contributions that cause harm the quantum computing community, as outlined in the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).</span></span>
@@ -109,10 +109,10 @@ operation TestApplyWith() : Unit {
 ## <a name="next-steps"></a><span data-ttu-id="93cd8-146">後續步驟</span><span class="sxs-lookup"><span data-stu-id="93cd8-146">Next steps</span></span>
 
 <span data-ttu-id="93cd8-147">感謝您協助讓量子開發工具組成為整個量副程式設計團體的絕佳資源！</span><span class="sxs-lookup"><span data-stu-id="93cd8-147">Thanks for helping to make the Quantum Development Kit a great resource for the entire quantum programming community!</span></span>
-<span data-ttu-id="93cd8-148">若要深入瞭解，請繼續進行下列樣式指南 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="93cd8-148">To learn more, please continue with the following guide on :::no-loc(Q#)::: style.</span></span>
+<span data-ttu-id="93cd8-148">若要深入瞭解，請繼續進行下列樣式指南 Q# 。</span><span class="sxs-lookup"><span data-stu-id="93cd8-148">To learn more, please continue with the following guide on Q# style.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="93cd8-149">瞭解 :::no-loc(Q#)::: 樣式指導方針</span><span class="sxs-lookup"><span data-stu-id="93cd8-149">Learn about :::no-loc(Q#)::: style guidelines</span></span>](xref:microsoft.quantum.contributing.style)
+> [<span data-ttu-id="93cd8-149">瞭解 Q# 樣式指導方針</span><span class="sxs-lookup"><span data-stu-id="93cd8-149">Learn about Q# style guidelines</span></span>](xref:microsoft.quantum.contributing.style)
 
 <span data-ttu-id="93cd8-150">視您所參與的程式碼類型而定，可能會有其他事項要記住，這可協助您讓您的投稿更適合您的小組。</span><span class="sxs-lookup"><span data-stu-id="93cd8-150">Depending on what kind of code you're contributing, there may be additional things to keep in mind that can help you make your contribution do as much good for the community as possible.</span></span>
 

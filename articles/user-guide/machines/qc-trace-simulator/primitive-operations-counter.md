@@ -1,14 +1,14 @@
 ---
 title: 基本操作計數器-量子開發工具組
-description: '深入瞭解 Microsoft QDK 基本作業計數器，它會使用量子追蹤模擬器來追蹤程式中作業所使用的基本進程 :::no-loc(Q#)::: 。'
+description: '深入瞭解 Microsoft QDK 基本作業計數器，它會使用量子追蹤模擬器來追蹤程式中作業所使用的基本進程 Q# 。'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a><span data-ttu-id="093d1-110">使用 c # 主機程式中的基本操作計數器</span><span class="sxs-lookup"><span data-stu-id="093d1-110">Using the primitive operation counter in a C# host program</span></span>
 
-<span data-ttu-id="093d1-111">本節中的 c # 範例 <xref:Microsoft.Quantum.Intrinsic.T> 會 <xref:Microsoft.Quantum.Intrinsic.ccnot> 根據下列範例程式碼，計算執行作業所需的作業數目 :::no-loc(Q#)::: ：</span><span class="sxs-lookup"><span data-stu-id="093d1-111">The C# example that follows in this section counts how many <xref:Microsoft.Quantum.Intrinsic.T> operations are needed to implement the <xref:Microsoft.Quantum.Intrinsic.ccnot> operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="093d1-111">本節中的 c # 範例 <xref:Microsoft.Quantum.Intrinsic.T> 會 <xref:Microsoft.Quantum.Intrinsic.ccnot> 根據下列範例程式碼，計算執行作業所需的作業數目 Q# ：</span><span class="sxs-lookup"><span data-stu-id="093d1-111">The C# example that follows in this section counts how many <xref:Microsoft.Quantum.Intrinsic.T> operations are needed to implement the <xref:Microsoft.Quantum.Intrinsic.ccnot> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

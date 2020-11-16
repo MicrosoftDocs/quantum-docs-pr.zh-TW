@@ -1,14 +1,14 @@
 ---
-title: '中的運算式 :::no-loc(Q#):::'
-description: '瞭解如何在中指定、參考和合併常數、變數、運算子、作業和函數 :::no-loc(Q#)::: 。'
+title: '中的運算式 Q#'
+description: '瞭解如何在中指定、參考和合併常數、變數、運算子、作業和函數 Q# 。'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,17 +16,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691598"
 ---
-# <a name="expressions-in-no-locq"></a><span data-ttu-id="9ff9f-103">中的運算式 :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="9ff9f-103">Expressions in :::no-loc(Q#):::</span></span>
+# <a name="expressions-in-no-locq"></a><span data-ttu-id="9ff9f-103">中的運算式 Q#</span><span class="sxs-lookup"><span data-stu-id="9ff9f-103">Expressions in Q#</span></span>
 
 ## <a name="numeric-expressions"></a><span data-ttu-id="9ff9f-104">數值運算式</span><span class="sxs-lookup"><span data-stu-id="9ff9f-104">Numeric Expressions</span></span>
 
 <span data-ttu-id="9ff9f-105">數值運算式是、或類型的運算式 `Int` `BigInt` `Double` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-105">Numeric expressions are expressions of type `Int`, `BigInt`, or `Double`.</span></span>
 <span data-ttu-id="9ff9f-106">亦即，它們可以是整數或浮點數。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-106">That is, they are either integer or floating-point numbers.</span></span>
 
-<span data-ttu-id="9ff9f-107">`Int` 中的常值 :::no-loc(Q#)::: 會寫入為一系列的數位。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-107">`Int` literals in :::no-loc(Q#)::: are written as a sequence of digits.</span></span>
+<span data-ttu-id="9ff9f-107">`Int` 中的常值 Q# 會寫入為一系列的數位。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-107">`Int` literals in Q# are written as a sequence of digits.</span></span>
 <span data-ttu-id="9ff9f-108">以和前置詞分別支援和寫入十六進位和二進位整數 `0x` `0b` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-108">Hexadecimal and binary integers are supported and written with a `0x` and `0b` prefix, respectively.</span></span>
 
-<span data-ttu-id="9ff9f-109">`BigInt` 中的常值 :::no-loc(Q#)::: 具有尾端或後置詞 `l` `L` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-109">`BigInt` literals in :::no-loc(Q#)::: have a trailing `l` or `L` suffix.</span></span>
+<span data-ttu-id="9ff9f-109">`BigInt` 中的常值 Q# 具有尾端或後置詞 `l` `L` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-109">`BigInt` literals in Q# have a trailing `l` or `L` suffix.</span></span>
 <span data-ttu-id="9ff9f-110">以 "0x" 前置詞支援和寫入十六進位大整數。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-110">Hexadecimal big integers are supported and written with a "0x" prefix.</span></span>
 <span data-ttu-id="9ff9f-111">因此，下列是常值的所有有效用法 `BigInt` ：</span><span class="sxs-lookup"><span data-stu-id="9ff9f-111">Thus, the following are all valid uses of `BigInt` literals:</span></span>
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-<span data-ttu-id="9ff9f-112">`Double` 中的常 :::no-loc(Q#)::: 值是使用小數位數寫入的浮點數。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-112">`Double` literals in :::no-loc(Q#)::: are floating-point numbers written using decimal digits.</span></span>
+<span data-ttu-id="9ff9f-112">`Double` 中的常 Q# 值是使用小數位數寫入的浮點數。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-112">`Double` literals in Q# are floating-point numbers written using decimal digits.</span></span>
 <span data-ttu-id="9ff9f-113">您可以使用或不含小數點、或 `.` 以 ' e ' 或 ' e (' 表示的指數部分來撰寫它們，但在這種情況下，只有可能的負號和小數位數是有效的) 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-113">They can be written with or without a decimal point, `.`, or an exponential part indicated with 'e' or 'E' (after which only a possible negative sign and decimal digits are valid).</span></span>
 <span data-ttu-id="9ff9f-114">以下是有效的 `Double` 常值： `0.0` 、 `1.2e5` 、 `1e-5` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-114">The following are valid `Double` literals: `0.0`, `1.2e5`, `1e-5`.</span></span>
 
@@ -87,7 +87,7 @@ let bigOne = bigZero + 1L;
 <span data-ttu-id="9ff9f-157">假設有兩個相同基本型別的運算式， `==` 就可以 `!=` 使用和二元運算子來建立 `Bool` 運算式。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-157">Given any two expressions of the same primitive type, the `==` and `!=` binary operators may be used to construct a `Bool` expression.</span></span>
 <span data-ttu-id="9ff9f-158">如果兩個運算式相等，則運算式為 true，否則為 false。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-158">The expression is true if the two expressions are equal and false if not.</span></span>
 
-<span data-ttu-id="9ff9f-159">使用者自訂類型的值可能不會進行比較，只能比較其未包裝的值。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-159">Values of user-defined types may not be compared, only their unwrapped values can be compared.</span></span> <span data-ttu-id="9ff9f-160">例如，使用「解除包裝」運算子 `!` (在) 的[類型 :::no-loc(Q#)::: ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)中詳細說明。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-160">For example, using the "unwrap" operator `!` (explained in detail at [Types in :::no-loc(Q#):::](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),</span></span>
+<span data-ttu-id="9ff9f-159">使用者自訂類型的值可能不會進行比較，只能比較其未包裝的值。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-159">Values of user-defined types may not be compared, only their unwrapped values can be compared.</span></span> <span data-ttu-id="9ff9f-160">例如，使用「解除包裝」運算子 `!` (在) 的[類型 Q# ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)中詳細說明。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-160">For example, using the "unwrap" operator `!` (explained in detail at [Types in Q#](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),</span></span>
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -111,9 +111,9 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a><span data-ttu-id="9ff9f-169">字串運算式</span><span class="sxs-lookup"><span data-stu-id="9ff9f-169">String expressions</span></span>
 
-<span data-ttu-id="9ff9f-170">:::no-loc(Q#)::: 允許在語句中使用字串 `fail` (在 [控制流程](xref:microsoft.quantum.guide.controlflow#fail-statement)) 和標準函式中所述 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-170">:::no-loc(Q#)::: allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function.</span></span> <span data-ttu-id="9ff9f-171">後者的特定行為取決於使用的模擬器，但通常會在程式期間呼叫時，將訊息寫入主機主控台 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-171">The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a :::no-loc(Q#)::: program.</span></span>
+<span data-ttu-id="9ff9f-170">Q# 允許在語句中使用字串 `fail` (在 [控制流程](xref:microsoft.quantum.guide.controlflow#fail-statement)) 和標準函式中所述 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-170">Q# allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function.</span></span> <span data-ttu-id="9ff9f-171">後者的特定行為取決於使用的模擬器，但通常會在程式期間呼叫時，將訊息寫入主機主控台 Q# 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-171">The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a Q# program.</span></span>
 
-<span data-ttu-id="9ff9f-172">中的字串 :::no-loc(Q#)::: 是常值或字串插值。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-172">Strings in :::no-loc(Q#)::: are either literals or interpolated strings.</span></span>
+<span data-ttu-id="9ff9f-172">中的字串 Q# 是常值或字串插值。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-172">Strings in Q# are either literals or interpolated strings.</span></span>
 
 <span data-ttu-id="9ff9f-173">字串常值類似于大部分語言中的簡單字串常值：以雙引號括住的 Unicode 字元序列 `" "` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-173">String literals are similar to simple string literals in most languages: a sequence of Unicode characters enclosed in double-quotes `" "`.</span></span>
 <span data-ttu-id="9ff9f-174">在字串內，請使用反斜線字元 `\` 來將雙引號字元 (`\"`) ，或插入新行 ( ) 、換行字元 `\n` () ，或索引標籤 `\r` (`\t`) 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-174">Inside of a string, use the backslash character `\` to escape a double-quote character (`\"`), or to insert a new-line ( `\n` ), a carriage return (`\r`), or a tab (`\t`).</span></span>
@@ -124,21 +124,21 @@ let t = x == y;               // This will cause a compiler error.
 ```
 ### <a name="interpolated-strings"></a><span data-ttu-id="9ff9f-176">插入字串</span><span class="sxs-lookup"><span data-stu-id="9ff9f-176">Interpolated strings</span></span>
 
-<span data-ttu-id="9ff9f-177">:::no-loc(Q#):::字串插補的語法是 c # 語法的子集。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-177">The :::no-loc(Q#)::: syntax for string interpolations is a subset of the C# syntax.</span></span> <span data-ttu-id="9ff9f-178">以下是其相關的重點 :::no-loc(Q#)::: ：</span><span class="sxs-lookup"><span data-stu-id="9ff9f-178">Following are the key points as they pertain to :::no-loc(Q#)::::</span></span>
+<span data-ttu-id="9ff9f-177">Q#字串插補的語法是 c # 語法的子集。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-177">The Q# syntax for string interpolations is a subset of the C# syntax.</span></span> <span data-ttu-id="9ff9f-178">以下是其相關的重點 Q# ：</span><span class="sxs-lookup"><span data-stu-id="9ff9f-178">Following are the key points as they pertain to Q#:</span></span>
 
 * <span data-ttu-id="9ff9f-179">若要將字串常值識別為插入字串，請在其前面加上 `$` 符號。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-179">To identify a string literal as an interpolated string, prepend it with the `$` symbol.</span></span> <span data-ttu-id="9ff9f-180">`$`與開始字串常值的之間不能有空白字元 `"` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-180">There can be no white space between the `$` and the `"` that starts a string literal.</span></span>
 
-* <span data-ttu-id="9ff9f-181">以下是使用 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 函數將測量結果與其他運算式一起寫入至主控台的基本範例 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-181">The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other :::no-loc(Q#)::: expressions.</span></span>
+* <span data-ttu-id="9ff9f-181">以下是使用 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 函數將測量結果與其他運算式一起寫入至主控台的基本範例 Q# 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-181">The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other Q# expressions.</span></span>
 
 ```qsharp
-    let num = 8;       // some :::no-loc(Q#)::: expression
+    let num = 8;       // some Q# expression
     let res = M(q);
     Message($"Number: {num}, Result: {res}");
 ```
 
-* <span data-ttu-id="9ff9f-182">任何有效 :::no-loc(Q#)::: 的運算式可能會出現在字串插值中。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-182">Any valid :::no-loc(Q#)::: expression may appear in an interpolated string.</span></span>
+* <span data-ttu-id="9ff9f-182">任何有效 Q# 的運算式可能會出現在字串插值中。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-182">Any valid Q# expression may appear in an interpolated string.</span></span>
 
-* <span data-ttu-id="9ff9f-183">字串插值中的運算式會遵循 :::no-loc(Q#)::: 語法，而不是 c # 語法。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-183">Expressions inside of an interpolated string follow :::no-loc(Q#)::: syntax, not C# syntax.</span></span> <span data-ttu-id="9ff9f-184">最顯著的差異在於不 :::no-loc(Q#)::: 支援逐字 (多行) 插入字串。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-184">The most notable distinction is that :::no-loc(Q#)::: does not support verbatim (multi-line) interpolated strings.</span></span>
+* <span data-ttu-id="9ff9f-183">字串插值中的運算式會遵循 Q# 語法，而不是 c # 語法。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-183">Expressions inside of an interpolated string follow Q# syntax, not C# syntax.</span></span> <span data-ttu-id="9ff9f-184">最顯著的差異在於不 Q# 支援逐字 (多行) 插入字串。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-184">The most notable distinction is that Q# does not support verbatim (multi-line) interpolated strings.</span></span>
 
 <span data-ttu-id="9ff9f-185">如需 c # 語法的詳細資訊，請參閱插入 [*字串*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-185">For more details about the C# syntax, see [*Interpolated Strings*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).</span></span>
 
@@ -198,7 +198,7 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="unwrap-expressions"></a><span data-ttu-id="9ff9f-221">解除包裝運算式</span><span class="sxs-lookup"><span data-stu-id="9ff9f-221">Unwrap Expressions</span></span>
 
-<span data-ttu-id="9ff9f-222">在中，解除包裝 :::no-loc(Q#)::: 運算子是尾端驚嘆號 `!` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-222">In :::no-loc(Q#):::, the unwrap operator is a trailing exclamation mark `!`.</span></span>
+<span data-ttu-id="9ff9f-222">在中，解除包裝 Q# 運算子是尾端驚嘆號 `!` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-222">In Q#, the unwrap operator is a trailing exclamation mark `!`.</span></span>
 <span data-ttu-id="9ff9f-223">例如，如果 `IntPair` 是具有基礎類型的使用者定義型別， `(Int, Int)` 而且 `s` 是具有值的變數，則 `IntPair(2, 3)` `s!` 為 `(2, 3)` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-223">For example, if `IntPair` is a user-defined type with the underlying type `(Int, Int)` and `s` is a variable with value `IntPair(2, 3)`, then `s!` is `(2, 3)`.</span></span>
 
 <span data-ttu-id="9ff9f-224">針對其他使用者定義型別所定義的使用者定義型別，您可以重複解除包裝運算子。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-224">For user-defined types defined in terms of other user-defined types, you can repeat the unwrap operator.</span></span> <span data-ttu-id="9ff9f-225">例如， `s!!` 表示的雙重解除包裝值 `s` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-225">For example, `s!!` indicates the doubly-unwrapped value of `s`.</span></span>
@@ -271,7 +271,7 @@ let g = Foo(arg)!;      // Syntax error
 (a + b)[13]
 ```
 
-<span data-ttu-id="9ff9f-261">中的所有陣列 :::no-loc(Q#)::: 都是以零為基底。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-261">All arrays in :::no-loc(Q#)::: are zero-based.</span></span>
+<span data-ttu-id="9ff9f-261">中的所有陣列 Q# 都是以零為基底。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-261">All arrays in Q# are zero-based.</span></span>
 <span data-ttu-id="9ff9f-262">亦即，陣列的第一個元素 `a` 一律為 `a[0]` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-262">That is, the first element of an array `a` is always `a[0]`.</span></span>
 
 
@@ -319,7 +319,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a><span data-ttu-id="9ff9f-281">複製和更新運算式</span><span class="sxs-lookup"><span data-stu-id="9ff9f-281">Copy-and-Update Expressions</span></span>
 
-<span data-ttu-id="9ff9f-282">由於所有 :::no-loc(Q#)::: 型別都是實值型別 (量子位採用有點特殊的角色) ，因此當值系結至符號或重新系結符號時，就會建立「複製」。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-282">Since all :::no-loc(Q#)::: types are value types (with the qubits taking a somewhat special role), formally a "copy" is created when a value is bound to a symbol or when a symbol is rebound.</span></span> <span data-ttu-id="9ff9f-283">也就是說，的行為與 :::no-loc(Q#)::: 使用指派運算子建立複本的行為相同。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-283">That is to say, the behavior of :::no-loc(Q#)::: is the same as if a copy were created using an assignment operator.</span></span> 
+<span data-ttu-id="9ff9f-282">由於所有 Q# 型別都是實值型別 (量子位採用有點特殊的角色) ，因此當值系結至符號或重新系結符號時，就會建立「複製」。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-282">Since all Q# types are value types (with the qubits taking a somewhat special role), formally a "copy" is created when a value is bound to a symbol or when a symbol is rebound.</span></span> <span data-ttu-id="9ff9f-283">也就是說，的行為與 Q# 使用指派運算子建立複本的行為相同。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-283">That is to say, the behavior of Q# is the same as if a copy were created using an assignment operator.</span></span> 
 
 <span data-ttu-id="9ff9f-284">當然，在實務上，只會視需要重新建立相關的部分。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-284">Of course, in practice, only the relevant pieces are recreated as needed.</span></span> <span data-ttu-id="9ff9f-285">這會影響您複製陣列的方式，因為不可能更新陣列專案。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-285">This affects how you copy arrays because it is not possible to update array items.</span></span> <span data-ttu-id="9ff9f-286">若要修改現有的陣列，需要利用 *複製和更新* 機制。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-286">To modify an existing array requires leveraging a *copy-and-update* mechanism.</span></span>
 
@@ -382,7 +382,7 @@ for (i in 1..N) {
 
 <span data-ttu-id="9ff9f-317">例如， `[[Op1], [Op2]]` 目前會引發錯誤，因為它會嘗試建立兩個不相容的陣列類型 `(Qubit[] => Unit is Adj)[]` 和中的陣列 `(Qubit[] => Unit is Ctl)[]` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-317">For example, `[[Op1], [Op2]]` would currently raise an error because it attempts to create an array of the two incompatible array types `(Qubit[] => Unit is Adj)[]` and `(Qubit[] => Unit is Ctl)[]`.</span></span>
 
-<span data-ttu-id="9ff9f-318">如需 callables 的詳細資訊，請參閱這個頁面上的可呼叫[運算式](#callable-expressions)或[中 :::no-loc(Q#)::: 的作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-318">For more information on callables, see [Callable expressions](#callable-expressions)  on this page or [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
+<span data-ttu-id="9ff9f-318">如需 callables 的詳細資訊，請參閱這個頁面上的可呼叫[運算式](#callable-expressions)或[中 Q# 的作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-318">For more information on callables, see [Callable expressions](#callable-expressions)  on this page or [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
 
 ## <a name="conditional-expressions"></a><span data-ttu-id="9ff9f-319">條件運算式</span><span class="sxs-lookup"><span data-stu-id="9ff9f-319">Conditional Expressions</span></span>
 
@@ -447,7 +447,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 <span data-ttu-id="9ff9f-353">叫用 [型別參數化](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) 可呼叫時，您可以在可呼叫的運算式之後，于角括弧內指定實際的型別參數 `< >` 。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-353">When invoking a [type-parameterized](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) callable, you can specify the actual type parameters within angle brackets `< >` after the callable expression.</span></span>
-<span data-ttu-id="9ff9f-354">這通常不是必要動作，因為 :::no-loc(Q#)::: 編譯器會推斷實際的類型。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-354">This action is usually unnecessary as the :::no-loc(Q#)::: compiler infers the actual types.</span></span>
+<span data-ttu-id="9ff9f-354">這通常不是必要動作，因為 Q# 編譯器會推斷實際的類型。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-354">This action is usually unnecessary as the Q# compiler infers the actual types.</span></span>
 <span data-ttu-id="9ff9f-355">但是，如果未指定型別參數化引數， [部分應用程式](xref:microsoft.quantum.guide.operationsfunctions#partial-application)*就* 需要它。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-355">However, it *is* required for [partial application](xref:microsoft.quantum.guide.operationsfunctions#partial-application) if a type-parameterized argument is left unspecified.</span></span>
 <span data-ttu-id="9ff9f-356">將具有不同仿函數支援的作業傳遞給可呼叫的時，它也很有用。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-356">It is also useful when passing operations with different functor supports to a callable.</span></span>
 
@@ -470,7 +470,7 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 * <span data-ttu-id="9ff9f-363">作業和函式呼叫的括弧也會在任何運算子之前系結，但在陣列索引和函子之後。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-363">Parentheses for operation and function invocation also bind before any operator but after array indexing and functors.</span></span>
 
-<span data-ttu-id="9ff9f-364">:::no-loc(Q#)::: 依優先順序排列的運算子，從最高到最低：</span><span class="sxs-lookup"><span data-stu-id="9ff9f-364">:::no-loc(Q#)::: operators in order of precedence, from highest to lowest:</span></span>
+<span data-ttu-id="9ff9f-364">Q# 依優先順序排列的運算子，從最高到最低：</span><span class="sxs-lookup"><span data-stu-id="9ff9f-364">Q# operators in order of precedence, from highest to lowest:</span></span>
 
 <span data-ttu-id="9ff9f-365">運算子</span><span class="sxs-lookup"><span data-stu-id="9ff9f-365">Operator</span></span> | <span data-ttu-id="9ff9f-366">元</span><span class="sxs-lookup"><span data-stu-id="9ff9f-366">Arity</span></span> | <span data-ttu-id="9ff9f-367">描述</span><span class="sxs-lookup"><span data-stu-id="9ff9f-367">Description</span></span> | <span data-ttu-id="9ff9f-368">運算元類型</span><span class="sxs-lookup"><span data-stu-id="9ff9f-368">Operand Types</span></span>
 ---------|----------|---------|---------------
@@ -493,4 +493,4 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 ## <a name="next-steps"></a><span data-ttu-id="9ff9f-423">後續步驟</span><span class="sxs-lookup"><span data-stu-id="9ff9f-423">Next steps</span></span>
 
-<span data-ttu-id="9ff9f-424">現在您可以使用中的運算式 :::no-loc(Q#)::: ，請移至[中的 :::no-loc(Q#)::: 作業和](xref:microsoft.quantum.guide.operationsfunctions)函式，以瞭解如何定義和呼叫作業和函數。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-424">Now that you can work with expressions in :::no-loc(Q#):::, move on to [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.</span></span>
+<span data-ttu-id="9ff9f-424">現在您可以使用中的運算式 Q# ，請移至[中的 Q# 作業和](xref:microsoft.quantum.guide.operationsfunctions)函式，以瞭解如何定義和呼叫作業和函數。</span><span class="sxs-lookup"><span data-stu-id="9ff9f-424">Now that you can work with expressions in Q#, move on to [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.</span></span>

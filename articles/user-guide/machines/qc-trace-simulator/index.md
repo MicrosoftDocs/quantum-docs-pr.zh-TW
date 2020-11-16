@@ -1,14 +1,14 @@
 ---
 title: 量子追蹤模擬器 - Quantum 開發套件
-description: '了解如何使用 Microsoft 量子電腦追蹤模擬器來對傳統程式碼進行偵錯，以及評估 :::no-loc(Q#)::: 程式的資源需求。'
+description: '了解如何使用 Microsoft 量子電腦追蹤模擬器來對傳統程式碼進行偵錯，以及評估 Q# 程式的資源需求。'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
@@ -25,7 +25,7 @@ ms.locfileid: "92690826"
 
 ## <a name="invoking-the-quantum-trace-simulator"></a><span data-ttu-id="eb41f-110">叫用量子追蹤模擬器</span><span class="sxs-lookup"><span data-stu-id="eb41f-110">Invoking the quantum trace simulator</span></span>
 
-<span data-ttu-id="eb41f-111">您可以使用量子追蹤模擬器來執行任何 :::no-loc(Q#)::: 作業。</span><span class="sxs-lookup"><span data-stu-id="eb41f-111">You can use the quantum trace simulator to run any :::no-loc(Q#)::: operation.</span></span>
+<span data-ttu-id="eb41f-111">您可以使用量子追蹤模擬器來執行任何 Q# 作業。</span><span class="sxs-lookup"><span data-stu-id="eb41f-111">You can use the quantum trace simulator to run any Q# operation.</span></span>
 
 <span data-ttu-id="eb41f-112">就像其他目標機器一樣，您必須先建立 `QCTraceSimulator` 類別的執行個體，然後將其當做作業中 `Run` 方法的第一個參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="eb41f-112">As with other target machines, you first create an instance of the `QCTraceSimulator` class and then pass it as the first parameter of an operation's `Run` method.</span></span>
 
@@ -94,7 +94,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 
 ## <a name="qctracesimulator-methods"></a><span data-ttu-id="eb41f-139">QCTraceSimulator 方法</span><span class="sxs-lookup"><span data-stu-id="eb41f-139">QCTraceSimulator methods</span></span>
 
-<span data-ttu-id="eb41f-140">`QCTraceSimulator` 有數個內建方法，可擷取在量子作業期間追蹤的計量值。</span><span class="sxs-lookup"><span data-stu-id="eb41f-140">`QCTraceSimulator` has several built-in methods to retrieve the values of the metrics tracked during a quantum operation.</span></span> <span data-ttu-id="eb41f-141">在[基元操作計數器](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)、[深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)、[寬度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)文章中可以找到 [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) 和 [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) 方法的範例。</span><span class="sxs-lookup"><span data-stu-id="eb41f-141">Examples of the [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) and the [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) methods can be found in the [Primitive operations counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter), and [Width counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) articles.</span></span> <span data-ttu-id="eb41f-142">如需所有可用方法的詳細資訊，請參閱 :::no-loc(Q#)::: API 參考資料中的 [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)。</span><span class="sxs-lookup"><span data-stu-id="eb41f-142">For more information on all available methods, see [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) in the :::no-loc(Q#)::: API reference.</span></span>  
+<span data-ttu-id="eb41f-140">`QCTraceSimulator` 有數個內建方法，可擷取在量子作業期間追蹤的計量值。</span><span class="sxs-lookup"><span data-stu-id="eb41f-140">`QCTraceSimulator` has several built-in methods to retrieve the values of the metrics tracked during a quantum operation.</span></span> <span data-ttu-id="eb41f-141">在[基元操作計數器](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)、[深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)、[寬度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)文章中可以找到 [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) 和 [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) 方法的範例。</span><span class="sxs-lookup"><span data-stu-id="eb41f-141">Examples of the [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) and the [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) methods can be found in the [Primitive operations counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter), and [Width counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) articles.</span></span> <span data-ttu-id="eb41f-142">如需所有可用方法的詳細資訊，請參閱 Q# API 參考資料中的 [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)。</span><span class="sxs-lookup"><span data-stu-id="eb41f-142">For more information on all available methods, see [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) in the Q# API reference.</span></span>  
 
 ## <a name="see-also"></a><span data-ttu-id="eb41f-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eb41f-143">See also</span></span>
 

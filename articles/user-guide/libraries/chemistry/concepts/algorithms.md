@@ -7,8 +7,8 @@ ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -20,7 +20,7 @@ ms.locfileid: "92691883"
 
 <span data-ttu-id="b1d8e-104">一旦將 Hamiltonian 表示為基本運算子的總和後，就可以使用已知技術的主機，將 dynamics 編譯成基本閘道作業。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-104">Once the Hamiltonian has been expressed as a sum of elementary operators the dynamics can then be compiled into fundamental gate operations using a host of well-known techniques.</span></span>
 <span data-ttu-id="b1d8e-105">有三種有效率的方法，包括 Trotter – Suzuki 公式、unitaries 的線性組合和量子位化。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-105">Three efficient approaches include are Trotter–Suzuki formulas, linear combinations of unitaries, and qubitization.</span></span>
-<span data-ttu-id="b1d8e-106">我們將在下面說明這三種方法，並提供 :::no-loc(Q#)::: 如何使用 Hamiltonian 模擬程式庫來執行這些方法的具體範例。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-106">We explain these three approaches below and give concrete :::no-loc(Q#)::: examples of how to implement these methods using the Hamiltonian simulation library.</span></span>
+<span data-ttu-id="b1d8e-106">我們將在下面說明這三種方法，並提供 Q# 如何使用 Hamiltonian 模擬程式庫來執行這些方法的具體範例。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-106">We explain these three approaches below and give concrete Q# examples of how to implement these methods using the Hamiltonian simulation library.</span></span>
 
 
 ## <a name="trottersuzuki-formulas"></a><span data-ttu-id="b1d8e-107">Trotter – Suzuki 公式</span><span class="sxs-lookup"><span data-stu-id="b1d8e-107">Trotter–Suzuki Formulas</span></span>
@@ -52,7 +52,7 @@ ms.locfileid: "92691883"
         <span data-ttu-id="b1d8e-128">0 & 0 & 0 & e ^ {-it} \end{bmatrix}。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-128">0 & 0 & 0 & e^{-it} \end{bmatrix}.</span></span>
 <span data-ttu-id="b1d8e-129">$ $ 這裡、$e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ 和 $e ^ {-iHt} \ket {01} = e ^ {-it} \ket {01} $，這可能是因為 $0 $ 的同位檢查是 $0 $，而位字串 $1 $ 的同位檢查為 $1 $ 的結果。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-129">$$ Here, $e^{-iHt} \ket{00} = e^{it} \ket{00}$ and $e^{-iHt} \ket{01} = e^{-it} \ket{01}$, which can be seen directly as a consequence of the fact that the parity of $00$ is $0$ while the parity of the bit string $01$ is $1$.</span></span>
 
-<span data-ttu-id="b1d8e-130">Pauli 運算子的指數可以使用作業直接實作為 :::no-loc(Q#)::: <xref:Microsoft.Quantum.Intrinsic.Exp> ：</span><span class="sxs-lookup"><span data-stu-id="b1d8e-130">Exponentials of Pauli operators can be implemented directly in :::no-loc(Q#)::: using the <xref:Microsoft.Quantum.Intrinsic.Exp> operation:</span></span>
+<span data-ttu-id="b1d8e-130">Pauli 運算子的指數可以使用作業直接實作為 Q# <xref:Microsoft.Quantum.Intrinsic.Exp> ：</span><span class="sxs-lookup"><span data-stu-id="b1d8e-130">Exponentials of Pauli operators can be implemented directly in Q# using the <xref:Microsoft.Quantum.Intrinsic.Exp> operation:</span></span>
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -85,12 +85,12 @@ ms.locfileid: "92691883"
     // We convert this fermion Hamiltonian to a Jordan-Wigner representation.
     var jordanWignerEncoding = hamiltonian.ToPauliHamiltonian(QubitEncoding.JordanWigner);
 
-    // We now convert this representation into a format consumable by :::no-loc(Q#):::.
+    // We now convert this representation into a format consumable by Q#.
     var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
-<span data-ttu-id="b1d8e-135">模擬演算法取用的這種 Wigner 標記法格式 :::no-loc(Q#)::: 是使用者定義型別 `JordanWignerEncodingData` 。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-135">This format of the Jordan–Wigner representation that is consumable by the :::no-loc(Q#)::: simulation algorithms is a user-defined type `JordanWignerEncodingData`.</span></span>
-<span data-ttu-id="b1d8e-136">在中 :::no-loc(Q#)::: ，此格式會傳遞至方便 `TrotterStepOracle` 的函式，此函式會使用 Trotter （Suzuki 整合器）傳回運算子將逼近時間演進，以及其執行所需的其他參數。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-136">Within :::no-loc(Q#):::, this format is passed to a convenience function `TrotterStepOracle` that returns an operator approximating time-evolution using the Trotter—Suzuki integrator, in addition to other parameters required for its run.</span></span>
+<span data-ttu-id="b1d8e-135">模擬演算法取用的這種 Wigner 標記法格式 Q# 是使用者定義型別 `JordanWignerEncodingData` 。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-135">This format of the Jordan–Wigner representation that is consumable by the Q# simulation algorithms is a user-defined type `JordanWignerEncodingData`.</span></span>
+<span data-ttu-id="b1d8e-136">在中 Q# ，此格式會傳遞至方便 `TrotterStepOracle` 的函式，此函式會使用 Trotter （Suzuki 整合器）傳回運算子將逼近時間演進，以及其執行所需的其他參數。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-136">Within Q#, this format is passed to a convenience function `TrotterStepOracle` that returns an operator approximating time-evolution using the Trotter—Suzuki integrator, in addition to other parameters required for its run.</span></span>
 
 ```qsharp
 // qSharpData passed from driver
@@ -154,10 +154,10 @@ $$
 
 <span data-ttu-id="b1d8e-161">您可以使用 $ \operatorname{Select} $ 和 $R $ 作業來表示「逐步運算子」（$W $），例如 $ $ W = \operatorname{Select} R、$ $，如此一來，就可以將相等的運算子 (最) 多等於 $e ^ {\pm i \cos ^ {-1} (H/| H | _1) } $。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-161">The walk operator, $W$, can be expressed in terms of the $\operatorname{Select}$ and $R$ operations as $$ W = \operatorname{Select} R, $$ which again can be seen to implement an operator that is equivalent (up to an isometry) to $e^{\pm i \cos^{-1}(H/|h|_1)}$.</span></span>
 
-<span data-ttu-id="b1d8e-162">在中，您可以輕鬆地設定這些副程式 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-162">These subroutines are easy to set up in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="b1d8e-162">在中，您可以輕鬆地設定這些副程式 Q# 。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-162">These subroutines are easy to set up in Q#.</span></span>
 <span data-ttu-id="b1d8e-163">例如，請考慮使用簡單的量子位橫向-Ising Hamiltonian，其中 $H = X_1 + X_2 + Z_1 Z_2 $。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-163">As an example, consider the simple qubit transverse-Ising Hamiltonian where $H = X_1 + X_2 + Z_1 Z_2$.</span></span>
-<span data-ttu-id="b1d8e-164">在此情況下，會叫用 :::no-loc(Q#)::: 執行 $ \operatorname{Select} $ 作業的程式碼 <xref:Microsoft.Quantum.Canon.MultiplexOperations> ，而 $ \operatorname{Prepare} $ 作業則可以使用來執行 <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> 。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-164">In this case, :::no-loc(Q#)::: code that would implement the $\operatorname{Select}$ operation is invoked by <xref:Microsoft.Quantum.Canon.MultiplexOperations>, whereas the $\operatorname{Prepare}$ operation can be implemented using <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState>.</span></span>
-<span data-ttu-id="b1d8e-165">您可以在[ :::no-loc(Q#)::: 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)中找到包含模擬 Hubbard 模型的範例。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-165">An example that involves simulating the Hubbard model can be found as a [:::no-loc(Q#)::: sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).</span></span>
+<span data-ttu-id="b1d8e-164">在此情況下，會叫用 Q# 執行 $ \operatorname{Select} $ 作業的程式碼 <xref:Microsoft.Quantum.Canon.MultiplexOperations> ，而 $ \operatorname{Prepare} $ 作業則可以使用來執行 <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> 。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-164">In this case, Q# code that would implement the $\operatorname{Select}$ operation is invoked by <xref:Microsoft.Quantum.Canon.MultiplexOperations>, whereas the $\operatorname{Prepare}$ operation can be implemented using <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState>.</span></span>
+<span data-ttu-id="b1d8e-165">您可以在[ Q# 範例](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)中找到包含模擬 Hubbard 模型的範例。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-165">An example that involves simulating the Hubbard model can be found as a [Q# sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).</span></span>
 
 <span data-ttu-id="b1d8e-166">針對任意化學問題手動指定這些步驟，需要投入大量的時間，這是使用化學程式庫避免的。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-166">Manually specifying these steps for arbitrary chemistry problems would require much effort, which is avoided using the chemistry library.</span></span>
 <span data-ttu-id="b1d8e-167">類似于上述的 Trotter-Suzuki 模擬演算法， `JordanWignerEncodingData` 會傳遞至方便的函式，以傳回 `QubitizationOracle` 逐步運算子，以及執行所需的其他參數。</span><span class="sxs-lookup"><span data-stu-id="b1d8e-167">Similarly to the Trotter–Suzuki simulation algorithm above, the `JordanWignerEncodingData` is passed to the convenience function `QubitizationOracle` that returns the walk-operator, in addition to other parameters required for its run.</span></span>

@@ -1,14 +1,14 @@
 ---
-title: '標準程式庫中的資料結構 :::no-loc(Q#):::'
-description: '深入瞭解 Microsoft 標準程式庫中的資料結構、oracle 和 dynamical 產生器 :::no-loc(Q#)::: 。'
+title: '標準程式庫中的資料結構 Q#'
+description: '深入瞭解 Microsoft 標準程式庫中的資料結構、oracle 和 dynamical 產生器 Q# 。'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -37,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a><span data-ttu-id="18b92-111">陣列</span><span class="sxs-lookup"><span data-stu-id="18b92-111">Arrays</span></span> ###
 
 <span data-ttu-id="18b92-112">Canon 提供數個函式來處理陣列。</span><span class="sxs-lookup"><span data-stu-id="18b92-112">The canon provides several functions for manipulating arrays.</span></span>
-<span data-ttu-id="18b92-113">這些函式是以類型參數化，因此可以與任何類型的陣列一起使用 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="18b92-113">These functions are type-parameterized, and thus can be used with arrays of any :::no-loc(Q#)::: type.</span></span>
+<span data-ttu-id="18b92-113">這些函式是以類型參數化，因此可以與任何類型的陣列一起使用 Q# 。</span><span class="sxs-lookup"><span data-stu-id="18b92-113">These functions are type-parameterized, and thus can be used with arrays of any Q# type.</span></span>
 <span data-ttu-id="18b92-114">例如，函式 <xref:Microsoft.Quantum.Arrays.Reversed> 會傳回新的陣列，其專案是從其輸入的反向順序。</span><span class="sxs-lookup"><span data-stu-id="18b92-114">For instance, the <xref:Microsoft.Quantum.Arrays.Reversed> function returns a new array whose elements are in reverse order from its input.</span></span>
 <span data-ttu-id="18b92-115">這可以用來變更在呼叫作業時如何表示量子暫存器：</span><span class="sxs-lookup"><span data-stu-id="18b92-115">This can be used to change how a quantum register is represented when calling operations:</span></span>
 
@@ -75,7 +75,7 @@ ApplyToEach(
 <span data-ttu-id="18b92-120">Oracle 這一詞是指一組黑箱量子副程式，可在一組量子位上運作，並以階段傳回答案。</span><span class="sxs-lookup"><span data-stu-id="18b92-120">Here the term oracle refers to a blackbox quantum subroutine that acts upon a set of qubits and returns the answer as a phase.</span></span>
 <span data-ttu-id="18b92-121">這個副程式通常可以被視為接受 oracle 的量子演算法的輸入，除了其他一些參數之外，還會套用一連串的量子作業，並將呼叫視為基本閘道。</span><span class="sxs-lookup"><span data-stu-id="18b92-121">This subroutine often can be thought of as an input to a quantum algorithm that accepts the oracle, in addition to some other parameters, and applies a series of quantum operations and treating a call to this quantum subroutine as if it were a fundamental gate.</span></span>
 <span data-ttu-id="18b92-122">很明顯地，若要實際實施較大型的演算法，必須提供 oracle 到基本閘道的具體分解，但這類分解不需要用來瞭解呼叫 oracle 的演算法。</span><span class="sxs-lookup"><span data-stu-id="18b92-122">Obviously, in order to actually implement the larger algorithm a concrete decomposition of the oracle into fundamental gates must be provided but such a decomposition is not needed in order to understand the algorithm that calls the oracle.</span></span>
-<span data-ttu-id="18b92-123">在中 :::no-loc(Q#)::: ，這個抽象是使用該作業為第一級的值來表示，如此一來，就能以黑箱的方式將作業傳遞給量子演算法的執行。</span><span class="sxs-lookup"><span data-stu-id="18b92-123">In :::no-loc(Q#):::, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.</span></span>
+<span data-ttu-id="18b92-123">在中 Q# ，這個抽象是使用該作業為第一級的值來表示，如此一來，就能以黑箱的方式將作業傳遞給量子演算法的執行。</span><span class="sxs-lookup"><span data-stu-id="18b92-123">In Q#, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.</span></span>
 <span data-ttu-id="18b92-124">此外，使用者定義型別是用來以型別安全的方式來標記不同的 oracle 標記法，因此很難不慎人們不同種類的黑色方塊作業。</span><span class="sxs-lookup"><span data-stu-id="18b92-124">Moreover, user-defined types are used to label the different oracle representations in a type-safe way, making it difficult to accidentally conflate different kinds of black box operations.</span></span>
 
 <span data-ttu-id="18b92-125">這類 oracle 出現在許多不同的內容中，包括著名的範例，例如 [格羅弗的搜尋](https://en.wikipedia.org/wiki/Grover%27s_algorithm) 和量子模擬演算法。</span><span class="sxs-lookup"><span data-stu-id="18b92-125">Such oracles appear in a number of different contexts, including famous examples such as [Grover's search](https://en.wikipedia.org/wiki/Grover%27s_algorithm) and quantum simulation algorithms.</span></span>
@@ -192,7 +192,7 @@ is Adj + Ctl {
 <span data-ttu-id="18b92-197">在此內容中，我們可以使用單一 $R _z $ 閘道來模擬任何 $t $ 的 $U (t) $，因為這種情況不需要將自己限制為只對單一的查詢進行個別的查詢。</span><span class="sxs-lookup"><span data-stu-id="18b92-197">In this context, we can simulate $U(t)$ for any $t$ using a single $R_z$ gate and as such do not need to restrict ourselves to only discrete queries to the unitary.</span></span>
 <span data-ttu-id="18b92-198">這類連續模型也有一個屬性，而該屬性的頻率大於 $ 2 \ pi $，可從使用連續查詢的階段估計程式中學習，因為對數函式的分支切割所產生的階段資訊，可能會顯示在 $t $ 的非接近值上執行的實驗結果。</span><span class="sxs-lookup"><span data-stu-id="18b92-198">Such a continuous model also has the property that frequencies greater than $2\pi$ can be learned from phase estimation processes that use continuous queries because phase information that would otherwise be masked by the branch-cuts of the logarithm function can be revealed from the results of experiments performed on non-commensurate values of $t$.</span></span>
 <span data-ttu-id="18b92-199">因此，針對階段估計 oracle 的這類連續查詢模型，不只適用于這些問題，而且也優於離散查詢模型。</span><span class="sxs-lookup"><span data-stu-id="18b92-199">Thus for problems such as this continuous query models for the phase estimation oracle are not only appropriate but are also preferable to the discrete query model.</span></span>
-<span data-ttu-id="18b92-200">基於這個理由，這 :::no-loc(Q#)::: 兩種形式的查詢都有其功能，並讓使用者能夠根據其需求和可用的 oracle 類型來決定階段估計演算法。</span><span class="sxs-lookup"><span data-stu-id="18b92-200">For this reason :::no-loc(Q#)::: has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.</span></span>
+<span data-ttu-id="18b92-200">基於這個理由，這 Q# 兩種形式的查詢都有其功能，並讓使用者能夠根據其需求和可用的 oracle 類型來決定階段估計演算法。</span><span class="sxs-lookup"><span data-stu-id="18b92-200">For this reason Q# has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.</span></span>
 
 ## <a name="dynamical-generator-modeling"></a><span data-ttu-id="18b92-201">Dynamical 產生器模型化</span><span class="sxs-lookup"><span data-stu-id="18b92-201">Dynamical Generator Modeling</span></span> ##
 

@@ -1,13 +1,13 @@
 ---
-title: '標準程式庫中的診斷 :::no-loc(Q#):::'
-description: '瞭解在 :::no-loc(Q#)::: 量副程式中用來攔截錯誤或錯誤的標準程式庫中的診斷功能和作業。'
+title: '標準程式庫中的診斷 Q#'
+description: '瞭解在 Q# 量副程式中用來攔截錯誤或錯誤的標準程式庫中的診斷功能和作業。'
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -18,7 +18,7 @@ ms.locfileid: "92690843"
 # <a name="diagnostics"></a><span data-ttu-id="aa870-103">診斷</span><span class="sxs-lookup"><span data-stu-id="aa870-103">Diagnostics</span></span> #
 
 <span data-ttu-id="aa870-104">就像傳統開發一樣，要能夠診斷量副程式中的錯誤和錯誤是很重要的。</span><span class="sxs-lookup"><span data-stu-id="aa870-104">As with classical development, it is important to be able to diagnose mistakes and errors in quantum programs.</span></span>
-<span data-ttu-id="aa870-105">:::no-loc(Q#):::標準程式庫提供各種不同的方式來確保量副程式的正確性，如中所述 <xref:microsoft.quantum.guide.testingdebugging> 。</span><span class="sxs-lookup"><span data-stu-id="aa870-105">The :::no-loc(Q#)::: standard libraries provide a variety of different ways to ensure the correctness of quantum programs, as detailed in <xref:microsoft.quantum.guide.testingdebugging>.</span></span>
+<span data-ttu-id="aa870-105">Q#標準程式庫提供各種不同的方式來確保量副程式的正確性，如中所述 <xref:microsoft.quantum.guide.testingdebugging> 。</span><span class="sxs-lookup"><span data-stu-id="aa870-105">The Q# standard libraries provide a variety of different ways to ensure the correctness of quantum programs, as detailed in <xref:microsoft.quantum.guide.testingdebugging>.</span></span>
 <span data-ttu-id="aa870-106">大致上來說，這項支援的形式為函式和作業，可指示目的電腦為主機程式或開發人員提供額外的診斷資訊，或強制執行函式或作業呼叫所表示的條件和非變異的正確性。</span><span class="sxs-lookup"><span data-stu-id="aa870-106">Largely speaking, this support comes in the form of functions and operations that either instruct the target machine to provide additional diagnostic information to the host program or developer, or enforce the correctness of conditions and invariants expressed by the function or operation call.</span></span>
 
 ## <a name="machine-diagnostics"></a><span data-ttu-id="aa870-107">機器診斷</span><span class="sxs-lookup"><span data-stu-id="aa870-107">Machine Diagnostics</span></span> ##
@@ -27,13 +27,13 @@ ms.locfileid: "92690843"
 <span data-ttu-id="aa870-109">根據預設，這會將字串寫入主控台。</span><span class="sxs-lookup"><span data-stu-id="aa870-109">By default, this writes the string to the console.</span></span>
 <span data-ttu-id="aa870-110">與內插字串一起使用， <xref:Microsoft.Quantum.Intrinsic.Message> 可讓您輕鬆地報告有關傳統值的診斷資訊：</span><span class="sxs-lookup"><span data-stu-id="aa870-110">Used together with interpolated strings, <xref:Microsoft.Quantum.Intrinsic.Message> makes it easy to report diagnostic information about classical values:</span></span>
 
-```:::no-loc(Q#):::
+```Q#
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> <span data-ttu-id="aa870-111">`Message` 有簽章 `(String -> Unit)` ，但無法從內觀察發出的偵錯工具記錄訊息 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="aa870-111">`Message` has signature `(String -> Unit)`, again representing that emitting a debug log message cannot be observed from within :::no-loc(Q#):::.</span></span>
+> <span data-ttu-id="aa870-111">`Message` 有簽章 `(String -> Unit)` ，但無法從內觀察發出的偵錯工具記錄訊息 Q# 。</span><span class="sxs-lookup"><span data-stu-id="aa870-111">`Message` has signature `(String -> Unit)`, again representing that emitting a debug log message cannot be observed from within Q#.</span></span>
 
 <span data-ttu-id="aa870-112"><xref:Microsoft.Quantum.Diagnostics.DumpMachine>和 <xref:Microsoft.Quantum.Diagnostics.DumpRegister> callables 指示目的電腦，以提供有關目前已配置之量子位的診斷資訊，或分別提供量子位的特定註冊。</span><span class="sxs-lookup"><span data-stu-id="aa870-112">The <xref:Microsoft.Quantum.Diagnostics.DumpMachine> and <xref:Microsoft.Quantum.Diagnostics.DumpRegister> callables instruct target machines to provide diagnostic information about all currently allocated qubits or about a specific register of qubits, respectively.</span></span>
 <span data-ttu-id="aa870-113">每一部目的電腦都有不同的診斷資訊，以回應傾印指令。</span><span class="sxs-lookup"><span data-stu-id="aa870-113">Each target machine varies in what diagnostic information is provided in response to a dump instruction.</span></span>
@@ -52,7 +52,7 @@ Message($"About to rotate by an angle of {angle}...");
 <span data-ttu-id="aa870-121">例如， `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` 代表 $1 + 1 = $2 的數學事實，而 `AssertQubit(One, qubit)` 表示測量會傳回確定性的條件 `qubit` `One` 。</span><span class="sxs-lookup"><span data-stu-id="aa870-121">For example, `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` represents the mathematical fact that $1 + 1 = 2$, while `AssertQubit(One, qubit)` represents the condition that measuring `qubit` will return a `One` with certainty.</span></span>
 <span data-ttu-id="aa870-122">在先前的案例中，我們只會檢查指定值的正確性，但在後者中，我們必須知道量子位狀態的相關資訊，才能評估判斷提示。</span><span class="sxs-lookup"><span data-stu-id="aa870-122">In the former case, we can check the correctness of the condition given only its values, while in the latter, we must know something about the state of the qubit in order to evaluate the assertion.</span></span>
 
-<span data-ttu-id="aa870-123">:::no-loc(Q#):::標準程式庫提供數個代表事實的不同函式，包括：</span><span class="sxs-lookup"><span data-stu-id="aa870-123">The :::no-loc(Q#)::: standard libraries provide several different functions for representing facts, including:</span></span>
+<span data-ttu-id="aa870-123">Q#標準程式庫提供數個代表事實的不同函式，包括：</span><span class="sxs-lookup"><span data-stu-id="aa870-123">The Q# standard libraries provide several different functions for representing facts, including:</span></span>
 
 - <xref:Microsoft.Quantum.Diagnostics.Fact>
 - <xref:Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact>
@@ -70,7 +70,7 @@ Message($"About to rotate by an angle of {angle}...");
 <span data-ttu-id="aa870-129">如果判斷提示失敗，則會以指定的訊息呼叫來結束執行 `fail` 。</span><span class="sxs-lookup"><span data-stu-id="aa870-129">If the assertion fails, the run ends by calling `fail` with the given message.</span></span>
 <span data-ttu-id="aa870-130">依預設，不會執行這項作業;可以支援的模擬器應該提供執行執行時間檢查的執行。</span><span class="sxs-lookup"><span data-stu-id="aa870-130">By default, this operation is not implemented; simulators that can support it should provide an implementation that performs runtime checking.</span></span>
 <span data-ttu-id="aa870-131">`AssertMeasurement` 有簽章 `((Pauli[], Qubit[], Result, String) -> ())` 。</span><span class="sxs-lookup"><span data-stu-id="aa870-131">`AssertMeasurement` has signature `((Pauli[], Qubit[], Result, String) -> ())`.</span></span>
-<span data-ttu-id="aa870-132">因為 `AssertMeasurement` 是具有空的元組作為其輸出類型的函式，所以在 `AssertMeasurement` 程式內不會有呼叫的影響 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="aa870-132">Since `AssertMeasurement` is a function with an empty tuple as its output type, no effects from having called `AssertMeasurement` are observable within a :::no-loc(Q#)::: program.</span></span>
+<span data-ttu-id="aa870-132">因為 `AssertMeasurement` 是具有空的元組作為其輸出類型的函式，所以在 `AssertMeasurement` 程式內不會有呼叫的影響 Q# 。</span><span class="sxs-lookup"><span data-stu-id="aa870-132">Since `AssertMeasurement` is a function with an empty tuple as its output type, no effects from having called `AssertMeasurement` are observable within a Q# program.</span></span>
 
 <span data-ttu-id="aa870-133">作業函式會判斷提示 <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> ，以指定的 Pauli 為基礎來測量指定的量子位，在部分容錯範圍內會有給定機率的指定結果。</span><span class="sxs-lookup"><span data-stu-id="aa870-133">The <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> operation function asserts that measuring the given qubits in the given Pauli basis will have the given result with the given probability, within some tolerance.</span></span>
 <span data-ttu-id="aa870-134">容錯是加法 (例如 `abs(expected-actual) < tol`) 。</span><span class="sxs-lookup"><span data-stu-id="aa870-134">Tolerance is additive (for example, `abs(expected-actual) < tol`).</span></span>
