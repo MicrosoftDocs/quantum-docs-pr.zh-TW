@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.ColumnAtUnchecked
 title: ColumnAtUnchecked 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: ColumnAtUnchecked
 qsharp.summary: This function does not check for matrix shape
-ms.openlocfilehash: 17211c1ae1fe12fcadf34a9411f9b0cf0cdcab50
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 06fce23bbf7142ee0e0b0ed3f2c0578676f2097b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699518"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221584"
 ---
 # <a name="columnatunchecked-function"></a>ColumnAtUnchecked 函式
 
 命名空間： [Microsoft 量子。陣列](xref:Microsoft.Quantum.Arrays)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 此函數不會檢查矩陣圖形

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Filtered
 title: 篩選函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Filtered
 qsharp.summary: Given an array and a predicate that is defined for the elements of the array, returns an array that consists of those elements that satisfy the predicate.
-ms.openlocfilehash: 4c786c69b0896b517f108611e32501867838aeb1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fa8600f4d773daf6eabf8b9961ab46961155d1fd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699488"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221261"
 ---
 # <a name="filtered-function"></a>篩選函數
 
 命名空間： [Microsoft 量子。陣列](xref:Microsoft.Quantum.Arrays)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 指定陣列和定義給陣列元素的述詞時，會傳回陣列，其中包含符合述詞的元素。

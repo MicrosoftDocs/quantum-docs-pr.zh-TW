@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Excluding
 title: 排除函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Excluding
 qsharp.summary: Returns an array containing the elements of another array, excluding elements at a given list of indices.
-ms.openlocfilehash: 8848c6e89da50efb4f7550168f1757b25a214a24
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6585e619834a96953c9eae2d36a8ebe0a11dbda0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699489"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221312"
 ---
 # <a name="excluding-function"></a>排除函數
 
 命名空間： [Microsoft 量子。陣列](xref:Microsoft.Quantum.Arrays)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回陣列，其中包含另一個陣列的元素，但不包括指定之索引清單中的元素。
