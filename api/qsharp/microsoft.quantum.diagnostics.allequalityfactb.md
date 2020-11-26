@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllEqualityFactB
 title: AllEqualityFactB 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AllEqualityFactB
 qsharp.summary: Asserts that two arrays of boolean values are equal.
-ms.openlocfilehash: 100aacccbfd5b45ac9f859cd89424b0ed4007f72
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 79dcf65956ba9436fb6fdd452f22f35d4852d6f8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698182"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213696"
 ---
 # <a name="allequalityfactb-function"></a>AllEqualityFactB 函式
 
 命名空間： [Microsoft 量子. 診斷](xref:Microsoft.Quantum.Diagnostics)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 判斷提示兩個布林值陣列是否相等。
