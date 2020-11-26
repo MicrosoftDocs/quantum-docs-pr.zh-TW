@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Characterization.ContinuousPhaseEstimationIteration
 title: ContinuousPhaseEstimationIteration 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: ContinuousPhaseEstimationIteration
 qsharp.summary: Performs a single iteration of an iterative (classically-controlled) phase estimation algorithm using arbitrary real powers of a unitary oracle.
-ms.openlocfilehash: a3914a4b19e3b898b6de8808699da09d386f487a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3c0f6cf084311598346b25dd7028e290946cd87f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698754"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216280"
 ---
 # <a name="continuousphaseestimationiteration-operation"></a>ContinuousPhaseEstimationIteration 操作
 
 命名空間： [Microsoft 量子. 特性](xref:Microsoft.Quantum.Characterization)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 使用單一 oracle 的任意實數，執行反復 (傳統方式控制) 階段估計演算法的單一反復專案。
 
 ```qsharp
-operation ContinuousPhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit
+operation ContinuousPhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

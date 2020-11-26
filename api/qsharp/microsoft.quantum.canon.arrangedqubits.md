@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ArrangedQubits
 title: ArrangedQubits 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ArrangedQubits
 qsharp.summary: Arrange control, target, and helper qubits according to an index
-ms.openlocfilehash: 7f5cce3429b72f0ff6e00c2079241272881512da
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7f3bc4dff73d5ad6393294fc3770b8d36e6094fb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699102"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217062"
 ---
 # <a name="arrangedqubits-function"></a>ArrangedQubits 函式
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 根據索引排列控制項、目標和 helper 量子位

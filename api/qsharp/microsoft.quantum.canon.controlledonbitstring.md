@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ControlledOnBitString
 title: ControlledOnBitString 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ControlledOnBitString
 qsharp.summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
-ms.openlocfilehash: ca5a6e116eff187060f7a160e42836b170f0362d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9435406506fc99fe211f5dce628b21c18ee4f9fe
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699059"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216654"
 ---
 # <a name="controlledonbitstring-function"></a>ControlledOnBitString 函式
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回在目標暫存器上套用 oracle 的單一作業（如果控制項暫存器狀態對應到指定的位元遮罩）。
@@ -39,13 +39,13 @@ function ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj +
 用來控制指定之單一作業的位字串。
 
 
-### <a name="oracle--t--unit-adj--ctl"></a>oracle： t => [單位](xref:microsoft.quantum.lang-ref.unit) 調整 + Ctl
+### <a name="oracle--t--unit--is-adj--ctl"></a>oracle： t => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 要在目標注冊上套用的單一作業。
 
 
 
-## <a name="output--qubitt--unit-adj--ctl"></a>Output： ([量子位](xref:microsoft.quantum.lang-ref.qubit)[]，t) => [單位](xref:microsoft.quantum.lang-ref.unit) 調整 + Ctl
+## <a name="output--qubitt--unit--is-adj--ctl"></a>輸出： ([量子位](xref:microsoft.quantum.lang-ref.qubit)[]，t) => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 `oracle`當控制項暫存器狀態對應至位元遮罩時，會在目標暫存器上套用的單一作業 `bits` 。
 

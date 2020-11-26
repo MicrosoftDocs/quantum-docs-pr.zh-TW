@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubits
 title: ApplyToFirstThreeQubits 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToFirstThreeQubits
 qsharp.summary: Applies an operation to the first three qubits in the register.
-ms.openlocfilehash: 61330f9e9b1f6b9f3965c9240505814b295aaefe
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5572bd2a096a4f9bdb1153ae80950ae854965b82
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699193"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217452"
 ---
 # <a name="applytofirstthreequbits-operation"></a>ApplyToFirstThreeQubits 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 將作業套用至註冊中的前三個量子位。

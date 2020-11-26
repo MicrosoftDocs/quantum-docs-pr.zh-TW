@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithC
 title: ApplyWithC 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWithC
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: 8de1ddf0bf176853b33926be7647bc5d1d35095d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 172f9098a53c97e71f160b4a48479c3184be4385
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699124"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217232"
 ---
 # <a name="applywithc-operation"></a>ApplyWithC 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 假設有兩個作業，請將其套用為另一個作業的 conjugated。
 
 ```qsharp
-operation ApplyWithC<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl), target : 'T) : Unit
+operation ApplyWithC<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl), target : 'T) : Unit is Ctl
 ```
 
 
@@ -34,12 +34,12 @@ operation ApplyWithC<'T> (outerOperation : ('T => Unit is Adj), innerOperation :
 
 ## <a name="input"></a>輸入
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation： t => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation： t => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 作業 $U $，其應用於共軛 $V $。 請注意，$U $ 的外部作業需要 adjointable，但不需要是可控制的。
 
 
-### <a name="inneroperation--t--unit-ctl"></a>innerOperation： t => [單位](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="inneroperation--t--unit--is-ctl"></a>innerOperation： t => [單位](xref:microsoft.quantum.lang-ref.unit)  是 Ctl
 
 作業 $V $ 正在 conjugated。
 

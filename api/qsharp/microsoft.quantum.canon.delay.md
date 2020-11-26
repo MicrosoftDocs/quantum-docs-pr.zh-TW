@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Delay
 title: 延遲操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Delay
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: f9f0e5c3120eb69bd7431d52d6cde5e846ffbe4d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4f45527faa49f79fccff3892e928fed09f9f0bc8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699041"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216501"
 ---
 # <a name="delay-operation"></a>延遲操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 套用具有延遲的指定作業。

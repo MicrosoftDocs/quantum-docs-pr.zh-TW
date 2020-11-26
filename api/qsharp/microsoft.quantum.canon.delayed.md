@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Delayed
 title: 延遲函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Delayed
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: 820a38c2b4de2e0151d55bd88fb4f69567182f6b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 863c63d0c1a50339e9d5b9fbe4729932b2706f32
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699032"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216450"
 ---
 # <a name="delayed-function"></a>延遲函數
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回以指定的引數套用指定作業的作業。

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateRealOverlapBetweenStates
 title: EstimateRealOverlapBetweenStates 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateRealOverlapBetweenStates
 qsharp.summary: Given two operations which each prepare copies of a state, estimates the real part of the overlap between the states prepared by each operation.
-ms.openlocfilehash: 01631bcbff2bff26ddc1db4e42d90ac4f8380bd4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d9f569ceffc16f377189dc94035213b9075609cc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698723"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216178"
 ---
 # <a name="estimaterealoverlapbetweenstates-operation"></a>EstimateRealOverlapBetweenStates 操作
 
 命名空間： [Microsoft 量子. 特性](xref:Microsoft.Quantum.Characterization)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 假設有兩個作業，每個作業都會準備狀態的複本，並估計每個作業所準備的狀態之間重迭的實際部分。
@@ -30,17 +30,17 @@ operation EstimateRealOverlapBetweenStates (commonPreparation : (Qubit[] => Unit
 
 ## <a name="input"></a>輸入
 
-### <a name="commonpreparation--qubit--unit-adj"></a>commonPreparation： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+### <a name="commonpreparation--qubit--unit--is-adj"></a>commonPreparation： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 準備固定輸入狀態的作業。
 
 
-### <a name="preparation1--qubit--unit-adj--ctl"></a>preparation1： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit) 調整 + Ctl
+### <a name="preparation1--qubit--unit--is-adj--ctl"></a>preparation1： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 要比較的兩個狀態準備作業中的第一個。
 
 
-### <a name="preparation2--qubit--unit-adj--ctl"></a>preparation2： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit) 調整 + Ctl
+### <a name="preparation2--qubit--unit--is-adj--ctl"></a>preparation2： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 要比較的兩個狀態準備作業的第二個。
 

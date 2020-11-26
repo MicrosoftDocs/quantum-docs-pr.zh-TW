@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedBy
 title: ConjugatedBy 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ConjugatedBy
 qsharp.summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-ms.openlocfilehash: 37fbee9a7c11991645933a372f9f12c1fd696b66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ed5316d4603c31d7db2cd6b0d7e54b56fc750fcb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699063"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216722"
 ---
 # <a name="conjugatedby-function"></a>ConjugatedBy 函式
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 指定外部和內部作業時，會傳回由外部作業 conjugates 內部作業的新作業。
@@ -30,7 +30,7 @@ function ConjugatedBy<'T> (outerOperation : ('T => Unit is Adj), innerOperation 
 
 ## <a name="input"></a>輸入
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation： t => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation： t => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 作業 $U $，其應用於共軛 $V $。 請注意，$U $ 的外部作業需要 adjointable，但不需要是可控制的。
 

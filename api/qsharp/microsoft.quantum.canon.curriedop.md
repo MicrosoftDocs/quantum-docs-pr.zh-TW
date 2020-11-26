@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.CurriedOp
 title: CurriedOp 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Returns a curried version of an operation on two inputs.
 
   That is, given an operation with two inputs, this function applies Curry's isomorphism $f(x, y) \equiv f(x)(y)$ to return an operation of one input which returns an operation of one input.
-ms.openlocfilehash: 13bc3e195d8a4ba26b726f96e4dc6b83da43c3e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6c1917d6f1ee69cb29fed1ab173106af1e206533
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699048"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216620"
 ---
 # <a name="curriedop-function"></a>CurriedOp 函式
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回兩個輸入之作業的局部擴充版本。

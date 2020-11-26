@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachIndexC
 title: ApplyToEachIndexC 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachIndexC
 qsharp.summary: Applies a single-qubit operation to each indexed element in a register. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: 387d7ea24b9251386a71b42a1f51ce70933bf6fc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 38fa23c70965118f1787f156bd617d6e967aba05
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699214"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217657"
 ---
 # <a name="applytoeachindexc-operation"></a>ApplyToEachIndexC 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 將單一量子位作業套用至暫存器中的每個索引元素。
 修飾詞 `C` 表示單一量子位作業是可控制的。
 
 ```qsharp
-operation ApplyToEachIndexC<'T> (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit
+operation ApplyToEachIndexC<'T> (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>輸入
 
-### <a name="singleelementoperation--intt--unit-ctl"></a>singleElementOperation： ([Int](xref:microsoft.quantum.lang-ref.int)，t) => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="singleelementoperation--intt--unit--is-ctl"></a>singleElementOperation： ([Int](xref:microsoft.quantum.lang-ref.int)，t) => [單位](xref:microsoft.quantum.lang-ref.unit)  是 Ctl
 
 要套用至每個量子位的作業。
 

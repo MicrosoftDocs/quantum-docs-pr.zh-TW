@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexZ
 title: ApproximatelyMultiplexZ 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximatelyMultiplexZ
 qsharp.summary: Applies a Pauli Z rotation conditioned on an array of qubits, truncating small rotation angles according to a given tolerance.
-ms.openlocfilehash: ac5195b8b3afaad4d41fe50d45652644e2397e1b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5e254c2b2d6cbf29b428f4d55aef0e61356e3480
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699109"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217096"
 ---
 # <a name="approximatelymultiplexz-operation"></a>ApproximatelyMultiplexZ 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 在量子位陣列上套用 Pauli Z 旋轉，並根據指定的容錯截斷小旋轉角度。
 
 ```qsharp
-operation ApproximatelyMultiplexZ (tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit
+operation ApproximatelyMultiplexZ (tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit is Adj + Ctl
 ```
 
 

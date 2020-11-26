@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateFrequency
 title: EstimateFrequency 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateFrequency
 qsharp.summary: Given a preparation and measurement, estimates the frequency with which that measurement succeeds (returns `Zero`) by performing a given number of trials.
-ms.openlocfilehash: 83589637a7bfa328812207271844411f57d42097
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 30b21a8e86eb5a4dd8dd8207dbdc6a0970308319
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698755"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216246"
 ---
 # <a name="estimatefrequency-operation"></a>EstimateFrequency 操作
 
 命名空間： [Microsoft 量子. 特性](xref:Microsoft.Quantum.Characterization)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 在準備和測量之後，請透過 `Zero` 執行指定的試用次數，估計 (傳回) 的測量頻率。
@@ -35,7 +35,7 @@ operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qub
 作業 $P $，在其輸入暫存器上準備指定的狀態 $ \rho $。
 
 
-### <a name="measurement--qubit--__invalidresult__"></a>測量： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => __無效 <Result>__ 
+### <a name="measurement--qubit--__invalidresult__"></a>測量：[量子位](xref:microsoft.quantum.lang-ref.qubit)[] =>__無效 <Result>__ 
 
 作業 $M $ 代表感興趣的度量。
 
