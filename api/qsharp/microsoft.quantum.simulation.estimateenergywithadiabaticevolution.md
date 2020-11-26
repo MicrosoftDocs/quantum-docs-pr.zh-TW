@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.EstimateEnergyWithAdiabaticEvolution
 title: EstimateEnergyWithAdiabaticEvolution 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: EstimateEnergyWithAdiabaticEvolution
 qsharp.summary: Performs state preparation by applying a `statePrepUnitary` on an automatically allocated input state, followed by adiabatic state preparation using a `adiabaticUnitary`, and finally phase estimation with respect to `qpeUnitary`on the resulting state using a `phaseEstAlgorithm`.
-ms.openlocfilehash: 3fdbdd83b784cdc560e3160151fdf4ba4e7115e6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b279d35418b8f013ad0d72e9a980c9bf6ce0689a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700163"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225324"
 ---
 # <a name="estimateenergywithadiabaticevolution-operation"></a>EstimateEnergyWithAdiabaticEvolution 操作
 
 命名空間： [Microsoft 量子. 模擬](xref:Microsoft.Quantum.Simulation)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 藉由在自動設定的 `statePrepUnitary` 輸入狀態上套用，然後使用來 adiabatic 狀態準備， `adiabaticUnitary` 最後針對 `qpeUnitary` 使用的結果狀態，來執行狀態準備 `phaseEstAlgorithm` 。
@@ -45,7 +45,7 @@ operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary 
 代表 adiabatic 演進演算法的 oracle，此演算法會用來將掃量視為演算法的最終狀態。
 
 
-### <a name="qpeunitary--qubit--unit-adj--ctl"></a>qpeUnitary： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit) 調整 + Ctl
+### <a name="qpeunitary--qubit--unit--is-adj--ctl"></a>qpeUnitary： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 Oracle 代表單一運算子 $U $ 代表時間 $ \delta t $ 在 dynamical 產生器下的時間 $ \ket{\phi} $ 和地面狀態能源 $E = \phi \\ ，\delta t $。
 

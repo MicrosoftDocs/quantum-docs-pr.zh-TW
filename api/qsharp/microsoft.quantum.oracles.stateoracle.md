@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles.StateOracle
 title: StateOracle 使用者定義型別
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -12,18 +12,18 @@ qsharp.summary: >-
   The inputs to the oracle $O$ are:
 
   - An integer indexing the flag qubit $f$. - The system register $s$ that will store the desired quantum state $\ket{\psi}\_s$.
-ms.openlocfilehash: 65f4edcf2101190da0c6d00eb4dd21881143ceb0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6b2cf09c23942a586414daccb99cbb27b5026b9d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700782"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226599"
 ---
 # <a name="stateoracle-user-defined-type"></a>StateOracle 使用者定義型別
 
 命名空間： [oracle](xref:Microsoft.Quantum.Oracles)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 代表 oracle 的狀態準備。

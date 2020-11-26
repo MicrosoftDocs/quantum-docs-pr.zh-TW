@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._DeltaParityCNOTbitstring
 title: _DeltaParityCNOTbitstring 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: _DeltaParityCNOTbitstring
 qsharp.summary: Classical processing step of `ApplyDeltaParity`. This computes a list of control qubits for evaluating parity difference between any two PQRS... terms of even length.
-ms.openlocfilehash: 95b4c2df05f32cb937ec2cf421f43f2fdbf319da
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0c0da60e3c389f8208f9f7d5c84a09893f3c1bda
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697546"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226072"
 ---
 # <a name="_deltaparitycnotbitstring-function"></a>_DeltaParityCNOTbitstring 函式
 
 命名空間： [Microsoft.](xref:Microsoft.Quantum.Research.Chemistry) .........。
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry) ......... 化學
 
 
 的傳統處理步驟 `ApplyDeltaParity` 。

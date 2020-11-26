@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation
 title: RandomWalkPhaseEstimation 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Characterization
 qsharp.name: RandomWalkPhaseEstimation
 qsharp.summary: Performs iterative phase estimation using a random walk to approximate Bayesian inference on the classical measurement results from a given oracle and eigenstate.
-ms.openlocfilehash: 5e0c0871b916ff51b85dec8703111788b5204bc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c3afdd41da24a1f32f59f36f0f5c5ed29df1f0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697554"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226157"
 ---
 # <a name="randomwalkphaseestimation-operation"></a>RandomWalkPhaseEstimation 操作
 
 命名空間： [Microsoft.](xref:Microsoft.Quantum.Research.Characterization) ..........。
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.Research.Characterization) ...........。
 
 
 使用隨機的逐步解說，在給定 oracle 和 eigenstate 的傳統測量結果上，使用近似的貝氏推斷，執行反復的階段估計。
@@ -80,7 +80,7 @@ $U $ act 的暫存器。
 
 ### <a name="experiment-design"></a>實驗設計
 
-測量時間 $t $ 和反轉角度 $ \theta $ 傳遞給的物件 `oracle` ，是根據物件 *猜測啟發式* \Begin{align} \theta \sim \Pr ( \phi) ，\quad t \approx \frac {1} {\variance{\phi}}。
+測量時間 $t $ 和反轉角度 $ \theta $ 傳遞給的物件 `oracle` ，是根據物件 *猜測啟發式*\Begin{align} \theta \sim \Pr ( \phi) ，\quad t \approx \frac {1} {\variance{\phi}}。
 \end{align} 這種啟發學習法的最佳方式，是在一般之前的假設下，減少反復階段估計的預期「事後 posterior 變異數。
 
 ### <a name="optimality"></a>最優
@@ -93,4 +93,4 @@ $U $ act 的暫存器。
 
 - Ferrie *et al.exe.* 2011 [doi： 10/tfx-cli](https://doi.org/10.1007/s11128-012-0407-6)， [arXiv： 1110.3067](https://arxiv.org/abs/1110.3067)。
 - Wiebe *et al.exe.* 2013 [doi： 10/tf3](https://doi.org/10.1103/PhysRevLett.112.190501)， [arXiv： 1309.0876](https://arxiv.org/abs/1309.0876)
-- Wiebe 和 Granade 2018 *(準備)* 。
+- Wiebe 和 Granade 2018 *(準備)*。
