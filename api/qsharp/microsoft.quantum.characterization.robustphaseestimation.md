@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
 title: RobustPhaseEstimation 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: RobustPhaseEstimation
 qsharp.summary: Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate, and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
-ms.openlocfilehash: d04ee578c0e6f916e9a4da451075b79e0630c70a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3e6774e2fe348668840cdc08fe3a070ec3d82a6d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698714"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216076"
 ---
 # <a name="robustphaseestimation-operation"></a>RobustPhaseEstimation 操作
 
 命名空間： [Microsoft 量子. 特性](xref:Microsoft.Quantum.Characterization)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 針對給定的 oracle 和 eigenstate 執行健全的非反復式量子階段估計演算法 `U` ，並提供以海森堡限制的變異數調整之階段的單一實際值估計。
