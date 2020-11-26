@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.LocalRotationsLayer
 title: LocalRotationsLayer 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: LocalRotationsLayer
 qsharp.summary: Returns an array of uncontrolled (single-qubit) rotations along a given axis, with one rotation for each qubit in a register, parameterized by distinct model parameters.
-ms.openlocfilehash: 8a3557f76d5d7a7b6375e5640cf6d11172cd38a6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1549f24427f19bacbadf72e00c1c0181b64bcb73
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700566"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211724"
 ---
 # <a name="localrotationslayer-function"></a>LocalRotationsLayer 函式
 
 命名空間： [MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-包： [](https://nuget.org/packages/)
+封裝： [MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 傳回未受控制的 (單一量子位) 旋轉的陣列，在指定的軸上，暫存器中的每個量子位都會有一次旋轉，並以相異模型參數參數化。

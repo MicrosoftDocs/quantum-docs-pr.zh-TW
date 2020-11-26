@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.AbsL
 title: AbsL 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: AbsL
 qsharp.summary: Returns the absolute value of a big integer.
-ms.openlocfilehash: 0682bde6669a9a6254b6e8fc3ca0b8872a8b829d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 39e21c8578c91306dcefe909d80609babdaa8e14
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700255"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211316"
 ---
 # <a name="absl-function"></a>AbsL 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回大整數的絕對值。

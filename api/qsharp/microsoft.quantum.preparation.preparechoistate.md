@@ -1,27 +1,27 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareChoiState
 title: PrepareChoiState 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareChoiState
-qsharp.summary: Prepares the Choi–Jamiłkowski state for a given operation onto given reference and target registers.
-ms.openlocfilehash: 8b2917a7d9414539f2f7c821c4115fc4b21d0373
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+qsharp.summary: Prepares the Choi–Jamiołkowski state for a given operation onto given reference and target registers.
+ms.openlocfilehash: ced71c4278f42f577760acd54ae53e7f5e6dae4a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700718"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210568"
 ---
 # <a name="preparechoistate-operation"></a>PrepareChoiState 操作
 
 命名空間： [Microsoft 量子. 準備](xref:Microsoft.Quantum.Preparation)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-針對給定的參考和目標暫存器上的指定作業，準備 Choi 對於– Jamiłkowski 狀態。
+針對給定的參考和目標暫存器上的指定作業，準備 Choi 對於– Jamiołkowski 狀態。
 
 ```qsharp
 operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit
@@ -32,7 +32,7 @@ operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target 
 
 ### <a name="op--qubit--unit"></a>op： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit) 
 
-作業 $ \Lambda $，其 Choi 對於– Jamiłkowski 狀態 $J ( \Lambda) /2 ^ N $ 是要準備的，其中 $N $ 是作用所在的量子位數目 `op` 。
+作業 $ \Lambda $，其 Choi 對於– Jamiołkowski 狀態 $J ( \Lambda) /2 ^ N $ 是要準備的，其中 $N $ 是作用所在的量子位數目 `op` 。
 
 
 ### <a name="reference--qubit"></a>參考： [量子位](xref:microsoft.quantum.lang-ref.qubit)[]

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifierAtModel
 title: TrainSequentialClassifierAtModel 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: TrainSequentialClassifierAtModel
 qsharp.summary: Given the structure of a sequential classifier, trains the classifier on a given labeled training set, starting from a particular model.
-ms.openlocfilehash: b9e30e4e5bc23f56d9119083045967caff28f13a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 02a300a2e1029d0e09aba19d090e15128fede717
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699686"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211454"
 ---
 # <a name="trainsequentialclassifieratmodel-operation"></a>TrainSequentialClassifierAtModel 操作
 
 命名空間： [MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-包： [](https://nuget.org/packages/)
+封裝： [MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 假設有連續分類器的結構，則會從特定模型開始訓練指定加上標籤之定型集的分類器。

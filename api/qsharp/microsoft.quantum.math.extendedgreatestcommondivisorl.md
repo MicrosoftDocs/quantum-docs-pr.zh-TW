@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorL
 title: ExtendedGreatestCommonDivisorL 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ExtendedGreatestCommonDivisorL
 qsharp.summary: Computes a tuple $(u,v)$ such that $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$, where $\operatorname{GCD}$ is $a$ greatest common divisor of $a$ and $b$. The GCD is always positive.
-ms.openlocfilehash: e671405045d6d2587a8c6ccbac4ae3402f92f722
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: abbbd367859952180f181a245ca0754646529b18
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700635"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210704"
 ---
 # <a name="extendedgreatestcommondivisorl-function"></a>ExtendedGreatestCommonDivisorL 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 計算元組 $ (u，v) $，以 $u \cdot a + v \cdot b = \operatorname{GCD} (a，b) $，其中 $ \operatorname{GCD} $ 是 $a $ 和 $a $ $b $ 最大公因數。 GCD 一律為正數。
