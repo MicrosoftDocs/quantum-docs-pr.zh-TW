@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PlusC
 title: PlusC 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PlusC
 qsharp.summary: Returns the sum of two inputs.
-ms.openlocfilehash: 42cc50e0369a08f7f6d10fb40e3a421c5c88ea74
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bd04445c19ffc9184f4cf6cf6cf5c8d1258b6763
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697170"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227636"
 ---
 # <a name="plusc-function"></a>PlusC 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回兩個輸入的總和。

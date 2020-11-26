@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.IEEERemainder
 title: IEEERemainder 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: IEEERemainder
 qsharp.summary: Returns the remainder resulting from the division of a specified number by another specified number.
-ms.openlocfilehash: 4547daafded317d110184a705c2adcd8ddff8136
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c6bbe902c1cc48b8fb9265405605113dbd4da9aa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699594"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228418"
 ---
 # <a name="ieeeremainder-function"></a>IEEERemainder 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回指定數字除以另一個指定數字所得的餘數。

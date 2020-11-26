@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.SignD
 title: SignD 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: SignD
 qsharp.summary: Returns an integer that indicates the sign of a number.
-ms.openlocfilehash: 7706ae8868e40c812fa396fbfcb9aaab815990cb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5e0b36a4a944c6a9f6c95dc45cc71b0296c3474e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699674"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227398"
 ---
 # <a name="signd-function"></a>SignD 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回整數，表示數字的正負號。

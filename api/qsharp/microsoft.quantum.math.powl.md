@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PowL
 title: PowL 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PowL
 qsharp.summary: Returns a number raised to a given power.
-ms.openlocfilehash: 22c05cf85acf691490049ce9ac27a7c6b2a4899e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b3207d1854f6b69cdb5b68d354000a0b6746c0c2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700931"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228316"
 ---
 # <a name="powl-function"></a>PowL 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回指定乘冪的數位。

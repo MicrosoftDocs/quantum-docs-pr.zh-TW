@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PlusD
 title: PlusD 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PlusD
 qsharp.summary: Returns the sum of two inputs.
-ms.openlocfilehash: 05533d964e2ba2b01acffa55725ebb97d0c07aea
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 74ad25aa2127beeb77560bb0031b5c1ea4449cde
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697167"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227585"
 ---
 # <a name="plusd-function"></a>PlusD 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回兩個輸入的總和。
