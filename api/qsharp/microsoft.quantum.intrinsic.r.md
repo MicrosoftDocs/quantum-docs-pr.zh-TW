@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.R
 title: R 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies a rotation about the given Pauli axis.
 
   \begin{align} R_{\mu}(\theta) \mathrel{:=} e^{-i \theta \sigma_{\mu} / 2}, \end{align} where $\mu \in \{I, X, Y, Z\}$.
-ms.openlocfilehash: 7d1d51031f4587b1c501feab459e614fc1530457
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 89aa5b2867068d4352a0b9550e8d22aa77439111
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699803"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199024"
 ---
 # <a name="r-operation"></a>R 操作
 
 命名空間： [Microsoft. 量子](xref:Microsoft.Quantum.Intrinsic)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 針對指定的 Pauli 軸套用旋轉。
@@ -29,7 +29,7 @@ ms.locfileid: "92699803"
 \begin{align} R_ {\mu} ( \theta) \mathrel{： =} e ^ {-i \theta \ sigma_ {\mu}/2}，\end{align} where $ \mu \in \{ i，X，Y，Z \} $。
 
 ```qsharp
-operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit
+operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -57,4 +57,4 @@ Pauli 運算子 ($ \mu $) 要 exponentiated 以形成旋轉。
 
 ## <a name="remarks"></a>備註
 
-以呼叫時 `pauli = PauliI` ，此作業會套用 *全域階段* 。 當與仿函數搭配使用時，這個階段可能很重要 `Controlled` 。
+以呼叫時 `pauli = PauliI` ，此作業會套用 *全域階段*。 當與仿函數搭配使用時，這個階段可能很重要 `Controlled` 。

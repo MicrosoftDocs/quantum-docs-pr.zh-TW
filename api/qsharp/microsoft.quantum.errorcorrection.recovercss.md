@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.RecoverCSS
 title: RecoverCSS 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: RecoverCSS
 qsharp.summary: Performs a single round of error correction by a quantum code described by a `CSS` type.
-ms.openlocfilehash: 48d3cd3d5f6aea265fac2f50b913ab855a31accf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eb01b1b9fccc19f0e3f1fd5ee596b95d0d61563f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697931"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200538"
 ---
 # <a name="recovercss-operation"></a>RecoverCSS 操作
 
 命名空間： [ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 依類型所描述的量副程式代碼，執行單次錯誤修正 `CSS` 。

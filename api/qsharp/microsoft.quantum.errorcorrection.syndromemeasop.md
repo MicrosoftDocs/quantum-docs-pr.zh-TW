@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp
 title: SyndromeMeasOp 使用者定義型別
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: SyndromeMeasOp
 qsharp.summary: Represents an operation that is used to measure the syndrome of an error-correcting code block.
-ms.openlocfilehash: 1314e16d26c7310bab21caa91cb398d4b6f09b29
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 65e47d82546b1df0beec2c00f435d3e7a28e6ae6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697907"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200249"
 ---
 # <a name="syndromemeasop-user-defined-type"></a>SyndromeMeasOp 使用者定義型別
 
 命名空間： [ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 表示用來測量錯誤修正程式碼區塊之症狀的作業。
