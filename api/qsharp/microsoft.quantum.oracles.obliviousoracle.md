@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles.ObliviousOracle
 title: ObliviousOracle 使用者定義型別
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -12,18 +12,18 @@ qsharp.summary: >-
   The inputs to the oracle $O$ are:
 
   - The ancilla register $a$ that $O$ acts on. - The system register $s$ on which the desired unitary $U$ is applied, post-selected on register $a$ being in state $\ket{t}\_a$.
-ms.openlocfilehash: 7c5b35984f3c8828a5ba9bdae8f9effbc1d378f2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2f92dcb28ec669229dfaf9bcb23eef9234552b8a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697586"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193874"
 ---
 # <a name="obliviousoracle-user-defined-type"></a>ObliviousOracle 使用者定義型別
 
 命名空間： [oracle](xref:Microsoft.Quantum.Oracles)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 表示 oracle for 無警示振幅放大。

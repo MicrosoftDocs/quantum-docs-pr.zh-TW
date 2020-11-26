@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Oracles.ReflectionOracleFromDeterministicStateOracle
 title: ReflectionOracleFromDeterministicStateOracle 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
 qsharp.name: ReflectionOracleFromDeterministicStateOracle
 qsharp.summary: Constructs reflection about a given state from an oracle.
-ms.openlocfilehash: c2d37216aebcdc5243d0f1d6ec9db261cc9bd0c8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 09de63d615a4d80e2b59deeddc07567aefe7660e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700198"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193823"
 ---
 # <a name="reflectionoraclefromdeterministicstateoracle-function"></a>ReflectionOracleFromDeterministicStateOracle 函式
 
 命名空間： [oracle](xref:Microsoft.Quantum.Oracles)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 從 oracle 結構反映指定狀態的反映。

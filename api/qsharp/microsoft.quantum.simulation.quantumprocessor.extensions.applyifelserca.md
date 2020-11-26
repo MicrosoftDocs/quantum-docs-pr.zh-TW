@@ -1,41 +1,41 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfElseRCA
 title: ApplyIfElseRCA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfElseRCA
 qsharp.summary: ''
-ms.openlocfilehash: fb2f7ded44708a93d97d7041bf15be2c8c48990a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6fbf186575775b3ae18a41727c225fb871f8dac0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699592"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192616"
 ---
 # <a name="applyifelserca-operation"></a>ApplyIfElseRCA 操作
 
 命名空間： [QuantumProcessor 副檔名](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyIfElseRCA<'T, 'U> (measurementResult : Result, (onResultZeroOp : ('T => Unit is Adj + Ctl), zeroArg : 'T), (onResultOneOp : ('U => Unit is Adj + Ctl), oneArg : 'U)) : Unit
+operation ApplyIfElseRCA<'T, 'U> (measurementResult : Result, (onResultZeroOp : ('T => Unit is Adj + Ctl), zeroArg : 'T), (onResultOneOp : ('U => Unit is Adj + Ctl), oneArg : 'U)) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>輸入
 
-### <a name="measurementresult--__invalidresult__"></a>measurementResult： __無效 <Result>__
+### <a name="measurementresult--__invalidresult__"></a>measurementResult：__無效 <Result>__
 
 
 
 
-### <a name="onresultzeroop--t--unit-adj--ctl"></a>onResultZeroOp： t => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞 + Ctl
+### <a name="onresultzeroop--t--unit--is-adj--ctl"></a>onResultZeroOp： t => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 
 
@@ -45,7 +45,7 @@ operation ApplyIfElseRCA<'T, 'U> (measurementResult : Result, (onResultZeroOp : 
 
 
 
-### <a name="onresultoneop--u--unit-adj--ctl"></a>onResultOneOp： ' U => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞 + Ctl
+### <a name="onresultoneop--u--unit--is-adj--ctl"></a>onResultOneOp： ' U => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 
 

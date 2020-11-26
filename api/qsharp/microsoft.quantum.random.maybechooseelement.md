@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.MaybeChooseElement
 title: MaybeChooseElement 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: MaybeChooseElement
 qsharp.summary: Given an array of data and an a distribution over its indices, attempts to choose an element at random.
-ms.openlocfilehash: 12640d9dc3aad301146eff7bcbbaae33d3ccd420
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1a69c8d5a6ae022ceda9269e17434b740809b107
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700194"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192854"
 ---
 # <a name="maybechooseelement-operation"></a>MaybeChooseElement 操作
 
 命名空間： [Microsoft. 量子](xref:Microsoft.Quantum.Random)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 由於有資料陣列和其索引的散發，因此會嘗試隨機播放專案。

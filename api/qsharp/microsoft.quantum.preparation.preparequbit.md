@@ -1,30 +1,38 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareQubit
 title: PrepareQubit 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareQubit
 qsharp.summary: >-
+  > [!WARNING]
+
+  > PrepareQubit has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.PreparePauliEigenstate> instead.
+
+
   Prepares a qubit in the +1 (`Zero`) eigenstate of the given Pauli operator. If the identity operator is given, then the qubit is prepared in the maximally mixed state.
 
   If the qubit was initially in the $\ket{0}$ state, this operation prepares the qubit in the $+1$ eigenstate of a given Pauli operator, or, for `PauliI`, in the maximally mixed state instead (see <xref:microsoft.quantum.preparation.preparesinglequbitidentity>).
 
   If the qubit was in a state other than $\ket{0}$, this operation applies the following gates: $H$ for `PauliX`, $HS$ for `PauliY`, $I$ for `PauliZ` and <xref:microsoft.quantum.preparation.preparesinglequbitidentity> for `PauliI`.
-ms.openlocfilehash: 5f42bf26a8f9638ea88c035a18846050c3776b45
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 84674d70d6a038ceaf1c637b22afa1b724d90795
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700434"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193517"
 ---
 # <a name="preparequbit-operation"></a>PrepareQubit 操作
 
 命名空間： [Microsoft 量子. 準備](xref:Microsoft.Quantum.Preparation)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
+
+> [!WARNING]
+> PrepareQubit 已被取代。 請改用 <xref:Microsoft.Quantum.Preparation.PreparePauliEigenstate>。
 
 準備量子位，以指定 Pauli 運算子的 + 1 (`Zero`) eigenstate。
 如果指定了識別運算子，則會以充分混合狀態準備量子位。

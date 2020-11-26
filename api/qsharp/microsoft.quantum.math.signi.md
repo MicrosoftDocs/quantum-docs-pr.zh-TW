@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.SignI
 title: SignI 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: SignI
 qsharp.summary: Returns an integer that indicates the sign of a number.
-ms.openlocfilehash: 3bc870bb755e1c5d26b017c99d7249d212ea5d2b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0e58ce4f2bc9e8b6c4a1db96337498f3c4efd1f3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700927"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194486"
 ---
 # <a name="signi-function"></a>SignI 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回整數，表示數字的正負號。

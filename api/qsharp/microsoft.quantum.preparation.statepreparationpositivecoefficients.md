@@ -1,30 +1,38 @@
 ---
 uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients
 title: StatePreparationPositiveCoefficients 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: StatePreparationPositiveCoefficients
 qsharp.summary: >-
+  > [!WARNING]
+
+  > StatePreparationPositiveCoefficients has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateD> instead.
+
+
   Returns an operation that prepares the given quantum state.
 
   The returned operation $U$ prepares an arbitrary quantum state $\ket{\psi}$ with positive coefficients $\alpha_j\ge 0$ from the $n$-qubit computational basis state $\ket{0...0}$.
 
   The action of U on a newly-allocated register is given by $$ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j=0}^{2^n-1}\alpha_j \ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|\alpha_j|^2}}. \end{align} $$
-ms.openlocfilehash: 39d961c71d231e7b51290f81c20c8c6b48c7e0b1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f1fd7d77531996faf566adb78f452929d6cbd50
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700402"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193245"
 ---
 # <a name="statepreparationpositivecoefficients-function"></a>StatePreparationPositiveCoefficients 函式
 
 命名空間： [Microsoft 量子. 準備](xref:Microsoft.Quantum.Preparation)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
+
+> [!WARNING]
+> StatePreparationPositiveCoefficients 已被取代。 請改用 <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateD>。
 
 傳回可準備指定量子狀態的作業。
 
@@ -46,7 +54,7 @@ function StatePreparationPositiveCoefficients (coefficients : Double[]) : (Micro
 
 
 
-## <a name="output--littleendian--unit-adj--ctl"></a>輸出： [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [單位](xref:microsoft.quantum.lang-ref.unit) 調整 + Ctl
+## <a name="output--littleendian--unit--is-adj--ctl"></a>輸出： [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 狀態準備單一作業 $U $。
 

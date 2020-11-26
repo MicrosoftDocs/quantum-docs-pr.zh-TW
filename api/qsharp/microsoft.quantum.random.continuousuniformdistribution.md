@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.ContinuousUniformDistribution
 title: ContinuousUniformDistribution 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: ContinuousUniformDistribution
 qsharp.summary: Returns a uniform distribution over a given inclusive interval.
-ms.openlocfilehash: 74300efb10ba7b5aa006f0b1b6aafde0da840f00
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a3911fe9962ce18daa239de0272c53d83344134a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697139"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193075"
 ---
 # <a name="continuousuniformdistribution-function"></a>ContinuousUniformDistribution 函式
 
 命名空間： [Microsoft. 量子](xref:Microsoft.Quantum.Random)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回指定的內含間隔的統一散發。
