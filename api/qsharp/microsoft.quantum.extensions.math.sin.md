@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.Sin
 title: Sin 函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.sin".
-ms.openlocfilehash: 8e10ede97c1a268379044aaa01c628f93dd84db7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4fcc5aef7cc336fc2826f5e114d5778f79497ead
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700339"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199314"
 ---
-# <a name="sin-function"></a><span data-ttu-id="6a87b-102">Sin 函數</span><span class="sxs-lookup"><span data-stu-id="6a87b-102">Sin function</span></span>
+# <a name="sin-function"></a><span data-ttu-id="4954a-102">Sin 函數</span><span class="sxs-lookup"><span data-stu-id="4954a-102">Sin function</span></span>
 
-<span data-ttu-id="6a87b-103">命名空間 [： ...](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="6a87b-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
+<span data-ttu-id="4954a-103">命名空間 [： ...](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="4954a-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
 
-<span data-ttu-id="6a87b-104">包： [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="6a87b-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="4954a-104">套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="4954a-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="6a87b-105">Sin 已被取代。</span><span class="sxs-lookup"><span data-stu-id="6a87b-105">Sin has been deprecated.</span></span> <span data-ttu-id="6a87b-106">請改用 <xref:Microsoft.Quantum.Math.Sin>。</span><span class="sxs-lookup"><span data-stu-id="6a87b-106">Please use <xref:Microsoft.Quantum.Math.Sin> instead.</span></span>
+> <span data-ttu-id="4954a-105">Sin 已被取代。</span><span class="sxs-lookup"><span data-stu-id="4954a-105">Sin has been deprecated.</span></span> <span data-ttu-id="4954a-106">請改用 <xref:Microsoft.Quantum.Math.Sin>。</span><span class="sxs-lookup"><span data-stu-id="4954a-106">Please use <xref:Microsoft.Quantum.Math.Sin> instead.</span></span>
 >
-> <span data-ttu-id="6a87b-107">請使用 @"microsoft.quantum.math.sin"。</span><span class="sxs-lookup"><span data-stu-id="6a87b-107">Please use @"microsoft.quantum.math.sin".</span></span>
+> <span data-ttu-id="4954a-107">請使用 @"microsoft.quantum.math.sin"。</span><span class="sxs-lookup"><span data-stu-id="4954a-107">Please use @"microsoft.quantum.math.sin".</span></span>
 
 
 
@@ -40,13 +40,13 @@ function Sin (theta : Double) : Double
 ```
 
 
-## <a name="input"></a><span data-ttu-id="6a87b-108">輸入</span><span class="sxs-lookup"><span data-stu-id="6a87b-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="4954a-108">輸入</span><span class="sxs-lookup"><span data-stu-id="4954a-108">Input</span></span>
 
-### <a name="theta--double"></a><span data-ttu-id="6a87b-109">theta： [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="6a87b-109">theta : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-
+### <a name="theta--double"></a><span data-ttu-id="4954a-109">theta： [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="4954a-109">theta : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
-## <a name="output--double"></a><span data-ttu-id="6a87b-110">輸出： [雙精度浮點數](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="6a87b-110">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+
+
+## <a name="output--double"></a><span data-ttu-id="4954a-110">輸出： [雙精度浮點數](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="4954a-110">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
