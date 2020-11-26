@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.EvaluateOddPolynomialFxP
 title: EvaluateOddPolynomialFxP 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: EvaluateOddPolynomialFxP
 qsharp.summary: Evaluates an odd polynomial in a fixed-point representation.
-ms.openlocfilehash: d52da4092f16d43ab9d08b03f798a4d6789c7348
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1bf9b6e7c416e994e70b93e5967caefd444f6426
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699891"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223216"
 ---
 # <a name="evaluateoddpolynomialfxp-operation"></a>EvaluateOddPolynomialFxP 操作
 
 命名空間： [Microsoft 量子](xref:Microsoft.Quantum.Arithmetic)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 數值](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 評估固定點標記法中的奇多項式。
 
 ```qsharp
-operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit
+operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit is Adj + Ctl
 ```
 
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IdenticalFormatFactFxP
 title: IdenticalFormatFactFxP 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IdenticalFormatFactFxP
 qsharp.summary: Assert that all fixed-point numbers in the provided array have identical point positions and qubit numbers.
-ms.openlocfilehash: 8fdaf52455dd9ac061a4c084dcff89685efbd5f3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d19e29d4786a728c2105dc55673c49b2885176f8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699870"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223029"
 ---
 # <a name="identicalformatfactfxp-function"></a>IdenticalFormatFactFxP 函式
 
 命名空間： [Microsoft 量子](xref:Microsoft.Quantum.Arithmetic)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 數值](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 判斷提供的陣列中的所有固定點數位都有相同的點位置和量子位數位。

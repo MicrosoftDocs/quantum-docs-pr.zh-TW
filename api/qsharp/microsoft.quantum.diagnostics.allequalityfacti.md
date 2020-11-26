@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllEqualityFactI
 title: AllEqualityFactI 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AllEqualityFactI
 qsharp.summary: Asserts that two arrays of integer values are equal.
-ms.openlocfilehash: 9ccd212010ae557de5ca4ab2a38d4724c5c29aa8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 92b57f49407d558e5f8d0365c168b7890f1f4981
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698179"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223879"
 ---
 # <a name="allequalityfacti-function"></a>AllEqualityFactI 函式
 
 命名空間： [Microsoft 量子. 診斷](xref:Microsoft.Quantum.Diagnostics)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 判斷提示兩個整數值陣列是否相等。

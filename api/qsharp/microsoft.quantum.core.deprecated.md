@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Core.Deprecated
 title: 已淘汰的使用者定義型別
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Core
 qsharp.name: Deprecated
 qsharp.summary: Compiler-recognized attribute used to mark a type or callable as deprecated.
-ms.openlocfilehash: b1fcae9647b2a655d25773386ecffa826515516e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 122cbc113a68cec107558d68a6fb145cf6bbd9db
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698238"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224083"
 ---
 # <a name="deprecated-user-defined-type"></a>已淘汰的使用者定義型別
 
 命名空間： [Microsoft.. 核心](xref:Microsoft.Quantum.Core)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 編譯器可辨識的屬性，可用來將類型或可呼叫標記為已被取代。

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Core.RangeEnd
 title: 到 rangeend 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Core
 qsharp.name: RangeEnd
 qsharp.summary: Returns the defined end value of the given range, which is not necessarily the last element in the sequence.
-ms.openlocfilehash: 4dbcf517c4dc17775040444c77deb0e449082390
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 90a9e31bf5c4a5e92a35998ddaec8c9e9de9888e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698230"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224032"
 ---
 # <a name="rangeend-function"></a>到 rangeend 函式
 
 命名空間： [Microsoft.. 核心](xref:Microsoft.Quantum.Core)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回指定範圍的定義結束值，這不一定是序列中的最後一個元素。

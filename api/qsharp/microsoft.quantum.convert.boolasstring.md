@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.BoolAsString
 title: BoolAsString 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: BoolAsString
 qsharp.summary: Converts a given boolean value to an equivalent string representation.
-ms.openlocfilehash: 559190e8166c723fa07628520e8348b57ee9542e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3be291e7466060d19b4008d2526d796be932e443
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698314"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224423"
 ---
 # <a name="boolasstring-function"></a>BoolAsString 函式
 
 命名空間： [Microsoft 量子. Convert](xref:Microsoft.Quantum.Convert)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 將指定的布林值轉換為相等的字串表示。
