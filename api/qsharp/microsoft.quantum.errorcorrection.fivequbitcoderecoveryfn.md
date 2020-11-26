@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.FiveQubitCodeRecoveryFn
 title: FiveQubitCodeRecoveryFn 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: FiveQubitCodeRecoveryFn
 qsharp.summary: Returns function that maps error syndrome measurements to the appropriate error-correcting Pauli operators by table lookup for the ⟦5, 1, 3⟧ quantum code.
-ms.openlocfilehash: 5b8afe222d197eb7d342ac45f027f2de9130b61a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 47e8a74d3631be2209537679ec9786a8dab63c58
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697967"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200776"
 ---
 # <a name="fivequbitcoderecoveryfn-function"></a>FiveQubitCodeRecoveryFn 函式
 
 命名空間： [ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回函式，此函式會將錯誤的症狀度量對應至⟦5，1，3⟧量副程式代碼的資料表查閱適當的錯誤更正 Pauli 運算子。

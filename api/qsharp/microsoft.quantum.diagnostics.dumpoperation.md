@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.DumpOperation
 title: DumpOperation 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: DumpOperation
 qsharp.summary: Given an operation, displays diagnostics about the operation that are made available by the current execution target.
-ms.openlocfilehash: 444d42e2440b30b3bdf50d55a399568bed063222
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b0e07173ddbeb8a96d4a85928258b6e30deb394d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698119"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202051"
 ---
 # <a name="dumpoperation-operation"></a>DumpOperation 操作
 
 命名空間： [Microsoft 量子. 診斷](xref:Microsoft.Quantum.Diagnostics)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 在指定作業的情況下，會顯示目前執行目標所提供之作業的相關診斷資訊。
@@ -35,7 +35,7 @@ operation DumpOperation (nQubits : Int, op : (Qubit[] => Unit is Adj)) : Unit
 給定作業作用所在的量子位數目。
 
 
-### <a name="op--qubit--unit-adj"></a>op： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+### <a name="op--qubit--unit--is-adj"></a>op： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 要診斷的作業。
 
