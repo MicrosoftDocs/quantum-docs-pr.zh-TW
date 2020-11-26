@@ -1,28 +1,36 @@
 ---
 uid: Microsoft.Quantum.Preparation.QuantumROM
 title: QuantumROM 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: QuantumROM
 qsharp.summary: >-
+  > [!WARNING]
+
+  > QuantumROM has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.PurifiedMixedState> instead.
+
+
   Uses the Quantum ROM technique to represent a given density matrix.
 
   Given a list of $N$ coefficients $\alpha_j$, this returns a unitary $U$ that uses the Quantum-ROM technique to prepare an approximation  $\tilde\rho\sum_{j=0}^{N-1}p_j\ket{j}\bra{j}$ of the purification of the density matrix $\rho=\sum_{j=0}^{N-1}\frac{|alpha_j|}{\sum_k |\alpha_k|}\ket{j}\bra{j}$. In this approximation, the error $\epsilon$ is such that $|p_j-\frac{|alpha_j|}{\sum_k |\alpha_k|}|\le \epsilon / N$ and $\|\tilde\rho - \rho\| \le \epsilon$. In other words, $$ \begin{align} U\ket{0}^{\lceil\log_2 N\rceil}\ket{0}^{m}=\sum_{j=0}^{N-1}\sqrt{p_j} \ket{j}\ket{\text{garbage}_j}. \end{align} $$
-ms.openlocfilehash: 8ba5c6fab4abcfaee7233df9535f22eea5f68c28
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1ee805fb2ea02121daaab7fc3eb5dbbcb134b470
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700419"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229880"
 ---
 # <a name="quantumrom-function"></a>QuantumROM 函式
 
 命名空間： [Microsoft 量子. 準備](xref:Microsoft.Quantum.Preparation)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
+
+> [!WARNING]
+> QuantumROM 已被取代。 請改用 <xref:Microsoft.Quantum.Preparation.PurifiedMixedState>。
 
 使用量子 ROM 技術來代表指定的密度矩陣。
 
@@ -48,7 +56,7 @@ $N $ 係數的陣列，指定基礎狀態的機率。
 
 
 
-## <a name="output--intintintdoublelittleendianqubit--unit-adj--ctl"></a>Output： ( # B1 [Int](xref:microsoft.quantum.lang-ref.int)， ([int](xref:microsoft.quantum.lang-ref.int)，[Int](xref:microsoft.quantum.lang-ref.int)) # A4，[Double](xref:microsoft.quantum.lang-ref.double)， ([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)，[量子位](xref:microsoft.quantum.lang-ref.qubit)[] ) => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞 + Ctl) 
+## <a name="output--intintintdoublelittleendianqubit--unit--is-adj--ctl"></a>Output： ( # B1 [Int](xref:microsoft.quantum.lang-ref.int)， ([int](xref:microsoft.quantum.lang-ref.int)，[Int](xref:microsoft.quantum.lang-ref.int)) # A4，[Double](xref:microsoft.quantum.lang-ref.double)， ([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)，[量子位](xref:microsoft.quantum.lang-ref.qubit)[] ) => [Unit](xref:microsoft.quantum.lang-ref.unit)  是形容詞 + Ctl) 
 
 ## <a name="first-parameter"></a>第一個參數
 

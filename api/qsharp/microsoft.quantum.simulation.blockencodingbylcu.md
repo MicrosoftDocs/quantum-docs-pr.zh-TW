@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingByLCU
 title: BlockEncodingByLCU 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Encodes an operator of interest into a `BlockEncoding`.
 
   This constructs a `BlockEncoding` unitary $U=P\cdot V\cdot P^\dagger$ that encodes some operator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination of unitaries. Typically, $P$ is a state preparation unitary such that $P\ket{0}\_a=\sum_j\sqrt{\alpha_j/\|\vec\alpha\|\_2}\ket{j}\_a$, and $V=\sum_{j}\ket{j}\bra{j}\_a\otimes U_j$.
-ms.openlocfilehash: 04738aa54ce8b719b05954824e3553388a995df0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 254ace01750f94e6c871de9b62f1342000bc84ea
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700963"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229540"
 ---
 # <a name="blockencodingbylcu-function"></a>BlockEncodingByLCU 函式
 
 命名空間： [Microsoft 量子. 模擬](xref:Microsoft.Quantum.Simulation)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 將感興趣的運算子編碼為 `BlockEncoding` 。
@@ -35,18 +35,18 @@ function BlockEncodingByLCU<'T, 'S> (statePreparation : ('T => Unit is Adj + Ctl
 
 ## <a name="input"></a>輸入
 
-### <a name="statepreparation--t--unit-adj--ctl"></a>statePreparation： t => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞 + Ctl
+### <a name="statepreparation--t--unit--is-adj--ctl"></a>statePreparation： t => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 單一的 $P $，可準備某個目標狀態。
 
 
-### <a name="selector--ts--unit-adj--ctl"></a>選取器： ( t，) => [單位](xref:microsoft.quantum.lang-ref.unit) 調整 + Ctl
+### <a name="selector--ts--unit--is-adj--ctl"></a>選取器： ( t，) => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 將 $H $ 的元件 unitaries 編碼的單一 $V $。
 
 
 
-## <a name="output--ts--unit-adj--ctl"></a>輸出： ( t，) => [單位](xref:microsoft.quantum.lang-ref.unit) 調整 + Ctl
+## <a name="output--ts--unit--is-adj--ctl"></a>輸出： ( t，) => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 單一的 $U $ 可共同處理暫存器 `a` 和 `s` 區塊編碼 $H $，並且滿足 $U ^ \Dagger = U $。
 

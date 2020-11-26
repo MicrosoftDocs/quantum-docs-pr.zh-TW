@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.IdentityGeneratorIndex
 title: IdentityGeneratorIndex 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: IdentityGeneratorIndex
 qsharp.summary: Returns a generator index consistent with the zero Hamiltonian, `H = 0`, which corresponds to the identity evolution operation.
-ms.openlocfilehash: d2af2dafaf75a68546cb3f16c04cf4c7ee50c6ff
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2dd3c705b0496df1719dc677e4defea5e435b839
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700871"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229285"
 ---
 # <a name="identitygeneratorindex-function"></a>IdentityGeneratorIndex 函式
 
 命名空間： [Microsoft 量子. 模擬](xref:Microsoft.Quantum.Simulation)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回與零 Hamiltonian （對應至身分識別演進作業）一致的產生器索引 `H = 0` 。

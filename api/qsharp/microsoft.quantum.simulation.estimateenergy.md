@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.EstimateEnergy
 title: EstimateEnergy 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: EstimateEnergy
 qsharp.summary: Performs state preparation by applying a `statePrepUnitary` on an automatically allocated input state phase estimation with respect to `qpeUnitary`on the resulting state using a `phaseEstAlgorithm`.
-ms.openlocfilehash: ba4a5372aaf092c3ac3a1302f9715ca643be8436
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0a02a8aad891c45b184b9b18d4e9383236485940
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700162"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229489"
 ---
 # <a name="estimateenergy-operation"></a>EstimateEnergy 操作
 
 命名空間： [Microsoft 量子. 模擬](xref:Microsoft.Quantum.Simulation)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 藉由在自動設定的 `statePrepUnitary` 輸入狀態階段估計上套用，並針對使用的 `qpeUnitary` 結果狀態套用，以執行狀態準備 `phaseEstAlgorithm` 。
@@ -40,7 +40,7 @@ operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), q
 代表初始 dynamical 產生器之狀態準備的 oracle。
 
 
-### <a name="qpeunitary--qubit--unit-adj--ctl"></a>qpeUnitary： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit) 調整 + Ctl
+### <a name="qpeunitary--qubit--unit--is-adj--ctl"></a>qpeUnitary： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 Oracle 代表單一運算子 $U $ 代表時間 $ \delta t $ 在 dynamical 產生器下的時間 $ \ket{\phi} $ 和地面狀態能源 $E = \phi \\ ，\delta t $。
 

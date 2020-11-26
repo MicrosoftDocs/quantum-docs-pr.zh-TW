@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutation
 title: TruthTablesFromPermutation 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: TruthTablesFromPermutation
 qsharp.summary: Collect all functions for controlled gates by folding through all variable indexes
-ms.openlocfilehash: 4838ab03d3b6a804b15079c380e11edb0bbbd529
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: de990298e707e5c16e6c457a7714e8d383b3c149
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701130"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231036"
 ---
 # <a name="truthtablesfrompermutation-function"></a>TruthTablesFromPermutation 函式
 
 命名空間： [Microsoft. 合成](xref:Microsoft.Quantum.Synthesis)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 藉由折迭所有變數索引來收集受控制閘道的所有功能

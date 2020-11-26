@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.UpdatedOutputPattern
 title: UpdatedOutputPattern 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: UpdatedOutputPattern
 qsharp.summary: Update an output pattern according to gate mask.
-ms.openlocfilehash: be0246ea721069e75708a57ae56de0683dbd4fb5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a284e766fae99012ef742612077f4637d716cb8e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700846"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230968"
 ---
 # <a name="updatedoutputpattern-function"></a>UpdatedOutputPattern 函式
 
 命名空間： [Microsoft. 合成](xref:Microsoft.Quantum.Synthesis)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 根據閘道遮罩來更新輸出模式。
