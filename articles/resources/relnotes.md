@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192089"
+ms.locfileid: "96231786"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -173,7 +173,7 @@ ms.locfileid: "96192089"
 
 此版本包含下列項目：
 
-- 的新支援存取修飾詞 Q# ，如需詳細資訊，請參閱檔案 [結構](xref:microsoft.quantum.guide.filestructure)
+- 的新支援存取修飾詞 Q# ，如需詳細資訊，請參閱[存取](xref:microsoft.quantum.qsharp.accessmodifiers)修飾詞
 - 已更新為 .NET Core SDK 3.1
 
 請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)和 [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
@@ -258,7 +258,7 @@ ms.locfileid: "96192089"
 
 此版本包含下列項目：
 
-- 中 [結合語句](xref:microsoft.quantum.guide.operationsfunctions#conjugations) 的新支援 Q#
+- 中 [結合語句](xref:microsoft.quantum.qsharp.conjugations#conjugations) 的新支援 Q#
 - 編譯器中的新程式碼動作 (例如：「取代為」、「新增文件」)，以及簡單的陣列項目更新
 - 在 Visual Studio Code 延伸模組中新增了安裝範本和新的專案命令
 - 新增了 ApplyIf 結合器的新變體，例如 [Microsoft.Quantum.Canon.ApplyIfOne](xref:Microsoft.Quantum.Canon.ApplyIfOne)
@@ -275,7 +275,7 @@ ms.locfileid: "96192089"
 
 此版本包含下列項目：
 
-- 切割陣列的新索引位置；請[參閱語言參考](xref:microsoft.quantum.guide.expressions#array-slices)以取得詳細資訊。
+- 新的配量陣列索引，如需詳細資訊， [請參閱語言參考](xref:microsoft.quantum.qsharp.contextualexpressions#contextual-and-omitted-expressions) 。
 - 已新增 [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)上裝載的 Dockerfile，如需詳細資訊，請參閱 [I 存放 Q# 庫。](https://github.com/microsoft/iqsharp/blob/main/README.md)
 - [追蹤模擬器](xref:microsoft.quantum.machines.qc-trace-simulator.intro)的重大變更、組態設定的更新、名稱變更；請參閱 [.NET API 瀏覽器以了解更新的名稱](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration)。
 
@@ -296,10 +296,10 @@ ms.locfileid: "96192089"
 
 ### <a name="no-locq-language-syntax"></a>Q# 語言語法
 此版本新增了 Q# 語言語法：
-* 新增[使用者自訂類型](xref:microsoft.quantum.guide.types#user-defined-types)的具名項目。  
+* 將 [使用者自訂類型] qsharp 的命名專案加入至) 。  
 * 使用者定義類型建構函式現在可以當作函式使用。
-* 在使用者定義類型中新增 [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) 和 [apply-and-reassign](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) 的支援。
-* [重複直到成功](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)迴圈的修復區塊現在是選擇性的。
+* 在使用者定義類型中新增 [copy-and-update](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions) 和 [apply-and-reassign](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements) 的支援。
+* [重複直到成功](xref:microsoft.quantum.qsharp.conditionalloops#repeat-statement)迴圈的修復區塊現在是選擇性的。
 * 我們現在支援函式中 (而非作業中) 的 While 迴圈。
 
 ### <a name="library"></a>程式庫 
@@ -327,10 +327,10 @@ ms.locfileid: "96192089"
 
 ### <a name="no-locq-language-syntax"></a>Q# 語言語法
 此版本新增了 Q# 語言語法：
-* 使用 `+` 運算子新增[用來表示量子作業特製化 (控制和伴隨) 的快速方法](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)。  舊語法已被取代。  使用舊語法的程式 (例如 `: adjoint`) 將可繼續運作，但會產生編譯時間警告。  
-* 新增 [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) 的運算子 `w/`，可用來將陣列的建立表示為現有陣列的修改。
-* 新增一般 [apply-and-update 陳述式](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols)，例如 `+=`、`w/=`。
-* 新增為[開放式指示詞](xref:microsoft.quantum.guide.filestructure#open-directives)中的命名空間指定簡短名稱的方法。
+* 使用 `+` 運算子新增[用來表示量子作業特製化 (控制和伴隨) 的快速方法](xref:microsoft.quantum.qsharp.specializationdeclarations)。  舊語法已被取代。  使用舊語法的程式 (例如 `: adjoint`) 將可繼續運作，但會產生編譯時間警告。  
+* 為 [複製和更新](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions)新增三元運算子， `w/` `<-` 可用來以修改現有陣列的方式來表示建立陣列。
+* 新增常見的 [apply 和-重新指派語句](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements)，例如，、 `+=` `w/=` 。
+* 新增為[開放式指示詞](xref:microsoft.quantum.qsharp.namespaces#open-directives)中的命名空間指定簡短名稱的方法。
 
 在此版本中，我們不再允許在 set 陳述式的左側指定陣列元素。  這是因為該語法意味著陣列是可變動的，然而事實上，作業的結果一律是經由修改建立新陣列。  系統將會產生編譯器錯誤，並建議使用新的 copy-and-update 運算子 `w/` 達到相同的結果。  
 
@@ -405,7 +405,7 @@ ms.locfileid: "96192089"
 
 - 社群回報的 DumpRegister 問題 ([#148](https://github.com/Microsoft/Quantum/issues/148)) 的 Bug 修正。
 
-- 新增了從 [Using 陳述式](xref:microsoft.quantum.guide.qubits#allocating-qubits)傳回的功能。
+- 已新增從 [using 和借用語句](xref:microsoft.quantum.qsharp.quantummemorymanagement#quantum-memory-management)中傳回的能力。
 
 - 全新設計的[使用者入門指南](xref:microsoft.quantum.install)。
 
@@ -428,7 +428,7 @@ ms.locfileid: "96192089"
 
 此版本包含下列項目：
 
-- 新增新的基本類型 BigInt 的支援，此類型代表任意大小帶正負號的整數。  深入了解 [BigInt 類型](xref:microsoft.quantum.guide.types)。
+- 新增新的基本類型 BigInt 的支援，此類型代表任意大小帶正負號的整數。  深入瞭解 [BigInt](xref:microsoft.quantum.qsharp.valueliterals#bigint-literals)。
 - 新增 Toffoli 模擬器，這是一種特殊用途的快速模擬器，可模擬具有大量量子位元的 X、CNOT 和多重受控 X 量子作業。  深入了解 [Toffoli 模擬器](xref:microsoft.quantum.machines.toffoli-simulator)。
 - 新增簡單的資源估算器，以估計在量子電腦上執行特定實例作業所需的資源 Q# 。  深入了解[資源估算器](xref:microsoft.quantum.machines.resources-estimator)。
 

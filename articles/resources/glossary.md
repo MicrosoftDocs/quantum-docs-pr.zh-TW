@@ -87,7 +87,7 @@
 
 ## <a name="adjoint"></a>伴隨
 
-[運算](xref:microsoft.quantum.glossary#operation)的複數共軛。 針對執行 [單一](xref:microsoft.quantum.glossary#unitary-operator) 運算子的作業，adjoint 是作業的反向作業，並以 dagger 符號表示。 例如，如果作業 `U` 代表單一運算子 $ U $ ，則 `Adjoint U` 表示 $ u ^ \dagger $ 。 如需詳細資訊，請參閱 [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)。
+[運算](xref:microsoft.quantum.glossary#operation)的複數共軛。 針對執行 [單一](xref:microsoft.quantum.glossary#unitary-operator) 運算子的作業，adjoint 是作業的反向作業，並以 dagger 符號表示。 例如，如果作業 `U` 代表單一運算子 $ U $ ，則 `Adjoint U` 表示 $ u ^ \dagger $ 。 如需詳細資訊，請參閱 [仿函數應用程式](xref:microsoft.quantum.qsharp.functorapplication#functor-application)。
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -103,7 +103,8 @@
 
 ## <a name="callable"></a>調用
 
-語言[中的作業或](xref:microsoft.quantum.glossary#operation)[函數](xref:microsoft.quantum.glossary#function) Q# 。 如需詳細資訊，請參閱 [作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。
+[ Q# 語言](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language)[中的作業或](xref:microsoft.quantum.glossary#operation)[函數](xref:microsoft.quantum.glossary#function)。
+如需詳細資訊，請參閱[ Q# 程式](xref:microsoft.quantum.guide.programs)
 
 ## <a name="clifford-group"></a>Clifford 群組
 
@@ -111,7 +112,7 @@
 
 ## <a name="controlled"></a>控制
 
-將一或多個[量子位](xref:microsoft.quantum.glossary#qubit)做為目標[作業的啟用程式的量子作業](xref:microsoft.quantum.glossary#operation)。 如需詳細資訊，請參閱 [控制和 adjoint 作業](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)。
+將一或多個[量子位](xref:microsoft.quantum.glossary#qubit)做為目標[作業的啟用程式的量子作業](xref:microsoft.quantum.glossary#operation)。 如需詳細資訊，請參閱 [仿函數應用程式](xref:microsoft.quantum.qsharp.functorapplication#functor-application)。
 
 ## <a name="dirac-notation"></a>Dirac 標記法
 
@@ -138,11 +139,11 @@
 [量子狀態](xref:microsoft.quantum.glossary#quantum-state)如何隨著時間變更。 如需詳細資訊，請參閱 [矩陣指數](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials)。
 
 ## <a name="function"></a>函式
-Q#語言中純傳統 (非量子) 的副程式類型。 雖然函式是在量子演算法內使用，但無法對 [量子位](xref:microsoft.quantum.glossary#qubit) 或呼叫 [作業](xref:microsoft.quantum.glossary#operation)採取行動。 如需詳細資訊，請參閱 [作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。
+語言中純粹具決定性的副程式類型 Q# 。 雖然函式是在量子演算法內使用，但無法對 [量子位](xref:microsoft.quantum.glossary#qubit) 或呼叫 [作業](xref:microsoft.quantum.glossary#operation)採取行動。 如需詳細資訊，請參閱[ Q# 程式](xref:microsoft.quantum.guide.programs)
 
 ## <a name="gate"></a>門
 
-量子 [運算](xref:microsoft.quantum.glossary#operation)的舊版詞彙，以傳統邏輯閘道的概念為基礎。 [量子電路](xref:microsoft.quantum.glossary#quantum-circuit-diagram)是閘道 (或作業) 的網路，根據傳統邏輯電路的類似概念。
+特定內建量子 [作業](xref:microsoft.quantum.glossary#operation)的舊版詞彙，以傳統邏輯閘道的概念為基礎。 [量子電路](xref:microsoft.quantum.glossary#quantum-circuit-diagram)是閘道的網路，以傳統邏輯電路的類似概念為基礎。
 
 ## <a name="global-phase"></a>全域階段
 
@@ -166,15 +167,11 @@ Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](
 
 ## <a name="namespace"></a>命名空間
 
-相關名稱集合的標籤 (例如、[作業](xref:microsoft.quantum.glossary#operation) [、函](xref:microsoft.quantum.glossary#function)[式和使用者定義型](xref:microsoft.quantum.glossary#user-defined-type)別) 。 例如，命名空間（namespace） [。準備](xref:microsoft.quantum.preparation) 標記標準程式庫中定義的所有符號，有助於準備初始狀態。
+相關名稱集合的標籤 (例如、[作業](xref:microsoft.quantum.glossary#operation) [、函](xref:microsoft.quantum.glossary#function)[式和使用者定義型](xref:microsoft.quantum.glossary#user-defined-type)別) 。 例如，命名空間（namespace） [。準備](xref:Microsoft.Quantum.Preparation) 標記標準程式庫中定義的所有符號，有助於準備初始狀態。
 
 ## <a name="operation"></a>作業
 
-中量子計算的基本單位 Q# 。 它大致上相當於 C、c + + 或 Python 中的函式，或是 c # 或 JAVA 中的靜態方法。 如需詳細資訊，請參閱 [作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。
-
-## <a name="operator-application"></a>操作員應用程式
-
-執行量子運算。 這通常會將單一矩陣套用至目前的量子狀態向量。
+中量子計算的基本單位 Q# 。 它大致上相當於 C、c + + 或 Python 中的函式，或是 c # 或 JAVA 中的靜態方法。 如需詳細資訊，請參閱[ Q# 程式](xref:microsoft.quantum.guide.programs)。
 
 ## <a name="oracle"></a>Oracle
 
@@ -182,7 +179,7 @@ Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](
 
 ## <a name="partial-application"></a>部分應用程式
 
-呼叫[不含](xref:microsoft.quantum.glossary#operation)所有必要輸入的[函數](xref:microsoft.quantum.glossary#function)或作業。 這 [會傳回新的可](xref:microsoft.quantum.glossary#callable) 呼叫，只需要在未來應用程式中提供的底線)  (所表示的遺漏參數。 例如，假設有個函式， `MyFunc(x : int, y : int) : int {return x + y;}` 您可以將它部分套用至新的函式 `let NewFunc = MyFunc(_, 3)` 。 然後，您可以稍後再使用遺漏的參數 `NewFunc(2)` （傳回值 *5* ）來呼叫新的函式。  如需詳細資訊，請參閱 [部分應用程式](xref:microsoft.quantum.guide.operationsfunctions#partial-application)。
+呼叫[不含](xref:microsoft.quantum.glossary#operation)所有必要輸入的[函數](xref:microsoft.quantum.glossary#function)或作業。 這 [會傳回新的可](xref:microsoft.quantum.glossary#callable) 呼叫，只需要在未來應用程式中提供的底線)  (所表示的遺漏參數。 如需詳細資訊，請參閱 [部分應用程式](xref:microsoft.quantum.qsharp.partialapplication)。
 
 ## <a name="pauli-operators"></a>Pauli 運算子
 
@@ -190,7 +187,7 @@ Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](
 
 ## <a name="quantum-circuit-diagram"></a>量子電路圖
 
-一種方法，以圖形方式呈現簡單量副程式的 [作業](xref:microsoft.quantum.glossary#operation) (或網 [關](xref:microsoft.quantum.glossary#gate)) 的順序，例如 
+以圖形方式表示簡單量副程式之網 [關](xref:microsoft.quantum.glossary#gate) 順序的方法，例如 
 
 ![範例電路圖](~/media/qpe.png). 
 
@@ -210,7 +207,7 @@ Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](
 
 ## <a name="repeat-until-success"></a>重複直到成功
 
-機率成功的量子演算法。 失敗時，常式會重試，直到成功 (或達到) 的限制為止。 如需詳細資訊，請參閱在 [成功 (Ru 之前重複執行) ](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)
+通常用於量子演算法的概念，其中包含重複套用計算，直到滿足特定條件為止。 當條件不符合時，通常需要修復，然後再輸入下一次反復專案來重試。 如需詳細資訊，請參閱[ Q# 使用者指南](xref:microsoft.quantum.guide)
 
 ## <a name="standard-libraries"></a>標準程式庫
 
@@ -230,7 +227,7 @@ Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](
 
 ## <a name="tuple"></a>Tuple
 
-以逗號分隔值的集合，可作為單一值。 元組的 *型* 別是由它所包含的數值型別所定義。 在中 Q# ，元組是 [不可變](xref:microsoft.quantum.glossary#immutable) 的，而且可以嵌套、包含陣列或用於陣列中。 如需詳細資訊，請參閱 [元組類型](xref:microsoft.quantum.guide.types#tuple-types)。
+以逗號分隔值的集合，可作為單一值。 元組的 *型* 別是由它所包含的數值型別所定義。 在中 Q# ，元組是 [不可變](xref:microsoft.quantum.glossary#immutable) 的，而且可以嵌套、包含陣列或用於陣列中。 如需詳細資訊，請參閱 [元組](xref:microsoft.quantum.qsharp.valueliterals#tuple-literals)。
 
 ## <a name="unitary-operator"></a>單一運算子
 
@@ -238,4 +235,4 @@ Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](
 
 ## <a name="user-defined-type"></a>使用者定義型別
 
-內建或先前定義型別的集合，這些型別可能稱為單一單位。 如需詳細資訊，請參閱 [使用者定義類型](xref:microsoft.quantum.guide.types#user-defined-types)。
+可能包含一或多個已命名或匿名專案的自訂類型。 如需詳細資訊，請參閱 [類型宣告] qsharp. typedeclarations # 類型宣告) 。

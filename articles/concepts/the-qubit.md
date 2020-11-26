@@ -108,7 +108,7 @@ $$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} 、 \qquad 1 \equiv \begin{bm
 
 現在我們已經知道如何呈現量子位，我們可以討論 [*測量*](https://en.wikipedia.org/wiki/Measurement_in_quantum_mechanics)的概念，以取得這些狀態所代表的部分直覺。 測量結果對應于在量子位上「查看」的非正式構想，這會立即將量子狀態折迭為兩個傳統狀態 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 或 $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 的其中一個。 測量量子狀態向量所指定的量子位時 $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ ，我們會取得機率 $ 為 ^ 2 的結果0和機率為 $ $ | \alpha | $ $ $ $ | \beta | ^ 2 $ 的結果1。   在結果 $ 0 上 $ ，量子位的新狀態為 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ ; 在結果 $ 1 上， $ 其狀態為 $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 。 請注意， $ $ 由於正規化條件 $ | \alpha | ^ 2 + | \beta | ^ 2 = 1 $ ，這些機率會加總為1。
 
-度量的屬性也表示量子狀態向量的整體正負號是不相關的。 否定向量相當於箭號 $ \alpha \right \alpha $ 和箭號 $ \beta \right \beta $ 。 因為測量 $ 0 $ 和1的機率 $ $ 取決於詞彙的範圍平方，所以插入這類正負號並不會改變機率。 這類階段通常稱為「 [ `` *全域階段」（global 階段* ' '](https://en.wikipedia.org/wiki/Phase_factor) ），更一般的形式可以是 $ e ^ { i， \phi } $ 而不只是 $ \pm 1 $ 。
+度量的屬性也表示量子狀態向量的整體正負號是不相關的。 否定向量相當於箭號 $ \alpha \right \alpha $ 和箭號 $ \beta \right \beta $ 。 因為測量 $ 0 $ 和1的機率 $ $ 取決於詞彙的範圍平方，所以插入這類正負號並不會改變機率。 這類階段通常稱為「 [ `` *全域階段」（global 階段*' '](https://en.wikipedia.org/wiki/Phase_factor) ），更一般的形式可以是 $ e ^ { i， \phi } $ 而不只是 $ \pm 1 $ 。
 
 測量的最後一個重要屬性是它不一定會損毀所有的量子狀態向量。 如果我們從狀態 1 0 的量子位開始 $ \begin{bmatrix} \\\\ \end{bmatrix} $ （對應至傳統狀態 $ 0） $ ，測量此狀態一律會產生結果 $ 0， $ 並讓量子狀態保持不變。 在這種情況下，如果我們只有傳統的位 (也就是量子位，也就是 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 或 $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $) 然後測量則不會損毀系統。 這表示我們可以在量子電腦上複寫傳統資料並操作，就像在傳統電腦上一樣。 不過，若要一次將資訊儲存在這兩個狀態中，就能將量子運算提升至可能的傳統方式，並進一步 robs 量子電腦不限複製量子資料的能力，另請參閱 [無複製定理](https://en.wikipedia.org/wiki/No-cloning_theorem)。
 
@@ -128,17 +128,6 @@ $$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} 、 \qquad 1 \equiv \begin{bm
 這種 universality 概念與傳統 (的概念類似 universality 的概念，例如，如果輸入位的每個轉換都可以使用有限的長度電路來執行，則會將閘道組視為通用的傳統) 計算。
 在量子運算中，我們允許在量子位上執行的有效轉換是單一轉換和測量。
 Adjoint 作業或複雜的共軛轉型對於量子 *運算* 而言相當重要，因為它是將量子轉換進行反轉的必要動作。
-Q# 藉由提供自動將閘道序列編譯成其 adjoint 的方法來反映這一點，讓程式設計人員在許多情況下都必須伴隨程式碼。 範例如下所示：
-
-```qsharp
-operation PrepareSuperposition(qubit : Qubit) : Unit
-is Adj { // Auto-generate the adjoint of the operation
-    H(qubit);
-}
-```
-
-雖然這是一個簡單的範例 (因為 < x： > adjoint 是自我的) ，您可以看到這對更複雜的量子位作業有多大的價值。
-如需詳細資訊，請參閱 [作業和函數](xref:microsoft.quantum.guide.operationsfunctions)。
 
 傳統電腦上只有四個函式會將一個位對應到一個位。 相反地，在量子電腦上的單一量子位上有無限的單一轉換。 因此，沒有一組有限的基本量子作業（稱為網 [*關*](https://en.wikipedia.org/wiki/Quantum_logic_gate)）可以完全複寫量子運算中所允許的一組無限單一轉換。 這表示與傳統運算不同的是，量子電腦無法完全使用有限數目的閘道來執行每個可能的量副程式。 因此，量子電腦不能以傳統電腦的相同方式進行通用。 如此一來，當我們說出一組適用于量子運算的網 *關時，* 實際上是指比傳統運算稍微差一點。
 針對 universality，我們要求量子電腦只在使用有限長度閘道序列的有限錯誤中， *大約* 每個單一矩陣。

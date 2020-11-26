@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691817"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231769"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# API 設計原則
 
@@ -118,7 +118,7 @@ ms.locfileid: "92691817"
 
 **主要原則：** 設計函數和作業，以便與 \# 部分應用程式等 Q 語言功能搭配運作。
 
-- ✅在輸入元組中執行順序專案，讓最常套用的輸入先 ( **也** 就是：，讓部分應用程式的運作方式類似于 currying) 。
+- ✅在輸入元組中執行順序專案，讓最常套用的輸入先 (**也** 就是：，讓部分應用程式的運作方式類似于 currying) 。
 
   *範例：*
   - 以 `ApplyRotation` 浮點數和量子位作為輸入的作業，通常會先部分套用浮點數輸入，以便與預期類型輸入的作業搭配使用 `Qubit => Unit` 。 因此，簽章 `operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
@@ -185,7 +185,7 @@ ms.locfileid: "92691817"
   - 由 Microsoft 發佈作為量子開發工具組一部分的狀態準備 Api 將會放入   `Microsoft.Quantum.Preparation` 。
   - Microsoft 在量子開發工具組中發佈的量子模擬 Api 將會放入   `Microsoft.Quantum.Simulation` 。
 
-- ✅**將作業** 、函式和使用者定義型別只用于特定網域中，以表示其公用程式網域。 如有需要，請使用子命名空間來指出每個特定領域命名空間內的焦點工作。
+- ✅**將作業**、函式和使用者定義型別只用于特定網域中，以表示其公用程式網域。 如有需要，請使用子命名空間來指出每個特定領域命名空間內的焦點工作。
 
   *範例：*
   - Microsoft 所發行的量子機器學習程式庫主要放在 @"microsoft.quantum.machinelearning" 命名空間中，但範例資料集是由 @"microsoft.quantum.machinelearning.datasets"   命名空間提供。
@@ -215,7 +215,7 @@ ms.locfileid: "92691817"
   *範例：*
   - 偏好「幅度放大反覆運算」至「格羅弗反復專案」。
 
-- ✅**請** 選擇作業和函式名稱，以明確地傳達可呼叫的預期效果，而不是其實作為。 請注意，您可以和應該記載在 [API 檔批註](xref:microsoft.quantum.guide.filestructure#documentation-comments)中的執行。
+- ✅**請** 選擇作業和函式名稱，以明確地傳達可呼叫的預期效果，而不是其實作為。 請注意，您可以和應該記載在 [API 檔批註](xref:microsoft.quantum.qsharp.comments#documentation-comments)中的執行。
 
   *範例：*
   - 將「估計重迭」視為「Hadamard 測試」，因為後者會傳達前者的執行方式。
@@ -226,30 +226,30 @@ ms.locfileid: "92691817"
 
     - 判斷 **提示：檢查** 目的電腦及其量子位狀態的相關假設是否保留，可能是使用 unphysical 資源。 使用這個動詞命令的作業應該一律安全地移除，而不會影響程式庫和可執行程式的功能。 請注意，不同于事實，判斷提示通常會取決於外部狀態，例如量子位暫存器的狀態、執行環境等等。 因為外部狀態的相依性是一種副作用，所以判斷提示必須公開為作業，而不是函數。
 
-    - **估計** ：使用一或多個可能重複的度量，從測量結果中估計傳統數量。
+    - **估計**：使用一或多個可能重複的度量，從測量結果中估計傳統數量。
 
       *範例：*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **準備** ：將量子作業或作業順序套用至一或多個量子位，假設要在特定初始狀態下啟動 (通常是 $ \ket{00\cdots 0} $) ，導致這些量子位的狀態演進至所需的結束狀態。 一般情況下，對指定啟動狀態以外的狀態採取動作， **可能會** 導致未定義的單一轉換，但是仍 **應** 保留作業及其 adjoint 「取消」並套用「無作業」。
+    - **準備**：將量子作業或作業順序套用至一或多個量子位，假設要在特定初始狀態下啟動 (通常是 $ \ket{00\cdots 0} $) ，導致這些量子位的狀態演進至所需的結束狀態。 一般情況下，對指定啟動狀態以外的狀態採取動作， **可能會** 導致未定義的單一轉換，但是仍 **應** 保留作業及其 adjoint 「取消」並套用「無作業」。
 
       *範例：*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Measure** ：將量子作業或作業順序套用至一或多個量子位，然後再讀取傳統資料。
+    - **Measure**：將量子作業或作業順序套用至一或多個量子位，然後再讀取傳統資料。
 
       *範例：*
       - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Apply** ：將量子作業或作業順序套用至一或多個量子位，使這些量子位的狀態變更為一致的方式。 此動詞命令是 Q 命名法中最常見的動詞命令 \# ， **不應** 在更明確相關的動詞時使用。
+    - **Apply**：將量子作業或作業順序套用至一或多個量子位，使這些量子位的狀態變更為一致的方式。 此動詞命令是 Q 命名法中最常見的動詞命令 \# ， **不應** 在更明確相關的動詞時使用。
 
-  - **名詞** ：
+  - **名詞**：
 
-    - **事實** ：只取決於其輸入的布林條件，而不是目的電腦的狀態、其環境或電腦量子位的狀態。 相較于判斷提示，事實只會對提供給該事實的 *值* 有所區分。 例如：
+    - **事實**：只取決於其輸入的布林條件，而不是目的電腦的狀態、其環境或電腦量子位的狀態。 相較于判斷提示，事實只會對提供給該事實的 *值* 有所區分。 例如：
 
       *範例：*
       - @"microsoft.quantum.diagnostics.equalityfacti"：表示兩個整數輸入的相等事實;提供做為輸入的整數會彼此相等，或與任何其他程式狀態無關。
@@ -259,9 +259,9 @@ ms.locfileid: "92691817"
       *範例：*
       - @"microsoft.quantum.machinelearning.trainingoptions"UDT 包含適用于學習速率、迷你批次大小和其他可設定之 ML 訓練參數的命名專案。
 
-  - **形容詞** ：
+  - **形容詞**：
 
-    - ⛔️ **New** ： **不應** 使用這項形容詞，以避免在許多程式設計語言中將其使用方式與動詞混淆 (例如： c + +、c #、JAVA、TypeScript、PowerShell) 。
+    - ⛔️ **New**： **不應** 使用這項形容詞，以避免在許多程式設計語言中將其使用方式與動詞混淆 (例如： c + +、c #、JAVA、TypeScript、PowerShell) 。
 
   - **介係詞：** 在某些情況下，介係詞可用來進一步區分或澄清函數和作業名稱中名詞和動詞的角色。 不過，請務必謹慎且一致地執行此動作。
 
