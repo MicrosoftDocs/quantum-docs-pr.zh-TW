@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.DecompositionState
 title: DecompositionState 使用者定義型別
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: DecompositionState
 qsharp.summary: State during decomposition based on variable indexes
-ms.openlocfilehash: 0547c04828a80b4f696cc17e13c8cc57d0379f96
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cd2a55013f1232d4158dd6c33143b7cf6c0aafbc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701063"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203190"
 ---
 # <a name="decompositionstate-user-defined-type"></a>DecompositionState 使用者定義型別
 
 命名空間： [Microsoft. 合成](xref:Microsoft.Quantum.Synthesis)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 根據變數索引進行分解時的狀態

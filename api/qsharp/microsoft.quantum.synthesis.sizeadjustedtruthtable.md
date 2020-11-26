@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
 title: SizeAdjustedTruthTable 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Adjusts truth table from array of Booleans according to number of variables
 
   A new array is returned of length `2^numVars`, possibly requiring to extend `table`'s size with `false` entries or truncating it to `2^numVars` elements.
-ms.openlocfilehash: 3480f022df7a289594b003f201d16d8bf7c29d7e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c53ac3f2c46bca955847fc7b380337e3910390ac
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701138"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202918"
 ---
 # <a name="sizeadjustedtruthtable-function"></a>SizeAdjustedTruthTable 函式
 
 命名空間： [Microsoft. 合成](xref:Microsoft.Quantum.Synthesis)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 根據變數數目，從布林值陣列調整事實資料表

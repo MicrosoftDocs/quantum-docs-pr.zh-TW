@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.Encoded
 title: 編碼函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: Encoded
 qsharp.summary: Encode truth table in {1,-1} coding
-ms.openlocfilehash: 6b9d21969ee90f3928b65a1c97a5b0f15157e381
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 803f35b9e7af547bc34f21de74684fba885bfda9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701062"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203173"
 ---
 # <a name="encoded-function"></a>編碼函數
 
 命名空間： [Microsoft. 合成](xref:Microsoft.Quantum.Synthesis)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 編碼中的事實資料表編碼 {1,-1}

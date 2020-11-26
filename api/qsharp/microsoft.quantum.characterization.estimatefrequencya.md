@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateFrequencyA
 title: EstimateFrequencyA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateFrequencyA
 qsharp.summary: Given a preparation that is adjointable and measurement, estimates the frequency with which that measurement succeeds (returns `Zero`) by performing a given number of trials.
-ms.openlocfilehash: 88f0a237975c158bffcc015f79d2134b210ce83b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f12fc150de5bcea3d53ce88003c71976d8f2467f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698750"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204346"
 ---
 # <a name="estimatefrequencya-operation"></a>EstimateFrequencyA 操作
 
 命名空間： [Microsoft 量子. 特性](xref:Microsoft.Quantum.Characterization)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 針對 adjointable 和測量的準備工作，會透過 `Zero` 執行指定的試用次數，估計 (傳回) 的測量頻率。
@@ -30,12 +30,12 @@ operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measuremen
 
 ## <a name="input"></a>輸入
 
-### <a name="preparation--qubit--unit-adj"></a>準備： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+### <a name="preparation--qubit--unit--is-adj"></a>準備： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 Adjointable 作業 $P $，在其輸入暫存器上準備指定的狀態 $ \rho $。
 
 
-### <a name="measurement--qubit--__invalidresult__"></a>測量： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => __無效 <Result>__ 
+### <a name="measurement--qubit--__invalidresult__"></a>測量：[量子位](xref:microsoft.quantum.lang-ref.qubit)[] =>__無效 <Result>__ 
 
 作業 $M $ 代表感興趣的度量。
 

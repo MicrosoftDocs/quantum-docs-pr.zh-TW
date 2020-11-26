@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.SingleQubitProcessTomographyMeasurement
 title: SingleQubitProcessTomographyMeasurement 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: SingleQubitProcessTomographyMeasurement
 qsharp.summary: Performs a single-qubit process tomography measurement in the Pauli basis, given a particular channel of interest.
-ms.openlocfilehash: 34e5143d5be316ee42a63124d35475949db0a692
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3756040df8e34ecee1e968428b08387e0096ab7b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698710"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204193"
 ---
 # <a name="singlequbitprocesstomographymeasurement-operation"></a>SingleQubitProcessTomographyMeasurement 操作
 
 命名空間： [Microsoft 量子. 特性](xref:Microsoft.Quantum.Characterization)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 指定特定的通道，以 Pauli 為基礎執行單一量子位流程 tomography 測量。
@@ -46,7 +46,7 @@ operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurem
 
 
 
-## <a name="output--__invalidresult__"></a>輸出： __無效 <Result>__
+## <a name="output--__invalidresult__"></a>輸出：__無效 <Result>__
 
 `Zero`Probability $ $ \Begin{align} \Pr ( \texttt{zero} | \Lambda; 的結果P，Q) = \operatorname{Tr}\left ( \frac{\boldone + Q} {2} \Lambda\left [\frac{\boldone + P} {2} \right] \right) 。
 \end{align} $ $
