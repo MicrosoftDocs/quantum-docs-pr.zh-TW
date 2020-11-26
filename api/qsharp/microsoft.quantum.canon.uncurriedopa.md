@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.UncurriedOpA
 title: UncurriedOpA 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: UncurriedOpA
 qsharp.summary: Given a function which returns operations, returns a new operation which takes both inputs as a tuple. The modifier `A` indicates that the operations are adjointable.
-ms.openlocfilehash: 21df20354ad2388891f32b1bf1c7781287904983
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e535d017d2665ddb76e5f422e18b8656c73171c6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698794"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204618"
 ---
 # <a name="uncurriedopa-function"></a>UncurriedOpA 函式
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 假設有一個會傳回作業的函式，會傳回新的作業，它會將這兩個輸入視為一個元組。
@@ -31,13 +31,13 @@ function UncurriedOpA<'T, 'U> (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 
 
 ## <a name="input"></a>輸入
 
-### <a name="curriedop--t---u--unit-adj"></a>curriedOp： t-> ' U => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+### <a name="curriedop--t---u--unit--is-adj"></a>curriedOp： t-> ' U => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 傳回作業的函數。
 
 
 
-## <a name="output--tu--unit-adj"></a>輸出： ( t，' U) => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+## <a name="output--tu--unit--is-adj"></a>輸出： ( t，' U) => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 `op`相當於的新作業 `op(t, u)` `(curriedOp(t))(u)` 。
 

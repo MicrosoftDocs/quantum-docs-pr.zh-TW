@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexPauli
 title: MultiplexPauli 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: MultiplexPauli
 qsharp.summary: Applies a Pauli rotation conditioned on an array of qubits.
-ms.openlocfilehash: 0714e796c1e5ad097814bcf507f49f59a844e9ff
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c29f7efa6b10835ce41ca4c535ec1371ac38ab63
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698955"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206027"
 ---
 # <a name="multiplexpauli-operation"></a>MultiplexPauli 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 在量子位的陣列上套用 Pauli 旋轉。
 
 ```qsharp
-operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit
+operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit is Adj + Ctl
 ```
 
 

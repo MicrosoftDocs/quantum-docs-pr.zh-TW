@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.StackNew
 title: StackNew 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   > [!WARNING]
 
   > StackNew has been deprecated.
-ms.openlocfilehash: 56369682acbccb5801a62d3732dd346589dfe58e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: be057c5d299397908662fe460a2d38c3a471aff7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698854"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205094"
 ---
 # <a name="stacknew-function"></a>StackNew 函式
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
