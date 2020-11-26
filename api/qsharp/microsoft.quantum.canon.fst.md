@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Fst
 title: Fst 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Fst
 qsharp.summary: Given a pair, returns its first element.
-ms.openlocfilehash: 88ff5e29de9eeefcc1e207f277c37c63cb0faade
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 634f11881a054df7fe79d889832ea6bd80a7394f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699022"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206930"
 ---
 # <a name="fst-function"></a>Fst 函式
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 如果指定了配對，會傳回其第一個元素。

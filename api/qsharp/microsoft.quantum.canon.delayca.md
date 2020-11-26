@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayCA
 title: DelayCA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayCA
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: 4b4be55436d6619511a12c6fb7fbd0f23989152a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a32a4f4a3f5d0f253a4c4eaf28c67db8da978b0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699034"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207083"
 ---
 # <a name="delayca-operation"></a>DelayCA 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 套用具有延遲的指定作業。
 
 ```qsharp
-operation DelayCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T, aux : Unit) : Unit
+operation DelayCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T, aux : Unit) : Unit is Adj + Ctl
 ```
 
 
@@ -36,7 +36,7 @@ operation DelayCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T, aux : Unit) : U
 
 ## <a name="input"></a>輸入
 
-### <a name="op--t--unit-ctl--adj"></a>op： t => [單位](xref:microsoft.quantum.lang-ref.unit) Ctl + 形容詞
+### <a name="op--t--unit--is-adj--ctl"></a>op： t => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
 要套用的作業。
 

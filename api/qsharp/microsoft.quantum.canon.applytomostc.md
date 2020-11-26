@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMostC
 title: ApplyToMostC 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMostC
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: a5927f6b296dd50afec8979c8e8ac22979b8a082
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: af55093e44ce023c9e8b7e478730f4c527cf6d32
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699163"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208460"
 ---
 # <a name="applytomostc-operation"></a>ApplyToMostC 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 將作業套用至陣列的最後一個元素以外的所有專案。
 
 ```qsharp
-operation ApplyToMostC<'T> (op : ('T[] => Unit is Ctl), targets : 'T[]) : Unit
+operation ApplyToMostC<'T> (op : ('T[] => Unit is Ctl), targets : 'T[]) : Unit is Ctl
 ```
 
 
@@ -34,7 +34,7 @@ operation ApplyToMostC<'T> (op : ('T[] => Unit is Ctl), targets : 'T[]) : Unit
 
 ## <a name="input"></a>輸入
 
-### <a name="op--t--unit-ctl"></a>op： t [] => [單位](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="op--t--unit--is-ctl"></a>op： t [] => [單位](xref:microsoft.quantum.lang-ref.unit)  是 Ctl
 
 要套用的作業。
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.HY
 title: HY 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -12,18 +12,18 @@ qsharp.summary: >-
   The Y Hadamard transformation $H_Y = S H$ on a single qubit is:
 
   \begin{align} H_Y \mathrel{:=} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i & -i \end{bmatrix}. \end{align}
-ms.openlocfilehash: bc3417ff948b718be5b96513f30f3e2714b9e20c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ceca8eab8cb8f16333cd7a1e3c24e6cebe4ec8d7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699016"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206828"
 ---
 # <a name="hy-operation"></a>HY 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 將 Y 基礎類比套用至 Hadamard 轉換，以交換 Z 軸和 Y 軸。
@@ -34,7 +34,7 @@ ms.locfileid: "92699016"
 \end{align}
 
 ```qsharp
-operation HY (target : Qubit) : Unit
+operation HY (target : Qubit) : Unit is Adj + Ctl
 ```
 
 

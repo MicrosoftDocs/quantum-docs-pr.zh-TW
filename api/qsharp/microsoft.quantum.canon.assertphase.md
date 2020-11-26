@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.AssertPhase
 title: AssertPhase 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   > [!WARNING]
 
   > AssertPhase has been deprecated. Please use <xref:Microsoft.Quantum.Diagnostics.AssertPhase> instead.
-ms.openlocfilehash: 223c92d6ca9d3183c57709fd2080abc3dc0ecac6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 905dfcd50d698c0ebfcfa1728a0331929de3e761
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699098"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207644"
 ---
 # <a name="assertphase-operation"></a>AssertPhase 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]

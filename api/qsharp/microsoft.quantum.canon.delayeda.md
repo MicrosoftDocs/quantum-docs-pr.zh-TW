@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayedA
 title: DelayedA 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayedA
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: 11c11cdd75d80d6324666ef56930f7a522121826
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 33ff4dab36a6c6e17b9496a623f70b814c9f2fed
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699031"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207066"
 ---
 # <a name="delayeda-function"></a>DelayedA 函式
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回以指定的引數套用指定作業的作業。
@@ -30,7 +30,7 @@ function DelayedA<'T> (op : ('T => Unit is Adj), arg : 'T) : (Unit => Unit is Ad
 
 ## <a name="input"></a>輸入
 
-### <a name="op--t--unit-adj"></a>op： t => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+### <a name="op--t--unit--is-adj"></a>op： t => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 套用傳回值的結果所要套用的作業
 
@@ -41,7 +41,7 @@ function DelayedA<'T> (op : ('T => Unit is Adj), arg : 'T) : (Unit => Unit is Ad
 
 
 
-## <a name="output--unit--unit-adj"></a>輸出： [單位](xref:microsoft.quantum.lang-ref.unit) => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+## <a name="output--unit--unit--is-adj"></a>輸出： [單位](xref:microsoft.quantum.lang-ref.unit) => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 適用于輸入的新作業 `op``arg`
 

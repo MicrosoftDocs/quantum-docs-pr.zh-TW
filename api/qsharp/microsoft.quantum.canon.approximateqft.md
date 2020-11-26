@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximateQFT
 title: ApproximateQFT 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximateQFT
 qsharp.summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
-ms.openlocfilehash: ffa3a3737a43fbe6acc57700ae122a13586482e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 97a410133e80cc5bffc810e9d6455baaee32364b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699106"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207695"
 ---
 # <a name="approximateqft-operation"></a>ApproximateQFT 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 將大約的量子傅立葉轉換 (AQFT) 套用至量子暫存器。
 
 ```qsharp
-operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit
+operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -55,5 +55,5 @@ AQFT 需要2π/2k 和 Hadamard 閘道格式的 Z 旋轉閘道。
 
 ## <a name="references"></a>參考
 
-- [*Roetteler，Beth* ，Appl.exe. Commun。電腦.19 (3) ： 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
+- [*Roetteler，Beth*，Appl.exe. Commun。電腦.19 (3) ： 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
 - [*D. Coppersmith* arXiv： quant-ph/0201067v1](https://arxiv.org/abs/quant-ph/0201067)
