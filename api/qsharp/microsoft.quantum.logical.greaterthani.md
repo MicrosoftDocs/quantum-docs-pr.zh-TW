@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.GreaterThanI
 title: GreaterThanI 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: GreaterThanI
 qsharp.summary: Returns true if and only if a number is greater than another number.
-ms.openlocfilehash: ffd00d8086654a2d783a351fe254fb2ee35b9184
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 06cae04150f9f0164b06a4e3d4bb78242b41dc0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697298"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197988"
 ---
 # <a name="greaterthani-function"></a>GreaterThanI 函式
 
 命名空間： [Microsoft 量子. Logical](xref:Microsoft.Quantum.Logical)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 只有當數位大於另一個數位時，才會傳回 true。

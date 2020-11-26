@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.EqualL
 title: EqualL 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: EqualL
 qsharp.summary: Returns true if and only if two inputs are equal.
-ms.openlocfilehash: f0a2bfa866068746e9c6e249573eb61c0d08c0f0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 395b8fedd3b3334939c2a4b5602ee19e0c6e34b0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697314"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198107"
 ---
 # <a name="equall-function"></a>EqualL 函式
 
 命名空間： [Microsoft 量子. Logical](xref:Microsoft.Quantum.Logical)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 只有當兩個輸入相等時，才會傳回 true。

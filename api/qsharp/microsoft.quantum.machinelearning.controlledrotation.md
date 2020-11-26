@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ControlledRotation
 title: ControlledRotation 使用者定義型別
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ControlledRotation
 qsharp.summary: Describes a controlled rotation in terms of its target and control indices, rotation axis, and index into a model parameter vector.
-ms.openlocfilehash: afc425c16ab550fd414e656484c9ff6f0f8f3ef4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1e664b470caeba656ea4a73f70bbc0ef5fe76f7e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697691"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196560"
 ---
 # <a name="controlledrotation-user-defined-type"></a>ControlledRotation 使用者定義型別
 
 命名空間： [MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-包： [](https://nuget.org/packages/)
+封裝： [MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 描述以其目標和控制索引、旋轉軸和索引至模型參數向量的控制旋轉。

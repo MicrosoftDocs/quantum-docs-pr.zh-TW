@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.T
 title: T 運算
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: T
 qsharp.summary: Applies the T gate to a single qubit.
-ms.openlocfilehash: 868031386c95f65ae956b5e444c6d87d7ea0a697
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 352ef2c1b15a46dea85c420fc6f1cfab0382e73a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699778"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198396"
 ---
 # <a name="t-operation"></a>T 運算
 
 命名空間： [Microsoft. 量子](xref:Microsoft.Quantum.Intrinsic)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 將 T 閘道套用至單一量子位。
 
 ```qsharp
-operation T (qubit : Qubit) : Unit
+operation T (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

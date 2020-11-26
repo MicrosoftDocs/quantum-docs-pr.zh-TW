@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.NotEqualR
 title: NotEqualR 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NotEqualR
 qsharp.summary: Returns true if and only if two inputs are not equal.
-ms.openlocfilehash: 06615c7ffb6aafc296077990dfca0ce25e1e00fa
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4ac6cf4b220fa42c8eb946d6fbcad4cdb191afcd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697243"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197189"
 ---
 # <a name="notequalr-function"></a>NotEqualR 函式
 
 命名空間： [Microsoft 量子. Logical](xref:Microsoft.Quantum.Logical)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 只有在兩個輸入不相等時，才會傳回 true。
@@ -30,12 +30,12 @@ function NotEqualR (a : Result, b : Result) : Bool
 
 ## <a name="input"></a>輸入
 
-### <a name="a--__invalidresult__"></a>答： __無效 <Result>__
+### <a name="a--__invalidresult__"></a>答：__無效 <Result>__
 
 要比較的第一個值。
 
 
-### <a name="b--__invalidresult__"></a>b： __無效 <Result>__
+### <a name="b--__invalidresult__"></a>b：__無效 <Result>__
 
 要比較的第二個值。
 

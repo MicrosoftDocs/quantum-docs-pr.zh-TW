@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.LexographicComparison
 title: LexographicComparison 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LexographicComparison
 qsharp.summary: Given a comparison function, returns a new function that lexographically compares two arrays.
-ms.openlocfilehash: f0b68974a0ea26907b58971e4fa4b1f06f5714d2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4d8596c52b0fc8082a2b766d95d4052a4964b8b9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697275"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197579"
 ---
 # <a name="lexographiccomparison-function"></a>LexographicComparison 函式
 
 命名空間： [Microsoft 量子. Logical](xref:Microsoft.Quantum.Logical)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 指定比較函式時，會傳回 lexographically 比較兩個數組的新函數。
