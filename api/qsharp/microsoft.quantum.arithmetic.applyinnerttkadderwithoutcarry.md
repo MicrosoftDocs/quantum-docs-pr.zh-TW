@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdderWithoutCarry
 title: ApplyInnerTTKAdderWithoutCarry 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyInnerTTKAdderWithoutCarry
 qsharp.summary: Implements the inner addition function for the operation RippleCarryAdderNoCarryTTK. This is the inner operation that is conjugated with the outer operation to construct the full adder.
-ms.openlocfilehash: 3335c63b8509090deed1172419158da0d5e80409
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 656dc947ab88a7e7f1e8e8722c5262470307f7dc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700042"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190950"
 ---
 # <a name="applyinnerttkadderwithoutcarry-operation"></a>ApplyInnerTTKAdderWithoutCarry 操作
 
 命名空間： [Microsoft 量子](xref:Microsoft.Quantum.Arithmetic)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 執行作業 RippleCarryAdderNoCarryTTK 的內部加法函數。 這是使用外部作業 conjugated 的內部作業，用來建立完整的加入程式。
 
 ```qsharp
-operation ApplyInnerTTKAdderWithoutCarry (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyInnerTTKAdderWithoutCarry (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 

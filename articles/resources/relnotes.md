@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
-ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
+ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448339"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192089"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -23,6 +23,18 @@ ms.locfileid: "94448339"
 如需安裝指示，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
+
+## <a name="version-0142011120240"></a>版本0.14.2011120240
+
+*發行日期：2020年11月25日*
+
+- 已改善編譯器效能，因為較快的參考載入。
+- 已將[ANTLR 文法 Q# ](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/5_Grammar)新增至 Q# 語言規格。
+- 更新[ `Microsoft.Quantum.Preparation` 命名空間](xref:Microsoft.Quantum.Preparation)以與樣式指南和 API 設計原則更一致，以及支援 purified 混合狀態與其他資料 (請參閱[提案](https://github.com/microsoft/QuantumLibraries/issues/344)、[複習附注](https://github.com/microsoft/QuantumLibraries/blob/main/Design/meetings/2020/api-design-2020-11-05.md)和 pr [#212](https://github.com/microsoft/QuantumLibraries/pull/212)、 [#322](https://github.com/microsoft/QuantumLibraries/pull/322)、 [#375](https://github.com/microsoft/QuantumLibraries/pull/375) [#376](https://github.com/microsoft/QuantumLibraries/pull/376)) 。
+- 重複呼叫運算式的括弧現在是選擇性的： `(Foo(x))(y)` 可以撰寫為 `Foo(x)(y)` 。
+- 已安裝 .NET 5 或 Visual Studio 16.8 的 Visual Studio 或 Visual Studio Code 延伸模組的使用者，可能會提示您安裝 .NET Core 3.1 以繼續使用擴充功能。
+
+請參閱連結[庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)、[運行](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)時間、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)和[Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)的封閉式 pr 完整清單。
 
 ## <a name="version-01320111004"></a>版本0.13.20111004
 
@@ -109,7 +121,7 @@ ms.locfileid: "94448339"
 - 移動的作業：
   - `Microsoft.Quantum.Intrinsic.Assert` 現在為 `Microsoft.Quantum.Diagnostics.AssertMeasurement`
   - `Microsoft.Quantum.Intrinsic.AssertProb` 現在為 `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
-- Bug 修正 
+- 錯誤修正 
 
 請參閱連結[庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[運行](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)時間、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed)和[Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)的封閉式 pr 完整清單。  
 
@@ -240,7 +252,7 @@ ms.locfileid: "94448339"
 
 請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[編譯器](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[執行階段](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)和 [Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) 完整的已關閉 PR 清單。  
 
-## <a name="version-09-packagereference-0919082902"></a>0\.9 版 ( *PackageReference 0.9.1908.2902* )
+## <a name="version-09-packagereference-0919082902"></a>0\.9 版 (*PackageReference 0.9.1908.2902*)
 
 *發行日期：2019 年 8 月 29 日*
 
@@ -257,7 +269,7 @@ ms.locfileid: "94448339"
 
 此處會摘要說明這些變更，以及升級現有程式的指示。  深入瞭解[ Q# 開發人員 blog](https://devblogs.microsoft.com/qsharp)上的這些變更。
 
-## <a name="version-08-packagereference-0819071701"></a>0\.8 版 ( *PackageReference 0.8.1907.1701* )
+## <a name="version-08-packagereference-0819071701"></a>0\.8 版 (*PackageReference 0.8.1907.1701*)
 
 *發行日期：2019 年 7 月 12 日*
 
@@ -269,7 +281,7 @@ ms.locfileid: "94448339"
 
 請參閱[程式庫](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)和[範例](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)完整的已關閉 PR 清單。  
 
-## <a name="version-07-packagereference-0719053109"></a>0\.7 版 ( *PackageReference 0.7.1905.3109* )
+## <a name="version-07-packagereference-0719053109"></a>0\.7 版 (*PackageReference 0.7.1905.3109*)
 
 *發行日期：2019 年 5 月 31 日*
 
@@ -557,7 +569,7 @@ Q#編碼員社區正在成長，我們會很高興以查看第一個使用者參
 
 ### <a name="update-existing-projects"></a>更新現有的專案
 
-此版本具完整的回溯相容性。 只要將專案中的 nuget 套件更新為 `0.2.1806.1503-preview` 版，並執行 **完整重建** ，即可確定所有中繼檔案都會重新產生。
+此版本具完整的回溯相容性。 只要將專案中的 nuget 套件更新為 `0.2.1806.1503-preview` 版，並執行 **完整重建**，即可確定所有中繼檔案都會重新產生。
 
 在 Visual Studio 中，依照關於[更新套件](https://docs.microsoft.com/nuget/tools/package-manager-ui#updating-a-package)的一般指示操作。
 
