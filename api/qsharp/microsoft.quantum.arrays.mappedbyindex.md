@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.MappedByIndex
 title: MappedByIndex 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: MappedByIndex
 qsharp.summary: Given an array and a function that is defined for the indexed elements of the array, returns a new array that consists of the images of the original array under the function.
-ms.openlocfilehash: 07ca523248c363f2229551a14e77803dc4f4f82e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 430495517974b641c249fa146aa9effec542e825
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699452"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209922"
 ---
 # <a name="mappedbyindex-function"></a>MappedByIndex 函式
 
 命名空間： [Microsoft 量子。陣列](xref:Microsoft.Quantum.Arrays)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 如果陣列和函式是針對陣列的索引元素所定義，則會傳回新的陣列，此陣列是由函式下原始陣列的影像所組成。

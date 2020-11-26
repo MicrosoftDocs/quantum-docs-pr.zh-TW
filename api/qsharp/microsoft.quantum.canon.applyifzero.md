@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZero
 title: ApplyIfZero 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZero
 qsharp.summary: Applies an operation conditioned on a classical result value being zero.
-ms.openlocfilehash: 7435150937143a8d1a67afe334b683932a9655de
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3b14ef8a1aa736fe096a21fe51be5a7c5bb1d09d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699290"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209428"
 ---
 # <a name="applyifzero-operation"></a>ApplyIfZero 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 將以傳統結果值為零的運算套用。
@@ -34,7 +34,7 @@ operation ApplyIfZero<'T> (result : Result, (op : ('T => Unit), target : 'T)) : 
 
 ## <a name="input"></a>輸入
 
-### <a name="result--__invalidresult__"></a>結果： __無效 <Result>__
+### <a name="result--__invalidresult__"></a>結果：__無效 <Result>__
 
 控制是否套用 op 的測量結果。
 

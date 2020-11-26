@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHeadC
 title: ApplyToHeadC 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToHeadC
 qsharp.summary: Applies an operation to the first element of an array.
-ms.openlocfilehash: 3ff6c25837f1219dd456bf1739a2953ff72e2df9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2b7321a6c385e2d98a0e91a8f58091ea8dc43ff4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699174"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208596"
 ---
 # <a name="applytoheadc-operation"></a>ApplyToHeadC 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 將作業套用至陣列的第一個元素。
 
 ```qsharp
-operation ApplyToHeadC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit
+operation ApplyToHeadC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit is Ctl
 ```
 
 
@@ -34,7 +34,7 @@ operation ApplyToHeadC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit
 
 ## <a name="input"></a>輸入
 
-### <a name="op--t--unit-ctl"></a>op： t => [單位](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="op--t--unit--is-ctl"></a>op： t => [單位](xref:microsoft.quantum.lang-ref.unit)  是 Ctl
 
 要套用的作業。
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZeroC
 title: ApplyIfZeroC 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZeroC
 qsharp.summary: Applies a controllable operation conditioned on a classical result value being zero.
-ms.openlocfilehash: cfc2a659f4da011baadff1a0d6a20a2a36d0a285
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c89490b13d946d119f3fd38d130d90847d67fea6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699283"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209344"
 ---
 # <a name="applyifzeroc-operation"></a>ApplyIfZeroC 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 將以傳統結果值為零的可控作業套用。
 
 ```qsharp
-operation ApplyIfZeroC<'T> (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit
+operation ApplyIfZeroC<'T> (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit is Ctl
 ```
 
 
@@ -35,12 +35,12 @@ operation ApplyIfZeroC<'T> (result : Result, (op : ('T => Unit is Ctl), target :
 
 ## <a name="input"></a>輸入
 
-### <a name="result--__invalidresult__"></a>結果： __無效 <Result>__
+### <a name="result--__invalidresult__"></a>結果：__無效 <Result>__
 
 控制是否套用 op 的測量結果。
 
 
-### <a name="op--t--unit-ctl"></a>op： t => [單位](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="op--t--unit--is-ctl"></a>op： t => [單位](xref:microsoft.quantum.lang-ref.unit)  是 Ctl
 
 有條件地套用的作業。
 

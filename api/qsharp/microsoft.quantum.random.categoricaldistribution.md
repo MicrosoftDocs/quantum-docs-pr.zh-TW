@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.CategoricalDistribution
 title: CategoricalDistribution 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: CategoricalDistribution
 qsharp.summary: Returns a discrete categorical distribution, in which the probability for each of a finite list of given outcomes is explicitly specified.
-ms.openlocfilehash: 756e9e95cac5554ab8f885dab7c47ac1b174c0f3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2e3d9b17939d5a9a5bc5e7d89a843e0ff5a848ba
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700379"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210245"
 ---
 # <a name="categoricaldistribution-function"></a>CategoricalDistribution 函式
 
 命名空間： [Microsoft. 量子](xref:Microsoft.Quantum.Random)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回離散類別分佈，其中會明確指定指定結果的每個有限清單的機率。

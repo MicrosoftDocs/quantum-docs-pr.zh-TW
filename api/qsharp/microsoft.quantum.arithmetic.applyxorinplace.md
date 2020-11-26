@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyXorInPlace
 title: ApplyXorInPlace 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyXorInPlace
 qsharp.summary: Applies a bitwise-XOR operation between a classical integer and an integer represented by a register of qubits.
-ms.openlocfilehash: 5a35abc16a967e64c84466a47844ed7beeb618dc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b7fc20ac421d5cff9baa3fe05450c1564f123505
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210104"
 ---
 # <a name="applyxorinplace-operation"></a>ApplyXorInPlace 操作
 
 命名空間： [Microsoft 量子](xref:Microsoft.Quantum.Arithmetic)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 在傳統整數與量子位暫存器所代表的整數之間套用位 XOR 運算。
 
 ```qsharp
-operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
