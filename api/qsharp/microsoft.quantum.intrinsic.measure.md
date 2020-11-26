@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Measure
 title: 測量運算
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Performs a joint measurement of one or more qubits in the specified Pauli bases.
 
   The output result is given by the distribution: \begin{align} \Pr(\texttt{Zero} | \ket{\psi}) = \frac12 \braket{ \psi \mid| \left( \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_{N-1} \right) \mid| \psi }, \end{align} where $P_i$ is the $i$th element of `bases`, and where $N = \texttt{Length}(\texttt{bases})$. That is, measurement returns a `Result` $d$ such that the eigenvalue of the observed measurement effect is $(-1)^d$.
-ms.openlocfilehash: 56ddfbe5e63692e477ad75bde6b1b16269ed20c0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 804ae72ed2d5302b14011b737b7ed3ad2b9a14ca
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697718"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212285"
 ---
 # <a name="measure-operation"></a>測量運算
 
 命名空間： [Microsoft. 量子](xref:Microsoft.Quantum.Intrinsic)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 在指定的 Pauli 基底中，執行一或多個量子位的聯合度量。
@@ -47,7 +47,7 @@ operation Measure (bases : Pauli[], qubits : Qubit[]) : Result
 
 
 
-## <a name="output--__invalidresult__"></a>輸出： __無效 <Result>__
+## <a name="output--__invalidresult__"></a>輸出：__無效 <Result>__
 
 `Zero` 如果觀察到 $ + $1 eigenvalue，以及 `One` 是否觀察到 $-$1 eigenvalue。
 

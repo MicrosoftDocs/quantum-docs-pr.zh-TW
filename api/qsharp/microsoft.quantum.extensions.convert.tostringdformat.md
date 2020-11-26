@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Convert.ToStringDFormat
 title: ToStringDFormat 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Convert
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.convert.doubleasstringwithformat".
-ms.openlocfilehash: 14a3b5e54dc3acd9d5304afced638327cd01f3c5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eb85a2bdcfd338f07828c28f23a7100fd08a4f1c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697811"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213424"
 ---
 # <a name="tostringdformat-function"></a>ToStringDFormat 函式
 
 命名空間： [Microsoft. Extensions. Convert](xref:Microsoft.Quantum.Extensions.Convert)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

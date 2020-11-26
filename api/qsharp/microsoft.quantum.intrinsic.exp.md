@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Exp
 title: Exp 運算
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies the exponential of a multi-qubit Pauli operator.
 
   \begin{align} e^{i \theta [P_0 \otimes P_1 \cdots P_{N-1}]}, \end{align} where $P_i$ is the $i$th element of `paulis`, and where $N = $`Length(paulis)`.
-ms.openlocfilehash: b923374a954f90aba2deaead79dd419fbf67fea3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2eea29ec08260ea9cee1bafde80a0942e06f5abc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697738"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212404"
 ---
 # <a name="exp-operation"></a>Exp 運算
 
 命名空間： [Microsoft. 量子](xref:Microsoft.Quantum.Intrinsic)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 套用多量子位 Pauli 運算子的指數。
@@ -29,7 +29,7 @@ ms.locfileid: "92697738"
 \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}，\end{align} where $P _i $ 是 $i $ th 的元素 `paulis` ，而 where $N = $ `Length(paulis)` 。
 
 ```qsharp
-operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit
+operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

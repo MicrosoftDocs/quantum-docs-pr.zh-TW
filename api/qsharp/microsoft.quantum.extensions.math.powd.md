@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.PowD
 title: PowD 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.powd".
-ms.openlocfilehash: bf9e6195e158cfec3c7ec6bedf625aa45430af3f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: de0fb4cb7cc06bce3e8e27d5ebba0580a9fce616
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697334"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212778"
 ---
 # <a name="powd-function"></a>PowD 函式
 
 命名空間 [： ...](xref:Microsoft.Quantum.Extensions.Math)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
