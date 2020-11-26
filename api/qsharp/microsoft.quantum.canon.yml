@@ -81,6 +81,8 @@ functions:
   uid: Microsoft.Quantum.Canon.HammingWeightI
 - summary: 忽略作業或函數的輸出。
   uid: Microsoft.Quantum.Canon.Ignore
+- summary: 只有當輸入範圍是空的時，才會傳回 true。
+  uid: Microsoft.Quantum.Canon.IsRangeEmpty
 - summary: 測試給定的結果值是否等於 `One` 。
   uid: Microsoft.Quantum.Canon.IsResultOne
 - summary: 測試給定的結果值是否等於 `Zero` 。
@@ -220,6 +222,8 @@ operations:
   uid: Microsoft.Quantum.Canon.AndLadder
 - summary: 只有在這兩個控制項量子位都處於1狀態時，才使用度量來執行 adjoint 作業，以反轉指定的目標量子位。
   uid: Microsoft.Quantum.Canon.ApplyAnd
+- summary: 計算一鏈和閘道
+  uid: Microsoft.Quantum.Canon.ApplyAndChain
 - summary: ''
   uid: Microsoft.Quantum.Canon.ApplyBound
 - summary: ''
@@ -658,8 +662,6 @@ operations:
   uid: Microsoft.Quantum.Canon.IterateThroughCartesianPower
 - summary: 針對多個範圍的笛卡兒乘積中的每個索引套用作業。
   uid: Microsoft.Quantum.Canon.IterateThroughCartesianProduct
-- summary: 計算多個量子位的邏輯 AND。
-  uid: Microsoft.Quantum.Canon.LogicalANDMeasAndFix
 - summary: >+
     > [!WARNING]
 
@@ -727,6 +729,8 @@ operations:
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
   uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator
+- summary: 的執行步驟 `MultiplexOperationsFromGenerator` 。
+  uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGeneratorImpl
 - summary: MultiplexOperations 的執行步驟。
   uid: Microsoft.Quantum.Canon.MultiplexOperationsWithAuxRegister
 - summary: 在量子位的陣列上套用 Pauli 旋轉。
@@ -767,14 +771,12 @@ operations:
   uid: Microsoft.Quantum.Canon.Trotter2ImplCA
 - summary: 偶數 Trotter – Suzuki 整合器的遞迴執行。
   uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA
-- summary: 的執行步驟 `MultiplexOperationsFromGenerator` 。
-  uid: Microsoft.Quantum.Canon._MultiplexOperationsFromGenerator
 summary: ''
 uid: Microsoft.Quantum.Canon
 metadata:
-  ms.openlocfilehash: 15dd183daa445cbde87b573386780d3da34beb86
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: c8bb0e87c5f22812587ed5eaefcddc4ad04b851b
+  ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92698993"
+  ms.lasthandoff: 11/26/2020
+  ms.locfileid: "96204482"
