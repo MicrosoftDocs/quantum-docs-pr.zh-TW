@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Rest
 title: Rest 函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Rest
 qsharp.summary: Creates an array that is equal to an input array except that the first array element is dropped.
-ms.openlocfilehash: c14e4b2902741d7ea70c895aa715cbcaa849af3e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4dd10b6e8839fd906ca9c2e36c89c626d5772149
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699429"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220381"
 ---
 # <a name="rest-function"></a>Rest 函數
 
 命名空間： [Microsoft 量子。陣列](xref:Microsoft.Quantum.Arrays)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 建立等於輸入陣列的陣列，但會卸載第一個陣列元素。

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Angle
 title: Angle 函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Angle
 qsharp.summary: Returns 1, if `index` has an odd number of 1s and -1, if `index` has an even number of 1s.
-ms.openlocfilehash: da3ecdaf1b2c88180bd2a660fac0b6e87b2cafa1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1d8a9c2c19469e4949f043edd1ba91021fa42e78
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699358"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219408"
 ---
 # <a name="angle-function"></a>Angle 函數
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 如果的1為奇數，則傳回1，如果的值為1， `index` 則傳回-1 `index` 。

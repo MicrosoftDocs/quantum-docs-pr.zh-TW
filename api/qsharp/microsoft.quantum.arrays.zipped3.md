@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Zipped3
 title: Zipped3 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Zipped3
 qsharp.summary: Given three arrays, returns a new array of 3-tuples such that each 3-tuple contains an element from each original array.
-ms.openlocfilehash: c0535ca4d6e0de13bf809a21e69d100dcb798d1f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 37fda4082a46870270414649f807659fa561962b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699392"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219680"
 ---
 # <a name="zipped3-function"></a>Zipped3 函式
 
 命名空間： [Microsoft 量子。陣列](xref:Microsoft.Quantum.Arrays)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 假設有三個數組，則會傳回3個元組的新陣列，讓每個3元組包含每個原始陣列的元素。

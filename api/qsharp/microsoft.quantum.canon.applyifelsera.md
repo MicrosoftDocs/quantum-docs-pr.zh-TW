@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRA
 title: ApplyIfElseRA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRA
 qsharp.summary: Applies one of two adjointable operations, depending on the value of a classical result.
-ms.openlocfilehash: d0181d98a9867f71d8a8f8dea4331e5a13f9e59c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3ebd09b1e5876ff397f3524ba828ba26a271e91e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699302"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218592"
 ---
 # <a name="applyifelsera-operation"></a>ApplyIfElseRA 操作
 
 命名空間： [Canon](xref:Microsoft.Quantum.Canon)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 根據傳統結果的值，套用兩個 adjointable 作業的其中一個。
 
 ```qsharp
-operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit
+operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit is Adj
 ```
 
 
@@ -34,12 +34,12 @@ operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj),
 
 ## <a name="input"></a>輸入
 
-### <a name="result--__invalidresult__"></a>結果： __無效 <Result>__
+### <a name="result--__invalidresult__"></a>結果：__無效 <Result>__
 
 用來判斷是否已套用或的測量結果 `zeroOp` `oneOp` 。
 
 
-### <a name="zeroop--t--unit-adj"></a>zeroOp： t => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+### <a name="zeroop--t--unit--is-adj"></a>zeroOp： t => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 要在其上套用的 adjointable 作業 `result == Zero` 。
 
@@ -49,7 +49,7 @@ operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj),
 要在何時提供的輸入 `zeroOp` `result == Zero` 。
 
 
-### <a name="oneop--u--unit-adj"></a>oneOp： ' U => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞
+### <a name="oneop--u--unit--is-adj"></a>oneOp： ' U => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞
 
 要在其上套用的 adjointable 作業 `result == One` 。
 

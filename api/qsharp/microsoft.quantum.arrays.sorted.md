@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Sorted
 title: 已排序函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Sorted
 qsharp.summary: Given an array, returns the elements of that array sorted by a given comparison function.
-ms.openlocfilehash: 14ac5325b81aec4ba0bf94a83cf00e086a075a7c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bd8b869e03c7f4687c456a944e07a811ae0d2ce2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699424"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220224"
 ---
 # <a name="sorted-function"></a>已排序函數
 
 命名空間： [Microsoft 量子。陣列](xref:Microsoft.Quantum.Arrays)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 指定陣列時，會傳回該陣列的元素，並依指定的比較函式排序。

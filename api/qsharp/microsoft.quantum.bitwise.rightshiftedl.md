@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.RightShiftedL
 title: RightShiftedL 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: RightShiftedL
 qsharp.summary: Shifts the bitwise representation of a number right by a given number of bits.
-ms.openlocfilehash: 2929ba58b636847257391930e1019769fd2c2580
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3d941e1a0bcd96fe54ab01019293d883f11547a1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699372"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219510"
 ---
 # <a name="rightshiftedl-function"></a>RightShiftedL 函式
 
 命名空間： [Microsoft 量子. 位](xref:Microsoft.Quantum.Bitwise)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 將數位的位表示右移指定的位數。

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Where
 title: Where 函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Where
 qsharp.summary: Given a predicate and an array, returns the indices of that array where the predicate is true.
-ms.openlocfilehash: 1c9fa0463ed49788d12502257d735b965565d1ab
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 97598aa25d2d085aaab94f3d60ee64db9e2b89d6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92699402"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219918"
 ---
 # <a name="where-function"></a>Where 函數
 
 命名空間： [Microsoft 量子。陣列](xref:Microsoft.Quantum.Arrays)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 假設有述詞和陣列，則會傳回該陣列的索引，其述詞為 true。
