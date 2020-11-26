@@ -1,19 +1,19 @@
 ---
 uid: Microsoft.Quantum.Diagnostics
 title: Microsoft 量子. 診斷命名空間
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Diagnostics
 qsharp.summary: ''
-ms.openlocfilehash: 6923052f1ef63de3f51dff96e1d71dd3ed048911
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9d1b6bddc86ff0287e89360da599ee01a2eb5b33
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698066"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201626"
 ---
-# <a name="microsoftquantumdiagnostics-namespace"></a><span data-ttu-id="4303a-102">Microsoft 量子. 診斷命名空間</span><span class="sxs-lookup"><span data-stu-id="4303a-102">Microsoft.Quantum.Diagnostics namespace</span></span>
+# <a name="microsoftquantumdiagnostics-namespace"></a><span data-ttu-id="eb7e2-102">Microsoft 量子. 診斷命名空間</span><span class="sxs-lookup"><span data-stu-id="eb7e2-102">Microsoft.Quantum.Diagnostics namespace</span></span>
 
 
 
