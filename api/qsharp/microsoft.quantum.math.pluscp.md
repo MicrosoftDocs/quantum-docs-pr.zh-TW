@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PlusCP
 title: PlusCP 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PlusCP
 qsharp.summary: Returns the sum of two inputs.
-ms.openlocfilehash: 302d3b0b895f15be9fc1201a9f7892732e36fb89
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d5a392ad233c7a9cc4390f50de7981c93447ce17
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697174"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194809"
 ---
 # <a name="pluscp-function"></a>PlusCP 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回兩個輸入的總和。

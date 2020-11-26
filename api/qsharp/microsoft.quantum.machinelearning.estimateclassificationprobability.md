@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbability
 title: EstimateClassificationProbability 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: EstimateClassificationProbability
 qsharp.summary: Given a sample and a sequential classifier, estimates the classification probability for that sample by repeatedly measuring the output of the classifier on the given sample.
-ms.openlocfilehash: 79e40bc4bc0954dc6742307122609950bf22ec71
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9d127bba9624e178fbdb631a1249efe5fc2be3b0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697238"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196458"
 ---
 # <a name="estimateclassificationprobability-operation"></a>EstimateClassificationProbability 操作
 
 命名空間： [MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-包： [](https://nuget.org/packages/)
+封裝： [MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 假設有一個範例和一連串的分類器，請重複測量給定範例上的分類器輸出，以估計該範例的分類機率。

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.MinD
 title: 主意函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: MinD
 qsharp.summary: Returns the smaller of two specified numbers.
-ms.openlocfilehash: 21579cf91d60a3f29f5c812070eefee75ccbafe4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ffa06d270df3ff9b427ee765c0a4e2ea3c386cd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697659"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195166"
 ---
 # <a name="mind-function"></a>主意函數
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回兩個指定數位中較小的一個。

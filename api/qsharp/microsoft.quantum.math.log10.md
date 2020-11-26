@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Log10
 title: Log10 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Log10
 qsharp.summary: Returns the base 10 logarithm of a specified number.
-ms.openlocfilehash: 6ffdc19ac74e132ade80e2754a7060816b044c2a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: af996ea87948f852adf48bc9da1bcaafe08ad743
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697666"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195268"
 ---
 # <a name="log10-function"></a>Log10 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回指定數字的以 10 為底數的對數。

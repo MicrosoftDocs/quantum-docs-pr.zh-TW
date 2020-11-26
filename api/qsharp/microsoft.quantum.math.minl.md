@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.MinL
 title: MinL 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: MinL
 qsharp.summary: Returns the smaller of two specified numbers.
-ms.openlocfilehash: 9fde01ccf3b54806e21b2e3463bd1a4d09d4576d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 28387c75607ac6c96065508bc46e177e3d3987d9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697651"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195115"
 ---
 # <a name="minl-function"></a>MinL 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回兩個指定數位中較小的一個。

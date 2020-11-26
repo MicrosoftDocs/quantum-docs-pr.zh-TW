@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PowC
 title: PowC 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PowC
 qsharp.summary: Returns a number raised to a given power.
-ms.openlocfilehash: d7db6dcf1e06ad87b001fa2916e9eb92ed0c8447
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57a0f4c8176a7f87835c7d096136e288c4875eea
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92700223"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194707"
 ---
 # <a name="powc-function"></a>PowC 函式
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 傳回指定乘冪的數位。

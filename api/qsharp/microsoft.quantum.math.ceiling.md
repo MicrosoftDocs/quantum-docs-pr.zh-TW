@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Ceiling
 title: 上限函數
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Ceiling
 qsharp.summary: Returns the smallest integer greater than or equal to the specified number.
-ms.openlocfilehash: 816a3c5f9579cf64fd2e528b404b04920797c14c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d70527f302f118e6a1461abf7f3c4e3ba28fb239
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697211"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195659"
 ---
 # <a name="ceiling-function"></a>上限函數
 
 命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)
 
-包： [](https://nuget.org/packages/)
+套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 傳回大於或等於指定數字的最小整數。
