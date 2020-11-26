@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.TrotterStepOracle
 title: TrotterStepOracle 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: TrotterStepOracle
 qsharp.summary: Returns Trotter step operation and the parameters necessary to run it.
-ms.openlocfilehash: f7659616ea39d781137c26965cbf2005c5e634b2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: be3354a60bab6b065b42df7db9ae8ff3340be8e7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698379"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214461"
 ---
 # <a name="trottersteporacle-function"></a>TrotterStepOracle 函式
 
 命名空間： [JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子化學](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 傳回 Trotter 步驟作業和執行所需的參數。
@@ -46,6 +46,6 @@ Trotter 整合器的順序。
 
 
 
-## <a name="output--intdoublequbit--unit-adj--ctl"></a>Output： ([Int](xref:microsoft.quantum.lang-ref.int)， ([Double](xref:microsoft.quantum.lang-ref.double)，[量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞 + Ctl) # A3
+## <a name="output--intdoublequbit--unit--is-adj--ctl"></a>Output： ([Int](xref:microsoft.quantum.lang-ref.int)， ([Double](xref:microsoft.quantum.lang-ref.double)，[量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl) # A3
 
 元組，其中：是配置的 `Int` 量子位數目，而作業 `Double` `1.0/trotterStepSize` 則是 Trotter 步驟。

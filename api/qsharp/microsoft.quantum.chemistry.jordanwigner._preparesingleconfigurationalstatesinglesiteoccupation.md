@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._PrepareSingleConfigurationalStateSingleSiteOccupation
 title: _PrepareSingleConfigurationalStateSingleSiteOccupation 函式
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _PrepareSingleConfigurationalStateSingleSiteOccupation
 qsharp.summary: ''
-ms.openlocfilehash: 12091d34375b2dc22c057c650821f164457e6bfe
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 664973e0690c3007f6934691ec69a60212ed5f45
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92698534"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215345"
 ---
 # <a name="_preparesingleconfigurationalstatesinglesiteoccupation-function"></a>_PrepareSingleConfigurationalStateSingleSiteOccupation 函式
 
 命名空間： [JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-包： [](https://nuget.org/packages/)
+封裝： [Microsoft 量子化學](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 
@@ -36,5 +36,5 @@ function _PrepareSingleConfigurationalStateSingleSiteOccupation (qubitIndices : 
 
 
 
-## <a name="output--qubit--unit-adj--ctl"></a>Output： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit) 形容詞 + Ctl
+## <a name="output--qubit--unit--is-adj--ctl"></a>輸出： [量子位](xref:microsoft.quantum.lang-ref.qubit)[] => [單位](xref:microsoft.quantum.lang-ref.unit)  為形容詞 + Ctl
 
