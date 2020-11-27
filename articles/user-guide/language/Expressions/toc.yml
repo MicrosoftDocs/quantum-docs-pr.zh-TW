@@ -1,0 +1,32 @@
+- name: Q# 中的運算式
+  href: index.md
+- name: 優先順序與關聯性
+  href: precedenceandassociativity.md
+- name: 運算子
+  items:
+    - name: 複製和更新運算式
+      href: copyandupdateexpressions.md
+    - name: 條件運算式
+      href: conditionalexpressions.md
+    - name: 比較運算式
+      href: comparativeexpressions.md
+    - name: 邏輯運算式
+      href: logicalexpressions.md
+    - name: 位元運算式
+      href: bitwiseexpressions.md
+    - name: 算術運算式
+      href: arithmeticexpressions.md
+    - name: 串連
+      href: concatenation.md
+- name: 修飾元和組合器
+  items:
+    - name: 部分套用
+      href: partialapplication.md
+    - name: 函子應用程式
+      href: functorapplication.md
+    - name: 項目存取運算式
+      href: itemaccessexpressions.md
+- name: 內容運算式
+  href: contextualexpressions.md
+- name: 數值常值和預設值
+  href: valueliterals.md

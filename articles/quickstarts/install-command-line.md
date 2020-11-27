@@ -10,12 +10,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
-ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
+ms.openlocfilehash: eeb567dedc1b8123b32faf7ed3a42bb51f16a7d2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93376417"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228724"
 ---
 # <a name="develop-with-no-locq-applications-in-an-ide"></a>在 IDE 中使用 Q# 應用程式進行開發
 
@@ -63,7 +63,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 
 1. 按一下 [檢視] -> [命令選擇區]，然後選取 **[Q#：建立新專案]** 。
 2. 按一下 [獨立主控台應用程式]。
-3. 瀏覽至要儲存專案的位置，然後按一下 [建立專案]。
+3. 瀏覽至要儲存專案的位置。 輸入專案名稱，並按一下 [建立專案]。
 4. 成功建立專案後，按一下右下方的 [開啟新增專案...]。
 
 檢查專案。 您應該會看到名為 `Program.qs` 的來源檔案，這個 Q# 程式會定義一個將訊息列印至主控台的簡單作業。
