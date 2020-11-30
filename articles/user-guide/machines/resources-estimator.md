@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
+ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691870"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96318485"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>量子開發工具組 (QDK) 資源估算器
 
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 資源估算器會追蹤下列計量：
 
-|計量|描述|
+|Metric|描述|
 |----|----|
 |__CNOT__    |作業的執行計數 `CNOT` (也稱為受控 Pauli X 作業) 。|
 |__QubitClifford__ |任何單一量子位 Clifford 和 Pauli 作業的執行計數。|
@@ -131,7 +131,7 @@ namespace Quantum.MyProgram
 |__R__    |任何單一量子位旋轉、排除 `T` 、Clifford 和 Pauli 作業的執行計數。  |
 |__T__    |作業的執行計數 `T` 和其 conjugates，包括 `T` 作業、T_x = .h 和 T_y = Hy Hy。  |
 |__深度__|作業所執行的量子線路深度 Q# (請參閱 [以下](#depth-width-and-qubitcount)) 。 根據預設，深度度量只會計算網 `T` 關。 如需詳細資訊，請參閱 [深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)。   |
-|__寬度__|作業所執行的量子電路寬度 Q# (請參閱 [以下](#depth-width-and-qubitcount)) 。 根據預設，深度度量只會計算網 `T` 關。 如需詳細資訊，請參閱 [深度計數器](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)。   |
+|__寬度__|作業所執行的量子電路寬度 Q# (請參閱 [以下](#depth-width-and-qubitcount)) 。 根據預設，深度度量只會計算網 `T` 關。 如需詳細資訊，請參閱 [Width 計數器](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)。   |
 |__QubitCount__    |作業執行期間所配置的最大量子位數目下限 Q# 。 此計量可能與 __深度__ (不相容，請參閱下面的) 。  |
 |__BorrowedWidth__    |在作業內借用的量子位數目上限 Q# 。  |
 
@@ -165,7 +165,7 @@ __OptimizeDepth = false：__ 建議 QubitManager 使用量子位，並在配置�
 
 您可以 <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> 從 <xref:Microsoft.Quantum.Diagnostics> 命名空間使用，以提供有關測量運算之預期機率的資訊。 如需詳細資訊，請參閱[量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro)模擬器
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [量子追蹤模擬器](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [量子 Toffoli 模擬器](xref:microsoft.quantum.machines.toffoli-simulator)
