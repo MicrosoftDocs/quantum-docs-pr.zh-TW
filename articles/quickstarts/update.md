@@ -63,7 +63,7 @@ ms.locfileid: "90834914"
 
 7. 選取 [工具] -> [命令列] -> [開發人員命令提示字元]。 或者，您可以使用 Visual Studio 中的封裝管理主控台。
 
-8. 針對解決方案中的每個專案，執行下列命令以**移除**此封裝：
+8. 針對解決方案中的每個專案，執行下列命令以 **移除** 此封裝：
 
     ```dotnetcli
     dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
@@ -75,7 +75,7 @@ ms.locfileid: "90834914"
     dotnet add [project_name].csproj package [package_name]
     ```
 
-9. 關閉命令提示字元，然後選取 [組建] -> [組建方案] (請*勿*選取 [重建方案])。
+9. 關閉命令提示字元，然後選取 [組建] -> [組建方案] (請 *勿* 選取 [重建方案])。
 
 您現在可以直接跳到[更新 Visual Studio QDK 擴充功能](#update-visual-studio-qdk-extension)。
 
@@ -108,7 +108,7 @@ ms.locfileid: "90834914"
 
         您可以在[此處](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)取得更多關於指定目標框架的詳細資料。
 
-    - 取代專案定義中的 SDK 參考。 請確定版本號碼符合您在**步驟 3** 中判斷出的值。
+    - 取代專案定義中的 SDK 參考。 請確定版本號碼符合您在 **步驟 3** 中判斷出的值。
 
         ```xml
         <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
@@ -120,7 +120,7 @@ ms.locfileid: "90834914"
         <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.10.1910.3107" />
         ```
 
-    - 將所有 Microsoft Quantum 封裝的版本更新為最新發行 QDK 版本 (在**步驟 3** 中判斷的版本)。 這些封裝以下列模式命名：
+    - 將所有 Microsoft Quantum 封裝的版本更新為最新發行 QDK 版本 (在 **步驟 3** 中判斷的版本)。 這些封裝以下列模式命名：
 
         ```
         Microsoft.Quantum.*
