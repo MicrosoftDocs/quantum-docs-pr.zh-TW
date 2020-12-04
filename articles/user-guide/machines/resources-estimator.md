@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
-ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
+ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
+ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96318485"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604638"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>量子開發工具組 (QDK) 資源估算器
 
@@ -28,9 +28,9 @@ ms.locfileid: "96318485"
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>叫用從 C 估算器的資源# 
 
-就像其他目標機器一樣，您必須先建立 `ResourceEstimator` 類別的執行個體，然後將其當做作業中 `Run` 方法的第一個參數傳遞。
+就像其他目標機器一樣，您必須先建立 `ResourcesEstimator` 類別的執行個體，然後將其當做作業中 `Run` 方法的第一個參數傳遞。
 
-請注意，不同於 `QuantumSimulator` 類別，`ResourceEstimator` 類別不會實作 <xref:System.IDisposable> 介面，因此您不需要將其放在 `using` 陳述式內。
+請注意，不同於 `QuantumSimulator` 類別，`ResourcesEstimator` 類別不會實作 <xref:System.IDisposable> 介面，因此您不需要將其放在 `using` 陳述式內。
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 資源估算器會追蹤下列計量：
 
-|Metric|描述|
+|計量|描述|
 |----|----|
 |__CNOT__    |作業的執行計數 `CNOT` (也稱為受控 Pauli X 作業) 。|
 |__QubitClifford__ |任何單一量子位 Clifford 和 Pauli 作業的執行計數。|
