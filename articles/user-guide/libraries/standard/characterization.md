@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692156"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940881"
 ---
 # <a name="quantum-characterization-and-statistics"></a>量子特性和統計資料 #
 
@@ -22,7 +22,7 @@ ms.locfileid: "92692156"
 這是一項挑戰，因為每次測量量子系統都會產生最多一項資訊。
 若要瞭解 eigenvalue，請單獨使用量子狀態，許多度量的結果都必須一起拼接，讓使用者可以搜集所需的許多資訊來代表這些概念。
 量子狀態尤其是繁瑣語法，因為 [沒有任何複製定理](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) 指出沒有任何方法可從單一狀態複本學習任意的量子狀態，因為這樣做可讓您建立狀態的複本。
-這種從使用者開始的量子狀態模糊化會反映出來，而不會 Q# 公開或甚至定義狀態對量副程式 *is* 的影響。
+這種從使用者開始的量子狀態模糊化會反映出來，而不會 Q# 公開或甚至定義狀態對量副程式的影響。
 因此，我們藉由將作業和狀態視為黑箱來處理量子特性;這種方法與量子特性、驗證和驗證 (QCVV) 的實驗實務很普遍。
 
 特性與先前討論過的其他程式庫不同。
@@ -56,7 +56,7 @@ ms.locfileid: "92692156"
 
 如果提供的輸入狀態不是 eigenstate，也就是說，如果 $U (m) \ket{\phi \_ j} = e ^ {im\phi \_ j} $，則階段估計的進程會以非決定性的方式，將量子狀態引導至單一能源 eigenstate。  最終所要聚合的 eigenstate 是最可能產生觀察到的 eigenstate `Result` 。
 
-具體來說，PE 的單一步驟會在狀態 \begin{align} \ sum_j \sqrt{\Pr ( \phi \_ j) } \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ Sqrt {\ Pr ( \phi j \_) } \sqrt{\Pr ( \text{result} | \phi \_ j) } \Ket{\phi \_ j}} {\sqrt{\Pr ( \phi j) \_ \sum \_ j \Pr ( \text{result} | \phi \_ j) }}。
+具體來說，PE 的單一步驟會在狀態 \begin{align} \ sum_j \sqrt{\Pr ( \phi \_ j) } \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ Sqrt {\ Pr ( \phi \_ j) } \sqrt{\Pr ( \text{result} | \phi \_ j) } \Ket{\phi \_ j}} {\sqrt{\Pr ( \phi \_ j) \sum \_ k \Pr ( \text{result} | \phi \_ k) }}。
 \end{align}，因為此進程會逐一查看多個值，所以沒有最大 `Result` 值 $ \ prod_k \pr ( \text{result} \_ k | \phi \_ j) $ 的 eigenstates 將會以指數方式隱藏。
 如此一來，如果正確選擇實驗，推斷程式就會隨著單一 eigenvalue 而收斂。
 
