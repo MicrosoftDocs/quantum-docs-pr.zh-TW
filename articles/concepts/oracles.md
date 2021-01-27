@@ -1,6 +1,6 @@
 ---
 標題：量子 oracle 描述：瞭解如何使用和定義量子 oracle、用來作為另一個演算法輸入的黑色 box 作業。
-作者： cgranade uid： oracle ms. 作者： chgranad ms. 日期： 07/11/2018 ms. 主題：不含 loc 的文章：
+作者： cgranade uid： oracle ms. 作者： chgranad ms. 日期： 07/11/2018 ms. 主題：概念無 loc：
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,13 +134,13 @@ $$
 
 $$
 \begin{align}
-O \ket { \psi } & = o \sum _ { x \in \\ { 0、1 \\ } ^ n、y \in \\ { 0、1 \\ } ^ m } \alpha (x、y) \ket { x } \ket { y } x \\\\ 0 & 、 = 1 ^ n、y 0、1 ^ m (x、y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+O \ket { \psi } & = o \sum _{ x \in \\ { 0、1 \\ } ^ n、y \in \\ { 0、1 \\ } ^ m } \alpha (x、y) \ket { x } \ket { y } x \\\\ 0 & 、 = 1 ^ n、y 0、1 ^ m (x、y) O \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
              &= \sum _ { x \in \\ { 0、1 \\ } ^ n、y \in \\ { 0、1 \\ } ^ m } \alpha (x、y) \ket { x } \ket { y \oplus f (x) } 。
 \end{align}
 $$
 
 ## <a name="phase-oracles"></a>階段 oracle
-另外，我們也可以 $ $ $ $ 根據輸入至 O 來套用_階段_，將 f 編碼為 oracle O $ $ 。比方說，我們可能會定義 $ O $$$
+另外，我們也可以 $ $ $ $ 根據輸入至 O 來套用 _階段_，將 f 編碼為 oracle O $ $ 。比方說，我們可能會定義 $ O $$$
 \begin{align}
     O \ket { x } = (-1) ^ { f (x) } \ket { x } 。
 \end{align}
@@ -158,10 +158,13 @@ $$
 \end{align}
 $$
 
+> [!NOTE]
+>請注意， $ z ^ { -1 } = z ^ { \dagger } = z $ ，因此 $ z ^ { f (0) -f (1) } = Z ^ { f (1) -f (0) } 。$
+
 更常見的是，oracle 的這兩個觀點都可以放寬了來代表傳回實數的傳統函式，而不是只有一個位。
 
 選擇最佳的 oracle 執行方式，主要取決於如何在指定的演算法內使用這種 oracle。
 例如， [Deutsch Jozsa 演算法](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm) 依賴以第一種方式執行的 oracle，而 [格羅弗的演算法](https://en.wikipedia.org/wiki/Grover's_algorithm) 則依賴以第二種方式實作為的 oracle。
 
 
-如需更多詳細資料，我們建議[您*et al*Gilyén](https://arxiv.org/abs/1711.00465)中的討論，例如1711.00465。
+如需更多詳細資料，我們建議[您Gilyén](https://arxiv.org/abs/1711.00465)中的討論，例如1711.00465。

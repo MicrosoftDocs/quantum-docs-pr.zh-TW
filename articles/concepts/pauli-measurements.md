@@ -1,6 +1,6 @@
 ---
 標題： Pauli 度量描述：瞭解如何使用單一和多重量子位的 Pauli 度量運算。
-作者： bradben uid： pauli ms. 作者： v-benbra ms. date： 12/11/2017 ms. 主題：非 loc 文章：
+作者： bradben uid： pauli ms. 作者： v-benbra ms. date： 12/11/2017 ms. 主題：概念無 loc：
 - "Q#"
 - "$$v"
 - "$$"
@@ -139,7 +139,7 @@ $$
 
 它也相當於將 $ HS ^ 套用 \dagger $ 至量子狀態向量，然後測量 $ Z $ ，讓下列作業相當於 `Measure([PauliY], [q])` ：
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {

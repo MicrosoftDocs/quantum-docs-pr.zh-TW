@@ -4,17 +4,17 @@ description: 深入瞭解基本的量子運算演算法，包括振幅放大、�
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d4d8c35b3196ffb9915c6da06116b3c7dfd0562a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692213"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98859011"
 ---
 # <a name="quantum-algorithms"></a>量子演算法 #
 
@@ -49,7 +49,7 @@ Q# 引進了振幅放大作為無警示振幅放大的特製化。  無警示幅
 傅立葉轉換是一種傳統分析的基本工具，與量子計算一樣重要。
 此外， *量子傅立葉轉換* (QFT) 遠超過傳統電腦上可能會有的功能，這是設計量子演算法時所選擇的第一個工具。
 
-作為 QFT 的近似值，我們提供的作業可 <xref:Microsoft.Quantum.Canon.ApproximateQft> 讓您針對所需的演算法精確度，剪除不是絕對必要的旋轉，藉以進行進一步的優化。
+作為 QFT 的近似值，我們提供的作業可 <xref:Microsoft.Quantum.Canon.ApproximateQFT> 讓您針對所需的演算法精確度，剪除不是絕對必要的旋轉，藉以進行進一步的優化。
 大約的 QFT 需要 dyadic $Z $-輪替作業以及作業 <xref:Microsoft.Quantum.Intrinsic.RFrac> <xref:Microsoft.Quantum.Intrinsic.H> 。
 輸入和輸出會假設以位元組由大到小的編碼方式進行編碼---也就是說，具有索引的量子位 `0` 會在二進位整數表示的最左邊 (最高) 位中進行編碼。
 這會與 [ket 標記法](xref:microsoft.quantum.concepts.dirac)一致，因為在 state $ \ket $ 中的三個量子位暫存器 {100} 會對應至處於狀態 $ \ket $ 的 $q _0 $ {1} ，而 $q _1 $ 和 $q _2 $ 同時處於狀態 $ \ket {0} $。

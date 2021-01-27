@@ -4,17 +4,17 @@ description: 瞭解在量副程式設計中為電子結構建立模型的第二�
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a08e20d5b53aa97cb12ead0dc3a36069d0ec5df8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835803"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858841"
 ---
 # <a name="second-quantization"></a>第二個量化
 
@@ -84,7 +84,7 @@ $ 2N $ 微調 orbitals 的職業狀態同樣可以儲存在 $ 2N $ 量子位中�
 例如，如果 $N = $2，則狀態 $ $ \ket {0} \ket {1} \ket {1} \ket {0} ，$ $
 
 會對應到 orbitals $1 $ 和 $2 $，且其餘部分是空的。
-同樣地，state $ $ \ket {0} \equiv \ket {0} _ {0} \cdots \ket {0} _{N-1}，$ $
+同樣地，state $ $ \ket {0} \equiv \ket {0} _{0} \cdots \ket {0}_{N-1}，$ $
 
 沒有任何電子，也稱為「清理狀態」。
 
@@ -211,12 +211,12 @@ $ $ 這類運算子稱為「反上運算」，而在任何 $i 中，j $ \begin{a
     var signEqual = sign0 == sign1;
 ```
 
-## <a name="second-quantized-fermionic-hamiltonian"></a>第二-量化 Fermionic Hamiltonian
+## <a name="second-quantized-fermionic-hamiltonian"></a>Second-Quantized Fermionic Hamiltonian
 
 也許金錢，在 [電子系統的量子模型](xref:microsoft.quantum.chemistry.concepts.quantummodels) 中，Hamiltonian 可以用建立和 annihilation 運算子來撰寫。
 尤其是，如果 $ \psi \_ j $ 是形成基礎的微調 orbitals，
 
-\begin{equation} \hat{H} = \sum \_ {pq} H \_ {pq} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} H \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ Ra \_ s + H \_ {\textrm nuc}，\label{eq： totalHam} \end{equation} 其中 $h \_ {\textrm nuc} $ (是近似值) 的常數，以及
+\begin{equation} \hat{H} = \sum \_ {pq} H \_ {pq} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} H \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ Ra \_ s + H \_ {\textrm nuc}，\label{eq： totalHam} \end{equation} 其中 $h \_ {\textrm nuc} $ 是近似值 (的 Born-Oppenheimer 近似值) 和
 
 \begin{align} h \_ {pq} &= \int \_ {-\infty} ^ \infty \psi ^ \* \_ p (x \_ 1) \left (-\Frac{\nabla ^ 2} {2} + V (x \_ 1) \right) \psi \_ q (x \_ 1) \mathrm{d} ^ 3 層 \_ 1，\end{align}
 
