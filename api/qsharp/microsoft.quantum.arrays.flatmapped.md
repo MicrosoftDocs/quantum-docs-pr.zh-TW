@@ -1,55 +1,63 @@
 ---
 uid: Microsoft.Quantum.Arrays.FlatMapped
 title: FlatMapped 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: FlatMapped
 qsharp.summary: Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.
-ms.openlocfilehash: e851e8503b3afcb4572f09fe39079247518c22c4
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bee7002c5a1e80cee7907ff9cb4ebaaedf8e9923
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221244"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848632"
 ---
-# <a name="flatmapped-function"></a><span data-ttu-id="4e0b0-102">FlatMapped 函式</span><span class="sxs-lookup"><span data-stu-id="4e0b0-102">FlatMapped function</span></span>
+# <a name="flatmapped-function"></a><span data-ttu-id="285dd-102">FlatMapped 函式</span><span class="sxs-lookup"><span data-stu-id="285dd-102">FlatMapped function</span></span>
 
-<span data-ttu-id="4e0b0-103">命名空間： [Microsoft 量子。陣列](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="4e0b0-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
+<span data-ttu-id="285dd-103">命名空間： [Microsoft 量子。陣列](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="285dd-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
 
-<span data-ttu-id="4e0b0-104">封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="4e0b0-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="285dd-104">封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="285dd-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="4e0b0-105">假設陣列和函式會將陣列元素對應至某些輸出陣列，則會傳回每個陣列元素的串連輸出陣列。</span><span class="sxs-lookup"><span data-stu-id="4e0b0-105">Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.</span></span>
+<span data-ttu-id="285dd-105">假設陣列和函式會將陣列元素對應至某些輸出陣列，則會傳回每個陣列元素的串連輸出陣列。</span><span class="sxs-lookup"><span data-stu-id="285dd-105">Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.</span></span>
 
 ```qsharp
 function FlatMapped<'TInput, 'TOutput> (mapper : ('TInput -> 'TOutput[]), array : 'TInput[]) : 'TOutput[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="4e0b0-106">輸入</span><span class="sxs-lookup"><span data-stu-id="4e0b0-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="285dd-106">輸入</span><span class="sxs-lookup"><span data-stu-id="285dd-106">Input</span></span>
 
-### <a name="mapper--tinput---toutput"></a><span data-ttu-id="4e0b0-107">對應工具： ' TInput-> ' Toutput> []</span><span class="sxs-lookup"><span data-stu-id="4e0b0-107">mapper : 'TInput -> 'TOutput[]</span></span>
+### <a name="mapper--tinput---toutput"></a><span data-ttu-id="285dd-107">對應工具： ' TInput-> ' Toutput> []</span><span class="sxs-lookup"><span data-stu-id="285dd-107">mapper : 'TInput -> 'TOutput[]</span></span>
 
-<span data-ttu-id="4e0b0-108">中 `'TInput` `'TOutput[]` 用來對應陣列元素的函式。</span><span class="sxs-lookup"><span data-stu-id="4e0b0-108">A function from `'TInput` to `'TOutput[]` that is used to map array elements.</span></span>
-
-
-### <a name="array--tinput"></a><span data-ttu-id="4e0b0-109">陣列： ' TInput []</span><span class="sxs-lookup"><span data-stu-id="4e0b0-109">array : 'TInput[]</span></span>
-
-<span data-ttu-id="4e0b0-110">元素的陣列。</span><span class="sxs-lookup"><span data-stu-id="4e0b0-110">An array of elements.</span></span>
+<span data-ttu-id="285dd-108">中 `'TInput` `'TOutput[]` 用來對應陣列元素的函式。</span><span class="sxs-lookup"><span data-stu-id="285dd-108">A function from `'TInput` to `'TOutput[]` that is used to map array elements.</span></span>
 
 
+### <a name="array--tinput"></a><span data-ttu-id="285dd-109">陣列： ' TInput []</span><span class="sxs-lookup"><span data-stu-id="285dd-109">array : 'TInput[]</span></span>
 
-## <a name="output--toutput"></a><span data-ttu-id="4e0b0-111">輸出： ' Toutput> []</span><span class="sxs-lookup"><span data-stu-id="4e0b0-111">Output : 'TOutput[]</span></span>
+<span data-ttu-id="285dd-110">元素的陣列。</span><span class="sxs-lookup"><span data-stu-id="285dd-110">An array of elements.</span></span>
 
-<span data-ttu-id="4e0b0-112">的陣列， `'TOutput[]` 這是對應函式所產生之所有陣列的串連。</span><span class="sxs-lookup"><span data-stu-id="4e0b0-112">An array of `'TOutput[]` which is the concatenation of all arrays generated by the mapping function.</span></span>
 
-## <a name="type-parameters"></a><span data-ttu-id="4e0b0-113">類型參數</span><span class="sxs-lookup"><span data-stu-id="4e0b0-113">Type Parameters</span></span>
 
-### <a name="tinput"></a><span data-ttu-id="4e0b0-114">'TInput</span><span class="sxs-lookup"><span data-stu-id="4e0b0-114">'TInput</span></span>
+## <a name="output--toutput"></a><span data-ttu-id="285dd-111">輸出： ' Toutput> []</span><span class="sxs-lookup"><span data-stu-id="285dd-111">Output : 'TOutput[]</span></span>
 
-<span data-ttu-id="4e0b0-115">元素的類型 `array` 。</span><span class="sxs-lookup"><span data-stu-id="4e0b0-115">The type of `array` elements.</span></span>
-### <a name="toutput"></a><span data-ttu-id="4e0b0-116">' Toutput></span><span class="sxs-lookup"><span data-stu-id="4e0b0-116">'TOutput</span></span>
+<span data-ttu-id="285dd-112">的陣列， `'TOutput[]` 這是對應函式所產生之所有陣列的串連。</span><span class="sxs-lookup"><span data-stu-id="285dd-112">An array of `'TOutput[]` which is the concatenation of all arrays generated by the mapping function.</span></span>
 
-<span data-ttu-id="4e0b0-117">函數會傳回 `mapper` 這個類型的陣列。</span><span class="sxs-lookup"><span data-stu-id="4e0b0-117">The `mapper` function returns arrays of this type.</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="285dd-113">類型參數</span><span class="sxs-lookup"><span data-stu-id="285dd-113">Type Parameters</span></span>
+
+### <a name="tinput"></a><span data-ttu-id="285dd-114">'TInput</span><span class="sxs-lookup"><span data-stu-id="285dd-114">'TInput</span></span>
+
+<span data-ttu-id="285dd-115">元素的類型 `array` 。</span><span class="sxs-lookup"><span data-stu-id="285dd-115">The type of `array` elements.</span></span>
+### <a name="toutput"></a><span data-ttu-id="285dd-116">' Toutput></span><span class="sxs-lookup"><span data-stu-id="285dd-116">'TOutput</span></span>
+
+<span data-ttu-id="285dd-117">函數會傳回 `mapper` 這個類型的陣列。</span><span class="sxs-lookup"><span data-stu-id="285dd-117">The `mapper` function returns arrays of this type.</span></span>
+
+## <a name="example"></a><span data-ttu-id="285dd-118">範例</span><span class="sxs-lookup"><span data-stu-id="285dd-118">Example</span></span>
+
+```qsharp
+let Numbers = SequenceI(1, _); // generates numbers starting from 1
+let values = FlatMapped(Numbers, [1, 2, 3]);
+// values = [1, 1, 2, 1, 2, 3]
+```
