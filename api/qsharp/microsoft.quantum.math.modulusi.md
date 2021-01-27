@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Math.ModulusI
 title: ModulusI 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ModulusI
 qsharp.summary: Computes the canonical residue of `value` modulo `modulus`.
-ms.openlocfilehash: 6bbb3877b93e1fc6b38f85a716ba617311c7cfba
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7bad044db9e2229c85cb3909dc4802bceaee6382
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96227772"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847295"
 ---
 # <a name="modulusi-function"></a>ModulusI 函式
 
@@ -47,4 +47,4 @@ Residues 所採用的模數必須是正數
 
 ## <a name="remarks"></a>備註
 
-此函式的行為與運算子 `%` 在 c # 和 Q # 中的運作方式不同，因為結果中的結果一律是0和之間的正整數 `modulus - 1` ，即使值為負數。
+此函式的行為與運算子 `%` 在 c # 和 Q # 中的運作方式不同，因為結果中的結果一律是0和之間的非負整數 `modulus - 1` ，即使值為負數。

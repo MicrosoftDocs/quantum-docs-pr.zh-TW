@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorI
 title: ExtendedGreatestCommonDivisorI 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ExtendedGreatestCommonDivisorI
 qsharp.summary: Computes a tuple $(u,v)$ such that $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$, where $\operatorname{GCD}$ is $a$ greatest common divisor of $a$ and $b$. The GCD is always positive.
-ms.openlocfilehash: 365e91e84add0d57d5a3cf203bbf23d96979b251
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e86237f39e696485a3496f1c6dd571cd516214ec
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96195521"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857544"
 ---
 # <a name="extendedgreatestcommondivisori-function"></a>ExtendedGreatestCommonDivisorI 函式
 
@@ -45,6 +45,6 @@ function ExtendedGreatestCommonDivisorI (a : Int, b : Int) : (Int, Int)
 
 元組 $ (u、v) $ 和屬性 $u \cdot a + v \cdot b = \operatorname{GCD} (a，b) $。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - 這項實行是根據 https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm

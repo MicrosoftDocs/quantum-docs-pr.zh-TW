@@ -1,20 +1,20 @@
 ---
 title: 量子資源估算器-量子開發工具組
 description: 深入瞭解 Microsoft QDK resources 估算器，其預估在量子電腦上執行特定作業實例所需的資源 Q# 。
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604638"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847471"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>量子開發工具組 (QDK) 資源估算器
 
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 資源估算器會追蹤下列計量：
 
-|計量|描述|
+|Metric|描述|
 |----|----|
 |__CNOT__    |作業的執行計數 `CNOT` (也稱為受控 Pauli X 作業) 。|
 |__QubitClifford__ |任何單一量子位 Clifford 和 Pauli 作業的執行計數。|
@@ -143,8 +143,8 @@ namespace Quantum.MyProgram
 
 系統會報告下列計量：
 
-__深度：__ 針對根作業，它會假設特定的閘道時間來執行它。
-針對呼叫的作業或後續的作業-在最新的量子位可用性時間與作業結束之間的時間差異。
+__深度：__ 針對根本作業的執行時間，它會假設設定的閘道時間。
+針對呼叫的作業或後續的作業-最晚的量子位可用性時間與作業結束之間的時間差異。
 
 __寬度：__ 針對根本操作（量子位實際用來執行它的數目） (和作業，它會呼叫) 。
 針對呼叫的作業或後續作業-已使用的量子位數目，以及在作業開始時使用的量子位數目。
@@ -157,9 +157,9 @@ __QubitCount：__ 若為根作業，則為執行此作業所需的最小量子�
 
 支援兩種作業模式。 您可以藉由設定 QCTraceSimulatorConfiguration OptimizeDepth 來選取模式。
 
-__OptimizeDepth = true：__ QubitManager 不建議量子位重複使用，並且會在每次要求量子位時配置新的量子位。 針對根操作 __深度__ ，會變成 (下限) 的最小深度。 此深度會回報相容的 __寬度__ ， (可以同時) 。 請注意，此寬度在此深度中可能不是最佳的。 __QubitCount__ 可能會比根作業的寬度低，因為它會假設重複使用。
+__OptimizeDepth = false：__ 這是預設模式。 建議 QubitManager 使用量子位，並在配置新的量子位之前重複使用已發行的。 針對根作業 __寬度__ ，會變成最小寬度 (下限) 。 您可以在其上取得相容 __深度__ 的報告。 __QubitCount__ 將與根本作業的 __寬度__ 相同（假設沒有借用）。
 
-__OptimizeDepth = false：__ 建議 QubitManager 使用量子位，並在配置新的量子位之前重複使用已發行的。 針對根作業 __寬度__ ，會變成最小寬度 (下限) 。 您可以在其上取得相容 __深度__ 的報告。 __QubitCount__ 將與根本作業的 __寬度__ 相同（假設沒有借用）。
+__OptimizeDepth = true：__ QubitManager 不建議量子位重複使用，並且會在執行期間和之後執行量子位重複使用的啟發式優化。 針對根操作 __深度__ ，會變成 (下限) 的最小深度。 此深度會回報相容的 __寬度__ ， (可以同時) 。 為了將寬度優化，程式中稍後遇到的閘道可能會在程式中先前遇到的閘道之前排程，但量子位已排程在深度維持最少的情況下重複使用。 由於量子位會根據時間值重複使用，因此建議您將閘道時間設定為整數值。 無法保證 __寬度__ 是最佳的。 您可以在追蹤的白皮書 [寬度和深度](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs)中找到詳細資訊。
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>提供測量結果的機率
 

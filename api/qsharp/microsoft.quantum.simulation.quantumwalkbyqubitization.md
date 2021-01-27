@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumWalkByQubitization
 title: QuantumWalkByQubitization 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: QuantumWalkByQubitization
 qsharp.summary: Converts a block-encoding reflection into a quantum walk.
-ms.openlocfilehash: ccef1bbf400e01800053777d0010acb7addaef53
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8ffb6eb77a3f910d3064c4a3c90215d5d9a694aa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192480"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851046"
 ---
 # <a name="quantumwalkbyqubitization-function"></a>QuantumWalkByQubitization 函式
 
@@ -44,7 +44,7 @@ function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation
 
 量子逐步解說 $W $ 可共同處理暫存器 `a` ，並 `s` 將 $H $ 的區塊編碼，並包含 $ \pm e ^ {\pm i\sin ^ {-1} (H) } $ 的範圍。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - Hamiltonian 模擬，量子位化 Guang Hao Low，Isaac L. Chuang https://arxiv.org/abs/1610.06546
 

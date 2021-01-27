@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
 title: ApplyPermutationUsingDecomposition 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingDecomposition
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.
-ms.openlocfilehash: 5b25ef3327bbca2dfdbe8fa876f3f797dddf77e8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 765b6d301363021f5b57a22f90e2ada38c9c09ec
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192123"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857401"
 ---
 # <a name="applypermutationusingdecomposition-operation"></a>ApplyPermutationUsingDecomposition 操作
 
@@ -57,7 +57,17 @@ operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Q
 
 
 
-## <a name="references"></a>參考
+## <a name="example"></a>範例
+
+若要合成作業 `SWAP` ：
+
+```qsharp
+using (qubits = Qubit[2]) {
+  ApplyPermutationUsingDecomposition([0, 2, 1, 3], LittleEndian(qubits));
+}
+```
+
+## <a name="references"></a>參考資料
 
 - [*Alexis De Vos*、 *Yvan Van Rentergem*、進階。) 的通訊。 2 (2，2008，pp 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
 - [*Mathias Soeken*、 *劉娜 Tague*、 *Gerhard W. Dueck*、 *Rolf Drechsler*、符號計算 73 (2016) 、pp 1--26](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)

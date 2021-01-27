@@ -4,17 +4,17 @@ description: 瞭解如何將概念或 API 內容投稿至 Microsoft 量子檔集
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8602705d2dd071e822e2ff58a9a44cd0684f77f1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691782"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857368"
 ---
 # <a name="improving-documentation"></a>改善文件
 
@@ -42,7 +42,7 @@ ms.locfileid: "92691782"
 - 某些讀者會尋找最有用的抽象語句和定義，而其他讀取器則是從具體範例中推斷來獲得最佳效果。 提供一般案例和特定範例，可協助這兩個讀者充分利用量副程式設計。
 - 尤其是，如果您也撰寫了所記載的程式碼，您可能會很明顯地對讀者來說不太明顯。 沒有一個獨特的程式設計方法，所以無論讀者有多麼聰明或經驗，都不能猜到哪些設計模式最有助於您在程式碼中表達您的想法。 清楚瞭解讀者如何預期使用您的程式碼，可協助提供該內容。
 - 量副程式設計團體的許多成員都是學術研究人員，主要是透過對社區投稿發表的引文來辨識。 除了協助讀者找出其他的材質之外，請務必適當地找出像是論文、演講、blog 文章和軟體工具等學術輸出，以協助學術的投稿人員繼續進行最佳的工作，以改善社區。
-- 量副程式設計團體是廣泛且 wonderfully 的多樣化團體。 在協力廠商範例中使用名詞代名詞 (例如：「如果使用者 ...」，他將會 ) ，而不是包含。 在引文和連結中 cognizant 人員的姓名，以及包含非 ASCII 字元的正確包含，可以藉由顯示其成員的方式來提供該社區的多樣性。 同樣地，英文語言中的許多單字通常會以惡意的方式使用，因此在技術檔中使用時，可能會對個別讀者和大型團體造成損害。
+- 量副程式設計團體是廣泛且 wonderfully 的多樣化團體。 在協力廠商範例中使用名詞代名詞 (例如：「如果使用者 ...」，則 ) 可以在不包含的情況下使用。 在引文和連結中 cognizant 人員的姓名，以及包含非 ASCII 字元的正確包含，可以藉由顯示其成員的方式來提供該社區的多樣性。 同樣地，英文語言中的許多單字通常會以惡意的方式使用，因此在技術檔中使用時，可能會對個別讀者和大型團體造成損害。
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>參考概念文章中的範例程式碼
 
@@ -54,6 +54,19 @@ ms.locfileid: "92691782"
 
 此命令會[ `Game.qs` 從 `chsh-game` 範例](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)匯入檔案中的第4行到第8行，將它們標示為 Q# 程式碼以進行語法醒目提示。
 使用這個命令，您可以避免在概念文章和範例存放庫之間複製程式碼，讓檔中的範例程式碼一律盡可能保持最新狀態。
+
+### <a name="contributing-image-files"></a>參與影像檔案
+
+**重要**：若要讓影像在深色模式中正確呈現，您必須避免使用投影片。
+
+- 適用于 .jpg 檔案。 因為 .jpg 格式不支援透明元素，所以您不需要做任何動作。
+- 若是 .png 檔案，您必須加入白色背景，或將 Alpha 色板的值變更為 **100**。 在 Windows 中最簡單的方式是在 **油漆** 中開啟檔案，並儲存檔案，覆寫原始檔案。
+- 針對 svg 檔案，您必須在最低層中加入白色矩形。 您可以使用 **引導 inkscape** 來執行此動作：
+  1. 開啟 svg 檔案。
+  1. 選取 [正方形 maker] 工具，並在原始圖形上方繪製白色矩形。
+  1. 選取工具，方法是按一下深色箭號或按 **F1** 鍵來 **選取和轉換物件**。
+  1. 選取矩形之後，請按一下下方的工具列元素， **選取 [低於] (End)**。
+  1. 以滑鼠或方向鍵調整矩形。
 
 ## <a name="contributing-to-the-api-references"></a>參與 API 參考
 

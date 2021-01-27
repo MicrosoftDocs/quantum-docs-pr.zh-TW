@@ -1,6 +1,6 @@
 ---
 標題：多個量子位描述：瞭解如何在兩個或多個量子位上執行作業。
-作者： bradben uid：量子位 ms. 作者： v-benbra ms. date： 12/11/2017 ms. 主題：非 loc 文章：
+作者： bradben uid：量子位 ms. 作者： v-benbra ms. date： 12/11/2017 ms. 主題：概念非 loc：
 - "Q#"
 - "$$v"
 - "$$"
@@ -105,10 +105,10 @@
 很容易看出，n 量子位的量子狀態通常是以 $ $ 維度 2 ^ n 的單位向量（ $ $ 使用此結構）來表示。  向量
 
 $$
-\begin{bmatrix}\alpha _ { 00 } 01 \\\\ 10 \alpha   _ { } \\\\ \alpha _ { 11 } \\\\ \alpha   _ { }  \end{bmatrix}
+\begin{bmatrix}\alpha _{ 00 } 01 \\\\ 10 \alpha_ { } \\\\ \alpha _{ 11 } \\\\ \alpha_ { }  \end{bmatrix}
 $$
 
-表示在兩個量子位上的量子狀態（如果 $ | \alpha _ { 00 } | ^ 2 + | \alpha _ { 01 } | ^ 2 + | \alpha _ { 10 } | ^ 2 + | \alpha _ { 11 } | ^ 2 1） = $ 。 如同單一量子位，多個量子位的量子狀態向量會保存描述系統行為所需的所有資訊。
+表示在兩個量子位上的量子狀態（如果 $ | \alpha _{ 00 } | ^ 2 + | \alpha_ { 01 } | ^ 2 + | \alpha _{ 10 } | ^ 2 + | \alpha_ { 11 } | ^ 2 1） = $ 。 如同單一量子位，多個量子位的量子狀態向量會保存描述系統行為所需的所有資訊。
 
 如果我們提供兩個不同的量子位，其中一個處於狀態， $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ 而第二個量子位處於狀態 $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ ，則對應的雙量子位狀態為    
 
@@ -124,22 +124,22 @@ $$\psi\otimes\phi = \begin{bmatrix}1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt { 
 
 這種量子位狀態（無法撰寫為單一量子位狀態的 tensor 產品）稱為「纏結狀態」;這兩個量子位稱為「 [*纏結*](https://en.wikipedia.org/wiki/Quantum_entanglement)」。  鬆散說，因為量子狀態無法被視為單一量子位狀態的 tensor 產品，所以狀態保留的資訊並不會個別局限于量子位的其中一個。  相反地，此資訊會以非本機方式儲存在這兩個狀態之間的相互關聯中。  這種非區域資訊是在傳統運算上的量子運算的主要區別功能之一，也是許多量子通訊協定（包括 [量子遙傳](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) 和 [量子錯誤修正](xref:microsoft.quantum.libraries.error-correction)）不可或缺的功能。
 
-## <a name="measuring-two-qubit-states"></a>測量兩個量子位的狀態 ##
+## <a name="measuring-two-qubit-states"></a>測量 Two-Qubit 狀態 ##
 測量兩個量子位的狀態非常類似于單一量子位測量。 測量狀態
 
 $$
     \begin{bmatrix}
-        \alpha_ { 00 } 01 \\\\ \alpha _ { }\\\\ 
-        \alpha_ { 10 } 11 \\\\ \alpha _ {}
+        \alpha_{ 00 } 01 \\\\ \alpha_ { }\\\\ 
+        \alpha_{ 10 } 11 \\\\ \alpha_ {}
     \end{bmatrix}
 $$
 
-會 $ 產生 $ 具有機率 $ | \alpha _ { 00 } | ^ 2 $ 、 $ $ 01 $ 、 | 機率 \alpha _為 { 01 } | ^ 2、10（機率 $ $ $ 為 $ | \alpha _ { 10 ^ 2） } | $ 和 $ 11 $ （機率 $ 為 | 11 \alpha _ { } | ^ 2 $ ）的00。 已刻意將變數 $ \alpha _ { 00 } 、 \alpha _ { 01 } 、 \alpha _ { 10 } $ 和 $ 11 \alpha _ { } $ 命名為清除此連接。 在測量之後，如果結果為00，則 $ $ 雙量子位系統的量子狀態已折迭，而且現在是
+會 $ 產生 $ 具有機率 $ | \alpha _{ 00 } | ^ 2 $ 、 $ $ 01 $ 、 | 機率 \alpha_ 為 { 01 } | ^ 2、10（機率 $ $ $ 為 $ | \alpha _{ 10 ^ 2） } | $ 和 $ 11 $ （機率 $ 為 | 11 \alpha_ { } | ^ 2 $ ）的00。 已刻意將變數 $ \alpha _{ 00 } 、 \alpha_ { 01 } 、 \alpha _{ 10 } $ 和 $ 11 \alpha_ { } $ 命名為清除此連接。 在測量之後，如果結果為00，則 $ $ 雙量子位系統的量子狀態已折迭，而且現在是
 
 $$
     演講 \equiv
     \begin{bmatrix}
-        單 \\\\ 
+        1 \\\\ 
         0 \\\\ 
         0 \\\\ 
         0 \end{bmatrix} 。
@@ -193,7 +193,7 @@ $$
 
 同樣地，根據我們的直覺。
 
-## <a name="two-qubit-operations"></a>雙量子位作業
+## <a name="two-qubit-operations"></a>Two-Qubit 作業
 如同在單一量子位案例中，任何單一轉換都是量子位上的有效作業。 一般情況下，n 量子位的單一轉換 $ $ 是大小為 $ $ $ 2 ^ n \times 2 ^ n (的矩陣 U， $ 因此它會在大小為 $ 2 ^ n) 的向量上運作 $ ，例如 $ U ^ { -1 } = U ^ \dagger $ 。
 例如，CNOT (控制-不) 閘道是常用的雙量子位閘道，並以下列的單一矩陣表示：
 
@@ -240,7 +240,7 @@ $$
 如同在單一量子位案例中，如果有任何 $ 4 \times 個 $ 單一矩陣可將此集合中的閘道乘積設定為任意有效位數，則雙量子位閘道集會設定為通用。
 通用閘道集合的其中一個範例是 Hadamard 閘道、T 閘道和 CNOT 閘道。 藉由取得這些閘道的產品，我們可以將兩個量子位上的任何單一矩陣近似。
 
-## <a name="many-qubit-systems"></a>多量子位系統
+## <a name="many-qubit-systems"></a>Many-Qubit 系統
 我們會遵循在兩個量子位案例中所探索到的相同模式，從較小的系統建立多量子位的量子狀態。  這種狀態的建立方式是形成較小狀態的 tensor 產品。  例如，請考慮 $ $ 在量子電腦中編碼位字串1011001。  我們可以將此編碼為
 
 $$

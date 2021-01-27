@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.IsPermutation
 title: IsPermutation 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IsPermutation
 qsharp.summary: Outputs true if and only if a given array represents a permutation.
-ms.openlocfilehash: 144f683818b5d75de5b075328365d3e994de29d1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7e563650f33b0292e1e41f629829a2d3b9e5fd28
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96220921"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848102"
 ---
 # <a name="ispermutation-function"></a>IsPermutation 函式
 
@@ -43,6 +43,16 @@ function IsPermutation (permuation : Int[]) : Bool
 ## <a name="output--bool"></a>Output： [Bool](xref:microsoft.quantum.lang-ref.bool)
 
 
+
+## <a name="example"></a>範例
+
+下列 Q # 程式碼會列印「所有診斷已順利完成」訊息：
+
+```qsharp
+Fact(IsPermutation([2, 0, 1], "");
+Contradiction(IsPermutation([5, 0, 1], "[5, 0, 1] isn't a permutation");
+Message("All diagnostics completed successfully.");
+```
 
 ## <a name="remarks"></a>備註
 

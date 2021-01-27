@@ -4,17 +4,17 @@ description: 瞭解如何使用 Trotter-Suzuki 公式和量子位化來處理 Ha
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eeaa13b99ab07ce22f8a3306a756bf7ac7cde65b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691883"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857603"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>模擬 Hamiltonian Dynamics
 
@@ -28,7 +28,7 @@ Trotter-Suzuki 公式背後的構想很簡單：以簡單的方式來表達 Hami
 尤其是，讓 $H = \ sum_ {j = 1} ^ m H_j $ Hamiltonian。
 然後，$ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2) ，$ $，這表示如果 $t \ll $1，則此近似值中的錯誤會變成可忽略。
 請注意，如果 $e ^ {-i H t} $ 是一般的指數，則此近似值中的錯誤不會 $O (m ^ 2 t ^ 2) $：它會是零。
-發生此錯誤的原因是 $e ^ {-iHt} $ 是運算子指數，因此使用此公式時發生錯誤，因為 $H _j $ 詞彙不會在 (， *例如* $H _j H_k \ne H_k H_j $ 一般) 。
+發生此錯誤的原因是 $e ^ {-iHt} $ 是運算子指數，因此使用此公式時發生錯誤，因為 $H _j $ 詞彙不會在 (， *例如*$H _j H_k \ne H_k H_j $ 一般) 。
 
 如果 $t $ 是大型的，Trotter – Suzuki 公式仍然可以用來將動態模擬為一系列簡短的步驟來精確地模擬。
 讓 $r $ 成為在時間演進中所採取的步驟數目，因此每次步驟都是針對時間 $t/r $ 執行。 接著，我們有了 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left ( \ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r) $ $ 表示如果 $r $ 調整為 $m ^ 2 t ^ 2/\ epsilon $，則在任何 $ \epsilon>$0 中最多可以有 $ \epsilon $ 的錯誤。

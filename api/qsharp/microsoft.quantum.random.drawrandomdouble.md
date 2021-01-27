@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomDouble
 title: DrawRandomDouble 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawRandomDouble
 qsharp.summary: Draws a random real number in a given inclusive interval.
-ms.openlocfilehash: d62416f4a222716edb9393fe4f43731d0e8aa9d3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 792e9c714b761b48618aec2091e167a359c2b522
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192939"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847615"
 ---
 # <a name="drawrandomdouble-operation"></a>DrawRandomDouble 操作
 
@@ -44,6 +44,14 @@ operation DrawRandomDouble (min : Double, max : Double) : Double
 ## <a name="output--double"></a>輸出： [雙精度浮點數](xref:microsoft.quantum.lang-ref.double)
 
 的內含間隔中的隨機實數， `min` `max` 具有統一機率。
+
+## <a name="example"></a>範例
+
+下列 Q # 程式碼片段會在 $0 $ 和 $2 \pi $ 之間隨機繪製角度：
+
+```qsharp
+let angle = DrawRandomDouble(0.0, 2.0 * PI());
+```
 
 ## <a name="remarks"></a>備註
 
