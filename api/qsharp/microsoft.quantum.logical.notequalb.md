@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.NotEqualB
 title: NotEqualB 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NotEqualB
 qsharp.summary: Returns true if and only if two inputs are not equal.
-ms.openlocfilehash: 7943411b662683df058213a9e4b8eb7c9329ff07
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 9f362b9e08f8a798bf7f7d9c323fee6576dccd9f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197376"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98814412"
 ---
 # <a name="notequalb-function"></a>NotEqualB 函式
 
@@ -49,7 +49,7 @@ function NotEqualB (a : Bool, b : Bool) : Bool
 
 以下是相等的：
 
-```Q#
+```qsharp
 let cond = a != b;
 let cond = NotEqualB(a, b);
 ```
