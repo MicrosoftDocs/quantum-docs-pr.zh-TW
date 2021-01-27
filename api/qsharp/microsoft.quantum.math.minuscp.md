@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Math.MinusCP
 title: MinusCP 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: MinusCP
 qsharp.summary: Returns the difference between two inputs.
-ms.openlocfilehash: 8d03d980e897fc09892692310fbe0e3ce9b56a72
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6db10342e74c1ae263b4680d2b4c7aa225e33bed
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96195081"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848795"
 ---
 # <a name="minuscp-function"></a>MinusCP 函式
 

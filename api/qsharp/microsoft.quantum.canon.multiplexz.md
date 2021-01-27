@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexZ
 title: MultiplexZ 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: MultiplexZ
 qsharp.summary: Applies a Pauli Z rotation conditioned on an array of qubits.
-ms.openlocfilehash: 364d23a0e57a2510f069b6db66b085368f20162e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: dccfe86104263e23794bce33279e8748f11f5a54
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96206063"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852433"
 ---
 # <a name="multiplexz-operation"></a>MultiplexZ 操作
 
@@ -62,7 +62,7 @@ $ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j} \otimes e ^ {i Z
 
 `coefficients` 如果指定了少於 $ 2 ^ n $ 的元素，則會以 $ \ theta_j = $0.0 填補。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - 量子邏輯電路的合成 Vivek V. Shende、Stephen S. Bullock、Igor L. Markov https://arxiv.org/abs/quant-ph/0406176
 

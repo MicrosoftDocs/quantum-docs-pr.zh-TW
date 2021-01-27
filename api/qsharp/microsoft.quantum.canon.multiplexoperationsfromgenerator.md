@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator
 title: MultiplexOperationsFromGenerator 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,12 +10,12 @@ qsharp.summary: >-
   Applies a multiply-controlled unitary operation $U$ that applies a unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
   $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-ms.openlocfilehash: 9fbbd9268d4a6b9f3d5fd203969f4bbeebe81b68
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 59afa9d9a34fe74206118680940d243ed8b2496e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96205944"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852502"
 ---
 # <a name="multiplexoperationsfromgenerator-operation"></a>MultiplexOperationsFromGenerator 操作
 
@@ -65,6 +65,6 @@ $V _j $ 的一般量子位註冊。
 
 `coefficients` 如果指定了少於 $ 2 ^ n $，將會以識別元素填補。 此實行使用 $n-$1 輔助量子位。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - [*Andrew M. Childs、Dmitri Maslov、Yunseong 等、Neil J. Ross、中國人民幣 Su*、arXiv：1711.10980](https://arxiv.org/abs/1711.10980)

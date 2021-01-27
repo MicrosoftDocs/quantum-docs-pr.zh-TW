@@ -4,18 +4,17 @@ description: 說明如何將您的 Q# 專案和 Microsoft Quantum 開發套件�
 author: bradben
 ms.author: v-benbra
 ms.date: 5/30/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: 1b5def3226bd073c878f8573aaddd757d733ec48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834914"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858050"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>更新 Microsoft Quantum Development Kit (QDK)
 
@@ -282,7 +281,7 @@ ms.locfileid: "90834914"
     %workspace reload
     ```
 
-***
+**_
 
 您現在可以使用更新後的 IQ# 核心來執行現有的 Q# Jupyter Notebook。
 
@@ -301,7 +300,7 @@ ms.locfileid: "90834914"
 1. 更新 Quantum VS Code 擴充功能
 
     - 重新啟動 VS Code
-    - 瀏覽至 [擴充功能] 索引標籤
+    - 流覽至 _ [*擴充* 功能] 索引標籤
     - 選取 [Microsoft Quantum Development Kit for Visual Studio Code] 擴充功能
     - 重新載入擴充功能
 

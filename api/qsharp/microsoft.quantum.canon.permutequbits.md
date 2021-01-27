@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.PermuteQubits
 title: PermuteQubits 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: PermuteQubits
 qsharp.summary: Permutes qubits by using the SWAP operation.
-ms.openlocfilehash: deb5fa5b0bc0509c957e01bf22e491ad3e2214f3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2fbbe0d99ad1383d77cb08ff6b03bcebd8a1971f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96205596"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852333"
 ---
 # <a name="permutequbits-operation"></a>PermuteQubits 操作
 
@@ -43,3 +43,14 @@ operation PermuteQubits (ordering : Int[], register : Qubit[]) : Unit is Adj + C
 
 ## <a name="output--unit"></a>輸出： [單位](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## <a name="example"></a>範例
+
+給定順序 = [2，1，0]，並註冊 $ \ket{\ Alpha_0} \ket{\ Alpha_1} \ket{\ Alpha_2} $，PermuteQubits 將註冊變更為 $ \ket{\ Alpha_2} \ket{\ Alpha_1} \ket{\ Alpha_0} $
+
+```qsharp
+// The following two lines are equivalent
+PermuteQubits([2, 1, 0], register);
+SWAP(register[0], register[2]);
+```

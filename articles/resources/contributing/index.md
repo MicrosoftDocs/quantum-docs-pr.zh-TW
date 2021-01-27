@@ -4,17 +4,17 @@ description: 了解如何參與 Microsoft Quantum Development Kit 和量子開�
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a8a527df59bd7ee038de71e04003cf456b094afb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
-ms.translationtype: HT
+ms.openlocfilehash: 5079353f4feb5387e4958939b3f5bf7407056c9c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691769"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858033"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>參與 Quantum Development Kit
 

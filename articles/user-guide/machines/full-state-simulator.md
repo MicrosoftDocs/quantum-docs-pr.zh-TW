@@ -1,20 +1,20 @@
 ---
 title: 完整狀態量子模擬器-量子開發工具組
 description: 瞭解如何 Q# 在 Microsoft 量子開發工具組的完整狀態模擬器上執行您的程式。
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.full-state-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 632af681c5818ab7246c0f5849a8b8e716b570cb
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 950e61c812cc6df739ddaa1de855f753557d6d1b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833377"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858179"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>量子開發工具組 (QDK) 完整狀態模擬器
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.IndexOf
 title: IndexOf 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IndexOf
 qsharp.summary: Returns the first index of the first element in an array that satisfies a given predicate. If no such element exists, returns -1.
-ms.openlocfilehash: d63b204334611f8f2c3860f9ee1d756f637780e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 64db55e831078a7130a3ced6a30bfbd2299c392d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221006"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848517"
 ---
 # <a name="indexof-function"></a>IndexOf 函式
 
@@ -49,3 +49,13 @@ function IndexOf<'T> (predicate : ('T -> Bool), arr : 'T[]) : Int
 
 ### <a name="t"></a>不要
 
+
+
+## <a name="example"></a>範例
+
+假設這 `IsEven : Int -> Bool` 是一個函式， `true` 只有在其輸入為偶數時才會傳回。 然後，您可以搭配使用， `IndexOf` 以找出陣列中的第一個偶數元素：
+
+```qsharp
+let items = [1, 3, 17, 2, 21];
+let idx = IndexOf(IsEven, items); // returns 3
+```

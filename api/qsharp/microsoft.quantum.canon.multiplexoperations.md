@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexOperations
 title: MultiplexOperations 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -12,12 +12,12 @@ qsharp.summary: >-
   That is, applies Multiply-controlled unitary operation $U$ that applies a unitary $V_j$ when controlled by $n$-qubit number state $\ket{j}$.
 
   $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-ms.openlocfilehash: ad66b39fcfacbe5231ec3b9ba96989d6d5d449c1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1cf483bb0d3b7cc43d271b65a2363fab95ff0f3b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96206097"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852536"
 ---
 # <a name="multiplexoperations-operation"></a>MultiplexOperations 操作
 
@@ -69,6 +69,6 @@ $V _j $ 的一般量子位註冊。
 
 `coefficients` 如果指定了少於 $ 2 ^ n $，將會以識別元素填補。 此實行使用 $n-$1 輔助量子位。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - 使用量子的第一個量子模擬，Andrew M. Childs、Dmitri Maslov、Yunseong 等、Neil J. Ross、中國人民幣 Su https://arxiv.org/abs/1711.10980

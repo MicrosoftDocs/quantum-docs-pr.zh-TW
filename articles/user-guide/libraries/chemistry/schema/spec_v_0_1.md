@@ -4,17 +4,17 @@ description: 詳細說明 Microsoft 量子化學程式庫的 Broombridge 量子�
 author: cgranade
 ms.author: chgranad
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b99c90c434958f7b04712580789b203766cd084d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 0a306f59a823e76ba0518d023a41f1f9d5670e7a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835735"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858185"
 ---
 # <a name="broombridge-specification-v01"></a>Broombridge 規格 v 0。1 #
 
@@ -47,7 +47,7 @@ Broombridge 檔必須序列化為 [YAML 1.2 檔](http://yaml.org/spec/) ，以�
 
 本節為標準化。
 
-_Quantity 物件_是一個 JSON 物件，且 `units` 其值必須是 [表 1] 所列的其中一個允許值的屬性。
+_Quantity 物件_ 是一個 JSON 物件，且 `units` 其值必須是 [表 1] 所列的其中一個允許值的屬性。
 
 如果 quantity 物件除了屬性之外還具有單一屬性，則它是 _簡單數量的物件_ `value` `units` 。
 屬性的值 `value` 必須是數位。
@@ -160,7 +160,7 @@ $ $ h_ {ijkl} = h_ {ijlk} = h_ {jikl} = h_ {jilk} = h_ {klij} = h_ {klji} = h_ {
 $$
 
 
-#### <a name="contents"></a>內容 ####
+#### <a name="contents"></a>目錄 ####
 
 本節為標準化。
 
@@ -169,7 +169,7 @@ $$
 Hamiltonian 物件也可以有屬性 `particle_hole_representation` 。
 如果有的話，的值 `particle_hole_representation` 必須遵循本節其餘部分所述的格式。
 
-##### <a name="one-electron-integrals-object"></a>一個 Electron 的積分物件 #####
+##### <a name="one-electron-integrals-object"></a>One-Electron 的積分物件 #####
 
 本節為標準化。
 
@@ -199,7 +199,7 @@ one_electron_integrals:     # required
 > Broombridge 使用以1為基礎的索引。
 
 
-##### <a name="two-electron-integrals-object"></a>雙 Electron 的積分物件 #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron 的積分物件 #####
 
 本節為標準化。
 

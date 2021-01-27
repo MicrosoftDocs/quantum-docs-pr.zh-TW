@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692233"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858323"
 ---
 # <a name="data-structures-and-modeling"></a>資料結構與模型化 #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>神 諭 ##
 
 在 [階段估計](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) 和 [振幅放大](https://en.wikipedia.org/wiki/Amplitude_amplification) 的文獻中，oracle 的概念經常出現。
-Oracle 這一詞是指一組黑箱量子副程式，可在一組量子位上運作，並以階段傳回答案。
+Oracle 的一詞是指量子副程式，它會在一組量子位上運作，並以階段傳回答案。
 這個副程式通常可以被視為接受 oracle 的量子演算法的輸入，除了其他一些參數之外，還會套用一連串的量子作業，並將呼叫視為基本閘道。
 很明顯地，若要實際實施較大型的演算法，必須提供 oracle 到基本閘道的具體分解，但這類分解不需要用來瞭解呼叫 oracle 的演算法。
 在中 Q# ，這個抽象是使用該作業為第一級的值來表示，如此一來，就能以黑箱的方式將作業傳遞給量子演算法的執行。
