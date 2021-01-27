@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.T
 title: T 運算
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: T
 qsharp.summary: Applies the T gate to a single qubit.
-ms.openlocfilehash: 352ef2c1b15a46dea85c420fc6f1cfab0382e73a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bee252d9905aed26f6bf663f895e464e38073f44
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96198396"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98817522"
 ---
 # <a name="t-operation"></a>T 運算
 
