@@ -1,56 +1,56 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification
 title: AmplitudeAmplification 命名空間
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.AmplitudeAmplification
 qsharp.summary: This namespace contains functions and operations for performing amplitude amplification.
-ms.openlocfilehash: f265f1f8b41513f9201a758f85451e768b7564e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a014f923de62c5e660c1c0fc839fbe60e80f8ba9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191409"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845839"
 ---
-# <a name="microsoftquantumamplitudeamplification-namespace"></a><span data-ttu-id="e22c0-102">AmplitudeAmplification 命名空間</span><span class="sxs-lookup"><span data-stu-id="e22c0-102">Microsoft.Quantum.AmplitudeAmplification namespace</span></span>
+# <a name="microsoftquantumamplitudeamplification-namespace"></a><span data-ttu-id="194c9-102">AmplitudeAmplification 命名空間</span><span class="sxs-lookup"><span data-stu-id="194c9-102">Microsoft.Quantum.AmplitudeAmplification namespace</span></span>
 
-<span data-ttu-id="e22c0-103">此命名空間包含用來執行振幅放大的函式和作業。</span><span class="sxs-lookup"><span data-stu-id="e22c0-103">This namespace contains functions and operations for performing amplitude amplification.</span></span>
+<span data-ttu-id="194c9-103">此命名空間包含用來執行振幅放大的函式和作業。</span><span class="sxs-lookup"><span data-stu-id="194c9-103">This namespace contains functions and operations for performing amplitude amplification.</span></span>
 
 
 
-## <a name="description"></a><span data-ttu-id="e22c0-104">描述</span><span class="sxs-lookup"><span data-stu-id="e22c0-104">Description</span></span>
+## <a name="description"></a><span data-ttu-id="194c9-104">描述</span><span class="sxs-lookup"><span data-stu-id="194c9-104">Description</span></span>
 
-<span data-ttu-id="e22c0-105">使用部分反射的無警示幅度放大是在此處實作為的最常見振幅放大形式。</span><span class="sxs-lookup"><span data-stu-id="e22c0-105">Oblivious amplitude amplification with partial reflections is the most general form of amplitude amplification implemented here.</span></span>
+<span data-ttu-id="194c9-105">使用部分反射的無警示幅度放大是在此處實作為的最常見振幅放大形式。</span><span class="sxs-lookup"><span data-stu-id="194c9-105">Oblivious amplitude amplification with partial reflections is the most general form of amplitude amplification implemented here.</span></span>
 
-<span data-ttu-id="e22c0-106">這是透過 operation AmpAmpObliviousByReflectionPhases 呼叫。</span><span class="sxs-lookup"><span data-stu-id="e22c0-106">This is called through the operation AmpAmpObliviousByReflectionPhases.</span></span>
+<span data-ttu-id="194c9-106">這是透過 operation AmpAmpObliviousByReflectionPhases 呼叫。</span><span class="sxs-lookup"><span data-stu-id="194c9-106">This is called through the operation AmpAmpObliviousByReflectionPhases.</span></span>
 
-<span data-ttu-id="e22c0-107">這有兩個暫存器： `ancillaRegister` 和 `systemRegister` 。</span><span class="sxs-lookup"><span data-stu-id="e22c0-107">This has two registers: `ancillaRegister` and `systemRegister`.</span></span>
+<span data-ttu-id="194c9-107">這有兩個暫存器： `ancillaRegister` 和 `systemRegister` 。</span><span class="sxs-lookup"><span data-stu-id="194c9-107">This has two registers: `ancillaRegister` and `systemRegister`.</span></span>
 
-<span data-ttu-id="e22c0-108">這會針對這些類型的反射接受兩個 oracle，而這種類型的反映 `ReflectionOracle` 只會在註冊上作用 `ancillaRegister` 。</span><span class="sxs-lookup"><span data-stu-id="e22c0-108">This accepts two oracles for these reflections of type `ReflectionOracle` which act only on the `ancillaRegister` register.</span></span>
+<span data-ttu-id="194c9-108">這會針對這些類型的反射接受兩個 oracle，而這種類型的反映 `ReflectionOracle` 只會在註冊上作用 `ancillaRegister` 。</span><span class="sxs-lookup"><span data-stu-id="194c9-108">This accepts two oracles for these reflections of type `ReflectionOracle` which act only on the `ancillaRegister` register.</span></span>
 
-<span data-ttu-id="e22c0-109">這會接受 oracle 特殊的無警示振幅類型，這兩種類型的動作會 `ObliviousOracle` 同時在這兩個註冊上共同運作。</span><span class="sxs-lookup"><span data-stu-id="e22c0-109">This accepts an oracle special to oblivious amplitude amplification of type `ObliviousOracle` which acts jointly on both register.</span></span>
+<span data-ttu-id="194c9-109">這會接受 oracle 特殊的無警示振幅類型，這兩種類型的動作會 `ObliviousOracle` 同時在這兩個註冊上共同運作。</span><span class="sxs-lookup"><span data-stu-id="194c9-109">This accepts an oracle special to oblivious amplitude amplification of type `ObliviousOracle` which acts jointly on both register.</span></span>
 
-<span data-ttu-id="e22c0-110">的輸入狀態 `ancillaRegister` 會假設為第一個反映運算子的唯一 $-$1 eigenstate，$I-2 \ ket {s} \ bra {s} $。</span><span class="sxs-lookup"><span data-stu-id="e22c0-110">The input state to `ancillaRegister` is assumed to be the unique $-1$ eigenstate of the first reflection operator $I - 2\ket{s}\bra{s}$.</span></span>
+<span data-ttu-id="194c9-110">的輸入狀態 `ancillaRegister` 會假設為第一個反映運算子的唯一 $-$1 eigenstate，$I-2 \ ket {s} \ bra {s} $。</span><span class="sxs-lookup"><span data-stu-id="194c9-110">The input state to `ancillaRegister` is assumed to be the unique $-1$ eigenstate of the first reflection operator $I - 2\ket{s}\bra{s}$.</span></span>
 
-<span data-ttu-id="e22c0-111">關於目標量子狀態的反映通常是藉由假設存取 oracle 來執行，此狀態是從計算基礎 $ \ket{0\cdots 0} $ 準備該狀態。</span><span class="sxs-lookup"><span data-stu-id="e22c0-111">Reflections about a target quantum state are often implemented by assuming access to an oracle that prepare that state from the computational basis $\ket{0\cdots 0}$.</span></span>
+<span data-ttu-id="194c9-111">關於目標量子狀態的反映通常是藉由假設存取 oracle 來執行，此狀態是從計算基礎 $ \ket{0\cdots 0} $ 準備該狀態。</span><span class="sxs-lookup"><span data-stu-id="194c9-111">Reflections about a target quantum state are often implemented by assuming access to an oracle that prepare that state from the computational basis $\ket{0\cdots 0}$.</span></span>
 
-<span data-ttu-id="e22c0-112">我們對這些 oracle 的慣例需要兩個暫存器：單一量子位的 `flagQubit` 註冊，以及 ancillaRegister 註冊上其他所有專案的註冊。</span><span class="sxs-lookup"><span data-stu-id="e22c0-112">Our convention for these oracles requires two registers: a single-qubit `flagQubit` register, and a register for everything else on the ancillaRegister register.</span></span>
+<span data-ttu-id="194c9-112">我們對這些 oracle 的慣例需要兩個暫存器：單一量子位的 `flagQubit` 註冊，以及 ancillaRegister 註冊上其他所有專案的註冊。</span><span class="sxs-lookup"><span data-stu-id="194c9-112">Our convention for these oracles requires two registers: a single-qubit `flagQubit` register, and a register for everything else on the ancillaRegister register.</span></span>
 
-<span data-ttu-id="e22c0-113">類型的 oracle 會 `StateOracle` 在這兩個暫存器上共同運作，以建立以 $ \ket $ 標示的目標狀態， {1} `flagQubit` 並在註冊中使用某些真實的波幅。</span><span class="sxs-lookup"><span data-stu-id="e22c0-113">The oracle of type `StateOracle` acts jointly on both registers to create the target state flagged by $\ket{1}$ in the `flagQubit` register with some real amplitude.</span></span>
+<span data-ttu-id="194c9-113">類型的 oracle 會 `StateOracle` 在這兩個暫存器上共同運作，以建立以 $ \ket $ 標示的目標狀態， {1} `flagQubit` 並在註冊中使用某些真實的波幅。</span><span class="sxs-lookup"><span data-stu-id="194c9-113">The oracle of type `StateOracle` acts jointly on both registers to create the target state flagged by $\ket{1}$ in the `flagQubit` register with some real amplitude.</span></span>
 
-<span data-ttu-id="e22c0-114">`ReflectionOracle`此旗標狀態的反映是由作業產生 `TargetStateReflectionOracle` 。</span><span class="sxs-lookup"><span data-stu-id="e22c0-114">The reflection `ReflectionOracle` about the this flag state is generated by the operation `TargetStateReflectionOracle`.</span></span>
+<span data-ttu-id="194c9-114">`ReflectionOracle`此旗標狀態的反映是由作業產生 `TargetStateReflectionOracle` 。</span><span class="sxs-lookup"><span data-stu-id="194c9-114">The reflection `ReflectionOracle` about the this flag state is generated by the operation `TargetStateReflectionOracle`.</span></span>
 
-<span data-ttu-id="e22c0-115">`ReflectionOracle`有關輸入狀態的反映 `ancillaRegister` 是由反轉 StateOracle 產生，然後以 ReflectionStart ( # A1 來反映 $ \ket{0\cdots 0} $。</span><span class="sxs-lookup"><span data-stu-id="e22c0-115">The reflection `ReflectionOracle` about the input state to `ancillaRegister` is generated by the inverting StateOracle and then reflecting about $\ket{0\cdots 0}$ with ReflectionStart().</span></span>
+<span data-ttu-id="194c9-115">`ReflectionOracle`有關輸入狀態的反映 `ancillaRegister` 是由反轉 StateOracle 產生，然後以 ReflectionStart ( # A1 來反映 $ \ket{0\cdots 0} $。</span><span class="sxs-lookup"><span data-stu-id="194c9-115">The reflection `ReflectionOracle` about the input state to `ancillaRegister` is generated by the inverting StateOracle and then reflecting about $\ket{0\cdots 0}$ with ReflectionStart().</span></span>
 
-<span data-ttu-id="e22c0-116">型別的 oracle `DeterministicStateOracle` 作用於暫存器 `qubitState` ，以建立完全不含旗標的目標狀態。</span><span class="sxs-lookup"><span data-stu-id="e22c0-116">The oracle of type `DeterministicStateOracle` acts on the `qubitState` registers to create the target state exactly with no flag.</span></span>
+<span data-ttu-id="194c9-116">型別的 oracle `DeterministicStateOracle` 作用於暫存器 `qubitState` ，以建立完全不含旗標的目標狀態。</span><span class="sxs-lookup"><span data-stu-id="194c9-116">The oracle of type `DeterministicStateOracle` acts on the `qubitState` registers to create the target state exactly with no flag.</span></span>
 
-<span data-ttu-id="e22c0-117">`AmpAmpObliviousByOraclePhases` 是無警示振幅放大的版本，可接受 oracle `StateOracle` 而 `ObliviousOracle` 不是反射。</span><span class="sxs-lookup"><span data-stu-id="e22c0-117">`AmpAmpObliviousByOraclePhases` is a version of oblivious amplitude amplification that accepts oracles `StateOracle` and `ObliviousOracle` instead of reflections.</span></span>
+<span data-ttu-id="194c9-117">`AmpAmpObliviousByOraclePhases` 是無警示振幅放大的版本，可接受 oracle `StateOracle` 而 `ObliviousOracle` 不是反射。</span><span class="sxs-lookup"><span data-stu-id="194c9-117">`AmpAmpObliviousByOraclePhases` is a version of oblivious amplitude amplification that accepts oracles `StateOracle` and `ObliviousOracle` instead of reflections.</span></span>
 
-<span data-ttu-id="e22c0-118">請注意，振幅放大是無警示幅度放大的特殊案例 `ObliviousOracle` ，其中是身分識別運算子，而且沒有任何系統量子位，也就是 `systemRegister` 空的。</span><span class="sxs-lookup"><span data-stu-id="e22c0-118">Note that amplitude amplification is a special case of oblivious amplitude amplification where `ObliviousOracle` is the identity operator, and there are no system qubits i.e. `systemRegister` is empty.</span></span>
+<span data-ttu-id="194c9-118">請注意，振幅放大是無警示幅度放大的特殊案例 `ObliviousOracle` ，其中是身分識別運算子，而且沒有任何系統量子位，也就是 `systemRegister` 空的。</span><span class="sxs-lookup"><span data-stu-id="194c9-118">Note that amplitude amplification is a special case of oblivious amplitude amplification where `ObliviousOracle` is the identity operator, and there are no system qubits i.e. `systemRegister` is empty.</span></span>
 
-<span data-ttu-id="e22c0-119">這是透過作業和來 `AmpAmByReflectionPhases` 呼叫 `AmpAmpByOraclePhases` 。</span><span class="sxs-lookup"><span data-stu-id="e22c0-119">This is called through the operation `AmpAmByReflectionPhases` and `AmpAmpByOraclePhases`.</span></span>
+<span data-ttu-id="194c9-119">這是透過作業和來 `AmpAmByReflectionPhases` 呼叫 `AmpAmpByOraclePhases` 。</span><span class="sxs-lookup"><span data-stu-id="194c9-119">This is called through the operation `AmpAmByReflectionPhases` and `AmpAmpByOraclePhases`.</span></span>
 
-<span data-ttu-id="e22c0-120">格羅弗搜尋標準案例中部分反射的階段是由函數 AmpAmpPhasesStandard 提供。</span><span class="sxs-lookup"><span data-stu-id="e22c0-120">The phases for partial reflections in the standard case of Grover search is provided by the function AmpAmpPhasesStandard.</span></span>
+<span data-ttu-id="194c9-120">格羅弗搜尋標準案例中部分反射的階段是由函數 AmpAmpPhasesStandard 提供。</span><span class="sxs-lookup"><span data-stu-id="194c9-120">The phases for partial reflections in the standard case of Grover search is provided by the function AmpAmpPhasesStandard.</span></span>
 
-<span data-ttu-id="e22c0-121">舉例來說，我們有下列相依性： AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases。</span><span class="sxs-lookup"><span data-stu-id="e22c0-121">For instance, we have the following dependencies: AmpAmpByOracle -> AmpAmpByOraclePhases -> AmpAmpObliviousByOraclePhases -> AmpAmpObliviousByReflectionPhases.</span></span>
+<span data-ttu-id="194c9-121">舉例來說，我們有下列相依性： AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases。</span><span class="sxs-lookup"><span data-stu-id="194c9-121">For instance, we have the following dependencies: AmpAmpByOracle -> AmpAmpByOraclePhases -> AmpAmpObliviousByOraclePhases -> AmpAmpObliviousByReflectionPhases.</span></span>
