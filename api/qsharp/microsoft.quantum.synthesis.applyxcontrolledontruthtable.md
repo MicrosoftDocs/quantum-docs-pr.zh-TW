@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 title: ApplyXControlledOnTruthTable 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyXControlledOnTruthTable
 qsharp.summary: Applies the @"microsoft.quantum.intrinsic.x" operation on `target`, if the Boolean function `func` evaluates to true for the classical assignment in `controlRegister`.
-ms.openlocfilehash: aa4e1bc0d5058228721728a894b896331ec626d1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6e956038f7cd15db7348ff830da8bc9eae53aa61
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96203292"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855551"
 ---
 # <a name="applyxcontrolledontruthtable-operation"></a>ApplyXControlledOnTruthTable 操作
 
@@ -61,7 +61,7 @@ operation ApplyXControlledOnTruthTable (func : BigInt, controlRegister : Qubit[]
 
 
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - [*N. Schuch*、 *J Siewert*、PRL 91、no. 027902、2003、arXiv： quant-ph/0303063](https://arxiv.org/abs/quant-ph/0303063)
 - [*Mathias Soeken*、 *聖馬丁 Roetteler*、arXiv：2005.12310](https://arxiv.org/abs/2005.12310)

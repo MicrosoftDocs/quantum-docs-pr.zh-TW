@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.GreaterThanOrEqualI
 title: GreaterThanOrEqualI 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: GreaterThanOrEqualI
 qsharp.summary: Returns true if and only if a number is greater than or equal to another number.
-ms.openlocfilehash: 0435aae4a824bd19d972e9f6b331260bbe21f692
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c1a513500c8a70bd7628976974387cba48162e80
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197784"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849189"
 ---
 # <a name="greaterthanorequali-function"></a>GreaterThanOrEqualI 函式
 
@@ -49,7 +49,7 @@ function GreaterThanOrEqualI (a : Int, b : Int) : Bool
 
 以下是相等的：
 
-```Q#
+```qsharp
 let cond = a >= b;
 let cond = GreaterThanOrEqualI(a, b);
 ```

@@ -4,17 +4,17 @@ description: 瞭解程式設計語言中的存取修飾詞 Q# 。
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.accessmodifiers
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8648ad4632b8b8ca79533b267f8368732681339a
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 92b77de412c53016cee1177caf8ff7ecce9e2bd4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96233158"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846771"
 ---
 # <a name="access-modifiers-in-no-locq"></a>中的存取修飾詞 Q#
 

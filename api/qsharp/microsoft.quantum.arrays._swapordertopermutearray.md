@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays._SwapOrderToPermuteArray
 title: _SwapOrderToPermuteArray 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: _SwapOrderToPermuteArray
 qsharp.summary: Returns the order elements in an array need to be swapped to produce an ordered array. Assumes swaps occur in place.
-ms.openlocfilehash: 9df2ec00d91c1124fae960efd15d576b15b0223c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ff8e4e23dde7d69f93054a275548ded49d5b0bfb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221703"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846301"
 ---
 # <a name="_swapordertopermutearray-function"></a>_SwapOrderToPermuteArray 函式
 
@@ -40,6 +40,13 @@ function _SwapOrderToPermuteArray (newOrder : Int[]) : (Int, Int)[]
 ## <a name="output--intint"></a>輸出： ([int](xref:microsoft.quantum.lang-ref.int)，[int](xref:microsoft.quantum.lang-ref.int)) []
 
 元組代表要交換的兩個索引。 交換會從最小的索引開始。
+
+## <a name="example"></a>範例
+
+```qsharp
+// The following returns [(0, 5),(0, 4),(0, 1),(0, 3)];
+let swapOrder = _SwapOrderToPermuteArray([5, 3, 2, 0, 1, 4]);
+```
 
 ## <a name="remarks"></a>備註
 

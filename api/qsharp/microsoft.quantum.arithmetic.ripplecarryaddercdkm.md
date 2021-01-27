@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderCDKM
 title: RippleCarryAdderCDKM 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderCDKM
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers.
-ms.openlocfilehash: b08d8823fd539263205aca1ee15ee69adcb163b7
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: df9b62b649af532a4202aacc3e8dd4613eb8665d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222094"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846369"
 ---
 # <a name="ripplecarryaddercdkm-operation"></a>RippleCarryAdderCDKM 操作
 
@@ -58,7 +58,7 @@ LittleEndian 量子位暫存器第二個整數被加數的編碼，會修改為�
 
 這項作業與 RippleCarryAdderD 具有相同的功能，但只會使用一個輔助量子位，而不是 $n $。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - Steven Cuccaro、Thomas g. Draper、Samuel A. Kutin、David Petrie Moulton：「新的量子 ripple-攜帶加法電路」、2004。
   https://arxiv.org/abs/quant-ph/0410184v1

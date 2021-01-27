@@ -1,6 +1,6 @@
 ---
 標題：量子位的量子運算描述：瞭解量子位，這是量子運算中的基本資訊單位。
-作者： QuantumWriter uid：量子位 ms. 作者： v-benbra ms. date： 12/11/2017 ms. 主題：非 loc 文章：
+作者： QuantumWriter uid：量子位 ms. 作者： v-benbra ms. date： 12/11/2017 ms. 主題：概念無 loc：
 - "Q#"
 - "$$v"
 - "$$"

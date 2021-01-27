@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.And
 title: And 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: And
 qsharp.summary: Returns the Boolean conjunction of two values.
-ms.openlocfilehash: 279221ed785dd76e28146e4c22e70290936bf529
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6c405bdb4182cc7f32bd04952dec25a974c03445
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96198566"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849232"
 ---
 # <a name="and-function"></a>And 函式
 
@@ -51,7 +51,7 @@ function And (a : Bool, b : Bool) : Bool
 
 最高的最小運算行為，如下所示：
 
-```Q#
+```qsharp
 let x = a and b;
 let x = And(a, b);
 ```
