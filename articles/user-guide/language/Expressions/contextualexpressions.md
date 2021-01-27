@@ -4,17 +4,17 @@ description: 瞭解中的運算式類型 Q# ，這些類型只能在特定內容
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.contextualexpressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1145c85bda532ab2e63c4e82da94f24fd4e14b1e
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 65ee615d8db457c81191d254181c67681a71cd9d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96233236"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856522"
 ---
 <!---
 # Contextual and omitted expressions in Q#

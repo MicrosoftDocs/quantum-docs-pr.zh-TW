@@ -1,62 +1,71 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMost
 title: ApplyToMost 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMost
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: 7e7824b431ccff644cf5cc53145163327eb8ad36
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a3918233e101f3d8956601dcc7d85edcf6196ac7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208528"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850599"
 ---
-# <a name="applytomost-operation"></a><span data-ttu-id="1f186-102">ApplyToMost 操作</span><span class="sxs-lookup"><span data-stu-id="1f186-102">ApplyToMost operation</span></span>
+# <a name="applytomost-operation"></a><span data-ttu-id="453cc-102">ApplyToMost 操作</span><span class="sxs-lookup"><span data-stu-id="453cc-102">ApplyToMost operation</span></span>
 
-<span data-ttu-id="1f186-103">命名空間： [Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="1f186-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="453cc-103">命名空間： [Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="453cc-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="1f186-104">封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="1f186-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="453cc-104">封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="453cc-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="1f186-105">將作業套用至陣列的最後一個元素以外的所有專案。</span><span class="sxs-lookup"><span data-stu-id="1f186-105">Applies an operation to all but the last element of an array.</span></span>
+<span data-ttu-id="453cc-105">將作業套用至陣列的最後一個元素以外的所有專案。</span><span class="sxs-lookup"><span data-stu-id="453cc-105">Applies an operation to all but the last element of an array.</span></span>
 
 ```qsharp
 operation ApplyToMost<'T> (op : ('T[] => Unit), targets : 'T[]) : Unit
 ```
 
 
-## <a name="description"></a><span data-ttu-id="1f186-106">描述</span><span class="sxs-lookup"><span data-stu-id="1f186-106">Description</span></span>
+## <a name="description"></a><span data-ttu-id="453cc-106">描述</span><span class="sxs-lookup"><span data-stu-id="453cc-106">Description</span></span>
 
-<span data-ttu-id="1f186-107">假設有作業 `op` 和目標陣列，則 `targets` 適用 `op(Most(targets))` 。</span><span class="sxs-lookup"><span data-stu-id="1f186-107">Given an operation `op` and an array of targets `targets`, applies `op(Most(targets))`.</span></span>
+<span data-ttu-id="453cc-107">假設有作業 `op` 和目標陣列，則 `targets` 適用 `op(Most(targets))` 。</span><span class="sxs-lookup"><span data-stu-id="453cc-107">Given an operation `op` and an array of targets `targets`, applies `op(Most(targets))`.</span></span>
 
-## <a name="input"></a><span data-ttu-id="1f186-108">輸入</span><span class="sxs-lookup"><span data-stu-id="1f186-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="453cc-108">輸入</span><span class="sxs-lookup"><span data-stu-id="453cc-108">Input</span></span>
 
-### <a name="op--t--unit"></a><span data-ttu-id="1f186-109">op： t [] => [單位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="1f186-109">op : 'T[] => [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span> 
+### <a name="op--t--unit"></a><span data-ttu-id="453cc-109">op： t [] => [單位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="453cc-109">op : 'T[] => [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span> 
 
-<span data-ttu-id="1f186-110">要套用的作業。</span><span class="sxs-lookup"><span data-stu-id="1f186-110">An operation to be applied.</span></span>
-
-
-### <a name="targets--t"></a><span data-ttu-id="1f186-111">目標： t []</span><span class="sxs-lookup"><span data-stu-id="1f186-111">targets : 'T[]</span></span>
-
-<span data-ttu-id="1f186-112">目標的陣列，其中最後一個只會套用到最後一個 `op` 。</span><span class="sxs-lookup"><span data-stu-id="1f186-112">An array of targets, of which all but the last will be applied to `op`.</span></span>
+<span data-ttu-id="453cc-110">要套用的作業。</span><span class="sxs-lookup"><span data-stu-id="453cc-110">An operation to be applied.</span></span>
 
 
+### <a name="targets--t"></a><span data-ttu-id="453cc-111">目標： t []</span><span class="sxs-lookup"><span data-stu-id="453cc-111">targets : 'T[]</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="1f186-113">輸出： [單位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="1f186-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="453cc-112">目標的陣列，其中最後一個只會套用到最後一個 `op` 。</span><span class="sxs-lookup"><span data-stu-id="453cc-112">An array of targets, of which all but the last will be applied to `op`.</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="1f186-114">類型參數</span><span class="sxs-lookup"><span data-stu-id="1f186-114">Type Parameters</span></span>
+## <a name="output--unit"></a><span data-ttu-id="453cc-113">輸出： [單位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="453cc-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-### <a name="t"></a><span data-ttu-id="1f186-115">不要</span><span class="sxs-lookup"><span data-stu-id="1f186-115">'T</span></span>
 
-<span data-ttu-id="1f186-116">要套用之作業的輸入類型。</span><span class="sxs-lookup"><span data-stu-id="1f186-116">The input type of the operation to be applied.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1f186-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1f186-117">See Also</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="453cc-114">類型參數</span><span class="sxs-lookup"><span data-stu-id="453cc-114">Type Parameters</span></span>
 
-- [<span data-ttu-id="1f186-118">Canon. ApplyToMostA</span><span class="sxs-lookup"><span data-stu-id="1f186-118">Microsoft.Quantum.Canon.ApplyToMostA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMostA)
-- [<span data-ttu-id="1f186-119">Canon. ApplyToMostC</span><span class="sxs-lookup"><span data-stu-id="1f186-119">Microsoft.Quantum.Canon.ApplyToMostC</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMostC)
-- [<span data-ttu-id="1f186-120">Canon. ApplyToMostCA</span><span class="sxs-lookup"><span data-stu-id="1f186-120">Microsoft.Quantum.Canon.ApplyToMostCA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMostCA)
+### <a name="t"></a><span data-ttu-id="453cc-115">不要</span><span class="sxs-lookup"><span data-stu-id="453cc-115">'T</span></span>
+
+<span data-ttu-id="453cc-116">要套用之作業的輸入類型。</span><span class="sxs-lookup"><span data-stu-id="453cc-116">The input type of the operation to be applied.</span></span>
+
+## <a name="example"></a><span data-ttu-id="453cc-117">範例</span><span class="sxs-lookup"><span data-stu-id="453cc-117">Example</span></span>
+
+<span data-ttu-id="453cc-118">下列 Q # 程式碼片段是相等的：</span><span class="sxs-lookup"><span data-stu-id="453cc-118">The following Q# snippets are equivalent:</span></span>
+
+```qsharp
+ApplyToMost(ApplyCNOTChain, register);
+ApplyCNOTChain(Most(register));
+```
+
+## <a name="see-also"></a><span data-ttu-id="453cc-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="453cc-119">See Also</span></span>
+
+- [<span data-ttu-id="453cc-120">Canon. ApplyToMostA</span><span class="sxs-lookup"><span data-stu-id="453cc-120">Microsoft.Quantum.Canon.ApplyToMostA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMostA)
+- [<span data-ttu-id="453cc-121">Canon. ApplyToMostC</span><span class="sxs-lookup"><span data-stu-id="453cc-121">Microsoft.Quantum.Canon.ApplyToMostC</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMostC)
+- [<span data-ttu-id="453cc-122">Canon. ApplyToMostCA</span><span class="sxs-lookup"><span data-stu-id="453cc-122">Microsoft.Quantum.Canon.ApplyToMostCA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToMostCA)
