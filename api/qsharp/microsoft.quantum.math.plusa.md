@@ -1,52 +1,52 @@
 ---
 uid: Microsoft.Quantum.Math.PlusA
 title: PlusA 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PlusA
 qsharp.summary: Returns the sum (concatenation) of two inputs.
-ms.openlocfilehash: fe19c5d2e075624516376a5d5fa49014acb295ec
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 14e9bfdbe4b70b4730e5bfc64a0ee81ab3cecaaf
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96194826"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842706"
 ---
-# <a name="plusa-function"></a><span data-ttu-id="97bfa-102">PlusA 函式</span><span class="sxs-lookup"><span data-stu-id="97bfa-102">PlusA function</span></span>
+# <a name="plusa-function"></a><span data-ttu-id="9f0b4-102">PlusA 函式</span><span class="sxs-lookup"><span data-stu-id="9f0b4-102">PlusA function</span></span>
 
-<span data-ttu-id="97bfa-103">命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)</span><span class="sxs-lookup"><span data-stu-id="97bfa-103">Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)</span></span>
+<span data-ttu-id="9f0b4-103">命名空間： [Microsoft 量子. 數學](xref:Microsoft.Quantum.Math)</span><span class="sxs-lookup"><span data-stu-id="9f0b4-103">Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)</span></span>
 
-<span data-ttu-id="97bfa-104">封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="97bfa-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="9f0b4-104">封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="9f0b4-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="97bfa-105">傳回兩個輸入 (串連) 的總和。</span><span class="sxs-lookup"><span data-stu-id="97bfa-105">Returns the sum (concatenation) of two inputs.</span></span>
+<span data-ttu-id="9f0b4-105">傳回兩個輸入 (串連) 的總和。</span><span class="sxs-lookup"><span data-stu-id="9f0b4-105">Returns the sum (concatenation) of two inputs.</span></span>
 
 ```qsharp
 function PlusA<'Element> (a : 'Element[], b : 'Element[]) : 'Element[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="97bfa-106">輸入</span><span class="sxs-lookup"><span data-stu-id="97bfa-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="9f0b4-106">輸入</span><span class="sxs-lookup"><span data-stu-id="9f0b4-106">Input</span></span>
 
-### <a name="a--element"></a><span data-ttu-id="97bfa-107">a： ' Element []</span><span class="sxs-lookup"><span data-stu-id="97bfa-107">a : 'Element[]</span></span>
+### <a name="a--element"></a><span data-ttu-id="9f0b4-107">a： ' Element []</span><span class="sxs-lookup"><span data-stu-id="9f0b4-107">a : 'Element[]</span></span>
 
-<span data-ttu-id="97bfa-108">要加總的第一個輸入 $a $。</span><span class="sxs-lookup"><span data-stu-id="97bfa-108">The first input $a$ to be summed.</span></span>
-
-
-### <a name="b--element"></a><span data-ttu-id="97bfa-109">b： ' Element []</span><span class="sxs-lookup"><span data-stu-id="97bfa-109">b : 'Element[]</span></span>
-
-<span data-ttu-id="97bfa-110">第二個輸入 $b $ 以加總。</span><span class="sxs-lookup"><span data-stu-id="97bfa-110">The second input $b$ to be summed.</span></span>
+<span data-ttu-id="9f0b4-108">要加總的第一個輸入 $a $。</span><span class="sxs-lookup"><span data-stu-id="9f0b4-108">The first input $a$ to be summed.</span></span>
 
 
+### <a name="b--element"></a><span data-ttu-id="9f0b4-109">b： ' Element []</span><span class="sxs-lookup"><span data-stu-id="9f0b4-109">b : 'Element[]</span></span>
 
-## <a name="output--element"></a><span data-ttu-id="97bfa-111">Output： ' Element []</span><span class="sxs-lookup"><span data-stu-id="97bfa-111">Output : 'Element[]</span></span>
+<span data-ttu-id="9f0b4-110">第二個輸入 $b $ 以加總。</span><span class="sxs-lookup"><span data-stu-id="9f0b4-110">The second input $b$ to be summed.</span></span>
 
-<span data-ttu-id="97bfa-112">Sum $a + b $。</span><span class="sxs-lookup"><span data-stu-id="97bfa-112">The sum $a + b$.</span></span>
 
-## <a name="type-parameters"></a><span data-ttu-id="97bfa-113">類型參數</span><span class="sxs-lookup"><span data-stu-id="97bfa-113">Type Parameters</span></span>
 
-### <a name="element"></a><span data-ttu-id="97bfa-114">' 元素</span><span class="sxs-lookup"><span data-stu-id="97bfa-114">'Element</span></span>
+## <a name="output--element"></a><span data-ttu-id="9f0b4-111">Output： ' Element []</span><span class="sxs-lookup"><span data-stu-id="9f0b4-111">Output : 'Element[]</span></span>
 
-<span data-ttu-id="97bfa-115">這兩個輸入陣列中每個元素的型別。</span><span class="sxs-lookup"><span data-stu-id="97bfa-115">The type of each element in each of the two input arrays.</span></span>
+<span data-ttu-id="9f0b4-112">Sum $a + b $。</span><span class="sxs-lookup"><span data-stu-id="9f0b4-112">The sum $a + b$.</span></span>
+
+## <a name="type-parameters"></a><span data-ttu-id="9f0b4-113">類型參數</span><span class="sxs-lookup"><span data-stu-id="9f0b4-113">Type Parameters</span></span>
+
+### <a name="element"></a><span data-ttu-id="9f0b4-114">' 元素</span><span class="sxs-lookup"><span data-stu-id="9f0b4-114">'Element</span></span>
+
+<span data-ttu-id="9f0b4-115">這兩個輸入陣列中每個元素的型別。</span><span class="sxs-lookup"><span data-stu-id="9f0b4-115">The type of each element in each of the two input arrays.</span></span>
