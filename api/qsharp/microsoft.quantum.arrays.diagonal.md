@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.Diagonal
 title: 對角函數
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Diagonal
 qsharp.summary: Returns an array of diagonal elements of a 2-dimensional array
-ms.openlocfilehash: fe6bac0acfa07b14620c7c35ae5e1cec2287d13d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2857046f59a958fed106af0944b75baaa3292e96
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221533"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842834"
 ---
 # <a name="diagonal-function"></a>對角函數
 
@@ -49,6 +49,14 @@ function Diagonal<'T> (matrix : 'T[][]) : 'T[]
 ### <a name="t"></a>不要
 
 之每個專案的型別 `matrix` 。
+
+## <a name="example"></a>範例
+
+```qsharp
+let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+let diagonal = Diagonal(matrix);
+// same as: column = [1, 5, 9]
+```
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.Count
 title: Count 函數
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Count
 qsharp.summary: Given an array and a predicate that is defined for the elements of the array, returns the number of elements an array that consists of those elements that satisfy the predicate.
-ms.openlocfilehash: 48b75cc6d6584f899223a0803f31fd174836f303
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e178ee63526e3485e8cc83a3ba8f827d8ecac552
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221550"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842842"
 ---
 # <a name="count-function"></a>Count 函數
 
@@ -50,6 +50,17 @@ function Count<'T> (predicate : ('T -> Bool), array : 'T[]) : Int
 ### <a name="t"></a>不要
 
 元素的類型 `array` 。
+
+## <a name="example"></a>範例
+
+下列程式碼示範 "Count" 函式。
+使用函式定義述詞 @"microsoft.quantum.logical.greaterthani" ：
+
+```qsharp
+ let predicate = GreaterThanI(_, 5);
+ let count = Count(predicate, [2, 5, 9, 1, 8]);
+ // count = 2
+```
 
 ## <a name="remarks"></a>備註
 

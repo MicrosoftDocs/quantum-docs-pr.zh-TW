@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderD
 title: RippleCarryAdderD 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderD
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers. Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`, and a qubit carry, the operation computes the sum of the two integers where the $n$ least significant bits of the result are held in `ys` and the carry out bit is xored to the qubit `carry`.
-ms.openlocfilehash: b87c8f25acc8854d5e8d28f58cfc99dffb92a973
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f0f6f39fbff9f682f8f74a982c0a41847df1397a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222110"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842956"
 ---
 # <a name="ripplecarryadderd-operation"></a>RippleCarryAdderD 操作
 
@@ -55,7 +55,7 @@ LittleEndian 量子位暫存器第二個整數被加數的編碼，會修改成�
 
 指定的受控制作業會使用作業的對稱和相互取消，以改善將控制項加入至每個作業的預設執行。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - Thomas g. Draper：「在量子電腦上新增」，2000。
   https://arxiv.org/abs/quant-ph/0008033
