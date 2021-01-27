@@ -4,16 +4,16 @@ description: 瞭解搭配 Q# 內建資料類型使用的標準程式庫中的傳
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6de1574341d67c569cd2f040ec533e263fdd386e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a2e2656f42213c8ae9e984f63f3ebf4058520532
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692054"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853986"
 ---
 # <a name="classical-mathematical-functions"></a>傳統數學函數 #
 

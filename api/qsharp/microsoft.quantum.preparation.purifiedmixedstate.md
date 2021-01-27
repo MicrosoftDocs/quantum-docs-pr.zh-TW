@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Preparation.PurifiedMixedState
 title: PurifiedMixedState 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PurifiedMixedState
 qsharp.summary: "Returns an operation that prepares a a purification of a given mixed state.\rA \"purified mixed state\" refers to states of the form |ψ⟩ = Σᵢ √\U0001D45Dᵢ |\U0001D456⟩ |garbageᵢ⟩ specified by a vector of\rcoefficients {\U0001D45Dᵢ}. States of this form can be reduced to mixed states ρ ≔ \U0001D45Dᵢ |\U0001D456⟩⟨\U0001D456| by tracing over the \"garbage\"\rregister (that is, a mixed state that is diagonal in the computational basis).\r\rSee https://arxiv.org/pdf/1805.03662.pdf?page=15 for further discussion."
-ms.openlocfilehash: 73b031f1082d0a12975abad074b07184dcbabdbe
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 594a1d9fa674e457ab88072ade4198283b677af6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96230016"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854296"
 ---
 # <a name="purifiedmixedstate-function"></a>PurifiedMixedState 函式
 
@@ -57,11 +57,26 @@ $N $ 係數的陣列，指定基礎狀態的機率。
 
 一種作業，會將 $ \tilde \rho $ 做為淨化的聯結，以做為聯合索引和垃圾登錄的。
 
+## <a name="example"></a>範例
+
+下列程式碼片段會準備 $ 3 $-量子位 state $ \rho = \ sum_ {j = 0} ^ {4} \frac{| Alpha_j |} 的淨化{\ sum_k | \ Alpha_k |}\ket{j}\bra{j} $，其中 $ \vec\Alpha = (1.0、2.0、3.0、4.0、5.0) $，而目標錯誤為 $10 ^ {-3} $：
+
+```qsharp
+let coefficients = [1.0, 2.0, 3.0, 4.0, 5.0];
+let targetError = 1e-3;
+let purifiedState = PurifiedMixedState(targetError, coefficients);
+using (indexRegister = Qubit[purifiedState::Requirements::NIndexQubits]) {
+    using (garbageRegister = Qubit[purifiedState::Requirements::NGarbageQubits]) {
+        purifiedState::Prepare(LittleEndian(indexRegister), new Qubit[0], garbageRegister);
+    }
+}
+```
+
 ## <a name="remarks"></a>備註
 
 提供給這項作業的係數會以1個標準的形式正規化，讓係數一律視為描述有效的類別機率分佈。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - 使用線性 T 複雜度編碼 Spectra 量子線路中的電子 Ryan Babbush、Craig Gidney、Dominic W. Berry、Nathan Wiebe、Jarrod McClean、Zitec Paler、奧斯丁 Fowler、Hartmut Neven https://arxiv.org/abs/1805.03662
 

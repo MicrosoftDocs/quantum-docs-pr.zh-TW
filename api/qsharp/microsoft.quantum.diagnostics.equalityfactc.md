@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityFactC
 title: EqualityFactC 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: EqualityFactC
 qsharp.summary: Asserts that a complex number has the expected value.
-ms.openlocfilehash: e33d25899580a127171fb45a92d77cfdb5003a21
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 0fcfe553d7a0050a9ab35a43ac5fe2b1958514db
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96201898"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853370"
 ---
 # <a name="equalityfactc-function"></a>EqualityFactC 函式
 

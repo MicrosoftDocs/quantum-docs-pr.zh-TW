@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Preparation.PreparePauliEigenstate
 title: PreparePauliEigenstate 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PreparePauliEigenstate
 qsharp.summary: Prepares a qubit in the positive eigenstate of a given Pauli operator. If the identity operator is given, then the qubit is prepared in the maximally mixed state.
-ms.openlocfilehash: b24852bb3a455a9fe04b3535156d0c3dfb1a7d12
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 473bb2fa4429a14f69bcae4573354aad87dc37df
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193687"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854348"
 ---
 # <a name="preparepaulieigenstate-operation"></a>PreparePauliEigenstate 操作
 
@@ -50,3 +50,15 @@ Pauli 運算子 $P $。
 
 ## <a name="output--unit"></a>輸出： [單位](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## <a name="example"></a>範例
+
+若要準備 $ \ket{+} $ 狀態中的量子位：
+
+```qsharp
+using (q = Qubit()) {
+    PreparePauliEigenstate(PauliX, qubit);
+    // ...
+}
+```
