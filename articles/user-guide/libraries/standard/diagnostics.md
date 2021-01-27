@@ -4,16 +4,16 @@ description: 瞭解在 Q# 量副程式中用來攔截錯誤或錯誤的標準程
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d13122187a24893d297cfdbb3ad4db03eb22ded0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690843"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858689"
 ---
 # <a name="diagnostics"></a>診斷 #
 
@@ -27,7 +27,7 @@ Q#標準程式庫提供各種不同的方式來確保量副程式的正確性，
 根據預設，這會將字串寫入主控台。
 與內插字串一起使用， <xref:Microsoft.Quantum.Intrinsic.Message> 可讓您輕鬆地報告有關傳統值的診斷資訊：
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```
@@ -45,7 +45,7 @@ Message($"About to rotate by an angle of {angle}...");
 
 ## <a name="facts-and-assertions"></a>事實和判斷提示 ##
 
-如 [測試和](xref:microsoft.quantum.guide.testingdebugging)偵測所述，可以將具有簽章或的函式或作業 `Unit -> Unit` `Unit => Unit` 分別標示為 *單元測試* 。
+如 [測試和](xref:microsoft.quantum.guide.testingdebugging)偵測所述，可以將具有簽章或的函式或作業 `Unit -> Unit` `Unit => Unit` 分別標示為 *單元測試*。
 每個單元測試通常包含一個小的量副程式，以及一個或多個檢查該程式是否正確的條件。
 這些條件可以是任一 _事實_ 的形式，它會檢查輸入的值或 _判斷_ 提示的值，以檢查傳遞給輸入的一或多個量子位的狀態。
 
@@ -145,7 +145,7 @@ using (register = Qubit()) {
 
 不過，這兩種方法會測試所檢查之作業的不同屬性。
 因為就地判斷提示會多次呼叫每個作業，每個輸入狀態一次，任何隨機播放和測量結果可能會在呼叫之間變更。
-相反地，參考的判斷提示會一次呼叫每個作業一次，因此它會檢查作業是否等於 *單一快照* 。
+相反地，參考的判斷提示會一次呼叫每個作業一次，因此它會檢查作業是否等於 *單一快照*。
 這兩項測試都有助於確保量副程式的正確性。
 
 

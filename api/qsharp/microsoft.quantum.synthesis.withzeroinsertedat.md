@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
 title: WithZeroInsertedAt 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: WithZeroInsertedAt
 qsharp.summary: Insert a 0-bit into an integer
-ms.openlocfilehash: 414b703151b9152aa69709d9c28e68e5ae63506f
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7d5f8838b6ae555524fb0e82e14f93e6c77e43d4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96228860"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855204"
 ---
 # <a name="withzeroinsertedat-function"></a>WithZeroInsertedAt 函式
 

@@ -1,20 +1,20 @@
 ---
-title: Hf-Fock 理論
+title: Hartree-Fock 理論
 description: 瞭解 Hf – Fock 理論，這是一個簡單的方式，可供您用來建立量子系統的初始狀態。
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.hartreefock
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 53d6e4342e5b58886528e89871591e57d8e70c82
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 48d6bc4face90046271dd8705188a92daafad98a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835344"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854100"
 ---
 # <a name="hartreefock-theory"></a>Hf – Fock 理論
 
@@ -54,7 +54,7 @@ var wavefunctionInt = wavefunctionSpinOrbital.ToIndexing(IndexConvention.UpDown)
 Hf – Fock 理論上最顯著的功能是，它會產生電子之間沒有纏結的量子狀態。
 這表示它通常會提供分子系統屬性的適當定性描述。 
 
-您也可以從重建 Hf Fock 狀態 `FermionHamiltonian`  ，如下所示。
+也可以從重建 Hartree-Fock 狀態 `FermionHamiltonian`  ，如下所示。
 ```csharp
 // We initialize a fermion Hamiltonian.
 var fermionHamiltonian = new FermionHamiltonian();

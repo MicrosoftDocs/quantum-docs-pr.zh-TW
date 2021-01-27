@@ -4,17 +4,17 @@ description: 深入瞭解 Microsoft QDK width 計數器，它會使用量子追�
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9a526ee1440544aace922bd83c6ea39cb83c1ae
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691118"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858587"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>量子追蹤模擬器：寬度計數器
 
@@ -22,7 +22,7 @@ ms.locfileid: "92691118"
 
 ## <a name="invoking-the-width-counter"></a>叫用寬度計數器
 
-若要使用 width 計數器執行量子追蹤模擬器，您必須建立 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 實例、將 `UseWidthCounter` 屬性設為 **true** ，然後以 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 做為參數來建立新的實例 `QCTraceSimulatorConfiguration` 。 
+若要使用 width 計數器執行量子追蹤模擬器，您必須建立 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 實例、將 `UseWidthCounter` 屬性設為 **true**，然後以 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 做為參數來建立新的實例 `QCTraceSimulatorConfiguration` 。 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -44,7 +44,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-相乘控制的作業會 <xref:Microsoft.Quantum.Intrinsic.X> 在總共五個量子位上運作，配置兩個 [附屬量子位](xref:microsoft.quantum.glossary#ancilla)，且輸入寬度為 **5** 。 使用下列 c # 程式來確認計數：
+相乘控制的作業會 <xref:Microsoft.Quantum.Intrinsic.X> 在總共五個量子位上運作，配置兩個 [附屬量子位](xref:microsoft.quantum.glossary#ancilla)，且輸入寬度為 **5**。 使用下列 c # 程式來確認計數：
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
@@ -71,7 +71,7 @@ double inputWidth =
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - 量子開發工具組 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 模擬器總覽。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 參考。

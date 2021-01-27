@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f4b69250ed49bd56c3066d5cd40db4b8abfc9cb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690871"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858710"
 ---
 # <a name="higher-order-control-flow"></a>Higher-Order 控制流程 #
 
@@ -164,7 +164,7 @@ U(1, time / Float(nSteps), target);
 
 到目前為止，我們現在可以在 *沒有量子機制參考的情況* 下，Trotter – Suzuki 擴充的原因。
 擴充實際上是由 $ \eqref{eq： trotter-suzuki-0} $ 所動機的一種非常特定的反復專案模式。
-此反復專案模式的實作為 <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> ：
+此反復專案模式的實作為 <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> ：
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,

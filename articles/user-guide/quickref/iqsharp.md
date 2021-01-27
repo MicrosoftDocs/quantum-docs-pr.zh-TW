@@ -4,16 +4,17 @@ description: Q#使用 Jupyter 筆記本的 I 魔術命令快速參考頁面 Q#
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
+ms.topic: reference
 uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4549afb84bf0084160079e3cef3a7f94dffcda3e
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: bb6517b782a82c1cb159951af41df9bfde51c0bb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771350"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858540"
 ---
 # <a name="ino-locq-magic-commands"></a>我的 Q# 神奇命令
 

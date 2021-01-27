@@ -1,6 +1,6 @@
 ---
 標題：量子線路描述：瞭解如何使用量子電路圖表以視覺化方式呈現簡單且複雜的量子運算。
-author： QuantumWriter uid： benbra ms... ms. date： 12/11/2017 ms. 主題：非 loc 文章：
+author： QuantumWriter uid： benbra ms. ms. date： 12/11/2017 ms. 主題：概念無 loc：
 - "Q#"
 - "$$v"
 - "$$"
@@ -89,7 +89,7 @@ author： QuantumWriter uid： benbra ms... ms. date： 12/11/2017 ms. 主題：
 
 $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left (\ket { 00 }  +  \ket { 11 } \right) ，$$
 
-具有這項或更高複雜度的作業在量子演算法和量子錯誤修正中很常見，因此，其視覺效果有一個簡單的方法，稱為 *量子電路圖* ，因此應該會有很大的降低。
+具有這項或更高複雜度的作業在量子演算法和量子錯誤修正中很常見，因此，其視覺效果有一個簡單的方法，稱為 *量子電路圖*，因此應該會有很大的降低。
 準備此充分纏結量子狀態的電路圖為：
 
 <!--- ![](.\media\1.svg) --->

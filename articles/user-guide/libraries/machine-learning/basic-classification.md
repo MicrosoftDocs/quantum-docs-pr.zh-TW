@@ -4,17 +4,17 @@ description: 瞭解如何 Q# 使用 MICROSOFT QDK 的量子 Machine Learning 程
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4fe686a87fbdc610badc0bbcbc0bf7b065e0bce9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833711"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854053"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>基本分類：使用 QDK 分類資料
 
@@ -22,7 +22,7 @@ ms.locfileid: "90833711"
 
 在本指南中，我們將使用中定義的分類器結構來使用半衛星資料集 Q# 。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)。
 - Q#為[Python 主機程式](xref:microsoft.quantum.install.python)或[c # 主機程式](xref:microsoft.quantum.install.cs)建立專案。

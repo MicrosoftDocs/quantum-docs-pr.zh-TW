@@ -1,6 +1,6 @@
 ---
 標題： Advanced matrix 概念描述：瞭解特徵向量、特徵值和矩陣指數，這是用來描述和模擬量子演算法的基本工具。
-作者： QuantumWriter uid： benbra-advanced ms. author： v-ms. date： 12/11/2017 ms. 主題：非 loc 文章：
+作者： QuantumWriter uid： benbra-advanced ms. author： v-ms. date： 12/11/2017 ms. 主題：概念非 loc：
 - "Q#"
 - "$$v"
 - "$$"

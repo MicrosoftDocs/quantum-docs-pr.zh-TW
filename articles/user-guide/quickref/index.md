@@ -4,16 +4,17 @@ description: Q# 的快速參考頁面
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
+ms.topic: reference
 uid: microsoft.quantum.guide.quickref
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9141259f7bd59342bd6e28be9e18bc4c6fe14419
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: d02b03dbf69742131cc75cb899a08dfaaca94e94
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835888"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858555"
 ---
 # <a name="quick-reference-pages"></a>快速參考頁面
 

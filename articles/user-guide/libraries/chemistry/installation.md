@@ -4,26 +4,26 @@ description: 瞭解如何安裝 Microsoft 量子化學程式庫，並將它與 N
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.installation
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a7d1d041dab73980d8debc179d6c79acac6d33
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 5d32544bbce527a376345023d5549308fd4e7c79
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759794"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854085"
 ---
 # <a name="chemistry-library-installation"></a>化學程式庫安裝
 
-[ **MolecularHydrogen**範例](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen)會使用手動設定的分子輸入資料。
+[ **MolecularHydrogen** 範例](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen)會使用手動設定的分子輸入資料。
 雖然這適用于小型範例，但大規模的量子化學需要 Hamiltonian 上百萬或數十億個詞彙。
 可調整的計算化學套件所產生的這類 Hamiltonian 太大，無法以手動方式匯入。
 
 量子開發工具組的量子化學程式庫是設計來與運算化學套件搭配使用，最值得注意的是， [**NWChem**](http://www.nwchem-sw.org/) 的計算化學平臺是由環境分子科學實驗室所開發 (EMSL 在太平洋西北部國內實驗室的) 。
-尤其是，在[Broombridge 架構](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)中， [ **Microsoft 量子化學**套件](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry)提供載入量子化學模擬問題實例的工具，也支援最新的 NWChem 版本進行匯出。
+尤其是，在 [Broombridge 架構](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)中， [ **Microsoft 量子化學** 套件](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry)提供載入量子化學模擬問題實例的工具，也支援最新的 NWChem 版本進行匯出。
 
 量子開發工具組化學程式庫也提供命令列工具，可 `qdk-chem` 用於在舊版格式和 [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)之間進行轉換。
 

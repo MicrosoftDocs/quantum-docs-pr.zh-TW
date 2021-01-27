@@ -8,6 +8,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.Extended
 - summary: '{-1,1}使用 Yates 的方法，以編碼方式計算布耳函數的 Hadamard 轉換'
   uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: 針對每個2層級的單一計算「翻轉遮罩」，這代表應該在套用對應的1量子位閘道之前和之後反轉的量子位。 為了方便起見，在前面加上0的結果。
+  uid: Microsoft.Quantum.Synthesis.FlipMasks
 - summary: 如果目標不是0，則將 MCMTMask 類型視為單一陣列，否則會傳回空陣列。
   uid: Microsoft.Quantum.Synthesis.GateMask
 - summary: 最多可計算兩個 MCMT 遮罩，以將 y 轉換為 x。
@@ -20,6 +22,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.RMEncoding
 - summary: 從布林值陣列調整事實資料表（根據變數數目，新陣列的長度會傳回 `2^numVars` ），可能需要以 `table` 專案擴充大小， `false` 或將它截斷為 `2^numVars` 元素。
   uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: 檢查給定的陣列是否代表正方形矩陣。
+  uid: Microsoft.Quantum.Synthesis.SquareMatrixFact
 - summary: 計算閘道遮罩至合成排列。
   uid: Microsoft.Quantum.Synthesis.TBSMain
 - summary: 計算用來將為永久 [x] 轉換為 x 的閘道遮罩，並更新目前的排列。
@@ -34,6 +38,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
 - summary: 將0位插入整數
   uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition
 name: Microsoft.Quantum.Synthesis
 newtypes:
 - summary: 根據變數索引進行分解時的狀態
@@ -54,8 +60,15 @@ operations:
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 - summary: 使用以轉換為基礎的合成排列，在量子狀態中 Permutes amplitudes。
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: 套用2x2 單一矩陣所定義的單一量子位閘道。
+  uid: Microsoft.Quantum.Synthesis.ApplySingleQubitUnitary
 - summary: ''
   uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: >-
+    套用 2 ^ n x 2 ^ n 個單一矩陣所定義的閘道。
+
+    如果矩陣不是單一或大小錯誤，則會失敗。
+  uid: Microsoft.Quantum.Synthesis.ApplyUnitary
 - summary: '@"microsoft.quantum.intrinsic.x" `target` 如果布耳函數 `func` 針對中的傳統指派評估為 true，則會在上套用運算 `controlRegister` 。'
   uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 - summary: '@"microsoft.quantum.intrinsic.x" `target` 如果布耳函數 `func` 針對中的傳統指派評估為 true，則會在上套用運算 `controlRegister` 。'
@@ -63,9 +76,9 @@ operations:
 summary: 此命名空間包含的函式和作業可根據排列和布耳函數來合成量子作業。
 uid: Microsoft.Quantum.Synthesis
 metadata:
-  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: e238fdedcc931bb02c35591014d20b50b695b116
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92701210"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98855178"

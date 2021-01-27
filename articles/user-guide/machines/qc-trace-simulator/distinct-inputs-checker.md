@@ -4,17 +4,17 @@ description: 深入瞭解 Microsoft QDK 相異輸入檢查工具，其使用量�
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bcb0bc92a546279496d27ad9b8c5f943ac133e2a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8076a705b1960ae8e23be4cea87e613329a24f77
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833456"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858650"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>量子追蹤模擬器：相異輸入檢查程式
 
@@ -50,7 +50,7 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-請注意， `op1` 和 `op2` 都是使用部分應用程式取得，而且共用量子位。 當您 `ApplyBoth` 在此範例中呼叫時，作業的結果取決於 `op1` 您預期會發生的順序和 `op2` 內部 `ApplyBoth` 。 當您啟用相異輸入檢查工具時，它會偵測這種情況，並擲回 `DistinctInputsCheckerException` 。 如需詳細資訊，請參閱 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API 程式庫中的 Q# 。
+請注意， `op1` 和 `op2` 都是使用部分應用程式取得，而且共用量子位。 當您 `ApplyBoth` 在此範例中呼叫時，作業的結果取決於 `op1` 您預期會發生的順序和 `op2` 內部 `ApplyBoth` 。 當您啟用相異輸入檢查工具時，它會偵測這種情況，並擲回 `DistinctInputsCheckerException` 。 如需詳細資訊，請參閱 <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.DistinctInputsCheckerException> API 程式庫中的 Q# 。
 
 ## <a name="invoking-the-distinct-inputs-checker"></a>叫用相異輸入檢查工具
 
@@ -93,4 +93,4 @@ namespace Quantum.MyProgram
 - 量子開發工具組 [量子追蹤](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 模擬器總覽。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 參考。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API 參考。
-- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException>API 參考。
+- <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.DistinctInputsCheckerException>API 參考。

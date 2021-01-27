@@ -4,17 +4,17 @@ description: 詳細說明適用于 Microsoft 量子化學程式庫的 Broombridg
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8d26b56d88f365144510692466bfffc7feb71d88
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833759"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854054"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge 規格 v 0。2 #
 
@@ -47,7 +47,7 @@ Broombridge 檔必須序列化為 [YAML 1.2 檔](http://yaml.org/spec/) ，以�
 
 本節為標準化。
 
-_Quantity 物件_是一個 JSON 物件，且 `units` 其值必須是 [表 1] 所列的其中一個允許值的屬性。
+_Quantity 物件_ 是一個 JSON 物件，且 `units` 其值必須是 [表 1] 所列的其中一個允許值的屬性。
 
 如果 quantity 物件除了屬性之外還具有單一屬性，則它是 _簡單數量的物件_ `value` `units` 。
 屬性的值 `value` 必須是數位。
@@ -160,7 +160,7 @@ $ $ h_ {ijkl} = h_ {ijlk} = h_ {jikl} = h_ {jilk} = h_ {klij} = h_ {klji} = h_ {
 $$
 
 
-#### <a name="contents"></a>內容 ####
+#### <a name="contents"></a>目錄 ####
 
 本節為標準化。
 
@@ -171,7 +171,7 @@ $$
 每個問題描述物件都必須有一個屬性 `energy_offet` ，其值為簡單數量物件。
 > 記和相加的值會 `coulomb_repulsion` `energy_offet` 一起捕捉到 Hamiltonian 的身分識別字詞。
 
-##### <a name="one-electron-integrals-object"></a>一個 Electron 的積分物件 #####
+##### <a name="one-electron-integrals-object"></a>One-Electron 的積分物件 #####
 
 本節為標準化。
 
@@ -201,7 +201,7 @@ one_electron_integrals:     # required
 > Broombridge 使用以1為基礎的索引。
 
 
-##### <a name="two-electron-integrals-object"></a>雙 Electron 的積分物件 #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron 的積分物件 #####
 
 本節為標準化。
 

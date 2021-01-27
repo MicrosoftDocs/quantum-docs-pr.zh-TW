@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutationFolder
 title: TruthTablesFromPermutationFolder 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: TruthTablesFromPermutationFolder
 qsharp.summary: Decomposition logic for a single variable index
-ms.openlocfilehash: 86e112782825303805029b2f9f6cfd9d6ce9e8b6
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 881bb8e29d3d7761cc521837502ea79b0714b381
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231019"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855260"
 ---
 # <a name="truthtablesfrompermutationfolder-function"></a>TruthTablesFromPermutationFolder 函式
 

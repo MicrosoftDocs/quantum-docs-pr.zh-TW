@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.IntegerBits
 title: IntegerBits 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: IntegerBits
 qsharp.summary: Returns all positions in which bits of an integer are set.
-ms.openlocfilehash: d6566716f5a63c090668d9582b7b000c16d1f6a5
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 3352c1b3003ee387fb03b72461fedb400e29046d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231087"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855410"
 ---
 # <a name="integerbits-function"></a>IntegerBits 函式
 
@@ -44,3 +44,10 @@ function IntegerBits (value : Int, length : Int) : Int[]
 ## <a name="output--int"></a>輸出： [Int](xref:microsoft.quantum.lang-ref.int)[]
 
 包含所有位位置的陣列 (從0開始，在二元擴充中，會將 `value` 所有位視為最高的位置 1) `length - 1` 。  所有位置都會依位置以遞增順序排列在陣列中。
+
+## <a name="example"></a>範例
+
+```qsharp
+IntegerBits(23, 5); // [0, 1, 2, 4]
+IntegerBits(10, 4); // [1, 3]
+```

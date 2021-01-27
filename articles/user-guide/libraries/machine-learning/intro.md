@@ -4,17 +4,17 @@ description: 瞭解如何在量子系統上使用機器學習服務
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e2f4a4a63eef40474856426b3b29652b5d3053b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833798"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854025"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>量子 Machine Learning 簡介
 
@@ -30,7 +30,7 @@ ms.locfileid: "90833798"
 量子分類有點類似傳統的方法，包括三個步驟：
 - 資料編碼
 - 分類器狀態的準備工作
-- 度量是因為測量的概率本質，這三個步驟必須重複多次。 分類器狀態的編碼和計算都是透過 *量子電路*來完成。 雖然編碼電路通常是資料驅動和無參數，但分類器電路包含一組足夠的 learnable 參數。 
+- 度量是因為測量的概率本質，這三個步驟必須重複多次。 分類器狀態的編碼和計算都是透過 *量子電路* 來完成。 雖然編碼電路通常是資料驅動和無參數，但分類器電路包含一組足夠的 learnable 參數。 
 
 在建議的解決方案中，分類器電路是由單一量子位的旋轉和雙量子位控制的旋轉所組成。 這裡的 learnable 參數是旋轉角度。 「旋轉」和「受控制的旋轉」閘道已知為量子計算的 *通用* ，這表示任何單一權數矩陣都可以分解成由這類閘道組成的夠長線路。
 
@@ -41,7 +41,7 @@ ms.locfileid: "90833798"
 
 簡單的量子分類器設計可以與傳統支援向量機器 (SVM) 解決方案。 在 SVM 的情況下，資料 $x 範例的推斷是使用最佳的核心表單 $ \sum \ Alpha_j k (x_j x) $，其中 $k $ 是特定的核心函式來完成。
 
-相反地，量子分類器會使用預測 $p (y │ x、U ( \theta) # B3 = 〈 U ( \theta) x |M |U ( \theta) x 〉 $，這在精神中很類似，但技術上相當不同。 因此，使用簡單的調幅編碼時，$p (y │ x，U ( \theta) # B3 $ 是 amplitudes 中 $x $ 的二次形式，但此表單的係數不再獨立學習;它們會改為從電路的矩陣元素匯總 $U ( \theta) $，這通常會比向量 $x $ 的維度少很多的 learnable 參數 $ \theta $。 在原始功能中，$p (y │ x，U ( \theta) # B3 $ 的多項式程度可以增加至 $ 2 ^ l $，方法是在 $l $ 的 $x $ 複本上使用量子產品編碼。
+相較之下，量子分類器會使用預測 $p (y │ x、U ( \theta) # B3 = 〈 U ( \theta) x | M | U ( \theta) x 〉 $，這在精神中很類似，但技術上相當不同。 因此，使用簡單的調幅編碼時，$p (y │ x，U ( \theta) # B3 $ 是 amplitudes 中 $x $ 的二次形式，但此表單的係數不再獨立學習;它們會改為從電路的矩陣元素匯總 $U ( \theta) $，這通常會比向量 $x $ 的維度少很多的 learnable 參數 $ \theta $。 在原始功能中，$p (y │ x，U ( \theta) # B3 $ 的多項式程度可以增加至 $ 2 ^ l $，方法是在 $l $ 的 $x $ 複本上使用量子產品編碼。
 
 我們的架構探討相當淺層的線路，因此必須 *快速 entangling* ，才能在所有範圍的資料功能之間抓取所有關聯性。 下圖顯示最有用的快速 entangling 電路元件的範例。 雖然具有此幾何的電路只包含 $3 n + 1 $ 閘道，但它所計算的單一權數矩陣可確保 $ 2 ^ n $ 功能之間有顯著的交叉交談。
 
@@ -69,7 +69,7 @@ ms.locfileid: "90833798"
 
 顯然 $b $ 必須在時間間隔 $ (-0.5、+ 0.5) $ 才有意義。
 
-如果根據 RULE1 推斷 $x $ 的標籤與 $y $ 不同，則會將定型案例 $ (x，y) \in \mathcal{D} $ 視為 $b *分類誤判* 。 情形的整體數目是指定偏差 $b $ 的分類器 *定型分數* 。 *最佳*的分類偏差 $b $ 將定型分數降至最低。 由於預先電腦率估計 $ \{ P (M = y_2，因此很容易看出U ( \theta) x) | (x，* ) \in\mathcal{D} \} $，二進位搜尋可以在間隔 $ (-0.5，+ 0.5) $ 中找到最佳的分類偏差，最多可達 $ \ log_2 (| \mathcal{D} |) $ 步驟。
+如果根據 RULE1 推斷 $x $ 的標籤與 $y $ 不同，則會將定型案例 $ (x，y) \in \mathcal{D} $ 視為 $b *分類誤判* 。 情形的整體數目是指定偏差 $b $ 的分類器 *定型分數* 。 *最佳* 的分類偏差 $b $ 將定型分數降至最低。 由於預先電腦率估計 $ \{ P (M = y_2，因此很容易看出U ( \theta) x) | (x，* ) \in\mathcal{D} \} $，二進位搜尋可以在間隔 $ (-0.5，+ 0.5) $ 中找到最佳的分類偏差，最多可達 $ \ log_2 (| \mathcal{D} |) $ 步驟。
 
 ### <a name="reference"></a>參考
 
