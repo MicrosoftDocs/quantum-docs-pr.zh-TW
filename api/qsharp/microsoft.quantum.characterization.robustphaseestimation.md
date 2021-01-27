@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
 title: RobustPhaseEstimation 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: RobustPhaseEstimation
 qsharp.summary: Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate, and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
-ms.openlocfilehash: 3e6774e2fe348668840cdc08fe3a070ec3d82a6d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4b37c8275a5b2aee8534bacc5831281aa498b57d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216076"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851809"
 ---
 # <a name="robustphaseestimation-operation"></a>RobustPhaseEstimation 操作
 
@@ -54,6 +54,6 @@ $U $ 作用的量子暫存器。 如果它儲存 $U $ 的 eigenstate $ \ket{\phi
 
 在大量查詢的限制中，Cramer-Rao 預估 $ \phi $ 滿足 $ \sigma \ge 2 \pi/\text{的查詢數} $ 的標準差下限。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - 透過健全的階段估計 Shelby Kimmel、Guang Hao Low、Theodore dreiser 所 J. Yoder，穩固的通用 Single-Qubit Gate-Set 的校正 https://arxiv.org/abs/1502.02677

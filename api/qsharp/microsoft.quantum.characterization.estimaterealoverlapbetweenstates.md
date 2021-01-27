@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateRealOverlapBetweenStates
 title: EstimateRealOverlapBetweenStates 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateRealOverlapBetweenStates
 qsharp.summary: Given two operations which each prepare copies of a state, estimates the real part of the overlap between the states prepared by each operation.
-ms.openlocfilehash: d9f569ceffc16f377189dc94035213b9075609cc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1448e760294e958b152f4ceb3faf979441ca986d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216178"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851846"
 ---
 # <a name="estimaterealoverlapbetweenstates-operation"></a>EstimateRealOverlapBetweenStates 操作
 
@@ -64,7 +64,7 @@ operation EstimateRealOverlapBetweenStates (commonPreparation : (Qubit[] => Unit
 
 這項作業會使用 Hadamard 測試來尋找 $ $ \begin{align} \braket{\psi 的真實部分 |V ^ {\dagger} U |\psi} \end{align} $ $，其中 $ \ket{\psi} $ 是所準備的狀態 `commonPreparation` ，$U $ 是的動作的單一標記法 `preparation1` ，以及 $V $ 對應至的位置 `preparation2` 。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - Aharonov *et al.exe.* [quant-ph/0511096](https://arxiv.org/abs/quant-ph/0511096)。
 
