@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIf
 title: ApplyIf 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIf
 qsharp.summary: Applies an operation conditioned on a classical bit.
-ms.openlocfilehash: c5a1012328fa012ee02707aa59c94ac9c44b8e87
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 109a5c4748d183f199e420b4b1aef687613d220c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218830"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841878"
 ---
 # <a name="applyif-operation"></a>ApplyIf 操作
 
@@ -59,6 +59,19 @@ operation ApplyIf<'T> (op : ('T => Unit), bit : Bool, target : 'T) : Unit
 ### <a name="t"></a>不要
 
 要有條件地套用之作業的輸入類型。
+
+## <a name="example"></a>範例
+
+下列程式會將量子位登錄為計算基礎狀態，並以指定為值陣列的傳統位字串表示 `Bool` ：
+
+```qsharp
+let bitstring = [true, false, true];
+using (register = Qubit(3)) {
+    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
+    // register should now be in the state |101⟩.
+    ...
+}
+```
 
 ## <a name="see-also"></a>另請參閱
 

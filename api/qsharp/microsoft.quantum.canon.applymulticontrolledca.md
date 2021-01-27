@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyMultiControlledCA
 title: ApplyMultiControlledCA 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyMultiControlledCA
 qsharp.summary: Applies a multiply controlled version of a singly controlled operation. The modifier `CA` indicates that the single-qubit operation is controllable and adjointable.
-ms.openlocfilehash: 28797583c23e21eb4bcae996a34c70ee06c6dbe8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a6549084b1c2fda885823f451d17f9c2ebbb4600
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209276"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841685"
 ---
 # <a name="applymulticontrolledca-operation"></a>ApplyMultiControlledCA 操作
 
@@ -65,7 +65,7 @@ operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj),
 
 如需說明和電路圖表，請參閱 Nielsen & Chuang 中的圖4.10，第4.3 節。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - [*Michael Nielsen、Isaac Chuang*、量子計算和量子資訊](http://doi.org/10.1017/CBO9780511976667)
 

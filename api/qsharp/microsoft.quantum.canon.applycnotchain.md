@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyCNOTChain
 title: ApplyCNOTChain 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyCNOTChain
 qsharp.summary: Computes the parity of a register of qubits in-place.
-ms.openlocfilehash: e237e4424661de816e73b0c78523180b41190cf9
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b5a74eb66529095233c89a4ec7ea37c996458cb4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96219136"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841953"
 ---
 # <a name="applycnotchain-operation"></a>ApplyCNOTChain 操作
 

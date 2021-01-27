@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Xor
 title: Xor 函數
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: Xor
 qsharp.summary: Returns the bitwise exclusive-OR (XOR) of two integers. This performs the same computation as the built-in `^^^` operator.
-ms.openlocfilehash: ced1022514bef7b2ecd557fb589f44829dae54ce
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ac31ba973ff06424dbd16168dac14a79b2691b3f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96219476"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842072"
 ---
 # <a name="xor-function"></a>Xor 函數
 
@@ -45,6 +45,14 @@ function Xor (a : Int, b : Int) : Int
 ## <a name="output--int"></a>輸出： [Int](xref:microsoft.quantum.lang-ref.int)
 
 
+
+## <a name="example"></a>範例
+
+```qsharp
+let a = 248;       //                 11111000₂
+let b = 63;        //                 00111111₂
+let x = Xor(a, b); // x : Int = 199 = 11000111₂.
+```
 
 ## <a name="remarks"></a>備註
 

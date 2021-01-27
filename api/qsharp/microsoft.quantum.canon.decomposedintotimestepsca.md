@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA
 title: DecomposedIntoTimeStepsCA 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DecomposedIntoTimeStepsCA
 qsharp.summary: Returns an operation implementing the Trotter–Suzuki integrator for a given operation.
-ms.openlocfilehash: aa5f09f2e1fde878b523b4efc20b86c26ac738ff
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e82df36d2e4f3767a152d5c92d7b1897c744a2ca
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216535"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840677"
 ---
 # <a name="decomposedintotimestepsca-function"></a>DecomposedIntoTimeStepsCA 函式
 
@@ -66,6 +66,6 @@ Order 1 甚至訂單2，4，6,.。。目前支援。
 
 更高的值 `order` 會使用 [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)的遞迴結構來執行。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - [*D. Berry、G. Ahokas、Cleve、b. Sanders*](https://arxiv.org/abs/quant-ph/0508139)

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ControlledOnBitString
 title: ControlledOnBitString 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ControlledOnBitString
 qsharp.summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
-ms.openlocfilehash: 9435406506fc99fe211f5dce628b21c18ee4f9fe
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 176170cc972ca67b812b84f79cf97ba5418be9b6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216654"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840810"
 ---
 # <a name="controlledonbitstring-function"></a>ControlledOnBitString 函式
 
@@ -54,6 +54,33 @@ function ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj +
 ### <a name="t"></a>不要
 
 
+
+## <a name="example"></a>範例
+
+下列程式碼片段是相等的：
+
+```qsharp
+(ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+```
+
+及
+
+```qsharp
+within {
+    ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+} apply {
+    Controlled oracle(controlRegister, targetRegister);
+}
+```
+
+下列程式碼會準備 state $ \frac {1} {2} ( \ket {00} -\ket {01} + \ket {10} + \ket {11}) $：
+
+```qsharp
+using (register = Qubit[2]) {
+    ApplyToEach(H, register);
+    (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+}
+```
 
 ## <a name="remarks"></a>備註
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayCA
 title: DelayCA 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayCA
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: a32a4f4a3f5d0f253a4c4eaf28c67db8da978b0b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a8606cde976882bba0eb23467932b9ee0ed36696
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207083"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840610"
 ---
 # <a name="delayca-operation"></a>DelayCA 操作
 

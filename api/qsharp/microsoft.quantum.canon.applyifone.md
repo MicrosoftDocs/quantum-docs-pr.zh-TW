@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOne
 title: ApplyIfOne 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOne
 qsharp.summary: Applies an operation conditioned on a classical result value being one.
-ms.openlocfilehash: b7c07e01ebcaf2d475283bea0695aa68dd10776e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b86aecf3dc3d02d1a6bf0c112bdc45a55a2cf087
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209395"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841771"
 ---
 # <a name="applyifone-operation"></a>ApplyIfOne 操作
 

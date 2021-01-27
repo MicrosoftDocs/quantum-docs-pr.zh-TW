@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.Bound
 title: 綁定函數
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Bound
 qsharp.summary: Given an array of operations acting on a single input, produces a new operation that performs each given operation in sequence.
-ms.openlocfilehash: c12ce37054ddde1b98778888e90916c6e4725814
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 041f654c14f6e926d60038fee698b2b829fab8b3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207593"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841058"
 ---
 # <a name="bound-function"></a>綁定函數
 
@@ -45,6 +45,21 @@ function Bound<'T> (operations : ('T => Unit)[]) : ('T => Unit)
 ### <a name="t"></a>不要
 
 陣列中的每個作業所作用的目標。
+
+## <a name="example"></a>範例
+
+以下是相等的：
+
+```qsharp
+let bound = Bound([U, V]);
+bound(x);
+```
+
+及
+
+```qsharp
+U(x); V(x);
+```
 
 ## <a name="see-also"></a>另請參閱
 

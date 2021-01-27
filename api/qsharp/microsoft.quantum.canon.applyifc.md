@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfC
 title: ApplyIfC 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfC
 qsharp.summary: Applies a controllable operation conditioned on a classical bit.
-ms.openlocfilehash: 35430cb7cf491965b7b69ace6d3f41599dbadd51
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ef16b23349b604d174e72d9ae06d2052e2ab60f8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218711"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841851"
 ---
 # <a name="applyifc-operation"></a>ApplyIfC 操作
 
@@ -60,6 +60,19 @@ operation ApplyIfC<'T> (op : ('T => Unit is Ctl), bit : Bool, target : 'T) : Uni
 ### <a name="t"></a>不要
 
 要有條件地套用之作業的輸入類型。
+
+## <a name="example"></a>範例
+
+下列程式會將量子位登錄為計算基礎狀態，並以指定為值陣列的傳統位字串表示 `Bool` ：
+
+```qsharp
+let bitstring = [true, false, true];
+using (register = Qubit(3)) {
+    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
+    // register should now be in the state |101⟩.
+    ...
+}
+```
 
 ## <a name="see-also"></a>另請參閱
 
