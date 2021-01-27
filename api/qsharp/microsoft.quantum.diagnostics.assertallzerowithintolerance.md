@@ -1,50 +1,50 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance
 title: AssertAllZeroWithinTolerance 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertAllZeroWithinTolerance
 qsharp.summary: Assert that given qubits are all in $\ket{0}$ state up to a given tolerance.
-ms.openlocfilehash: a2e73bbc8949b3cdb7733cfc8aae35680e54d2cf
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 281855ec79d280c903ebb4d05614081767840778
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202476"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98830867"
 ---
-# <a name="assertallzerowithintolerance-operation"></a><span data-ttu-id="036a6-102">AssertAllZeroWithinTolerance 操作</span><span class="sxs-lookup"><span data-stu-id="036a6-102">AssertAllZeroWithinTolerance operation</span></span>
+# <a name="assertallzerowithintolerance-operation"></a><span data-ttu-id="228a6-102">AssertAllZeroWithinTolerance 操作</span><span class="sxs-lookup"><span data-stu-id="228a6-102">AssertAllZeroWithinTolerance operation</span></span>
 
-<span data-ttu-id="036a6-103">命名空間： [Microsoft 量子. 診斷](xref:Microsoft.Quantum.Diagnostics)</span><span class="sxs-lookup"><span data-stu-id="036a6-103">Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)</span></span>
+<span data-ttu-id="228a6-103">命名空間： [Microsoft 量子. 診斷](xref:Microsoft.Quantum.Diagnostics)</span><span class="sxs-lookup"><span data-stu-id="228a6-103">Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)</span></span>
 
-<span data-ttu-id="036a6-104">套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="036a6-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="228a6-104">套件： [QSharp Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="228a6-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
-<span data-ttu-id="036a6-105">判斷提示，指定的量子位全都在 $ \ket {0} $ 狀態中，直到指定的容錯。</span><span class="sxs-lookup"><span data-stu-id="036a6-105">Assert that given qubits are all in $\ket{0}$ state up to a given tolerance.</span></span>
+<span data-ttu-id="228a6-105">判斷提示，指定的量子位全都在 $ \ket {0} $ 狀態中，直到指定的容錯。</span><span class="sxs-lookup"><span data-stu-id="228a6-105">Assert that given qubits are all in $\ket{0}$ state up to a given tolerance.</span></span>
 
 ```qsharp
 operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="036a6-106">輸入</span><span class="sxs-lookup"><span data-stu-id="036a6-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="228a6-106">輸入</span><span class="sxs-lookup"><span data-stu-id="228a6-106">Input</span></span>
 
-### <a name="qubits--qubit"></a><span data-ttu-id="036a6-107">量子位： [量子位](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="036a6-107">qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+### <a name="qubits--qubit"></a><span data-ttu-id="228a6-107">量子位： [量子位](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="228a6-107">qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
-<span data-ttu-id="036a6-108">判斷提示為 $ \ket $ 狀態的量子位 {0} 。</span><span class="sxs-lookup"><span data-stu-id="036a6-108">Qubits that are asserted to be in $\ket{0}$ state.</span></span>
-
-
-### <a name="tolerance--double"></a><span data-ttu-id="036a6-109">容錯： [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="036a6-109">tolerance : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-<span data-ttu-id="036a6-110">狀態應該處於 $ \ket {0} $ state 的精確度</span><span class="sxs-lookup"><span data-stu-id="036a6-110">Accuracy with which the state should be in $\ket{0}$ state</span></span>
+<span data-ttu-id="228a6-108">判斷提示為 $ \ket $ 狀態的量子位 {0} 。</span><span class="sxs-lookup"><span data-stu-id="228a6-108">Qubits that are asserted to be in $\ket{0}$ state.</span></span>
 
 
+### <a name="tolerance--double"></a><span data-ttu-id="228a6-109">容錯： [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="228a6-109">tolerance : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="036a6-111">輸出： [單位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="036a6-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="228a6-110">狀態應該處於 $ \ket {0} $ state 的精確度</span><span class="sxs-lookup"><span data-stu-id="228a6-110">Accuracy with which the state should be in $\ket{0}$ state</span></span>
 
 
 
-## <a name="see-also"></a><span data-ttu-id="036a6-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="036a6-112">See Also</span></span>
+## <a name="output--unit"></a><span data-ttu-id="228a6-111">輸出： [單位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="228a6-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-- [<span data-ttu-id="036a6-113">AssertQubitWithinTolerance。</span><span class="sxs-lookup"><span data-stu-id="036a6-113">Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance</span></span>](xref:Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance)
+
+
+## <a name="see-also"></a><span data-ttu-id="228a6-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="228a6-112">See Also</span></span>
+
+- [<span data-ttu-id="228a6-113">AssertQubitWithinTolerance。</span><span class="sxs-lookup"><span data-stu-id="228a6-113">Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance</span></span>](xref:Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance)
