@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToElementC
 title: ApplyToElementC 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToElementC
 qsharp.summary: Applies an operation to a given element of an array.
-ms.openlocfilehash: c8d7841e3846ab435671f7959c724f987d8ad5a0
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bc63b6b591781a6283b872ef0c2509094a656b4c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217572"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850751"
 ---
 # <a name="applytoelementc-operation"></a>ApplyToElementC 操作
 

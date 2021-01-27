@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692175"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857248"
 ---
 # <a name="applications"></a>應用程式 #
 
@@ -27,7 +27,7 @@ ms.locfileid: "92692175"
 不過，在量子硬體上的情況可能會非常不同。 量子模擬最常見的變化，就是所謂與時間無關的 Hamiltonian 模擬問題。 其中會提供系統 Hamiltonian 的描述，$H $ （即 Hermitian 矩陣），以及一些在量子電腦上 $n $ 量子位編碼的初始量子狀態 $ \ket{\psi (0) } $。 當封閉式系統中的量子狀態演進時，薛丁格方程式 $ $ \begin{align} i\frac {d \ket{\psi (t) }} {d t} & = H \ket{\psi (t) } \end{align} $ $ 的目標是要在一段固定時間執行單一的時間演進運算子 $U (t) = e ^ {-iHt} $，其中 $ \ket{\psi (t) } = U (t) \ket{\psi (0) } $t $ 可解決薛丁格方程式。
 類似，時間相依的 Hamiltonian 模擬問題可解決相同的方程式，但 $H (t) $ 現在是時間的函式。
 
-Hamiltonian 模擬是許多其他量子模擬問題的主要元件，而 Hamiltonian 模擬問題的解決方案則是描述一系列基本量子閘道的演算法，可合成將逼近單一 $ \tilde{U} $，並 \\ 在 \tilde{U} 的標準中使用 error $ | \le-U (t) \\ | \epsilon 光譜 $。 [spectral norm](xref:microsoft.quantum.concepts.matrix-advanced) 這些演算法的複雜性非常強烈，因為量子電腦可以存取感興趣的 Hamiltonian 描述。 例如，在最糟的情況下，如果要將 $n $ 量子位上的 $H $ 做為 $ 2 ^ n \times 2 ^ n $ 數位的清單，每個矩陣專案都有一個清單，只要讀取資料已需要指數時間即可。 在最佳情況下，您可以假設存取 $O \ket{t}\ket{\psi (0) } = \ket{t}U (t) \ket{\psi (0) } $ 完整解決問題的黑箱單一。 這兩種輸入模型都不太有趣，前者是因為它不如傳統的方法好用，而後者則是以黑色方塊隱藏其實作為基本閘道的複雜度，這可能是量子位數目的指數。
+Hamiltonian 模擬是許多其他量子模擬問題的主要元件，而 Hamiltonian 模擬問題的解決方案則是描述一系列基本量子閘道的演算法，可合成將逼近單一 $ \tilde{U} $，並 \\ 在 \tilde{U} 的標準中使用 error $ | \le-U (t) \\ | \epsilon 光譜 $。 [](xref:microsoft.quantum.concepts.matrix-advanced) 這些演算法的複雜性非常強烈，因為量子電腦可以存取感興趣的 Hamiltonian 描述。 例如，在最糟的情況下，如果要將 $n $ 量子位上的 $H $ 做為 $ 2 ^ n \times 2 ^ n $ 數位的清單，每個矩陣專案都有一個清單，只要讀取資料已需要指數時間即可。 在最佳情況下，您可以假設存取 $O \ket{t}\ket{\psi (0) } = \ket{t}U (t) \ket{\psi (0) } $ 完整解決問題的黑箱單一。 這兩種輸入模型都不太有趣，前者是因為它不如傳統的方法好用，而後者則是以黑色方塊隱藏其實作為基本閘道的複雜度，這可能是量子位數目的指數。
 
 ### <a name="descriptions-of-hamiltonians"></a>Hamiltonian 的描述 ###
 
@@ -140,7 +140,7 @@ operation EstimateAdiabaticStateEnergy(
 
 ## <a name="shors-algorithm"></a>秀爾演算法 ##
 Shor 的演算法仍是量子運算中最重要的一項發展，因為它展示了量子電腦可用來解決重要的問題，目前傳統方式棘手的問題。
-Shor 的演算法提供快速的方式，讓您使用量子電腦來將大型數位納入考慮，這是一種稱為「 *分解* 」的問題。
+Shor 的演算法提供快速的方式，讓您使用量子電腦來將大型數位納入考慮，這是一種稱為「 *分解*」的問題。
 許多當日 cryptosystems 的安全性是根據假設沒有快速演算法可進行分解。
 因此，Shor 的演算法對於我們在量子後世界中的安全性考慮有深遠的影響。
 
@@ -151,7 +151,7 @@ Shor 的演算法可視為混合式演算法。
 
 ### <a name="period-finding"></a>期間尋找 ###
 
-瞭解量子傅立葉轉換和階段估計的運作方式 (查看 [量子演算法](xref:microsoft.quantum.libraries.standard.algorithms)) ，我們可以使用這些工具來解決傳統方式的硬運算問題，稱為「 *期間尋找* 」。  在下一節中，我們將瞭解如何套用期間尋找以進行分解。
+瞭解量子傅立葉轉換和階段估計的運作方式 (查看 [量子演算法](xref:microsoft.quantum.libraries.standard.algorithms)) ，我們可以使用這些工具來解決傳統方式的硬運算問題，稱為「 *期間尋找*」。  在下一節中，我們將瞭解如何套用期間尋找以進行分解。
 
 假設有兩個整數 $a $ 和 $N $，其中 $a<N $，則期間尋找的目標（也稱為訂單尋找）是尋找 _order_ $r $ of $a $ 模數 $N $，其中 $r $ 會定義為最小的正整數，例如 $a ^ r \equiv 1 \text{Mod} N $。  
 
@@ -178,7 +178,7 @@ $U _a $ 的特徵值為 $ $ U \_ a \ket{x \_ s} = e ^ {2 \ pi i s/r} \ket{x \_ s
 為了達到 $ (a ^ nx) \text{mod} N $，我們可以直接套用受控制的 $U _ {a ^ n} $，我們會在其中計算 $a ^ n \text{mod} N $ 傳統方式，以插入量子電路。  
 [量子算術檔](./algorithms.md#arithmetic)中已描述達成這類別模組化算術的線路，尤其我們需要模組乘冪電路來實行受控制的 $U \_ {a ^ i} $ 作業。
 
-雖然上述電路對應至 [量子階段估計](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) ，並明確地啟用訂單尋找，但我們可以減少所需的量子位數目。 我們可以依照 [arXiv： quant 的第8頁](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)所述的順序尋找 Beauregard 的方法，或使用位於 Microsoft 的其中一個階段估計常式。 例如， [健全的階段估計](xref:microsoft.quantum.characterization.robustphaseestimation) 也會使用一個額外的量子位。
+雖然上述電路對應至 [量子階段估計](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) ，並明確地啟用訂單尋找，但我們可以減少所需的量子位數目。 我們可以依照 [arXiv： quant 的第8頁](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)所述的順序尋找 Beauregard 的方法，或使用位於 Microsoft 的其中一個階段估計常式。 例如， [健全的階段估計](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) 也會使用一個額外的量子位。
 
 ### <a name="factoring"></a>保 理 ###
 分解的目標是要判斷整數 $N $ 的兩個主要因素，其中 $N $ 是 $n $ 位數位。  
@@ -197,6 +197,6 @@ $U _a $ 的特徵值為 $ $ U \_ a \ket{x \_ s} = e ^ {2 \ pi i s/r} \ket{x \_ s
 9. 如果 $ \text{gcd} (^ {r/2}-1，N) $ 是 $N $ 的非一般因素，會傳回 $ \text{gcd} (^ {r/2}-1，N) $。
 
 
-分解演算法是概率：它可以顯示，機率至少為一半，$r $ 將是偶數，$a ^ {r/2} \neq-1 \text{mod} N $，因此會產生主要因數。   (如需詳細資訊，請參閱 [Shor 的原始](https://doi.org/10.1109/SFCS.1994.365700)檔， [如需詳細資訊](xref:microsoft.quantum.more-information)) ，請參閱中的其中一個 *基本的量子* 運算文字。
+分解演算法是概率：它可以顯示，機率至少為一半，$r $ 將是偶數，$a ^ {r/2} \neq-1 \text{mod} N $，因此會產生主要因數。   (如需詳細資訊，請參閱 [Shor 的原始](https://doi.org/10.1109/SFCS.1994.365700)檔，[如需詳細資訊](xref:microsoft.quantum.more-information)) ，請參閱中的其中一個 *基本的量子* 運算文字。
 如果未傳回主要因素，則只需從步驟 (1) 重複演算法。  $N $ 嘗試之後，每次嘗試失敗的機率最多為 $ 2 ^ {-n} $。
 因此，在重複此演算法之後，幾乎可以確保成功的次數很少。
