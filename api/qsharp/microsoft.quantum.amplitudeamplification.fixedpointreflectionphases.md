@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases
 title: FixedPointReflectionPhases 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: FixedPointReflectionPhases
 qsharp.summary: Computes partial reflection phases for fixed-point amplitude amplification.
-ms.openlocfilehash: 8cc1073447f5fae87ece38db64dcc312f6208899
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2ded197801111c26d8a33f9c2363b46ca4b6c4b9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191443"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845850"
 ---
 # <a name="fixedpointreflectionphases-function"></a>FixedPointReflectionPhases 函式
 
@@ -45,7 +45,7 @@ Oracle 狀態準備的查詢數目。 必須是奇數整數。
 
 可用於固定點振幅放大量子演算法實的階段陣列。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 我們會使用「具有最佳查詢數目的固定點波幅放大」中的階段
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.Sorted
 title: 已排序函數
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Sorted
 qsharp.summary: Given an array, returns the elements of that array sorted by a given comparison function.
-ms.openlocfilehash: bd8b869e03c7f4687c456a944e07a811ae0d2ce2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cb8a1ef438d798c8201ed9f52677e253770df1d3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96220224"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845435"
 ---
 # <a name="sorted-function"></a>已排序函數
 
@@ -51,6 +51,14 @@ function Sorted<'T> (comparison : (('T, 'T) -> Bool), array : 'T[]) : 'T[]
 
 之每個專案的型別 `array` 。
 
+## <a name="example"></a>範例
+
+下列程式碼片段會以遞增順序排序要進行的整數陣列：
+
+```qsharp
+let sortedArray = Sorted(LessThanOrEqualI, [3, 17, 11, -201, -11]);
+```
+
 ## <a name="remarks"></a>備註
 
 函式 `comparison` 假設為可轉移，因此，如果 `comparison(a, b)` 和 `comparison(b, c)` ，則 `comparison(a, c)` 會假設為。 如果這個屬性不存在，則此函式的輸出可能會不正確。
@@ -60,7 +68,7 @@ function Sorted<'T> (comparison : (('T, 'T) -> Bool), array : 'T[]) : 'T[]
 
 例如：
 
-```Q#
+```qsharp
 function LastDigitLessThanOrEqual(left : Int, right : Int) : Bool {
     return LessThanOrEqualI(
         left % 10, right % 10

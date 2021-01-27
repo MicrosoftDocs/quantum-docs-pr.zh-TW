@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.AndLadder
 title: AndLadder 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: AndLadder
 qsharp.summary: Performs a controlled "AND ladder" on a register of target qubits.
-ms.openlocfilehash: 2c6114ec8a5caabdeea8ab7e26a4877e1633671c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d44c462c7a9fc9521bdecfe2ca7f607e90482baf
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209718"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845228"
 ---
 # <a name="andladder-operation"></a>AndLadder 操作
 
@@ -61,6 +61,6 @@ operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[]
 - 當做和的一部分使用 <xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca> 。
 - 如需說明和電路圖表，請參閱 Nielsen & Chuang 中的圖4.10，第4.3 節。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - [*Michael Nielsen、Isaac Chuang*、量子計算和量子資訊](http://doi.org/10.1017/CBO9780511976667)
