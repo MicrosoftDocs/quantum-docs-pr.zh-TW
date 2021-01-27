@@ -4,17 +4,17 @@ description: 瞭解量子 dynamics 與傳統 dynamics 之間的相似性和差�
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fb54416ecdc38ea90999f33cb673c2c9e4c5f8d7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4dec0ed7346cde579e5692fcf13519d4ce05cb00
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833868"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856252"
 ---
 # <a name="quantum-dynamics"></a>量子 Dynamics
 

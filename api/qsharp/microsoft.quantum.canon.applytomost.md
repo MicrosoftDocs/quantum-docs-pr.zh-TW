@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMost
 title: ApplyToMost 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMost
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: 7e7824b431ccff644cf5cc53145163327eb8ad36
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a3918233e101f3d8956601dcc7d85edcf6196ac7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208528"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850599"
 ---
 # <a name="applytomost-operation"></a>ApplyToMost 操作
 
@@ -54,6 +54,15 @@ operation ApplyToMost<'T> (op : ('T[] => Unit), targets : 'T[]) : Unit
 ### <a name="t"></a>不要
 
 要套用之作業的輸入類型。
+
+## <a name="example"></a>範例
+
+下列 Q # 程式碼片段是相等的：
+
+```qsharp
+ApplyToMost(ApplyCNOTChain, register);
+ApplyCNOTChain(Most(register));
+```
 
 ## <a name="see-also"></a>另請參閱
 

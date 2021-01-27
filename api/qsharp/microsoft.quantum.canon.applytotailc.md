@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToTailC
 title: ApplyToTailC 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToTailC
 qsharp.summary: Applies an operation to the last element of an array.
-ms.openlocfilehash: 5a68cae3fd122416cfd064e0078e03f5c00ab492
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8408dff24c5c57efbedb649ac182fac49e836a3e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217283"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850427"
 ---
 # <a name="applytotailc-operation"></a>ApplyToTailC 操作
 

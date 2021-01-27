@@ -4,29 +4,29 @@ description: 建立一個 Q# 專案，以示範格羅弗的演算法，也就是
 author: cgranade
 ms.author: chgranad
 ms.date: 10/19/2019
-ms.topic: article
+ms.topic: tutorial
 uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86c6a651a117b788eb4c8fdd805ead7ab8f54dd7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5e0398338ff710decc0f3038c07c9b7d39514195
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834800"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856621"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>教學課程：以 Q\# 執行格羅弗搜尋演算法
 
 在本教學課程中，您可以了解如何建立及執行格羅弗搜尋，以加速搜尋非結構化資料。  格羅弗的搜尋是最受歡迎的量子運算演算法之一，而這種相對較小的 Q# 實，讓您瞭解使用高階 Q# 量副程式設計語言來表達量子演算法的程式設計量子解決方案的一些優點。  在本指南最後，您會看到模擬輸出示範了如何在有序項目清單中成功地搜尋特定字串，且花費的時間比古典電腦搜尋所需的少了許多。
 
-格羅弗演算法會搜尋特定項目的非結構化資料清單。 例如，它可以回答問題：從一副牌中抽出的這張牌是紅心 A 嗎？ 為特定項目的加上標籤，稱為_標記輸入_。
+格羅弗演算法會搜尋特定項目的非結構化資料清單。 例如，它可以回答問題：從一副牌中抽出的這張牌是紅心 A 嗎？ 為特定項目的加上標籤，稱為 _標記輸入_。
 
 使用格羅弗搜尋演算法，可保證量子電腦在執行此搜尋時所使用的步驟必定會比您搜尋清單中的項目數少 — 這是任何傳統演算法都做不到的。 以一副牌的案例來說，增加的速度並不多；但清單中若包含數百萬或數十億個項目，就會有很大的差異。
 
 只要幾行程式碼，您就可以建置格羅弗搜尋演算法。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - Microsoft [Quantum Development Kit][install]。
 

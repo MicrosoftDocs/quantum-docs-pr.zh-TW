@@ -4,17 +4,17 @@ description: 深入了解 Microsoft Quantum Development Kit 預覽版的最新�
 author: bradben
 ms.author: v-benbra
 ms.date: 8/30/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231786"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856670"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -24,6 +24,16 @@ ms.locfileid: "96231786"
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
 
+## <a name="version-0152101125897"></a>版本0.15.2101125897
+
+*發行日期：2021年1月26日*
+
+- 簡化的量子位配置，為配置量子位提供更方便的語法， [請參閱 Q# 語言存放庫中的詳細資料](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md)。
+- 建立 QDK-Python 儲存機制，其中包含 `azure-quantum` python 用戶端，可將量子靈感優化工作提交至 Azure Quantum 服務，以及包含 `qdk` 適用于 `qdk.chemistry` 化學程式庫的 python 型便利層，包括 Q# 分子視覺效果和功能，以產生數個化學套件的輸入檔，例如 NWChem、Psi4 和 OpenMolcas。
+- 現在，運算和函式類型和 `if` 、 `elif` `while` 和語句的括弧是選擇性的 `until` 。 和語句的括弧已 `for` `use` `borrow` 被取代。
+- 已改善最佳深度的寬度估計值， [請參閱詳細資料](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159)。
+- 使用 `ApplyUnitary` ([QuantumLibraries # 版 391](https://github.com/microsoft/QuantumLibraries/pull/391)（Dmytro Fedoriaka 的 external 投稿）將提供的單一作業套用為明確矩陣) 
+- 藉 https://github.com/microsoft/iqsharp/issues/387 由降低對 I 核心啟動的效能影響來修正 Q# 。
 ## <a name="version-0142011120240"></a>版本0.14.2011120240
 
 *發行日期：2020年11月25日*
@@ -211,7 +221,7 @@ ms.locfileid: "96231786"
 
 此版本包含下列項目：
 
-- 單元測試的新測試屬性 Q# ，請參閱[此處的](xref:Microsoft.Quantum.Diagnostics.Test)更新 API 檔和更新的測試[here](xref:microsoft.quantum.guide.testingdebugging) & 偵錯工具指南
+- 單元測試的新測試屬性 Q# ，請參閱[此處的](xref:Microsoft.Quantum.Diagnostics.Test)更新 API 檔和更新的測試[](xref:microsoft.quantum.guide.testingdebugging) & 偵錯工具指南
 - 在程式執行錯誤的情況下新增堆疊追蹤 Q#
 - 由於 [OmniSharp C# Visual Studio Code 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)更新，支援在 Visual Studio Code 中的中斷點
 
@@ -486,14 +496,7 @@ ms.locfileid: "96231786"
 
 透過新的化學程式庫，我們將程式庫劃分到新的 GitHub 存放庫 [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) 中。  範例仍保留在存放庫 [Microsoft/Quantum](https://github.com/Microsoft/Quantum) 中。  歡迎大家參與對這兩個存放庫的建構！
 
-此版本包含針對社群回報的問題而提供的 Bug 修正和功能：
-
-* Intellisense 適用于 Q# ？ ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918))。
-* .qs 檔案 ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049))。
-* 改善 If 陳述式中的大括弧節略時的錯誤訊息 ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518))。
-* 支援可變動 (重新) 繫結上的元組解構 ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444))。
-* 執行提供的 BitFlipCode 時發生的錯誤 ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546))。
-* H2SimulationGUI 有時會顯示大型尖峰 ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34668370))。
+此版本包含的錯誤修正和功能，適用于此社區所報告的問題。
 
 ### <a name="community-contributions"></a>社群貢獻
 
@@ -509,15 +512,7 @@ ms.locfileid: "96231786"
 
 *發行日期：2018 年 9 月 10 日*
 
-此版本包含對社群回報的問題所做的 Bug 修正。 其中包括：
-
-* 無法使用移位運算子 ([GitHub](https://github.com/Microsoft/Quantum/issues/75))。
-* 在列印到主控台，`QCTraceSimulator` 上的 `DumpMachine` / `DumpRegister` 會失敗 ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680))。
-* 允許配置 0 個量子位元 ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits))。
-* `AssertQubitState` 需要明確的 Complex() 呼叫 ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call))。
-* macOS 上的 `Measure` 作業一律會傳回 `One` ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546))。
-
-感謝您！ 
+此版本包含對社群回報的問題所做的 Bug 修正。
 
 ## <a name="version-0218063001"></a>0\.2.1806.3001 版
 

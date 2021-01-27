@@ -4,23 +4,23 @@ description: 建立一個 Q# 專案，以藉由建立量子亂數產生器來示
 author: bromeg
 ms.author: megbrow
 ms.date: 10/25/2019
-ms.topic: article
+ms.topic: tutorial
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: f36db426a8f0479580117cce44a67ad3a053d5de
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771281"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856356"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>教學課程：在 Q\# 中實作量子亂數產生器
 
 以量子亂數字產生器撰寫的簡單範例是量子演算法 Q# 。 此演算法利用量子機制的本質來產生亂數。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)。
 - Q#使用[Python 主機程式](xref:microsoft.quantum.install.python)或[c # 主機程式](xref:microsoft.quantum.install.cs)來建立[ Q# 應用程式](xref:microsoft.quantum.install.standalone)的專案。

@@ -6,16 +6,16 @@ keywords: 請勿在未諮詢 SEO 之前新增或編輯關鍵字。
 author: QuantumWriter
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 0c23ff70a6a4b43682cb4424436a3dafe0c9e235
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834120"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856653"
 ---
 # <a name="third-party-software-notices-and-information"></a>協力廠商軟體聲明和資訊
 

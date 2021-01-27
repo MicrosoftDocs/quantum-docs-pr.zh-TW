@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fc8e46aa22cb2575de42cfc3d4f57c43e5d3f7b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692046"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857199"
 ---
 # <a name="error-correction"></a>錯誤修正 #
 

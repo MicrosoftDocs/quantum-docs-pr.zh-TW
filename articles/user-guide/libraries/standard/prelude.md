@@ -4,17 +4,17 @@ description: 瞭解 QDK 中的內建作業和函式，包括傳統函數和單�
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ed5b1677a204b9425f229a3ea0855bb789f3f75
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692110"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857194"
 ---
 # <a name="the-prelude"></a>序言 #
 
@@ -109,13 +109,13 @@ Hadamard 閘道特別重要，因為它可以用來建立 $ \ket {0} $ 和 $ \ke
 作業接著會執行 $T $ 閘道， <xref:Microsoft.Quantum.Intrinsic.T> 且具有簽章 `(Qubit => Unit is Adj + Ctl)` ，表示它是單一量子位的單一作業。
 
 雖然這在主體中足以描述任何任意的單一量子位作業，但不同的目的電腦對於 Pauli 運算子的旋轉可能有更有效率的表示，因此序言包含各種不同的方式來 convienently 表示這類旋轉。
-其中最基本的作業，是在 <xref:Microsoft.Quantum.Intrinsic.r> 指定的 Pauli 軸上實行旋轉、\Begin{equation} R ( \sigma、\phi) \mathrel{： =} \exp (-i \phi \sigma/2) 、\end{equation}，其中 $ \sigma $ 是 Pauli 運算子、$ \phi $ 是一個角度，其中 $ \exp $ 代表矩陣指數。
+其中最基本的作業，是在 <xref:Microsoft.Quantum.Intrinsic.R> 指定的 Pauli 軸上實行旋轉、\Begin{equation} R ( \sigma、\phi) \mathrel{： =} \exp (-i \phi \sigma/2) 、\end{equation}，其中 $ \sigma $ 是 Pauli 運算子、$ \phi $ 是一個角度，其中 $ \exp $ 代表矩陣指數。
 它有簽章 `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` ，其中輸入的前兩個部分代表 $R ( \sigma，\phi) $ 指定單一運算子所需的傳統引數 $ \sigma $ 和 $ \phi $。
 我們可以將 $ \sigma $ 和 $ \phi $ 部分套用，以取得類型為單一量子位單一的作業。
 例如， `R(PauliZ, PI() / 4, _)` 具有類型 `(Qubit => Unit is Adj + Ctl)` 。
 
 > [!NOTE]
-> 作業 <xref:Microsoft.Quantum.Intrinsic.r> 會將輸入角度除以2，並將它乘以-1。
+> 作業 <xref:Microsoft.Quantum.Intrinsic.R> 會將輸入角度除以2，並將它乘以-1。
 > 針對 $Z $ 旋轉，這表示 $ \ket {0} $ eigenstate 會旋轉 $-\phi/$2，而 $ \ket {1} $ eigenstate 會旋轉 $ \phi/$2，如此一來，$ \ket {1} $ eigenstate 就會旋轉 $ \phi $ \ket $ eigenstate $ {0} 。
 >
 > 特別是，這表示 `T` 和 `R(PauliZ, PI() / 8, _)` 差異只在於不相關的 [全域階段](xref:microsoft.quantum.glossary#global-phase)。
@@ -217,7 +217,7 @@ Hadamard 閘道特別重要，因為它可以用來建立 $ \ket {0} $ 和 $ \ke
 作業會 <xref:Microsoft.Quantum.Intrinsic.M> 測量單一量子位上的 Pauli $Z $ 運算子，並擁有簽章 `(Qubit => Result)` 。
 `M(q)` 相當於 `Measure([PauliZ], [q])`。
 
-會在 <xref:microsoft.quantum.measurement.MultiM> 每個量子位陣列上 *分別* 測量 Pauli $Z $ 運算子，並傳回 *array* `Result` 為每個量子位取得的值陣列。
+會在 <xref:Microsoft.Quantum.Measurement.MultiM> 每個量子位陣列上 *分別* 測量 Pauli $Z $ 運算子，並傳回 `Result` 為每個量子位取得的值陣列。
 在某些情況下，這可以進行優化。 它 (簽章 `Qubit[] => Result[])` 。
 `MultiM(qs)` 相當於：
 

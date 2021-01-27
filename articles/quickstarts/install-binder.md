@@ -4,18 +4,17 @@ description: 了解如何使用 Binder 建立 Q# 應用程式。
 author: bradben
 ms.author: v-benbra
 ms.date: 9/03/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.binder
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f993a1145dd8c01045d4cc7cfd0c98efd574ea78
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: f7e9b1ae67d6275ec7ba39ea411842dc537536c5
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90836524"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856718"
 ---
 # <a name="develop-with-no-locq-and-binder"></a>使用 Q# 和 Binder 進行開發
 

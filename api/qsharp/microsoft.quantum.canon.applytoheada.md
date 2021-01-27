@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHeadA
 title: ApplyToHeadA 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToHeadA
 qsharp.summary: Applies an operation to the first element of an array.
-ms.openlocfilehash: 3397c059706c48ff8ca47dd2312cfa9565aacaba
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 290347ff54492c4291db540e82cedcdd822a354e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208630"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850649"
 ---
 # <a name="applytoheada-operation"></a>ApplyToHeadA 操作
 

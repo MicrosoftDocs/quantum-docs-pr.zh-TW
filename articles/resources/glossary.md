@@ -1,6 +1,6 @@
 ---
 標題：量子運算詞彙描述：量子運算中所使用之常用詞彙、動作和物件的詞彙。
-作者： bradben ms. 作者： v-benbra ms. date： 9/1/2020 ms. 主題：文章 uid： microsoft. 量子. 詞彙 no loc：
+作者： bradben ms. 作者： v-benbra ms. date： 9/1/2020 ms. 主題： reference uid： microsoft. 量子. 詞彙 no loc：
 - "Q#"
 - "$$v"
 - "$$"
@@ -177,7 +177,7 @@ Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](
 
 在執行時間將資料相依資訊提供給量子演算法的副程式。 一般來說，其目標是要提供對應至迭加中輸入的輸出 [迭加](xref:microsoft.quantum.glossary#superposition) 。 如需詳細資訊，請參閱 [oracle](xref:microsoft.quantum.libraries.data-structures#oracles)。
 
-## <a name="partial-application"></a>部分應用程式
+## <a name="partial-application"></a>部分套用
 
 呼叫[不含](xref:microsoft.quantum.glossary#operation)所有必要輸入的[函數](xref:microsoft.quantum.glossary#function)或作業。 這 [會傳回新的可](xref:microsoft.quantum.glossary#callable) 呼叫，只需要在未來應用程式中提供的底線)  (所表示的遺漏參數。 如需詳細資訊，請參閱 [部分應用程式](xref:microsoft.quantum.qsharp.partialapplication)。
 
@@ -195,7 +195,7 @@ Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](
 
 ## <a name="quantum-libraries"></a>量子程式庫
 
-用於建立程式之[functions](xref:microsoft.quantum.glossary#function) [作業](xref:microsoft.quantum.glossary#operation)、函[式和使用者定義型](xref:microsoft.quantum.glossary#user-defined-type)別的集合 Q# 。 預設會安裝 [標準程式庫](xref:microsoft.quantum.libraries.standard.intro) 。 其他可用的程式庫有 [化學程式庫](xref:microsoft.quantum.chemistry.concepts.intro)、 [數值](xref:microsoft.quantum.numerics.intro) 程式庫和 [機器學習程式庫](xref:microsoft.quantum.machine-learning.concepts.intro)。
+用於建立程式之[](xref:microsoft.quantum.glossary#function) [作業](xref:microsoft.quantum.glossary#operation)、函[式和使用者定義型](xref:microsoft.quantum.glossary#user-defined-type)別的集合 Q# 。 預設會安裝 [標準程式庫](xref:microsoft.quantum.libraries.standard.intro) 。 其他可用的程式庫有 [化學程式庫](xref:microsoft.quantum.chemistry.concepts.intro)、 [數值](xref:microsoft.quantum.numerics.intro) 程式庫和 [機器學習程式庫](xref:microsoft.quantum.machine-learning.concepts.intro)。
 
 ## <a name="quantum-state"></a>量子狀態
 
@@ -215,7 +215,7 @@ Hadamard 作業 (也稱為 Hadamard 閘道或轉換) 作用於單一[量子位](
 
 ## <a name="superposition"></a>疊加
 
-量子運算中的概念是，[量子位](xref:microsoft.quantum.glossary#qubit)是兩個狀態（ $ \ket { 0 } $ 和 $ \ket { 1 } $ ） [measured](xref:microsoft.quantum.glossary#measurement)的線性組合，直到測量為止。  如需詳細資訊，請參閱 [瞭解量子](xref:microsoft.quantum.overview.understanding)運算。
+量子運算中的概念是，[量子位](xref:microsoft.quantum.glossary#qubit)是兩個狀態（ $ \ket { 0 } $ 和 $ \ket { 1 } $ ） [](xref:microsoft.quantum.glossary#measurement)的線性組合，直到測量為止。  如需詳細資訊，請參閱 [瞭解量子](xref:microsoft.quantum.overview.understanding)運算。
 
 ## <a name="target-machine"></a>目的電腦
 

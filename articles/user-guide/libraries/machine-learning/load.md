@@ -4,17 +4,17 @@ description: 瞭解如何載入您自己的資料集，以使用 Microsoft 量�
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cd6fdb6bb33a65ee02ac8c43f40df9abeff9c841
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7ebfe085e50d4647fdb1027250cf3134f8d8f8c2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833704"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856462"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>載入和分類您自己的資料集
 
@@ -75,7 +75,7 @@ ms.locfileid: "90833704"
 
 假設我們有一個小型資料集，其具有不同貓和狗的高度和加權。 這個資料集很小，無法定型模型，但也足以顯示載入資料集的程式。
 
-| 高度 (m)  | 權數 (公斤)  | 動物 |
+| 高度 (m)  | 重量 (公斤) | 動物 |
 |-----------|------------|--------|
 | 0.54      | 30         | 狗    |
 | 0.30      | 8          | 貓    |

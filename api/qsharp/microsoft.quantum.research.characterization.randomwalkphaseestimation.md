@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation
 title: RandomWalkPhaseEstimation 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Characterization
 qsharp.name: RandomWalkPhaseEstimation
 qsharp.summary: Performs iterative phase estimation using a random walk to approximate Bayesian inference on the classical measurement results from a given oracle and eigenstate.
-ms.openlocfilehash: 2c3afdd41da24a1f32f59f36f0f5c5ed29df1f0b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f9edafcce62c8b30a6bd52b7dbaa2df2c50c920d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96226157"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846009"
 ---
 # <a name="randomwalkphaseestimation-operation"></a>RandomWalkPhaseEstimation 操作
 
@@ -89,7 +89,7 @@ $U $ act 的暫存器。
 
 如需反復階段估計統計資料的詳細資訊，請參閱 [貝氏階段估計](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation) 。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - Ferrie *et al.exe.* 2011 [doi： 10/tfx-cli](https://doi.org/10.1007/s11128-012-0407-6)， [arXiv： 1110.3067](https://arxiv.org/abs/1110.3067)。
 - Wiebe *et al.exe.* 2013 [doi： 10/tf3](https://doi.org/10.1103/PhysRevLett.112.190501)， [arXiv： 1309.0876](https://arxiv.org/abs/1309.0876)

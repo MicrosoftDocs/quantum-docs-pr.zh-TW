@@ -4,17 +4,17 @@ description: 深入瞭解 Microsoft 量子數值程式庫中可用的類型和�
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
-ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
+ms.openlocfilehash: 92efd3b8677d2f27bc59f986ce6c9e915cd23652
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764136"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856435"
 ---
 # <a name="using-the-numerics-library"></a>使用數值程式庫
 
@@ -22,9 +22,9 @@ ms.locfileid: "91764136"
 
 數值程式庫包含三個元件
 
-1. 整數 adder 和比較子的**基本整數算術**
-1. 建置於基本功能之上的**高階整數功能**;它包含乘法、除法、反轉等等。 用於帶正負號和不帶正負號的整數。
-1. 具有固定點初始化、加法、乘法、倒數、多項式評估和測量的**定點算術功能**。
+1. 整數 adder 和比較子的 **基本整數算術**
+1. 建置於基本功能之上的 **高階整數功能**;它包含乘法、除法、反轉等等。 用於帶正負號和不帶正負號的整數。
+1. 具有固定點初始化、加法、乘法、倒數、多項式評估和測量的 **定點算術功能**。
 
 所有這些元件都可以使用單一語句來存取 `open` ：
 ```qsharp
@@ -39,7 +39,7 @@ open Microsoft.Quantum.Arithmetic;
 1. **`SignedLittleEndian`**：與 `LittleEndian` 不同之處在于，它代表以二補數儲存的帶正負號整數。
 1. **`FixedPoint`**：代表量子位陣列 `qArr2 : Qubit[]` 和二進位點位置所組成的實數 `pos` ，其會計算二進位點左邊的二進位位數數目。 `qArr2` 的儲存方式與相同 `SignedLittleEndian` 。
 
-## <a name="operations"></a>作業
+## <a name="operations"></a>Operations
 
 上述三種類型的每一個都有提供各種不同的作業：
 

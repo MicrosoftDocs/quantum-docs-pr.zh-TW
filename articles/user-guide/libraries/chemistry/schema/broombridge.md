@@ -4,21 +4,21 @@ description: 概述 Broombridge 量子化學架構，用來建立 Microsoft 量�
 author: martinro
 ms.author: martinro
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e580fd8267cc7ba30533d557eceb486f8c205be6
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e83d2d52fcdb2a30179ca6994d2c90f41cef7dbb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835769"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856202"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge 量子化學架構 # 
 
-強大的計算化學軟體（例如 [NWChem](http://www.nwchem-sw.org/) ）可讓您建立各種實際化學問題的模型。 為了使用 Microsoft 量子化學程式庫存取 NWChem 分子模型，您可以使用名為**Broombridge**的[YAML](https://en.wikipedia.org/wiki/YAML)架構架構。 在 [參考] 中， [選擇的名稱](https://en.wikipedia.org/wiki/Broom_Bridge) 會被歡度為 hamiltonian 的發源地。 
+強大的計算化學軟體（例如 [NWChem](http://www.nwchem-sw.org/) ）可讓您建立各種實際化學問題的模型。 為了使用 Microsoft 量子化學程式庫存取 NWChem 分子模型，您可以使用名為 **Broombridge** 的 [YAML](https://en.wikipedia.org/wiki/YAML)架構架構。 在 [參考] 中， [選擇的名稱](https://en.wikipedia.org/wiki/Broom_Bridge) 會被歡度為 hamiltonian 的發源地。 
 
 [NWChem](https://github.com/nwchemgit/nwchem) 是在「寬鬆教育團體授權」 (ECL) 2.0 授權所授權的開放原始碼專案。 [Broombridge 量子化學架構](https://docs.microsoft.com/quantum/libraries/chemistry/schema/spec_v_0_2)) 是一個開放原始碼架構，其中包含遵循[RFC 2119](https://tools.ietf.org/html/rfc2119)的[定義](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/broombridge-0.1.schema.json)，以及在 MIT 授權下授權的[驗證程式腳本](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/validator.py)。 
 
