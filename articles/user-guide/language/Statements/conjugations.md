@@ -4,17 +4,17 @@ description: 瞭解如何使用中的動詞變化或是 Q# 管理量副程式中
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.conjugations
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 17b5e3b32bbbbf38b6753d7a23c30ec491944523
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 452746641ab297e41b77b4e89c79c13b2bc43373
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96233176"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844156"
 ---
 <!---
 # Conjugations in Q#
