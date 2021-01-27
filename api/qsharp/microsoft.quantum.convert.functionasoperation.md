@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Convert.FunctionAsOperation
 title: FunctionAsOperation 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: FunctionAsOperation
 qsharp.summary: Converts functions to operations.
-ms.openlocfilehash: 10703818242cf6b3853f08a45bfb9094f397f6c2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cf4f8c97bf38b3a64eb952d0a502bc21c29c579c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96224372"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98833831"
 ---
 # <a name="functionasoperation-function"></a>FunctionAsOperation 函式
 
