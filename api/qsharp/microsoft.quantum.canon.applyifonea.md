@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneA
 title: ApplyIfOneA 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOneA
 qsharp.summary: Applies an adjointable operation conditioned on a classical result value being one.
-ms.openlocfilehash: 200908f2958b74e4823c891ef901474d75d18336
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1593f565e950a9410df0ae9de59e6d0e6a7b99b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218541"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844937"
 ---
 # <a name="applyifonea-operation"></a>ApplyIfOneA 操作
 

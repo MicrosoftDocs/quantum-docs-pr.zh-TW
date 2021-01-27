@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.TargetStateReflectionOracle
 title: TargetStateReflectionOracle 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -10,12 +10,12 @@ qsharp.summary: >-
   Constructs a `ReflectionOracle` about the target state uniquely marked by the flag qubit.
 
   The target state has a single qubit set to 1, and all others 0: $\ket{1}_f$.
-ms.openlocfilehash: 65ad316a6ac986ebd0dc28b25859026a60aa3239
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4169ccf3e210e27f779311553b845ea04f2c7dc6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191103"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843895"
 ---
 # <a name="targetstatereflectionoracle-function"></a>TargetStateReflectionOracle 函式
 

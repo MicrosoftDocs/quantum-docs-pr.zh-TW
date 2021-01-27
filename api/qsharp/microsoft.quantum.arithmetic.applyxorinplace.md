@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyXorInPlace
 title: ApplyXorInPlace 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyXorInPlace
 qsharp.summary: Applies a bitwise-XOR operation between a classical integer and an integer represented by a register of qubits.
-ms.openlocfilehash: b7fc20ac421d5cff9baa3fe05450c1564f123505
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8f338d6638d554f3ead1f3c0e7b6605c7937abd8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96210104"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843481"
 ---
 # <a name="applyxorinplace-operation"></a>ApplyXorInPlace 操作
 

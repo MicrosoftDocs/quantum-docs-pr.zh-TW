@@ -1,30 +1,30 @@
 ---
-title: 約旦-Wigner 標記法
-description: 深入瞭解 Wigner 標記法，這會將 Hamiltonian 操作員對應到可在量子電腦上更容易執行的單一矩陣。
+title: Jordan-Wigner 標記法
+description: 瞭解 Jordan-Wigner 標記法，這會將 Hamiltonian 運算子對應到可更容易在量子電腦上執行的單一矩陣。
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833851"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844127"
 ---
-# <a name="jordan-wigner-representation"></a>約旦-Wigner 標記法
+# <a name="jordan-wigner-representation"></a>Jordan-Wigner 標記法
 
 雖然第二個量化 Hamiltonian 是以 $a ^ \dagger $ (建立) 和 $a $ (annihilation) 方便表示，但這些作業不是量子電腦中的基本作業。
 因此，如果我們希望它在量子電腦上執行，我們必須將操作員對應到可在量子電腦上執行的單一矩陣。
 約旦– Wigner 標記法會提供一種地圖。
 不過，其他的 Bravyi – Kitaev 標記法也存在，而且有其各自的優點和缺點。
-Wigner 標記法的主要優點是它的簡化方式。
+Jordan-Wigner 標記法的主要優點是它的簡化方式。
 
-約旦 Wigner 標記法是要衍生的正向。
+Jordan-Wigner 標記法相當向前衍生。
 回想一下，state $ \ket {0} _j $ 表示微調 orbital $j $ 是空的，而 $ \ket {1} _j $ 表示它已被佔用。
 這表示量子位可以自然地儲存特定微調 orbital 的職業。
 然後，$a ^ \ dagger_j \ket {0} _j = \ket {1} _j $ 和 $a ^ \ dagger_j \ket {1} _j = $0。
@@ -51,14 +51,14 @@ $ $ 換言之，兩個建立運算子不會視需要進行反上運算。
 \begin{align} ^ \ dagger_1 &= \left ( \frac{X-iY} {2} \right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1、 \\ \\ ^ \ dagger_2 &= Z\otimes\left ( \frac{x-iy} {2} \right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1、 \\ \\ ^ \ dagger_3 &= Z\otimes Z\otimes \left ( \frac{x-iy} {2} \right) \otimes 1 \otimes \cdots \otimes 1、 \\ \\ & \Vdots \\ \\ a ^ \ dagger_N &= Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimes Z\otimes \left ( \frac{x-iy} {2} \right) 。 \label{eq： JW} \end{align}
 
 以 Pauli 運算子表達數位運算子（$n _j $）也很方便。
-幸好，$Z $ 運算子的字串 (稱為約旦 Wigner 字串) 在進行這項替代之後取消。
+幸好，$Z $ 運算子的字串 (稱為 Jordan-Wigner 字串，在一個進行這項替代之後) 取消。
 在執行此 (並重新叫用 $X _jY_j = iZ_j $) 之後，我們已 \begin{equation} n_j = a ^ \ dagger_j a_j = \frac{ (1-Z_j) } {2} 。
 \end{equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>以約旦 Wigner 標記法來建立 Hamiltonian
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>在 Jordan-Wigner 標記法中建立 Hamiltonian
 
-一旦叫用 Wigner 標記法，將 Hamiltonian 轉譯為 Pauli 運算子的總和是直接的。
+一旦叫用 Jordan-Wigner 標記法，將 Hamiltonian 轉譯為 Pauli 運算子的總和是很簡單的。
 其中一個只需要將 Fermionic Hamiltonian 中的每個 $a ^ \dagger $ 和 $a $ 運算子取代為上述 Pauli 運算子的字串。
 當其中一個執行這項替換時，Hamiltonian 內只有五個詞彙類別。
 這五個類別會對應到不同的方法，我們可以在 Hamiltonian 中挑選一個內文中的 $p、q $ 和 $p、q、r、s $，以及兩段內文。

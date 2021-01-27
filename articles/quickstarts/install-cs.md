@@ -4,18 +4,17 @@ description: 了解如何使用 .NET 語言建立 Q# 應用程式。
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e8733918daa02afaea0fc1994d5f0851d4be9b93
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: de79c361331766572f5608c341be766e071e01b5
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834324"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844296"
 ---
 # <a name="develop-with-no-locq-and-net"></a>使用 Q# 和 .NET 進行開發
 
@@ -72,7 +71,7 @@ Q# 的建置目的是為了能夠與如 C# 和 F# 等 .NET 語法充分配合。
   - 選取 [Q# 程式庫]
   - 選取 [**下一步**]
   - 選擇程式庫的名稱和位置
-  - 請確定 [將專案和解決方案放在相同目錄中] 為**未勾選**
+  - 請確定 [將專案和解決方案放在相同目錄中] 為 **未勾選**
   - 選取 [建立] 
 - 建立新的 C# 或 F# 主機程式
   - 移至 [檔案] → [新增] → [專案]
@@ -82,7 +81,7 @@ Q# 的建置目的是為了能夠與如 C# 和 F# 等 .NET 語法充分配合。
   - 選擇主機程式的名稱
   - 選取 [建立] 
 
-***
+**_
 
 ## <a name="calling-into-no-locq-from-net"></a>從 .NET 呼叫 Q#
 
@@ -103,7 +102,7 @@ Q# 編譯器會針對每個 Q# 作業和函式建立 .NET 類別，讓您能夠�
 
 :::code language="fsharp" source="~/quantum/samples/interoperability/dotnet/fsharp/Host.fs" range="4-":::
 
-***
+_**
     
 ## <a name="next-steps"></a>後續步驟
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyOuterTTKAdder
 title: ApplyOuterTTKAdder 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyOuterTTKAdder
 qsharp.summary: Implements the outer operation for RippleCarryAdderTTK to conjugate the inner operation to construct the full adder.
-ms.openlocfilehash: aed15a4d1f3ca7121d6da665f5c08442fd495619
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: afcc3085965907b7478b513028e25d1813cf7b76
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190610"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843693"
 ---
 # <a name="applyouterttkadder-operation"></a>ApplyOuterTTKAdder 操作
 
@@ -45,7 +45,7 @@ LittleEndian 量子位將第二個整數被加數輸入編碼為 RippleCarryAdde
 
 
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - Yasuhiro Takahashi、Seiichiro Tani、Noboru Kunihiro：「量子加法線路和未系結的展開」、量子資訊和計算、2010。
   https://arxiv.org/abs/0910.2530

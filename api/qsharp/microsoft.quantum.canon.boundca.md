@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.BoundCA
 title: BoundCA 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: BoundCA
 qsharp.summary: Given an array of operations acting on a single input, produces a new operation that performs each given operation in sequence. The modifier `CA` indicates that all operations in the array are adjointable and controllable.
-ms.openlocfilehash: 774a6f57566dce75b98290a7e81540b28afea1af
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 391183829a3cc8b7aa8051767dcfc6bec9638223
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216875"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844521"
 ---
 # <a name="boundca-function"></a>BoundCA 函式
 
@@ -46,6 +46,21 @@ function BoundCA<'T> (operations : ('T => Unit is Adj + Ctl)[]) : ('T => Unit is
 ### <a name="t"></a>不要
 
 陣列中的每個作業所作用的目標。
+
+## <a name="example"></a>範例
+
+以下是相等的：
+
+```qsharp
+let bound = BoundCA([U, V]);
+bound(x);
+```
+
+及
+
+```qsharp
+U(x); V(x);
+```
 
 ## <a name="see-also"></a>另請參閱
 

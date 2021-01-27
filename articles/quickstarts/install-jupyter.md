@@ -4,18 +4,17 @@ description: 了解如何使用 Jupyter Notebook 建立 Q# 應用程式。
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
-ms.translationtype: HT
+ms.openlocfilehash: 4cef9b7252a2199b2ea995c4cf819a3582d9ca8f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771398"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844286"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>使用 Q# Jupyter Notebook 進行開發
 
@@ -69,7 +68,7 @@ IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SD
 > 其中的 `/path/to/dotnet-iqsharp` 應以您檔案系統中 `dotnet-iqsharp` 工具的絕對路徑加以取代。
 > 此工具通常位於您使用者設定檔資料夾中 `.dotnet/tools` 的下方。
     
-***
+**_
 
 就這麼簡單！ 您現在已有適用於 Jupyter 的 IQ# 核心，可提供從 Q# Jupyter Notebook 編譯和執行 Q# 作業的核心功能。
 
@@ -85,7 +84,7 @@ IQ# (發音為 i-q-sharp) 是主要供 Jupyter 和 Python 使用的 .NET Core SD
 
     - 如果 Jupyter Notebook 沒有在您的瀏覽器中自動開啟，請將命令列所提供的 URL 複製並貼到瀏覽器中。
 
-1. 選擇 **[新增] →Q#** ，來使用 Q# 核心建立 Jupyter Notebook，並將下列程式碼新增至第一個筆記本資料格：
+1. 選擇 [_ *新增 Q# ] →** 建立具有核心的 Jupyter Notebook Q# ，並將下列程式碼新增至第一個筆記本資料格：
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

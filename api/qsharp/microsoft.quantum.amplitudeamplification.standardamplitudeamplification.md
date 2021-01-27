@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification
 title: StandardAmplitudeAmplification 函式
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: StandardAmplitudeAmplification
 qsharp.summary: Standard Amplitude Amplification algorithm
-ms.openlocfilehash: 23a2b3dbe5ea404059994167f69e11458c0c22ea
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 984bfee89b6d79750228b8ca6aaf404f58aecd41
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191171"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843936"
 ---
 # <a name="standardamplitudeamplification-function"></a>StandardAmplitudeAmplification 函式
 
@@ -54,6 +54,6 @@ $n $ of 振幅放大的反覆運算次數
 
 這是藉由 `AmpAmpPhasesStandard` 假設 \Begin{align} A\ket {0} \_ {f} \ket {0} \_ s = \lambda\ket {1} \_ f\ket {\ text {target}} s + \sqrt{1-| \lambda | ^ 2} \ket f\cdots，所計算的一系列反映階段所取得的標準幅度放大演算法 \_ {0} \_ \end{align} 這項作業會在大部分情況下準備狀態 \begin{align} \Operatorname{AmpAmpByOracle}\ket {0} \_ {f} \ket {0} \_ s = \Sin ( # B1 2n + 1) \sin ^ {-1} ( \lambda) # A5\ket {1} \_ f\ket {\ text {target}} \_ s + \cdots\ket {0} \_ f \end{align}， `flagQubit` 並且在 `auxiliaryRegister` 狀態 $ \ket {0} \_ f\ket {0} \_ a $ 中初始化。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - [*G. Brassard、Hoyer、Mosca、Tapp*](https://arxiv.org/abs/quant-ph/0005055)

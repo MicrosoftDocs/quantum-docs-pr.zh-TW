@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdder
 title: ApplyInnerTTKAdder 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyInnerTTKAdder
 qsharp.summary: Implements the inner addition function for the operation RippleCarryAdderTTK. This is the inner operation that is conjugated with the outer operation to construct the full adder.
-ms.openlocfilehash: 1de0248066aec531d78130703414067603ffd34d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c822933340d592061eb039af7c6e438212abc265
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191001"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843822"
 ---
 # <a name="applyinnerttkadder-operation"></a>ApplyInnerTTKAdder 操作
 
@@ -54,7 +54,7 @@ LittleEndian 量子位將第二個整數被加數輸入編碼為 RippleCarryAdde
 
 指定的受控制作業會使用作業的對稱和相互取消，以改善將控制項加入至每個作業的預設執行。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - Yasuhiro Takahashi、Seiichiro Tani、Noboru Kunihiro：「量子加法線路和未系結的展開」、量子資訊和計算、2010。
   https://arxiv.org/abs/0910.2530

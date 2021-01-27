@@ -4,18 +4,17 @@ description: 了解如何使用 Python 建立 Q# 應用程式。
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834154"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844278"
 ---
 # <a name="develop-with-no-locq-and-python"></a>使用 Q# 和 Python 進行開發
 
@@ -72,7 +71,7 @@ ms.locfileid: "90834154"
     > 其中的 `/path/to/dotnet-iqsharp` 應以您檔案系統中 `dotnet-iqsharp` 工具的絕對路徑加以取代。
     > 此工具通常位於您使用者設定檔資料夾中 `.dotnet/tools` 的下方。
     
-***
+**_
 
 就這麼簡單！ 您現在已有 `qsharp` Python 套件和適用於 Jupyter 的 IQ# 核心，可提供從 Python 編譯和執行 Q# 作業的核心功能，並可讓您使用 Q# Jupyter Notebook。
 
@@ -113,7 +112,7 @@ ms.locfileid: "90834154"
 1. 您應該會看到您叫用作業的結果。 在此案例中，因為您的作業會產生隨機結果，所以您會看到螢幕上列印出 `0` 或 `1` 。 如果您重複執行程式，應該會看到這兩個結果大約是各一半的時間。
 
 > [!NOTE]
-> * Python 程式碼只是一般的 Python 程式。 您可以使用任何 Python 環境 (包括以 Python 為基礎的 Jupyter Notebook) 來撰寫 Python 程式並呼叫 Q# 作業。 Python 程式可以從與 Python 程式碼本身相同的資料夾中包含的任何 .qs 檔案匯入 Q# 作業。
+> _ Python 程式碼只是一般的 Python 程式。 您可以使用任何 Python 環境 (包括以 Python 為基礎的 Jupyter Notebook) 來撰寫 Python 程式並呼叫 Q# 作業。 Python 程式可以從與 Python 程式碼本身相同的資料夾中包含的任何 .qs 檔案匯入 Q# 作業。
 
 ## <a name="next-steps"></a>後續步驟
 
