@@ -1,73 +1,73 @@
 ---
 uid: Microsoft.Quantum.Canon.Delay
 title: 延遲操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Delay
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: 4f45527faa49f79fccff3892e928fed09f9f0bc8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c8ba128e44a9b217ec196e39ff1df639ef276784
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216501"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840647"
 ---
-# <a name="delay-operation"></a><span data-ttu-id="55fee-102">延遲操作</span><span class="sxs-lookup"><span data-stu-id="55fee-102">Delay operation</span></span>
+# <a name="delay-operation"></a><span data-ttu-id="a390e-102">延遲操作</span><span class="sxs-lookup"><span data-stu-id="a390e-102">Delay operation</span></span>
 
-<span data-ttu-id="55fee-103">命名空間： [Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="55fee-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="a390e-103">命名空間： [Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="a390e-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="55fee-104">封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="55fee-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="a390e-104">封裝： [Microsoft 量子. 標準](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="a390e-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="55fee-105">套用具有延遲的指定作業。</span><span class="sxs-lookup"><span data-stu-id="55fee-105">Applies a given operation with a delay.</span></span>
+<span data-ttu-id="a390e-105">套用具有延遲的指定作業。</span><span class="sxs-lookup"><span data-stu-id="a390e-105">Applies a given operation with a delay.</span></span>
 
 ```qsharp
 operation Delay<'T, 'U> (op : ('T => 'U), arg : 'T, aux : Unit) : 'U
 ```
 
 
-## <a name="description"></a><span data-ttu-id="55fee-106">描述</span><span class="sxs-lookup"><span data-stu-id="55fee-106">Description</span></span>
+## <a name="description"></a><span data-ttu-id="a390e-106">描述</span><span class="sxs-lookup"><span data-stu-id="a390e-106">Description</span></span>
 
-<span data-ttu-id="55fee-107">如果有作業和該作業的輸入，則會在提供額外的輸入之後套用作業。</span><span class="sxs-lookup"><span data-stu-id="55fee-107">Given an operation and an input to that operation, applies the operation once an additional input is provided.</span></span>
-<span data-ttu-id="55fee-108">尤其是，運算式 `Delay(op, arg, _)` 是 `op` 在呼叫時套用的作業 `arg` 。</span><span class="sxs-lookup"><span data-stu-id="55fee-108">In particular, the expression `Delay(op, arg, _)` is an operation that applies `op` to `arg` when called.</span></span>
-<span data-ttu-id="55fee-109">運算式 `Delay(op,arg,_)` 允許延遲的應用程式 `op` 。</span><span class="sxs-lookup"><span data-stu-id="55fee-109">Expression `Delay(op,arg,_)` allows to delay the application of `op`.</span></span>
+<span data-ttu-id="a390e-107">如果有作業和該作業的輸入，則會在提供額外的輸入之後套用作業。</span><span class="sxs-lookup"><span data-stu-id="a390e-107">Given an operation and an input to that operation, applies the operation once an additional input is provided.</span></span>
+<span data-ttu-id="a390e-108">尤其是，運算式 `Delay(op, arg, _)` 是 `op` 在呼叫時套用的作業 `arg` 。</span><span class="sxs-lookup"><span data-stu-id="a390e-108">In particular, the expression `Delay(op, arg, _)` is an operation that applies `op` to `arg` when called.</span></span>
+<span data-ttu-id="a390e-109">運算式 `Delay(op,arg,_)` 允許延遲的應用程式 `op` 。</span><span class="sxs-lookup"><span data-stu-id="a390e-109">Expression `Delay(op,arg,_)` allows to delay the application of `op`.</span></span>
 
-## <a name="input"></a><span data-ttu-id="55fee-110">輸入</span><span class="sxs-lookup"><span data-stu-id="55fee-110">Input</span></span>
+## <a name="input"></a><span data-ttu-id="a390e-110">輸入</span><span class="sxs-lookup"><span data-stu-id="a390e-110">Input</span></span>
 
-### <a name="op--t--u"></a><span data-ttu-id="55fee-111">op： t => ' U</span><span class="sxs-lookup"><span data-stu-id="55fee-111">op : 'T => 'U</span></span> 
+### <a name="op--t--u"></a><span data-ttu-id="a390e-111">op： t => ' U</span><span class="sxs-lookup"><span data-stu-id="a390e-111">op : 'T => 'U</span></span> 
 
-<span data-ttu-id="55fee-112">要套用的作業。</span><span class="sxs-lookup"><span data-stu-id="55fee-112">An operation to be applied.</span></span>
-
-
-### <a name="arg--t"></a><span data-ttu-id="55fee-113">arg： t</span><span class="sxs-lookup"><span data-stu-id="55fee-113">arg : 'T</span></span>
-
-<span data-ttu-id="55fee-114">要套用作業的輸入。</span><span class="sxs-lookup"><span data-stu-id="55fee-114">The input to which the operation is applied.</span></span>
+<span data-ttu-id="a390e-112">要套用的作業。</span><span class="sxs-lookup"><span data-stu-id="a390e-112">An operation to be applied.</span></span>
 
 
-### <a name="aux--unit"></a><span data-ttu-id="55fee-115">aux： [Unit](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="55fee-115">aux : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+### <a name="arg--t"></a><span data-ttu-id="a390e-113">arg： t</span><span class="sxs-lookup"><span data-stu-id="a390e-113">arg : 'T</span></span>
 
-<span data-ttu-id="55fee-116">使用部分應用程式來延遲作業應用程式的引數。</span><span class="sxs-lookup"><span data-stu-id="55fee-116">Argument used to delay the application of operation by using partial application.</span></span>
+<span data-ttu-id="a390e-114">要套用作業的輸入。</span><span class="sxs-lookup"><span data-stu-id="a390e-114">The input to which the operation is applied.</span></span>
 
 
+### <a name="aux--unit"></a><span data-ttu-id="a390e-115">aux： [Unit](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="a390e-115">aux : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-## <a name="output--u"></a><span data-ttu-id="55fee-117">輸出： ' U</span><span class="sxs-lookup"><span data-stu-id="55fee-117">Output : 'U</span></span>
+<span data-ttu-id="a390e-116">使用部分應用程式來延遲作業應用程式的引數。</span><span class="sxs-lookup"><span data-stu-id="a390e-116">Argument used to delay the application of operation by using partial application.</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="55fee-118">類型參數</span><span class="sxs-lookup"><span data-stu-id="55fee-118">Type Parameters</span></span>
+## <a name="output--u"></a><span data-ttu-id="a390e-117">輸出： ' U</span><span class="sxs-lookup"><span data-stu-id="a390e-117">Output : 'U</span></span>
 
-### <a name="t"></a><span data-ttu-id="55fee-119">不要</span><span class="sxs-lookup"><span data-stu-id="55fee-119">'T</span></span>
 
-<span data-ttu-id="55fee-120">要延遲之作業的輸入類型。</span><span class="sxs-lookup"><span data-stu-id="55fee-120">The input type of the operation to be delayed.</span></span>
-### <a name="u"></a><span data-ttu-id="55fee-121">' U</span><span class="sxs-lookup"><span data-stu-id="55fee-121">'U</span></span>
 
-<span data-ttu-id="55fee-122">要延遲之作業的傳回型別。</span><span class="sxs-lookup"><span data-stu-id="55fee-122">The return type of the operation to be delayed.</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="a390e-118">類型參數</span><span class="sxs-lookup"><span data-stu-id="a390e-118">Type Parameters</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="55fee-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="55fee-123">See Also</span></span>
+### <a name="t"></a><span data-ttu-id="a390e-119">不要</span><span class="sxs-lookup"><span data-stu-id="a390e-119">'T</span></span>
 
-- [<span data-ttu-id="55fee-124">Canon. DelayC</span><span class="sxs-lookup"><span data-stu-id="55fee-124">Microsoft.Quantum.Canon.DelayC</span></span>](xref:Microsoft.Quantum.Canon.DelayC)
-- [<span data-ttu-id="55fee-125">Canon. DelayA</span><span class="sxs-lookup"><span data-stu-id="55fee-125">Microsoft.Quantum.Canon.DelayA</span></span>](xref:Microsoft.Quantum.Canon.DelayA)
-- [<span data-ttu-id="55fee-126">Canon. DelayCA</span><span class="sxs-lookup"><span data-stu-id="55fee-126">Microsoft.Quantum.Canon.DelayCA</span></span>](xref:Microsoft.Quantum.Canon.DelayCA)
-- [<span data-ttu-id="55fee-127">Canon. 延遲</span><span class="sxs-lookup"><span data-stu-id="55fee-127">Microsoft.Quantum.Canon.Delayed</span></span>](xref:Microsoft.Quantum.Canon.Delayed)
+<span data-ttu-id="a390e-120">要延遲之作業的輸入類型。</span><span class="sxs-lookup"><span data-stu-id="a390e-120">The input type of the operation to be delayed.</span></span>
+### <a name="u"></a><span data-ttu-id="a390e-121">' U</span><span class="sxs-lookup"><span data-stu-id="a390e-121">'U</span></span>
+
+<span data-ttu-id="a390e-122">要延遲之作業的傳回型別。</span><span class="sxs-lookup"><span data-stu-id="a390e-122">The return type of the operation to be delayed.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a390e-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a390e-123">See Also</span></span>
+
+- [<span data-ttu-id="a390e-124">Canon. DelayC</span><span class="sxs-lookup"><span data-stu-id="a390e-124">Microsoft.Quantum.Canon.DelayC</span></span>](xref:Microsoft.Quantum.Canon.DelayC)
+- [<span data-ttu-id="a390e-125">Canon. DelayA</span><span class="sxs-lookup"><span data-stu-id="a390e-125">Microsoft.Quantum.Canon.DelayA</span></span>](xref:Microsoft.Quantum.Canon.DelayA)
+- [<span data-ttu-id="a390e-126">Canon. DelayCA</span><span class="sxs-lookup"><span data-stu-id="a390e-126">Microsoft.Quantum.Canon.DelayCA</span></span>](xref:Microsoft.Quantum.Canon.DelayCA)
+- [<span data-ttu-id="a390e-127">Canon. 延遲</span><span class="sxs-lookup"><span data-stu-id="a390e-127">Microsoft.Quantum.Canon.Delayed</span></span>](xref:Microsoft.Quantum.Canon.Delayed)
