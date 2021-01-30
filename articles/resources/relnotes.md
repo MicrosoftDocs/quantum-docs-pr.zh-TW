@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
-ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.openlocfilehash: dd37581dff2a512a29eb7729ecbf81412917b8f8
+ms.sourcegitcommit: e915baf3b84ee3a562004c5b31d157d21533d450
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98856670"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99101453"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 版本資訊
 
@@ -23,6 +23,15 @@ ms.locfileid: "98856670"
 如需安裝指示，請參閱[安裝指南](xref:microsoft.quantum.install)。
 
 如需更新指示，請參閱[更新指南](xref:microsoft.quantum.update)。
+
+## <a name="version-0152101126807"></a>版本0.15.2101.126807
+
+*發行日期：2021年1月29日*
+
+- Q#針對以 IonQ 和 Honeywell 提供者為目標的可執行檔，將專案範本新增至編譯器
+- 更新 Q# 內核語法醒目提示以包含 Q# 版本[0.15.2101125897](#version-0152101125897)中引進的語法變更
+- 錯誤修正若要支援將陣列作為輸入引數傳遞至 Q# 提交給 Azure Quantum via `%azure.execute` 的程式，請參閱問題 [#401](https://github.com/microsoft/iqsharp/issues/401)
+- 修正在 Docker 映射中使用時發生「拒絕許可權」錯誤 `az` `iqsharp-base` ，請參閱問題 [#404](https://github.com/microsoft/iqsharp/issues/404)
 
 ## <a name="version-0152101125897"></a>版本0.15.2101125897
 
@@ -34,6 +43,7 @@ ms.locfileid: "98856670"
 - 已改善最佳深度的寬度估計值， [請參閱詳細資料](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159)。
 - 使用 `ApplyUnitary` ([QuantumLibraries # 版 391](https://github.com/microsoft/QuantumLibraries/pull/391)（Dmytro Fedoriaka 的 external 投稿）將提供的單一作業套用為明確矩陣) 
 - 藉 https://github.com/microsoft/iqsharp/issues/387 由降低對 I 核心啟動的效能影響來修正 Q# 。
+
 ## <a name="version-0142011120240"></a>版本0.14.2011120240
 
 *發行日期：2020年11月25日*
